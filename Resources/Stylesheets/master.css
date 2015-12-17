@@ -1,0 +1,217 @@
+﻿body {
+    font-family: Consolas,monaco,monospace;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px
+	
+}
+
+
+
+#main
+{
+   background:#000; 
+}
+
+#left_Main
+{
+    float:left;
+    color: #FFF;
+    width: 400px;
+	z-index:-1;
+}
+#right_Main
+{
+    float:right;
+    width: 20%;
+    color: #FFF;
+}
+#center_Main
+{  
+	z-index: 100;
+    border-width: 5px;
+    border-style:solid;
+    border-color: #000;
+    border-radius:25px;    
+    width: 1000px;
+    height: 2000px;
+    text-align: center;
+    margin: 0 auto; 
+    /*background: rgba(100, 100, 255, 0.7);*/
+    background: url('../Img/bgCode2.png') 50% 0 repeat fixed;
+}
+#lblMoneyDisplay
+{
+    padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+    color: #FFF;
+    font-size: 100px;
+    
+}
+
+#welcome
+{
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+    width: 1000px;
+    height: 800px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+#shop
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+}
+
+#email
+{
+    float:left;
+    text-align: left;
+    font-family:Calibri;
+    background: rgba(255, 255, 255, 0.7);
+    height:800px;
+}
+
+#investments
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+    width: 1000px;
+    color: #FFF;
+}
+
+
+
+#abilities
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+    width: 1000px;
+    color: #FFF;
+	padding-top: 10px;
+}
+#warriorAbilities
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+    width: 1000px;
+    color: #FFF;
+}
+#wizardAbilities
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+    width: 1000px;
+    color: #FFF;
+}
+#rogueAbilities
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+    width: 1000px;
+    color: #FFF;
+}
+#healerAbilities
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+    width: 1000px;
+    color: #FFF;
+}
+#abilityHeading
+{
+    float: left;
+    width: 1000px;
+    height: 100px;
+    text-align: center;
+}
+.abilityDisplay
+{
+    width:200px;
+    float: left;
+    height:700px;
+}
+
+
+#manualIncrementDisplay
+{
+    width: 1000px;
+}
+
+.moneyDisplayAmt
+{  
+    height:16px;  
+    color:#24b41e;
+    font-size:16px;
+    padding-bottom: 5px;
+}
+#threeBitDisplay
+{
+    width: 1000px;
+    float: left;
+}
+#nav_Buttons
+{
+    float: left;
+    text-align:left;
+    width:1000px;
+    height:60px;
+    border-width: 2px;
+    border-color: #8ca1bd;   
+}
+.hidden_Divs
+{
+    display: none;
+}
+
+.hidden_Emails
+{
+    display: none;     
+    background: white;  
+	padding-left:10px;
+    font-family: Consolas,monaco,monospace;
+}
+
+.incremental
+{
+    display: none;
+    color:#24b41e;
+    float:right;
+    font-size:20px;
+}
+
+.incrementalReinforced
+{
+    display: none;
+    color:#88bb84;
+    float:right;
+    font-size:20px;
+}
+
+.hidden_Buttons
+{
+    display: none;
+    width: 1000px;
+    float: left;
+}
+

@@ -1,0 +1,16 @@
+.investDiv {
+    width: 600px;
+    margin-bottom:20px;
+	padding-top: 10px;
+	float: left;
+}
+.investResultDiv {
+	width: 400px;
+	margin-bottom:20px;
+	padding-top: 10px;
+	float: right;
+}
+
+.investDiv button {
+    float: right;
+}

@@ -1,0 +1,44 @@
+﻿body {
+}
+#stocks
+{
+    float:left;
+    text-align:left;
+    background: rgba(0, 0, 0, 0.7);
+    height:800px;
+    width: 1000px;
+    color: #FFF;
+	padding-top:10px;
+}
+#delsecStockUpdate
+{
+    width: 200px;
+    float: right;
+    height: 100px;
+}
+
+.stockType
+{
+    height: 20px;
+    float: left;
+}
+
+.stockTypeDisplay
+{
+    height: 20px;
+    float: left;
+}
+
+#stocks table
+{
+    text-align: center;
+    height: 40px;
+    vertical-align: central;
+	width: 1000px;
+}
+#stocks th, td
+{
+    border-style:solid;
+    border-width: 1px;
+    vertical-align: central;
+}

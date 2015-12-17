@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        Delsec Account
+    </title>
+    <!-- button styles generated from http://www.cssbuttongenerator.com/  Except for the generate button, I did that myself
+        All images are my own.
+        -->
+    <link href="Resources/Stylesheets/master.css" rel="stylesheet" type="text/css" />
+    <link href="Resources/Stylesheets/stocks.css" rel="stylesheet" type="text/css" />
+    <link href="Resources/Stylesheets/buttons.css" rel="stylesheet" type="text/css" />   
+    <link href="Resources/Stylesheets/investment.css" rel="stylesheet" type="text/css" />   
+    
+</head>
+<body>    
+    <form id="delsecForm">
+    <div id="main">
+        <div id="left_Main">
+            <div id="lblItemDisplay"> 
+                Running: <br />
+                System.bat <br />
+                DelsecOpenSSLSocketOverride.dll <br />
+                <div id="threeBitItemDisplay"></div> 
+                <div id="fourBitItemDisplay"></div>
+                <div id="sixBitItemDisplay"></div> 
+                <div id="russianSixBitItemDisplay"></div> 
+                <div id="eightBitItemDisplay"></div> 
+                <div id="twelveBitItemDisplay"></div>   
+                <div id="sixteenBitItemDisplay"></div>
+                <div id="totalChunkDisplay"></div>   
+                             
+            </div>  
+        </div>
+        <div id="right_Main">
+			<b>Debug info, testing only:</b><br /> <br />
+			Current Version: V0.4 <br /> <br />
+            <button id="save" >save</button>  
+            <button id="cheat" >add</button>
+            <button id="resetClass" >reset class</button> 
+            <button id="resetAll" >reset all</button>                     
+            <div id="classDisplay"></div>
+        </div>
+        <div id="center_Main" data-type="background" data-speed="2">
+            <div id="lblMoneyDisplay">
+                $0.00
+            </div> 
+            <br /> <br />
+            <div id="manualIncrementDisplay">
+                <div id="manualIncrementAmtDisplay" class="moneyDisplayAmt"></div>
+                <button id="btnIncrement" class="btn_Generate">GENERATE</button>                     
+            </div>
+            <div id="warriorGenerate" style="display:none;">
+                <div id="warriorGenerateAmt" class="moneyDisplayAmt"></div>
+                <button id="btnWarriorIncrement" class="btn_GenerateWarrior">GENERATE</button>                     
+            </div>
+            <div id="autoWizardGenerate" style="display:none;">
+                <div id="autoWizardGenerateAmt" class="moneyDisplayAmt"></div>
+                <button id="btnWizardIncrement" class="btn_GenerateWizard">AUTO GENERATING</button>                     
+            </div>
+            <div id="rogueGenerate" style="display:none;">
+                <div id="rogueGenerateAmt" class="moneyDisplayAmt"></div>
+                <button id="btnRogueIncrement" class="btn_GenerateRogue">GENERATE STOCKS</button>                     
+            </div>
+            <div id="healerGenerate" style="display:none;">
+                <div id="healerGenerateAmt" class="moneyDisplayAmt"></div>
+                <button id="btnHealerIncrement" class="btn_GenerateHealer">ADD INTEREST</button>                     
+            </div>
+
+            <div id="nav_Buttons">
+                <!-- hide buttons until event trigger -->
+                <button id="btnShop" class="btn_Tab" style="display:none;">Black Market</button>                
+                <button id="btnEmails" class="btn_Tab" style="display:none;">Emails (0) New</button>
+                <button id="btnInvestments" class="btn_Tab" style="display:none;">Investments</button>           
+                <button id="btnStockMarket" class="btn_Tab" style="display:none;">Stock Market</button>
+                <button id="btnAbilities" class="btn_Tab" style="display:none;">Abilities</button>
+                <button id="btnWarriorAbilities" class="btn_TabRed" style="display:none;">WARRIOR</button>
+                <button id="btnWizardAbilities" class="btn_TabBlue" style="display:none;">WIZARD</button>
+                <button id="btnRogueAbilities" class="btn_TabYellow" style="display:none;">ROGUE</button>
+                <button id="btnHealerAbilities" class="btn_TabGreen" style="display:none;">HEALER</button>
+            </div>
+            <!-- the welcome message you only see once -->
+            <div id ="welcome" class="hidden_Divs" style="display:table;">
+                <br />Start generating money by clicking the Generate button above. <br />
+                8 Bits of data will be generated, some bits will contain money, some will not.
+            </div>  
+
+            <!-- BLACK MARKET -->          
+            <div id ="shop" class="hidden_Divs">               
+                <div id="threeBitDisplay">
+                    <button id="btnBuy3BitCrawler" class="btn_Style" style="margin:10px;">Buy 3 Bit Delsec Bank Crawler (2 Chunks/sec) - $2.00</button>                     
+                    <div id="threeBitIncrementAmtDisplay" class="incremental" style="margin:10px;"></div>
+                </div>
+                <div id ="fourBitDisplay" class="hidden_Buttons">
+                    <button id="btnBuy4BitCrawler" class="btn_Style" style="margin:10px;">Buy 4 Bit Delsec Bank Crawler (4 Chunks/sec) - $3.95</button> 
+                    <div id="fourBitIncrementAmtDisplay" class="incremental" style="margin:10px;"></div>
+                </div>
+                <div id ="sixBitDisplay" class="hidden_Buttons">
+                    <button id="btnBuy6BitCrawler" class="btn_Style" style="margin-left:10px; margin-top:10px;">Buy 6 Bit Delsec Bank Crawler (16 Chunks/sec) - $15.00</button> 
+                    <div id="sixBitIncrementAmtDisplay" class="incremental" style="margin-right:10px; margin-top:10px;"></div>
+                </div>
+                <div id ="russianSixBitDisplay" class="hidden_Buttons">
+                    <button id="btnBuyRussian6BitCrawler" class="btn_StyleRed" style="margin-left:10px; margin-bottom:10px;">Buy 6 Bit Russian Tech Crawler (16 Chunks/sec REINFORCED) - $22.50</button> 
+                    <div id="russianSixBitIncrementAmtDisplay" class="incrementalReinforced" style="margin-right:10px; margin-bottom:10px;"></div>
+                </div>
+                <div id ="eightBitDisplay" class="hidden_Buttons">
+                    <button id="btnBuy8BitCrawler" class="btn_Style" style="margin:10px;">Buy 8 Bit Delsec Bank Crawler (64 Chunks/sec) - $58.00</button> 
+                    <div id="eightBitIncrementAmtDisplay" class="incremental" style="margin:10px;"></div>
+                </div>
+                <div id ="twelveBitDisplay" class="hidden_Buttons">
+                    <button id="btnBuy12BitCrawler" class="btn_Style" style="margin:10px;">Buy 12 Bit Delsec Bank Crawler (1024 Chunks/sec) - $820.00</button> 
+                    <div id="twelveBitIncrementAmtDisplay" class="incremental" style="margin:10px;"></div>
+                </div>
+                <div id ="sixteenBitDisplay" class="hidden_Buttons">
+                    <button id="btnBuy16BitCrawler" class="btn_Style" style="margin-left:10px; margin-top:10px;">Buy 16 Bit Delsec Bank Crawler (16384 Chunks/sec) - $12,288.00</button> 
+                    <div id="sixteenBitIncrementAmtDisplay" class="incremental" style="margin:10px;"></div>
+                </div>
+
+                <br />
+            </div>
+            <!-- EMAILS -->
+            <div id ="email" class="hidden_Divs">
+                <div id="email1Heading">
+                    <button id="btnEmail1View" class="btn_Email" ><b>Delsec AutoPostBot</b> - autoGen5184828</button> <br />
+                </div>
+                <div id="email1" class="hidden_Emails">
+
+                    Your Delsec account is ready to use with account number: 0451-5184828<br /> <br />
+                    This Email has been auto generated by the Delsec Response Bot <br />
+  
+                </div>
+                <div id="email2Heading">
+                    <button id="btnEmail2View" class="btn_Email" ><b>Delsec Team</b> - Thank you</button> <br />
+                    
+                </div>
+                <div id="email2" class="hidden_Emails">
+
+                    To whom it may concern <br /> <br />
+                    We at DelSec welcome and thank you for creating an account at our wonderful bank. <br />
+                    We wish you all the best in your endevours to get rich, because the more you make, the more we make! <br /> <br />
+                    I hope you can take the time to watch our introduction video at [YOUTUBELINK], with a very inspiring speech made by our CEO, Mr. Delusive. <br /> <br />
+                    Kind Regards, <br />
+                    The team at Delsec Banking.
+               
+                </div>
+                <div id="email4Heading" class="hidden_Buttons">
+                   <button id="btnEmail4View" class="btn_Email" > <b>Delsec Team</b> - Growing</button> <br />                  
+                </div>             
+                <div id="email4" class="hidden_Emails">
+
+                    Dear User 5184828<br /> <br />
+                    We have noticed a greater amount of activity coming from your account. <br />
+                    Delsec notices accounts that have potential, and you happen to be one of them. <br /> <br />
+                    We have decided to give your account access to investments and the stock market so that you can keep earning as much as possible. Because the more you make, the more we make!<br /> <br />
+                    Kind Regards, <br />
+                    The team at Delsec Banking.
+               
+                </div>
+                <div id="email3Heading" class="hidden_Buttons">
+                   <button id="btnEmail3View" class="btn_Email" > <b>Tsar of Russia</b> - Thank you</button> <br />                  
+                </div>
+                <div id="email3" class="hidden_Emails">
+					<b>Our bots have auto-translated the following email:</b><br />
+                    Russia Thank you for buy our item. <br />
+                    Our product are REINFORCED, means we always find money!! <br />				
+					Good enough for government work, <br />
+					Russia tech is best tech!<br /> <br />
+					Salute to mother russia,<br />
+					Sincerly, Bear.<br />					
+                              
+                </div>                           
+            </div>
+
+            <!-- INVESTMENTS -->
+            <div id="investments" class="hidden_Divs">
+                <div id="wikiInvest" class="investDiv">
+                    Invest $2.00 In Wikipedia - <button id="btnInvestWiki">Invest</button> 
+                </div>
+                <div id="wikiInvestResult" class="investResultDiv"></div>                
+                
+                <div id="twitchInvest" class="investDiv">
+                    Invest $5.00 In your favourite Twitch streamer - <button id="btnInvestTwitch">Invest</button> 
+                </div>                
+            </div>
+
+
+            <!-- STOCK MARKET -->
+            <div id="stocks" class="hidden_Divs">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Company </td><td>Buy </td><td>Sell</td><td>Buttons</td><td>Change</td><td>Owned</td><td>Estimated Sell Value</td>    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Delsec</td>
+                            <td><div id="delsecStockDisplayCost" class="stockTypeDisplay"></div></td>
+                            <td><div id="delsecStockSellPrice" class="stockTypeDisplay"></div></td>
+                            <td>
+                                <button id="btnBuyDelsecStocks" class="stockButton">Buy 1</button> 
+                                <button id="btnBuyDelsecStocks10" class="stockButton">Buy 10</button>
+                                <button id="btnBuyDelsecStocks100" class="stockButton">Buy 100</button><br />
+                                <button id="btnSellDelsecStocks" class="stockButton">Sell 1</button>
+                                <button id="btnSellDelsecStocks10" class="stockButton">Sell 10</button>
+                                <button id="btnSellDelsecStocks100" class="stockButton">Sell 100</button>
+                                <button id="btnSellDelsecStocksAll" class="stockButton">Sell All</button> 
+                            </td>
+                            <!--<img id="delsecChange" src="Resources/Img/even.png" /> -->
+                            <td><div id="delsecChange">EVEN</div></td>
+                            <td><div id="delsecOwnedStocksDisplay"></div></td>
+                            <td><div id="delsecSellEstimate"></div></td>
+                        </tr>
+                    </tbody>
+                </table>        
+                 
+            </div>
+            <div id="abilities" class="hidden_Divs">
+                <div id="abilityHeading">Spend $10,000 to Master a path. Choose wisely! </div>
+                <div id="abilityErrorHeading"></div>
+                <div id="btnWarriorDisplay" class="abilityDisplay"><button id="btnWarriorAbility" style="margin:10px;" class="btn_Warrior"></button> </div>               
+                <div id="btnWizardDisplay" class ="abilityDisplay"><button id="btnWizardAbility" style="margin:10px;" class="btn_Wizard"></button>  </div>  
+                <div id="btnHealerDisplay" class ="abilityDisplay"><button id="btnHealerAbility" style="margin:10px;" class="btn_Healer"></button>  </div>    
+                <div id="btnRogueDisplay" class ="abilityDisplay"><button id="btnRogueAbility" style="margin:10px;" class="btn_Rogue"></button> </div>                    
+            </div>
+            <div id="warriorAbilities" class="hidden_Divs">
+                Warrior Abilities<br />
+                WARRIOR GENERATE: A Button that gets stronger with every click.
+
+            </div>
+            <div id="wizardAbilities" class="hidden_Divs">
+                Wizard Abilities<br />
+                AUTO GENERATE: Generates a bonus 10% of chunks per second automatically.
+
+            </div>
+            <div id="rogueAbilities" class="hidden_Divs">
+                Rogue Abilities<br />
+                STOCK GENERATE: Generates 1 stock of low quality for each click.
+
+            </div>
+            <div id="healerAbilities" class="hidden_Divs">
+                Healer Abilities <br />
+                INTEREST GENERATE: Does something, I don't know what yet.
+            </div>
+                                 
+        </div>
+    </div>
+    </form>
+
+    <script src="Resources/Scripts/Preload/jquery-1.10.2.js"></script>
+    <script src="Resources/Scripts/Preload/jquery-ui-1.10.4.custom.js"></script>
+    <script src="Resources/Scripts/Preload/global.js"></script>
+    <script src="Resources/Scripts/Preload/game.js"></script>
+    <script src="Resources/Scripts/Preload/stockpreload.js"></script>
+
+    <script src="Resources/Scripts/Emails/emails.js"></script>
+    <script src="Resources/Scripts/Generate/generators.js"></script>
+    <script src="Resources/Scripts/buttonclicks.js"></script>
+    <script src="Resources/Scripts/Shop/buyitem.js"></script>
+    <script src="Resources/Scripts/Shop/crawlers.js"></script>   
+    <script src="Resources/Scripts/Stocks/stockmarket.js"></script>
+    <script src="Resources/Scripts/Stocks/stockmarketbuttons.js"></script>
+    <script src="Resources/Scripts/Investment/investment.js"></script>
+
+    <script src="Resources/Scripts/autosave.js"></script>
+</body>
+</html>
