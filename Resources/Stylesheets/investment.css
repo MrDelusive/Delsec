@@ -3,12 +3,16 @@
     margin-bottom:20px;
 	padding-top: 10px;
 	float: left;
+    height: 50px;
 }
 .investResultDiv {
-	width: 400px;
+	width: 395px;
 	margin-bottom:20px;
 	padding-top: 10px;
 	float: right;
+    height: 50px;
+    padding-left: 5px;
+    font-size: 12px;
 }
 
 .investDiv button {
