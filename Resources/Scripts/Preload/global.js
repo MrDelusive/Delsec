@@ -27,6 +27,8 @@ var email3Displayed = false;
 var email3Viewed = false;
 var email4Displayed = false;
 var email4Viewed = false;
+var emailQuickScopeDisplayed = false;
+var emailQuickScopeViewed = false;
 
 
 // ABILITIES

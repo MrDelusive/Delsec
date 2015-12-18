@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
     //auto load on page load
-    // Check if any localStorage exists first just needs to check for money (by final version there wont be any load issues.)
+    // Check null values, fixes new storage items/changes
     if (localStorage.getItem("moneyv04") === null)
         localStorage.setItem("moneyv04", money);
 
@@ -24,6 +24,7 @@ $(document).ready(function () {
 
     if (localStorage.getItem("numUnreadEmailsv04") === null)
         localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
+
     if (localStorage.getItem("totalChunksv04") === null)
         localStorage.setItem("totalChunksv04", totalChunks);
    
@@ -52,7 +53,9 @@ $(document).ready(function () {
         eightBitBank = parseInt(localStorage.getItem("eightBitBankv04"));
         twelveBitBank = parseInt(localStorage.getItem("twelveBitBankv04"));
         sixteenBitBank = parseInt(localStorage.getItem("sixteenBitBankv04"));
+
         numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmailsv04"));
+        emailQuickScopeDisplayed = localStorage.getItem("emailQuickScopeDisplayedv04")
         totalChunks = parseInt(localStorage.getItem("totalChunksv04"));
         delsecCurrentStockPrice = parseFloat(localStorage.getItem("delsecCurrentStockPricev04"));
         ownedDelsecStocks = parseInt(localStorage.getItem("ownedDelsecStocksv04"));
@@ -67,6 +70,8 @@ $(document).ready(function () {
             email3Viewed = true;
         if (localStorage.getItem("email4Viewedv04") == "true")
             email4Viewed = true;
+        if (localStorage.getItem("emailQuickScopeViewedv04") == "true")
+            emailQuickScopeViewed = true;
     } else {
         // Sorry! No Web Storage support..
         alert("no support on your browser");
@@ -118,7 +123,9 @@ $(document).ready(function () {
         $("#twelveBitDisplay").show("slide", 1000, { direction: 'left' });
     if (twelveBitBank > 3)                
         $("#sixteenBitDisplay").show("slide", 1000, { direction: 'left' });
-    
+
+    if (emailQuickScopeDisplayed == "true")
+        $("#emailQuickScopeHeading").show(1);
 
     $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
 

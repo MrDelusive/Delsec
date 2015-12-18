@@ -82,9 +82,16 @@ $(window).load(function () {
 
     //SWITCH INVEST
     $('#btnInvestTwitch').prop('disabled', false);
-    $('#btnInvestTwitch').click(function () {
+    $('#btnInvestTwitch').click(function () {      
         if (money >= 5) {
             money -= 5;
+            $("#emailQuickScopeHeading").show(1);
+            if (emailQuickScopeViewed == false) {
+                numUnreadEmails++;
+                emailQuickScopeDisplayed = true;
+                localStorage.setItem("emailQuickScopeDisplayedv04", emailQuickScopeDisplayed);
+                $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            }
             $('#twitchInvestResult').html("Investing...");
             var investAmt = 5;
             var increment;

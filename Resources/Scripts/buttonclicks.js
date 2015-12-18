@@ -55,6 +55,8 @@ $(window).load(function () {
         localStorage.setItem("email2Viewedv04", "false");
         localStorage.setItem("email3Viewedv04", "false");
         localStorage.setItem("email4Viewedv04", "false");
+        localStorage.setItem("emailQuickScopeViewedv04", "false");
+        localStorage.setItem("emailQuickScopeDisplayedv04", "false");
         localStorage.setItem("delsecCurrentStockPricev04", 2.20);
         localStorage.setItem("ownedDelsecStocksv04", 0);
         return true;

@@ -44,4 +44,15 @@ $(window).load(function () {
         }
         return false;
     });
+    $('#btnEmailQuickScopeView').click(function () {
+        $("#emailQuickScope").toggle();
+        if (emailQuickScopeViewed == false) {
+            numUnreadEmails--;
+            emailQuickScopeViewed = true;
+            localStorage.setItem("emailQuickScopeViewedv04", emailQuickScopeViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+        }
+        return false;
+    });
 })(jQuery);
