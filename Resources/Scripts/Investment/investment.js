@@ -23,12 +23,12 @@ $(window).load(function () {
                 switch (roll) {
                     case 1: //lose all - 100%      
                         increment = investAmt;
-                        $('#wikiInvestResult').html("Zikipedia has been shut down. <b>RETURN: -$" + (investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has been shut down. You lose your investment. <b>RETURN: -$" + (investAmt).toFixed(2) + "</b>");
                         break;
                     case 2: //investment - 50%                        
                         increment = investAmt/2;
                         money += increment; // extra steps for use in alert
-                        $('#wikiInvestResult').html("Zikipedia was hacked during your investment, you have lost half. <b>RESULT: -$" + (investAmt / 2).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia was hacked during your investment, you have lost half your investment. <b>RESULT: -$" + (investAmt / 2).toFixed(2) + "</b>");
                         break;
                     case 3: //investment - 20%
                         increment = investAmt - investAmt / 5;
@@ -112,7 +112,7 @@ $(window).load(function () {
                 switch (roll) {
                     case 1: //lose all - 100%         
                         increment = investAmt;
-                        $('#twitchInvestResult').html("The streamer forgot to turn of their stream during a very private moment, and shut down. <b>RESULT: -$" + (investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer forgot to turn of their stream during a very private moment, and shut down. You lose your investment. <b>RESULT: -$" + (investAmt).toFixed(2) + "</b>");
                         break;
                     case 2: //investment - 50%                        
                         increment = investAmt / 2;
@@ -122,7 +122,7 @@ $(window).load(function () {
                     case 3: //investment - 20%
                         increment = investAmt - investAmt / 5;
                         money += increment;
-                        $('#twitchInvestResult').html("The streamer let out some racist comments, losing many subscribers. <b>RESULT: -$" + (investAmt / 5).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer let out some racist comments, losing many subscribers. You lose 20% of your investment. <b>RESULT: -$" + (investAmt / 5).toFixed(2) + "</b>");
                         break;
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
@@ -193,17 +193,17 @@ $(window).load(function () {
                 switch (roll) {
                     case 1: //lose all - 100%   
                         increment = investAmt;
-                        $('#punchInvestResult').html("You Invest in some new orange grater startup. It was a scam. <b>RESULT: -$" + (investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in some new orange grater startup. It was a scam. You lose your investment. <b>RESULT: -$" + (investAmt).toFixed(2) + "</b>");
                         break;
                     case 2: //investment - 50%                        
                         increment = investAmt / 2;
                         money += increment; // extra steps for use in alert
-                        $('#punchInvestResult').html("You Invest in a coffee maker. It's crap. <b>RESULT: -$" + (investAmt / 2).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a coffee maker. It's crap. You lose half your investment. <b>RESULT: -$" + (investAmt / 2).toFixed(2) + "</b>");
                         break;
                     case 3: //investment - 20%
                         increment = investAmt - investAmt / 5;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a Pineapple shredder. It has it's uses, but they didn't point out the flaws.  <b>RESULT: -$" + (investAmt / 5).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a Pineapple shredder. It has it's uses, but they didn't point out the flaws. You lose 20% of your investment. <b>RESULT: -$" + (investAmt / 5).toFixed(2) + "</b>");
                         break;
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
@@ -254,6 +254,252 @@ $(window).load(function () {
         }
         else
             $('#punchInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //GAME INVEST
+    $('#btnInvestGame').prop('disabled', false);
+    $('#btnInvestGame').click(function () {
+        if (money >= 25) {
+            $('#gameInvestResult').html("Investing...");
+            var investAmt = 25;
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                money -= investAmt;
+                if (userClass == "Healer")
+                    roll += 1;
+                switch (roll) {
+                    case 1: //lose all - 100%   
+                        increment = investAmt;
+                        $('#gameInvestResult').html("The game enters development hell, and never gets finished. You lose your investment. <b>RESULT: -$" + (investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 2: //investment - 50%                        
+                        increment = investAmt / 2;
+                        money += increment; // extra steps for use in alert
+                        $('#gameInvestResult').html("The game is an absolute flop. You lose half your investment. <b>RESULT: -$" + (investAmt / 2).toFixed(2) + "</b>");
+                        break;
+                    case 3: //investment - 20%
+                        increment = investAmt - investAmt / 5;
+                        money += increment;
+                        $('#gameInvestResult').html("The game gets bad reviews, even from reviewers who got payed out. You lose 20% of your investment.<b>RESULT: -$" + (investAmt / 5).toFixed(2) + "</b>");
+                        break;
+                    case 4: //investment + 5%
+                        increment = investAmt + investAmt / 20;
+                        money += increment;
+                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 5: //investment + 10%
+                        increment = investAmt + investAmt / 10;
+                        money += increment;
+                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 6: //investment + 20%
+                        increment = investAmt + investAmt / 5;
+                        money += increment;
+                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 7: //investment + 50%
+                        increment = investAmt + investAmt / 2;
+                        money += increment;
+                        $('#gameInvestResult').html("The game does quite well. A definite 7/10 game <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 8: //investment + 100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#gameInvestResult').html("The game is great. It even makes top 10 on Gleam for a day. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 9: //investment + 200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#gameInvestResult').html("VGN - Almost perfect. Just missing fish pathing. 9/10. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 10: //investment + 500%
+                        increment = investAmt * 6;
+                        money += increment;
+                        $('#gameInvestResult').html("The game is a hit. 10 Billion copies sold on the first day alone. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 11: //investment + 1000% Only possible from Healer
+                        increment = investAmt * 11;
+                        money += increment;
+                        $('#gameInvestResult').html("The web-browser clicker game Seldec you supported somehow manages to give you real money due to your special healer abilities. <b>RESULT: +$"
+                            + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            }, 15000);
+        }
+        else
+            $('#gameInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //POKER INVEST
+    $('#btnInvestPoker').prop('disabled', false);
+    $('#btnInvestPoker').click(function () {
+        if (money >= 100) {
+            $('#pokerInvestResult').html("Investing...");
+            var investAmt = 100;
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                money -= investAmt;
+                if (userClass == "Healer")
+                    roll += 1;
+                switch (roll) {
+                    case 1: //lose all - 100%   
+                        increment = investAmt;
+                        $('#pokerInvestResult').html("Your friend loses all the money to a bad beat, Quad Aces vs Royal Flush. You lose your investment. <b>RESULT: -$" + (investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 2: //investment - 50%                        
+                        increment = investAmt / 2;
+                        money += increment; // extra steps for use in alert
+                        $('#pokerInvestResult').html("Your friend is a bad poker player and loses almost all their money. You lose half of your investment. <b>RESULT: -$" + (investAmt / 2).toFixed(2) + "</b>");
+                        break;
+                    case 3: //investment - 20%
+                        increment = investAmt - investAmt / 5;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend was winning most of the time but slowly lost over time. You lose 20% of your investment. <b>RESULT: -$" + (investAmt / 5).toFixed(2) + "</b>");
+                        break;
+                    case 4: //investment + 5%
+                        increment = investAmt + investAmt / 20;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 5: //investment + 10%
+                        increment = investAmt + investAmt / 10;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 6: //investment + 20%
+                        increment = investAmt + investAmt / 5;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 7: //investment + 50%
+                        increment = investAmt + investAmt / 2;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend makes a decent overall profit. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 8: //investment + 100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend walks away with twice what they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 9: //investment + 200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend wins a massive hand and decides that it is enough. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 10: //investment + 500%
+                        increment = investAmt * 6;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your friend is a poker star. They know how to play. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 11: //investment + 1000% Only possible from Healer
+                        increment = investAmt * 11;
+                        money += increment;
+                        $('#pokerInvestResult').html("Your healer abilities allow you to ensure the investment is 'sorted'. <b>RESULT: +$"
+                            + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            }, 20000);
+        }
+        else
+            $('#pokerInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //RENTAL INVEST
+    $('#btnInvestRental').prop('disabled', false);
+    $('#btnInvestRental').click(function () {
+        if (money >= 500) {
+            $('#rentalInvestResult').html("Investing...");
+            var investAmt = 500;
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                money -= investAmt;
+                if (userClass == "Healer")
+                    roll += 1;
+                switch (roll) {
+                    case 1: //lose all - 100%   
+                        increment = investAmt;
+                        $('#rentalInvestResult').html("The bike gets stolen. You lose your investment. <b>RESULT: -$" + (investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 2: //investment - 50%                        
+                        increment = investAmt / 2;
+                        money += increment; // extra steps for use in alert
+                        $('#rentalInvestResult').html("The bike needs a lot of maintenence, and costs you more over time than you can earn from it. You lose half your investment. <b>RESULT: -$" + (investAmt / 2).toFixed(2) + "</b>");
+                        break;
+                    case 3: //investment - 20%
+                        increment = investAmt - investAmt / 5;
+                        money += increment;
+                        $('#rentalInvestResult').html("The bike burns through petrol like crazy, and petrol is not cheap. You lose 20% of your investment. <b>RESULT: -$" + (investAmt / 5).toFixed(2) + "</b>");
+                        break;
+                    case 4: //investment + 5%
+                        increment = investAmt + investAmt / 20;
+                        money += increment;
+                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 5: //investment + 10%
+                        increment = investAmt + investAmt / 10;
+                        money += increment;
+                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 6: //investment + 20%
+                        increment = investAmt + investAmt / 5;
+                        money += increment;
+                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 7: //investment + 50%
+                        increment = investAmt + investAmt / 2;
+                        money += increment;
+                        $('#rentalInvestResult').html("Many people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 8: //investment + 100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#rentalInvestResult').html("The bike is rented out mostly on weekends, where it earns you a nice sum. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 9: //investment + 200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#rentalInvestResult').html("The bike gets rented out most days. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 10: //investment + 500%
+                        increment = investAmt * 6;
+                        money += increment;
+                        $('#rentalInvestResult').html("The bike is rented out completely. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 11: //investment + 1000% Only possible from Healer
+                        increment = investAmt * 11;
+                        money += increment;
+                        $('#rentalInvestResult').html("Due to your healer abilities, you find someone you can sell the bike to for a 1000% markup. <b>RESULT: +$"
+                            + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            }, 30000);
+        }
+        else
+            $('#rentalInvestResult').html("Not enough money to Invest.");
         return false;
     });
 

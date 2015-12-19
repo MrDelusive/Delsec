@@ -39,6 +39,7 @@ $(document).ready(function () {
     if (typeof (Storage) !== "undefined") {              
         money = parseFloat(localStorage.getItem("moneyv04"));
         $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
                 
         threeBitBank = parseInt(localStorage.getItem("threeBitBankv04"));               
         fourBitBank = parseInt(localStorage.getItem("fourBitBankv04"));               
@@ -150,8 +151,28 @@ $(document).ready(function () {
         $("#manualIncrementDisplay").hide();
         $("#healerGenerate").show();
     }
-        
-    var $window = $(window);            
+       
+    //$window.scroll(function () {
+    //    $('#lblmoneydisplay').toggleclass('sticky', $window.scrolltop() > eltop);
+    //});
+
+    
+
+    var $window = $(window);
+
+    var visible = false;
+    $(window).scroll( function(){
+	
+        //when title is no longer visible. Bool introduced to stop the animation triggering for every scroll event.
+        if ($(this).scrollTop() > 100 && visible == false ) {
+            $('#lblMoneyDisplayScroll').animate({ 'opacity': '1' }, 100);
+            visible = true;
+        }
+        else if ($(this).scrollTop() < 100 && visible == true ) {
+            $('#lblMoneyDisplayScroll').animate({ 'opacity': '0' }, 100);
+            visible = false;
+        }
+    });
     // parralax effect for each data-type background
     $('div[data-type="background"]').each(function () {
         var $bgobj = $(this);
@@ -161,5 +182,7 @@ $(document).ready(function () {
             $bgobj.css({ backgroundPosition: coords });
         });
     });
+
+    
 });
 
