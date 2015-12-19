@@ -2,20 +2,19 @@ $(window).load(function () {
 
     // the default one
     $('#btnIncrement').click(function () {
-
-        // random increments instead of a fixed value. (rdms between 0.00 - 0.08)               
+            
         increment = Math.round(100 * Math.random() / 12.5) / 100;
-        money = money + increment;
+        money += increment;
         $('#lblMoneyDisplay').html('$' + money.toFixed(2));
         $('#manualIncrementAmtDisplay').html('Last Chunk of Data retrieved: + $' + increment.toFixed(2));
 
         // the initial fade in of the shop
         if (money >= 1) {
-            $("#btnShop").fadeIn(1000);
-            $("#btnEmails").fadeIn(1000);
-            $("#btnInvestments").fadeIn(1000);
-            $("#btnStockMarket").fadeIn(1000);
-            $("#btnAbilities").fadeIn(1000);
+            $("#btnShop").fadeIn(500);
+            $("#btnEmails").fadeIn(500);
+            $("#btnInvestments").fadeIn(500);
+            $("#btnStockMarket").fadeIn(500);
+            $("#btnAbilities").fadeIn(500);
             //shopDisplayed = true;
         }
         return false;
@@ -25,7 +24,7 @@ $(window).load(function () {
     $('#btnWarriorIncrement').click(function () {
         warriorClicks++;
         increment = Math.round(100 * (Math.random() / 3.125 + warriorClicks / 100)) / 100;
-        money = money + increment;
+        money += increment;
         $('#lblMoneyDisplay').html('$' + money.toFixed(2));
         $('#warriorGenerateAmt').html('Last Chunk of Data retrieved: + $' + increment.toFixed(2));
 
@@ -38,14 +37,20 @@ $(window).load(function () {
         return false;
     });
 
+    // generates interest based on current money 0.1% of total
+    $('#btnHealerIncrement').click(function () {
+        increment = Math.round(100 * money / 1000) / 100;
+        money += increment;
+        $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+        $('#healerGenerateAmt').html("You have added 0.1% interest to your account for: $" + increment.toFixed(2));
+        return false;
+    });
+
     // generates stocks
     $('#btnRogueIncrement').click(function () {
         return false;
     });
 
-    // generates interest
-    $('#btnHealerIncrement').click(function () {
-        return false;
-    });
+    
 
 })(jQuery);

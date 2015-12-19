@@ -22,4 +22,18 @@ $(window).load(function () {
 
     }, 30000);
 
+    setInterval(function () {
+        if (ownedDelsecStocks > 0) {
+            $("#emailDelsecStockHeading").fadeIn(1);
+            if (emailDelsecStockDisplayed == "false") {                
+                numUnreadEmails++;
+                emailDelsecStockDisplayed = "true";
+                localStorage.setItem("emailDelsecStockDisplayedv04", emailDelsecStockDisplayed);
+                
+                $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+
+            }
+        }
+    }, 2000);
+
 })(jQuery);

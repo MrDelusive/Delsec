@@ -48,15 +48,21 @@ $(window).load(function () {
         localStorage.setItem("russianSixBitBankv04", 0);
         localStorage.setItem("eightBitBankv04", 0);
         localStorage.setItem("twelveBitBankv04", 0);
-        localStorage.setItem("sixteenBitBankv04", 0);
-        localStorage.setItem("numUnreadEmailsv04", 2);
+        localStorage.setItem("sixteenBitBankv04", 0);       
         localStorage.setItem("totalChunksv04", 0);
+
+        localStorage.setItem("numUnreadEmailsv04", 2);
         localStorage.setItem("email1Viewedv04", "false");
         localStorage.setItem("email2Viewedv04", "false");
         localStorage.setItem("email3Viewedv04", "false");
+        localStorage.setItem("email3Displayedv04", "false");
         localStorage.setItem("email4Viewedv04", "false");
+        localStorage.setItem("email4Displayedv04", "false");
         localStorage.setItem("emailQuickScopeViewedv04", "false");
         localStorage.setItem("emailQuickScopeDisplayedv04", "false");
+        localStorage.setItem("emailDelsecStockViewedv04", "false");
+        localStorage.setItem("emailDelsecStockDisplayedv04", "false");
+
         localStorage.setItem("delsecCurrentStockPricev04", 2.20);
         localStorage.setItem("ownedDelsecStocksv04", 0);
         return true;

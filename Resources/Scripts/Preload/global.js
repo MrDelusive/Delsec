@@ -1,3 +1,5 @@
+// STARTING VALUES
+
 var money = 0.00;
 
 var threeBitBank = 0;
@@ -18,17 +20,20 @@ var autoIncrement12Bit = 0;
 var autoIncrement16Bit = 0;
 var totalChunks = 0;
 
-// Emails
+// Emails WHY am i storing bools as strings you ask?
+// Cause LocalStorage is a piece of shit, that's why.
 var numUnreadEmails = 2;
-var emailsLoaded = false;
-var email1Viewed = false;
-var email2Viewed = false;
-var email3Displayed = false;
-var email3Viewed = false;
-var email4Displayed = false;
-var email4Viewed = false;
-var emailQuickScopeDisplayed = false;
-var emailQuickScopeViewed = false;
+var emailsLoaded = "false";
+var email1Viewed = "false";
+var email2Viewed = "false";
+var email3Displayed = "false";
+var email3Viewed = "false";
+var email4Displayed = "false";
+var email4Viewed = "false";
+var emailQuickScopeDisplayed = "false";
+var emailQuickScopeViewed = "false";
+var emailDelsecStockDisplayed = "false";
+var emailDelsecStockViewed = "false";
 
 
 // ABILITIES
