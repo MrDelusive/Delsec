@@ -13,8 +13,10 @@ $(window).load(function () {
             localStorage.setItem("sixteenBitBankv04", sixteenBitBank);
             localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             localStorage.setItem("totalChunksv04", totalChunks);
-            localStorage.setItem("delsecCurrentStockPricev04", delsecCurrentStockPrice);
+            
             localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
+            localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
+
             if (userClass == "Warrior")
                 localStorage.setItem("warriorClicksv04", warriorClicks); //remember number of clicks to calculate power of warrior generate
         }

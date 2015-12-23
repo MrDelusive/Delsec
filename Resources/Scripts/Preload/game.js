@@ -25,11 +25,7 @@ $(document).ready(function () {
 
     if (localStorage.getItem("totalChunksv04") === null)
         localStorage.setItem("totalChunksv04", totalChunks);
-
-    if (localStorage.getItem("delsecCurrentStockPricev04") === null)
-        localStorage.setItem("delsecCurrentStockPricev04", delsecCurrentStockPrice);
-    if (localStorage.getItem("ownedDelsecStocksv04") === null)
-        localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
+   
 
     if (localStorage.getItem("userClassv04") === null)
         localStorage.setItem("userClassv04", userClass);           
@@ -51,8 +47,7 @@ $(document).ready(function () {
 
         numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmailsv04"));        
         totalChunks = parseInt(localStorage.getItem("totalChunksv04"));
-        delsecCurrentStockPrice = parseFloat(localStorage.getItem("delsecCurrentStockPricev04"));
-        ownedDelsecStocks = parseInt(localStorage.getItem("ownedDelsecStocksv04"));
+        
         userClass = localStorage.getItem("userClassv04");
         warriorClicks = parseInt(localStorage.getItem("warriorClicksv04"));
 
@@ -116,14 +111,6 @@ $(document).ready(function () {
 
     $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
 
-    $('#delsecStockDisplayCost').html('$' + delsecCurrentStockPrice.toFixed(2));
-    $('#delsecStockSellPrice').html('$' + (delsecCurrentStockPrice - delsecCurrentStockPrice / 10).toFixed(2));
-    $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
-    if (ownedDelsecStocks > 0)
-        $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - (delsecCurrentStockPrice / 10))).toFixed(2));
-    else
-        $('#delsecSellEstimate').html('$0');
-
 
     $('#classDisplay').html("<br /><br />Class: " + userClass);
     if (userClass == "Warrior") {
@@ -152,11 +139,6 @@ $(document).ready(function () {
         $("#healerGenerate").show();
     }
        
-    //$window.scroll(function () {
-    //    $('#lblmoneydisplay').toggleclass('sticky', $window.scrolltop() > eltop);
-    //});
-
-    
 
     var $window = $(window);
 

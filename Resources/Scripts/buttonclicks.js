@@ -65,6 +65,8 @@ $(window).load(function () {
 
         localStorage.setItem("delsecCurrentStockPricev04", 2.20);
         localStorage.setItem("ownedDelsecStocksv04", 0);
+        localStorage.setItem("entaqCurrentStockPricev04", 0.27);
+        localStorage.setItem("ownedEntaqStocksv04", 0);
         return true;
     });
 
@@ -83,6 +85,8 @@ $(window).load(function () {
             localStorage.setItem("totalChunksv04", totalChunks);
             localStorage.setItem("delsecCurrentStockPricev04", delsecCurrentStockPrice);
             localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
+            localStorage.setItem("entaqCurrentStockPricev04", delsecCurrentStockPrice);
+            localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
             if (userClass == "Warrior")
                 localStorage.setItem("warriorClicksv04", warriorClicks); //remember number of clicks to calculate power of warrior generate
         }
