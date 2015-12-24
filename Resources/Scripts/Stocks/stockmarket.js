@@ -37,11 +37,11 @@ $(window).load(function () {
     setInterval(function () {
 
         // DELSEC //
-        delsecIncrement = totalChunks / 500 + Math.round(100 * Math.random() / 8) / 100;
+        delsecIncrement = totalChunks / 500 + Math.round(100 * Math.random() / 10) / 100;
         if (delsecIncrement > 0)
-            $('#delsecChange').html('UP');
+            $("#delsecChangeImg").attr("src", "Resources/Img/up.png");
         else if (delsecIncrement < 0)
-            $('#delsecChange').html('DOWN');
+            $("#delsecChangeImg").attr("src", "Resources/Img/down.png");
 
         delsecCurrentStockPrice += delsecIncrement;
         $('#delsecStockDisplayCost').html('$' + delsecCurrentStockPrice.toFixed(2));
@@ -56,12 +56,12 @@ $(window).load(function () {
         // ENTAQ //
         entaqIncrement = Math.round(100 * (Math.random() * 10 - 5) / 80) / 100;
         if (entaqIncrement > 0)
-            $('#entaqChange').html('UP');
+            $("#entaqChangeImg").attr("src","Resources/Img/up.png");
         else if (entaqIncrement < 0)
-            $('#entaqChange').html('DOWN');
+            $("#entaqChangeImg").attr("src", "Resources/Img/down.png");
 
         entaqCurrentStockPrice += entaqIncrement;
-        if (entaqCurrentStockPrice < 0)
+        if (entaqCurrentStockPrice <= 0)
             entaqCurrentStockPrice = 0.01;
         $('#entaqStockDisplayCost').html('$' + entaqCurrentStockPrice.toFixed(2));
         $('#entaqStockSellPrice').html('$' + (entaqCurrentStockPrice - entaqCurrentStockPrice / 10).toFixed(2));
@@ -69,6 +69,7 @@ $(window).load(function () {
             $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - (entaqCurrentStockPrice / 10))).toFixed(2));
         else
             $('#entaqSellEstimate').html('$0');
+
         localStorage.setItem("entaqCurrentStockPricev04", entaqCurrentStockPrice);       
         // ENTAQ END //
     }, 30000);

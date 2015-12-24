@@ -64,8 +64,6 @@ $(document).ready(function () {
     }
     else
         alert("no support on your browser");
-    
-
     //// THIS SECTION SHOULD MATCH ALL GAME CONDITIONS ////
 
     // check for div updates on page load as well now because of localStorage
