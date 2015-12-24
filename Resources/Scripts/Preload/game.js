@@ -67,13 +67,13 @@ $(document).ready(function () {
     //// THIS SECTION SHOULD MATCH ALL GAME CONDITIONS ////
 
     // check for div updates on page load as well now because of localStorage
-    if (money >= 1 ) {
-        $("#btnShop").fadeIn(500);
-        $("#btnEmails").fadeIn(500);
-        $("#btnInvestments").fadeIn(500);
-        $("#btnStockMarket").fadeIn(500);
-        $("#btnAbilities").fadeIn(500);
-    }
+
+    $("#btnShop").fadeIn(500);
+    $("#btnEmails").fadeIn(500);
+    $("#btnInvestments").fadeIn(500);
+    $("#btnStockMarket").fadeIn(500);
+    $("#btnAbilities").fadeIn(500);
+
 
     if (threeBitBank > 0) 
         $('#threeBitItemDisplay').html("<br />Delsec3bit.exe :" + threeBitBank + " Processes Iterating through " + threeBitBank * 8 / 4 + " Chunks of data per second.<br />");

@@ -1,15 +1,13 @@
 $(window).load(function () {
 
-    // Investment formula works such that the investment price is removed at the same time as the return is given. This is to synergize with the Interest Generate function of the Healer Class Generate
-    // Button. So what happens is the user clicks, it waits x amount of seconds. after x seconds subtract the INVESTMENT AMOUNT, roll 1-10(11) calculate INCREMENT, add INCREMENT to money. RESULT displayed is the
-    // actual amount that goes into the account. The only time user will see their account go down is if there is a loss.
-
     //initially disabled for some reason.
     $('#btnInvestWiki').prop('disabled', false);
     $('#btnInvestWiki').click(function () {
         if (money >= 2) {                    
             $('#wikiInvestResult').html("Investing...");
             var investAmt = 2;
+            money -= investAmt;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             var increment;
             // disable button for 10s
             var btn = $(this);
@@ -17,7 +15,7 @@ $(window).load(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                money -= investAmt; // decrement the money after the cycle ends. Synergizes with Investment healer generate button.
+                
                 if (userClass == "Healer")
                     roll += 1;
                 switch (roll) {
@@ -38,42 +36,42 @@ $(window).load(function () {
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
                         money += increment;                       
-                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 5: //investment + 10%
                         increment = investAmt + investAmt / 10;
                         money += increment;                       
-                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 6: //investment + 20%
                         increment = investAmt + investAmt / 5;
                         money += increment;                      
-                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 7: //investment + 50%
                         increment = investAmt + investAmt / 2;
                         money += increment;
-                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has grown from your investment. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 8: //investment + 100%
                         increment = investAmt * 2;
                         money += increment;
-                        $('#wikiInvestResult').html("Zikipedia has Developed new features that have sold really well. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has Developed new features that have sold really well. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 9: //investment + 200%
                         increment = investAmt * 3;
                         money += increment;
-                        $('#wikiInvestResult').html("Zikipedia has Developed new features that have sold really well. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has Developed new features that have sold really well. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 10: //investment + 500%
                         increment = investAmt * 6;
                         money += increment;
-                        $('#wikiInvestResult').html("Zikipedia has grown far beyond anyone ever thought. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Zikipedia has grown far beyond anyone ever thought. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 11: //investment + 1000% Only possible from Healer
                         increment = investAmt * 11;
                         money += increment;
-                        $('#wikiInvestResult').html("Your special Healer abilities have made your investment grow beyond any normal investment. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#wikiInvestResult').html("Your special Healer abilities have made your investment grow beyond any normal investment. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     default:
                         break;
@@ -100,13 +98,14 @@ $(window).load(function () {
             }
             $('#twitchInvestResult').html("Investing...");
             var investAmt = 5;
+            money -= investAmt;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
             window.setTimeout(function () {
                 btn.prop('disabled', false);
-                var roll = Math.floor((Math.random() * 10) + 1);
-                money -= investAmt;
+                var roll = Math.floor((Math.random() * 10) + 1);               
                 if (userClass == "Healer")
                     roll += 1;
                 switch (roll) {
@@ -127,42 +126,42 @@ $(window).load(function () {
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
                         money += increment;
-                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 5: //investment + 10%
                         increment = investAmt + investAmt / 10;
                         money += increment;
-                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 6: //investment + 20%
                         increment = investAmt + investAmt / 5;
                         money += increment;
-                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 7: //investment + 50%
                         increment = investAmt + investAmt / 2;
                         money += increment;
-                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer's channel has grown. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 8: //investment + 100%
                         increment = investAmt * 2;
                         money += increment;
-                        $('#twitchInvestResult').html("The streamer hit a lucky break and has had a huge influx of subscribers. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer hit a lucky break and has had a huge influx of subscribers. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 9: //investment + 200%
                         increment = investAmt * 3;
                         money += increment;
-                        $('#twitchInvestResult').html("Turns out the streamer produces some entertaining content, their subscribers have grown rapidly. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("Turns out the streamer produces some entertaining content, their subscribers have grown rapidly. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 10: //investment + 500%
                         increment = investAmt * 6;
                         money += increment;
-                        $('#twitchInvestResult').html("The streamer is a professional entertainer. Subscribers have gone through the roof. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("The streamer is a professional entertainer. Subscribers have gone through the roof. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 11: //investment + 1000% Only possible from Healer
                         increment = investAmt * 11;
                         money += increment;
-                        $('#twitchInvestResult').html("Your special Healer abilities have promoted the streamer as some kind of Movie star. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#twitchInvestResult').html("Your special Healer abilities have promoted the streamer as some kind of Movie star. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     default:
                         break;
@@ -181,13 +180,15 @@ $(window).load(function () {
         if (money >= 10) {                   
             $('#punchInvestResult').html("Investing...");
             var investAmt = 10;
+            money -= investAmt;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                money -= investAmt;
+                
                 if (userClass == "Healer")
                     roll += 1;
                 switch (roll) {
@@ -208,42 +209,42 @@ $(window).load(function () {
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a WiFi Light. It does OK. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a WiFi Light. It does OK. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 5: //investment + 10%
                         increment = investAmt + investAmt / 10;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a Bread Slicer. It does OK. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a Bread Slicer. It does OK. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 6: //investment + 20%
                         increment = investAmt + investAmt / 5;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a Subwoofer. The Bass is Buttery Biscuit. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a Subwoofer. The Bass is Buttery Biscuit. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 7: //investment + 50%
                         increment = investAmt + investAmt / 2;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a Short Film. It gets quite a following. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a Short Film. It gets quite a following. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 8: //investment + 100%
                         increment = investAmt * 2;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a Money Doubler. It does as described. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a Money Doubler. It does as described. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 9: //investment + 200%
                         increment = investAmt * 3;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a new Virtual Reality Device. It does really well. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a new Virtual Reality Device. It does really well. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 10: //investment + 500%
                         increment = investAmt * 6;
                         money += increment;
-                        $('#punchInvestResult').html("You Invest in a new website that helps fund start-ups. They're calling it Kick-Ender. It does extremely well. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#punchInvestResult').html("You Invest in a new website that helps fund start-ups. They're calling it Kick-Ender. It does extremely well. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 11: //investment + 1000% Only possible from Healer
                         increment = investAmt * 11;
                         money += increment;
-                        $('#punchInvestResult').html("Your special Healer abilities allow you to fund a secret start-up called Illuminators. They somehow do well. It's a conspiracy. <b>RESULT: +$"
+                        $('#punchInvestResult').html("Your special Healer abilities allow you to fund a secret start-up called Illuminators. They somehow do well. It's a conspiracy. <b>RESULT: Investment +$"
                             + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     default:
@@ -263,13 +264,14 @@ $(window).load(function () {
         if (money >= 25) {
             $('#gameInvestResult').html("Investing...");
             var investAmt = 25;
+            money -= investAmt;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
             window.setTimeout(function () {
                 btn.prop('disabled', false);
-                var roll = Math.floor((Math.random() * 10) + 1);
-                money -= investAmt;
+                var roll = Math.floor((Math.random() * 10) + 1);               
                 if (userClass == "Healer")
                     roll += 1;
                 switch (roll) {
@@ -290,42 +292,42 @@ $(window).load(function () {
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
                         money += increment;
-                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 5: //investment + 10%
                         increment = investAmt + investAmt / 10;
                         money += increment;
-                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 6: //investment + 20%
                         increment = investAmt + investAmt / 5;
                         money += increment;
-                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#gameInvestResult').html("The game meets buyers expectations. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 7: //investment + 50%
                         increment = investAmt + investAmt / 2;
                         money += increment;
-                        $('#gameInvestResult').html("The game does quite well. A definite 7/10 game <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#gameInvestResult').html("The game does quite well. A definite 7/10 game <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 8: //investment + 100%
                         increment = investAmt * 2;
                         money += increment;
-                        $('#gameInvestResult').html("The game is great. It even makes top 10 on Gleam for a day. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#gameInvestResult').html("The game is great. It even makes top 10 on Gleam for a day. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 9: //investment + 200%
                         increment = investAmt * 3;
                         money += increment;
-                        $('#gameInvestResult').html("VGN - Almost perfect. Just missing fish pathing. 9/10. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#gameInvestResult').html("VGN - Almost perfect. Just missing fish pathing. 9/10. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 10: //investment + 500%
                         increment = investAmt * 6;
                         money += increment;
-                        $('#gameInvestResult').html("The game is a hit. 10 Billion copies sold on the first day alone. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#gameInvestResult').html("The game is a hit. 10 Billion copies sold on the first day alone. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 11: //investment + 1000% Only possible from Healer
                         increment = investAmt * 11;
                         money += increment;
-                        $('#gameInvestResult').html("The web-browser clicker game Seldec you supported somehow manages to give you real money due to your special healer abilities. <b>RESULT: +$"
+                        $('#gameInvestResult').html("The web-browser clicker game Seldec you supported somehow manages to give you real money due to your special healer abilities. <b>RESULT: Investment +$"
                             + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     default:
@@ -345,13 +347,14 @@ $(window).load(function () {
         if (money >= 100) {
             $('#pokerInvestResult').html("Investing...");
             var investAmt = 100;
+            money -= investAmt;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
             window.setTimeout(function () {
                 btn.prop('disabled', false);
-                var roll = Math.floor((Math.random() * 10) + 1);
-                money -= investAmt;
+                var roll = Math.floor((Math.random() * 10) + 1);               
                 if (userClass == "Healer")
                     roll += 1;
                 switch (roll) {
@@ -372,42 +375,42 @@ $(window).load(function () {
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
                         money += increment;
-                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 5: //investment + 10%
                         increment = investAmt + investAmt / 10;
                         money += increment;
-                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 6: //investment + 20%
                         increment = investAmt + investAmt / 5;
                         money += increment;
-                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#pokerInvestResult').html("Your friend plays it safe and walks away with slightly more they started with. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 7: //investment + 50%
                         increment = investAmt + investAmt / 2;
                         money += increment;
-                        $('#pokerInvestResult').html("Your friend makes a decent overall profit. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#pokerInvestResult').html("Your friend makes a decent overall profit. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 8: //investment + 100%
                         increment = investAmt * 2;
                         money += increment;
-                        $('#pokerInvestResult').html("Your friend walks away with twice what they started with. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#pokerInvestResult').html("Your friend walks away with twice what they started with. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 9: //investment + 200%
                         increment = investAmt * 3;
                         money += increment;
-                        $('#pokerInvestResult').html("Your friend wins a massive hand and decides that it is enough. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#pokerInvestResult').html("Your friend wins a massive hand and decides that it is enough. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 10: //investment + 500%
                         increment = investAmt * 6;
                         money += increment;
-                        $('#pokerInvestResult').html("Your friend is a poker star. They know how to play. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#pokerInvestResult').html("Your friend is a poker star. They know how to play. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 11: //investment + 1000% Only possible from Healer
                         increment = investAmt * 11;
                         money += increment;
-                        $('#pokerInvestResult').html("Your healer abilities allow you to ensure the investment is 'sorted'. <b>RESULT: +$"
+                        $('#pokerInvestResult').html("Your healer abilities allow you to ensure the investment is 'sorted'. <b>RESULT: Investment +$"
                             + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     default:
@@ -427,13 +430,14 @@ $(window).load(function () {
         if (money >= 500) {
             $('#rentalInvestResult').html("Investing...");
             var investAmt = 500;
+            money -= investAmt;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
             window.setTimeout(function () {
                 btn.prop('disabled', false);
-                var roll = Math.floor((Math.random() * 10) + 1);
-                money -= investAmt;
+                var roll = Math.floor((Math.random() * 10) + 1);               
                 if (userClass == "Healer")
                     roll += 1;
                 switch (roll) {
@@ -454,42 +458,42 @@ $(window).load(function () {
                     case 4: //investment + 5%
                         increment = investAmt + investAmt / 20;
                         money += increment;
-                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 5: //investment + 10%
                         increment = investAmt + investAmt / 10;
                         money += increment;
-                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 6: //investment + 20%
                         increment = investAmt + investAmt / 5;
                         money += increment;
-                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#rentalInvestResult').html("A few people have been interested in renting the bike. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 7: //investment + 50%
                         increment = investAmt + investAmt / 2;
                         money += increment;
-                        $('#rentalInvestResult').html("Many people have been interested in renting the bike. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#rentalInvestResult').html("Many people have been interested in renting the bike. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 8: //investment + 100%
                         increment = investAmt * 2;
                         money += increment;
-                        $('#rentalInvestResult').html("The bike is rented out mostly on weekends, where it earns you a nice sum. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#rentalInvestResult').html("The bike is rented out mostly on weekends, where it earns you a nice sum. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 9: //investment + 200%
                         increment = investAmt * 3;
                         money += increment;
-                        $('#rentalInvestResult').html("The bike gets rented out most days. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#rentalInvestResult').html("The bike gets rented out most days. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 10: //investment + 500%
                         increment = investAmt * 6;
                         money += increment;
-                        $('#rentalInvestResult').html("The bike is rented out completely. <b>RESULT: +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        $('#rentalInvestResult').html("The bike is rented out completely. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     case 11: //investment + 1000% Only possible from Healer
                         increment = investAmt * 11;
                         money += increment;
-                        $('#rentalInvestResult').html("Due to your healer abilities, you find someone you can sell the bike to for a 1000% markup. <b>RESULT: +$"
+                        $('#rentalInvestResult').html("Due to your healer abilities, you find someone you can sell the bike to for a 1000% markup. <b>RESULT: Investment +$"
                             + (increment - investAmt).toFixed(2) + "</b>");
                         break;
                     default:

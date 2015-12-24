@@ -20,7 +20,7 @@ $(window).load(function () {
 
         if (money >= delsecCurrentStockPrice * 10) {
             money -= delsecCurrentStockPrice * 10;
-            ownedDelsecStocks = ownedDelsecStocks + 10;
+            ownedDelsecStocks += 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
@@ -34,7 +34,7 @@ $(window).load(function () {
 
         if (money >= delsecCurrentStockPrice * 100) {
             money -= delsecCurrentStockPrice * 100;
-            ownedDelsecStocks = ownedDelsecStocks + 100;
+            ownedDelsecStocks += 100;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
@@ -44,6 +44,22 @@ $(window).load(function () {
         }
         return false;
     });
+
+    $('#btnBuyDelsecStocksAll').click(function () {
+        var delsecBuyAmt = Math.floor(money / delsecCurrentStockPrice);
+        if (delsecBuyAmt >= 1) {
+            money -= delsecCurrentStockPrice * delsecBuyAmt;
+            ownedDelsecStocks += delsecBuyAmt;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
+            if (ownedDelsecStocks > 0)
+                $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
+            else
+                $('#delsecSellEstimate').html('$0');
+        }
+        return false;
+    });
+
     // Always sell amt at 10% lower
     $('#btnSellDelsecStocks').click(function () {
         if (ownedDelsecStocks > 0) {
@@ -61,7 +77,7 @@ $(window).load(function () {
     $('#btnSellDelsecStocks10').click(function () {
         if (ownedDelsecStocks > 9) {
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * 10;
-            ownedDelsecStocks = ownedDelsecStocks - 10;
+            ownedDelsecStocks -= 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
@@ -74,7 +90,7 @@ $(window).load(function () {
     $('#btnSellDelsecStocks100').click(function () {
         if (ownedDelsecStocks > 99) {
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * 100;
-            ownedDelsecStocks = ownedDelsecStocks - 100;
+            ownedDelsecStocks -= 100;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
@@ -122,7 +138,7 @@ $(window).load(function () {
 
         if (money >= entaqCurrentStockPrice * 10) {
             money -= entaqCurrentStockPrice * 10;
-            ownedEntaqStocks = ownedEntaqStocks + 10;
+            ownedEntaqStocks += 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
             if (ownedEntaqStocks > 0)
@@ -136,7 +152,22 @@ $(window).load(function () {
 
         if (money >= entaqCurrentStockPrice * 100) {
             money -= entaqCurrentStockPrice * 100;
-            ownedEntaqStocks = ownedEntaqStocks + 100;
+            ownedEntaqStocks += 100;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
+            if (ownedEntaqStocks > 0)
+                $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - entaqCurrentStockPrice / 10)).toFixed(2));
+            else
+                $('#entaqSellEstimate').html('$0');
+        }
+        return false;
+    });
+
+    $('#btnBuyEntaqStocksAll').click(function () {
+        var entaqBuyAmt = Math.floor(money / entaqCurrentStockPrice);
+        if (entaqBuyAmt >= 1) {
+            money -= entaqCurrentStockPrice * entaqBuyAmt;
+            ownedEntaqStocks += entaqBuyAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
             if (ownedEntaqStocks > 0)
@@ -163,7 +194,7 @@ $(window).load(function () {
     $('#btnSellEntaqStocks10').click(function () {
         if (ownedEntaqStocks > 9) {
             money += (entaqCurrentStockPrice - entaqCurrentStockPrice / 10) * 10;
-            ownedEntaqStocks = ownedEntaqStocks - 10;
+            ownedEntaqStocks -= 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
             if (ownedEntaqStocks > 0)
@@ -176,7 +207,7 @@ $(window).load(function () {
     $('#btnSellEntaqStocks100').click(function () {
         if (ownedEntaqStocks > 99) {
             money += (entaqCurrentStockPrice - entaqCurrentStockPrice / 10) * 100;
-            ownedEntaqStocks = ownedEntaqStocks - 100;
+            ownedEntaqStocks -= 100;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
             if (ownedEntaqStocks > 0)

@@ -66,7 +66,7 @@ $(window).load(function () {
         $('#entaqStockDisplayCost').html('$' + entaqCurrentStockPrice.toFixed(2));
         $('#entaqStockSellPrice').html('$' + (entaqCurrentStockPrice - entaqCurrentStockPrice / 10).toFixed(2));
         if (ownedEntaqStocks > 0)
-            $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - (entaqCurrentStockPrice / 10))).toFixed(2));
+            $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - entaqCurrentStockPrice / 10)).toFixed(2));
         else
             $('#entaqSellEstimate').html('$0');
 

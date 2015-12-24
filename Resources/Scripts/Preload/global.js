@@ -23,7 +23,7 @@ var totalChunks = 0;
 // Emails WHY am i storing bools as strings you ask?
 // Cause LocalStorage is a piece of shit, that's why.
 var numUnreadEmails = 2;
-var emailsLoaded = "false";
+//var emailsLoaded = "false";
 var email1Viewed = "false";
 var email2Viewed = "false";
 var email3Displayed = "false";
