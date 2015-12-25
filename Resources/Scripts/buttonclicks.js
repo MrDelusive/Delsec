@@ -65,8 +65,15 @@ $(window).load(function () {
 
         localStorage.setItem("delsecCurrentStockPricev04", 2.20);
         localStorage.setItem("ownedDelsecStocksv04", 0);
+
         localStorage.setItem("entaqCurrentStockPricev04", 0.27);
         localStorage.setItem("ownedEntaqStocksv04", 0);
+
+        localStorage.setItem("ventexCurrentStockPricev04", 1.54);
+        localStorage.setItem("ownedVentexStocksv04", 0);
+
+        localStorage.setItem("popbotCurrentStockPricev04", 0.01);
+        localStorage.setItem("ownedPopbotStocksv04", 0);
         return true;
     });
 
@@ -83,10 +90,18 @@ $(window).load(function () {
             localStorage.setItem("sixteenBitBankv04", sixteenBitBank);
             localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             localStorage.setItem("totalChunksv04", totalChunks);
+
             localStorage.setItem("delsecCurrentStockPricev04", delsecCurrentStockPrice);
             localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
-            localStorage.setItem("entaqCurrentStockPricev04", delsecCurrentStockPrice);
+
+            localStorage.setItem("entaqCurrentStockPricev04", entacCurrentStockPrice);
             localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
+
+            localStorage.setItem("ventexCurrentStockPricev04", ventexCurrentStockPrice);
+            localStorage.setItem("ownedVentexStocksv04", ownedVentexStocks);
+
+            localStorage.setItem("popbotCurrentStockPricev04", popbotCurrentStockPrice);
+            localStorage.setItem("ownedPopbotStocksv04", ownedPopbotStocks);
             if (userClass == "Warrior")
                 localStorage.setItem("warriorClicksv04", warriorClicks); //remember number of clicks to calculate power of warrior generate
         }

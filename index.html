@@ -271,6 +271,44 @@
                             <td><div id="entaqOwnedStocksDisplay"></div></td>
                             <td><div id="entaqSellEstimate"></div></td>
                         </tr>
+
+                        <tr>
+                            <td>Ventex</td>
+                            <td><div id="ventexStockDisplayCost" class="stockTypeDisplay"></div></td>
+                            <td><div id="ventexStockSellPrice" class="stockTypeDisplay"></div></td>
+                            <td>
+                                <button id="btnBuyVentexStocks" class="stockButton">Buy 1</button> 
+                                <button id="btnBuyVentexStocks10" class="stockButton">Buy 10</button>
+                                <button id="btnBuyVentexStocks100" class="stockButton">Buy 100</button>
+                                <button id="btnBuyVentexStocksAll" class="stockButton">Buy All</button><br />
+                                <button id="btnSellVentexStocks" class="stockButton">Sell 1</button>
+                                <button id="btnSellVentexStocks10" class="stockButton">Sell 10</button>
+                                <button id="btnSellVentexStocks100" class="stockButton">Sell 100</button>
+                                <button id="btnSellVentexStocksAll" class="stockButton">Sell All</button> 
+                            </td>
+                            <td><div id="ventexChange"><img alt="Change" id="ventexChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="ventexOwnedStocksDisplay"></div></td>
+                            <td><div id="ventexSellEstimate"></div></td>
+                        </tr>
+
+                        <tr>
+                            <td>Popbot</td>
+                            <td><div id="popbotStockDisplayCost" class="stockTypeDisplay"></div></td>
+                            <td><div id="popbotStockSellPrice" class="stockTypeDisplay"></div></td>
+                            <td>
+                                <button id="btnBuyPopbotStocks" class="stockButton">Buy 1</button> 
+                                <button id="btnBuyPopbotStocks10" class="stockButton">Buy 10</button>
+                                <button id="btnBuyPopbotStocks100" class="stockButton">Buy 100</button>
+                                <button id="btnBuyPopbotStocksAll" class="stockButton">Buy All</button><br />
+                                <button id="btnSellPopbotStocks" class="stockButton">Sell 1</button>
+                                <button id="btnSellPopbotStocks10" class="stockButton">Sell 10</button>
+                                <button id="btnSellPopbotStocks100" class="stockButton">Sell 100</button>
+                                <button id="btnSellPopbotStocksAll" class="stockButton">Sell All</button> 
+                            </td>
+                            <td><div id="popbotChange"><img alt="Change" id="popbotChangeImage" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="popbotOwnedStocksDisplay"></div></td>
+                            <td><div id="popbotSellEstimate"></div></td>
+                        </tr>
                     </tbody>
                 </table>        
                  
@@ -306,7 +344,6 @@
         </div>
     </div>
     </form>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script> <!-- Google Chart -->
 
     <script src="Resources/Scripts/Preload/jquery-1.10.2.js"></script>
     <script src="Resources/Scripts/Preload/jquery-ui-1.10.4.custom.js"></script>
@@ -318,9 +355,14 @@
     <script src="Resources/Scripts/Generate/generators.js"></script>
     <script src="Resources/Scripts/buttonclicks.js"></script>
     <script src="Resources/Scripts/Shop/buyitem.js"></script>
-    <script src="Resources/Scripts/Shop/crawlers.js"></script>   
+    <script src="Resources/Scripts/Shop/crawlers.js"></script>  
+     
     <script src="Resources/Scripts/Stocks/stockmarket.js"></script>
-    <script src="Resources/Scripts/Stocks/stockmarketbuttons.js"></script>
+    <script src="Resources/Scripts/Stocks/DelsecButtons.js"></script>
+    <script src="Resources/Scripts/Stocks/EntaqButtons.js"></script>
+    <script src="Resources/Scripts/Stocks/VentexButtons.js"></script>
+    <script src="Resources/Scripts/Stocks/PopbotButtons.js"></script>
+
     <script src="Resources/Scripts/Investment/investment.js"></script>
 
     <script src="Resources/Scripts/autosave.js"></script>

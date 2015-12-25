@@ -9,12 +9,25 @@ $(window).load(function () {
     if (localStorage.getItem("ownedEntaqStocksv04") === null)
         localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
 
+    if (localStorage.getItem("ventexCurrentStockPricev04") === null)
+        localStorage.setItem("ventexCurrentStockPricev04", ventexCurrentStockPrice);
+    if (localStorage.getItem("ownedVentexStocksv04") === null)
+        localStorage.setItem("ownedVentexStocksv04", ownedVentexStocks);
+
+    if (localStorage.getItem("popbotCurrentStockPricev04") === null)
+        localStorage.setItem("popbotCurrentStockPricev04", popbotCurrentStockPrice);
+    if (localStorage.getItem("ownedPopbotStocksv04") === null)
+        localStorage.setItem("ownedPopbotStocksv04", ownedPopbotStocks);
+
 
     delsecCurrentStockPrice = parseFloat(localStorage.getItem("delsecCurrentStockPricev04"));
     entaqCurrentStockPrice = parseFloat(localStorage.getItem("entaqCurrentStockPricev04"));
+    ventexCurrentStockPrice = parseFloat(localStorage.getItem("ventexCurrentStockPricev04"));
+    popbotCurrentStockPrice = parseFloat(localStorage.getItem("popbotCurrentStockPricev04"));
 
     ownedDelsecStocks = parseInt(localStorage.getItem("ownedDelsecStocksv04"));
     ownedEntaqStocks = parseInt(localStorage.getItem("ownedEntaqStocksv04"));
+    ownedPopbotStocks = parseInt(localStorage.getItem("ownedPopbotStocksv04"));
     
 
     $('#delsecStockDisplayCost').html('$' + delsecCurrentStockPrice.toFixed(2));
@@ -32,6 +45,22 @@ $(window).load(function () {
         $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - (entaqCurrentStockPrice / 10))).toFixed(2));
     else
         $('#entaqSellEstimate').html('$0');
+
+    $('#ventexStockDisplayCost').html('$' + ventexCurrentStockPrice.toFixed(2));
+    $('#ventexStockSellPrice').html('$' + (ventexCurrentStockPrice - ventexCurrentStockPrice / 10).toFixed(2));
+    $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
+    if (ownedVentexStocks > 0)
+        $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - (ventexCurrentStockPrice / 10))).toFixed(2));
+    else
+        $('#ventexSellEstimate').html('$0');
+
+    $('#popbotStockDisplayCost').html('$' + popbotCurrentStockPrice.toFixed(2));
+    $('#popbotStockSellPrice').html('$' + (popbotCurrentStockPrice - popbotCurrentStockPrice / 10).toFixed(2));
+    $('#popbotOwnedStocksDisplay').html(ownedPopbotStocks);
+    if (ownedPopbotStocks > 0)
+        $('#popbotSellEstimate').html('$' + (ownedPopbotStocks * (popbotCurrentStockPrice - popbotCurrentStockPrice / 10)).toFixed(2));
+    else
+        $('#popbotSellEstimate').html('$0');
 
     //30 SECOND TICKER                
     setInterval(function () {
@@ -72,7 +101,51 @@ $(window).load(function () {
 
         localStorage.setItem("entaqCurrentStockPricev04", entaqCurrentStockPrice);       
         // ENTAQ END //
-    }, 30000);
+
+        // VENTEX //
+        ventexIncrement = Math.round(100 * (Math.random() * 20 - 10) / 100) / 100;
+        if (ventexIncrement > 0)
+            $("#ventexChangeImg").attr("src", "Resources/Img/up.png");
+        else if (ventexIncrement < 0)
+            $("#ventexChangeImg").attr("src", "Resources/Img/down.png");
+
+        ventexCurrentStockPrice += ventexIncrement;
+        if (ventexCurrentStockPrice <= 0)
+            ventexCurrentStockPrice = 0.01;
+        $('#ventexStockDisplayCost').html('$' + ventexCurrentStockPrice.toFixed(2));
+        $('#ventexStockSellPrice').html('$' + (ventexCurrentStockPrice - ventexCurrentStockPrice / 10).toFixed(2));
+        if (ownedVentexStocks > 0)
+            $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+        else
+            $('#ventexSellEstimate').html('$0');
+
+        localStorage.setItem("ventexCurrentStockPricev04", ventexCurrentStockPrice);
+        // VENTEX END //
+
+        // POPBOT //
+        // 1 in a million chance of going up.
+        popbotIncrement = Math.round(1000000 * Math.random());
+        
+        if (popbotIncrement > 0)
+            $("#popbotChangeImg").attr("src", "Resources/Img/up.png");
+        else if (popbotIncrement < 0)
+            $("#popbotChangeImg").attr("src", "Resources/Img/down.png");
+        // if the rndm gen is 555,555 then the price will go up. 1 in a million.
+        if (popbotIncrement == 555555)
+            popbotCurrentStockPrice += popbotIncrement;
+
+        $('#popbotStockDisplayCost').html('$' + popbotCurrentStockPrice.toFixed(2));
+        $('#popbotStockSellPrice').html('$' + (popbotCurrentStockPrice - popbotCurrentStockPrice / 10).toFixed(2));
+        if (ownedPopbotStocks > 0)
+            $('#popbotSellEstimate').html('$' + (ownedPopbotStocks * (popbotCurrentStockPrice - popbotCurrentStockPrice / 10)).toFixed(2));
+        else
+            $('#popbotSellEstimate').html('$0');
+
+        localStorage.setItem("popbotCurrentStockPricev04", popbotCurrentStockPrice);
+        // POPBOT END //
+
+       
+    }, 3000);
 
     setInterval(function () {
         if (ownedDelsecStocks > 0) {

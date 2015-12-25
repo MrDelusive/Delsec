@@ -16,6 +16,8 @@ $(window).load(function () {
             
             localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
             localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
+            localStorage.setItem("ownedVentexStocksv04", ownedVentexStocks);
+            localStorage.setItem("ownedPopbotStocksv04", ownedPopbotStocks);
 
             if (userClass == "Warrior")
                 localStorage.setItem("warriorClicksv04", warriorClicks); //remember number of clicks to calculate power of warrior generate
