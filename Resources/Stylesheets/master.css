@@ -66,6 +66,10 @@
 	z-index: 98;
 }
 
+#lblSaveState {
+    color: white;
+}
+
 #welcome
 {
     text-align: center;

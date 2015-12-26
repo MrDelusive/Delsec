@@ -17,7 +17,10 @@ $(window).load(function () {
             localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
             localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
             localStorage.setItem("ownedVentexStocksv04", ownedVentexStocks);
+            localStorage.setItem("ownedAstorStocksv04", ownedAstorStocks);
             localStorage.setItem("ownedPopbotStocksv04", ownedPopbotStocks);
+            $('#lblSaveState').html("Last Autosave: " + Date($.now));
+            localStorage.setItem("lastSaveState", "Last Autosave: " + Date($.now));
 
             if (userClass == "Warrior")
                 localStorage.setItem("warriorClicksv04", warriorClicks); //remember number of clicks to calculate power of warrior generate

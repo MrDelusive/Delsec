@@ -46,8 +46,37 @@ $(window).load(function () {
         return false;
     });
 
-    // generates stocks
+    // generates stocks Astor/Ventex/Entaq
     $('#btnRogueIncrement').click(function () {
+        var currentStockGen = Math.floor(Math.random() * 5) + 1;
+        switch (currentStockGen) {
+            case 1:
+                ownedEntaqStocks++;
+                $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
+                $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - entaqCurrentStockPrice / 10)).toFixed(2));
+                $('#rogueGenerateAmt').html("You have added an Entaq stock.");
+                break;
+            case 2:
+                ownedVentexStocks++;
+                $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#rogueGenerateAmt').html("You have added a Ventex stock.");
+                break;
+            case 3:
+                ownedAstorStocks++;
+                $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#rogueGenerateAmt').html("You have added an Astor stock.");
+                break;
+            case 4:
+                ownedPopbotStocks++;
+                $('#popbotOwnedStocksDisplay').html(ownedPopbotStocks);
+                $('#popbotSellEstimate').html('$' + (ownedPopbotStocks * (popbotCurrentStockPrice - popbotCurrentStockPrice / 10)).toFixed(2));
+                $('#rogueGenerateAmt').html("You have added a Popbot stock.");
+                break;
+            default:
+                break;
+        }
         return false;
     });
 

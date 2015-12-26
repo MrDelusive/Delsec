@@ -32,10 +32,14 @@ $(document).ready(function () {
     if (localStorage.getItem("warriorClicksv04") === null)
         localStorage.setItem("warriorClicksv04", warriorClicks);
 
+    if (localStorage.getItem("lastSaveState") === null)
+        localStorage.setItem("lastSaveState", "No Saves.");
+
     if (typeof (Storage) !== "undefined") {              
         money = parseFloat(localStorage.getItem("moneyv04"));
         $('#lblMoneyDisplay').html('$' + money.toFixed(2));
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+        $('#lblSaveState').html(localStorage.getItem("lastSaveState"));
                 
         threeBitBank = parseInt(localStorage.getItem("threeBitBankv04"));               
         fourBitBank = parseInt(localStorage.getItem("fourBitBankv04"));               
@@ -44,8 +48,7 @@ $(document).ready(function () {
         eightBitBank = parseInt(localStorage.getItem("eightBitBankv04"));
         twelveBitBank = parseInt(localStorage.getItem("twelveBitBankv04"));
         sixteenBitBank = parseInt(localStorage.getItem("sixteenBitBankv04"));
-
-        numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmailsv04"));        
+       
         totalChunks = parseInt(localStorage.getItem("totalChunksv04"));
         
         userClass = localStorage.getItem("userClassv04");
@@ -60,7 +63,9 @@ $(document).ready(function () {
         emailQuickScopeViewed = localStorage.getItem("emailQuickScopeViewedv04");      
         emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewedv04");
         emailDelsecStockDisplayed = localStorage.getItem("emailDelsecStockDisplayedv04");
-            
+        
+        numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmailsv04"));
+        $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
     }
     else
         alert("no support on your browser");

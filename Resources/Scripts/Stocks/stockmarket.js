@@ -14,6 +14,11 @@ $(window).load(function () {
     if (localStorage.getItem("ownedVentexStocksv04") === null)
         localStorage.setItem("ownedVentexStocksv04", ownedVentexStocks);
 
+    if (localStorage.getItem("astorCurrentStockPricev04") === null)
+        localStorage.setItem("astorCurrentStockPricev04", astorCurrentStockPrice);
+    if (localStorage.getItem("ownedAstorStocksv04") === null)
+        localStorage.setItem("ownedAstorStocksv04", ownedAstorStocks);
+
     if (localStorage.getItem("popbotCurrentStockPricev04") === null)
         localStorage.setItem("popbotCurrentStockPricev04", popbotCurrentStockPrice);
     if (localStorage.getItem("ownedPopbotStocksv04") === null)
@@ -23,10 +28,13 @@ $(window).load(function () {
     delsecCurrentStockPrice = parseFloat(localStorage.getItem("delsecCurrentStockPricev04"));
     entaqCurrentStockPrice = parseFloat(localStorage.getItem("entaqCurrentStockPricev04"));
     ventexCurrentStockPrice = parseFloat(localStorage.getItem("ventexCurrentStockPricev04"));
+    astorCurrentStockPrice = parseFloat(localStorage.getItem("astorCurrentStockPricev04"));
     popbotCurrentStockPrice = parseFloat(localStorage.getItem("popbotCurrentStockPricev04"));
 
     ownedDelsecStocks = parseInt(localStorage.getItem("ownedDelsecStocksv04"));
     ownedEntaqStocks = parseInt(localStorage.getItem("ownedEntaqStocksv04"));
+    ownedVentexStocks = parseInt(localStorage.getItem("ownedVentexStocksv04"));
+    ownedAstorStocks = parseInt(localStorage.getItem("ownedAstorStocksv04"));
     ownedPopbotStocks = parseInt(localStorage.getItem("ownedPopbotStocksv04"));
     
 
@@ -53,6 +61,14 @@ $(window).load(function () {
         $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - (ventexCurrentStockPrice / 10))).toFixed(2));
     else
         $('#ventexSellEstimate').html('$0');
+
+    $('#astorStockDisplayCost').html('$' + astorCurrentStockPrice.toFixed(2));
+    $('#astorStockSellPrice').html('$' + (astorCurrentStockPrice - astorCurrentStockPrice / 10).toFixed(2));
+    $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
+    if (ownedAstorStocks > 0)
+        $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - (astorCurrentStockPrice / 10))).toFixed(2));
+    else
+        $('#astorSellEstimate').html('$0');
 
     $('#popbotStockDisplayCost').html('$' + popbotCurrentStockPrice.toFixed(2));
     $('#popbotStockSellPrice').html('$' + (popbotCurrentStockPrice - popbotCurrentStockPrice / 10).toFixed(2));
@@ -121,6 +137,26 @@ $(window).load(function () {
 
         localStorage.setItem("ventexCurrentStockPricev04", ventexCurrentStockPrice);
         // VENTEX END //
+
+        // ASTOR //
+        astorIncrement = Math.round(100 * (Math.random() * 20 - 10) / 100) / 100;
+        if (astorIncrement > 0)
+            $("#astorChangeImg").attr("src", "Resources/Img/up.png");
+        else if (astorIncrement < 0)
+            $("#astorChangeImg").attr("src", "Resources/Img/down.png");
+
+        astorCurrentStockPrice += astorIncrement;
+        if (astorCurrentStockPrice <= 0)
+            astorCurrentStockPrice = 0.01;
+        $('#astorStockDisplayCost').html('$' + astorCurrentStockPrice.toFixed(2));
+        $('#astorStockSellPrice').html('$' + (astorCurrentStockPrice - astorCurrentStockPrice / 10).toFixed(2));
+        if (ownedAstorStocks > 0)
+            $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+        else
+            $('#astorSellEstimate').html('$0');
+
+        localStorage.setItem("astorCurrentStockPricev04", astorCurrentStockPrice);
+        // ASTOR END //
 
         // POPBOT //
         // 1 in a million chance of going up.

@@ -36,7 +36,8 @@
         <div id="right_Main">
 			<b>Debug info, testing only:</b><br /> <br />
 			Current Version: V0.4 <br /> <br />
-            <button id="save" >save</button>  
+            <div id="lblSaveState"></div>
+            <button id="save" >save</button> 
             <button id="cheat" >add</button>
             <button id="resetClass" >reset class</button> 
             <button id="resetAll" >reset all</button>                     
@@ -46,7 +47,7 @@
             <div id="lblMoneyDisplay">
                 $0.00
             </div> 
-            <div id="lblMoneyDisplayScroll"></div>
+            <div id="lblMoneyDisplayScroll"></div>            
             <br /> <br />
             <div id="manualIncrementDisplay">
                 <div id="manualIncrementAmtDisplay" class="moneyDisplayAmt"></div>
@@ -292,6 +293,25 @@
                         </tr>
 
                         <tr>
+                            <td>Astor</td>
+                            <td><div id="astorStockDisplayCost" class="stockTypeDisplay"></div></td>
+                            <td><div id="astorStockSellPrice" class="stockTypeDisplay"></div></td>
+                            <td>
+                                <button id="btnBuyAstorStocks" class="stockButton">Buy 1</button> 
+                                <button id="btnBuyAstorStocks10" class="stockButton">Buy 10</button>
+                                <button id="btnBuyAstorStocks100" class="stockButton">Buy 100</button>
+                                <button id="btnBuyAstorStocksAll" class="stockButton">Buy All</button><br />
+                                <button id="btnSellAstorStocks" class="stockButton">Sell 1</button>
+                                <button id="btnSellAstorStocks10" class="stockButton">Sell 10</button>
+                                <button id="btnSellAstorStocks100" class="stockButton">Sell 100</button>
+                                <button id="btnSellAstorStocksAll" class="stockButton">Sell All</button> 
+                            </td>
+                            <td><div id="astorChange"><img alt="Change" id="astorChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="astorOwnedStocksDisplay"></div></td>
+                            <td><div id="astorSellEstimate"></div></td>
+                        </tr>
+
+                        <tr>
                             <td>Popbot</td>
                             <td><div id="popbotStockDisplayCost" class="stockTypeDisplay"></div></td>
                             <td><div id="popbotStockSellPrice" class="stockTypeDisplay"></div></td>
@@ -360,6 +380,7 @@
     <script src="Resources/Scripts/Stocks/stockmarket.js"></script>
     <script src="Resources/Scripts/Stocks/DelsecButtons.js"></script>
     <script src="Resources/Scripts/Stocks/EntaqButtons.js"></script>
+    <script src="Resources/Scripts/Stocks/AstorButtons.js"></script>
     <script src="Resources/Scripts/Stocks/VentexButtons.js"></script>
     <script src="Resources/Scripts/Stocks/PopbotButtons.js"></script>
 

@@ -5,7 +5,7 @@ $(window).load(function () {
             numUnreadEmails--;
             email1Viewed = "true";
             localStorage.setItem("email1Viewedv04", email1Viewed);
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -17,7 +17,7 @@ $(window).load(function () {
             numUnreadEmails--;
             email2Viewed = "true";
             localStorage.setItem("email2Viewedv04", email2Viewed);
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -28,7 +28,7 @@ $(window).load(function () {
             numUnreadEmails--;
             email3Viewed = "true";
             localStorage.setItem("email3Viewedv04", email3Viewed);
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -39,7 +39,7 @@ $(window).load(function () {
             numUnreadEmails--;
             email4Viewed = "true";
             localStorage.setItem("email4Viewedv04", email4Viewed);
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -50,20 +50,19 @@ $(window).load(function () {
             numUnreadEmails--;
             emailQuickScopeViewed = "true";
             localStorage.setItem("emailQuickScopeViewedv04", emailQuickScopeViewed);
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
     });
 
-    // LOCAL HOST TURNS BOOLS INTO FUCKIN STRINGS 
     $('#btnEmailDelsecStockView').click(function () {
         $("#emailDelsecStock").toggle();
         if (emailDelsecStockViewed == "false") {
             numUnreadEmails--;
             emailDelsecStockViewed = "true";
             localStorage.setItem("emailDelsecStockViewedv04", emailDelsecStockViewed);
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;

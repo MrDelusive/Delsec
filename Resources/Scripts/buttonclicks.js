@@ -72,8 +72,12 @@ $(window).load(function () {
         localStorage.setItem("ventexCurrentStockPricev04", 1.54);
         localStorage.setItem("ownedVentexStocksv04", 0);
 
+        localStorage.setItem("astorCurrentStockPricev04", 0.95);
+        localStorage.setItem("ownedAstorStocksv04", 0);
+
         localStorage.setItem("popbotCurrentStockPricev04", 0.01);
         localStorage.setItem("ownedPopbotStocksv04", 0);
+        localStorage.setItem("lastSaveState", "No saves.");
         return true;
     });
 
@@ -94,11 +98,14 @@ $(window).load(function () {
             localStorage.setItem("delsecCurrentStockPricev04", delsecCurrentStockPrice);
             localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
 
-            localStorage.setItem("entaqCurrentStockPricev04", entacCurrentStockPrice);
+            localStorage.setItem("entaqCurrentStockPricev04", entaqCurrentStockPrice);
             localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
 
             localStorage.setItem("ventexCurrentStockPricev04", ventexCurrentStockPrice);
             localStorage.setItem("ownedVentexStocksv04", ownedVentexStocks);
+
+            localStorage.setItem("astorCurrentStockPricev04", astorCurrentStockPrice);
+            localStorage.setItem("ownedAstorStocksv04", ownedAstorStocks);
 
             localStorage.setItem("popbotCurrentStockPricev04", popbotCurrentStockPrice);
             localStorage.setItem("ownedPopbotStocksv04", ownedPopbotStocks);
@@ -109,6 +116,10 @@ $(window).load(function () {
             // Sorry! No Web Storage support..
             alert("no support on your browser");
         }
+        $('#lblSaveState').html("Last Saved: " + Date($.now));
+        localStorage.setItem("lastSaveState", "Last Saved: " + Date($.now));
+
+        return false;
     });
 
     // The class selection buttons
