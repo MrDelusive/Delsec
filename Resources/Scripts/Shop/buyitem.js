@@ -8,10 +8,12 @@ $(window).load(function () {
 
             // update the totalChunks info
             totalChunks = totalChunks + 2;
-            $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
+            $('#totalChunkDisplay').show();
+            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
             // update the items div.
             // * 8 / 4 where 8 = number of chunks overall and 4 = number of seconds per update. (Based on setInterval for threeBit Crawlers).
-            $('#threeBitItemDisplay').html("<br />Delsec3bit.exe :" + threeBitBank + " Processes Iterating through " + threeBitBank * 2 + " Chunks of data per second.<br />");
+            $('#threeBitItemDisplay').show();
+            $('#threeBitItemDisplay').html("Delsec3bit.exe :" + threeBitBank + " Processes Iterating through " + threeBitBank * 2 + " Chunks of data per second.<br />");
         }
         return false;
     });
@@ -22,10 +24,10 @@ $(window).load(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             fourBitBank++;
             totalChunks = totalChunks + 4;
-            $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
-            // update the items div.
-            // * 8 / 4 where 16 = number of chunks overall and 4 = number of seconds per update.
-            $('#fourBitItemDisplay').html("<br />Delsec4bit.exe :" + fourBitBank + " Processes Iterating through " + fourBitBank * 4 + " Chunks of data per second.<br />");            
+            $('#totalChunkDisplay').show();
+            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+            $('#fourBitItemDisplay').show();
+            $('#fourBitItemDisplay').html("Delsec4bit.exe :" + fourBitBank + " Processes Iterating through " + fourBitBank * 4 + " Chunks of data per second.<br />");            
         }
         if (fourBitBank > 3) {
             $("#email4Heading").show(1);
@@ -45,10 +47,10 @@ $(window).load(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             sixBitBank++;
             totalChunks = totalChunks + 16;
-            $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
-            // update the items div.
-            // * 8 / 4 where 16 = number of chunks overall and 4 = number of seconds per update.
-            $('#sixBitItemDisplay').html("<br />Delsec6bit.exe :" + sixBitBank + " Processes Iterating through " + sixBitBank * 16 + " Chunks of data per second.<br />");
+            $('#totalChunkDisplay').show();
+            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+            $('#sixBitItemDisplay').show();
+            $('#sixBitItemDisplay').html("Delsec6bit.exe :" + sixBitBank + " Processes Iterating through " + sixBitBank * 16 + " Chunks of data per second.<br />");
         }
         return false;
     });
@@ -59,10 +61,10 @@ $(window).load(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             russianSixBitBank++;
             totalChunks = totalChunks + 16;
-            $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
-            // update the items div.
-            // * 8 / 4 where 16 = number of chunks overall and 4 = number of seconds per update.
-            $('#russianSixBitItemDisplay').html("<br />Russian6bit.exe :" + russianSixBitBank + " Processes Iterating through " + russianSixBitBank * 16 + " Chunks of data per second.<br />");
+            $('#totalChunkDisplay').show();
+            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+            $('#russianSixBitItemDisplay').show();
+            $('#russianSixBitItemDisplay').html("Russian6bit.exe :" + russianSixBitBank + " Processes Iterating through " + russianSixBitBank * 16 + " Chunks of data per second.<br />");
         }
         if (russianSixBitBank > 0) {
             $("#email3Heading").fadeIn(1);
@@ -82,8 +84,10 @@ $(window).load(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             eightBitBank++;
             totalChunks = totalChunks + 64;
-            $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
-            $('#eightBitItemDisplay').html("<br />Delsec8bit.exe :" + eightBitBank + " Processes Iterating through " + eightBitBank * 64 + " Chunks of data per second.<br />");
+            $('#totalChunkDisplay').show();
+            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+            $('#eightBitItemDisplay').show();
+            $('#eightBitItemDisplay').html("Delsec8bit.exe :" + eightBitBank + " Processes Iterating through " + eightBitBank * 64 + " Chunks of data per second.<br />");
         }
         return false;
     });
@@ -95,8 +99,10 @@ $(window).load(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             twelveBitBank++;
             totalChunks = totalChunks + 1024;
-            $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
-            $('#twelveBitItemDisplay').html("<br />Delsec12bit.exe :" + twelveBitBank + " Processes Iterating through " + twelveBitBank * 1024 + " Chunks of data per second.<br />");
+            $('#totalChunkDisplay').show();
+            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+            $('#twelveBitItemDisplay').show();
+            $('#twelveBitItemDisplay').html("Delsec12bit.exe :" + twelveBitBank + " Processes Iterating through " + twelveBitBank * 1024 + " Chunks of data per second.<br />");
             localStorage.setItem("twelveBitBankv04", twelveBitBank);
         }
         return false;
@@ -108,8 +114,10 @@ $(window).load(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
             sixteenBitBank++;
             totalChunks = totalChunks + 16384;
-            $('#totalChunkDisplay').html("<br />Total Chunks Per Second: " + totalChunks);
-            $('#sixteenBitItemDisplay').html("<br />Delsec16bit.exe :" + sixteenBitBank + " Processes Iterating through " + sixteenBitBank * 16384 + " Chunks of data per second.<br />");
+            $('#totalChunkDisplay').show();
+            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+            $('#sixteenBitItemDisplay').show();
+            $('#sixteenBitItemDisplay').html("Delsec16bit.exe :" + sixteenBitBank + " Processes Iterating through " + sixteenBitBank * 16384 + " Chunks of data per second.<br />");
         }
         return false;
     });

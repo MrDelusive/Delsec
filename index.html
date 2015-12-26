@@ -18,20 +18,7 @@
     <form id="delsecForm">
     <div id="main">
         <div id="left_Main">
-            <div id="lblItemDisplay"> 
-                Running: <br />
-                System.bat <br />
-                DelsecOpenSSLSocketOverride.dll <br />
-                <div id="threeBitItemDisplay"></div> 
-                <div id="fourBitItemDisplay"></div>
-                <div id="sixBitItemDisplay"></div> 
-                <div id="russianSixBitItemDisplay"></div> 
-                <div id="eightBitItemDisplay"></div> 
-                <div id="twelveBitItemDisplay"></div>   
-                <div id="sixteenBitItemDisplay"></div>
-                <div id="totalChunkDisplay"></div>   
-                             
-            </div>  
+            
         </div>
         <div id="right_Main">
 			<b>Debug info, testing only:</b><br /> <br />
@@ -81,6 +68,7 @@
                 <button id="btnWizardAbilities" class="btn_TabBlue" style="display:none;">WIZARD</button>
                 <button id="btnRogueAbilities" class="btn_TabYellow" style="display:none;">ROGUE</button>
                 <button id="btnHealerAbilities" class="btn_TabGreen" style="display:none;">HEALER</button>
+                <button id="btnConsole" class="btn_Tab" style="display:none;">Console</button>
             </div>
             <!-- the welcome message you only see once -->
             <div id ="welcome" class="hidden_Divs" style="display:table;">
@@ -89,7 +77,17 @@
             </div>  
 
             <!-- BLACK MARKET -->          
-            <div id ="shop" class="hidden_Divs">               
+            <div id ="shop" class="hidden_Divs">   
+                <div id="lblItemDisplay">                  
+                    <div id="threeBitItemDisplay" class="crawlerDisplay"></div> 
+                    <div id="fourBitItemDisplay" class="crawlerDisplay"></div>
+                    <div id="sixBitItemDisplay" class="crawlerDisplay"></div> 
+                    <div id="russianSixBitItemDisplay" class="crawlerDisplay"></div> 
+                    <div id="eightBitItemDisplay" class="crawlerDisplay"></div> 
+                    <div id="twelveBitItemDisplay" class="crawlerDisplay"></div>   
+                    <div id="sixteenBitItemDisplay" class="crawlerDisplay"></div>
+                    <div id="totalChunkDisplay" class="crawlerDisplay"></div>                               
+                </div>           
                 <div id="threeBitDisplay">
                     <button id="btnBuy3BitCrawler" class="btn_Style" style="margin:10px;">Buy 3 Bit Delsec Bank Crawler (2 Chunks/sec) - $2.00</button>                     
                     <div id="threeBitIncrementAmtDisplay" class="incremental" style="margin:10px;"></div>
@@ -360,7 +358,12 @@
                 Healer Abilities <br />
                 INTEREST GENERATE: Adds 0.1% of the amount currently in your account.
             </div>
-                                 
+            
+            <div id ="console" class="hidden_Divs">    
+                Running: <br />
+                System.bat <br />
+                DelsecOpenSSLSocketOverride.dll
+            </div>                
         </div>
     </div>
     </form>

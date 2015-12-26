@@ -30,6 +30,13 @@ $(window).load(function () {
         return false;
     });
 
+    $('#btnConsole').click(function () {
+        $(".hidden_Divs").hide();
+        $("#console").show();
+
+        return false;
+    });
+
     $('#cheat').click(function () {
         money += 300;
         return false;
