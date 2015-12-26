@@ -627,3 +627,8 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#d16a62');
 	background-color:#c62d1f;
 }
+
+.stockButton:disabled {
+    background: black;
+    color: #4a4e54;
+}
