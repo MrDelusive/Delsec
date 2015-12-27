@@ -6,6 +6,12 @@ $(window).load(function () {
 
         return false;
     });
+    $('#btnPowerGenerators').click(function () {
+        $(".hidden_Divs").hide();
+        $("#powerGenerators").show();
+
+        return false;
+    });
     $('#btnEmails').click(function () {
         $(".hidden_Divs").hide();
         $("#email").show();
@@ -39,47 +45,47 @@ $(window).load(function () {
 
     $('#resetClass').click(function () {
         userClass = "None";
-        localStorage.setItem("userClassv04", userClass);
+        localStorage.setItem("userClassv05", userClass);
         return true;
     });
     $('#resetAll').click(function () {
-        localStorage.setItem("userClassv04", "None");
-        localStorage.setItem("moneyv04", 0);
-        localStorage.setItem("threeBitBankv04", 0);
-        localStorage.setItem("fourBitBankv04", 0);
-        localStorage.setItem("sixBitBankv04", 0);
-        localStorage.setItem("russianSixBitBankv04", 0);
-        localStorage.setItem("eightBitBankv04", 0);
-        localStorage.setItem("twelveBitBankv04", 0);
-        localStorage.setItem("sixteenBitBankv04", 0);       
-        localStorage.setItem("totalChunksv04", 0);
+        localStorage.setItem("userClassv05", "None");
+        localStorage.setItem("moneyv05", 0);
+        localStorage.setItem("threeBitBankv05", 0);
+        localStorage.setItem("fourBitBankv05", 0);
+        localStorage.setItem("sixBitBankv05", 0);
+        localStorage.setItem("russianSixBitBankv05", 0);
+        localStorage.setItem("eightBitBankv05", 0);
+        localStorage.setItem("twelveBitBankv05", 0);
+        localStorage.setItem("sixteenBitBankv05", 0);       
+        localStorage.setItem("totalChunksv05", 0);
 
-        localStorage.setItem("numUnreadEmailsv04", 2);
-        localStorage.setItem("email1Viewedv04", "false");
-        localStorage.setItem("email2Viewedv04", "false");
-        localStorage.setItem("email3Viewedv04", "false");
-        localStorage.setItem("email3Displayedv04", "false");
-        localStorage.setItem("email4Viewedv04", "false");
-        localStorage.setItem("email4Displayedv04", "false");
-        localStorage.setItem("emailQuickScopeViewedv04", "false");
-        localStorage.setItem("emailQuickScopeDisplayedv04", "false");
-        localStorage.setItem("emailDelsecStockViewedv04", "false");
-        localStorage.setItem("emailDelsecStockDisplayedv04", "false");
+        localStorage.setItem("numUnreadEmailsv05", 2);
+        localStorage.setItem("email1Viewedv05", "false");
+        localStorage.setItem("email2Viewedv05", "false");
+        localStorage.setItem("email3Viewedv05", "false");
+        localStorage.setItem("email3Displayedv05", "false");
+        localStorage.setItem("email4Viewedv05", "false");
+        localStorage.setItem("email4Displayedv05", "false");
+        localStorage.setItem("emailQuickScopeViewedv05", "false");
+        localStorage.setItem("emailQuickScopeDisplayedv05", "false");
+        localStorage.setItem("emailDelsecStockViewedv05", "false");
+        localStorage.setItem("emailDelsecStockDisplayedv05", "false");
 
-        localStorage.setItem("delsecCurrentStockPricev04", 2.20);
-        localStorage.setItem("ownedDelsecStocksv04", 0);
+        localStorage.setItem("delsecCurrentStockPricev05", 2.20);
+        localStorage.setItem("ownedDelsecStocksv05", 0);
 
-        localStorage.setItem("entaqCurrentStockPricev04", 0.27);
-        localStorage.setItem("ownedEntaqStocksv04", 0);
+        localStorage.setItem("entaqCurrentStockPricev05", 0.27);
+        localStorage.setItem("ownedEntaqStocksv05", 0);
 
-        localStorage.setItem("ventexCurrentStockPricev04", 1.54);
-        localStorage.setItem("ownedVentexStocksv04", 0);
+        localStorage.setItem("ventexCurrentStockPricev05", 1.54);
+        localStorage.setItem("ownedVentexStocksv05", 0);
 
-        localStorage.setItem("astorCurrentStockPricev04", 0.95);
-        localStorage.setItem("ownedAstorStocksv04", 0);
+        localStorage.setItem("astorCurrentStockPricev05", 0.95);
+        localStorage.setItem("ownedAstorStocksv05", 0);
 
-        localStorage.setItem("popbotCurrentStockPricev04", 0.01);
-        localStorage.setItem("ownedPopbotStocksv04", 0);
+        localStorage.setItem("popbotCurrentStockPricev05", 0.01);
+        localStorage.setItem("ownedPopbotStocksv05", 0);
         localStorage.setItem("lastSaveState", "No saves.");
         return true;
     });
@@ -87,33 +93,33 @@ $(window).load(function () {
     $('#save').click(function () {
         if (typeof (Storage) !== "undefined") {
             // Code for localStorage/sessionStorage.
-            localStorage.setItem("moneyv04", money);
-            localStorage.setItem("threeBitBankv04", threeBitBank);
-            localStorage.setItem("fourBitBankv04", fourBitBank);
-            localStorage.setItem("sixBitBankv04", sixBitBank);
-            localStorage.setItem("russianSixBitBankv04", russianSixBitBank);
-            localStorage.setItem("eightBitBankv04", eightBitBank);
-            localStorage.setItem("twelveBitBankv04", twelveBitBank);
-            localStorage.setItem("sixteenBitBankv04", sixteenBitBank);
-            localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
-            localStorage.setItem("totalChunksv04", totalChunks);
+            localStorage.setItem("moneyv05", money);
+            localStorage.setItem("threeBitBankv05", threeBitBank);
+            localStorage.setItem("fourBitBankv05", fourBitBank);
+            localStorage.setItem("sixBitBankv05", sixBitBank);
+            localStorage.setItem("russianSixBitBankv05", russianSixBitBank);
+            localStorage.setItem("eightBitBankv05", eightBitBank);
+            localStorage.setItem("twelveBitBankv05", twelveBitBank);
+            localStorage.setItem("sixteenBitBankv05", sixteenBitBank);
+            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+            localStorage.setItem("totalChunksv05", totalChunks);
 
-            localStorage.setItem("delsecCurrentStockPricev04", delsecCurrentStockPrice);
-            localStorage.setItem("ownedDelsecStocksv04", ownedDelsecStocks);
+            localStorage.setItem("delsecCurrentStockPricev05", delsecCurrentStockPrice);
+            localStorage.setItem("ownedDelsecStocksv05", ownedDelsecStocks);
 
-            localStorage.setItem("entaqCurrentStockPricev04", entaqCurrentStockPrice);
-            localStorage.setItem("ownedEntaqStocksv04", ownedEntaqStocks);
+            localStorage.setItem("entaqCurrentStockPricev05", entaqCurrentStockPrice);
+            localStorage.setItem("ownedEntaqStocksv05", ownedEntaqStocks);
 
-            localStorage.setItem("ventexCurrentStockPricev04", ventexCurrentStockPrice);
-            localStorage.setItem("ownedVentexStocksv04", ownedVentexStocks);
+            localStorage.setItem("ventexCurrentStockPricev05", ventexCurrentStockPrice);
+            localStorage.setItem("ownedVentexStocksv05", ownedVentexStocks);
 
-            localStorage.setItem("astorCurrentStockPricev04", astorCurrentStockPrice);
-            localStorage.setItem("ownedAstorStocksv04", ownedAstorStocks);
+            localStorage.setItem("astorCurrentStockPricev05", astorCurrentStockPrice);
+            localStorage.setItem("ownedAstorStocksv05", ownedAstorStocks);
 
-            localStorage.setItem("popbotCurrentStockPricev04", popbotCurrentStockPrice);
-            localStorage.setItem("ownedPopbotStocksv04", ownedPopbotStocks);
+            localStorage.setItem("popbotCurrentStockPricev05", popbotCurrentStockPrice);
+            localStorage.setItem("ownedPopbotStocksv05", ownedPopbotStocks);
             if (userClass == "Warrior")
-                localStorage.setItem("warriorClicksv04", warriorClicks); //remember number of clicks to calculate power of warrior generate
+                localStorage.setItem("warriorClicksv05", warriorClicks); //remember number of clicks to calculate power of warrior generate
         }
         else {
             // Sorry! No Web Storage support..
@@ -129,7 +135,7 @@ $(window).load(function () {
     $('#btnWarriorAbility').click(function () {
         if (money >= 10000) {
             userClass = "Warrior";
-            localStorage.setItem("userClassv04", userClass);
+            localStorage.setItem("userClassv05", userClass);
             btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
@@ -157,7 +163,7 @@ $(window).load(function () {
     $('#btnWizardAbility').click(function () {
         if (money >= 10000) {
             userClass = "Wizard";
-            localStorage.setItem("userClassv04", userClass);
+            localStorage.setItem("userClassv05", userClass);
             btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
@@ -185,7 +191,7 @@ $(window).load(function () {
     $('#btnRogueAbility').click(function () {
         if (money >= 10000) {
             userClass = "Rogue";
-            localStorage.setItem("userClassv04", userClass);
+            localStorage.setItem("userClassv05", userClass);
             btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
@@ -213,7 +219,7 @@ $(window).load(function () {
     $('#btnHealerAbility').click(function () {
         if (money >= 10000) {
             userClass = "Healer";
-            localStorage.setItem("userClassv04", userClass);
+            localStorage.setItem("userClassv05", userClass);
             btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);

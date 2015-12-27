@@ -115,7 +115,7 @@ $(window).load(function () {
             $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
             $('#twelveBitItemDisplay').show();
             $('#twelveBitItemDisplay').html("Delsec12bit.exe :" + twelveBitBank + " Processes Iterating through " + twelveBitBank * 1024 + " Chunks of data per second.<br />");
-            localStorage.setItem("twelveBitBankv04", twelveBitBank);
+            localStorage.setItem("twelveBitBankv05", twelveBitBank);
         }
         return false;
     });

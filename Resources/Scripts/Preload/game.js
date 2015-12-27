@@ -1,71 +1,71 @@
-﻿//v04
+﻿//v05
 
 $(document).ready(function () {
     // Check null values, fixes new storage items/changes
-    if (localStorage.getItem("moneyv04") === null)
-        localStorage.setItem("moneyv04", money);
+    if (localStorage.getItem("moneyv05") === null)
+        localStorage.setItem("moneyv05", money);
 
-    if (localStorage.getItem("threeBitBankv04") === null)
-        localStorage.setItem("threeBitBankv04", threeBitBank);
-    if (localStorage.getItem("fourBitBankv04") === null)
-        localStorage.setItem("fourBitBankv04", fourBitBank);
-    if (localStorage.getItem("sixBitBankv04") === null)
-        localStorage.setItem("sixBitBankv04", sixBitBank);
-    if (localStorage.getItem("russianSixBitBankv04") === null)
-        localStorage.setItem("russianSixBitBankv04", russianSixBitBank);
-    if (localStorage.getItem("eightBitBankv04") === null)
-        localStorage.setItem("eightBitBankv04", eightBitBank);
-    if (localStorage.getItem("twelveBitBankv04") === null)
-        localStorage.setItem("twelveBitBankv04", twelveBitBank);
-    if (localStorage.getItem("sixteenBitBankv04") === null)
-        localStorage.setItem("sixteenBitBankv04", sixteenBitBank);
+    if (localStorage.getItem("threeBitBankv05") === null)
+        localStorage.setItem("threeBitBankv05", threeBitBank);
+    if (localStorage.getItem("fourBitBankv05") === null)
+        localStorage.setItem("fourBitBankv05", fourBitBank);
+    if (localStorage.getItem("sixBitBankv05") === null)
+        localStorage.setItem("sixBitBankv05", sixBitBank);
+    if (localStorage.getItem("russianSixBitBankv05") === null)
+        localStorage.setItem("russianSixBitBankv05", russianSixBitBank);
+    if (localStorage.getItem("eightBitBankv05") === null)
+        localStorage.setItem("eightBitBankv05", eightBitBank);
+    if (localStorage.getItem("twelveBitBankv05") === null)
+        localStorage.setItem("twelveBitBankv05", twelveBitBank);
+    if (localStorage.getItem("sixteenBitBankv05") === null)
+        localStorage.setItem("sixteenBitBankv05", sixteenBitBank);
 
-    if (localStorage.getItem("numUnreadEmailsv04") === null)
-        localStorage.setItem("numUnreadEmailsv04", numUnreadEmails);
+    if (localStorage.getItem("numUnreadEmailsv05") === null)
+        localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
 
-    if (localStorage.getItem("totalChunksv04") === null)
-        localStorage.setItem("totalChunksv04", totalChunks);
+    if (localStorage.getItem("totalChunksv05") === null)
+        localStorage.setItem("totalChunksv05", totalChunks);
    
 
-    if (localStorage.getItem("userClassv04") === null)
-        localStorage.setItem("userClassv04", userClass);           
-    if (localStorage.getItem("warriorClicksv04") === null)
-        localStorage.setItem("warriorClicksv04", warriorClicks);
+    if (localStorage.getItem("userClassv05") === null)
+        localStorage.setItem("userClassv05", userClass);           
+    if (localStorage.getItem("warriorClicksv05") === null)
+        localStorage.setItem("warriorClicksv05", warriorClicks);
 
     if (localStorage.getItem("lastSaveState") === null)
         localStorage.setItem("lastSaveState", "No Saves.");
 
     if (typeof (Storage) !== "undefined") {              
-        money = parseFloat(localStorage.getItem("moneyv04"));
+        money = parseFloat(localStorage.getItem("moneyv05"));
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblSaveState').html(localStorage.getItem("lastSaveState"));
                 
-        threeBitBank = parseInt(localStorage.getItem("threeBitBankv04"));               
-        fourBitBank = parseInt(localStorage.getItem("fourBitBankv04"));               
-        sixBitBank = parseInt(localStorage.getItem("sixBitBankv04"));             
-        russianSixBitBank = parseInt(localStorage.getItem("russianSixBitBankv04"));
-        eightBitBank = parseInt(localStorage.getItem("eightBitBankv04"));
-        twelveBitBank = parseInt(localStorage.getItem("twelveBitBankv04"));
-        sixteenBitBank = parseInt(localStorage.getItem("sixteenBitBankv04"));
+        threeBitBank = parseInt(localStorage.getItem("threeBitBankv05"));               
+        fourBitBank = parseInt(localStorage.getItem("fourBitBankv05"));               
+        sixBitBank = parseInt(localStorage.getItem("sixBitBankv05"));             
+        russianSixBitBank = parseInt(localStorage.getItem("russianSixBitBankv05"));
+        eightBitBank = parseInt(localStorage.getItem("eightBitBankv05"));
+        twelveBitBank = parseInt(localStorage.getItem("twelveBitBankv05"));
+        sixteenBitBank = parseInt(localStorage.getItem("sixteenBitBankv05"));
        
-        totalChunks = parseInt(localStorage.getItem("totalChunksv04"));
+        totalChunks = parseInt(localStorage.getItem("totalChunksv05"));
         
-        userClass = localStorage.getItem("userClassv04");
-        warriorClicks = parseInt(localStorage.getItem("warriorClicksv04"));
+        userClass = localStorage.getItem("userClassv05");
+        warriorClicks = parseInt(localStorage.getItem("warriorClicksv05"));
 
         // must do a string check because localStorage stores strings and not bools STUPID SHIT.
-        email1Viewed = localStorage.getItem("email1Viewedv04");
-        email2Viewed = localStorage.getItem("email2Viewedv04");
-        email3Viewed = localStorage.getItem("email3Viewedv04");
-        email4Viewed = localStorage.getItem("email4Viewedv04");
-        emailQuickScopeDisplayed = localStorage.getItem("emailQuickScopeDisplayedv04");
-        emailQuickScopeViewed = localStorage.getItem("emailQuickScopeViewedv04");      
-        emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewedv04");
-        emailDelsecStockDisplayed = localStorage.getItem("emailDelsecStockDisplayedv04");
+        email1Viewed = localStorage.getItem("email1Viewedv05");
+        email2Viewed = localStorage.getItem("email2Viewedv05");
+        email3Viewed = localStorage.getItem("email3Viewedv05");
+        email4Viewed = localStorage.getItem("email4Viewedv05");
+        emailQuickScopeDisplayed = localStorage.getItem("emailQuickScopeDisplayedv05");
+        emailQuickScopeViewed = localStorage.getItem("emailQuickScopeViewedv05");      
+        emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewedv05");
+        emailDelsecStockDisplayed = localStorage.getItem("emailDelsecStockDisplayedv05");
         
-        numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmailsv04"));
+        numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmailsv05"));
         $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
     }
     else
@@ -141,6 +141,7 @@ $(document).ready(function () {
     if (userClass == "Warrior") {
         $("#btnAbilities").hide();
         $("#btnWarriorAbilities").fadeIn(500);
+        $("#btnPowerGenerators").fadeIn(500);
         $("#manualIncrementDisplay").hide();
         $("#warriorGenerate").show();
     }

@@ -1,4 +1,7 @@
 ﻿$(window).load(function () {
+    var sellDivider = 10; // Normal sell price at 10% lower.
+    if (userClass == "Rogue")
+        sellDivider = 20; // Sell price only 5% lower if rogue.
     $('#btnBuyVentexStocks').click(function () {
 
         if (money >= ventexCurrentStockPrice) {
@@ -9,7 +12,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }
@@ -26,7 +29,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }
@@ -42,7 +45,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }
@@ -59,7 +62,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }
@@ -75,7 +78,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }
@@ -90,7 +93,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }
@@ -105,7 +108,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }
@@ -121,7 +124,7 @@
             ownedVentexStocks = 0;
             $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
             if (ownedVentexStocks > 0)
-                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
+                $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#ventexSellEstimate').html('$0');
         }

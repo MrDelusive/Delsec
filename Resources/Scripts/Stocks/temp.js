@@ -1,6 +1,8 @@
 ﻿$(window).load(function () {
+    var sellDivider = 10; // Normal sell price at 10% lower.
+    if (userClass == "Rogue")
+        sellDivider = 20; // Sell price only 5% lower if rogue.
     $('#btnBuyAstorStocks').click(function () {
-
         if (money >= astorCurrentStockPrice) {
             money -= astorCurrentStockPrice;
             ownedAstorStocks++;
@@ -9,7 +11,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
@@ -26,7 +28,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
@@ -42,7 +44,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
@@ -59,7 +61,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
@@ -75,7 +77,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
@@ -90,7 +92,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
@@ -105,7 +107,7 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
@@ -121,11 +123,10 @@
             ownedAstorStocks = 0;
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
-                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
+                $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2));
             else
                 $('#astorSellEstimate').html('$0');
         }
         return false;
     });
-
 })(jQuery);

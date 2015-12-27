@@ -59,10 +59,11 @@
 
             <div id="nav_Buttons">
                 <!-- hide buttons until event trigger -->
-                <button id="btnShop" class="btn_Tab" style="display:none;">Buy Crawlers</button>                
+                <button id="btnShop" class="btn_TabBlue" style="display:none;">Buy Crawlers</button>
+                <button id="btnPowerGenerators" class="btn_TabRed" style="display:none;">Buy Power</button>                
                 <button id="btnEmails" class="btn_Tab" style="display:none;">Emails (0) New</button>
-                <button id="btnInvestments" class="btn_Tab" style="display:none;">Investments</button>           
-                <button id="btnStockMarket" class="btn_Tab" style="display:none;">Stock Market</button>
+                <button id="btnInvestments" class="btn_TabGreen" style="display:none;">Investments</button>           
+                <button id="btnStockMarket" class="btn_TabYellow" style="display:none;">Stock Market</button>
                 <button id="btnAbilities" class="btn_Tab" style="display:none;">Abilities</button>
                 <button id="btnWarriorAbilities" class="btn_TabRed" style="display:none;">WARRIOR</button>
                 <button id="btnWizardAbilities" class="btn_TabBlue" style="display:none;">WIZARD</button>
@@ -119,6 +120,10 @@
 
                 <br />
             </div>
+            <!-- WARRIOR ABIL POWER GENERATORS -->
+            <div id ="powerGenerators" class="hidden_Divs"> 
+
+            </div>  
             <!-- EMAILS -->
             <div id ="email" class="hidden_Divs">
                 <div id="email1Heading">
@@ -343,22 +348,25 @@
             </div>
             <div id="warriorAbilities" class="hidden_Divs">
                 Warrior Abilities<br />
-                WARRIOR GENERATE: A Button that gets stronger with every click.
+                WARRIOR GENERATE: A Button that gets stronger with every click. (+$1 for every 100 clicks). <br />
+                (PASSIVE): Access to the PowerGenerators tab.
 
             </div>
             <div id="wizardAbilities" class="hidden_Divs">
                 Wizard Abilities<br />
-                AUTO GENERATE: Generates a bonus 10% of chunks per second automatically.
+                (PASSIVE) AUTO GENERATE: Generates a bonus 10% of chunks per second automatically.
 
             </div>
             <div id="rogueAbilities" class="hidden_Divs">
                 Rogue Abilities<br />
-                STOCK GENERATE: Generates 1 stock of low quality for each click.
+                STOCK GENERATE: Generates 1 stock of low quality for each click. <br />
+                (PASSIVE): Stock sell prices are 5% lower instead of the usual 10%.
 
             </div>
             <div id="healerAbilities" class="hidden_Divs">
                 Healer Abilities <br />
-                INTEREST GENERATE: Adds 0.1% of the amount currently in your account.
+                INTEREST GENERATE: Adds 0.1% of the amount currently in your account. <br />
+                (PASSIVE): Interest rolls are now +1. from 2 - 11 instead of 1 - 10. Cannot lose invested money any more.
             </div>
             
             <div id ="console" class="hidden_Divs">    

@@ -94,7 +94,7 @@ $(window).load(function () {
             if (emailQuickScopeDisplayed == "false") {
                 numUnreadEmails++;
                 emailQuickScopeDisplayed = "true";
-                localStorage.setItem("emailQuickScopeDisplayedv04", emailQuickScopeDisplayed);
+                localStorage.setItem("emailQuickScopeDisplayedv05", emailQuickScopeDisplayed);
                 $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
             }
             $('#twitchInvestResult').html("Investing...");
