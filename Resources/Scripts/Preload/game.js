@@ -37,8 +37,9 @@ $(document).ready(function () {
 
     if (typeof (Storage) !== "undefined") {              
         money = parseFloat(localStorage.getItem("moneyv04"));
-        $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+        $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblSaveState').html(localStorage.getItem("lastSaveState"));
                 
         threeBitBank = parseInt(localStorage.getItem("threeBitBankv04"));               

@@ -3,8 +3,9 @@ $(window).load(function () {
     $('#btnBuy3BitCrawler').click(function () {
         if (money >= 2) {
             money = money - 2;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             threeBitBank++;
 
             // update the totalChunks info
@@ -22,8 +23,9 @@ $(window).load(function () {
     $('#btnBuy4BitCrawler').click(function () {
         if (money >= 3.95) {
             money = money - 3.95;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             fourBitBank++;
             totalChunks = totalChunks + 4;
             $('#totalChunkDisplay').show();
@@ -46,8 +48,9 @@ $(window).load(function () {
     $('#btnBuy6BitCrawler').click(function () {
         if (money >= 15) {
             money = money - 15;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             sixBitBank++;
             totalChunks = totalChunks + 16;
             $('#totalChunkDisplay').show();
@@ -61,8 +64,9 @@ $(window).load(function () {
     $('#btnBuyRussian6BitCrawler').click(function () {
         if (money >= 22.5) {
             money = money - 22.5;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             russianSixBitBank++;
             totalChunks = totalChunks + 16;
             $('#totalChunkDisplay').show();
@@ -85,8 +89,9 @@ $(window).load(function () {
     $('#btnBuy8BitCrawler').click(function () {
         if (money >= 58) {
             money = money - 58;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             eightBitBank++;
             totalChunks = totalChunks + 64;
             $('#totalChunkDisplay').show();
@@ -101,8 +106,9 @@ $(window).load(function () {
 
         if (money >= 820) {
             money = money - 820;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             twelveBitBank++;
             totalChunks = totalChunks + 1024;
             $('#totalChunkDisplay').show();
@@ -117,8 +123,9 @@ $(window).load(function () {
     $('#btnBuy16BitCrawler').click(function () {
         if (money >= 12288) {
             money = money - 12288;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             sixteenBitBank++;
             totalChunks = totalChunks + 16384;
             $('#totalChunkDisplay').show();

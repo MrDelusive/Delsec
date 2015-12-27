@@ -4,8 +4,9 @@
         if (money >= delsecCurrentStockPrice) {
             money -= delsecCurrentStockPrice;
             ownedDelsecStocks++;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -20,8 +21,9 @@
         if (money >= delsecCurrentStockPrice * 10) {
             money -= delsecCurrentStockPrice * 10;
             ownedDelsecStocks += 10;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -35,8 +37,9 @@
         if (money >= delsecCurrentStockPrice * 100) {
             money -= delsecCurrentStockPrice * 100;
             ownedDelsecStocks += 100;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -51,8 +54,9 @@
         if (delsecBuyAmt >= 1) {
             money -= delsecCurrentStockPrice * delsecBuyAmt;
             ownedDelsecStocks += delsecBuyAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -67,8 +71,9 @@
         if (ownedDelsecStocks > 0) {
             money += delsecCurrentStockPrice - delsecCurrentStockPrice / 10;
             ownedDelsecStocks--;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -81,8 +86,9 @@
         if (ownedDelsecStocks > 9) {
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * 10;
             ownedDelsecStocks -= 10;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -95,8 +101,9 @@
         if (ownedDelsecStocks > 99) {
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * 100;
             ownedDelsecStocks -= 100;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -109,8 +116,9 @@
     $('#btnSellDelsecStocksAll').click(function () {
         if (ownedDelsecStocks > 0) {
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * ownedDelsecStocks;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedDelsecStocks = 0;
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)

@@ -4,8 +4,9 @@
         if (money >= astorCurrentStockPrice) {
             money -= astorCurrentStockPrice;
             ownedAstorStocks++;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -20,8 +21,9 @@
         if (money >= astorCurrentStockPrice * 10) {
             money -= astorCurrentStockPrice * 10;
             ownedAstorStocks += 10;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -35,8 +37,9 @@
         if (money >= astorCurrentStockPrice * 100) {
             money -= astorCurrentStockPrice * 100;
             ownedAstorStocks += 100;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -51,8 +54,9 @@
         if (astorBuyAmt >= 1) {
             money -= astorCurrentStockPrice * astorBuyAmt;
             ownedAstorStocks += astorBuyAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -66,8 +70,9 @@
         if (ownedAstorStocks > 0) {
             money += astorCurrentStockPrice - astorCurrentStockPrice / 10;
             ownedAstorStocks--;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -80,8 +85,9 @@
         if (ownedAstorStocks > 9) {
             money += (astorCurrentStockPrice - astorCurrentStockPrice / 10) * 10;
             ownedAstorStocks -= 10;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -94,8 +100,9 @@
         if (ownedAstorStocks > 99) {
             money += (astorCurrentStockPrice - astorCurrentStockPrice / 10) * 100;
             ownedAstorStocks -= 100;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -108,8 +115,9 @@
     $('#btnSellAstorStocksAll').click(function () {
         if (ownedAstorStocks > 0) {
             money += (astorCurrentStockPrice - astorCurrentStockPrice / 10) * ownedAstorStocks;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedAstorStocks = 0;
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)

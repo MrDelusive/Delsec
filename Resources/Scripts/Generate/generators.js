@@ -5,7 +5,9 @@ $(window).load(function () {
             
         increment = Math.round(100 * Math.random() / 12.5) / 100;
         money += increment;
-        $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+        $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#manualIncrementAmtDisplay').html('Last Chunk of Data retrieved: + $' + increment.toFixed(2));
 
         // the initial fade in of the shop
@@ -25,7 +27,9 @@ $(window).load(function () {
         warriorClicks++;
         increment = Math.round(100 * (Math.random() / 3.125 + warriorClicks / 100)) / 100;
         money += increment;
-        $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+        $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#warriorGenerateAmt').html('Last Chunk of Data retrieved: + $' + increment.toFixed(2));
 
         return false;
@@ -41,14 +45,16 @@ $(window).load(function () {
     $('#btnHealerIncrement').click(function () {
         increment = Math.round(100 * money / 1000) / 100;
         money += increment;
-        $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+        $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#healerGenerateAmt').html("You have added 0.1% interest to your account for: $" + increment.toFixed(2));
         return false;
     });
 
     // generates stocks Astor/Ventex/Entaq/Popbot
     $('#btnRogueIncrement').click(function () {
-        var currentStockGen = Math.floor(Math.random() * 5) + 1;
+        var currentStockGen = Math.floor(Math.random() * 4) + 1;
         switch (currentStockGen) {
             case 1:
                 ownedEntaqStocks++;

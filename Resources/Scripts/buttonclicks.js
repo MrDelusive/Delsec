@@ -130,6 +130,7 @@ $(window).load(function () {
         if (money >= 10000) {
             userClass = "Warrior";
             localStorage.setItem("userClassv04", userClass);
+            btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
@@ -157,6 +158,7 @@ $(window).load(function () {
         if (money >= 10000) {
             userClass = "Wizard";
             localStorage.setItem("userClassv04", userClass);
+            btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
@@ -184,6 +186,7 @@ $(window).load(function () {
         if (money >= 10000) {
             userClass = "Rogue";
             localStorage.setItem("userClassv04", userClass);
+            btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
@@ -211,6 +214,7 @@ $(window).load(function () {
         if (money >= 10000) {
             userClass = "Healer";
             localStorage.setItem("userClassv04", userClass);
+            btn.prop('disabled', true);
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);

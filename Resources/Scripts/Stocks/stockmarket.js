@@ -180,7 +180,7 @@ $(window).load(function () {
         localStorage.setItem("popbotCurrentStockPricev04", popbotCurrentStockPrice);
         // POPBOT END //
        
-    }, 30000);
+    }, 3000);
 
     setInterval(function () {
         if (ownedDelsecStocks > 0) {

@@ -10,13 +10,21 @@ $(document).keyup(function (e) {
             $('#mainGameWindow').append('Common commands<br /><br />help<br />test<br />test<br />test<br />test<br />test<br />');
         else if (input == "dsfa") {
             money += 1000;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
         else if (input == "dskfa") {
             money += 10000;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+        else if (input == "dsdqd") {
+            money += 1000000000;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
 
 

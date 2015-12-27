@@ -70,9 +70,9 @@ $(window).load(function () {
 
         money += autoIncrement * threeBitBank + autoIncrement2s * fourBitBank + autoIncrement6Bit * sixBitBank + autoIncrementRussian6Bit * russianSixBitBank + autoIncrement8Bit
             * eightBitBank + autoIncrement12Bit * twelveBitBank + autoIncrement16Bit * sixteenBitBank + wizardPassive;
-        $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
-        $(document).prop('title', 'Delsec Account: $' + money.toFixed(2));
+        $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     }, 4000);
 
 })(jQuery);
