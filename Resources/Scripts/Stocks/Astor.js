@@ -1,5 +1,11 @@
 ﻿$(window).load(function () {
-    $('#btnBuyAstorStocks').click(function () {
+
+    $('#astorStockDisplayCost').html('$' + astorCurrentStockPrice.toFixed(2));
+    $('#astorStockSellPrice').html('$' + (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider).toFixed(2));
+    $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
+    $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - (astorCurrentStockPrice / sellDivider))).toFixed(2));
+
+    $('#btnBuyAstorStocks').click(function () {      
         if (money >= astorCurrentStockPrice) {
             money -= astorCurrentStockPrice;
             ownedAstorStocks++;

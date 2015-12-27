@@ -1,4 +1,10 @@
 ﻿$(window).load(function () {
+
+    $('#delsecStockDisplayCost').html('$' + delsecCurrentStockPrice.toFixed(2));
+    $('#delsecStockSellPrice').html('$' + (delsecCurrentStockPrice - delsecCurrentStockPrice / sellDivider).toFixed(2));
+    $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
+    $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - (delsecCurrentStockPrice / sellDivider))).toFixed(2));
+
     $('#btnBuyDelsecStocks').click(function () {
 
         if (money >= delsecCurrentStockPrice) {

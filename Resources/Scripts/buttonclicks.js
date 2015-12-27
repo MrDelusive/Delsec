@@ -92,7 +92,6 @@ $(window).load(function () {
 
     $('#save').click(function () {
         if (typeof (Storage) !== "undefined") {
-            // Code for localStorage/sessionStorage.
             localStorage.setItem("moneyv05", money);
             localStorage.setItem("threeBitBankv05", threeBitBank);
             localStorage.setItem("fourBitBankv05", fourBitBank);
@@ -104,20 +103,46 @@ $(window).load(function () {
             localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
             localStorage.setItem("totalChunksv05", totalChunks);
 
-            localStorage.setItem("delsecCurrentStockPricev05", delsecCurrentStockPrice);
             localStorage.setItem("ownedDelsecStocksv05", ownedDelsecStocks);
-
-            localStorage.setItem("entaqCurrentStockPricev05", entaqCurrentStockPrice);
             localStorage.setItem("ownedEntaqStocksv05", ownedEntaqStocks);
-
-            localStorage.setItem("ventexCurrentStockPricev05", ventexCurrentStockPrice);
             localStorage.setItem("ownedVentexStocksv05", ownedVentexStocks);
-
-            localStorage.setItem("astorCurrentStockPricev05", astorCurrentStockPrice);
             localStorage.setItem("ownedAstorStocksv05", ownedAstorStocks);
-
-            localStorage.setItem("popbotCurrentStockPricev05", popbotCurrentStockPrice);
             localStorage.setItem("ownedPopbotStocksv05", ownedPopbotStocks);
+            localStorage.setItem("ownedPannamStocksv05", ownedPannamStocks);
+            localStorage.setItem("ownedTRITStocksv05", ownedTRITStocks);
+            localStorage.setItem("ownedCANVStocksv05", ownedCANVStocks);
+            localStorage.setItem("ownedOSMStocksv05", ownedOSMStocks);
+            localStorage.setItem("ownedPALLADStocksv05", ownedPALLADStocks);
+            localStorage.setItem("ownedKELVStocksv05", ownedKELVStocks);
+            localStorage.setItem("ownedStuccorStocksv05", ownedStuccorStocks);
+            localStorage.setItem("ownedDelcredStocksv05", ownedDelcredStocks);
+            localStorage.setItem("ownedRustecStocksv05", ownedRustecStocks);
+            localStorage.setItem("ownedExxocredStocksv05", ownedExxocredStocks);
+            localStorage.setItem("ownedAUStocksv05", ownedAUStocks);
+            localStorage.setItem("ownedAceholdStocksv05", ownedAceholdStocks);
+            localStorage.setItem("ownedDelholdStocksv05", ownedDelholdStocks);
+            localStorage.setItem("ownedDIAMStocksv05", ownedDIAMStocks);
+            localStorage.setItem("ownedPentaccStocksv05", ownedPentaccStocks);
+            localStorage.setItem("ownedNoodleStocksv05", ownedNoodleStocks);
+            localStorage.setItem("ownedMegahardStocksv05", ownedMegahardStocks);
+            localStorage.setItem("ownedChimerasecStocksv05", ownedChimerasecStocks);
+            localStorage.setItem("ownedChimeraholdStocksv05", ownedChimeraholdStocks);
+            localStorage.setItem("ownedGriffonbankStocksv05", ownedGriffonbankStocks);
+            localStorage.setItem("ownedTurborusStocksv05", ownedTurborusStocks);
+            localStorage.setItem("ownedExodmptStocksv05", ownedExodmptStocks);
+            localStorage.setItem("ownedRamnetStocksv05", ownedRamnetStocks);
+            localStorage.setItem("ownedAlphacenStocksv05", ownedAlphacenStocks);
+            localStorage.setItem("ownedScatterStocksv05", ownedScatterStocks);
+            localStorage.setItem("ownedKalzexStocksv05", ownedKalzexStocks);
+            localStorage.setItem("ownedSonicosStocksv05", ownedSonicosStocks);
+            localStorage.setItem("ownedTrancextStocksv05", ownedTrancextStocks);
+            localStorage.setItem("ownedStklrStocksv05", ownedStklrStocks);
+            localStorage.setItem("ownedVipersecStocksv05", ownedVipersecStocks);
+            localStorage.setItem("ownedPLATStocksv05", ownedPLATStocks);
+            localStorage.setItem("ownedInfoneStocksv05", ownedInfoneStocks);
+            localStorage.setItem("ownedExtankStocksv05", ownedExtankStocks);
+            localStorage.setItem("ownedReinaccStocksv05", ownedReinaccStocks);
+
             if (userClass == "Warrior")
                 localStorage.setItem("warriorClicksv05", warriorClicks); //remember number of clicks to calculate power of warrior generate
         }
@@ -216,6 +241,13 @@ $(window).load(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            // update sell div price to display new 5% reduction
+            $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / sellDivider)).toFixed(2));
+            $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - (astorCurrentStockPrice / sellDivider))).toFixed(2));
+            $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - (entaqCurrentStockPrice / sellDivider))).toFixed(2));
+            $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - (ventexCurrentStockPrice / sellDivider))).toFixed(2));
+            $('#popbotSellEstimate').html('$' + (ownedPopbotStocks * (popbotCurrentStockPrice - popbotCurrentStockPrice / sellDivider)).toFixed(2));
+
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");

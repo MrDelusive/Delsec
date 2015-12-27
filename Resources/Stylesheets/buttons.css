@@ -592,43 +592,17 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     margin-right: -5px;
     font-family:Consolas,monaco,monospace;
     font-size:12px;
-    -moz-box-shadow:inset 0px 1px 0px 0px #4a4e54;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #4a4e54;
-	box-shadow:inset 0px 1px 0px 0px #4a4e54;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #093159), color-stop(1, #031630) );
-	background:-moz-linear-gradient( center top, #093159 5%, #031630 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#093159', endColorstr='#031630');
 	background-color:#093159;
-	-webkit-border-top-left-radius:0px;
-	-moz-border-radius-topleft:0px;
-	border-top-left-radius:0px;
-	-webkit-border-top-right-radius:0px;
-	-moz-border-radius-topright:0px;
-	border-top-right-radius:0px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-	border-bottom-left-radius:0px;
-	text-indent:0;
     cursor: pointer;
 	border:1px solid #000000;
 	display:inline-block;
 	color:#ffffff;
-    font-family: Consolas,monaco,monospace;
 	font-size:15px;
-	font-weight:bold;
-	font-style:normal;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #000305;
 }
 
 .stockButton:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #d16a62) );
-	background:-moz-linear-gradient( center top, #c62d1f 5%, #d16a62 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#d16a62');
 	background-color:#c62d1f;
 }
 

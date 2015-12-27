@@ -1,4 +1,10 @@
 ﻿$(window).load(function () {
+
+    $('#entaqStockDisplayCost').html('$' + entaqCurrentStockPrice.toFixed(2));
+    $('#entaqStockSellPrice').html('$' + (entaqCurrentStockPrice - entaqCurrentStockPrice / sellDivider).toFixed(2));
+    $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
+    $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - (entaqCurrentStockPrice / sellDivider))).toFixed(2));
+
     $('#btnBuyEntaqStocks').click(function () {
 
         if (money >= entaqCurrentStockPrice) {

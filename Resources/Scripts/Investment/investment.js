@@ -76,8 +76,9 @@ $(window).load(function () {
                     default:
                         break;
                 }
-                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             }, 10000);                     
         }
         else
@@ -167,8 +168,9 @@ $(window).load(function () {
                     default:
                         break;
                 }
-                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             }, 10000);
         }
         else
@@ -252,8 +254,9 @@ $(window).load(function () {
                     default:
                         break;
                 }
-                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             }, 15000);
         }
         else
@@ -336,8 +339,9 @@ $(window).load(function () {
                     default:
                         break;
                 }
-                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             }, 15000);
         }
         else
@@ -420,8 +424,9 @@ $(window).load(function () {
                     default:
                         break;
                 }
-                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             }, 20000);
         }
         else
@@ -504,8 +509,9 @@ $(window).load(function () {
                     default:
                         break;
                 }
-                $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             }, 30000);
         }
         else

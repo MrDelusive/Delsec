@@ -1,4 +1,9 @@
 ﻿$(window).load(function () {
+    $('#popbotStockDisplayCost').html('$' + popbotCurrentStockPrice.toFixed(2));
+    $('#popbotStockSellPrice').html('$' + (popbotCurrentStockPrice - popbotCurrentStockPrice / sellDivider).toFixed(2));
+    $('#popbotOwnedStocksDisplay').html(ownedPopbotStocks);
+    $('#popbotSellEstimate').html('$' + (ownedPopbotStocks * (popbotCurrentStockPrice - popbotCurrentStockPrice / sellDivider)).toFixed(2));
+
     $('#btnBuyPopbotStocks').click(function () {
 
         if (money >= popbotCurrentStockPrice) {

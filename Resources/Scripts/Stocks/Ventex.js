@@ -1,4 +1,10 @@
 ﻿$(window).load(function () {
+
+    $('#ventexStockDisplayCost').html('$' + ventexCurrentStockPrice.toFixed(2));
+    $('#ventexStockSellPrice').html('$' + (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider).toFixed(2));
+    $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
+    $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - (ventexCurrentStockPrice / sellDivider))).toFixed(2));
+
     $('#btnBuyVentexStocks').click(function () {
 
         if (money >= ventexCurrentStockPrice) {

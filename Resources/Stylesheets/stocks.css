@@ -5,7 +5,7 @@
     float:left;
     text-align:left;
     background: rgba(0, 0, 0, 0.7);
-    height:1600px;
+    height:2500px;
     width: 1000px;
     color: #FFF;
 	padding-top:10px;
@@ -36,6 +36,10 @@
     vertical-align: central;
     background: black;
 	width: 1000px;
+}
+#stocks tr td{
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 #stocks th, td
 {
