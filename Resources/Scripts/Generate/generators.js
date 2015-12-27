@@ -46,7 +46,7 @@ $(window).load(function () {
         return false;
     });
 
-    // generates stocks Astor/Ventex/Entaq
+    // generates stocks Astor/Ventex/Entaq/Popbot
     $('#btnRogueIncrement').click(function () {
         var currentStockGen = Math.floor(Math.random() * 5) + 1;
         switch (currentStockGen) {

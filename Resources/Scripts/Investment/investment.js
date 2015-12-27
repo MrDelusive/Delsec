@@ -77,6 +77,7 @@ $(window).load(function () {
                         break;
                 }
                 $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             }, 10000);                     
         }
         else
@@ -167,6 +168,7 @@ $(window).load(function () {
                         break;
                 }
                 $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             }, 10000);
         }
         else
@@ -251,6 +253,7 @@ $(window).load(function () {
                         break;
                 }
                 $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             }, 15000);
         }
         else
@@ -334,6 +337,7 @@ $(window).load(function () {
                         break;
                 }
                 $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             }, 15000);
         }
         else
@@ -417,6 +421,7 @@ $(window).load(function () {
                         break;
                 }
                 $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             }, 20000);
         }
         else
@@ -500,6 +505,7 @@ $(window).load(function () {
                         break;
                 }
                 $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             }, 30000);
         }
         else

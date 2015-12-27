@@ -4,6 +4,7 @@ $(window).load(function () {
         if (money >= 2) {
             money = money - 2;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             threeBitBank++;
 
             // update the totalChunks info
@@ -22,6 +23,7 @@ $(window).load(function () {
         if (money >= 3.95) {
             money = money - 3.95;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             fourBitBank++;
             totalChunks = totalChunks + 4;
             $('#totalChunkDisplay').show();
@@ -45,6 +47,7 @@ $(window).load(function () {
         if (money >= 15) {
             money = money - 15;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             sixBitBank++;
             totalChunks = totalChunks + 16;
             $('#totalChunkDisplay').show();
@@ -59,6 +62,7 @@ $(window).load(function () {
         if (money >= 22.5) {
             money = money - 22.5;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             russianSixBitBank++;
             totalChunks = totalChunks + 16;
             $('#totalChunkDisplay').show();
@@ -82,6 +86,7 @@ $(window).load(function () {
         if (money >= 58) {
             money = money - 58;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             eightBitBank++;
             totalChunks = totalChunks + 64;
             $('#totalChunkDisplay').show();
@@ -97,6 +102,7 @@ $(window).load(function () {
         if (money >= 820) {
             money = money - 820;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             twelveBitBank++;
             totalChunks = totalChunks + 1024;
             $('#totalChunkDisplay').show();
@@ -112,6 +118,7 @@ $(window).load(function () {
         if (money >= 12288) {
             money = money - 12288;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             sixteenBitBank++;
             totalChunks = totalChunks + 16384;
             $('#totalChunkDisplay').show();

@@ -5,6 +5,7 @@
             money -= delsecCurrentStockPrice;
             ownedDelsecStocks++;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -20,6 +21,7 @@
             money -= delsecCurrentStockPrice * 10;
             ownedDelsecStocks += 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -34,6 +36,7 @@
             money -= delsecCurrentStockPrice * 100;
             ownedDelsecStocks += 100;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -49,6 +52,7 @@
             money -= delsecCurrentStockPrice * delsecBuyAmt;
             ownedDelsecStocks += delsecBuyAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -64,6 +68,7 @@
             money += delsecCurrentStockPrice - delsecCurrentStockPrice / 10;
             ownedDelsecStocks--;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -77,6 +82,7 @@
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * 10;
             ownedDelsecStocks -= 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -90,6 +96,7 @@
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * 100;
             ownedDelsecStocks -= 100;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)
                 $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - delsecCurrentStockPrice / 10)).toFixed(2));
@@ -103,7 +110,7 @@
         if (ownedDelsecStocks > 0) {
             money += (delsecCurrentStockPrice - delsecCurrentStockPrice / 10) * ownedDelsecStocks;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             ownedDelsecStocks = 0;
             $('#delsecOwnedStocksDisplay').html(ownedDelsecStocks);
             if (ownedDelsecStocks > 0)

@@ -12,6 +12,7 @@
     <link href="Resources/Stylesheets/stocks.css" rel="stylesheet" type="text/css" />
     <link href="Resources/Stylesheets/buttons.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/investment.css" rel="stylesheet" type="text/css" />   
+    <link href="Resources/Stylesheets/Console.css" rel="stylesheet" type="text/css" />   
     
 </head>
 <body>    
@@ -22,10 +23,9 @@
         </div>
         <div id="right_Main">
 			<b>Debug info, testing only:</b><br /> <br />
-			Current Version: V0.4 <br /> <br />
+			Current Version: V0.5 <br /> <br />
             <div id="lblSaveState"></div>
             <button id="save" >save</button> 
-            <button id="cheat" >add</button>
             <button id="resetClass" >reset class</button> 
             <button id="resetAll" >reset all</button>                     
             <div id="classDisplay"></div>
@@ -360,9 +360,18 @@
             </div>
             
             <div id ="console" class="hidden_Divs">    
-                Running: <br />
-                System.bat <br />
-                DelsecOpenSSLSocketOverride.dll
+                <div id="mainGameWindow">
+		            Delsec Systems [Version 0.01.100] <br />
+		            Copyright (c) 2015 Delsec Corporation. All rights reserved. <br /> <br /> 
+                    Running: <br />
+                    System.bat <br />
+                    DelsecOpenSSLSocketOverride.dll<br />
+                    <br /><br /><br /><br />
+	            </div>	
+	            <div id="mainGameInput">                    
+		            V:/clientData/5184828><input type="text" size="30" id="txtSubmit"/>
+	            </div>	
+                
             </div>                
         </div>
     </div>
@@ -388,6 +397,8 @@
     <script src="Resources/Scripts/Stocks/PopbotButtons.js"></script>
 
     <script src="Resources/Scripts/Investment/investment.js"></script>
+
+    <script src="Resources/Scripts/Console/Console.js"></script>
 
     <script src="Resources/Scripts/autosave.js"></script>
 </body>

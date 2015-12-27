@@ -135,18 +135,6 @@
 	padding-top: 10px;
 }
 
-#console
-{
-    float:left;
-    text-align:left;
-    background: black;
-    height:1600px;
-    width: 1000px;
-    color: #FFF;
-	padding-top: 10px;
-    padding-left: 10px;
-}
-
 #warriorAbilities
 {
     float:left;

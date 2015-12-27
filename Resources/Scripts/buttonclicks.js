@@ -33,14 +33,10 @@ $(window).load(function () {
     $('#btnConsole').click(function () {
         $(".hidden_Divs").hide();
         $("#console").show();
-
+        $('#txtSubmit').focus();
         return false;
     });
 
-    $('#cheat').click(function () {
-        money += 300;
-        return false;
-    });
     $('#resetClass').click(function () {
         userClass = "None";
         localStorage.setItem("userClassv04", userClass);

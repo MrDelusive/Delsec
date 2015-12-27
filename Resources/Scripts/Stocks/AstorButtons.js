@@ -5,6 +5,7 @@
             money -= astorCurrentStockPrice;
             ownedAstorStocks++;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -20,6 +21,7 @@
             money -= astorCurrentStockPrice * 10;
             ownedAstorStocks += 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -34,6 +36,7 @@
             money -= astorCurrentStockPrice * 100;
             ownedAstorStocks += 100;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -49,6 +52,7 @@
             money -= astorCurrentStockPrice * astorBuyAmt;
             ownedAstorStocks += astorBuyAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -63,6 +67,7 @@
             money += astorCurrentStockPrice - astorCurrentStockPrice / 10;
             ownedAstorStocks--;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -76,6 +81,7 @@
             money += (astorCurrentStockPrice - astorCurrentStockPrice / 10) * 10;
             ownedAstorStocks -= 10;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -89,6 +95,7 @@
             money += (astorCurrentStockPrice - astorCurrentStockPrice / 10) * 100;
             ownedAstorStocks -= 100;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
@@ -102,7 +109,7 @@
         if (ownedAstorStocks > 0) {
             money += (astorCurrentStockPrice - astorCurrentStockPrice / 10) * ownedAstorStocks;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2));
-
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2));
             ownedAstorStocks = 0;
             $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
             if (ownedAstorStocks > 0)
