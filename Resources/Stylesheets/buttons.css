@@ -213,6 +213,10 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 }.btn_Style:active {
 	position:relative;
 }
+.btn_Style:disabled {
+    background: black;
+    color: #4a4e54;
+}
 
 .btn_StyleRed {
 	-moz-box-shadow:inset 0px 1px 0px 0px #c97e79;
@@ -258,6 +262,10 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 .btn_StyleRed:active {
 	position:relative;
 	top:1px;
+}
+.btn_StyleRed:disabled {
+    background: black;
+    color: #4a4e54;
 }
 
 .btn_Tab {

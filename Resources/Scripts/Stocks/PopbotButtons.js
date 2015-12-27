@@ -1,7 +1,4 @@
 ﻿$(window).load(function () {
-    var sellDivider = 10; // Normal sell price at 10% lower.
-    if (userClass == "Rogue")
-        sellDivider = 20; // Sell price only 5% lower if rogue.
     $('#btnBuyPopbotStocks').click(function () {
 
         if (money >= popbotCurrentStockPrice) {

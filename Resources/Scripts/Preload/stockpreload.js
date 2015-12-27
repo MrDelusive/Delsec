@@ -18,3 +18,6 @@ var ownedAstorStocks = 0;
 
 var ventexIncrement = 0;
 var ownedVentexStocks = 0;
+
+var sellDivider = 10; // Normal sell price at 10% lower.
+

@@ -133,10 +133,10 @@ $(window).load(function () {
 
     // The class selection buttons
     $('#btnWarriorAbility').click(function () {
-        if (money >= 10000) {
+        if (money >= 10000 && userClass == "None") {
             userClass = "Warrior";
             localStorage.setItem("userClassv05", userClass);
-            btn.prop('disabled', true);
+            
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
@@ -150,6 +150,9 @@ $(window).load(function () {
             $('#btnWarriorAbilities').fadeIn(500);
             $("#warriorGenerate").fadeIn(500);
             money -= 10000;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");
@@ -161,10 +164,10 @@ $(window).load(function () {
     });
 
     $('#btnWizardAbility').click(function () {
-        if (money >= 10000) {
+        if (money >= 10000 && userClass == "None") {
             userClass = "Wizard";
             localStorage.setItem("userClassv05", userClass);
-            btn.prop('disabled', true);
+
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
@@ -178,6 +181,9 @@ $(window).load(function () {
             $('#btnWizardAbilities').fadeIn(500);
             $("#autoWizardGenerate").fadeIn(500);
             money -= 10000;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");
@@ -189,11 +195,12 @@ $(window).load(function () {
     });
 
     $('#btnRogueAbility').click(function () {
-        if (money >= 10000) {
+        if (money >= 10000 && userClass == "None") {
             userClass = "Rogue";
             localStorage.setItem("userClassv05", userClass);
-            btn.prop('disabled', true);
-            $('#classDisplay').html("<br /><br />Class: " + userClass);
+            sellDivider = 20;
+
+            $('#classDisplay').html("<br /><br />Class: " + userClass);           
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
             $("#manualIncrementDisplay").fadeOut(500);
@@ -206,6 +213,9 @@ $(window).load(function () {
             $('#btnRogueAbilities').fadeIn(500);
             $("#rogueGenerate").fadeIn(500);
             money -= 10000;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");
@@ -217,10 +227,10 @@ $(window).load(function () {
     });
 
     $('#btnHealerAbility').click(function () {
-        if (money >= 10000) {
+        if (money >= 10000 && userClass == "None") {
             userClass = "Healer";
             localStorage.setItem("userClassv05", userClass);
-            btn.prop('disabled', true);
+            
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
@@ -234,6 +244,9 @@ $(window).load(function () {
             $('#btnHealerAbilities').fadeIn(500);
             $("#healerGenerate").fadeIn(500);
             money -= 10000;
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");
