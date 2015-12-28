@@ -72,20 +72,87 @@ $(window).load(function () {
         localStorage.setItem("emailDelsecStockViewedv05", "false");
         localStorage.setItem("emailDelsecStockDisplayedv05", "false");
 
-        localStorage.setItem("delsecCurrentStockPricev05", 2.20);
+        
         localStorage.setItem("ownedDelsecStocksv05", 0);
-
-        localStorage.setItem("entaqCurrentStockPricev05", 0.27);
         localStorage.setItem("ownedEntaqStocksv05", 0);
-
-        localStorage.setItem("ventexCurrentStockPricev05", 1.54);
         localStorage.setItem("ownedVentexStocksv05", 0);
-
-        localStorage.setItem("astorCurrentStockPricev05", 0.95);
         localStorage.setItem("ownedAstorStocksv05", 0);
-
-        localStorage.setItem("popbotCurrentStockPricev05", 0.01);
         localStorage.setItem("ownedPopbotStocksv05", 0);
+        localStorage.setItem("ownedPannamStocksv05", 0);
+        localStorage.setItem("ownedTRITStocksv05", 0);
+        localStorage.setItem("ownedCANVStocksv05", 0);
+        localStorage.setItem("ownedOSMStocksv05", 0);
+        localStorage.setItem("ownedPALLADStocksv05", 0);
+        localStorage.setItem("ownedKELVStocksv05", 0);
+        localStorage.setItem("ownedStuccorStocksv05", 0);
+        localStorage.setItem("ownedDelcredStocksv05", 0);
+        localStorage.setItem("ownedRustecStocksv05", 0);
+        localStorage.setItem("ownedExxocredStocksv05", 0);
+        localStorage.setItem("ownedAUStocksv05", 0);
+        localStorage.setItem("ownedAceholdStocksv05", 0);
+        localStorage.setItem("ownedDelholdStocksv05", 0);
+        localStorage.setItem("ownedDIAMStocksv05", 0);
+        localStorage.setItem("ownedPentaccStocksv05", 0);
+        localStorage.setItem("ownedNoodleStocksv05", 0);
+        localStorage.setItem("ownedMegahardStocksv05", 0);
+        localStorage.setItem("ownedChimerasecStocksv05", 0);
+        localStorage.setItem("ownedChimeraholdStocksv05", 0);
+        localStorage.setItem("ownedGriffonbankStocksv05", 0);
+        localStorage.setItem("ownedTurborusStocksv05", 0);
+        localStorage.setItem("ownedExodmptStocksv05", 0);
+        localStorage.setItem("ownedRamnetStocksv05", 0);
+        localStorage.setItem("ownedAlphacenStocksv05", 0);
+        localStorage.setItem("ownedScatterStocksv05", 0);
+        localStorage.setItem("ownedKalzexStocksv05", 0);
+        localStorage.setItem("ownedSonicosStocksv05", 0);
+        localStorage.setItem("ownedTrancextStocksv05", 0);
+        localStorage.setItem("ownedStklrStocksv05", 0);
+        localStorage.setItem("ownedVipersecStocksv05", 0);
+        localStorage.setItem("ownedPLATStocksv05", 0);
+        localStorage.setItem("ownedInfoneStocksv05", 0);
+        localStorage.setItem("ownedExtankStocksv05", 0);
+        localStorage.setItem("ownedReinaccStocksv05", 0);
+
+        localStorage.setItem("delsecCurrentStockPricev05", 2.20);
+        localStorage.setItem("entaqCurrentStockPricev05", 0.27);       
+        localStorage.setItem("ventexCurrentStockPricev05", 1.54);
+        localStorage.setItem("astorCurrentStockPricev05", 0.95);       
+        localStorage.setItem("popbotCurrentStockPricev05", 0.01);
+        localStorage.setItem("pannamCurrentStockPricev05", 4.82);
+        localStorage.setItem("TRITCurrentStockPricev05", 5.86);
+        localStorage.setItem("CANVCurrentStockPricev05", 8.72);
+        localStorage.setItem("OSMCurrentStockPricev05", 11.26);
+        localStorage.setItem("PALLADCurrentStockPricev05", 15.77);
+        localStorage.setItem("KELVCurrentStockPricev05", 23.11);
+        localStorage.setItem("stuccorCurrentStockPricev05", 58.98);
+        localStorage.setItem("delcredCurrentStockPricev05", 97.85);
+        localStorage.setItem("rustecCurrentStockPricev05", 115.33);
+        localStorage.setItem("exxocredCurrentStockPricev05", 126.88);
+        localStorage.setItem("AUCurrentStockPricev05", 257.23);
+        localStorage.setItem("aceholdCurrentStockPricev05", 340.01);
+        localStorage.setItem("delholdCurrentStockPricev05", 582.94);
+        localStorage.setItem("DIAMCurrentStockPricev05", 1196.77);
+        localStorage.setItem("pentaccCurrentStockPricev05", 1206.65);
+        localStorage.setItem("noodleCurrentStockPricev05", 1572.63);
+        localStorage.setItem("megahardCurrentStockPricev05", 2322.17);
+        localStorage.setItem("chimerasecCurrentStockPricev05", 3703.29);
+        localStorage.setItem("chimeraholdCurrentStockPricev05", 3908.06);
+        localStorage.setItem("griffonbankCurrentStockPricev05", 4817.25);
+        localStorage.setItem("turborusCurrentStockPricev05", 5176.99);
+        localStorage.setItem("exodmptCurrentStockPricev05", 5911.76);
+        localStorage.setItem("ramnetCurrentStockPricev05", 6427.11);
+        localStorage.setItem("alphacenCurrentStockPricev05", 6662.88);
+        localStorage.setItem("scatterCurrentStockPricev05", 6727.27);
+        localStorage.setItem("kalzexCurrentStockPricev05", 7111.11);
+        localStorage.setItem("sonicosCurrentStockPricev05", 7421.86);
+        localStorage.setItem("trancextCurrentStockPricev05", 7512.81);
+        localStorage.setItem("stklrCurrentStockPricev05", 7700.97);
+        localStorage.setItem("vipersecCurrentStockPricev05", 10801.91);
+        localStorage.setItem("PLATCurrentStockPricev05", 11721.88);
+        localStorage.setItem("infoneCurrentStockPricev05", 12821.88);
+        localStorage.setItem("extankCurrentStockPricev05", 13532.15);
+        localStorage.setItem("reinaccCurrentStockPricev05", 15234.04);
+
         localStorage.setItem("lastSaveState", "No saves.");
         return true;
     });
