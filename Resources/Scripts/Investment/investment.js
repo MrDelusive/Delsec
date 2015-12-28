@@ -7,7 +7,9 @@ $(window).load(function () {
             $('#wikiInvestResult').html("Investing...");
             var investAmt = 2;
             money -= investAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             var increment;
             // disable button for 10s
             var btn = $(this);
@@ -95,13 +97,15 @@ $(window).load(function () {
             if (emailQuickScopeDisplayed == "false") {
                 numUnreadEmails++;
                 emailQuickScopeDisplayed = "true";
-                localStorage.setItem("emailQuickScopeDisplayedv05", emailQuickScopeDisplayed);
+                localStorage.setItem("emailQuickScopeDisplayed", emailQuickScopeDisplayed);
                 $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
             }
             $('#twitchInvestResult').html("Investing...");
             var investAmt = 5;
             money -= investAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
@@ -185,7 +189,9 @@ $(window).load(function () {
             $('#punchInvestResult').html("Investing...");
             var investAmt = 10;
             money -= investAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
@@ -271,7 +277,9 @@ $(window).load(function () {
             $('#gameInvestResult').html("Investing...");
             var investAmt = 25;
             money -= investAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
@@ -356,7 +364,9 @@ $(window).load(function () {
             $('#pokerInvestResult').html("Investing...");
             var investAmt = 100;
             money -= investAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);
@@ -441,7 +451,9 @@ $(window).load(function () {
             $('#rentalInvestResult').html("Investing...");
             var investAmt = 500;
             money -= investAmt;
-            $('#lblMoneyDisplay').html('$' + money.toFixed(2));
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             var increment;
             var btn = $(this);
             btn.prop('disabled', true);

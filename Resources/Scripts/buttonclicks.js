@@ -45,113 +45,121 @@ $(window).load(function () {
 
     $('#resetClass').click(function () {
         userClass = "None";
-        localStorage.setItem("userClassv05", userClass);
+        localStorage.setItem("userClass", userClass);
         return true;
     });
     $('#resetAll').click(function () {
-        localStorage.setItem("userClassv05", "None");
-        localStorage.setItem("moneyv05", 0);
-        localStorage.setItem("threeBitBankv05", 0);
-        localStorage.setItem("fourBitBankv05", 0);
-        localStorage.setItem("sixBitBankv05", 0);
-        localStorage.setItem("russianSixBitBankv05", 0);
-        localStorage.setItem("eightBitBankv05", 0);
-        localStorage.setItem("twelveBitBankv05", 0);
-        localStorage.setItem("sixteenBitBankv05", 0);       
-        localStorage.setItem("totalChunksv05", 0);
+        localStorage.setItem("userClass", "None");
+        localStorage.setItem("money", 0);
+        localStorage.setItem("threeBitBank", 0);
+        localStorage.setItem("fourBitBank", 0);
+        localStorage.setItem("sixBitBank", 0);
+        localStorage.setItem("russianSixBitBank", 0);
+        localStorage.setItem("eightBitBank", 0);
+        localStorage.setItem("twelveBitBank", 0);
+        localStorage.setItem("sixteenBitBank", 0);
+        localStorage.setItem("fourByteBank", 0);
+        localStorage.setItem("eightByteBank", 0);
+        localStorage.setItem("sixteenByteBank", 0);
+        localStorage.setItem("thirtytwoByteBank", 0);
+        localStorage.setItem("sixtyfourByteBank", 0);
 
-        localStorage.setItem("numUnreadEmailsv05", 2);
-        localStorage.setItem("email1Viewedv05", "false");
-        localStorage.setItem("email2Viewedv05", "false");
-        localStorage.setItem("email3Viewedv05", "false");
-        localStorage.setItem("email3Displayedv05", "false");
-        localStorage.setItem("email4Viewedv05", "false");
-        localStorage.setItem("email4Displayedv05", "false");
-        localStorage.setItem("emailQuickScopeViewedv05", "false");
-        localStorage.setItem("emailQuickScopeDisplayedv05", "false");
-        localStorage.setItem("emailDelsecStockViewedv05", "false");
-        localStorage.setItem("emailDelsecStockDisplayedv05", "false");
+        localStorage.setItem("totalChunks", 0);
+
+        localStorage.setItem("numUnreadEmails", 2);
+        localStorage.setItem("email1Viewed", "false");
+        localStorage.setItem("email2Viewed", "false");
+        localStorage.setItem("email3Viewed", "false");
+        localStorage.setItem("email3Displayed", "false");
+        localStorage.setItem("email4Viewed", "false");
+        localStorage.setItem("email4Displayed", "false");
+        localStorage.setItem("emailQuickScopeViewed", "false");
+        localStorage.setItem("emailQuickScopeDisplayed", "false");
+        localStorage.setItem("emailDelsecStockViewed", "false");
+        localStorage.setItem("emailDelsecStockDisplayed", "false");
+        localStorage.setItem("email4ByteViewed", "false");
+        localStorage.setItem("email4ByteDisplayed", "false");
 
         
-        localStorage.setItem("ownedDelsecStocksv05", 0);
-        localStorage.setItem("ownedEntaqStocksv05", 0);
-        localStorage.setItem("ownedVentexStocksv05", 0);
-        localStorage.setItem("ownedAstorStocksv05", 0);
-        localStorage.setItem("ownedPopbotStocksv05", 0);
-        localStorage.setItem("ownedPannamStocksv05", 0);
-        localStorage.setItem("ownedTRITStocksv05", 0);
-        localStorage.setItem("ownedCANVStocksv05", 0);
-        localStorage.setItem("ownedOSMStocksv05", 0);
-        localStorage.setItem("ownedPALLADStocksv05", 0);
-        localStorage.setItem("ownedKELVStocksv05", 0);
-        localStorage.setItem("ownedStuccorStocksv05", 0);
-        localStorage.setItem("ownedDelcredStocksv05", 0);
-        localStorage.setItem("ownedRustecStocksv05", 0);
-        localStorage.setItem("ownedExxocredStocksv05", 0);
-        localStorage.setItem("ownedAUStocksv05", 0);
-        localStorage.setItem("ownedAceholdStocksv05", 0);
-        localStorage.setItem("ownedDelholdStocksv05", 0);
-        localStorage.setItem("ownedDIAMStocksv05", 0);
-        localStorage.setItem("ownedPentaccStocksv05", 0);
-        localStorage.setItem("ownedNoodleStocksv05", 0);
-        localStorage.setItem("ownedMegahardStocksv05", 0);
-        localStorage.setItem("ownedChimerasecStocksv05", 0);
-        localStorage.setItem("ownedChimeraholdStocksv05", 0);
-        localStorage.setItem("ownedGriffonbankStocksv05", 0);
-        localStorage.setItem("ownedTurborusStocksv05", 0);
-        localStorage.setItem("ownedExodmptStocksv05", 0);
-        localStorage.setItem("ownedRamnetStocksv05", 0);
-        localStorage.setItem("ownedAlphacenStocksv05", 0);
-        localStorage.setItem("ownedScatterStocksv05", 0);
-        localStorage.setItem("ownedKalzexStocksv05", 0);
-        localStorage.setItem("ownedSonicosStocksv05", 0);
-        localStorage.setItem("ownedTrancextStocksv05", 0);
-        localStorage.setItem("ownedStklrStocksv05", 0);
-        localStorage.setItem("ownedVipersecStocksv05", 0);
-        localStorage.setItem("ownedPLATStocksv05", 0);
-        localStorage.setItem("ownedInfoneStocksv05", 0);
-        localStorage.setItem("ownedExtankStocksv05", 0);
-        localStorage.setItem("ownedReinaccStocksv05", 0);
+        localStorage.setItem("ownedDelsecStocks", 0);
+        localStorage.setItem("ownedEntaqStocks", 0);
+        localStorage.setItem("ownedVentexStocks", 0);
+        localStorage.setItem("ownedAstorStocks", 0);
+        localStorage.setItem("ownedPopbotStocks", 0);
+        localStorage.setItem("ownedPannamStocks", 0);
+        localStorage.setItem("ownedTRITStocks", 0);
+        localStorage.setItem("ownedCANVStocks", 0);
+        localStorage.setItem("ownedOSMStocks", 0);
+        localStorage.setItem("ownedPALLADStocks", 0);
+        localStorage.setItem("ownedKELVStocks", 0);
+        localStorage.setItem("ownedStuccorStocks", 0);
+        localStorage.setItem("ownedDelcredStocks", 0);
+        localStorage.setItem("ownedRustecStocks", 0);
+        localStorage.setItem("ownedExxocredStocks", 0);
+        localStorage.setItem("ownedAUStocks", 0);
+        localStorage.setItem("ownedAceholdStocks", 0);
+        localStorage.setItem("ownedDelholdStocks", 0);
+        localStorage.setItem("ownedDIAMStocks", 0);
+        localStorage.setItem("ownedPentaccStocks", 0);
+        localStorage.setItem("ownedNoodleStocks", 0);
+        localStorage.setItem("ownedMegahardStocks", 0);
+        localStorage.setItem("ownedChimerasecStocks", 0);
+        localStorage.setItem("ownedChimeraholdStocks", 0);
+        localStorage.setItem("ownedGriffonbankStocks", 0);
+        localStorage.setItem("ownedTurborusStocks", 0);
+        localStorage.setItem("ownedExodmptStocks", 0);
+        localStorage.setItem("ownedRamnetStocks", 0);
+        localStorage.setItem("ownedAlphacenStocks", 0);
+        localStorage.setItem("ownedScatterStocks", 0);
+        localStorage.setItem("ownedKalzexStocks", 0);
+        localStorage.setItem("ownedSonicosStocks", 0);
+        localStorage.setItem("ownedTrancextStocks", 0);
+        localStorage.setItem("ownedStklrStocks", 0);
+        localStorage.setItem("ownedVipersecStocks", 0);
+        localStorage.setItem("ownedPLATStocks", 0);
+        localStorage.setItem("ownedInfoneStocks", 0);
+        localStorage.setItem("ownedExtankStocks", 0);
+        localStorage.setItem("ownedReinaccStocks", 0);
 
-        localStorage.setItem("delsecCurrentStockPricev05", 2.20);
-        localStorage.setItem("entaqCurrentStockPricev05", 0.27);       
-        localStorage.setItem("ventexCurrentStockPricev05", 1.54);
-        localStorage.setItem("astorCurrentStockPricev05", 0.95);       
-        localStorage.setItem("popbotCurrentStockPricev05", 0.01);
-        localStorage.setItem("pannamCurrentStockPricev05", 4.82);
-        localStorage.setItem("TRITCurrentStockPricev05", 5.86);
-        localStorage.setItem("CANVCurrentStockPricev05", 8.72);
-        localStorage.setItem("OSMCurrentStockPricev05", 11.26);
-        localStorage.setItem("PALLADCurrentStockPricev05", 15.77);
-        localStorage.setItem("KELVCurrentStockPricev05", 23.11);
-        localStorage.setItem("stuccorCurrentStockPricev05", 58.98);
-        localStorage.setItem("delcredCurrentStockPricev05", 97.85);
-        localStorage.setItem("rustecCurrentStockPricev05", 115.33);
-        localStorage.setItem("exxocredCurrentStockPricev05", 126.88);
-        localStorage.setItem("AUCurrentStockPricev05", 257.23);
-        localStorage.setItem("aceholdCurrentStockPricev05", 340.01);
-        localStorage.setItem("delholdCurrentStockPricev05", 582.94);
-        localStorage.setItem("DIAMCurrentStockPricev05", 1196.77);
-        localStorage.setItem("pentaccCurrentStockPricev05", 1206.65);
-        localStorage.setItem("noodleCurrentStockPricev05", 1572.63);
-        localStorage.setItem("megahardCurrentStockPricev05", 2322.17);
-        localStorage.setItem("chimerasecCurrentStockPricev05", 3703.29);
-        localStorage.setItem("chimeraholdCurrentStockPricev05", 3908.06);
-        localStorage.setItem("griffonbankCurrentStockPricev05", 4817.25);
-        localStorage.setItem("turborusCurrentStockPricev05", 5176.99);
-        localStorage.setItem("exodmptCurrentStockPricev05", 5911.76);
-        localStorage.setItem("ramnetCurrentStockPricev05", 6427.11);
-        localStorage.setItem("alphacenCurrentStockPricev05", 6662.88);
-        localStorage.setItem("scatterCurrentStockPricev05", 6727.27);
-        localStorage.setItem("kalzexCurrentStockPricev05", 7111.11);
-        localStorage.setItem("sonicosCurrentStockPricev05", 7421.86);
-        localStorage.setItem("trancextCurrentStockPricev05", 7512.81);
-        localStorage.setItem("stklrCurrentStockPricev05", 7700.97);
-        localStorage.setItem("vipersecCurrentStockPricev05", 10801.91);
-        localStorage.setItem("PLATCurrentStockPricev05", 11721.88);
-        localStorage.setItem("infoneCurrentStockPricev05", 12821.88);
-        localStorage.setItem("extankCurrentStockPricev05", 13532.15);
-        localStorage.setItem("reinaccCurrentStockPricev05", 15234.04);
+        localStorage.setItem("delsecCurrentStockPrice", 2.20);
+        localStorage.setItem("entaqCurrentStockPrice", 0.27);       
+        localStorage.setItem("ventexCurrentStockPrice", 1.54);
+        localStorage.setItem("astorCurrentStockPrice", 0.95);       
+        localStorage.setItem("popbotCurrentStockPrice", 0.01);
+        localStorage.setItem("pannamCurrentStockPrice", 4.82);
+        localStorage.setItem("TRITCurrentStockPrice", 5.86);
+        localStorage.setItem("CANVCurrentStockPrice", 8.72);
+        localStorage.setItem("OSMCurrentStockPrice", 11.26);
+        localStorage.setItem("PALLADCurrentStockPrice", 15.77);
+        localStorage.setItem("KELVCurrentStockPrice", 23.11);
+        localStorage.setItem("stuccorCurrentStockPrice", 58.98);
+        localStorage.setItem("delcredCurrentStockPrice", 97.85);
+        localStorage.setItem("rustecCurrentStockPrice", 115.33);
+        localStorage.setItem("exxocredCurrentStockPrice", 126.88);
+        localStorage.setItem("AUCurrentStockPrice", 257.23);
+        localStorage.setItem("aceholdCurrentStockPrice", 340.01);
+        localStorage.setItem("delholdCurrentStockPrice", 582.94);
+        localStorage.setItem("DIAMCurrentStockPrice", 1196.77);
+        localStorage.setItem("pentaccCurrentStockPrice", 1206.65);
+        localStorage.setItem("noodleCurrentStockPrice", 1572.63);
+        localStorage.setItem("megahardCurrentStockPrice", 2322.17);
+        localStorage.setItem("chimerasecCurrentStockPrice", 3703.29);
+        localStorage.setItem("chimeraholdCurrentStockPrice", 3908.06);
+        localStorage.setItem("griffonbankCurrentStockPrice", 4817.25);
+        localStorage.setItem("turborusCurrentStockPrice", 5176.99);
+        localStorage.setItem("exodmptCurrentStockPrice", 5911.76);
+        localStorage.setItem("ramnetCurrentStockPrice", 6427.11);
+        localStorage.setItem("alphacenCurrentStockPrice", 6662.88);
+        localStorage.setItem("scatterCurrentStockPrice", 6727.27);
+        localStorage.setItem("kalzexCurrentStockPrice", 7111.11);
+        localStorage.setItem("sonicosCurrentStockPrice", 7421.86);
+        localStorage.setItem("trancextCurrentStockPrice", 7512.81);
+        localStorage.setItem("stklrCurrentStockPrice", 7700.97);
+        localStorage.setItem("vipersecCurrentStockPrice", 10801.91);
+        localStorage.setItem("PLATCurrentStockPrice", 11721.88);
+        localStorage.setItem("infoneCurrentStockPrice", 12821.88);
+        localStorage.setItem("extankCurrentStockPrice", 13532.15);
+        localStorage.setItem("reinaccCurrentStockPrice", 15234.04);
 
         localStorage.setItem("lastSaveState", "No saves.");
         return true;
@@ -159,59 +167,65 @@ $(window).load(function () {
 
     $('#save').click(function () {
         if (typeof (Storage) !== "undefined") {
-            localStorage.setItem("moneyv05", money);
-            localStorage.setItem("threeBitBankv05", threeBitBank);
-            localStorage.setItem("fourBitBankv05", fourBitBank);
-            localStorage.setItem("sixBitBankv05", sixBitBank);
-            localStorage.setItem("russianSixBitBankv05", russianSixBitBank);
-            localStorage.setItem("eightBitBankv05", eightBitBank);
-            localStorage.setItem("twelveBitBankv05", twelveBitBank);
-            localStorage.setItem("sixteenBitBankv05", sixteenBitBank);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
-            localStorage.setItem("totalChunksv05", totalChunks);
+            localStorage.setItem("money", money);
+            localStorage.setItem("threeBitBank", threeBitBank);
+            localStorage.setItem("fourBitBank", fourBitBank);
+            localStorage.setItem("sixBitBank", sixBitBank);
+            localStorage.setItem("russianSixBitBank", russianSixBitBank);
+            localStorage.setItem("eightBitBank", eightBitBank);
+            localStorage.setItem("twelveBitBank", twelveBitBank);
+            localStorage.setItem("sixteenBitBank", sixteenBitBank);
+            localStorage.setItem("fourByteBank", fourByteBank);
+            localStorage.setItem("eightByteBank", eightByteBank);
+            localStorage.setItem("sixteenByteBank", sixteenByteBank);
+            localStorage.setItem("thirtytwoByteBank", thirtytwoByteBank);
+            localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
 
-            localStorage.setItem("ownedDelsecStocksv05", ownedDelsecStocks);
-            localStorage.setItem("ownedEntaqStocksv05", ownedEntaqStocks);
-            localStorage.setItem("ownedVentexStocksv05", ownedVentexStocks);
-            localStorage.setItem("ownedAstorStocksv05", ownedAstorStocks);
-            localStorage.setItem("ownedPopbotStocksv05", ownedPopbotStocks);
-            localStorage.setItem("ownedPannamStocksv05", ownedPannamStocks);
-            localStorage.setItem("ownedTRITStocksv05", ownedTRITStocks);
-            localStorage.setItem("ownedCANVStocksv05", ownedCANVStocks);
-            localStorage.setItem("ownedOSMStocksv05", ownedOSMStocks);
-            localStorage.setItem("ownedPALLADStocksv05", ownedPALLADStocks);
-            localStorage.setItem("ownedKELVStocksv05", ownedKELVStocks);
-            localStorage.setItem("ownedStuccorStocksv05", ownedStuccorStocks);
-            localStorage.setItem("ownedDelcredStocksv05", ownedDelcredStocks);
-            localStorage.setItem("ownedRustecStocksv05", ownedRustecStocks);
-            localStorage.setItem("ownedExxocredStocksv05", ownedExxocredStocks);
-            localStorage.setItem("ownedAUStocksv05", ownedAUStocks);
-            localStorage.setItem("ownedAceholdStocksv05", ownedAceholdStocks);
-            localStorage.setItem("ownedDelholdStocksv05", ownedDelholdStocks);
-            localStorage.setItem("ownedDIAMStocksv05", ownedDIAMStocks);
-            localStorage.setItem("ownedPentaccStocksv05", ownedPentaccStocks);
-            localStorage.setItem("ownedNoodleStocksv05", ownedNoodleStocks);
-            localStorage.setItem("ownedMegahardStocksv05", ownedMegahardStocks);
-            localStorage.setItem("ownedChimerasecStocksv05", ownedChimerasecStocks);
-            localStorage.setItem("ownedChimeraholdStocksv05", ownedChimeraholdStocks);
-            localStorage.setItem("ownedGriffonbankStocksv05", ownedGriffonbankStocks);
-            localStorage.setItem("ownedTurborusStocksv05", ownedTurborusStocks);
-            localStorage.setItem("ownedExodmptStocksv05", ownedExodmptStocks);
-            localStorage.setItem("ownedRamnetStocksv05", ownedRamnetStocks);
-            localStorage.setItem("ownedAlphacenStocksv05", ownedAlphacenStocks);
-            localStorage.setItem("ownedScatterStocksv05", ownedScatterStocks);
-            localStorage.setItem("ownedKalzexStocksv05", ownedKalzexStocks);
-            localStorage.setItem("ownedSonicosStocksv05", ownedSonicosStocks);
-            localStorage.setItem("ownedTrancextStocksv05", ownedTrancextStocks);
-            localStorage.setItem("ownedStklrStocksv05", ownedStklrStocks);
-            localStorage.setItem("ownedVipersecStocksv05", ownedVipersecStocks);
-            localStorage.setItem("ownedPLATStocksv05", ownedPLATStocks);
-            localStorage.setItem("ownedInfoneStocksv05", ownedInfoneStocks);
-            localStorage.setItem("ownedExtankStocksv05", ownedExtankStocks);
-            localStorage.setItem("ownedReinaccStocksv05", ownedReinaccStocks);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("totalChunks", totalChunks);
+
+            localStorage.setItem("ownedDelsecStocks", ownedDelsecStocks);
+            localStorage.setItem("ownedEntaqStocks", ownedEntaqStocks);
+            localStorage.setItem("ownedVentexStocks", ownedVentexStocks);
+            localStorage.setItem("ownedAstorStocks", ownedAstorStocks);
+            localStorage.setItem("ownedPopbotStocks", ownedPopbotStocks);
+            localStorage.setItem("ownedPannamStocks", ownedPannamStocks);
+            localStorage.setItem("ownedTRITStocks", ownedTRITStocks);
+            localStorage.setItem("ownedCANVStocks", ownedCANVStocks);
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
+            localStorage.setItem("ownedKELVStocks", ownedKELVStocks);
+            localStorage.setItem("ownedStuccorStocks", ownedStuccorStocks);
+            localStorage.setItem("ownedDelcredStocks", ownedDelcredStocks);
+            localStorage.setItem("ownedRustecStocks", ownedRustecStocks);
+            localStorage.setItem("ownedExxocredStocks", ownedExxocredStocks);
+            localStorage.setItem("ownedAUStocks", ownedAUStocks);
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+            localStorage.setItem("ownedDelholdStocks", ownedDelholdStocks);
+            localStorage.setItem("ownedDIAMStocks", ownedDIAMStocks);
+            localStorage.setItem("ownedPentaccStocks", ownedPentaccStocks);
+            localStorage.setItem("ownedNoodleStocks", ownedNoodleStocks);
+            localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
+            localStorage.setItem("ownedChimerasecStocks", ownedChimerasecStocks);
+            localStorage.setItem("ownedChimeraholdStocks", ownedChimeraholdStocks);
+            localStorage.setItem("ownedGriffonbankStocks", ownedGriffonbankStocks);
+            localStorage.setItem("ownedTurborusStocks", ownedTurborusStocks);
+            localStorage.setItem("ownedExodmptStocks", ownedExodmptStocks);
+            localStorage.setItem("ownedRamnetStocks", ownedRamnetStocks);
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
+            localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
+            localStorage.setItem("ownedKalzexStocks", ownedKalzexStocks);
+            localStorage.setItem("ownedSonicosStocks", ownedSonicosStocks);
+            localStorage.setItem("ownedTrancextStocks", ownedTrancextStocks);
+            localStorage.setItem("ownedStklrStocks", ownedStklrStocks);
+            localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
+            localStorage.setItem("ownedPLATStocks", ownedPLATStocks);
+            localStorage.setItem("ownedInfoneStocks", ownedInfoneStocks);
+            localStorage.setItem("ownedExtankStocks", ownedExtankStocks);
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
 
             if (userClass == "Warrior")
-                localStorage.setItem("warriorClicksv05", warriorClicks); //remember number of clicks to calculate power of warrior generate
+                localStorage.setItem("warriorClicks", warriorClicks); //remember number of clicks to calculate power of warrior generate
         }
         else {
             // Sorry! No Web Storage support..
@@ -227,7 +241,7 @@ $(window).load(function () {
     $('#btnWarriorAbility').click(function () {
         if (money >= 10000 && userClass == "None") {
             userClass = "Warrior";
-            localStorage.setItem("userClassv05", userClass);
+            localStorage.setItem("userClass", userClass);
             
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
@@ -258,7 +272,7 @@ $(window).load(function () {
     $('#btnWizardAbility').click(function () {
         if (money >= 10000 && userClass == "None") {
             userClass = "Wizard";
-            localStorage.setItem("userClassv05", userClass);
+            localStorage.setItem("userClass", userClass);
 
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);
@@ -289,7 +303,7 @@ $(window).load(function () {
     $('#btnRogueAbility').click(function () {
         if (money >= 10000 && userClass == "None") {
             userClass = "Rogue";
-            localStorage.setItem("userClassv05", userClass);
+            localStorage.setItem("userClass", userClass);
             sellDivider = 20;
 
             $('#classDisplay').html("<br /><br />Class: " + userClass);           
@@ -328,7 +342,7 @@ $(window).load(function () {
     $('#btnHealerAbility').click(function () {
         if (money >= 10000 && userClass == "None") {
             userClass = "Healer";
-            localStorage.setItem("userClassv05", userClass);
+            localStorage.setItem("userClass", userClass);
             
             $('#classDisplay').html("<br /><br />Class: " + userClass);
             $('#abilities').fadeOut(500);

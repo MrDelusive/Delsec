@@ -2,63 +2,68 @@ $(window).load(function () {
     setInterval(function () {
         // This is the autosave feature. Autosave every 15 seconds, don't know how much it could lag out from faster intervals
         if (typeof (Storage) !== "undefined") {
-            // Code for localStorage/sessionStorage.
-            localStorage.setItem("moneyv05", money);
-            localStorage.setItem("threeBitBankv05", threeBitBank);
-            localStorage.setItem("fourBitBankv05", fourBitBank);
-            localStorage.setItem("sixBitBankv05", sixBitBank);
-            localStorage.setItem("russianSixBitBankv05", russianSixBitBank);
-            localStorage.setItem("eightBitBankv05", eightBitBank);
-            localStorage.setItem("twelveBitBankv05", twelveBitBank);
-            localStorage.setItem("sixteenBitBankv05", sixteenBitBank);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
-            localStorage.setItem("totalChunksv05", totalChunks);
+            localStorage.setItem("money", money);
+            localStorage.setItem("threeBitBank", threeBitBank);
+            localStorage.setItem("fourBitBank", fourBitBank);
+            localStorage.setItem("sixBitBank", sixBitBank);
+            localStorage.setItem("russianSixBitBank", russianSixBitBank);
+            localStorage.setItem("eightBitBank", eightBitBank);
+            localStorage.setItem("twelveBitBank", twelveBitBank);
+            localStorage.setItem("sixteenBitBank", sixteenBitBank);
+            localStorage.setItem("fourByteBank", fourByteBank);
+            localStorage.setItem("eightByteBank", eightByteBank);
+            localStorage.setItem("sixteenByteBank", sixteenByteBank);
+            localStorage.setItem("thirtytwoByteBank", thirtytwoByteBank);
+            localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
+
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("totalChunks", totalChunks);
             
-            localStorage.setItem("ownedDelsecStocksv05", ownedDelsecStocks);
-            localStorage.setItem("ownedEntaqStocksv05", ownedEntaqStocks);
-            localStorage.setItem("ownedVentexStocksv05", ownedVentexStocks);
-            localStorage.setItem("ownedAstorStocksv05", ownedAstorStocks);
-            localStorage.setItem("ownedPopbotStocksv05", ownedPopbotStocks);
-            localStorage.setItem("ownedPannamStocksv05", ownedPannamStocks);
-            localStorage.setItem("ownedTRITStocksv05", ownedTRITStocks);
-            localStorage.setItem("ownedCANVStocksv05", ownedCANVStocks);
-            localStorage.setItem("ownedOSMStocksv05", ownedOSMStocks);
-            localStorage.setItem("ownedPALLADStocksv05", ownedPALLADStocks);
-            localStorage.setItem("ownedKELVStocksv05", ownedKELVStocks);
-            localStorage.setItem("ownedStuccorStocksv05", ownedStuccorStocks);
-            localStorage.setItem("ownedDelcredStocksv05", ownedDelcredStocks);
-            localStorage.setItem("ownedRustecStocksv05", ownedRustecStocks);
-            localStorage.setItem("ownedExxocredStocksv05", ownedExxocredStocks);
-            localStorage.setItem("ownedAUStocksv05", ownedAUStocks);
-            localStorage.setItem("ownedAceholdStocksv05", ownedAceholdStocks);
-            localStorage.setItem("ownedDelholdStocksv05", ownedDelholdStocks);
-            localStorage.setItem("ownedDIAMStocksv05", ownedDIAMStocks);
-            localStorage.setItem("ownedPentaccStocksv05", ownedPentaccStocks);
-            localStorage.setItem("ownedNoodleStocksv05", ownedNoodleStocks);
-            localStorage.setItem("ownedMegahardStocksv05", ownedMegahardStocks);
-            localStorage.setItem("ownedChimerasecStocksv05", ownedChimerasecStocks);
-            localStorage.setItem("ownedChimeraholdStocksv05", ownedChimeraholdStocks);
-            localStorage.setItem("ownedGriffonbankStocksv05", ownedGriffonbankStocks);
-            localStorage.setItem("ownedTurborusStocksv05", ownedTurborusStocks);
-            localStorage.setItem("ownedExodmptStocksv05", ownedExodmptStocks);
-            localStorage.setItem("ownedRamnetStocksv05", ownedRamnetStocks);
-            localStorage.setItem("ownedAlphacenStocksv05", ownedAlphacenStocks);
-            localStorage.setItem("ownedScatterStocksv05", ownedScatterStocks);
-            localStorage.setItem("ownedKalzexStocksv05", ownedKalzexStocks);
-            localStorage.setItem("ownedSonicosStocksv05", ownedSonicosStocks);
-            localStorage.setItem("ownedTrancextStocksv05", ownedTrancextStocks);
-            localStorage.setItem("ownedStklrStocksv05", ownedStklrStocks);
-            localStorage.setItem("ownedVipersecStocksv05", ownedVipersecStocks);
-            localStorage.setItem("ownedPLATStocksv05", ownedPLATStocks);
-            localStorage.setItem("ownedInfoneStocksv05", ownedInfoneStocks);
-            localStorage.setItem("ownedExtankStocksv05", ownedExtankStocks);
-            localStorage.setItem("ownedReinaccStocksv05", ownedReinaccStocks);
+            localStorage.setItem("ownedDelsecStocks", ownedDelsecStocks);
+            localStorage.setItem("ownedEntaqStocks", ownedEntaqStocks);
+            localStorage.setItem("ownedVentexStocks", ownedVentexStocks);
+            localStorage.setItem("ownedAstorStocks", ownedAstorStocks);
+            localStorage.setItem("ownedPopbotStocks", ownedPopbotStocks);
+            localStorage.setItem("ownedPannamStocks", ownedPannamStocks);
+            localStorage.setItem("ownedTRITStocks", ownedTRITStocks);
+            localStorage.setItem("ownedCANVStocks", ownedCANVStocks);
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
+            localStorage.setItem("ownedKELVStocks", ownedKELVStocks);
+            localStorage.setItem("ownedStuccorStocks", ownedStuccorStocks);
+            localStorage.setItem("ownedDelcredStocks", ownedDelcredStocks);
+            localStorage.setItem("ownedRustecStocks", ownedRustecStocks);
+            localStorage.setItem("ownedExxocredStocks", ownedExxocredStocks);
+            localStorage.setItem("ownedAUStocks", ownedAUStocks);
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+            localStorage.setItem("ownedDelholdStocks", ownedDelholdStocks);
+            localStorage.setItem("ownedDIAMStocks", ownedDIAMStocks);
+            localStorage.setItem("ownedPentaccStocks", ownedPentaccStocks);
+            localStorage.setItem("ownedNoodleStocks", ownedNoodleStocks);
+            localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
+            localStorage.setItem("ownedChimerasecStocks", ownedChimerasecStocks);
+            localStorage.setItem("ownedChimeraholdStocks", ownedChimeraholdStocks);
+            localStorage.setItem("ownedGriffonbankStocks", ownedGriffonbankStocks);
+            localStorage.setItem("ownedTurborusStocks", ownedTurborusStocks);
+            localStorage.setItem("ownedExodmptStocks", ownedExodmptStocks);
+            localStorage.setItem("ownedRamnetStocks", ownedRamnetStocks);
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
+            localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
+            localStorage.setItem("ownedKalzexStocks", ownedKalzexStocks);
+            localStorage.setItem("ownedSonicosStocks", ownedSonicosStocks);
+            localStorage.setItem("ownedTrancextStocks", ownedTrancextStocks);
+            localStorage.setItem("ownedStklrStocks", ownedStklrStocks);
+            localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
+            localStorage.setItem("ownedPLATStocks", ownedPLATStocks);
+            localStorage.setItem("ownedInfoneStocks", ownedInfoneStocks);
+            localStorage.setItem("ownedExtankStocks", ownedExtankStocks);
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
 
             $('#lblSaveState').html("Last Autosave: " + Date($.now));
             localStorage.setItem("lastSaveState", "Last Autosave: " + Date($.now));
 
             if (userClass == "Warrior")
-                localStorage.setItem("warriorClicksv05", warriorClicks); //remember number of clicks to calculate power of warrior generate
+                localStorage.setItem("warriorClicks", warriorClicks); //remember number of clicks to calculate power of warrior generate
         }
         else {
             // Sorry! No Web Storage support..

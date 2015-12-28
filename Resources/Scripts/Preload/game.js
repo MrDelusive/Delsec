@@ -1,70 +1,86 @@
-﻿//v05
+﻿//
 $(document).ready(function () {
     // Check null values, fixes new storage items/changes
-    if (localStorage.getItem("moneyv05") === null)
-        localStorage.setItem("moneyv05", money);
+    if (localStorage.getItem("money") === null)
+        localStorage.setItem("money", money);
 
-    if (localStorage.getItem("threeBitBankv05") === null)
-        localStorage.setItem("threeBitBankv05", threeBitBank);
-    if (localStorage.getItem("fourBitBankv05") === null)
-        localStorage.setItem("fourBitBankv05", fourBitBank);
-    if (localStorage.getItem("sixBitBankv05") === null)
-        localStorage.setItem("sixBitBankv05", sixBitBank);
-    if (localStorage.getItem("russianSixBitBankv05") === null)
-        localStorage.setItem("russianSixBitBankv05", russianSixBitBank);
-    if (localStorage.getItem("eightBitBankv05") === null)
-        localStorage.setItem("eightBitBankv05", eightBitBank);
-    if (localStorage.getItem("twelveBitBankv05") === null)
-        localStorage.setItem("twelveBitBankv05", twelveBitBank);
-    if (localStorage.getItem("sixteenBitBankv05") === null)
-        localStorage.setItem("sixteenBitBankv05", sixteenBitBank);
+    if (localStorage.getItem("threeBitBank") === null)
+        localStorage.setItem("threeBitBank", threeBitBank);
+    if (localStorage.getItem("fourBitBank") === null)
+        localStorage.setItem("fourBitBank", fourBitBank);
+    if (localStorage.getItem("sixBitBank") === null)
+        localStorage.setItem("sixBitBank", sixBitBank);
+    if (localStorage.getItem("russianSixBitBank") === null)
+        localStorage.setItem("russianSixBitBank", russianSixBitBank);
+    if (localStorage.getItem("eightBitBank") === null)
+        localStorage.setItem("eightBitBank", eightBitBank);
+    if (localStorage.getItem("twelveBitBank") === null)
+        localStorage.setItem("twelveBitBank", twelveBitBank);
+    if (localStorage.getItem("sixteenBitBank") === null)
+        localStorage.setItem("sixteenBitBank", sixteenBitBank);
+    if (localStorage.getItem("fourByteBank") === null)
+        localStorage.setItem("fourByteBank", fourByteBank);
+    if (localStorage.getItem("eightByteBank") === null)
+        localStorage.setItem("eightByteBank", eightByteBank);
+    if (localStorage.getItem("sixteenByteBank") === null)
+        localStorage.setItem("sixteenByteBank", sixteenByteBank);
+    if (localStorage.getItem("thirtytwoByteBank") === null)
+        localStorage.setItem("thirtytwoByteBank", thirtytwoByteBank);
+    if (localStorage.getItem("sixtyfourByteBank") === null)
+        localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
 
-    if (localStorage.getItem("numUnreadEmailsv05") === null)
-        localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+    if (localStorage.getItem("numUnreadEmails") === null)
+        localStorage.setItem("numUnreadEmails", numUnreadEmails);
 
-    if (localStorage.getItem("totalChunksv05") === null)
-        localStorage.setItem("totalChunksv05", totalChunks);
+    if (localStorage.getItem("totalChunks") === null)
+        localStorage.setItem("totalChunks", totalChunks);
    
 
-    if (localStorage.getItem("userClassv05") === null)
-        localStorage.setItem("userClassv05", userClass);           
-    if (localStorage.getItem("warriorClicksv05") === null)
-        localStorage.setItem("warriorClicksv05", warriorClicks);
+    if (localStorage.getItem("userClass") === null)
+        localStorage.setItem("userClass", userClass);           
+    if (localStorage.getItem("warriorClicks") === null)
+        localStorage.setItem("warriorClicks", warriorClicks);
 
     if (localStorage.getItem("lastSaveState") === null)
         localStorage.setItem("lastSaveState", "No Saves.");
 
     if (typeof (Storage) !== "undefined") {              
-        money = parseFloat(localStorage.getItem("moneyv05"));
+        money = parseFloat(localStorage.getItem("money"));
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblSaveState').html(localStorage.getItem("lastSaveState"));
                 
-        threeBitBank = parseInt(localStorage.getItem("threeBitBankv05"));               
-        fourBitBank = parseInt(localStorage.getItem("fourBitBankv05"));               
-        sixBitBank = parseInt(localStorage.getItem("sixBitBankv05"));             
-        russianSixBitBank = parseInt(localStorage.getItem("russianSixBitBankv05"));
-        eightBitBank = parseInt(localStorage.getItem("eightBitBankv05"));
-        twelveBitBank = parseInt(localStorage.getItem("twelveBitBankv05"));
-        sixteenBitBank = parseInt(localStorage.getItem("sixteenBitBankv05"));
+        threeBitBank = parseInt(localStorage.getItem("threeBitBank"));               
+        fourBitBank = parseInt(localStorage.getItem("fourBitBank"));               
+        sixBitBank = parseInt(localStorage.getItem("sixBitBank"));             
+        russianSixBitBank = parseInt(localStorage.getItem("russianSixBitBank"));
+        eightBitBank = parseInt(localStorage.getItem("eightBitBank"));
+        twelveBitBank = parseInt(localStorage.getItem("twelveBitBank"));
+        sixteenBitBank = parseInt(localStorage.getItem("sixteenBitBank"));
+        fourByteBank = parseInt(localStorage.getItem("fourByteBank"));
+        eightByteBank = parseInt(localStorage.getItem("eightByteBank"));
+        sixteenByteBank = parseInt(localStorage.getItem("sixteenByteBank"));
+        thirtytwoByteBank = parseInt(localStorage.getItem("thirtytwoByteBank"));
+        sixtyfourByteBank = parseInt(localStorage.getItem("sixtyfourByteBank"));
        
-        totalChunks = parseInt(localStorage.getItem("totalChunksv05"));
+        totalChunks = parseInt(localStorage.getItem("totalChunks"));
         
-        userClass = localStorage.getItem("userClassv05");
-        warriorClicks = parseInt(localStorage.getItem("warriorClicksv05"));
+        userClass = localStorage.getItem("userClass");
+        warriorClicks = parseInt(localStorage.getItem("warriorClicks"));
 
         // must do a string check because localStorage stores strings and not bools STUPID SHIT.
-        email1Viewed = localStorage.getItem("email1Viewedv05");
-        email2Viewed = localStorage.getItem("email2Viewedv05");
-        email3Viewed = localStorage.getItem("email3Viewedv05");
-        email4Viewed = localStorage.getItem("email4Viewedv05");
-        emailQuickScopeDisplayed = localStorage.getItem("emailQuickScopeDisplayedv05");
-        emailQuickScopeViewed = localStorage.getItem("emailQuickScopeViewedv05");      
-        emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewedv05");
-        emailDelsecStockDisplayed = localStorage.getItem("emailDelsecStockDisplayedv05");
+        email1Viewed = localStorage.getItem("email1Viewed");
+        email2Viewed = localStorage.getItem("email2Viewed");
+        email3Viewed = localStorage.getItem("email3Viewed");
+        email4Viewed = localStorage.getItem("email4Viewed");
+        emailQuickScopeDisplayed = localStorage.getItem("emailQuickScopeDisplayed");
+        emailQuickScopeViewed = localStorage.getItem("emailQuickScopeViewed");      
+        emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewed");
+        emailDelsecStockDisplayed = localStorage.getItem("emailDelsecStockDisplayed");
+        email4ByteViewed = localStorage.getItem("email4ByteViewed");
         
-        numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmailsv05"));
+        numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmails"));
         $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
     }
     else
@@ -132,6 +148,43 @@ $(document).ready(function () {
         $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
         $('#sixteenBitItemDisplay').show();
         $('#sixteenBitItemDisplay').html("Delsec16bit.exe :" + sixteenBitBank + " Processes Iterating through " + sixteenBitBank * 16384 + " Chunks of data per second.<br />");
+    }
+
+    if (fourByteBank > 0) {
+        $("#email4ByteHeading").show(1);
+        email4ByteDisplayed = "true";
+        $('#totalChunkDisplay').show();
+        $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+        $('#fourByteItemDisplay').show();
+        $('#fourByteItemDisplay').html("Delsec4byte.exe :" + fourByteBank + " Processes Iterating through " + fourByteBank * 32768 + " Chunks of data per second.<br />");
+    }
+
+    if (eightByteBank > 0) {
+        $('#totalChunkDisplay').show();
+        $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+        $('#eightByteItemDisplay').show();
+        $('#eightByteItemDisplay').html("Delsec8Byte.exe :" + eightByteBank + " Processes Iterating through " + eightByteBank * 65536 + " Chunks of data per second.<br />");
+    }
+
+    if (sixteenByteBank > 0) {
+        $('#totalChunkDisplay').show();
+        $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+        $('#sixteenByteItemDisplay').show();
+        $('#sixteenByteItemDisplay').html("Delsec16Byte.exe :" + sixteenByteBank + " Processes Iterating through " + sixteenByteBank * 131072 + " Chunks of data per second.<br />");
+    }
+
+    if (thirtytwoByteBank > 0) {
+        $('#totalChunkDisplay').show();
+        $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+        $('#thirtytwoByteItemDisplay').show();
+        $('#thirtytwoByteItemDisplay').html("Delsec32Byte.exe :" + thirtytwoByteBank + " Processes Iterating through " + thirtytwoByteBank * 262144 + " Chunks of data per second.<br />");
+    }
+
+    if (sixtyfourByteBank > 0) {
+        $('#totalChunkDisplay').show();
+        $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
+        $('#sixtyfourByteItemDisplay').show();
+        $('#sixtyfourByteItemDisplay').html("Delsec64Byte.exe :" + sixtyfourByteBank + " Processes Iterating through " + sixtyfourByteBank * 524288 + " Chunks of data per second.<br />");
     }
 
     if (emailQuickScopeDisplayed == "true")

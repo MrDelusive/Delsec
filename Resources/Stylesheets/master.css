@@ -110,7 +110,7 @@
     float:left;
     text-align: left;
     font-family:Calibri;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     height:1600px;
 }
 
@@ -224,8 +224,16 @@
 .hidden_Emails
 {
     display: none;     
-    background: white;  
-	padding-left:10px;
+    border-style:solid;
+    border-width: 1px;
+    border-color: #001b52;
+    background: black;
+    color: #50a8fc;
+    margin-left: 20px; 
+	padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-family: Consolas,monaco,monospace;
 }
 

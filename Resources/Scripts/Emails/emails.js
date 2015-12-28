@@ -4,8 +4,8 @@ $(window).load(function () {
         if (email1Viewed == "false") {
             numUnreadEmails--;
             email1Viewed = "true";
-            localStorage.setItem("email1Viewedv05", email1Viewed);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+            localStorage.setItem("email1Viewed", email1Viewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -16,8 +16,8 @@ $(window).load(function () {
         if (email2Viewed == "false") {
             numUnreadEmails--;
             email2Viewed = "true";
-            localStorage.setItem("email2Viewedv05", email2Viewed);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+            localStorage.setItem("email2Viewed", email2Viewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -27,8 +27,8 @@ $(window).load(function () {
         if (email3Viewed == "false") {
             numUnreadEmails--;
             email3Viewed = "true";
-            localStorage.setItem("email3Viewedv05", email3Viewed);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+            localStorage.setItem("email3Viewed", email3Viewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -38,8 +38,8 @@ $(window).load(function () {
         if (email4Viewed == "false") {
             numUnreadEmails--;
             email4Viewed = "true";
-            localStorage.setItem("email4Viewedv05", email4Viewed);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+            localStorage.setItem("email4Viewed", email4Viewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -49,8 +49,8 @@ $(window).load(function () {
         if (emailQuickScopeViewed == "false") {
             numUnreadEmails--;
             emailQuickScopeViewed = "true";
-            localStorage.setItem("emailQuickScopeViewedv05", emailQuickScopeViewed);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+            localStorage.setItem("emailQuickScopeViewed", emailQuickScopeViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
@@ -61,8 +61,19 @@ $(window).load(function () {
         if (emailDelsecStockViewed == "false") {
             numUnreadEmails--;
             emailDelsecStockViewed = "true";
-            localStorage.setItem("emailDelsecStockViewedv05", emailDelsecStockViewed);
-            localStorage.setItem("numUnreadEmailsv05", numUnreadEmails);
+            localStorage.setItem("emailDelsecStockViewed", emailDelsecStockViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+        }
+        return false;
+    });
+    $('#btnEmail4ByteView').click(function () {
+        $("#email4Byte").toggle();
+        if (email4ByteViewed == "false") {
+            numUnreadEmails--;
+            email4ByteViewed = "true";
+            localStorage.setItem("email4ByteViewed", email4ByteViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
         }
         return false;
