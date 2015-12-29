@@ -1,6 +1,11 @@
 ﻿$(window).load(function () {
 
     setInterval(function () {
+        $('#btnIncrement').prop('disabled', false);
+        $('#btnWarriorIncrement').prop('disabled', false);
+        $('#btnHealerIncrement').prop('disabled', false);
+        $('#btnRogueIncrement').prop('disabled', false);
+
         $('#btnBuy3BitCrawler').prop('disabled', true);
         $('#btnBuy4BitCrawler').prop('disabled', true);
         $('#btnBuy6BitCrawler').prop('disabled', true);

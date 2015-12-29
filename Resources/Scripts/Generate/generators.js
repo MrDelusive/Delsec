@@ -1,8 +1,6 @@
-$(window).load(function () {
-
+$(window).load(function () {    
     // the default one
-    $('#btnIncrement').click(function () {
-            
+    $('#btnIncrement').click(function () {        
         increment = Math.round(100 * Math.random() / 12.5) / 100;
         money += increment;
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

@@ -1,5 +1,4 @@
-﻿//
-$(document).ready(function () {
+﻿$(window).load(function () {
     // Check null values, fixes new storage items/changes
     if (localStorage.getItem("money") === null)
         localStorage.setItem("money", money);
@@ -192,6 +191,27 @@ $(document).ready(function () {
 
     if (emailDelsecStockDisplayed == "true")
         $("#emailDelsecStockHeading").show(1);
+
+    if (email1Viewed == "true")
+        $("#btnEmail1View").html("Delsec AutoPostBot - autoGen5184828 (Viewed)");
+
+    if (email2Viewed == "true")
+        $("#btnEmail2View").html("Delsec Team - Thank you (Viewed)");
+
+    if (email3Viewed == "true")
+        $('#btnEmail3View').html("Tsar of Russia - Thank you (Viewed)");
+
+    if (email4Viewed == "true")
+        $('#btnEmail4View').html("Delsec Team - Growing (Viewed)");
+
+    if (emailQuickScopeViewed == "true")
+        $('#btnEmailQuickScopeView').html("XxX420N0-SK0PZXxX - Fanks (Viewed)");
+
+    if (emailDelsecStockViewed == "true")
+        $('#btnEmailDelsecStockView').html("Delsec Team - Stocks (Viewed)");
+
+    if (email4ByteViewed == "true")
+        $('#btnEmail4ByteView').html("Delsec Team - The Byte Crawlers (Viewed)");
 
     $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
 

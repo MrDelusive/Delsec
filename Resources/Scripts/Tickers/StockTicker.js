@@ -2,7 +2,7 @@
     var goFast = 0;
     setInterval(function () {
         // DELSEC //
-        delsecIncrement = totalChunks / 500 + Math.round(100 * Math.random() / 10) / 100;
+        delsecIncrement = totalChunks / 5000 + Math.round(100 * Math.random() / 10) / 100;
         if (delsecIncrement > 0)
             $("#delsecChangeImg").attr("src", "Resources/Img/up.png");
         else if (delsecIncrement < 0)
@@ -212,7 +212,7 @@
         // delcred END //
 
         // rustec //
-        rustecIncrement = Math.round(100 * Math.random() * 10 + russianSixBitBank / 5) / 100 - 5.5;
+        rustecIncrement = Math.round(100 * Math.random() * 4 + russianSixBitBank / 5) / 100 - 2;
         if (rustecIncrement > 0)
             $("#rustecChangeImg").attr("src", "Resources/Img/up.png");
         else if (rustecIncrement < 0)

@@ -1,13 +1,20 @@
 ﻿// on enter pressed
-$(document).keyup(function (e) {
+$(document).keydown(function (e) {   
     if (e.which == 13) {
-        $('#mainGameWindow').append('V:/clientData/5184828>' + $('#txtSubmit').val() + '<br />');
+        $('#btnIncrement').prop('disabled', true);
+        $('#btnWarriorIncrement').prop('disabled', true);
+        $('#btnHealerIncrement').prop('disabled', true);
+        $('#btnRogueIncrement').prop('disabled', true);
 
-        var input = $('#txtSubmit').val();
+        $('#mainGameWindow').append('V:/clientData/5184828>' + $('#txtSubmit').val().replace(/</g, "&lt;").replace(/>/g, "&gt;") + '<br />');
+        var input = $('#txtSubmit').val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
         if (input == "test")
             $('#mainGameWindow').append('Test string accepted.<br />');
         else if (input == "help")
-            $('#mainGameWindow').append('Common commands<br /><br />help<br />test<br />test<br />test<br />test<br />test<br />');
+            $('#mainGameWindow').append('Common commands<br /><br />help<br />about<br />test<br />test<br />test<br />test<br />');     
+        else if (input == "about")
+            $('#mainGameWindow').append('Delsec created by Luke Parisi<br />I hope you enjoy the game!');
+
         else if (input == "dsfa") {
             money += 1000;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -29,10 +36,12 @@ $(document).keyup(function (e) {
 
 
 
-        else
+        else          
             $('#mainGameWindow').append('Entry ' + input + ' is not recognised as an internal or external command.<br />');
         $('#txtSubmit').val("");
         $('#txtSubmit').focus();
+
+        
 
         //keep the gameWindow always scrolled to bottom.
         $('#mainGameWindow').scrollTop($('#mainGameWindow')[0].scrollHeight);

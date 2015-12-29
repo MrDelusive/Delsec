@@ -7,6 +7,7 @@ $(window).load(function () {
             localStorage.setItem("email1Viewed", email1Viewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $("#btnEmail1View").html("Delsec AutoPostBot - autoGen5184828 (Viewed)");
         }
         return false;
     });
@@ -19,6 +20,7 @@ $(window).load(function () {
             localStorage.setItem("email2Viewed", email2Viewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $("#btnEmail2View").html("Delsec Team - Thank you (Viewed)");
         }
         return false;
     });
@@ -30,6 +32,7 @@ $(window).load(function () {
             localStorage.setItem("email3Viewed", email3Viewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmail3View').html("Tsar of Russia - Thank you (Viewed)");
         }
         return false;
     });
@@ -41,6 +44,7 @@ $(window).load(function () {
             localStorage.setItem("email4Viewed", email4Viewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmail4View').html("Delsec Team - Growing (Viewed)");
         }
         return false;
     });
@@ -52,6 +56,7 @@ $(window).load(function () {
             localStorage.setItem("emailQuickScopeViewed", emailQuickScopeViewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailQuickScopeView').html("XxX420N0-SK0PZXxX - Fanks (Viewed)");
         }
         return false;
     });
@@ -64,6 +69,7 @@ $(window).load(function () {
             localStorage.setItem("emailDelsecStockViewed", emailDelsecStockViewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailDelsecStockView').html("Delsec Team - Stocks (Viewed)");
         }
         return false;
     });
@@ -75,6 +81,7 @@ $(window).load(function () {
             localStorage.setItem("email4ByteViewed", email4ByteViewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmail4ByteView').html("Delsec Team - The Byte Crawlers (Viewed)");
         }
         return false;
     });
