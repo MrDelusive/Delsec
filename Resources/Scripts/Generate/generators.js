@@ -15,7 +15,6 @@ $(window).load(function () {
             $("#btnInvestments").fadeIn(500);
             $("#btnStockMarket").fadeIn(500);
             $("#btnAbilities").fadeIn(500);
-            //shopDisplayed = true;
         }
         return false;
     });
@@ -39,9 +38,11 @@ $(window).load(function () {
         return false;
     });
 
-    // generates interest based on current money 0.1% of total
+    // generates interest based on current money 0.01% of total
     $('#btnHealerIncrement').click(function () {
-        increment = Math.round(100 * money / 1000) / 100;
+        increment = Math.round(100 * money / 10000) / 100;
+        if (increment > 500)
+            increment = 500;
         money += increment;
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

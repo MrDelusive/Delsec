@@ -511,6 +511,7 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 	border-bottom-left-radius:0px;
 	border:1px solid #dcdcdc;
 	display:inline-block;
+    cursor: pointer;
 	color:#777777;
 	font-family:Consolas,monaco,monospace;
 	font-size:15px;

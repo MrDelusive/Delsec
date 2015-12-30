@@ -192,26 +192,40 @@
     if (emailDelsecStockDisplayed == "true")
         $("#emailDelsecStockHeading").show(1);
 
-    if (email1Viewed == "true")
+    if (email1Viewed == "true") {
         $("#btnEmail1View").html("Delsec AutoPostBot - autoGen5184828 (Viewed)");
+        $("#btnEmail1View").css("background", "#CCC");
+    }
 
-    if (email2Viewed == "true")
+    if (email2Viewed == "true") {
         $("#btnEmail2View").html("Delsec Team - Thank you (Viewed)");
+        $("#btnEmail2View").css("background", "#CCC");
+    }
 
-    if (email3Viewed == "true")
+    if (email3Viewed == "true") {
         $('#btnEmail3View').html("Tsar of Russia - Thank you (Viewed)");
+        $("#btnEmail3View").css("background", "#CCC");
+    }
 
-    if (email4Viewed == "true")
+    if (email4Viewed == "true") {
         $('#btnEmail4View').html("Delsec Team - Growing (Viewed)");
+        $("#btnEmail4View").css("background", "#CCC");
+    }
 
-    if (emailQuickScopeViewed == "true")
+    if (emailQuickScopeViewed == "true") {
         $('#btnEmailQuickScopeView').html("XxX420N0-SK0PZXxX - Fanks (Viewed)");
+        $('#btnEmailQuickScopeView').css("background", "#CCC");
+    }
 
-    if (emailDelsecStockViewed == "true")
+    if (emailDelsecStockViewed == "true") {
         $('#btnEmailDelsecStockView').html("Delsec Team - Stocks (Viewed)");
+        $('#btnEmailDelsecStockView').css("background", "#CCC");
+    }
 
-    if (email4ByteViewed == "true")
+    if (email4ByteViewed == "true") {
         $('#btnEmail4ByteView').html("Delsec Team - The Byte Crawlers (Viewed)");
+        $('#btnEmail4ByteView').css("background", "#CCC");
+    }
 
     $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
 

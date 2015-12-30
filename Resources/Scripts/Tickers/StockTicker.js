@@ -1,5 +1,14 @@
 ﻿$(window).load(function () {
     var goFast = 0;
+    var timer = 30;
+
+    setInterval(function () {
+        if (timer > 0) {
+            timer--;
+            $("#stockTimerDisplay").html("Next stock update in: " + timer + " sec.");
+        }
+    }, 1000);
+
     setInterval(function () {
         // DELSEC //
         delsecIncrement = totalChunks / 5000 + Math.round(100 * Math.random() / 10) / 100;
@@ -627,6 +636,7 @@
         $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2));
         localStorage.setItem("reinaccCurrentStockPrice", reinaccCurrentStockPrice);
         // reinacc END //
-    }, 30000);
+        timer = 30;
+    }, 30000);   
 
 })(jQuery);
