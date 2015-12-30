@@ -4,6 +4,7 @@
 	padding-top: 10px;
 	float: left;
     height: 50px;
+    background: rgba(0,0,0,0.7);
 }
 .investResultDiv {
 	width: 395px;

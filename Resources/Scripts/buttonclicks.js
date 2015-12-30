@@ -251,9 +251,11 @@ $(window).load(function () {
             $('#warriorAbilities').delay(500);
             $('#btnWarriorAbilities').delay(500);
             $("#warriorGenerate").delay(500);
+            $("#btnPowerGenerators").delay(500);
 
             $('#warriorAbilities').fadeIn(500);
             $('#btnWarriorAbilities').fadeIn(500);
+            $("#btnPowerGenerators").fadeIn(500);
             $("#warriorGenerate").fadeIn(500);
             money -= 10000;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

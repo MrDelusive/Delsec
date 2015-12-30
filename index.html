@@ -240,37 +240,46 @@
 
             <!-- INVESTMENTS -->
             <div id="investments" class="hidden_Divs">
-                <div id="wikiInvest" class="investDiv">
-                    Invest $2.00 In Zikipedia <button id="btnInvestWiki" class="stockButton">Invest - 10 sec CD</button> 
-                </div>
-                <div id="wikiInvestResult" class="investResultDiv" ></div>                
+                <div id="shortTermInvestments">    
+                    <h1>SHORT TERM INVESTMENTS</h1>
+                    <div id="wikiInvest" class="investDiv">
+                        Invest $2.00 In Zikipedia <button id="btnInvestWiki" class="stockButton">Invest - 10 sec CD</button> 
+                    </div>
+                    <div id="wikiInvestResult" class="investResultDiv" ></div>                
                 
-                <div id="switchInvest" class="investDiv">
-                    Invest $5.00 In your favourite Switch streamer <button id="btnInvestTwitch" class="stockButton">Invest - 10 sec CD</button> 
-                </div>
-                <div id="twitchInvestResult" class="investResultDiv"></div>         
+                    <div id="switchInvest" class="investDiv">
+                        Invest $5.00 In your favourite Switch streamer <button id="btnInvestTwitch" class="stockButton">Invest - 10 sec CD</button> 
+                    </div>
+                    <div id="twitchInvestResult" class="investResultDiv"></div>         
                 
-                <div id="punchInvest" class="investDiv">
-                    Invest $10.00 In a PunchStarter Startup <button id="btnInvestPunch" class="stockButton">Invest - 15 sec CD</button> 
-                </div>
-                <div id="punchInvestResult" class="investResultDiv"></div>   
+                    <div id="punchInvest" class="investDiv">
+                        Invest $10.00 In a PunchStarter Startup <button id="btnInvestPunch" class="stockButton">Invest - 15 sec CD</button> 
+                    </div>
+                    <div id="punchInvestResult" class="investResultDiv"></div>   
                 
-                <div id="gameInvest" class="investDiv">
-                    Invest $25.00 In a Game Under Development <button id="btnInvestGame" class="stockButton">Invest - 15 sec CD</button> 
-                </div>
-                <div id="gameInvestResult" class="investResultDiv"></div> 
+                    <div id="gameInvest" class="investDiv">
+                        Invest $25.00 In a Game Under Development <button id="btnInvestGame" class="stockButton">Invest - 15 sec CD</button> 
+                    </div>
+                    <div id="gameInvestResult" class="investResultDiv"></div> 
                 
-                <div id="pokerInvest" class="investDiv">
-                    Invest $100.00 In your friends poker habits <button id="btnInvestPoker" class="stockButton">Invest - 20 sec CD</button> 
-                </div>
-                <div id="pokerInvestResult" class="investResultDiv"></div>  
+                    <div id="pokerInvest" class="investDiv">
+                        Invest $100.00 In your friends poker habits <button id="btnInvestPoker" class="stockButton">Invest - 20 sec CD</button> 
+                    </div>
+                    <div id="pokerInvestResult" class="investResultDiv"></div>  
                 
-                <div id="rentalInvest" class="investDiv">
-                    Invest $500.00 In a rental motorbike <button id="btnInvestRental" class="stockButton">Invest - 30 sec CD</button> 
-                </div>
-                <div id="rentalInvestResult" class="investResultDiv"></div>            
+                    <div id="rentalInvest" class="investDiv">
+                        Invest $500.00 In a rental motorbike <button id="btnInvestRental" class="stockButton">Invest - 30 sec CD</button> 
+                    </div>
+                    <div id="rentalInvestResult" class="investResultDiv"></div>     
+                </div>  
+                <div id="longTermInvestments"> 
+                    <h1>LONG TERM INVESTMENTS</h1>
+                    <div id="goldbotInvest" class="investDiv">  
+                        Invest $3.00 In a Gold Farming Bot <button id="btnInvestGoldbot" class="stockButton">Invest - 2 min CD</button> 
+                    </div>  
+                    <div id="goldbotInvestResult" class="investResultDiv"></div>   
+                </div>     
             </div>
-
 
             <!-- STOCK MARKET -->
             <div id="stocks" class="hidden_Divs">
@@ -296,7 +305,7 @@
                                 <button id="btnSellDelsecStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellDelsecStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="delsecChange"><img alt="Change" id="delsecChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="delsecChange">0.00</div></td>
                             <td><div id="delsecOwnedStocksDisplay"></div></td>
                             <td><div id="delsecSellEstimate"></div></td>
                         </tr>
@@ -315,7 +324,7 @@
                                 <button id="btnSellEntaqStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellEntaqStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="entaqChange"><img alt="Change" id="entaqChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="entaqChange">0.00</div></td>
                             <td><div id="entaqOwnedStocksDisplay"></div></td>
                             <td><div id="entaqSellEstimate"></div></td>
                         </tr>
@@ -334,7 +343,7 @@
                                 <button id="btnSellVentexStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellVentexStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="ventexChange"><img alt="Change" id="ventexChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="ventexChange">0.00</div></td>
                             <td><div id="ventexOwnedStocksDisplay"></div></td>
                             <td><div id="ventexSellEstimate"></div></td>
                         </tr>
@@ -353,7 +362,7 @@
                                 <button id="btnSellAstorStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellAstorStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="astorChange"><img alt="Change" id="astorChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="astorChange">0.00</div></td>
                             <td><div id="astorOwnedStocksDisplay"></div></td>
                             <td><div id="astorSellEstimate"></div></td>
                         </tr>
@@ -372,7 +381,7 @@
                                 <button id="btnSellPopbotStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellPopbotStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="popbotChange"><img alt="Change" id="popbotChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="popbotChange">0.00</div></td>
                             <td><div id="popbotOwnedStocksDisplay"></div></td>
                             <td><div id="popbotSellEstimate"></div></td>
                         </tr>
@@ -391,7 +400,7 @@
                                 <button id="btnSellPannamStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellPannamStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="pannamChange"><img alt="Change" id="pannamChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="pannamChange">0.00</div></td>
                             <td><div id="pannamOwnedStocksDisplay"></div></td>
                             <td><div id="pannamSellEstimate"></div></td>
                         </tr>
@@ -410,7 +419,7 @@
                                 <button id="btnSellTRITStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellTRITStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="TRITChange"><img alt="Change" id="TRITChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="TRITChange">0.00</div></td>
                             <td><div id="TRITOwnedStocksDisplay"></div></td>
                             <td><div id="TRITSellEstimate"></div></td>
                         </tr>
@@ -429,7 +438,7 @@
                                 <button id="btnSellCANVStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellCANVStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="CANVChange"><img alt="Change" id="CANVChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="CANVChange">0.00</div></td>
                             <td><div id="CANVOwnedStocksDisplay"></div></td>
                             <td><div id="CANVSellEstimate"></div></td>
                         </tr>
@@ -448,7 +457,7 @@
                                 <button id="btnSellOSMStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellOSMStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="OSMChange"><img alt="Change" id="OSMChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="OSMChange">0.00</div></td>
                             <td><div id="OSMOwnedStocksDisplay"></div></td>
                             <td><div id="OSMSellEstimate"></div></td>
                         </tr>
@@ -467,7 +476,7 @@
                                 <button id="btnSellPALLADStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellPALLADStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="PALLADChange"><img alt="Change" id="PALLADChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="PALLADChange">0.00</div></td>
                             <td><div id="PALLADOwnedStocksDisplay"></div></td>
                             <td><div id="PALLADSellEstimate"></div></td>
                         </tr>
@@ -486,7 +495,7 @@
                                 <button id="btnSellKELVStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellKELVStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="KELVChange"><img alt="Change" id="KELVChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="KELVChange">0.00</div></td>
                             <td><div id="KELVOwnedStocksDisplay"></div></td>
                             <td><div id="KELVSellEstimate"></div></td>
                         </tr>
@@ -505,7 +514,7 @@
                                 <button id="btnSellStuccorStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellStuccorStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="stuccorChange"><img alt="Change" id="stuccorChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="stuccorChange">0.00</div></td>
                             <td><div id="stuccorOwnedStocksDisplay"></div></td>
                             <td><div id="stuccorSellEstimate"></div></td>
                         </tr>
@@ -524,7 +533,7 @@
                                 <button id="btnSellDelcredStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellDelcredStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="delcredChange"><img alt="Change" id="delcredChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="delcredChange">0.00</div></td>
                             <td><div id="delcredOwnedStocksDisplay"></div></td>
                             <td><div id="delcredSellEstimate"></div></td>
                         </tr>
@@ -543,7 +552,7 @@
                                 <button id="btnSellRustecStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellRustecStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="rustecChange"><img alt="Change" id="rustecChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="rustecChange">0.00</div></td>
                             <td><div id="rustecOwnedStocksDisplay"></div></td>
                             <td><div id="rustecSellEstimate"></div></td>
                         </tr>
@@ -562,7 +571,7 @@
                                 <button id="btnSellExxocredStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellExxocredStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="exxocredChange"><img alt="Change" id="exxocredChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="exxocredChange">0.00</div></td>
                             <td><div id="exxocredOwnedStocksDisplay"></div></td>
                             <td><div id="exxocredSellEstimate"></div></td>
                         </tr>
@@ -581,7 +590,7 @@
                                 <button id="btnSellAUStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellAUStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="AUChange"><img alt="Change" id="AUChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="AUChange">0.00</div></td>
                             <td><div id="AUOwnedStocksDisplay"></div></td>
                             <td><div id="AUSellEstimate"></div></td>
                         </tr>
@@ -600,7 +609,7 @@
                                 <button id="btnSellAceholdStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellAceholdStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="aceholdChange"><img alt="Change" id="aceholdChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="aceholdChange">0.00</div></td>
                             <td><div id="aceholdOwnedStocksDisplay"></div></td>
                             <td><div id="aceholdSellEstimate"></div></td>
                         </tr>
@@ -619,7 +628,7 @@
                                 <button id="btnSellDelholdStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellDelholdStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="delholdChange"><img alt="Change" id="delholdChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="delholdChange">0.00</div></td>
                             <td><div id="delholdOwnedStocksDisplay"></div></td>
                             <td><div id="delholdSellEstimate"></div></td>
                         </tr>
@@ -638,7 +647,7 @@
                                 <button id="btnSellDIAMStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellDIAMStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="DIAMChange"><img alt="Change" id="DIAMChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="DIAMChange">0.00</div></td>
                             <td><div id="DIAMOwnedStocksDisplay"></div></td>
                             <td><div id="DIAMSellEstimate"></div></td>
                         </tr>
@@ -657,7 +666,7 @@
                                 <button id="btnSellPentaccStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellPentaccStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="pentaccChange"><img alt="Change" id="pentaccChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="pentaccChange">0.00</div></td>
                             <td><div id="pentaccOwnedStocksDisplay"></div></td>
                             <td><div id="pentaccSellEstimate"></div></td>
                         </tr>
@@ -676,7 +685,7 @@
                                 <button id="btnSellNoodleStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellNoodleStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="noodleChange"><img alt="Change" id="noodleChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="noodleChange">0.00</div></td>
                             <td><div id="noodleOwnedStocksDisplay"></div></td>
                             <td><div id="noodleSellEstimate"></div></td>
                         </tr>
@@ -695,7 +704,7 @@
                                 <button id="btnSellMegahardStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellMegahardStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="megahardChange"><img alt="Change" id="megahardChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="megahardChange">0.00</div></td>
                             <td><div id="megahardOwnedStocksDisplay"></div></td>
                             <td><div id="megahardSellEstimate"></div></td>
                         </tr>
@@ -714,7 +723,7 @@
                                 <button id="btnSellChimerasecStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellChimerasecStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="chimerasecChange"><img alt="Change" id="chimerasecChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="chimerasecChange">0.00</div></td>
                             <td><div id="chimerasecOwnedStocksDisplay"></div></td>
                             <td><div id="chimerasecSellEstimate"></div></td>
                         </tr>
@@ -733,7 +742,7 @@
                                 <button id="btnSellChimeraholdStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellChimeraholdStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="chimeraholdChange"><img alt="Change" id="chimeraholdChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="chimeraholdChange">0.00</div></td>
                             <td><div id="chimeraholdOwnedStocksDisplay"></div></td>
                             <td><div id="chimeraholdSellEstimate"></div></td>
                         </tr>
@@ -752,7 +761,7 @@
                                 <button id="btnSellGriffonbankStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellGriffonbankStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="griffonbankChange"><img alt="Change" id="griffonbankChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="griffonbankChange">0.00</div></td>
                             <td><div id="griffonbankOwnedStocksDisplay"></div></td>
                             <td><div id="griffonbankSellEstimate"></div></td>
                         </tr>
@@ -771,7 +780,7 @@
                                 <button id="btnSellTurborusStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellTurborusStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="turborusChange"><img alt="Change" id="turborusChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="turborusChange">0.00</div></td>
                             <td><div id="turborusOwnedStocksDisplay"></div></td>
                             <td><div id="turborusSellEstimate"></div></td>
                         </tr>
@@ -790,7 +799,7 @@
                                 <button id="btnSellExodmptStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellExodmptStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="exodmptChange"><img alt="Change" id="exodmptChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="exodmptChange">0.00</div></td>
                             <td><div id="exodmptOwnedStocksDisplay"></div></td>
                             <td><div id="exodmptSellEstimate"></div></td>
                         </tr>
@@ -809,7 +818,7 @@
                                 <button id="btnSellRamnetStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellRamnetStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="ramnetChange"><img alt="Change" id="ramnetChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="ramnetChange">0.00</div></td>
                             <td><div id="ramnetOwnedStocksDisplay"></div></td>
                             <td><div id="ramnetSellEstimate"></div></td>
                         </tr>
@@ -828,7 +837,7 @@
                                 <button id="btnSellAlphacenStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellAlphacenStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="alphacenChange"><img alt="Change" id="alphacenChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="alphacenChange">0.00</div></td>
                             <td><div id="alphacenOwnedStocksDisplay"></div></td>
                             <td><div id="alphacenSellEstimate"></div></td>
                         </tr>
@@ -847,7 +856,7 @@
                                 <button id="btnSellScatterStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellScatterStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="scatterChange"><img alt="Change" id="scatterChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="scatterChange">0.00</div></td>
                             <td><div id="scatterOwnedStocksDisplay"></div></td>
                             <td><div id="scatterSellEstimate"></div></td>
                         </tr>
@@ -866,7 +875,7 @@
                                 <button id="btnSellKalzexStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellKalzexStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="kalzexChange"><img alt="Change" id="kalzexChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="kalzexChange">0.00</div></td>
                             <td><div id="kalzexOwnedStocksDisplay"></div></td>
                             <td><div id="kalzexSellEstimate"></div></td>
                         </tr>
@@ -885,7 +894,7 @@
                                 <button id="btnSellSonicosStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellSonicosStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="sonicosChange"><img alt="Change" id="sonicosChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="sonicosChange">0.00</div></td>
                             <td><div id="sonicosOwnedStocksDisplay"></div></td>
                             <td><div id="sonicosSellEstimate"></div></td>
                         </tr>
@@ -904,7 +913,7 @@
                                 <button id="btnSellTrancextStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellTrancextStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="trancextChange"><img alt="Change" id="trancextChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="trancextChange">0.00</div></td>
                             <td><div id="trancextOwnedStocksDisplay"></div></td>
                             <td><div id="trancextSellEstimate"></div></td>
                         </tr>
@@ -923,7 +932,7 @@
                                 <button id="btnSellStklrStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellStklrStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="stklrChange"><img alt="Change" id="stklrChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="stklrChange">0.00</div></td>
                             <td><div id="stklrOwnedStocksDisplay"></div></td>
                             <td><div id="stklrSellEstimate"></div></td>
                         </tr>
@@ -942,7 +951,7 @@
                                 <button id="btnSellVipersecStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellVipersecStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="vipersecChange"><img alt="Change" id="vipersecChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="vipersecChange">0.00</div></td>
                             <td><div id="vipersecOwnedStocksDisplay"></div></td>
                             <td><div id="vipersecSellEstimate"></div></td>
                         </tr>
@@ -961,7 +970,7 @@
                                 <button id="btnSellPLATStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellPLATStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="PLATChange"><img alt="Change" id="PLATChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="PLATChange">0.00</div></td>
                             <td><div id="PLATOwnedStocksDisplay"></div></td>
                             <td><div id="PLATSellEstimate"></div></td>
                         </tr>
@@ -980,7 +989,7 @@
                                 <button id="btnSellInfoneStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellInfoneStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="infoneChange"><img alt="Change" id="infoneChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="infoneChange">0.00</div></td>
                             <td><div id="infoneOwnedStocksDisplay"></div></td>
                             <td><div id="infoneSellEstimate"></div></td>
                         </tr>
@@ -999,7 +1008,7 @@
                                 <button id="btnSellExtankStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellExtankStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="extankChange"><img alt="Change" id="extankChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="extankChange">0.00</div></td>
                             <td><div id="extankOwnedStocksDisplay"></div></td>
                             <td><div id="extankSellEstimate"></div></td>
                         </tr>
@@ -1018,7 +1027,7 @@
                                 <button id="btnSellReinaccStocks100" class="stockButton">Sell 100</button>
                                 <button id="btnSellReinaccStocksAll" class="stockButton">Sell All</button> 
                             </td>
-                            <td><div id="reinaccChange"><img alt="Change" id="reinaccChangeImg" src="Resources/Img/even.png" /></div></td>
+                            <td><div id="reinaccChange">0.00</div></td>
                             <td><div id="reinaccOwnedStocksDisplay"></div></td>
                             <td><div id="reinaccSellEstimate"></div></td>
                         </tr>
@@ -1026,6 +1035,7 @@
                 </table>        
                  
             </div>
+
             <div id="abilities" class="hidden_Divs">
                 <div id="abilityHeading">Spend $10,000 to Master a path. Choose wisely! </div>
                 <div id="abilityErrorHeading"></div>
@@ -1133,7 +1143,8 @@
     <script src="Resources/Scripts/Stocks/Extank.js"></script>
     <script src="Resources/Scripts/Stocks/Reinacc.js"></script>
 
-    <script src="Resources/Scripts/Investment/investment.js"></script>
+    <script src="Resources/Scripts/Investment/ShortTermInvestments.js"></script>
+    <script src="Resources/Scripts/Investment/LongTermInvestments.js"></script>
 
     <script src="Resources/Scripts/Console/Console.js"></script>
 

@@ -3,8 +3,16 @@ $(window).load(function () {
     //initially disabled for some reason.
     $('#btnInvestWiki').prop('disabled', false);
     $('#btnInvestWiki').click(function () {
-        if (money >= 2) {                    
-            $('#wikiInvestResult').html("Investing...");
+        if (money >= 2) {
+            var timer = 10;
+            $('#wikiInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 0) {
+                    timer--;
+                    $('#wikiInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
+            
             var investAmt = 2;
             money -= investAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -100,7 +108,14 @@ $(window).load(function () {
                 localStorage.setItem("emailQuickScopeDisplayed", emailQuickScopeDisplayed);
                 $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
             }
-            $('#twitchInvestResult').html("Investing...");
+            var timer = 10;
+            $('#twitchInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 0) {
+                    timer--;
+                    $('#twitchInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
             var investAmt = 5;
             money -= investAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -186,7 +201,14 @@ $(window).load(function () {
     $('#btnInvestPunch').prop('disabled', false);
     $('#btnInvestPunch').click(function () {
         if (money >= 10) {                   
-            $('#punchInvestResult').html("Investing...");
+            var timer = 15;
+            $('#punchInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 0) {
+                    timer--;
+                    $('#punchInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
             var investAmt = 10;
             money -= investAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -274,7 +296,14 @@ $(window).load(function () {
     $('#btnInvestGame').prop('disabled', false);
     $('#btnInvestGame').click(function () {
         if (money >= 25) {
-            $('#gameInvestResult').html("Investing...");
+            var timer = 15;
+            $('#gameInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 0) {
+                    timer--;
+                    $('#gameInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
             var investAmt = 25;
             money -= investAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -361,7 +390,14 @@ $(window).load(function () {
     $('#btnInvestPoker').prop('disabled', false);
     $('#btnInvestPoker').click(function () {
         if (money >= 100) {
-            $('#pokerInvestResult').html("Investing...");
+            var timer = 20;
+            $('#pokerInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 0) {
+                    timer--;
+                    $('#pokerInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
             var investAmt = 100;
             money -= investAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -448,7 +484,14 @@ $(window).load(function () {
     $('#btnInvestRental').prop('disabled', false);
     $('#btnInvestRental').click(function () {
         if (money >= 500) {
-            $('#rentalInvestResult').html("Investing...");
+            var timer = 30;
+            $('#rentalInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 0) {
+                    timer--;
+                    $('#rentalInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
             var investAmt = 500;
             money -= investAmt;
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

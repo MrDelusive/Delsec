@@ -12,10 +12,14 @@
     setInterval(function () {
         // DELSEC //
         delsecIncrement = totalChunks / 5000 + Math.round(100 * Math.random() / 10) / 100;
-        if (delsecIncrement > 0)
-            $("#delsecChangeImg").attr("src", "Resources/Img/up.png");
-        else if (delsecIncrement < 0)
-            $("#delsecChangeImg").attr("src", "Resources/Img/down.png");
+        if (delsecIncrement > 0) {
+            $("#delsecChange").css("color","#24b41e");
+            $("#delsecChange").html("+" + delsecIncrement.toFixed(2));
+        }
+        else if (delsecIncrement < 0) {
+            $("#delsecChange").css("color", "#ce0000");
+            $("#delsecChange").html(delsecIncrement.toFixed(2));
+        }
 
         delsecCurrentStockPrice += delsecIncrement;
         $('#delsecStockDisplayCost').html('$' + delsecCurrentStockPrice.toFixed(2));
@@ -26,10 +30,14 @@
 
         // ENTAQ //
         entaqIncrement = Math.round(100 * Math.random() * 0.2) / 100 - 0.1;
-        if (entaqIncrement > 0)
-            $("#entaqChangeImg").attr("src", "Resources/Img/up.png");
-        else if (entaqIncrement < 0)
-            $("#entaqChangeImg").attr("src", "Resources/Img/down.png");
+        if (entaqIncrement > 0) {
+            $("#entaqChange").css("color", "#24b41e");
+            $("#entaqChange").html("+" + entaqIncrement.toFixed(2));
+        }
+        else if (entaqIncrement < 0) {
+            $("#entaqChange").css("color", "#ce0000");
+            $("#entaqChange").html(entaqIncrement.toFixed(2));
+        }
 
         entaqCurrentStockPrice += entaqIncrement;
         if (entaqCurrentStockPrice <= 0.1)
@@ -42,10 +50,14 @@
 
         // VENTEX //
         ventexIncrement = Math.round(100 * Math.random() * 0.2) / 100 - 0.1;
-        if (ventexIncrement > 0)
-            $("#ventexChangeImg").attr("src", "Resources/Img/up.png");
-        else if (ventexIncrement < 0)
-            $("#ventexChangeImg").attr("src", "Resources/Img/down.png");
+        if (ventexIncrement > 0) {
+            $("#ventexChange").css("color", "#24b41e");
+            $("#ventexChange").html("+" + ventexIncrement.toFixed(2));
+        }
+        else if (ventexIncrement < 0) {
+            $("#ventexChange").css("color", "#ce0000");
+            $("#ventexChange").html(ventexIncrement.toFixed(2));
+        }
 
         ventexCurrentStockPrice += ventexIncrement;
         if (ventexCurrentStockPrice <= 0.1)
@@ -58,10 +70,14 @@
 
         // ASTOR //
         astorIncrement = Math.round(100 * Math.random() * 0.2) / 100 - 0.1;
-        if (astorIncrement > 0)
-            $("#astorChangeImg").attr("src", "Resources/Img/up.png");
-        else if (astorIncrement < 0)
-            $("#astorChangeImg").attr("src", "Resources/Img/down.png");
+        if (astorIncrement > 0) {
+            $("#astorChange").css("color", "#24b41e");
+            $("#astorChange").html("+" + astorIncrement.toFixed(2));
+        }
+        else if (astorIncrement < 0) {
+            $("#astorChange").css("color", "#ce0000");
+            $("#astorChange").html(astorIncrement.toFixed(2));
+        }
 
         astorCurrentStockPrice += astorIncrement;
         if (astorCurrentStockPrice <= 0.1)
@@ -77,7 +93,8 @@
         popbotIncrement = Math.round(1000000 * Math.random());
         if (popbotIncrement == 555555) {
             popbotCurrentStockPrice += popbotIncrement;
-            $("#popbotChangeImg").attr("src", "Resources/Img/up.png");
+            $("#popbotChange").css("color", "#24b41e");
+            $("#popbotChange").html("+" + popbotIncrement.toFixed(2));
         }      
         $('#popbotStockDisplayCost').html('$' + popbotCurrentStockPrice.toFixed(2));
         $('#popbotStockSellPrice').html('$' + (popbotCurrentStockPrice - popbotCurrentStockPrice / sellDivider).toFixed(2));
@@ -87,11 +104,14 @@
 
         // pannam //
         pannamIncrement = Math.round(100 * Math.random() / 2) / 100 - 0.20; // average growth 0.05
-        if (pannamIncrement > 0)
-            $("#pannamChangeImg").attr("src", "Resources/Img/up.png");
-        else if (pannamIncrement < 0)
-            $("#pannamChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (pannamIncrement > 0) {
+            $("#pannamChange").css("color", "#24b41e");
+            $("#pannamChange").html("+" + pannamIncrement.toFixed(2));
+        }
+        else if (pannamIncrement < 0) {
+            $("#pannamChange").css("color", "#ce0000");
+            $("#pannamChange").html(pannamIncrement.toFixed(2));
+        }
         pannamCurrentStockPrice += pannamIncrement;
         if (pannamCurrentStockPrice <= 0.1)
             pannamCurrentStockPrice = 0.1;
@@ -103,11 +123,14 @@
 
         // TRIT //
         TRITIncrement = Math.round(100 * Math.random()) / 100 - 0.5; // bigger than average jumps
-        if (TRITIncrement > 0)
-            $("#TRITChangeImg").attr("src", "Resources/Img/up.png");
-        else if (TRITIncrement < 0)
-            $("#TRITChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (TRITIncrement > 0) {
+            $("#TRITChange").css("color", "#24b41e");
+            $("#TRITChange").html("+" + TRITIncrement.toFixed(2));
+        }
+        else if (TRITIncrement < 0) {
+            $("#TRITChange").css("color", "#ce0000");
+            $("#TRITChange").html(TRITIncrement.toFixed(2));
+        }
         TRITCurrentStockPrice += TRITIncrement;
         if (TRITCurrentStockPrice <= 0.2)
             TRITCurrentStockPrice = 0.2;
@@ -119,11 +142,14 @@
 
         // CANV //
         CANVIncrement = Math.round(100 * Math.random() * 0.3) / 100 - 0.1; // steady increment average 2/3 of the time
-        if (CANVIncrement > 0)
-            $("#CANVChangeImg").attr("src", "Resources/Img/up.png");
-        else if (CANVIncrement < 0)
-            $("#CANVChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (CANVIncrement > 0) {
+            $("#CANVChange").css("color", "#24b41e");
+            $("#CANVChange").html("+" + CANVIncrement.toFixed(2));
+        }
+        else if (CANVIncrement < 0) {
+            $("#CANVChange").css("color", "#ce0000");
+            $("#CANVChange").html(CANVIncrement.toFixed(2));
+        }
         CANVCurrentStockPrice += CANVIncrement;
         if (CANVCurrentStockPrice <= 0)
             CANVCurrentStockPrice = 0.01;
@@ -135,11 +161,14 @@
 
         // OSM //
         OSMIncrement = Math.round(100 * Math.random() * 2) / 100 - 1;
-        if (OSMIncrement > 0)
-            $("#OSMChangeImg").attr("src", "Resources/Img/up.png");
-        else if (OSMIncrement < 0)
-            $("#OSMChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (OSMIncrement > 0) {
+            $("#OSMChange").css("color", "#24b41e");
+            $("#OSMChange").html("+" + OSMIncrement.toFixed(2));
+        }
+        else if (OSMIncrement < 0) {
+            $("#OSMChange").css("color", "#ce0000");
+            $("#OSMChange").html(OSMIncrement.toFixed(2));
+        }
         OSMCurrentStockPrice += OSMIncrement;
         if (OSMCurrentStockPrice <= 0)
             OSMCurrentStockPrice = 0.01;
@@ -158,11 +187,14 @@
         else if (x >= 30) // then do this for the rest 
             PALLADIncrement = Math.round(100 * Math.random() * 2) / 100 - 0.75;
 
-        if (PALLADIncrement > 0)
-            $("#PALLADChangeImg").attr("src", "Resources/Img/up.png");
-        else if (PALLADIncrement < 0)
-            $("#PALLADChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (PALLADIncrement > 0) {
+            $("#PALLADChange").css("color", "#24b41e");
+            $("#PALLADChange").html("+" + PALLADIncrement.toFixed(2));
+        }
+        else if (PALLADIncrement < 0) {
+            $("#PALLADChange").css("color", "#ce0000");
+            $("#PALLADChange").html(PALLADIncrement.toFixed(2));
+        }
         PALLADCurrentStockPrice += PALLADIncrement;
         if (PALLADCurrentStockPrice <= 0)
             PALLADCurrentStockPrice = 0.01;
@@ -174,11 +206,14 @@
 
         // KELV //
         KELVIncrement = Math.round(100 * Math.random() * 2) / 100 - 0.9; // small increment average.
-        if (KELVIncrement > 0)
-            $("#KELVChangeImg").attr("src", "Resources/Img/up.png");
-        else if (KELVIncrement < 0)
-            $("#KELVChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (KELVIncrement > 0) {
+            $("#KELVChange").css("color", "#24b41e");
+            $("#KELVChange").html("+" + KELVIncrement.toFixed(2));
+        }
+        else if (KELVIncrement < 0) {
+            $("#KELVChange").css("color", "#ce0000");
+            $("#KELVChange").html(KELVIncrement.toFixed(2));
+        }
         KELVCurrentStockPrice += KELVIncrement;
         if (KELVCurrentStockPrice <= 0)
             KELVCurrentStockPrice = 0.01;
@@ -190,11 +225,14 @@
 
         // stuccor //
         stuccorIncrement = Math.round(100 * Math.random() * 10) / 100 - 5;
-        if (stuccorIncrement > 0)
-            $("#stuccorChangeImg").attr("src", "Resources/Img/up.png");
-        else if (stuccorIncrement < 0)
-            $("#stuccorChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (stuccorIncrement > 0) {
+            $("#stuccorChange").css("color", "#24b41e");
+            $("#stuccorChange").html("+" + stuccorIncrement.toFixed(2));
+        }
+        else if (stuccorIncrement < 0) {
+            $("#stuccorChange").css("color", "#ce0000");
+            $("#stuccorChange").html(stuccorIncrement.toFixed(2));
+        }
         stuccorCurrentStockPrice += stuccorIncrement;
         if (stuccorCurrentStockPrice <= 0)
             stuccorCurrentStockPrice = 0.01;
@@ -206,11 +244,14 @@
 
         // delcred //
         delcredIncrement = Math.round(100 * Math.random() * 8) / 100 - 3.2;
-        if (delcredIncrement > 0)
-            $("#delcredChangeImg").attr("src", "Resources/Img/up.png");
-        else if (delcredIncrement < 0)
-            $("#delcredChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (delcredIncrement > 0) {
+            $("#delcredChange").css("color", "#24b41e");
+            $("#delcredChange").html("+" + delcredIncrement.toFixed(2));
+        }
+        else if (delcredIncrement < 0) {
+            $("#delcredChange").css("color", "#ce0000");
+            $("#delcredChange").html(delcredIncrement.toFixed(2));
+        }
         delcredCurrentStockPrice += delcredIncrement;
         if (delcredCurrentStockPrice <= 0)
             delcredCurrentStockPrice = 0.01;
@@ -222,11 +263,14 @@
 
         // rustec //
         rustecIncrement = Math.round(100 * Math.random() * 4 + russianSixBitBank / 5) / 100 - 2;
-        if (rustecIncrement > 0)
-            $("#rustecChangeImg").attr("src", "Resources/Img/up.png");
-        else if (rustecIncrement < 0)
-            $("#rustecChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (rustecIncrement > 0) {
+            $("#rustecChange").css("color", "#24b41e");
+            $("#rustecChange").html("+" + rustecIncrement.toFixed(2));
+        }
+        else if (rustecIncrement < 0) {
+            $("#rustecChange").css("color", "#ce0000");
+            $("#rustecChange").html(rustecIncrement.toFixed(2));
+        }
         rustecCurrentStockPrice += rustecIncrement;
         if (rustecCurrentStockPrice <= 0)
             rustecCurrentStockPrice = 0.01;
@@ -238,11 +282,14 @@
 
         // exxocred //
         exxocredIncrement = Math.round(100 * Math.random() * 2) / 100 - 1; // small adjustments
-        if (exxocredIncrement > 0)
-            $("#exxocredChangeImg").attr("src", "Resources/Img/up.png");
-        else if (exxocredIncrement < 0)
-            $("#exxocredChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (exxocredIncrement > 0) {
+            $("#exxocredChange").css("color", "#24b41e");
+            $("#exxocredChange").html("+" + exxocredIncrement.toFixed(2));
+        }
+        else if (exxocredIncrement < 0) {
+            $("#exxocredChange").css("color", "#ce0000");
+            $("#exxocredChange").html(exxocredIncrement.toFixed(2));
+        }
         exxocredCurrentStockPrice += exxocredIncrement;
         if (exxocredCurrentStockPrice <= 0)
             exxocredCurrentStockPrice = 0.01;
@@ -254,11 +301,14 @@
 
         // AU //
         AUIncrement = Math.round(100 * Math.random() * 20) / 100 - 9;
-        if (AUIncrement > 0)
-            $("#AUChangeImg").attr("src", "Resources/Img/up.png");
-        else if (AUIncrement < 0)
-            $("#AUChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (AUIncrement > 0) {
+            $("#AUChange").css("color", "#24b41e");
+            $("#AUChange").html("+" + AUIncrement.toFixed(2));
+        }
+        else if (AUIncrement < 0) {
+            $("#AUChange").css("color", "#ce0000");
+            $("#AUChange").html(AUIncrement.toFixed(2));
+        }
         AUCurrentStockPrice += AUIncrement;
         if (AUCurrentStockPrice <= 0)
             AUCurrentStockPrice = 0.01;
@@ -270,11 +320,14 @@
 
         // acehold //
         aceholdIncrement = Math.round(100 * Math.random() * 20) / 100 - 7.8;
-        if (aceholdIncrement > 0)
-            $("#aceholdChangeImg").attr("src", "Resources/Img/up.png");
-        else if (aceholdIncrement < 0)
-            $("#aceholdChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (aceholdIncrement > 0) {
+            $("#aceholdChange").css("color", "#24b41e");
+            $("#aceholdChange").html("+" + aceholdIncrement.toFixed(2));
+        }
+        else if (aceholdIncrement < 0) {
+            $("#aceholdChange").css("color", "#ce0000");
+            $("#aceholdChange").html(aceholdIncrement.toFixed(2));
+        }
         aceholdCurrentStockPrice += aceholdIncrement;
         if (aceholdCurrentStockPrice <= 0)
             aceholdCurrentStockPrice = 0.01;
@@ -286,11 +339,14 @@
 
         // delhold //
         delholdIncrement = Math.round(100 * (Math.random() * 50) + ownedDelsecStocks / 100 + ownedDelcredStocks / 10) / 100 - 25;
-        if (delholdIncrement > 0)
-            $("#delholdChangeImg").attr("src", "Resources/Img/up.png");
-        else if (delholdIncrement < 0)
-            $("#delholdChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (delholdIncrement > 0) {
+            $("#delholdChange").css("color", "#24b41e");
+            $("#delholdChange").html("+" + delholdIncrement.toFixed(2));
+        }
+        else if (delholdIncrement < 0) {
+            $("#delholdChange").css("color", "#ce0000");
+            $("#delholdChange").html(delholdIncrement.toFixed(2));
+        }
         delholdCurrentStockPrice += delholdIncrement;
         if (delholdCurrentStockPrice <= 0)
             delholdCurrentStockPrice = 0.01;
@@ -302,11 +358,14 @@
 
         // DIAM //
         DIAMIncrement = Math.round(100 * Math.random() * 50) / 100 - 24;
-        if (DIAMIncrement > 0)
-            $("#DIAMChangeImg").attr("src", "Resources/Img/up.png");
-        else if (DIAMIncrement < 0)
-            $("#DIAMChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (DIAMIncrement > 0) {
+            $("#DIAMChange").css("color", "#24b41e");
+            $("#DIAMChange").html("+" + DIAMIncrement.toFixed(2));
+        }
+        else if (DIAMIncrement < 0) {
+            $("#DIAMChange").css("color", "#ce0000");
+            $("#DIAMChange").html(DIAMIncrement.toFixed(2));
+        }
         DIAMCurrentStockPrice += DIAMIncrement;
         if (DIAMCurrentStockPrice <= 0)
             DIAMCurrentStockPrice = 0.01;
@@ -318,11 +377,14 @@
 
         // pentacc //
         pentaccIncrement = Math.round(100 * Math.random() * 150) / 100 - 75;
-        if (pentaccIncrement > 0)
-            $("#pentaccChangeImg").attr("src", "Resources/Img/up.png");
-        else if (pentaccIncrement < 0)
-            $("#pentaccChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (pentaccIncrement > 0) {
+            $("#pentaccChange").css("color", "#24b41e");
+            $("#pentaccChange").html("+" + pentaccIncrement.toFixed(2));
+        }
+        else if (pentaccIncrement < 0) {
+            $("#pentaccChange").css("color", "#ce0000");
+            $("#pentaccChange").html(pentaccIncrement.toFixed(2));
+        }
         pentaccCurrentStockPrice += pentaccIncrement;
         if (pentaccCurrentStockPrice <= 0)
             pentaccCurrentStockPrice = 0.01;
@@ -334,11 +396,14 @@
 
         // noodle //
         noodleIncrement = Math.round(100 * Math.random() * 200) / 100 - 75;
-        if (noodleIncrement > 0)
-            $("#noodleChangeImg").attr("src", "Resources/Img/up.png");
-        else if (noodleIncrement < 0)
-            $("#noodleChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (noodleIncrement > 0) {
+            $("#noodleChange").css("color", "#24b41e");
+            $("#noodleChange").html("+" + noodleIncrement.toFixed(2));
+        }
+        else if (noodleIncrement < 0) {
+            $("#noodleChange").css("color", "#ce0000");
+            $("#noodleChange").html(noodleIncrement.toFixed(2));
+        }
         noodleCurrentStockPrice += noodleIncrement;
         if (noodleCurrentStockPrice <= 0)
             noodleCurrentStockPrice = 0.01;
@@ -350,11 +415,14 @@
 
         // megahard //
         megahardIncrement = Math.round(100 * Math.random() * 400) / 100 - 185;
-        if (megahardIncrement > 0)
-            $("#megahardChangeImg").attr("src", "Resources/Img/up.png");
-        else if (megahardIncrement < 0)
-            $("#megahardChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (megahardIncrement > 0) {
+            $("#megahardChange").css("color", "#24b41e");
+            $("#megahardChange").html("+" + megahardIncrement.toFixed(2));
+        }
+        else if (megahardIncrement < 0) {
+            $("#megahardChange").css("color", "#ce0000");
+            $("#megahardChange").html(megahardIncrement.toFixed(2));
+        }
         megahardCurrentStockPrice += megahardIncrement;
         if (megahardCurrentStockPrice <= 0)
             megahardCurrentStockPrice = 0.01;
@@ -366,11 +434,14 @@
 
         // chimerasec //
         chimerasecIncrement = Math.round(100 * Math.random() * 400) / 100 - 200;
-        if (chimerasecIncrement > 0)
-            $("#chimerasecChangeImg").attr("src", "Resources/Img/up.png");
-        else if (chimerasecIncrement < 0)
-            $("#chimerasecChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (chimerasecIncrement > 0) {
+            $("#chimerasecChange").css("color", "#24b41e");
+            $("#chimerasecChange").html("+" + chimerasecIncrement.toFixed(2));
+        }
+        else if (chimerasecIncrement < 0) {
+            $("#chimerasecChange").css("color", "#ce0000");
+            $("#chimerasecChange").html(chimerasecIncrement.toFixed(2));
+        }
         chimerasecCurrentStockPrice += chimerasecIncrement;
         if (chimerasecCurrentStockPrice <= 0)
             chimerasecCurrentStockPrice = 0.01;
@@ -382,11 +453,14 @@
 
         // chimerahold //
         chimeraholdIncrement = Math.round(100 * Math.random() * 400) / 100 - 200 + ownedChimerasecStocks * 10;
-        if (chimeraholdIncrement > 0)
-            $("#chimeraholdChangeImg").attr("src", "Resources/Img/up.png");
-        else if (chimeraholdIncrement < 0)
-            $("#chimeraholdChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (chimeraholdIncrement > 0) {
+            $("#chimeraholdChange").css("color", "#24b41e");
+            $("#chimeraholdChange").html("+" + chimeraholdIncrement.toFixed(2));
+        }
+        else if (chimeraholdIncrement < 0) {
+            $("#chimeraholdChange").css("color", "#ce0000");
+            $("#chimeraholdChange").html(chimeraholdIncrement.toFixed(2));
+        }
         chimeraholdCurrentStockPrice += chimeraholdIncrement;
         if (chimeraholdCurrentStockPrice <= 0)
             chimeraholdCurrentStockPrice = 0.01;
@@ -398,11 +472,14 @@
 
         // griffonbank //
         griffonbankIncrement = Math.round(100 * Math.random() * 400) / 100 - 165;
-        if (griffonbankIncrement > 0)
-            $("#griffonbankChangeImg").attr("src", "Resources/Img/up.png");
-        else if (griffonbankIncrement < 0)
-            $("#griffonbankChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (griffonbankIncrement > 0) {
+            $("#griffonbankChange").css("color", "#24b41e");
+            $("#griffonbankChange").html("+" + griffonbankIncrement.toFixed(2));
+        }
+        else if (griffonbankIncrement < 0) {
+            $("#griffonbankChange").css("color", "#ce0000");
+            $("#griffonbankChange").html(griffonbankIncrement.toFixed(2));
+        }
         griffonbankCurrentStockPrice += griffonbankIncrement;
         if (griffonbankCurrentStockPrice <= 0)
             griffonbankCurrentStockPrice = 0.01;
@@ -414,11 +491,14 @@
 
         // turborus //
         turborusIncrement = Math.round(100 * Math.random() * 500) / 100 - 250 + ownedRustecStocks * 25;
-        if (turborusIncrement > 0)
-            $("#turborusChangeImg").attr("src", "Resources/Img/up.png");
-        else if (turborusIncrement < 0)
-            $("#turborusChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (turborusIncrement > 0) {
+            $("#turborusChange").css("color", "#24b41e");
+            $("#turborusChange").html("+" + turborusIncrement.toFixed(2));
+        }
+        else if (turborusIncrement < 0) {
+            $("#turborusChange").css("color", "#ce0000");
+            $("#turborusChange").html(turborusIncrement.toFixed(2));
+        }
         turborusCurrentStockPrice += turborusIncrement;
         if (turborusCurrentStockPrice <= 0)
             turborusCurrentStockPrice = 0.01;
@@ -430,11 +510,14 @@
 
         // exodmpt //
         exodmptIncrement = Math.round(100 * Math.random() * 500) / 100 - 250 + ownedExxocredStocks * 25;
-        if (exodmptIncrement > 0)
-            $("#exodmptChangeImg").attr("src", "Resources/Img/up.png");
-        else if (exodmptIncrement < 0)
-            $("#exodmptChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (exodmptIncrement > 0) {
+            $("#exodmptChange").css("color", "#24b41e");
+            $("#exodmptChange").html("+" + exodmptIncrement.toFixed(2));
+        }
+        else if (exodmptIncrement < 0) {
+            $("#exodmptChange").css("color", "#ce0000");
+            $("#exodmptChange").html(exodmptIncrement.toFixed(2));
+        }
         exodmptCurrentStockPrice += exodmptIncrement;
         if (exodmptCurrentStockPrice <= 0)
             exodmptCurrentStockPrice = 0.01;
@@ -446,11 +529,14 @@
 
         // ramnet //
         ramnetIncrement = Math.round(100 * Math.random() * 300) / 100 - 100;
-        if (ramnetIncrement > 0)
-            $("#ramnetChangeImg").attr("src", "Resources/Img/up.png");
-        else if (ramnetIncrement < 0)
-            $("#ramnetChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (ramnetIncrement > 0) {
+            $("#ramnetChange").css("color", "#24b41e");
+            $("#ramnetChange").html("+" + ramnetIncrement.toFixed(2));
+        }
+        else if (ramnetIncrement < 0) {
+            $("#ramnetChange").css("color", "#ce0000");
+            $("#ramnetChange").html(ramnetIncrement.toFixed(2));
+        }
         ramnetCurrentStockPrice += ramnetIncrement;
         if (ramnetCurrentStockPrice <= 0)
             ramnetCurrentStockPrice = 0.01;
@@ -462,11 +548,14 @@
 
         // alphacen //
         alphacenIncrement = Math.round(100 * Math.random() * 400) / 100 - 150;
-        if (alphacenIncrement > 0)
-            $("#alphacenChangeImg").attr("src", "Resources/Img/up.png");
-        else if (alphacenIncrement < 0)
-            $("#alphacenChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (alphacenIncrement > 0) {
+            $("#alphacenChange").css("color", "#24b41e");
+            $("#alphacenChange").html("+" + alphacenIncrement.toFixed(2));
+        }
+        else if (alphacenIncrement < 0) {
+            $("#alphacenChange").css("color", "#ce0000");
+            $("#alphacenChange").html(alphacenIncrement.toFixed(2));
+        }
         alphacenCurrentStockPrice += alphacenIncrement;
         if (alphacenCurrentStockPrice <= 0)
             alphacenCurrentStockPrice = 0.01;
@@ -478,9 +567,10 @@
 
         // scatter //
         scatterIncrement = Math.round(100 * Math.random() * scatterCurrentStockPrice / 6727) / 100; //exponent
-        if (scatterIncrement > 0)
-            $("#scatterChangeImg").attr("src", "Resources/Img/up.png");
-
+        if (scatterIncrement > 0) {
+            $("#scatterChange").css("color", "#24b41e");
+            $("#scatterChange").html("+" + scatterIncrement.toFixed(2));
+        }
         scatterCurrentStockPrice += scatterIncrement;
         if (scatterCurrentStockPrice <= 0)
             scatterCurrentStockPrice = 0.01;
@@ -492,11 +582,14 @@
 
         // kalzex //
         kalzexIncrement = Math.round(100 * Math.random() * 200 + ownedKalzexStocks * 10) / 100 - 100;
-        if (kalzexIncrement > 0)
-            $("#kalzexChangeImg").attr("src", "Resources/Img/up.png");
-        else if (kalzexIncrement < 0)
-            $("#kalzexChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (kalzexIncrement > 0) {
+            $("#kalzexChange").css("color", "#24b41e");
+            $("#kalzexChange").html("+" + kalzexIncrement.toFixed(2));
+        }
+        else if (kalzexIncrement < 0) {
+            $("#kalzexChange").css("color", "#ce0000");
+            $("#kalzexChange").html(kalzexIncrement.toFixed(2));
+        }
         kalzexCurrentStockPrice += kalzexIncrement;
         if (kalzexCurrentStockPrice <= 0)
             kalzexCurrentStockPrice = 0.01;
@@ -508,11 +601,14 @@
 
         // sonicos //       
         sonicosIncrement = Math.round(100 * Math.random() * 400) / 100 - 200 + goFast;
-        if (sonicosIncrement > 0)
-            $("#sonicosChangeImg").attr("src", "Resources/Img/up.png");
-        else if (sonicosIncrement < 0)
-            $("#sonicosChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (sonicosIncrement > 0) {
+            $("#sonicosChange").css("color", "#24b41e");
+            $("#sonicosChange").html("+" + sonicosIncrement.toFixed(2));
+        }
+        else if (sonicosIncrement < 0) {
+            $("#sonicosChange").css("color", "#ce0000");
+            $("#sonicosChange").html(sonicosIncrement.toFixed(2));
+        }
         sonicosCurrentStockPrice += sonicosIncrement;
         if (sonicosCurrentStockPrice <= 0)
             sonicosCurrentStockPrice = 0.01;
@@ -525,11 +621,14 @@
 
         // trancext //
         trancextIncrement = Math.round(100 * Math.random() * 700) / 100 - 185;
-        if (trancextIncrement > 0)
-            $("#trancextChangeImg").attr("src", "Resources/Img/up.png");
-        else if (trancextIncrement < 0)
-            $("#trancextChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (trancextIncrement > 0) {
+            $("#trancextChange").css("color", "#24b41e");
+            $("#trancextChange").html("+" + trancextIncrement.toFixed(2));
+        }
+        else if (trancextIncrement < 0) {
+            $("#trancextChange").css("color", "#ce0000");
+            $("#trancextChange").html(trancextIncrement.toFixed(2));
+        }
         trancextCurrentStockPrice += trancextIncrement;
         if (trancextCurrentStockPrice <= 0)
             trancextCurrentStockPrice = 0.01;
@@ -541,11 +640,14 @@
 
         // stklr //
         stklrIncrement = Math.round(100 * Math.random() * 10) / 100 - 5; // heheh
-        if (stklrIncrement > 0)
-            $("#stklrChangeImg").attr("src", "Resources/Img/up.png");
-        else if (stklrIncrement < 0)
-            $("#stklrChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (stklrIncrement > 0) {
+            $("#stklrChange").css("color", "#24b41e");
+            $("#stklrChange").html("+" + stklrIncrement.toFixed(2));
+        }
+        else if (stklrIncrement < 0) {
+            $("#stklrChange").css("color", "#ce0000");
+            $("#stklrChange").html(stklrIncrement.toFixed(2));
+        }
         stklrCurrentStockPrice += stklrIncrement;
         if (stklrCurrentStockPrice <= 0)
             stklrCurrentStockPrice = 0.01;
@@ -557,11 +659,14 @@
 
         // vipersec //
         vipersecIncrement = Math.round(100 * Math.random() * 1000) / 100 - 500 + ownedCANVStocks + ownedOSMStocks + ownedPALLADStocks + ownedKELVStocks + ownedAUStocks * 5 + ownedDIAMStocks * 10 + ownedPLATStocks * 100;
-        if (vipersecIncrement > 0)
-            $("#vipersecChangeImg").attr("src", "Resources/Img/up.png");
-        else if (vipersecIncrement < 0)
-            $("#vipersecChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (vipersecIncrement > 0) {
+            $("#vipersecChange").css("color", "#24b41e");
+            $("#vipersecChange").html("+" + vipersecIncrement.toFixed(2));
+        }
+        else if (vipersecIncrement < 0) {
+            $("#vipersecChange").css("color", "#ce0000");
+            $("#vipersecChange").html(vipersecIncrement.toFixed(2));
+        }
         vipersecCurrentStockPrice += vipersecIncrement;
         if (vipersecCurrentStockPrice <= 0)
             vipersecCurrentStockPrice = 0.01;
@@ -573,11 +678,14 @@
 
         // PLAT //
         PLATIncrement = Math.round(100 * Math.random() * 1000) / 100 - 400;
-        if (PLATIncrement > 0)
-            $("#PLATChangeImg").attr("src", "Resources/Img/up.png");
-        else if (PLATIncrement < 0)
-            $("#PLATChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (PLATIncrement > 0) {
+            $("#PLATChange").css("color", "#24b41e");
+            $("#PLATChange").html("+" + PLATIncrement.toFixed(2));
+        }
+        else if (PLATIncrement < 0) {
+            $("#PLATChange").css("color", "#ce0000");
+            $("#PLATChange").html(PLATIncrement.toFixed(2));
+        }
         PLATCurrentStockPrice += PLATIncrement;
         if (PLATCurrentStockPrice <= 0)
             PLATCurrentStockPrice = 0.01;
@@ -593,11 +701,14 @@
         else
             infoneIncrement = Math.round(100 * Math.random() * 10) / 100 - 5;
 
-        if (infoneIncrement > 0)
-            $("#infoneChangeImg").attr("src", "Resources/Img/up.png");
-        else if (infoneIncrement < 0)
-            $("#infoneChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (infoneIncrement > 0) {
+            $("#infoneChange").css("color", "#24b41e");
+            $("#infoneChange").html("+" + infoneIncrement.toFixed(2));
+        }
+        else if (infoneIncrement < 0) {
+            $("#infoneChange").css("color", "#ce0000");
+            $("#infoneChange").html(infoneIncrement.toFixed(2));
+        }
         infoneCurrentStockPrice += infoneIncrement;
         if (infoneCurrentStockPrice <= 0)
             infoneCurrentStockPrice = 0.01;
@@ -609,11 +720,14 @@
 
         // extank //
         extankIncrement = Math.round(100 * Math.random() * 1100) / 100 - 400;
-        if (extankIncrement > 0)
-            $("#extankChangeImg").attr("src", "Resources/Img/up.png");
-        else if (extankIncrement < 0)
-            $("#extankChangeImg").attr("src", "Resources/Img/down.png");
-
+        if (extankIncrement > 0) {
+            $("#extankChange").css("color", "#24b41e");
+            $("#extankChange").html("+" + extankIncrement.toFixed(2));
+        }
+        else if (extankIncrement < 0) {
+            $("#extankChange").css("color", "#ce0000");
+            $("#extankChange").html(extankIncrement.toFixed(2));
+        }
         extankCurrentStockPrice += extankIncrement;
         if (extankCurrentStockPrice <= 0)
             extankCurrentStockPrice = 0.01;
@@ -625,9 +739,10 @@
 
         // reinacc //
         reinaccIncrement = Math.round(100 * Math.random() * money / reinaccCurrentStockPrice * ownedDelsecStocks * 10) / 100;
-        if (reinaccIncrement > 0)
-            $("#reinaccChangeImg").attr("src", "Resources/Img/up.png");
-
+        if (reinaccIncrement > 0) {
+            $("#reinaccChange").css("color", "#24b41e");
+            $("#reinaccChange").html("+" + reinaccIncrement.toFixed(2));
+        }
         reinaccCurrentStockPrice += reinaccIncrement;
         if (reinaccCurrentStockPrice <= 0)
             reinaccCurrentStockPrice = 0.01;
