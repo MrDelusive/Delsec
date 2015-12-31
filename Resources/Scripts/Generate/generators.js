@@ -32,7 +32,7 @@ $(window).load(function () {
         return false;
     });
 
-
+    $('#btnWizardIncrement').prop('disabled', true);
     // The wizard button should do nothing (click has been disabled as well). Uses a tick to generate instead
     $('#btnWizardIncrement').click(function () {
         return false;
@@ -47,7 +47,7 @@ $(window).load(function () {
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-        $('#healerGenerateAmt').html("You have added 0.1% interest to your account for: $" + increment.toFixed(2));
+        $('#healerGenerateAmt').html("You have added 0.01% interest to your account for: $" + increment.toFixed(2));
         return false;
     });
 
@@ -59,25 +59,25 @@ $(window).load(function () {
                 ownedEntaqStocks++;
                 $('#entaqOwnedStocksDisplay').html(ownedEntaqStocks);
                 $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - entaqCurrentStockPrice / 10)).toFixed(2));
-                $('#rogueGenerateAmt').html("You have added an Entaq stock.");
+                $('#rogueGenerateAmt').html("+1 Entaq stock.");
                 break;
             case 2:
                 ownedVentexStocks++;
                 $('#ventexOwnedStocksDisplay').html(ownedVentexStocks);
                 $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / 10)).toFixed(2));
-                $('#rogueGenerateAmt').html("You have added a Ventex stock.");
+                $('#rogueGenerateAmt').html("+1 Ventex stock.");
                 break;
             case 3:
                 ownedAstorStocks++;
                 $('#astorOwnedStocksDisplay').html(ownedAstorStocks);
                 $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / 10)).toFixed(2));
-                $('#rogueGenerateAmt').html("You have added an Astor stock.");
+                $('#rogueGenerateAmt').html("+1 Astor stock.");
                 break;
             case 4:
                 ownedPopbotStocks++;
                 $('#popbotOwnedStocksDisplay').html(ownedPopbotStocks);
                 $('#popbotSellEstimate').html('$' + (ownedPopbotStocks * (popbotCurrentStockPrice - popbotCurrentStockPrice / 10)).toFixed(2));
-                $('#rogueGenerateAmt').html("You have added a Popbot stock.");
+                $('#rogueGenerateAmt').html("+1 Popbot stock.");
                 break;
             default:
                 break;

@@ -87,11 +87,12 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 
 .btn_Generate
 {
-    background: url('../Img/btn_HackBG.png');
+    background: url('../Img/generateDefault.png');
     width:400px;
     height:150px;
     cursor: pointer;
-    border-radius:50px;
+    border-radius:40px;
+    border: 1px solid #003ba4;
     font-family: Consolas,monaco,monospace;
     font-size:50px;
     color: #ffffff;
@@ -104,11 +105,12 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 }
 .btn_GenerateWarrior
 {
-    background: url('../Img/btn_HackBGRed.png');
+    background: url('../Img/generateRed.png');
     width:400px;
     height:150px;
     cursor: pointer;
-    border-radius:50px;
+    border-radius:40px;
+    border: 1px solid #810e05;
     font-family: Consolas,monaco,monospace;
     font-size:50px;
     color: #ffffff;
@@ -122,11 +124,11 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 
 .btn_GenerateWizard
 {
-    background: url('../Img/btn_HackBGBlue.png');
+    background: url('../Img/generateBlue.png');
     width:400px;
     height:150px;
-    cursor: pointer;
-    border-radius:50px;
+    border-radius:40px;
+    border: 0px;
     font-family: Consolas,monaco,monospace;
     font-size:50px;
     color: #ffffff;
@@ -134,18 +136,15 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     animation:menuFlashBlue 60s linear infinite;
     
 }
-.btn_GenerateWizard:hover
-{
-    
-}
 
 .btn_GenerateRogue
 {
-    background: url('../Img/btn_HackBGYellow.png');
+    background: url('../Img/generateYellow.png');
     width:400px;
     height:150px;
     cursor: pointer;
-    border-radius:50px;
+    border-radius:40px;
+    border: 1px solid #8f7b00;
     font-family: Consolas,monaco,monospace;
     font-size:50px;
     color: #ffffff;
@@ -159,11 +158,12 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 
 .btn_GenerateHealer
 {
-    background: url('../Img/btn_HackBGGreen.png');
+    background: url('../Img/generateGreen.png');
     width:400px;
     height:150px;
     cursor: pointer;
-    border-radius:50px;
+    border-radius:40px;
+    border: 1px solid #35793f;
     font-family: Consolas,monaco,monospace;
     font-size:50px;
     color: #ffffff;
@@ -554,6 +554,7 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     width:188px;
     height:662px;
     border-radius:5px;
+    border: 1px solid black;
     color: #ffffff;
     
 }
@@ -564,6 +565,7 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     width:188px;
     height:662px;
     border-radius:5px;
+    border: 1px solid black;
     color: #ffffff;
     
 }
@@ -574,6 +576,7 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     width:188px;
     height:662px;
     border-radius:5px;
+    border: 1px solid black;
     color: #ffffff;
     
 }
@@ -584,6 +587,7 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     width:188px;
     height:662px;
     border-radius:5px;
+    border: 1px solid black;
     color: #ffffff;   
 }
 #btnWarriorAbility {
@@ -604,13 +608,12 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     margin-left: -5px;
     margin-right: -5px;
     font-family:Consolas,monaco,monospace;
-    font-size:12px;
+    font-size:15px;
 	background-color:#093159;
     cursor: pointer;
 	border:1px solid #000000;
 	display:inline-block;
 	color:#ffffff;
-	font-size:15px;
 	text-decoration:none;
 	text-align:center;
 }
@@ -622,4 +625,25 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 .stockButton:disabled {
     background: black;
     color: #4a4e54;
+}
+
+.investButton {
+    font-family:Consolas,monaco,monospace;
+	background: url('../Img/btn_HackBGGreen.png');
+    cursor: pointer;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#ffffff;
+	font-size:15px;
+	text-decoration:none;
+	text-align:center;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-right: 10px;  
+    height: 40px; 
+    width: 500px;
+}
+
+.investButton:hover {
+	background: url('../Img/btn_HackBG.png');
 }

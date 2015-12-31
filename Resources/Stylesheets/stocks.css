@@ -13,7 +13,7 @@
     height: 100px;
     margin: 0 auto;
     text-align: center;
-    background: url('../Img/stockHeader.jpg') 50% 0 repeat fixed;
+    background: url('../Img/stockHeader.jpg') 50% 0 repeat;
     font-size: 30px;
     line-height:100px;
 }
@@ -24,17 +24,6 @@
     height: 100px;
 }
 
-.stockType
-{
-    height: 20px;
-    float: left;
-}
-
-.stockTypeDisplay
-{
-    height: 20px;
-    float: left;
-}
 tr:nth-child(even) {
     background: url('../Img/stockBg2.jpg') 50% 0 repeat fixed;
 }
