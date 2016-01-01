@@ -2,18 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    <meta name="keywords" content="Delsec, Clicker Game, Delsec Clicker, Mr Delusive, Incremental Game"> 
+    <meta name="description" content="Delsec Incremental Game">               
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>
         Delsec Account
     </title>
     <!-- button styles generated from http://www.cssbuttongenerator.com/  Except for the generate button, I did that myself
         All images are my own.
         -->
-    <link href="Resources/Stylesheets/master.css" rel="stylesheet" type="text/css" />
-    <link href="Resources/Stylesheets/stocks.css" rel="stylesheet" type="text/css" />
-    <link href="Resources/Stylesheets/buttons.css" rel="stylesheet" type="text/css" />   
-    <link href="Resources/Stylesheets/investment.css" rel="stylesheet" type="text/css" />   
+    <link href="Resources/Stylesheets/Master.css" rel="stylesheet" type="text/css" />
+    <link href="Resources/Stylesheets/Stocks.css" rel="stylesheet" type="text/css" />
+    <link href="Resources/Stylesheets/Buttons.css" rel="stylesheet" type="text/css" />   
+    <link href="Resources/Stylesheets/Investment.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/Console.css" rel="stylesheet" type="text/css" />   
-    
+    <link href="Resources/Stylesheets/Abilities.css" rel="stylesheet" type="text/css" />  
+
 </head>
 <body>    
     <form id="delsecForm">
@@ -85,71 +89,71 @@
                 <div id="totalPacketDisplay" class="lblItemDisplay">Total Packets/Sec: 0</div>                                 
                          
                 <div id="threeBitDisplay" >
-                    <div id="threeBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
-                    <div class ="crawlerButtonWrapper"><button id="btnBuy3BitCrawler" class="btn_Style">Buy 3 Bit Delsec Bank Crawler (2 Packets/sec) - $2.00</button></div>                 
+                    <div class ="crawlerButtonWrapper"><button id="btnBuy3BitCrawler" class="btn_Style">Buy 3 Bit Delsec Bank Crawler (2 Packets/sec) - $2.00</button></div>   
+                    <div id="threeBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                                 
                     <div id="threeBitIncrementAmtDisplay" class="incremental" ></div>
                     <br />
                 </div>
                 <div id ="fourBitDisplay">
-                    <div id="fourBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
                     <div class="crawlerButtonWrapper"><button id="btnBuy4BitCrawler" class="btn_Style">Buy 4 Bit Delsec Bank Crawler (4 Packets/sec) - $3.95</button></div>
+                    <div id="fourBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                   
                     <div id="fourBitIncrementAmtDisplay" class="incremental"></div>
                     <br />
                 </div>
                 <div id ="sixBitDisplay">
-                    <div id="sixBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div> 
                     <div class="crawlerButtonWrapper"><button id="btnBuy6BitCrawler" class="btn_Style">Buy 6 Bit Delsec Bank Crawler (16 Packets/sec) - $15.00</button> </div>
+                    <div id="sixBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>               
                     <div id="sixBitIncrementAmtDisplay" class="incremental"></div>
                     <br />
                 </div>
                 <div id ="russianSixBitDisplay">
-                    <div id="russianSixBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div> 
                     <div class="crawlerButtonWrapper"><button id="btnBuyRussian6BitCrawler" class="btn_StyleRed">Buy 6 Bit Russian Tech Crawler (16 Packets/sec REINFORCED) - $22.50</button> </div>
+                    <div id="russianSixBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div> 
                     <div id="russianSixBitIncrementAmtDisplay" class="incrementalReinforced"></div>
                 </div>
                 <div id ="eightBitDisplay">
-                    <div id="eightBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div> 
                     <div class="crawlerButtonWrapper"><button id="btnBuy8BitCrawler" class="btn_Style">Buy 8 Bit Delsec Bank Crawler (64 Packets/sec) - $58.00</button> </div>
+                    <div id="eightBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                  
                     <div id="eightBitIncrementAmtDisplay" class="incremental"></div>
                 </div>
                 <div id ="twelveBitDisplay">
-                    <div id="twelveBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>   
                     <div class="crawlerButtonWrapper"><button id="btnBuy12BitCrawler" class="btn_Style">Buy 12 Bit Delsec Bank Crawler (1024 Packets/sec) - $820.00</button> </div>
+                    <div id="twelveBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                    
                     <div id="twelveBitIncrementAmtDisplay" class="incremental"></div>
                 </div>
                 <div id ="sixteenBitDisplay">
-                    <div id="sixteenBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
                     <div class="crawlerButtonWrapper"><button id="btnBuy16BitCrawler" class="btn_Style">Buy 16 Bit Delsec Bank Crawler (16,384 Packets/sec) - $12,288.00</button> </div>
+                    <div id="sixteenBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>           
                     <div id="sixteenBitIncrementAmtDisplay" class="incremental"></div>
                 </div>
 
                 <div id ="fourByteDisplay">
-                    <div id="fourByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
                     <div class="crawlerButtonWrapper"><button id="btnBuy4ByteCrawler" class="btn_Style">Buy 4 Byte Delsec Bank Crawler (32,768 Packets/sec) - $24,248.32</button> </div>
+                    <div id="fourByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                   
                     <div id="fourByteIncrementAmtDisplay" class="incremental"></div>
                 </div>
 
                 <div id ="eightByteDisplay">
-                    <div id="eightByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
                     <div class="crawlerButtonWrapper"><button id="btnBuy8ByteCrawler" class="btn_Style">Buy 8 Byte Delsec Bank Crawler (65,536 Packets/sec) - $47,841.28</button> </div>
+                    <div id="eightByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                   
                     <div id="eightByteIncrementAmtDisplay" class="incremental"></div>
                 </div>
 
                 <div id ="sixteenByteDisplay">
-                    <div id="sixteenByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
                     <div class="crawlerButtonWrapper"><button id="btnBuy16ByteCrawler" class="btn_Style">Buy 16 Byte Delsec Bank Crawler (131,072 Packets/sec) - $94,371.84</button> </div>
+                    <div id="sixteenByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                   
                     <div id="sixteenByteIncrementAmtDisplay" class="incremental"></div>
                 </div>
 
                 <div id ="thirtytwoByteDisplay">
-                    <div id="thirtytwoByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
                     <div class="crawlerButtonWrapper"><button id="btnBuy32ByteCrawler" class="btn_Style">Buy 32 Byte Delsec Bank Crawler (262,144 Packets/sec) - $186,122.24</button> </div>
+                    <div id="thirtytwoByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>               
                     <div id="thirtytwoByteIncrementAmtDisplay" class="incremental"></div>
                 </div>
 
                 <div id ="sixtyfourByteDisplay">
-                    <div id="sixtyfourByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>
                     <div class="crawlerButtonWrapper"><button id="btnBuy64ByteCrawler" class="btn_Style">Buy 64 Byte Delsec Bank Crawler (524,288 Packets/sec) - $367,001.60</button> </div>
+                    <div id="sixtyfourByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
                     <div id="sixtyfourByteIncrementAmtDisplay" class="incremental"></div>
                 </div>               
 
@@ -1067,27 +1071,93 @@
                     <div id="btnRogueDisplay" class ="abilityDisplay"><button id="btnRogueAbility" style="margin:10px;" class="btn_Rogue"></button> </div>   
                 </div>                                
             </div>
+
             <div id="warriorAbilities" class="hidden_Divs">
-                Warrior Abilities<br />
-                WARRIOR GENERATE: A Button that gets stronger with every click. (+$1 for every 100 clicks). <br />
-                (PASSIVE): Access to the PowerGenerators tab.
-
+                <div class="skilltreeHeaderWrapper">
+                    <h1>YOU WALK THE PATH OF THE WARRIOR</h1>
+                    <div id="btnWarriorHeader">
+                        <button class="warriorPassiveButton"></button>
+                        <div class="skillHoverPopup" id="warriorInfo">
+                            WARRIOR GENERATE: A Button that gets stronger with every click. (+$1 for every 100 clicks).
+                        </div>
+                    </div>                 
+                </div>
+                <div class="skilltreeRowWrapper">
+                    WARRIOR LEVEL 1 ABILITIES <br />
+                    (PASSIVE): Access to the PowerGenerators tab.  
+                </div>
+                <div class="skilltreeRowWrapper">
+                    WARRIOR LEVEL 2 ABILITIES
+                </div>
+                <div class="skilltreeRowWrapper">
+                    WARRIOR LEVEL 3 ABILITIES
+                </div>            
             </div>
+
             <div id="wizardAbilities" class="hidden_Divs">
-                Wizard Abilities<br />
-                (PASSIVE) AUTO GENERATE: Generates a bonus 10% of packets per second automatically.
-
+                <div class="skilltreeHeaderWrapper">
+                    <h1>YOU WALK THE PATH OF THE WIZARD</h1>
+                    <div id="btnWizardHeader">
+                        <button class="wizardPassiveButton"></button>
+                        <div class="skillHoverPopup" id="wizardInfo">
+                            (PASSIVE) AUTO GENERATE: Generates a bonus 10% of packets per second automatically.
+                        </div>
+                    </div>              
+                </div>
+                <div class="skilltreeRowWrapper">
+                    WIZARD LEVEL 1 ABILITIES <br />                   
+                </div>
+                <div class="skilltreeRowWrapper">
+                    WIZARD LEVEL 2 ABILITIES
+                </div>
+                <div class="skilltreeRowWrapper">
+                    WIZARD LEVEL 3 ABILITIES
+                </div>
             </div>
+
             <div id="rogueAbilities" class="hidden_Divs">
-                Rogue Abilities<br />
-                STOCK GENERATE: Generates 1 stock of low quality for each click. <br />
-                (PASSIVE): Stock sell prices are 5% lower instead of the usual 10%.
-
+                <div class="skilltreeHeaderWrapper">
+                    <h1>YOU WALK THE PATH OF THE ROGUE</h1>
+                    <div id="btnRogueHeader">
+                        <button class="roguePassiveButton"></button>
+                        <div class="skillHoverPopup" id="rogueInfo">
+                            STOCK GENERATE: Generates 1 stock of low quality for each click.
+                        </div>
+                    </div>                   
+                </div>
+                <div class="skilltreeRowWrapper">
+                    ROGUE LEVEL 1 ABILITIES <br />
+                    (PASSIVE): Stock sell prices are 5% lower instead of the usual 10%.
+                </div>
+                <div class="skilltreeRowWrapper">
+                    ROGUE LEVEL 2 ABILITIES
+                </div>
+                <div class="skilltreeRowWrapper">
+                    ROGUE LEVEL 3 ABILITIES
+                </div>
             </div>
+
             <div id="healerAbilities" class="hidden_Divs">
-                Healer Abilities <br />
-                INTEREST GENERATE: Adds 0.01% of the amount currently in your account. Up to a max of $500 Initially. <br />
-                (PASSIVE): Interest rolls are now +1. from 2 - 11 instead of 1 - 10. Cannot lose invested money any more.
+                <div class="skilltreeHeaderWrapper">
+                    <h1>YOU WALK THE PATH OF THE HEALER</h1>
+                    <div id="btnHealerHeader">
+                        <button class="healerPassiveButton" ></button>
+                        <div class="skillHoverPopup" id="healerInfo">
+                            INTEREST GENERATE: Adds 0.01% of the amount currently in your account. Up to a max of $500 Initially.
+                        </div>
+                    </div>                    
+                </div>
+                <div class="skilltreeRowWrapper">
+                    HEALER LEVEL 1 ABILITIES <br />
+                    
+                    (PASSIVE): Interest rolls are now +1. from 2 - 11 instead of 1 - 10. Cannot lose invested money any more.
+                </div>
+                <div class="skilltreeRowWrapper">
+                    HEALER LEVEL 2 ABILITIES
+                </div>
+                <div class="skilltreeRowWrapper">
+                    HEALER LEVEL 3 ABILITIES
+                </div>            
             </div>
             
             <div id ="console" class="hidden_Divs">    
@@ -1168,6 +1238,11 @@
     <script src="Resources/Scripts/Investment/LongTermInvestments.js"></script>
 
     <script src="Resources/Scripts/Console/Console.js"></script>
+
+    <script src="Resources/Scripts/Classes/HealerAbilities.js"></script>
+    <script src="Resources/Scripts/Classes/RogueAbilities.js"></script>
+    <script src="Resources/Scripts/Classes/WarriorAbilities.js"></script>
+    <script src="Resources/Scripts/Classes/WizardAbilities.js"></script>
 
     <script src="Resources/Scripts/autosave.js"></script>
 </body>
