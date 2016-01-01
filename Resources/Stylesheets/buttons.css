@@ -176,48 +176,23 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 }
 
 .btn_Style {
-	-moz-box-shadow:inset 0px 1px 0px 0px #4a4e54;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #4a4e54;
-	box-shadow:inset 0px 1px 0px 0px #4a4e54;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #093159), color-stop(1, #031630) );
-	background:-moz-linear-gradient( center top, #093159 5%, #031630 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#093159', endColorstr='#031630');
-	background-color:#093159;
-	-webkit-border-top-left-radius:0px;
-	-moz-border-radius-topleft:0px;
-	border-top-left-radius:0px;
-	-webkit-border-top-right-radius:0px;
-	-moz-border-radius-topright:0px;
-	border-top-right-radius:0px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-	border-bottom-left-radius:0px;
-	text-indent:0;
-	border:1px solid #000000;
+    background: url('../Img/stockBg1.jpg');
+    border: 1px solid black;
 	display:inline-block;
     cursor: pointer;
-	color:#ffffff;
+	color: white;
     font-family: Consolas,monaco,monospace;
-	font-size:15px;
-	font-weight:bold;
-	font-style:normal;
+	font-size:13px;
 	height:40px;
-    width: 600px;
-	line-height:40px;
+    width: 550px;
+	line-height:30px;
+    margin: 10px;
+    margin-top: 20px;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #000305;
 }
 .btn_Style:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #031630), color-stop(1, #093159) );
-	background:-moz-linear-gradient( center top, #031630 5%, #093159 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#031630', endColorstr='#093159');
-	background-color:#031630;
-}.btn_Style:active {
-	position:relative;
+	background: url('../Img/stockBg2.jpg');
 }
 .btn_Style:disabled {
     background: black;
@@ -225,50 +200,23 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 }
 
 .btn_StyleRed {
-	-moz-box-shadow:inset 0px 1px 0px 0px #c97e79;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #c97e79;
-	box-shadow:inset 0px 1px 0px 0px #c97e79;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d16a62), color-stop(1, #c62d1f) );
-	background:-moz-linear-gradient( center top, #d16a62 5%, #c62d1f 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d16a62', endColorstr='#c62d1f');
-	background-color:#d16a62;
-	-webkit-border-top-left-radius:0px;
-	-moz-border-radius-topleft:0px;
-	border-top-left-radius:0px;
-	-webkit-border-top-right-radius:0px;
-	-moz-border-radius-topright:0px;
-	border-top-right-radius:0px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-	border-bottom-left-radius:0px;
-	text-indent:0;
-	border:1px solid #6e2c28;
+	background: url('../Img/stockBgRed.png');
+    border: 1px solid black;
 	display:inline-block;
-	color:#030103;
     cursor: pointer;
-	font-family:Consolas,monaco,monospace;
-	font-size:15px;
-	font-weight:bold;
-	font-style:normal;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
 	height:40px;
-    width: 600px;
-	line-height:40px;
+    width: 550px;
+	line-height:30px;
+    margin: 10px;
+    margin-top: 20px;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #810e05;
 }
 .btn_StyleRed:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #d16a62) );
-	background:-moz-linear-gradient( center top, #c62d1f 5%, #d16a62 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#d16a62');
-	background-color:#c62d1f;
-}
-.btn_StyleRed:active {
-	position:relative;
-	top:1px;
+	background: url('../Img/stockBgRed2.png');
 }
 .btn_StyleRed:disabled {
     background: black;
@@ -608,7 +556,7 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
     margin-left: -5px;
     margin-right: -5px;
     font-family:Consolas,monaco,monospace;
-    font-size:15px;
+    font-size:14px;
 	background-color:#093159;
     cursor: pointer;
 	border:1px solid #000000;
@@ -629,12 +577,12 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 
 .investButton {
     font-family:Consolas,monaco,monospace;
-	background: url('../Img/btn_HackBGGreen.png');
+	background: url('../Img/stockBgGreen.png');
     cursor: pointer;
 	border:1px solid #000000;
 	display:inline-block;
 	color:#ffffff;
-	font-size:15px;
+	font-size:14px;
 	text-decoration:none;
 	text-align:center;
     margin: 0 auto;
@@ -645,5 +593,6 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 }
 
 .investButton:hover {
-	background: url('../Img/btn_HackBG.png');
+	background: url('../Img/stockBgGreen2.png');
+
 }

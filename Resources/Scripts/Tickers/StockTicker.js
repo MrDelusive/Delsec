@@ -11,7 +11,7 @@
 
     setInterval(function () {
         // DELSEC //
-        delsecIncrement = totalChunks / 5000 + Math.round(100 * Math.random() / 10) / 100;
+        delsecIncrement = totalPackets / (250 * delsecCurrentStockPrice) + Math.round(100 * Math.random() / 10) / 100;
         if (delsecIncrement > 0) {
             $("#delsecChange").css("color","#24b41e");
             $("#delsecChange").html("+" + delsecIncrement.toFixed(2));
@@ -30,6 +30,10 @@
 
         // ENTAQ //
         entaqIncrement = Math.round(100 * Math.random() * 0.2) / 100 - 0.1;
+        entaqCurrentStockPrice += entaqIncrement;
+        if (entaqCurrentStockPrice <= 0.1) 
+            entaqCurrentStockPrice = 0.1;
+             
         if (entaqIncrement > 0) {
             $("#entaqChange").css("color", "#24b41e");
             $("#entaqChange").html("+" + entaqIncrement.toFixed(2));
@@ -38,10 +42,11 @@
             $("#entaqChange").css("color", "#ce0000");
             $("#entaqChange").html(entaqIncrement.toFixed(2));
         }
-
-        entaqCurrentStockPrice += entaqIncrement;
-        if (entaqCurrentStockPrice <= 0.1)
-            entaqCurrentStockPrice = 0.1;
+        else if (entaqIncrement == 0) {
+            $("#entaqChange").css("color", "#5ac7ff");
+            $("#entaqChange").html(entaqIncrement.toFixed(2));
+        }
+        
         $('#entaqStockDisplayCost').html('$' + entaqCurrentStockPrice.toFixed(2));
         $('#entaqStockSellPrice').html('$' + (entaqCurrentStockPrice - entaqCurrentStockPrice / sellDivider).toFixed(2));
         $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - entaqCurrentStockPrice / sellDivider)).toFixed(2));

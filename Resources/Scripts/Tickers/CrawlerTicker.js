@@ -8,35 +8,35 @@ $(window).load(function () {
             // displaying the float as 2 decimals. .toFixed doesn't change the actual value of increment, so there were display and code inconsistencies.
             // i.e the money would increment by .03 but display .04.
             // The 100 * is because Math.round returns to the nearest whole number. then divide that by 100 to get the 2 decimal place actual number.                   
-            autoIncrement = Math.round(100 * Math.random() / 25) / 100;
+            autoIncrement = Math.round(100 * Math.random() * 0.04) / 100;
             $('#threeBitIncrementAmtDisplay').html('+ $' + (autoIncrement * threeBitBank).toFixed(2));
             $('#threeBitIncrementAmtDisplay').show(1);
             $('#threeBitIncrementAmtDisplay').delay(1000);
-            $('#threeBitIncrementAmtDisplay').hide(500);
+            $('#threeBitIncrementAmtDisplay').fadeOut(500);
         }
 
         if (fourBitBank > 0) {          
-            autoIncrement2s = Math.round(100 * Math.random() / 12.5) / 100;                                       
+            autoIncrement2s = Math.round(100 * Math.random() * 0.08) / 100;                                       
             $('#fourBitIncrementAmtDisplay').html('+ $' + (autoIncrement2s * fourBitBank).toFixed(2));
             $('#fourBitIncrementAmtDisplay').show(1);
             $('#fourBitIncrementAmtDisplay').delay(1000);
-            $('#fourBitIncrementAmtDisplay').hide(500);
+            $('#fourBitIncrementAmtDisplay').fadeOut(500);
         }
 
         if (sixBitBank > 0) {
-            autoIncrement6Bit = Math.round(100 * Math.random() / 3.125) / 100;
+            autoIncrement6Bit = Math.round(100 * Math.random() * 0.32) / 100;
             $('#sixBitIncrementAmtDisplay').html('+ $' + (autoIncrement6Bit * sixBitBank).toFixed(2));
             $('#sixBitIncrementAmtDisplay').show(1);        
             $('#sixBitIncrementAmtDisplay').delay(1000);
-            $('#sixBitIncrementAmtDisplay').hide(500);
+            $('#sixBitIncrementAmtDisplay').fadeOut(500);
         }
 
         if (russianSixBitBank > 0) {
-            autoIncrementRussian6Bit = Math.round(100 * (Math.random() ) / 3.125) / 100 + 0.01;
+            autoIncrementRussian6Bit = Math.round(100 * (Math.random()) * 0.32) / 100 + 0.01;
             $('#russianSixBitIncrementAmtDisplay').html('+ $' + (autoIncrementRussian6Bit * russianSixBitBank).toFixed(2));
             $('#russianSixBitIncrementAmtDisplay').show(1);
             $('#russianSixBitIncrementAmtDisplay').delay(1000);
-            $('#russianSixBitIncrementAmtDisplay').hide(500);
+            $('#russianSixBitIncrementAmtDisplay').fadeOut(500);
         }
 
         if (eightBitBank > 0) {
@@ -44,7 +44,7 @@ $(window).load(function () {
             $('#eightBitIncrementAmtDisplay').html('+ $' + (autoIncrement8Bit * eightBitBank).toFixed(2));
             $('#eightBitIncrementAmtDisplay').show(1);
             $('#eightBitIncrementAmtDisplay').delay(1000);
-            $('#eightBitIncrementAmtDisplay').hide(500);
+            $('#eightBitIncrementAmtDisplay').fadeOut(500);
         }
 
         if (twelveBitBank > 0) {
@@ -52,7 +52,7 @@ $(window).load(function () {
             $('#twelveBitIncrementAmtDisplay').html('+ $' + (autoIncrement12Bit * twelveBitBank).toFixed(2));
             $('#twelveBitIncrementAmtDisplay').show(1);
             $('#twelveBitIncrementAmtDisplay').delay(1000);
-            $('#twelveBitIncrementAmtDisplay').hide(500);
+            $('#twelveBitIncrementAmtDisplay').fadeOut(500);
         }
 
         if (sixteenBitBank > 0) {
@@ -60,7 +60,7 @@ $(window).load(function () {
             $('#sixteenBitIncrementAmtDisplay').html('+ $' + (autoIncrement16Bit * sixteenBitBank).toFixed(2));
             $('#sixteenBitIncrementAmtDisplay').show(1);
             $('#sixteenBitIncrementAmtDisplay').delay(1000);
-            $('#sixteenBitIncrementAmtDisplay').hide(500);
+            $('#sixteenBitIncrementAmtDisplay').fadeOut(500);
         }
 
         if (fourByteBank > 0) {
@@ -68,7 +68,7 @@ $(window).load(function () {
             $('#fourByteIncrementAmtDisplay').html('+ $' + (autoIncrement4Byte * fourByteBank).toFixed(2));
             $('#fourByteIncrementAmtDisplay').show(1);
             $('#fourByteIncrementAmtDisplay').delay(1000);
-            $('#fourByteIncrementAmtDisplay').hide(500);
+            $('#fourByteIncrementAmtDisplay').fadeOut(500);
         }
 
         if (eightByteBank > 0) {
@@ -76,7 +76,7 @@ $(window).load(function () {
             $('#eightByteIncrementAmtDisplay').html('+ $' + (autoIncrement8Byte * eightByteBank).toFixed(2));
             $('#eightByteIncrementAmtDisplay').show(1);
             $('#eightByteIncrementAmtDisplay').delay(1000);
-            $('#eightByteIncrementAmtDisplay').hide(500);
+            $('#eightByteIncrementAmtDisplay').fadeOut(500);
         }
 
         if (sixteenByteBank > 0) {
@@ -84,7 +84,7 @@ $(window).load(function () {
             $('#sixteenByteIncrementAmtDisplay').html('+ $' + (autoIncrement16Byte * sixteenByteBank).toFixed(2));
             $('#sixteenByteIncrementAmtDisplay').show(1);
             $('#sixteenByteIncrementAmtDisplay').delay(1000);
-            $('#sixteenByteIncrementAmtDisplay').hide(500);
+            $('#sixteenByteIncrementAmtDisplay').fadeOut(500);
         }
 
         if (thirtytwoByteBank > 0) {
@@ -92,7 +92,7 @@ $(window).load(function () {
             $('#thirtytwoByteIncrementAmtDisplay').html('+ $' + (autoIncrement32Byte * thirtytwoByteBank).toFixed(2));
             $('#thirtytwoByteIncrementAmtDisplay').show(1);
             $('#thirtytwoByteIncrementAmtDisplay').delay(1000);
-            $('#thirtytwoByteIncrementAmtDisplay').hide(500);
+            $('#thirtytwoByteIncrementAmtDisplay').fadeOut(500);
         }
 
         if (sixtyfourByteBank > 0) {
@@ -100,7 +100,7 @@ $(window).load(function () {
             $('#sixtyfourByteIncrementAmtDisplay').html('+ $' + (autoIncrement64Byte * sixtyfourByteBank).toFixed(2));
             $('#sixtyfourByteIncrementAmtDisplay').show(1);
             $('#sixtyfourByteIncrementAmtDisplay').delay(1000);
-            $('#sixtyfourByteIncrementAmtDisplay').hide(500);
+            $('#sixtyfourByteIncrementAmtDisplay').fadeOut(500);
         }
 
         if (userClass == "Wizard") {

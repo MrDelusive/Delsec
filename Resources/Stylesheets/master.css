@@ -25,6 +25,10 @@
     width: 20%;
     color: #FFF;
 }
+#debugContainer {
+    position: absolute;
+
+}
 #center_Main
 {  
 	z-index: 100;
@@ -45,9 +49,17 @@
 	padding-bottom: 4px;
 	padding-left: 4px;
     color: #FFF;
-    font-size: 60px;
+    font-size: 60px;   
+}
+#totalPacketDisplay {
+    width: 970px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 10px;
+    line-height: 50px;
     
 }
+
 #lblMoneyDisplayScroll {
 	left: 37%;
     top: 10px;
@@ -68,22 +80,47 @@
     color: white;
 }
 
-#lblItemDisplay {
+.lblItemDisplay {
+    float: left;
+    width: 210px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    height: 50px;
     color: white;
-    margin: 20px;
-    padding: 10px;
-    border-style:solid;
-    border-width: 1px;
-    border-color: #001b52;
+    border: 1px solid #001b52;
     background: black;
+    font-size: 13px;
 }
 
-.crawlerDisplay {
-    height: 24px;
-    font-size: 14px;
-    padding: 0px;
-    margin: 0px;
+.incremental
+{
+    padding-top: 30px;
+    width: 200px;
+    height: 50px;
     display: none;
+    color:#24b41e;
+    float:right;
+    font-size:14px;
+}
+
+.incrementalReinforced
+{
+    padding-top: 30px;
+    width: 200px;
+    height: 50px;
+    display: none;
+    color:#88bb84;
+    float:right;
+    font-size:14px;
+}
+
+.crawlerButtonWrapper {
+    width: 560px;
+    height: 100px;
+    float: left;
 }
 
 #welcome
@@ -225,22 +262,6 @@
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: Consolas,monaco,monospace;
-}
-
-.incremental
-{
-    display: none;
-    color:#24b41e;
-    float:right;
-    font-size:20px;
-}
-
-.incrementalReinforced
-{
-    display: none;
-    color:#88bb84;
-    float:right;
-    font-size:20px;
 }
 
 .hidden_Buttons

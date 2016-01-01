@@ -1,5 +1,5 @@
 var delsecCurrentStockPrice = 2.20;
-var entaqCurrentStockPrice = 0.32;
+var entaqCurrentStockPrice = 0.57;
 var ventexCurrentStockPrice = 1.54;
 var astorCurrentStockPrice = 0.95;
 var popbotCurrentStockPrice = 0.01;

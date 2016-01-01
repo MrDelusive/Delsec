@@ -7,15 +7,10 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             threeBitBank++;
-
-            // update the totalChunks info
-            totalChunks += 2;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            // update the items div.
-            // * 8 / 4 where 8 = number of chunks overall and 4 = number of seconds per update. (Based on setInterval for threeBit Crawlers).
-            $('#threeBitItemDisplay').show();
-            $('#threeBitItemDisplay').html("Delsec3bit.exe :" + threeBitBank + " Processes Iterating through " + threeBitBank * 2 + " Chunks of data per second.<br />");
+            totalPackets += 2;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            // * 8 / 4 where 8 = number of packets overall and 4 = number of seconds per update. (Based on setInterval for threeBit Crawlers).
+            $('#threeBitItemDisplay').html(threeBitBank + " Processes Running Through " + threeBitBank * 2 + " Packets/Sec");
         }
         return false;
     });
@@ -27,11 +22,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             fourBitBank++;
-            totalChunks += 4;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#fourBitItemDisplay').show();
-            $('#fourBitItemDisplay').html("Delsec4bit.exe :" + fourBitBank + " Processes Iterating through " + fourBitBank * 4 + " Chunks of data per second.<br />");            
+            totalPackets += 4;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#fourBitItemDisplay').html(fourBitBank + " Processes Running Through " + fourBitBank * 4 + " Packets/Sec");
         }
         if (fourBitBank > 3) {
             $("#email4Heading").show(1);
@@ -52,11 +45,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             sixBitBank++;
-            totalChunks += 16;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#sixBitItemDisplay').show();
-            $('#sixBitItemDisplay').html("Delsec6bit.exe :" + sixBitBank + " Processes Iterating through " + sixBitBank * 16 + " Chunks of data per second.<br />");
+            totalPackets += 16;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#sixBitItemDisplay').html(sixBitBank + " Processes Running Through " + sixBitBank * 16 + " Packets/Sec");
         }
         return false;
     });
@@ -68,11 +59,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             russianSixBitBank++;
-            totalChunks += 16;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#russianSixBitItemDisplay').show();
-            $('#russianSixBitItemDisplay').html("Russian6bit.exe :" + russianSixBitBank + " Processes Iterating through " + russianSixBitBank * 16 + " Chunks of data per second.<br />");
+            totalPackets += 16;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#russianSixBitItemDisplay').html(russianSixBitBank + " Processes Running Through " + russianSixBitBank * 16 + " Packets/Sec");
         }
         if (russianSixBitBank > 0) {
             $("#email3Heading").fadeIn(1);
@@ -93,11 +82,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             eightBitBank++;
-            totalChunks += 64;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#eightBitItemDisplay').show();
-            $('#eightBitItemDisplay').html("Delsec8bit.exe :" + eightBitBank + " Processes Iterating through " + eightBitBank * 64 + " Chunks of data per second.<br />");
+            totalPackets += 64;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#eightBitItemDisplay').html(eightBitBank + " Processes Running Through " + eightBitBank * 64 + " Packets/Sec");
         }
         return false;
     });
@@ -110,11 +97,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             twelveBitBank++;
-            totalChunks += 1024;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#twelveBitItemDisplay').show();
-            $('#twelveBitItemDisplay').html("Delsec12bit.exe :" + twelveBitBank + " Processes Iterating through " + twelveBitBank * 1024 + " Chunks of data per second.<br />");
+            totalPackets += 1024;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#twelveBitItemDisplay').html(twelveBitBank + " Processes Running Through " + twelveBitBank * 1024 + " Packets/Sec");
             localStorage.setItem("twelveBitBank", twelveBitBank);
         }
         return false;
@@ -127,11 +112,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             sixteenBitBank++;
-            totalChunks += 16384;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#sixteenBitItemDisplay').show();
-            $('#sixteenBitItemDisplay').html("Delsec16bit.exe :" + sixteenBitBank + " Processes Iterating through " + sixteenBitBank * 16384 + " Chunks of data per second.<br />");
+            totalPackets += 16384;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#sixteenBitItemDisplay').html(sixteenBitBank + " Processes Running Through " + sixteenBitBank * 16384 + " Packets/Sec");
         }
         return false;
     });
@@ -143,11 +126,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             fourByteBank++;
-            totalChunks += 32768;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#fourByteItemDisplay').show();
-            $('#fourByteItemDisplay').html("Delsec4Byte.exe :" + fourByteBank + " Processes Iterating through " + fourByteBank * 32768 + " Chunks of data per second.<br />");
+            totalPackets += 32768;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#fourByteItemDisplay').html(fourByteBank + " Processes Running Through " + fourByteBank * 32768 + " Packets/Sec");
 
             if (fourByteBank > 0) {
                 $("#email4ByteHeading").fadeIn(1);
@@ -168,11 +149,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             eightByteBank++;
-            totalChunks += 65536;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#eightByteItemDisplay').show();
-            $('#eightByteItemDisplay').html("Delsec8Byte.exe :" + eightByteBank + " Processes Iterating through " + eightByteBank * 65536 + " Chunks of data per second.<br />");
+            totalPackets += 65536;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#eightByteItemDisplay').html(eightByteBank + " Processes Running Through " + eightByteBank * 65536 + " Packets/Sec");
         }
         return false;
     });
@@ -184,11 +163,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             sixteenByteBank++;
-            totalChunks += 131072;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#sixteenByteItemDisplay').show();
-            $('#sixteenByteItemDisplay').html("Delsec16Byte.exe :" + sixteenByteBank + " Processes Iterating through " + sixteenByteBank * 131072 + " Chunks of data per second.<br />");
+            totalPackets += 131072;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#sixteenByteItemDisplay').html(sixteenByteBank + " Processes Running Through " + sixteenByteBank * 131072 + " Packets/Sec");
         }
         return false;
     });
@@ -200,11 +177,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             thirtytwoByteBank++;
-            totalChunks += 262144;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#thirtytwoByteItemDisplay').show();
-            $('#thirtytwoByteItemDisplay').html("Delsec32Byte.exe :" + thirtytwoByteBank + " Processes Iterating through " + thirtytwoByteBank * 262144 + " Chunks of data per second.<br />");
+            totalPackets += 262144;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#thirtytwoByteItemDisplay').html(thirtytwoByteBank + " Processes Running Through " + thirtytwoByteBank * 262144 + " Packets/Sec");
         }
         return false;
     });
@@ -216,11 +191,9 @@ $(window).load(function () {
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             sixtyfourByteBank++;
-            totalChunks += 524288;
-            $('#totalChunkDisplay').show();
-            $('#totalChunkDisplay').html("Total Chunks Per Second: " + totalChunks);
-            $('#sixtyfourByteItemDisplay').show();
-            $('#sixtyfourByteItemDisplay').html("Delsec64Byte.exe :" + sixtyfourByteBank + " Processes Iterating through " + sixtyfourByteBank * 524288 + " Chunks of data per second.<br />");
+            totalPackets += 524288;
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#sixtyfourByteItemDisplay').html(sixtyfourByteBank + " Processes Running Through " + sixtyfourByteBank * 524288 + " Packets/Sec");
         }
         return false;
     });

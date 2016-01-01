@@ -28,7 +28,7 @@ var autoIncrement8Byte = 0;
 var autoIncrement16Byte = 0;
 var autoIncrement32Byte = 0;
 var autoIncrement64Byte = 0;
-var totalChunks = 0;
+var totalPackets = 0;
 
 // Emails WHY am i storing bools as strings you ask?
 // Cause LocalStorage is a piece of shit, that's why.

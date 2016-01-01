@@ -64,7 +64,7 @@ $(window).load(function () {
         localStorage.setItem("thirtytwoByteBank", 0);
         localStorage.setItem("sixtyfourByteBank", 0);
 
-        localStorage.setItem("totalChunks", 0);
+        localStorage.setItem("totalPackets", 0);
 
         localStorage.setItem("numUnreadEmails", 2);
         localStorage.setItem("email1Viewed", "false");
@@ -122,7 +122,7 @@ $(window).load(function () {
         localStorage.setItem("ownedReinaccStocks", 0);
 
         localStorage.setItem("delsecCurrentStockPrice", 2.20);
-        localStorage.setItem("entaqCurrentStockPrice", 0.27);       
+        localStorage.setItem("entaqCurrentStockPrice", 0.57);       
         localStorage.setItem("ventexCurrentStockPrice", 1.54);
         localStorage.setItem("astorCurrentStockPrice", 0.95);       
         localStorage.setItem("popbotCurrentStockPrice", 0.01);
@@ -182,7 +182,7 @@ $(window).load(function () {
             localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
 
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
-            localStorage.setItem("totalChunks", totalChunks);
+            localStorage.setItem("totalPackets", totalPackets);
 
             localStorage.setItem("ownedDelsecStocks", ownedDelsecStocks);
             localStorage.setItem("ownedEntaqStocks", ownedEntaqStocks);

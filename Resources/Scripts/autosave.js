@@ -17,7 +17,7 @@ $(window).load(function () {
             localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
 
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
-            localStorage.setItem("totalChunks", totalChunks);
+            localStorage.setItem("totalPackets", totalPackets);
             
             localStorage.setItem("ownedDelsecStocks", ownedDelsecStocks);
             localStorage.setItem("ownedEntaqStocks", ownedEntaqStocks);

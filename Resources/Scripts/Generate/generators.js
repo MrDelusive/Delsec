@@ -6,7 +6,7 @@ $(window).load(function () {
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-        $('#manualIncrementAmtDisplay').html('Last Chunk of Data retrieved: + $' + increment.toFixed(2));
+        $('#manualIncrementAmtDisplay').html('Last Packet of Data retrieved: + $' + increment.toFixed(2));
 
         // the initial fade in of the shop
         if (money >= 1) {
@@ -27,7 +27,7 @@ $(window).load(function () {
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-        $('#warriorGenerateAmt').html('Last Chunk of Data retrieved: + $' + increment.toFixed(2));
+        $('#warriorGenerateAmt').html('Last Packet of Data retrieved: + $' + increment.toFixed(2));
 
         return false;
     });
