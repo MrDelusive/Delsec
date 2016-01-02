@@ -1,8 +1,6 @@
 $(window).load(function () {
 
-    setInterval(function () {      
-        $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
-
+    setInterval(function () {             
         if (threeBitBank > 0) {
             // I am using Math.round as opposed to .toFixed for the increment as I need the actual value to be rounded to 2 decimals instead of just 
             // displaying the float as 2 decimals. .toFixed doesn't change the actual value of increment, so there were display and code inconsistencies.

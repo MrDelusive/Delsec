@@ -1,0 +1,178 @@
+﻿body {
+}
+
+#wizardAbilities
+{
+    float:left;
+    margin: 0 auto;
+    text-align:center;
+    background: url('../Img/wizardBG.jpg') 50% 0 repeat;
+    height:1500px;
+    width: 1000px;
+    color: #4c81c2;
+}
+
+.wizardPassiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/wizardButtonBG1.jpg');
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#btnWizardHeader {
+    height:100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#btnWizardHeader:hover > #wizardInfo {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background: #080a34;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;  
+    left:110px;
+    top:-100px;
+}
+
+.wizardSkillHoverPopup {
+    display: none;  
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background: #080a34;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+    left: -125px;  
+    top: -125px;
+}
+
+.wizardActiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/tempSkill.jpg');
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#btnWizardHeader:hover > #wizardInfo {
+    display: block;
+}
+
+#wizardSkill1-1:hover > #wizardSkill1-1Popup {
+    display: block;
+}
+
+#wizardSkill1-2:hover > #wizardSkill1-2Popup {
+    display: block;
+}
+
+#wizardSkill1-3:hover > #wizardSkill1-3Popup {
+    display: block;
+}
+
+#wizardSkill2-1:hover > #wizardSkill2-1Popup {
+    display: block;
+}
+
+#wizardSkill2-2:hover > #wizardSkill2-2Popup {
+    display: block;
+}
+
+#wizardSkill2-3:hover > #wizardSkill2-3Popup {
+    display: block;
+}
+
+#wizardSkill3-1:hover > #wizardSkill3-1Popup {
+    display: block;
+}
+
+#wizardSkill3-2:hover > #wizardSkill3-2Popup {
+    display: block;
+}
+
+#wizardSkill3-3:hover > #wizardSkill3-3Popup {
+    display: block;
+}
+
+#wizardSkill4-1:hover > #wizardSkill4-1Popup {
+    display: block;
+}
+
+#wizardSkill4-2:hover > #wizardSkill4-2Popup {
+    display: block;
+}
+
+#wizardSkill4-3:hover > #wizardSkill4-3Popup {
+    display: block;
+}
+
+#wizardSkill5-1:hover > #wizardSkill5-1Popup {
+    display: block;
+}
+
+#wizardSkill5-2:hover > #wizardSkill5-2Popup {
+    display: block;
+}
+
+#wizardSkill5-3:hover > #wizardSkill5-3Popup {
+    display: block;
+}
+
+#wizardSkill6-1:hover > #wizardSkill6-1Popup {
+    display: block;
+}
+
+#wizardSkill6-2:hover > #wizardSkill6-2Popup {
+    display: block;
+}
+
+#wizardSkill6-3:hover > #wizardSkill6-3Popup {
+    display: block;
+}
+
+#wizardSkill7-1:hover > #wizardSkill7-1Popup {
+    display: block;
+}
+
+#wizardSkill7-2:hover > #wizardSkill7-2Popup {
+    display: block;
+}
+
+#wizardSkill7-3:hover > #wizardSkill7-3Popup {
+    display: block;
+}
+
+#wizardSkill8-1:hover > #wizardSkill8-1Popup {
+    display: block;
+}
+
+#wizardSkill8-2:hover > #wizardSkill8-2Popup {
+    display: block;
+}
+
+#wizardSkill8-3:hover > #wizardSkill8-3Popup {
+    display: block;
+}
+
+#wizardSkill9-1:hover > #wizardSkill9-1Popup {
+    display: block;
+}
+
+#wizardSkill9-2:hover > #wizardSkill9-2Popup {
+    display: block;
+}
+
+#wizardSkill9-3:hover > #wizardSkill9-3Popup {
+    display: block;
+}

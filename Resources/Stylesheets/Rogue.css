@@ -1,0 +1,177 @@
+﻿body {
+}
+
+#rogueAbilities {
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    background: url('../Img/rogueBG.jpg') 50% 0 repeat;
+    height: 1500px;
+    width: 1000px;
+    color: #d4c869;
+}
+
+.roguePassiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/rogueButtonBG1.jpg');
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#btnRogueHeader {
+    height:100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#btnRogueHeader:hover > #rogueInfo {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background: #6f4a1e;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;  
+    left:110px;
+    top:-100px;
+}
+
+.rogueSkillHoverPopup {
+    display: none;  
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background: #6f4a1e;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+    left: -125px;  
+    top: -125px;
+}
+
+.rogueActiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/tempSkill.jpg');
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#btnRogueHeader:hover > #rogueInfo {
+    display: block;
+}
+
+#rogueSkill1-1:hover > #rogueSkill1-1Popup {
+    display: block;
+}
+
+#rogueSkill1-2:hover > #rogueSkill1-2Popup {
+    display: block;
+}
+
+#rogueSkill1-3:hover > #rogueSkill1-3Popup {
+    display: block;
+}
+
+#rogueSkill2-1:hover > #rogueSkill2-1Popup {
+    display: block;
+}
+
+#rogueSkill2-2:hover > #rogueSkill2-2Popup {
+    display: block;
+}
+
+#rogueSkill2-3:hover > #rogueSkill2-3Popup {
+    display: block;
+}
+
+#rogueSkill3-1:hover > #rogueSkill3-1Popup {
+    display: block;
+}
+
+#rogueSkill3-2:hover > #rogueSkill3-2Popup {
+    display: block;
+}
+
+#rogueSkill3-3:hover > #rogueSkill3-3Popup {
+    display: block;
+}
+
+#rogueSkill4-1:hover > #rogueSkill4-1Popup {
+    display: block;
+}
+
+#rogueSkill4-2:hover > #rogueSkill4-2Popup {
+    display: block;
+}
+
+#rogueSkill4-3:hover > #rogueSkill4-3Popup {
+    display: block;
+}
+
+#rogueSkill5-1:hover > #rogueSkill5-1Popup {
+    display: block;
+}
+
+#rogueSkill5-2:hover > #rogueSkill5-2Popup {
+    display: block;
+}
+
+#rogueSkill5-3:hover > #rogueSkill5-3Popup {
+    display: block;
+}
+
+#rogueSkill6-1:hover > #rogueSkill6-1Popup {
+    display: block;
+}
+
+#rogueSkill6-2:hover > #rogueSkill6-2Popup {
+    display: block;
+}
+
+#rogueSkill6-3:hover > #rogueSkill6-3Popup {
+    display: block;
+}
+
+#rogueSkill7-1:hover > #rogueSkill7-1Popup {
+    display: block;
+}
+
+#rogueSkill7-2:hover > #rogueSkill7-2Popup {
+    display: block;
+}
+
+#rogueSkill7-3:hover > #rogueSkill7-3Popup {
+    display: block;
+}
+
+#rogueSkill8-1:hover > #rogueSkill8-1Popup {
+    display: block;
+}
+
+#rogueSkill8-2:hover > #rogueSkill8-2Popup {
+    display: block;
+}
+
+#rogueSkill8-3:hover > #rogueSkill8-3Popup {
+    display: block;
+}
+
+#rogueSkill9-1:hover > #rogueSkill9-1Popup {
+    display: block;
+}
+
+#rogueSkill9-2:hover > #rogueSkill9-2Popup {
+    display: block;
+}
+
+#rogueSkill9-3:hover > #rogueSkill9-3Popup {
+    display: block;
+}

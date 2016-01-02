@@ -31,6 +31,12 @@
     if (localStorage.getItem("numUnreadEmails") === null)
         localStorage.setItem("numUnreadEmails", numUnreadEmails);
 
+    if (localStorage.getItem("email10KDisplayed") === null)
+        localStorage.setItem("email10KDisplayed", email10KDisplayed);
+
+    if (localStorage.getItem("email10KViewed") === null)
+        localStorage.setItem("email10KViewed", email10KViewed);
+
     if (localStorage.getItem("totalPackets") === null)
         localStorage.setItem("totalPackets", totalPackets);
    
@@ -77,6 +83,8 @@
         emailQuickScopeViewed = localStorage.getItem("emailQuickScopeViewed");      
         emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewed");
         emailDelsecStockDisplayed = localStorage.getItem("emailDelsecStockDisplayed");
+        email10KViewed = localStorage.getItem("email10KViewed");
+        email10KDisplayed = localStorage.getItem("email10KDisplayed");
         email4ByteViewed = localStorage.getItem("email4ByteViewed");
         
         numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmails"));
@@ -148,6 +156,9 @@
     if (emailDelsecStockDisplayed == "true")
         $("#emailDelsecStockHeading").show(1);
 
+    if (email10KDisplayed == "true")
+        $("#email10KHeading").show(1);
+
     if (email1Viewed == "true") {
         $("#btnEmail1View").html("Delsec AutoPostBot - autoGen5184828 (Viewed)");
         $("#btnEmail1View").css("background", "#CCC");
@@ -176,6 +187,11 @@
     if (emailDelsecStockViewed == "true") {
         $('#btnEmailDelsecStockView').html("Delsec Team - Stocks (Viewed)");
         $('#btnEmailDelsecStockView').css("background", "#CCC");
+    }
+
+    if (email10KViewed == "true") {
+        $('#btnEmail10KView').html("Delsec Team - $10,000 (Viewed)");
+        $('#btnEmail10KView').css("background", "#CCC");
     }
 
     if (email4ByteViewed == "true") {

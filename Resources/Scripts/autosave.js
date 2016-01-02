@@ -3,21 +3,21 @@ $(window).load(function () {
         // This is the autosave feature. Autosave every 15 seconds, don't know how much it could lag out from faster intervals
         if (typeof (Storage) !== "undefined") {
             localStorage.setItem("money", money);
-            localStorage.setItem("threeBitBank", threeBitBank);
-            localStorage.setItem("fourBitBank", fourBitBank);
-            localStorage.setItem("sixBitBank", sixBitBank);
-            localStorage.setItem("russianSixBitBank", russianSixBitBank);
-            localStorage.setItem("eightBitBank", eightBitBank);
-            localStorage.setItem("twelveBitBank", twelveBitBank);
-            localStorage.setItem("sixteenBitBank", sixteenBitBank);
-            localStorage.setItem("fourByteBank", fourByteBank);
-            localStorage.setItem("eightByteBank", eightByteBank);
-            localStorage.setItem("sixteenByteBank", sixteenByteBank);
-            localStorage.setItem("thirtytwoByteBank", thirtytwoByteBank);
-            localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
+            //localStorage.setItem("threeBitBank", threeBitBank);
+            //localStorage.setItem("fourBitBank", fourBitBank);
+            //localStorage.setItem("sixBitBank", sixBitBank);
+            //localStorage.setItem("russianSixBitBank", russianSixBitBank);
+            //localStorage.setItem("eightBitBank", eightBitBank);
+            //localStorage.setItem("twelveBitBank", twelveBitBank);
+            //localStorage.setItem("sixteenBitBank", sixteenBitBank);
+            //localStorage.setItem("fourByteBank", fourByteBank);
+            //localStorage.setItem("eightByteBank", eightByteBank);
+            //localStorage.setItem("sixteenByteBank", sixteenByteBank);
+            //localStorage.setItem("thirtytwoByteBank", thirtytwoByteBank);
+            //localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
 
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
-            localStorage.setItem("totalPackets", totalPackets);
+            //localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            //localStorage.setItem("totalPackets", totalPackets);
             
             localStorage.setItem("ownedDelsecStocks", ownedDelsecStocks);
             localStorage.setItem("ownedEntaqStocks", ownedEntaqStocks);

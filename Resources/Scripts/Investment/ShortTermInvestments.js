@@ -105,6 +105,7 @@ $(window).load(function () {
             if (emailQuickScopeDisplayed == "false") {
                 numUnreadEmails++;
                 emailQuickScopeDisplayed = "true";
+                localStorage.setItem("numUnreadEmails", numUnreadEmails);
                 localStorage.setItem("emailQuickScopeDisplayed", emailQuickScopeDisplayed);
                 $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
             }
@@ -383,7 +384,7 @@ $(window).load(function () {
             }, 15000);
         }
         else
-            $('#punchInvestResult').html("Not enough money to Invest.");
+            $('#websiteInvestResult').html("Not enough money to Invest.");
         return false;
     });
 

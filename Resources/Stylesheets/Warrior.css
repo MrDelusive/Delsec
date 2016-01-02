@@ -1,0 +1,165 @@
+﻿body {
+}
+
+#warriorAbilities
+{
+    float:left;
+    margin: 0 auto;
+    text-align:center;
+    background: url('../Img/warriorBG.jpg') 50% 0 repeat;
+    height:1500px;
+    width: 1000px;
+    color: #e25b5b;
+}
+
+#btnWarriorHeader {
+    height:100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.warriorSkillHoverPopup {
+    display: none;  
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background: #401515;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+    left: -125px;  
+    top: -125px;
+}
+
+.warriorPassiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/warriorButtonBG1.jpg');
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.warriorActiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/tempSkill.jpg');
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#btnWarriorHeader:hover > #warriorInfo {
+    display: block;
+    background: #401515;
+}
+
+#warriorSkill1-1:hover > #warriorSkill1-1Popup {
+    display: block;
+}
+
+#warriorSkill1-2:hover > #warriorSkill1-2Popup {
+    display: block;
+}
+
+#warriorSkill1-3:hover > #warriorSkill1-3Popup {
+    display: block;
+}
+
+#warriorSkill2-1:hover > #warriorSkill2-1Popup {
+    display: block;
+}
+
+#warriorSkill2-2:hover > #warriorSkill2-2Popup {
+    display: block;
+}
+
+#warriorSkill2-3:hover > #warriorSkill2-3Popup {
+    display: block;
+}
+
+#warriorSkill3-1:hover > #warriorSkill3-1Popup {
+    display: block;
+}
+
+#warriorSkill3-2:hover > #warriorSkill3-2Popup {
+    display: block;
+}
+
+#warriorSkill3-3:hover > #warriorSkill3-3Popup {
+    display: block;
+}
+
+#warriorSkill4-1:hover > #warriorSkill4-1Popup {
+    display: block;
+}
+
+#warriorSkill4-2:hover > #warriorSkill4-2Popup {
+    display: block;
+}
+
+#warriorSkill4-3:hover > #warriorSkill4-3Popup {
+    display: block;
+}
+
+#warriorSkill5-1:hover > #warriorSkill5-1Popup {
+    display: block;
+}
+
+#warriorSkill5-2:hover > #warriorSkill5-2Popup {
+    display: block;
+}
+
+#warriorSkill5-3:hover > #warriorSkill5-3Popup {
+    display: block;
+}
+
+#warriorSkill6-1:hover > #warriorSkill6-1Popup {
+    display: block;
+}
+
+#warriorSkill6-2:hover > #warriorSkill6-2Popup {
+    display: block;
+}
+
+#warriorSkill6-3:hover > #warriorSkill6-3Popup {
+    display: block;
+}
+
+#warriorSkill7-1:hover > #warriorSkill7-1Popup {
+    display: block;
+}
+
+#warriorSkill7-2:hover > #warriorSkill7-2Popup {
+    display: block;
+}
+
+#warriorSkill7-3:hover > #warriorSkill7-3Popup {
+    display: block;
+}
+
+#warriorSkill8-1:hover > #warriorSkill8-1Popup {
+    display: block;
+}
+
+#warriorSkill8-2:hover > #warriorSkill8-2Popup {
+    display: block;
+}
+
+#warriorSkill8-3:hover > #warriorSkill8-3Popup {
+    display: block;
+}
+
+#warriorSkill9-1:hover > #warriorSkill9-1Popup {
+    display: block;
+}
+
+#warriorSkill9-2:hover > #warriorSkill9-2Popup {
+    display: block;
+}
+
+#warriorSkill9-3:hover > #warriorSkill9-3Popup {
+    display: block;
+}

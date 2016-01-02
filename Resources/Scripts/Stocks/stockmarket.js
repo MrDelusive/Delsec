@@ -283,6 +283,7 @@ $(window).load(function () {
             if (emailDelsecStockDisplayed == "false") {                
                 numUnreadEmails++;
                 emailDelsecStockDisplayed = "true";
+                localStorage.setItem("numUnreadEmails", numUnreadEmails);
                 localStorage.setItem("emailDelsecStockDisplayed", emailDelsecStockDisplayed);                
                 $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
             }

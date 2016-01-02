@@ -12,49 +12,6 @@
 	padding-top: 10px;
 }
 
-#warriorAbilities
-{
-    float:left;
-    margin: 0 auto;
-    text-align:center;
-    background: url('../Img/warriorBG.jpg') 50% 0 repeat;
-    height:1500px;
-    width: 1000px;
-    color: #e25b5b;
-}
-
-#wizardAbilities
-{
-    float:left;
-    margin: 0 auto;
-    text-align:center;
-    background: url('../Img/wizardBG.jpg') 50% 0 repeat;
-    height:1500px;
-    width: 1000px;
-    color: #4c81c2;
-}
-
-#rogueAbilities {
-    float: left;
-    margin: 0 auto;
-    text-align: center;
-    background: url('../Img/rogueBG.jpg') 50% 0 repeat;
-    height: 1500px;
-    width: 1000px;
-    color: #d4c869;
-}
-
-#healerAbilities
-{
-    float:left;
-    margin: 0 auto;
-    text-align:center;
-    background: url('../Img/healerBG.jpg') 50% 0 repeat;
-    color: #72ce68;
-    height:1500px;
-    width: 1000px;
-}
-
 .skilltreeHeaderWrapper {
     padding-bottom:20px;   
     width: 800px;
@@ -93,77 +50,11 @@
     margin: 0 auto;
 }
 
-
-.roguePassiveButton {
-    border-radius: 3px;
-    border: 1px solid black;
-    background: url('../Img/rogueButtonBG1.jpg');
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
-
-.healerPassiveButton {
-    border-radius: 3px;
-    border: 1px solid black;
-    background: url('../Img/healerButtonBG1.jpg');
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
-
-.wizardPassiveButton {
-    border-radius: 3px;
-    border: 1px solid black;
-    background: url('../Img/wizardButtonBG1.jpg');
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
-
-.warriorPassiveButton {
-    border-radius: 3px;
-    border: 1px solid black;
-    background: url('../Img/warriorButtonBG1.jpg');
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
-
-.skillHoverPopup {
+.skillHeaderHoverPopup {
     display: none;  
-}
-
-#btnHealerHeader {
-    height:100px;
-    width: 100px;
-    margin: 0 auto;
-}
-
-#btnWarriorHeader {
-    height:100px;
-    width: 100px;
-    margin: 0 auto;
-}
-
-#btnWizardHeader {
-    height:100px;
-    width: 100px;
-    margin: 0 auto;
-}
-
-#btnRogueHeader {
-    height:100px;
-    width: 100px;
-    margin: 0 auto;
-}
-
-#btnHealerHeader:hover > #healerInfo {
-    display: block;
     position: relative;
     height: 50px;
     width: 300px;
-    background: #18311c;
     border-radius: 5px;
     padding: 5px;
     font-size: 14px;
@@ -172,44 +63,33 @@
     top:-100px;
 }
 
-#btnWarriorHeader:hover > #warriorInfo {
-    display: block;
-    position: relative;
+.leftSkill {
+    float: left;
+    background: black;
+    width: 50px;
     height: 50px;
-    width: 300px;
-    background: #401515;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 14px;
-    margin: 0 auto;  
-    left:110px;
-    top:-100px;
+    margin-top: 20px;
+    margin-left:20px;
 }
 
-#btnWizardHeader:hover > #wizardInfo {
-    display: block;
-    position: relative;
+.middleSkill {
+    margin: 0 auto;
+    background: black;
+    width: 50px;
     height: 50px;
-    width: 300px;
-    background: #080a34;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 14px;
-    margin: 0 auto;  
-    left:110px;
-    top:-100px;
+    margin-top: 20px;
 }
 
-#btnRogueHeader:hover > #rogueInfo {
-    display: block;
-    position: relative;
+.rightSkill {
+    float: right;
+    background: black;
+    width: 50px;
     height: 50px;
-    width: 300px;
-    background: #6f4a1e;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 14px;
-    margin: 0 auto;  
-    left:110px;
-    top:-100px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.skillRowHeader {
+    width: 100%;
+    height: 20px;
 }

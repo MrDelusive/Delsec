@@ -1,0 +1,178 @@
+﻿body {
+}
+
+#healerAbilities
+{
+    float:left;
+    margin: 0 auto;
+    text-align:center;
+    background: url('../Img/healerBG.jpg') 50% 0 repeat;
+    color: #72ce68;
+    height:1500px;
+    width: 1000px;
+}
+
+.healerPassiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/healerButtonBG1.jpg');
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#btnHealerHeader {
+    height:100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#btnHealerHeader:hover > #healerInfo {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background: #18311c;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;  
+    left:110px;
+    top:-100px;
+}
+
+.healerSkillHoverPopup {
+    display: none;  
+    position: relative;
+    height: 50px;
+    width: 300px;
+    background: #18311c;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+    left: -125px;  
+    top: -125px;
+}
+
+.healerActiveButton {
+    border-radius: 3px;
+    border: 1px solid black;
+    background: url('../Img/tempSkill.jpg');
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#btnHealerHeader:hover > #healerInfo {
+    display: block;
+}
+
+#healerSkill1-1:hover > #healerSkill1-1Popup {
+    display: block;
+}
+
+#healerSkill1-2:hover > #healerSkill1-2Popup {
+    display: block;
+}
+
+#healerSkill1-3:hover > #healerSkill1-3Popup {
+    display: block;
+}
+
+#healerSkill2-1:hover > #healerSkill2-1Popup {
+    display: block;
+}
+
+#healerSkill2-2:hover > #healerSkill2-2Popup {
+    display: block;
+}
+
+#healerSkill2-3:hover > #healerSkill2-3Popup {
+    display: block;
+}
+
+#healerSkill3-1:hover > #healerSkill3-1Popup {
+    display: block;
+}
+
+#healerSkill3-2:hover > #healerSkill3-2Popup {
+    display: block;
+}
+
+#healerSkill3-3:hover > #healerSkill3-3Popup {
+    display: block;
+}
+
+#healerSkill4-1:hover > #healerSkill4-1Popup {
+    display: block;
+}
+
+#healerSkill4-2:hover > #healerSkill4-2Popup {
+    display: block;
+}
+
+#healerSkill4-3:hover > #healerSkill4-3Popup {
+    display: block;
+}
+
+#healerSkill5-1:hover > #healerSkill5-1Popup {
+    display: block;
+}
+
+#healerSkill5-2:hover > #healerSkill5-2Popup {
+    display: block;
+}
+
+#healerSkill5-3:hover > #healerSkill5-3Popup {
+    display: block;
+}
+
+#healerSkill6-1:hover > #healerSkill6-1Popup {
+    display: block;
+}
+
+#healerSkill6-2:hover > #healerSkill6-2Popup {
+    display: block;
+}
+
+#healerSkill6-3:hover > #healerSkill6-3Popup {
+    display: block;
+}
+
+#healerSkill7-1:hover > #healerSkill7-1Popup {
+    display: block;
+}
+
+#healerSkill7-2:hover > #healerSkill7-2Popup {
+    display: block;
+}
+
+#healerSkill7-3:hover > #healerSkill7-3Popup {
+    display: block;
+}
+
+#healerSkill8-1:hover > #healerSkill8-1Popup {
+    display: block;
+}
+
+#healerSkill8-2:hover > #healerSkill8-2Popup {
+    display: block;
+}
+
+#healerSkill8-3:hover > #healerSkill8-3Popup {
+    display: block;
+}
+
+#healerSkill9-1:hover > #healerSkill9-1Popup {
+    display: block;
+}
+
+#healerSkill9-2:hover > #healerSkill9-2Popup {
+    display: block;
+}
+
+#healerSkill9-3:hover > #healerSkill9-3Popup {
+    display: block;
+}

@@ -77,6 +77,8 @@ $(window).load(function () {
         localStorage.setItem("emailQuickScopeDisplayed", "false");
         localStorage.setItem("emailDelsecStockViewed", "false");
         localStorage.setItem("emailDelsecStockDisplayed", "false");
+        localStorage.setItem("email10KViewed", "false");
+        localStorage.setItem("email10KDisplayed", "false");
         localStorage.setItem("email4ByteViewed", "false");
         localStorage.setItem("email4ByteDisplayed", "false");
 
@@ -168,21 +170,6 @@ $(window).load(function () {
     $('#save').click(function () {
         if (typeof (Storage) !== "undefined") {
             localStorage.setItem("money", money);
-            localStorage.setItem("threeBitBank", threeBitBank);
-            localStorage.setItem("fourBitBank", fourBitBank);
-            localStorage.setItem("sixBitBank", sixBitBank);
-            localStorage.setItem("russianSixBitBank", russianSixBitBank);
-            localStorage.setItem("eightBitBank", eightBitBank);
-            localStorage.setItem("twelveBitBank", twelveBitBank);
-            localStorage.setItem("sixteenBitBank", sixteenBitBank);
-            localStorage.setItem("fourByteBank", fourByteBank);
-            localStorage.setItem("eightByteBank", eightByteBank);
-            localStorage.setItem("sixteenByteBank", sixteenByteBank);
-            localStorage.setItem("thirtytwoByteBank", thirtytwoByteBank);
-            localStorage.setItem("sixtyfourByteBank", sixtyfourByteBank);
-
-            localStorage.setItem("numUnreadEmails", numUnreadEmails);
-            localStorage.setItem("totalPackets", totalPackets);
 
             localStorage.setItem("ownedDelsecStocks", ownedDelsecStocks);
             localStorage.setItem("ownedEntaqStocks", ownedEntaqStocks);
@@ -258,6 +245,7 @@ $(window).load(function () {
             $("#btnPowerGenerators").fadeIn(500);
             $("#warriorGenerate").fadeIn(500);
             money -= 10000;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -289,6 +277,7 @@ $(window).load(function () {
             $('#btnWizardAbilities').fadeIn(500);
             $("#autoWizardGenerate").fadeIn(500);
             money -= 10000;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -321,6 +310,7 @@ $(window).load(function () {
             $('#btnRogueAbilities').fadeIn(500);
             $("#rogueGenerate").fadeIn(500);
             money -= 10000;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -359,6 +349,7 @@ $(window).load(function () {
             $('#btnHealerAbilities').fadeIn(500);
             $("#healerGenerate").fadeIn(500);
             money -= 10000;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
