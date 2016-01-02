@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
     // Check null values, fixes new storage items/changes
     if (localStorage.getItem("money") === null)
         localStorage.setItem("money", money);
@@ -246,15 +246,6 @@
             $('#lblMoneyDisplayScroll').animate({ 'opacity': '0' }, 100);
             visible = false;
         }
-    });
-    // parralax effect for each data-type background
-    $('div[data-type="background"]').each(function () {
-        var $bgobj = $(this);
-        $(window).scroll(function () {
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-            var coords = '50% ' + yPos + 'px';
-            $bgobj.css({ backgroundPosition: coords });
-        });
     });
 });
 

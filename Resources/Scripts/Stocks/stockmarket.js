@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(document).ready(function () {
     if (localStorage.getItem("delsecCurrentStockPrice") === null)
         localStorage.setItem("delsecCurrentStockPrice", delsecCurrentStockPrice);
     if (localStorage.getItem("ownedDelsecStocks") === null)
@@ -276,18 +276,5 @@ $(window).load(function () {
  
     if (userClass == "Rogue")
         sellDivider = 20;
-    
-    setInterval(function () {
-        if (ownedDelsecStocks > 0) {
-            $("#emailDelsecStockHeading").fadeIn(1);
-            if (emailDelsecStockDisplayed == "false") {                
-                numUnreadEmails++;
-                emailDelsecStockDisplayed = "true";
-                localStorage.setItem("numUnreadEmails", numUnreadEmails);
-                localStorage.setItem("emailDelsecStockDisplayed", emailDelsecStockDisplayed);                
-                $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
-            }
-        }
-    }, 2000);
 
 })(jQuery);

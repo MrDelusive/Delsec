@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
 
     $('#OSMStockDisplayCost').html('$' + OSMCurrentStockPrice.toFixed(2));
     $('#OSMStockSellPrice').html('$' + (OSMCurrentStockPrice - OSMCurrentStockPrice / sellDivider).toFixed(2));
@@ -9,7 +9,9 @@
 
         if (money >= OSMCurrentStockPrice) {
             money -= OSMCurrentStockPrice;
+            localStorage.setItem("money", money);
             ownedOSMStocks++;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -26,7 +28,9 @@
 
         if (money >= OSMCurrentStockPrice * 10) {
             money -= OSMCurrentStockPrice * 10;
+            localStorage.setItem("money", money);
             ownedOSMStocks += 10;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -42,7 +46,9 @@
 
         if (money >= OSMCurrentStockPrice * 100) {
             money -= OSMCurrentStockPrice * 100;
+            localStorage.setItem("money", money);
             ownedOSMStocks += 100;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -59,7 +65,9 @@
         var OSMBuyAmt = Math.floor(money / OSMCurrentStockPrice);
         if (OSMBuyAmt >= 1) {
             money -= OSMCurrentStockPrice * OSMBuyAmt;
+            localStorage.setItem("money", money);
             ownedOSMStocks += OSMBuyAmt;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -76,7 +84,9 @@
     $('#btnSellOSMStocks').click(function () {
         if (ownedOSMStocks > 0) {
             money += OSMCurrentStockPrice - OSMCurrentStockPrice / 10;
+            localStorage.setItem("money", money);
             ownedOSMStocks--;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -91,7 +101,9 @@
     $('#btnSellOSMStocks10').click(function () {
         if (ownedOSMStocks > 9) {
             money += (OSMCurrentStockPrice - OSMCurrentStockPrice / 10) * 10;
+            localStorage.setItem("money", money);
             ownedOSMStocks -= 10;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -106,7 +118,9 @@
     $('#btnSellOSMStocks100').click(function () {
         if (ownedOSMStocks > 99) {
             money += (OSMCurrentStockPrice - OSMCurrentStockPrice / 10) * 100;
+            localStorage.setItem("money", money);
             ownedOSMStocks -= 100;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -122,10 +136,12 @@
     $('#btnSellOSMStocksAll').click(function () {
         if (ownedOSMStocks > 0) {
             money += (OSMCurrentStockPrice - OSMCurrentStockPrice / 10) * ownedOSMStocks;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedOSMStocks = 0;
+            localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
             $('#OSMOwnedStocksDisplay').html(ownedOSMStocks);
             if (ownedOSMStocks > 0)
                 $('#OSMSellEstimate').html('$' + (ownedOSMStocks * (OSMCurrentStockPrice - OSMCurrentStockPrice / sellDivider)).toFixed(2));

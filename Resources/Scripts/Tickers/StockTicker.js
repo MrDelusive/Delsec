@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
     var goFast = 0;
     var timer = 30;
 

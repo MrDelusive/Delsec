@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
     $('#btnHealerHeader').click(function () {
         return false;
     });

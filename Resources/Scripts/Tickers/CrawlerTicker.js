@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(document).ready(function () {
 
     setInterval(function () {             
         if (threeBitBank > 0) {
@@ -132,6 +132,7 @@ $(window).load(function () {
             + autoIncrement32Byte * thirtytwoByteBank
             + autoIncrement64Byte * sixtyfourByteBank
             + wizardPassive;
+        localStorage.setItem("money", money);
 
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

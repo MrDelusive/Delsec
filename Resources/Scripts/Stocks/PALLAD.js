@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
 
     $('#PALLADStockDisplayCost').html('$' + PALLADCurrentStockPrice.toFixed(2));
     $('#PALLADStockSellPrice').html('$' + (PALLADCurrentStockPrice - PALLADCurrentStockPrice / sellDivider).toFixed(2));
@@ -9,7 +9,9 @@
 
         if (money >= PALLADCurrentStockPrice) {
             money -= PALLADCurrentStockPrice;
+            localStorage.setItem("money", money);
             ownedPALLADStocks++;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -26,7 +28,9 @@
 
         if (money >= PALLADCurrentStockPrice * 10) {
             money -= PALLADCurrentStockPrice * 10;
+            localStorage.setItem("money", money);
             ownedPALLADStocks += 10;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -42,7 +46,9 @@
 
         if (money >= PALLADCurrentStockPrice * 100) {
             money -= PALLADCurrentStockPrice * 100;
+            localStorage.setItem("money", money);
             ownedPALLADStocks += 100;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -59,7 +65,9 @@
         var PALLADBuyAmt = Math.floor(money / PALLADCurrentStockPrice);
         if (PALLADBuyAmt >= 1) {
             money -= PALLADCurrentStockPrice * PALLADBuyAmt;
+            localStorage.setItem("money", money);
             ownedPALLADStocks += PALLADBuyAmt;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -76,7 +84,9 @@
     $('#btnSellPALLADStocks').click(function () {
         if (ownedPALLADStocks > 0) {
             money += PALLADCurrentStockPrice - PALLADCurrentStockPrice / 10;
+            localStorage.setItem("money", money);
             ownedPALLADStocks--;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -91,7 +101,9 @@
     $('#btnSellPALLADStocks10').click(function () {
         if (ownedPALLADStocks > 9) {
             money += (PALLADCurrentStockPrice - PALLADCurrentStockPrice / 10) * 10;
+            localStorage.setItem("money", money);
             ownedPALLADStocks -= 10;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -106,7 +118,9 @@
     $('#btnSellPALLADStocks100').click(function () {
         if (ownedPALLADStocks > 99) {
             money += (PALLADCurrentStockPrice - PALLADCurrentStockPrice / 10) * 100;
+            localStorage.setItem("money", money);
             ownedPALLADStocks -= 100;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -122,10 +136,12 @@
     $('#btnSellPALLADStocksAll').click(function () {
         if (ownedPALLADStocks > 0) {
             money += (PALLADCurrentStockPrice - PALLADCurrentStockPrice / 10) * ownedPALLADStocks;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedPALLADStocks = 0;
+            localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
             $('#PALLADOwnedStocksDisplay').html(ownedPALLADStocks);
             if (ownedPALLADStocks > 0)
                 $('#PALLADSellEstimate').html('$' + (ownedPALLADStocks * (PALLADCurrentStockPrice - PALLADCurrentStockPrice / sellDivider)).toFixed(2));

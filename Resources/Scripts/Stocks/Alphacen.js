@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
 
     $('#alphacenStockDisplayCost').html('$' + alphacenCurrentStockPrice.toFixed(2));
     $('#alphacenStockSellPrice').html('$' + (alphacenCurrentStockPrice - alphacenCurrentStockPrice / sellDivider).toFixed(2));
@@ -9,7 +9,9 @@
 
         if (money >= alphacenCurrentStockPrice) {
             money -= alphacenCurrentStockPrice;
+            localStorage.setItem("money", money);
             ownedAlphacenStocks++;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -26,7 +28,9 @@
 
         if (money >= alphacenCurrentStockPrice * 10) {
             money -= alphacenCurrentStockPrice * 10;
+            localStorage.setItem("money", money);
             ownedAlphacenStocks += 10;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -42,7 +46,9 @@
 
         if (money >= alphacenCurrentStockPrice * 100) {
             money -= alphacenCurrentStockPrice * 100;
+            localStorage.setItem("money", money);
             ownedAlphacenStocks += 100;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -59,7 +65,9 @@
         var alphacenBuyAmt = Math.floor(money / alphacenCurrentStockPrice);
         if (alphacenBuyAmt >= 1) {
             money -= alphacenCurrentStockPrice * alphacenBuyAmt;
+            localStorage.setItem("money", money);
             ownedAlphacenStocks += alphacenBuyAmt;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -76,7 +84,9 @@
     $('#btnSellAlphacenStocks').click(function () {
         if (ownedAlphacenStocks > 0) {
             money += alphacenCurrentStockPrice - alphacenCurrentStockPrice / 10;
+            localStorage.setItem("money", money);
             ownedAlphacenStocks--;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -91,7 +101,9 @@
     $('#btnSellAlphacenStocks10').click(function () {
         if (ownedAlphacenStocks > 9) {
             money += (alphacenCurrentStockPrice - alphacenCurrentStockPrice / 10) * 10;
+            localStorage.setItem("money", money);
             ownedAlphacenStocks -= 10;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -106,7 +118,9 @@
     $('#btnSellAlphacenStocks100').click(function () {
         if (ownedAlphacenStocks > 99) {
             money += (alphacenCurrentStockPrice - alphacenCurrentStockPrice / 10) * 100;
+            localStorage.setItem("money", money);
             ownedAlphacenStocks -= 100;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -122,10 +136,12 @@
     $('#btnSellAlphacenStocksAll').click(function () {
         if (ownedAlphacenStocks > 0) {
             money += (alphacenCurrentStockPrice - alphacenCurrentStockPrice / 10) * ownedAlphacenStocks;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedAlphacenStocks = 0;
+            localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
             $('#alphacenOwnedStocksDisplay').html(ownedAlphacenStocks);
             if (ownedAlphacenStocks > 0)
                 $('#alphacenSellEstimate').html('$' + (ownedAlphacenStocks * (alphacenCurrentStockPrice - alphacenCurrentStockPrice / sellDivider)).toFixed(2));

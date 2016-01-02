@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(document).ready(function () {
     $('#btnEmail1View').click(function () {
         $("#email1").toggle();
         if (email1Viewed == "false") {

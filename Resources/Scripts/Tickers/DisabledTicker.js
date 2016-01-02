@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
 
     setInterval(function () {
         $('#btnIncrement').prop('disabled', false);

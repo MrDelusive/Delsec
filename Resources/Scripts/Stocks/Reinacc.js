@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
 
     $('#reinaccStockDisplayCost').html('$' + reinaccCurrentStockPrice.toFixed(2));
     $('#reinaccStockSellPrice').html('$' + (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider).toFixed(2));
@@ -9,7 +9,9 @@
 
         if (money >= reinaccCurrentStockPrice) {
             money -= reinaccCurrentStockPrice;
+            localStorage.setItem("money", money);
             ownedReinaccStocks++;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -26,7 +28,9 @@
 
         if (money >= reinaccCurrentStockPrice * 10) {
             money -= reinaccCurrentStockPrice * 10;
+            localStorage.setItem("money", money);
             ownedReinaccStocks += 10;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -42,7 +46,9 @@
 
         if (money >= reinaccCurrentStockPrice * 100) {
             money -= reinaccCurrentStockPrice * 100;
+            localStorage.setItem("money", money);
             ownedReinaccStocks += 100;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -59,7 +65,9 @@
         var reinaccBuyAmt = Math.floor(money / reinaccCurrentStockPrice);
         if (reinaccBuyAmt >= 1) {
             money -= reinaccCurrentStockPrice * reinaccBuyAmt;
+            localStorage.setItem("money", money);
             ownedReinaccStocks += reinaccBuyAmt;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -76,7 +84,9 @@
     $('#btnSellReinaccStocks').click(function () {
         if (ownedReinaccStocks > 0) {
             money += reinaccCurrentStockPrice - reinaccCurrentStockPrice / 10;
+            localStorage.setItem("money", money);
             ownedReinaccStocks--;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -91,7 +101,9 @@
     $('#btnSellReinaccStocks10').click(function () {
         if (ownedReinaccStocks > 9) {
             money += (reinaccCurrentStockPrice - reinaccCurrentStockPrice / 10) * 10;
+            localStorage.setItem("money", money);
             ownedReinaccStocks -= 10;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -106,7 +118,9 @@
     $('#btnSellReinaccStocks100').click(function () {
         if (ownedReinaccStocks > 99) {
             money += (reinaccCurrentStockPrice - reinaccCurrentStockPrice / 10) * 100;
+            localStorage.setItem("money", money);
             ownedReinaccStocks -= 100;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -122,10 +136,12 @@
     $('#btnSellReinaccStocksAll').click(function () {
         if (ownedReinaccStocks > 0) {
             money += (reinaccCurrentStockPrice - reinaccCurrentStockPrice / 10) * ownedReinaccStocks;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedReinaccStocks = 0;
+            localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
             $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
             if (ownedReinaccStocks > 0)
                 $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2));

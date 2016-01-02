@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
 
     $('#aceholdStockDisplayCost').html('$' + aceholdCurrentStockPrice.toFixed(2));
     $('#aceholdStockSellPrice').html('$' + (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider).toFixed(2));
@@ -9,7 +9,9 @@
 
         if (money >= aceholdCurrentStockPrice) {
             money -= aceholdCurrentStockPrice;
+            localStorage.setItem("money", money);
             ownedAceholdStocks++;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -26,7 +28,9 @@
 
         if (money >= aceholdCurrentStockPrice * 10) {
             money -= aceholdCurrentStockPrice * 10;
+            localStorage.setItem("money", money);
             ownedAceholdStocks += 10;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -42,7 +46,9 @@
 
         if (money >= aceholdCurrentStockPrice * 100) {
             money -= aceholdCurrentStockPrice * 100;
+            localStorage.setItem("money", money);
             ownedAceholdStocks += 100;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -59,7 +65,9 @@
         var aceholdBuyAmt = Math.floor(money / aceholdCurrentStockPrice);
         if (aceholdBuyAmt >= 1) {
             money -= aceholdCurrentStockPrice * aceholdBuyAmt;
+            localStorage.setItem("money", money);
             ownedAceholdStocks += aceholdBuyAmt;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -76,7 +84,9 @@
     $('#btnSellAceholdStocks').click(function () {
         if (ownedAceholdStocks > 0) {
             money += aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10;
+            localStorage.setItem("money", money);
             ownedAceholdStocks--;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -91,7 +101,9 @@
     $('#btnSellAceholdStocks10').click(function () {
         if (ownedAceholdStocks > 9) {
             money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10) * 10;
+            localStorage.setItem("money", money);
             ownedAceholdStocks -= 10;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -106,7 +118,9 @@
     $('#btnSellAceholdStocks100').click(function () {
         if (ownedAceholdStocks > 99) {
             money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10) * 100;
+            localStorage.setItem("money", money);
             ownedAceholdStocks -= 100;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -122,10 +136,12 @@
     $('#btnSellAceholdStocksAll').click(function () {
         if (ownedAceholdStocks > 0) {
             money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10) * ownedAceholdStocks;
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedAceholdStocks = 0;
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
                 $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));

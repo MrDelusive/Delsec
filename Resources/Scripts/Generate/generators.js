@@ -1,8 +1,9 @@
-$(window).load(function () {    
+$(document).ready(function () {
     // the default one
     $('#btnIncrement').click(function () {        
         increment = Math.round(100 * Math.random() / 12.5) / 100;
         money += increment;
+        localStorage.setItem("money", money);
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -22,8 +23,10 @@ $(window).load(function () {
     // the warrior one is stronger generates random number btwn 0 to 0.32 initially then plus coding power ( more amt clicked = higher gen every 100 clicks = 1dol.
     $('#btnWarriorIncrement').click(function () {
         warriorClicks++;
+        localStorage.setItem("warriorClicks", warriorClicks);
         increment = Math.round(100 * (Math.random() / 3.125 + warriorClicks / 100)) / 100;
         money += increment;
+        localStorage.setItem("money", money);
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -44,6 +47,7 @@ $(window).load(function () {
         if (increment > 500)
             increment = 500;
         money += increment;
+        localStorage.setItem("money", money);
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

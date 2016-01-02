@@ -1,4 +1,4 @@
-﻿$(window).load(function () {
+﻿$(document).ready(function () {
 
     setInterval(function () {  
         $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
@@ -9,6 +9,17 @@
                 localStorage.setItem("numUnreadEmails", numUnreadEmails);
                 email10KDisplayed = "true";
                 localStorage.setItem("email10KDisplayed", email10KDisplayed);
+                $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            }
+        }
+
+        if (ownedDelsecStocks > 0) {
+            $("#emailDelsecStockHeading").fadeIn(1);
+            if (emailDelsecStockDisplayed == "false") {
+                numUnreadEmails++;
+                emailDelsecStockDisplayed = "true";
+                localStorage.setItem("numUnreadEmails", numUnreadEmails);
+                localStorage.setItem("emailDelsecStockDisplayed", emailDelsecStockDisplayed);
                 $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
             }
         }
