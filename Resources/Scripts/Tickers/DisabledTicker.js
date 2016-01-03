@@ -6,6 +6,7 @@
         $('#btnHealerIncrement').prop('disabled', false);
         $('#btnRogueIncrement').prop('disabled', false);
 
+        $('#btnBuy2BitCrawler').prop('disabled', true);
         $('#btnBuy3BitCrawler').prop('disabled', true);
         $('#btnBuy4BitCrawler').prop('disabled', true);
         $('#btnBuy6BitCrawler').prop('disabled', true);
@@ -18,6 +19,8 @@
         $('#btnBuy16ByteCrawler').prop('disabled', true);
         $('#btnBuy32ByteCrawler').prop('disabled', true);
         $('#btnBuy64ByteCrawler').prop('disabled', true);
+        if (money >= current2BitPrice)
+            $('#btnBuy2BitCrawler').prop('disabled', false);
         if (money >= current3BitPrice)
             $('#btnBuy3BitCrawler').prop('disabled', false);
         if (money >= current4BitPrice)

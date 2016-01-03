@@ -8,7 +8,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             russianSixBitBank++;
-            currentRussian6BitPrice = 32 + 32 * russianSixBitBank / 10;
+            currentRussian6BitPrice = 35.20 + 35.20 * russianSixBitBank / 10;
             localStorage.setItem("russianSixBitBank", russianSixBitBank);
             totalPackets += 16;
             localStorage.setItem("totalPackets", totalPackets);

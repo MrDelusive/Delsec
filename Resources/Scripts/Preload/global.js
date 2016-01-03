@@ -2,6 +2,7 @@
 
 var money = 0.00;
 
+var twoBitBank = 0;
 var threeBitBank = 0;
 var fourBitBank = 0;
 var sixBitBank = 0;
@@ -15,6 +16,7 @@ var sixteenByteBank = 0;
 var thirtytwoByteBank = 0;
 var sixtyfourByteBank = 0;
 
+var current2BitPrice = 2;
 var current3BitPrice = 4;
 var current4BitPrice = 8;
 var current6BitPrice = 32;
@@ -29,6 +31,7 @@ var current32BytePrice = 526336;
 var current64BytePrice = 1052672;
 
 var increment = 0;
+var autoIncrement2Bit = 0;
 var autoIncrement = 0;
 var autoIncrement2s = 0;
 var autoIncrement6Bit = 0;

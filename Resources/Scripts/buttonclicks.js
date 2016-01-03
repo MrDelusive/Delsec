@@ -98,6 +98,7 @@ $(document).ready(function () {
     $('#btnResetAll').click(function () {
         localStorage.setItem("userClass", "None");
         localStorage.setItem("money", 0);
+        localStorage.setItem("twoBitBank", 0);
         localStorage.setItem("threeBitBank", 0);
         localStorage.setItem("fourBitBank", 0);
         localStorage.setItem("sixBitBank", 0);

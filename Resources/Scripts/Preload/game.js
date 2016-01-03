@@ -3,6 +3,8 @@
     if (localStorage.getItem("money") === null)
         localStorage.setItem("money", money);
 
+    if (localStorage.getItem("twoBitBank") === null)
+        localStorage.setItem("twoBitBank", twoBitBank);
     if (localStorage.getItem("threeBitBank") === null)
         localStorage.setItem("threeBitBank", threeBitBank);
     if (localStorage.getItem("fourBitBank") === null)
@@ -62,6 +64,7 @@
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblSaveState').html(localStorage.getItem("lastSaveState"));
                 
+        twoBitBank = parseInt(localStorage.getItem("twoBitBank"));
         threeBitBank = parseInt(localStorage.getItem("threeBitBank"));               
         fourBitBank = parseInt(localStorage.getItem("fourBitBank"));               
         sixBitBank = parseInt(localStorage.getItem("sixBitBank"));             
@@ -112,7 +115,8 @@
     $("#btnConsole").fadeIn(500);
     $("#btnOptions").fadeIn(500);
 
-
+    current2BitPrice = 2 + 2 * twoBitBank / 10;
+    $('#btnBuy2BitCrawler').html("Buy 2 Bit Delsec Crawler (1 Packets/sec) - $" + current2BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     current3BitPrice = 4 + 4 * threeBitBank / 10;
     $('#btnBuy3BitCrawler').html("Buy 3 Bit Delsec Crawler (2 Packets/sec) - $" + current3BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     current4BitPrice = 8 + 8 * fourBitBank / 10;
@@ -137,9 +141,11 @@
     $('#btnBuy64ByteCrawler').html("Buy 64 Byte Delsec Crawler (524,288 Packets/sec) - $" + current64BytePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
 
-    currentRussian6BitPrice = 32 + 32 * russianSixBitBank / 10;
+    currentRussian6BitPrice = 35.20 + 35.20 * russianSixBitBank / 10;
     $('#btnBuyRussian6BitCrawler').html("Buy 6 Bit Russian Tech Crawler (16 Packets/sec) - $" + currentRussian6BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
+    if (twoBitBank > 0) 
+        $('#twoBitItemDisplay').html(twoBitBank + " Processes Running Through " + twoBitBank + " Packets/Sec");
 
     if (threeBitBank > 0) 
         $('#threeBitItemDisplay').html(threeBitBank + " Processes Running Through " + threeBitBank * 8 / 4 + " Packets/Sec");  

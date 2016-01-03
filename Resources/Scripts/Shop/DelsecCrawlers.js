@@ -1,5 +1,25 @@
 ﻿$(document).ready(function () {
 
+
+    $('#btnBuy2BitCrawler').click(function () {
+        if (money >= current2BitPrice) {
+            money -= current2BitPrice;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            twoBitBank++;
+            current2BitPrice = 2 + 2 * twoBitBank / 10;
+            localStorage.setItem("twoBitBank", twoBitBank);
+            totalPackets += 1;
+            localStorage.setItem("totalPackets", totalPackets);
+            $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
+            $('#btnBuy2BitCrawler').html("Buy 2 Bit Delsec Crawler (1 Packets/sec) - $" + current2BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#twoBitItemDisplay').html(twoBitBank + " Processes Running Through " + twoBitBank + " Packets/Sec");
+        }
+        return false;
+    });
+
     $('#btnBuy3BitCrawler').click(function () {       
         if (money >= current3BitPrice) {           
             money -= current3BitPrice;
