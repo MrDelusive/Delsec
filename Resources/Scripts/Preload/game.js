@@ -110,6 +110,7 @@
     $("#btnStockMarket").fadeIn(500);
     $("#btnAbilities").fadeIn(500);
     $("#btnConsole").fadeIn(500);
+    $("#btnOptions").fadeIn(500);
 
 
     current3BitPrice = 4 + 4 * threeBitBank / 10;

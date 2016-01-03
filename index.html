@@ -30,12 +30,7 @@
             
         </div>
         <div id="right_Main">
-            <div id="debugContainer">
-                <b>Debug info, testing only:</b><br /> <br />
-			    Current Version: V0.6 <br /> <br />
-                Type resetclass in ingame console if you would like to reset your class, next version a class reset will cost money. <br /> <br />
-                Type reset in ingame console if you would like to reset all progress. (and if you are having bugs from older version crossover)                   
-            </div>			
+            			
         </div>
         <div id="center_Main">
             <div id="lblMoneyDisplay">
@@ -77,6 +72,7 @@
                 <button id="btnRogueAbilities" class="btn_TabYellow" style="display:none;">ROGUE</button>
                 <button id="btnHealerAbilities" class="btn_TabGreen" style="display:none;">HEALER</button>
                 <button id="btnConsole" class="btn_Tab" style="display:none;">Console</button>
+                <button id="btnOptions" class="btn_Tab" style="display:none;">Options</button>
             </div>
             <!-- the welcome message you only see once -->
             <div id ="welcome" class="hidden_Divs" style="display:table;">
@@ -2155,7 +2151,15 @@
 		            V:/clientData/5184828><input type="text" size="30" id="txtSubmit" />
 	            </div>	
                 
-            </div>                
+            </div>  
+            
+            <!-- OPTIONS -->
+            <div id="options" class="hidden_Divs">
+                <b>Debug info, testing only:</b><br /> <br />
+			    Current Version: V0.6 <br /> <br />  
+                <button id="btnResetAll">Reset All</button>
+                <button id="btnResetClass">Reset Class</button>
+            </div>              
         </div>
     </div>
     </form>

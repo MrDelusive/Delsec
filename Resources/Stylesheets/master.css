@@ -25,10 +25,6 @@
     width: 20%;
     color: #FFF;
 }
-#debugContainer {
-    position: absolute;
-
-}
 #center_Main
 {  
 	z-index: 100;
@@ -248,3 +244,12 @@
     float: left;
 }
 
+#options {
+    float:left;
+    text-align: center;
+    font-family:Calibri;
+    background: black;
+    color: white;
+    height:800px;
+    width: 1000px;
+}
