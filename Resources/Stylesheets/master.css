@@ -144,6 +144,48 @@
     height:1600px;
 }
 
+.crawlerShopHeader {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid black;
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: left;
+    color: white;
+}
+
+
+#delsecCrawlerShop {
+    background: #0a1437;
+    height: 100%;
+    padding-top: 10px;
+}
+
+#russianCrawlerShop {
+    padding-top: 10px;
+    background: #280303;
+    height: 100%;
+}
+
+#vipersecCrawlerShop {
+    padding-top: 10px;
+    background: #0a3006;
+    height: 100%;
+}
+
+#chimerasecCrawlerShop {
+    padding-top: 10px;
+    background: #130821;
+    height: 100%;
+}
+
+#griffonbankCrawlerShop {
+    padding-top: 10px;
+    background: #1a1a1a;
+    height: 100%;
+}
+
 #email
 {
     float:left;

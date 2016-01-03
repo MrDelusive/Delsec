@@ -133,6 +133,12 @@ $(document).keydown(function (e) {
             localStorage.setItem("warriorClicks", 0);
             return true;
         }
+
+        else if (input == "resetclass") {
+            userClass = "None";
+            localStorage.setItem("userClass", userClass);
+            return true;
+        }
         else if (input == "dsfa") {
             money += 1000;
             localStorage.setItem("money", money);

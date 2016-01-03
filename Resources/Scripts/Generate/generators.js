@@ -20,11 +20,11 @@ $(document).ready(function () {
         return false;
     });
 
-    // the warrior one is stronger generates random number btwn 0 to 0.32 initially then plus coding power ( more amt clicked = higher gen every 100 clicks = 1dol.
+    // the warrior one is stronger generates random number btwn 0 to 0.32 initially then plus coding power ( more amt clicked = higher gen every 500 clicks = 1dol.
     $('#btnWarriorIncrement').click(function () {
         warriorClicks++;
         localStorage.setItem("warriorClicks", warriorClicks);
-        increment = Math.round(100 * (Math.random() / 3.125 + warriorClicks / 100)) / 100;
+        increment = Math.round(100 * (Math.random() / 3.125 + warriorClicks / 500)) / 100;
         money += increment;
         localStorage.setItem("money", money);
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

@@ -102,7 +102,7 @@ $(document).ready(function () {
         }
 
         if (userClass == "Wizard") {
-            wizardPassive = 0.1 * (
+            wizardPassive = 0.01 * (
                 autoIncrement * threeBitBank
                 + autoIncrement2s * fourBitBank
                 + autoIncrement6Bit * sixBitBank

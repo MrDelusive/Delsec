@@ -3,6 +3,37 @@ $(document).ready(function () {
     $('#btnShop').click(function () {
         $(".hidden_Divs").hide();
         $("#shop").show();
+        $("#delsecCrawlerShop").show();
+        return false;
+    });
+    $('#btnDelsecCrawlerShop').click(function () {
+        $(".hidden_Divs").hide();
+        $("#shop").show();
+        $("#delsecCrawlerShop").show();
+        return false;
+    });
+    $('#btnRussianCrawlerShop').click(function () {
+        $(".hidden_Divs").hide();
+        $("#shop").show();
+        $("#russianCrawlerShop").show();
+        return false;
+    });
+    $('#btnVipersecCrawlerShop').click(function () {
+        $(".hidden_Divs").hide();
+        $("#shop").show();
+        $("#vipersecCrawlerShop").show();
+        return false;
+    });
+    $('#btnChimerasecCrawlerShop').click(function () {
+        $(".hidden_Divs").hide();
+        $("#shop").show();
+        $("#chimerasecCrawlerShop").show();
+        return false;
+    });
+    $('#btnGriffonbankCrawlerShop').click(function () {
+        $(".hidden_Divs").hide();
+        $("#shop").show();
+        $("#griffonbankCrawlerShop").show();
         return false;
     });
     $('#btnPowerGenerators').click(function () {
@@ -40,12 +71,6 @@ $(document).ready(function () {
         $("#console").show();
         $('#txtSubmit').focus();
         return false;
-    });
-
-    $('#resetClass').click(function () {
-        userClass = "None";
-        localStorage.setItem("userClass", userClass);
-        return true;
     });
 
     // The class selection buttons
