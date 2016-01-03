@@ -50,9 +50,25 @@ $(document).ready(function () {
     $('#btnInvestments').click(function () {
         $(".hidden_Divs").hide();
         $("#investments").show();
-
+        $("#shortTermInvestments").show();
         return false;
     });
+
+    $('#btnShortTermInvestments').click(function () {
+        $(".hidden_Divs").hide();
+        $("#investments").show();
+        $("#shortTermInvestments").show();
+        return false;
+    });
+
+    $('#btnLongTermInvestments').click(function () {
+        $(".hidden_Divs").hide();
+        $("#investments").show();
+        $("#longTermInvestments").show();
+        return false;
+    });
+
+
     $('#btnStockMarket').click(function () {
         $(".hidden_Divs").hide();
         $("#stocks").show();

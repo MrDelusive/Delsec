@@ -18,30 +18,29 @@
         $('#btnBuy16ByteCrawler').prop('disabled', true);
         $('#btnBuy32ByteCrawler').prop('disabled', true);
         $('#btnBuy64ByteCrawler').prop('disabled', true);
-
-        if (money >= 2)
+        if (money >= current3BitPrice)
             $('#btnBuy3BitCrawler').prop('disabled', false);
-        if( money >= 3.95)
+        if (money >= current4BitPrice)
             $('#btnBuy4BitCrawler').prop('disabled', false);
-        if (money >= 15)
+        if (money >= current6BitPrice)
             $('#btnBuy6BitCrawler').prop('disabled', false);
-        if (money >= 22.5)
+        if (money >= currentRussian6BitPrice)
             $('#btnBuyRussian6BitCrawler').prop('disabled', false);
-        if (money >= 58)
+        if (money >= current8BitPrice)
             $('#btnBuy8BitCrawler').prop('disabled', false);
-        if (money >= 820)
+        if (money >= current12BitPrice)
             $('#btnBuy12BitCrawler').prop('disabled', false);
-        if (money >= 12288)
+        if (money >= current16BitPrice)
             $('#btnBuy16BitCrawler').prop('disabled', false);
-        if (money >= 24248.32)
+        if (money >= current4BytePrice)
             $('#btnBuy4ByteCrawler').prop('disabled', false);
-        if (money >= 47841.28)
+        if (money >= current8BytePrice)
             $('#btnBuy8ByteCrawler').prop('disabled', false);
-        if (money >= 94371.84)
+        if (money >= current16BytePrice)
             $('#btnBuy16ByteCrawler').prop('disabled', false);
-        if (money >= 186122.24)
+        if (money >= current32BytePrice)
             $('#btnBuy32ByteCrawler').prop('disabled', false);
-        if (money >= 367001.6)
+        if (money >= current64BytePrice)
             $('#btnBuy64ByteCrawler').prop('disabled', false);
     }, 1000);
 

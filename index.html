@@ -106,25 +106,25 @@
                         - Highest Selection <br />
                     </div>
                     <div id="threeBitDisplay" >
-                        <div class ="crawlerButtonWrapper"><button id="btnBuy3BitCrawler" class="btn_Style">Buy 3 Bit Delsec Crawler (2 Packets/sec) - $2.00</button></div>   
+                        <div class ="crawlerButtonWrapper"><button id="btnBuy3BitCrawler" class="btn_Style"></button></div>   
                         <div id="threeBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                                 
                         <div id="threeBitIncrementAmtDisplay" class="incremental" ></div>
                         <br />
                     </div>
                     <div id ="fourBitDisplay">
-                        <div class="crawlerButtonWrapper"><button id="btnBuy4BitCrawler" class="btn_Style">Buy 4 Bit Delsec Crawler (4 Packets/sec) - $3.95</button></div>
+                        <div class="crawlerButtonWrapper"><button id="btnBuy4BitCrawler" class="btn_Style"></button></div>
                         <div id="fourBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                   
                         <div id="fourBitIncrementAmtDisplay" class="incremental"></div>
                         <br />
                     </div>
                     <div id ="sixBitDisplay">
-                        <div class="crawlerButtonWrapper"><button id="btnBuy6BitCrawler" class="btn_Style">Buy 6 Bit Delsec Crawler (16 Packets/sec) - $15.00</button> </div>
+                        <div class="crawlerButtonWrapper"><button id="btnBuy6BitCrawler" class="btn_Style"></button> </div>
                         <div id="sixBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>               
                         <div id="sixBitIncrementAmtDisplay" class="incremental"></div>
                         <br />
                     </div>                    
                     <div id ="eightBitDisplay">
-                        <div class="crawlerButtonWrapper"><button id="btnBuy8BitCrawler" class="btn_Style">Buy 8 Bit Delsec Crawler (64 Packets/sec) - $58.00</button> </div>
+                        <div class="crawlerButtonWrapper"><button id="btnBuy8BitCrawler" class="btn_Style"></button> </div>
                         <div id="eightBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>                  
                         <div id="eightBitIncrementAmtDisplay" class="incremental"></div>
                     </div>
@@ -181,7 +181,7 @@
                         - Low Selection <br />
                     </div>
                     <div id ="russianSixBitDisplay">
-                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian6BitCrawler" class="btn_StyleRed">Buy 6 Bit Russian Tech Crawler (16 Packets/sec) - $22.50</button> </div>
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian6BitCrawler" class="btn_StyleRed"></button> </div>
                         <div id="russianSixBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div> 
                         <div id="russianSixBitIncrementAmtDisplay" class="incrementalReinforced"></div>
                     </div>
@@ -328,7 +328,11 @@
 
             <!-- INVESTMENTS -->
             <div id="investments" class="hidden_Divs">
-                <div id="shortTermInvestments">    
+                <div id="investmentTabSelect">
+                    <button id="btnShortTermInvestments" class="btn_TabSmallGreen2">Short Term Investments</button>
+                    <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">Long Term Investments</button>
+                </div>
+                <div id="shortTermInvestments" class="hidden_Divs">    
                     <h1>SHORT TERM INVESTMENTS</h1>
                     <div id="wikiInvest" class="investDiv">
                         <button id="btnInvestWiki" class="investButton">Invest $2.00 In Zikipedia - 10 sec CD</button> 
@@ -370,7 +374,7 @@
                     </div>
                     <div id="miningInvestResult" class="investResultDiv"></div>     
                 </div>  
-                <div id="longTermInvestments"> 
+                <div id="longTermInvestments" class="hidden_Divs"> 
                     <h1>LONG TERM INVESTMENTS</h1>
                     <div id="goldbotInvest" class="investDiv">  
                         <button id="btnInvestGoldbot" class="investButton">Invest $3.00 In a Gold Farming Bot - 2 min CD</button> 
@@ -2165,7 +2169,9 @@
     <script src="Resources/Scripts/Emails/emails.js"></script>
     <script src="Resources/Scripts/Generate/generators.js"></script>
     <script src="Resources/Scripts/buttonclicks.js"></script>
-    <script src="Resources/Scripts/Shop/buyitem.js"></script>
+
+    <script src="Resources/Scripts/Shop/DelsecCrawlers.js"></script>
+    <script src="Resources/Scripts/Shop/RussianCrawlers.js"></script>
 
     <script src="Resources/Scripts/Tickers/CrawlerTicker.js"></script>     
     <script src="Resources/Scripts/Tickers/DisabledTicker.js"></script>  

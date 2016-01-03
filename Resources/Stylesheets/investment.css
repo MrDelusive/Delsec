@@ -2,7 +2,7 @@
 {
     float:left;
     text-align:left;
-    background: url('../Img/stockBg1.jpg') 50% 0 repeat fixed;
+    background: url('../Img/stockBg2.jpg') 50% 0 repeat fixed;
     height:1600px;
     width: 1000px;
     color: #FFF;
@@ -10,6 +10,9 @@
 
 #investments h1 {
     text-align: center;
+    margin: 0px;
+    padding: 10px;
+   
 }
 
 .investDiv {
@@ -21,7 +24,7 @@
     margin-left: 3px;
     height: 50px;
     background: rgba(0,0,0,0.7);
-    background: url('../Img/stockBg2.jpg') 50% 0 repeat fixed;
+    background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
 }
 .investResultDiv {
 	width: 395px;
@@ -32,6 +35,16 @@
     text-align: center;
     height: 50px;
     font-size: 12px;
-    background: url('../Img/stockBg2.jpg') 50% 0 repeat fixed;
+    background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
+}
+
+#shortTermInvestments {
+    background: url('../Img/stockBgGreen2.png') 50% 0 repeat fixed;
+    height: 100%;
+}
+
+#longTermInvestments {
+    background: url('../Img/stockBgGreen2.png') 50% 0 repeat fixed;
+    height: 100%;
 }
 

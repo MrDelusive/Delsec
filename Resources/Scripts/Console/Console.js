@@ -15,7 +15,7 @@ $(document).keydown(function (e) {
         else if (input == "about")
             $('#mainGameWindow').append('Delsec created by Luke Parisi<br />I hope you enjoy the game!');
 
-        else if (input == "reset") {
+        else if (input === "reset") {
             localStorage.setItem("userClass", "None");
             localStorage.setItem("money", 0);
             localStorage.setItem("threeBitBank", 0);
@@ -131,13 +131,11 @@ $(document).keydown(function (e) {
             localStorage.setItem("reinaccCurrentStockPrice", 15234.04);
 
             localStorage.setItem("warriorClicks", 0);
-            return true;
         }
 
         else if (input == "resetclass") {
             userClass = "None";
             localStorage.setItem("userClass", userClass);
-            return true;
         }
         else if (input == "dsfa") {
             money += 1000;

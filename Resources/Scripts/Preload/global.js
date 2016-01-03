@@ -15,6 +15,19 @@ var sixteenByteBank = 0;
 var thirtytwoByteBank = 0;
 var sixtyfourByteBank = 0;
 
+var current3BitPrice = 4;
+var current4BitPrice = 8;
+var current6BitPrice = 32;
+var currentRussian6BitPrice = 35.20;
+var current8BitPrice = 128;
+var current12BitPrice = 2056;
+var current16BitPrice = 32896;
+var current4BytePrice = 65792;
+var current8BytePrice = 131584;
+var current16BytePrice = 263168;
+var current32BytePrice = 526336;
+var current64BytePrice = 1052672;
+
 var increment = 0;
 var autoIncrement = 0;
 var autoIncrement2s = 0;

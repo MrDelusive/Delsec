@@ -31,6 +31,12 @@
     if (localStorage.getItem("numUnreadEmails") === null)
         localStorage.setItem("numUnreadEmails", numUnreadEmails);
 
+    if (localStorage.getItem("email3Displayed") === null)
+        localStorage.setItem("email3Displayed", email3Displayed);
+
+    if (localStorage.getItem("email4Displayed") === null)
+        localStorage.setItem("email4Displayed", email4Displayed);
+
     if (localStorage.getItem("email10KDisplayed") === null)
         localStorage.setItem("email10KDisplayed", email10KDisplayed);
 
@@ -78,7 +84,9 @@
         email1Viewed = localStorage.getItem("email1Viewed");
         email2Viewed = localStorage.getItem("email2Viewed");
         email3Viewed = localStorage.getItem("email3Viewed");
+        email3Displayed = localStorage.getItem("email3Displayed");
         email4Viewed = localStorage.getItem("email4Viewed");
+        email4Displayed = localStorage.getItem("email4Displayed");
         emailQuickScopeDisplayed = localStorage.getItem("emailQuickScopeDisplayed");
         emailQuickScopeViewed = localStorage.getItem("emailQuickScopeViewed");      
         emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewed");
@@ -102,6 +110,34 @@
     $("#btnStockMarket").fadeIn(500);
     $("#btnAbilities").fadeIn(500);
     $("#btnConsole").fadeIn(500);
+
+
+    current3BitPrice = 4 + 4 * threeBitBank / 10;
+    $('#btnBuy3BitCrawler').html("Buy 3 Bit Delsec Crawler (2 Packets/sec) - $" + current3BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current4BitPrice = 8 + 8 * fourBitBank / 10;
+    $('#btnBuy4BitCrawler').html("Buy 4 Bit Delsec Crawler (4 Packets/sec) - $" + current4BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current6BitPrice = 32 + 32 * sixBitBank / 10;
+    $('#btnBuy6BitCrawler').html("Buy 6 Bit Delsec Crawler (16 Packets/sec) - $" + current6BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current8BitPrice = 128 + 128 * eightBitBank / 10;
+    $('#btnBuy8BitCrawler').html("Buy 8 Bit Delsec Crawler (64 Packets/sec) - $" + current8BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current12BitPrice = 2056 + 2056 * twelveBitBank / 10;
+    $('#btnBuy12BitCrawler').html("Buy 12 Bit Delsec Crawler (1,024 Packets/sec) - $" + current12BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current16BitPrice = 32896 + 32896 * twelveBitBank / 10;
+    $('#btnBuy16BitCrawler').html("Buy 16 Bit Delsec Crawler (16,384 Packets/sec) - $" + current16BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current4BytePrice = 65792 + 65792 * fourByteBank / 10;
+    $('#btnBuy4ByteCrawler').html("Buy 4 Byte Delsec Crawler (32,768 Packets/sec) - $" + current4BytePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current8BytePrice = 131584 + 131584 * eightByteBank / 10;
+    $('#btnBuy8ByteCrawler').html("Buy 8 Byte Delsec Crawler (65,536 Packets/sec) - $" + current8BytePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current16BytePrice = 263168 + 263168 * sixteenByteBank / 10;
+    $('#btnBuy16ByteCrawler').html("Buy 16 Byte Delsec Crawler (131,072 Packets/sec) - $" + current16BytePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current32BytePrice = 526336 + 526336 * thirtytwoByteBank / 10;
+    $('#btnBuy32ByteCrawler').html("Buy 32 Byte Delsec Crawler (262,144 Packets/sec) - $" + current32BytePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    current64BytePrice = 1052672 + 1052672 * sixtyfourByteBank / 10;
+    $('#btnBuy64ByteCrawler').html("Buy 64 Byte Delsec Crawler (524,288 Packets/sec) - $" + current64BytePrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+
+
+    currentRussian6BitPrice = 32 + 32 * russianSixBitBank / 10;
+    $('#btnBuyRussian6BitCrawler').html("Buy 6 Bit Russian Tech Crawler (16 Packets/sec) - $" + currentRussian6BitPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
 
     if (threeBitBank > 0) 
