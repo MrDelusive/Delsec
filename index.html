@@ -2939,9 +2939,28 @@
             <!-- OPTIONS -->
             <div id="options" class="hidden_Divs">
                 <b>Debug info, testing only:</b><br /> <br />
-			    Current Version: V0.6 <br /> <br />  
+			    Current Version: V0.65 <br /> <br />  
                 <button id="btnResetAll">Reset All</button>
                 <button id="btnResetClass">Reset Class</button>
+                <div id="patchNotes">
+                    Current Patch notes
+                    <ul>
+                        <li>Restyled Stock Market tab, stock market now has left side list to select, brings up company stock info. Can fit more in now.</li>
+                        <li>Stocks now display history of current price + 5 previous prices. This is not saved to localStorage because I didn't want to fill up 100 storage vars just for that.</li>
+                        <li>Graphs will not display until the first stock tick.</li>
+                        <li>Stocks again have been rebalanced slightly.</li>
+                        <li>History shown in graph form using flot.</li>
+                        <li>Fixed bug with 5% stock sell difference still selling at 10% stock difference</li>
+                    </ul>
+                    To do next:
+                    <ul>
+                        <li>Add risk to crawlers and some investments.</li>
+                        <li>Add risk management</li>
+                        <li>Add more investment options</li>
+                        <li>Add more crawler options</li>
+                        <li>Add more emails</li>
+                    </ul>
+                </div>
             </div>              
         </div>
     </div>
