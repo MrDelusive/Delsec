@@ -7,7 +7,7 @@
             var timer = 120;
             $('#goldbotInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#goldbotInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -102,7 +102,7 @@
             var timer = 180;
             $('#gameInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#gameInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }

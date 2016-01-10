@@ -5,15 +5,15 @@
  Chrome, Safari, Opera */
 @-webkit-keyframes menuFlash
 {
-from    {   background: url('../Img/btn_HackBG.png'); }
-to      {   background: url('../Img/btn_HackBG.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateDefault.png'); }
+to      {   background: url('../Img/generateDefault.png'); background-position: 0px 3200px;  }
 
 }
 /* Standard syntax */
 @keyframes menuFlash
 {
-from    {   background: url('../Img/btn_HackBG.png'); }
-to      {   background: url('../Img/btn_HackBG.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateDefault.png'); }
+to      {   background: url('../Img/generateDefault.png'); background-position: 0px 3200px;  }
 
 }
 
@@ -21,15 +21,15 @@ to      {   background: url('../Img/btn_HackBG.png'); background-position: 0px 3
  Chrome, Safari, Opera */
 @-webkit-keyframes menuFlashRed
 {
-from    {   background: url('../Img/btn_HackBGRed.png'); }
-to      {   background: url('../Img/btn_HackBGRed.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateRed.png'); }
+to      {   background: url('../Img/generateRed.png'); background-position: 0px 3200px;  }
 
 }
 /* Standard syntax */
 @keyframes menuFlashRed
 {
-from    {   background: url('../Img/btn_HackBGRed.png'); }
-to      {   background: url('../Img/btn_HackBGRed.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateRed.png'); }
+to      {   background: url('../Img/generateRed.png'); background-position: 0px 3200px;  }
 
 }
 
@@ -37,15 +37,15 @@ to      {   background: url('../Img/btn_HackBGRed.png'); background-position: 0p
  Chrome, Safari, Opera */
 @-webkit-keyframes menuFlashBlue
 {
-from    {   background: url('../Img/btn_HackBGBlue.png'); }
-to      {   background: url('../Img/btn_HackBGBlue.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateBlue.png'); }
+to      {   background: url('../Img/generateBlue.png'); background-position: 0px 3200px;  }
 
 }
 /* Standard syntax */
 @keyframes menuFlashBlue
 {
-from    {   background: url('../Img/btn_HackBGBlue.png'); }
-to      {   background: url('../Img/btn_HackBGBlue.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateBlue.png'); }
+to      {   background: url('../Img/generateBlue.png'); background-position: 0px 3200px;  }
 
 }
 
@@ -54,15 +54,15 @@ to      {   background: url('../Img/btn_HackBGBlue.png'); background-position: 0
  Chrome, Safari, Opera */
 @-webkit-keyframes menuFlashYellow
 {
-from    {   background: url('../Img/btn_HackBGYellow.png'); }
-to      {   background: url('../Img/btn_HackBGYellow.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateYellow.png'); }
+to      {   background: url('../Img/generateYellow.png'); background-position: 0px 3200px;  }
 
 }
 /* Standard syntax */
 @keyframes menuFlashYellow
 {
-from    {   background: url('../Img/btn_HackBGYellow.png'); }
-to      {   background: url('../Img/btn_HackBGYellow.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateYellow.png'); }
+to      {   background: url('../Img/generateYellow.png'); background-position: 0px 3200px;  }
 
 }
 
@@ -71,15 +71,15 @@ to      {   background: url('../Img/btn_HackBGYellow.png'); background-position:
  Chrome, Safari, Opera */
 @-webkit-keyframes menuFlashGreen
 {
-from    {   background: url('../Img/btn_HackBGGreen.png'); }
-to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateGreen.png'); }
+to      {   background: url('../Img/generateGreen.png'); background-position: 0px 3200px;  }
 
 }
 /* Standard syntax */
 @keyframes menuFlashGreen
 {
-from    {   background: url('../Img/btn_HackBGGreen.png'); }
-to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 0px 3200px;  }
+from    {   background: url('../Img/generateGreen.png'); }
+to      {   background: url('../Img/generateGreen.png'); background-position: 0px 3200px;  }
 
 }
 
@@ -744,21 +744,44 @@ to      {   background: url('../Img/btn_HackBGGreen.png'); background-position: 
 
 .stockButton
 {
-    margin-left: -5px;
-    margin-right: -5px;
-    font-family:Consolas,monaco,monospace;
-    font-size:14px;
-	background-color:#093159;
-    cursor: pointer;
-	border:1px solid #000000;
+    background: #603001;
+    border: 1px solid black;
 	display:inline-block;
-	color:#ffffff;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:14px;
+	height:30px;
+    width: 150px;
+	line-height:30px;
+    margin: 5px;
+    margin-top: 5px;
 	text-decoration:none;
 	text-align:center;
 }
 
 .stockButton:hover {
-	background-color:#3e9ee1;
+	background: rgba(164, 95, 0, 0.8);
+}
+
+.stockSideButton
+{
+    background: rgba(164, 95, 0, 0.2);
+    border: none;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:12px;
+	height:30px;
+    width: 75px;
+	line-height:30px;
+	text-decoration:none;
+	text-align:left;
+}
+
+.stockSideButton:hover {
+	background: rgba(164, 95, 0, 0.4);
 }
 
 .stockButton:disabled {

@@ -3,46 +3,156 @@
 #stocks
 {
     float:left;
-    text-align:left;
     background: rgba(0, 0, 0, 0.7);
     height:2500px;
     width: 1000px;
-    color: #5ac7ff;
+    font-size:14px;
+    color: white;
 }
 #stockTimerDisplay {
-    height: 100px;
-    margin: 0 auto;
+    height: 60px;
+    width: 960px;
+    margin: 10px;
     text-align: center;
-    background: url('../Img/stockHeader.jpg') 50% 0 repeat;
     font-size: 30px;
-    line-height:100px;
-}
-#delsecStockUpdate
-{
-    width: 200px;
-    float: right;
-    height: 100px;
+    line-height:60px;
 }
 
-tr:nth-child(even) {
-    background: url('../Img/stockBg2.jpg') 50% 0 repeat fixed;
-}
-#stocks table
-{
+#stockTabs {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
     text-align: center;
+    line-height: 30px;
+    width: 320px;
+    overflow:auto;
+    height: 450px;
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #cf9406;
+    padding-left: 5px;
+    background: rgba(44, 25, 0, 0.8);
+}
+.innerStockTab {
+    width: 75px;
+    height: 30px;
+    float: left;    
+}
+.innerStockTabHeader {
+    width: 75px;
     height: 40px;
-    vertical-align: central;
-    background: url('../Img/stockBg1.jpg') 50% 0 repeat fixed;
-	width: 1000px;
+    float: left;
+    background:rgba(0,0,0,0.5); 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;   
 }
-#stocks tr td{
-    padding-top: 2px;
-    padding-bottom: 2px;
+.innerStockTabHeaderThin {
+    width: 40px;
+    height: 40px;
+    float: left;
+    background:rgba(0,0,0,0.5); 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;   
 }
-#stocks th, td
-{
-    border-style:solid;
-    border-width: 1px;
-    border-color: #3e9ee1;
-    vertical-align: central;
+.innerStockTabHeaderThick {
+    width: 110px;
+    height: 40px;
+    float: left;
+    background:rgba(0,0,0,0.5); 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;   
+}
+.innerStockTabThin {
+    width: 40px;
+    height: 30px;
+    float: left;    
+}
+.innerStockTabThick {
+    width: 110px;
+    height: 30px;
+    text-align: left;
+    float: left;    
+}
+.buySell {
+    background: rgba(0,0,0,0.3);
+    font-size: 14px;
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+    width: 640px;
+    height: 50px;
+    line-height: 50px;
+    padding-left:25px;
+    padding-right:25px;
+}
+.stockButtonColumnLeft {
+    float: left;
+    text-align: left;
+    width: 300px;
+    padding-top: 10px;
+    padding-left:25px;
+    height: 220px;
+}
+.stockButtonColumnRight {
+    float: left;
+    text-align: left;
+    width: 300px;
+    padding-top: 10px;
+    padding-right:25px;
+    height: 220px;
+}
+.stockButtonColumnLeftShort {
+    float: left;
+    text-align: center;
+    color: white;
+    width: 270px;
+    padding-left:25px;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0,0,0,0.3);
+}
+.stockButtonColumnRightShort {
+    float: left;
+    color: white;
+    text-align: center;
+    width: 330px;
+    padding-right:25px;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0,0,0,0.3);
+}
+.stockTypeDisplay {
+    float: left;
+    width: 140px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.stockTypeDisplayHeader {
+    float: left;
+    width: 130px;
+    text-align: left;
+    font-size: 16px;
+}
+.stockDisplay {
+    display: none;
+    float: left;
+    color: white;
+    background: rgba(44, 25, 0, 0.8);
+    border: 1px solid #cf9406;
+    border-radius: 10px;
+    width: 650px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.historyDisplay {
+    /*width: 650px;
+    height: 400px;*/
+    background: #404774;
+    margin-left:25px;
+    margin-right:25px; 
+    margin-bottom: 10px;
 }

@@ -1,9 +1,11 @@
 ﻿$(document).ready(function () {
 
-    $('#aceholdStockDisplayCost').html('$' + aceholdCurrentStockPrice.toFixed(2));
-    $('#aceholdStockSellPrice').html('$' + (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider).toFixed(2));
+    $('#aceholdStockDisplayCost').html('$' + aceholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#aceholdCurrentPrice').html('$' + aceholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#aceholdStockSellPrice').html('$' + (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
-    $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - (aceholdCurrentStockPrice / sellDivider))).toFixed(2));
+    $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - (aceholdCurrentStockPrice / sellDivider))).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
     $('#btnBuyAceholdStocks').click(function () {
 
@@ -12,14 +14,17 @@
             localStorage.setItem("money", money);
             ownedAceholdStocks++;
             localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+            aceholdSpentAmt += aceholdCurrentStockPrice;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
 
         return false;
@@ -31,14 +36,17 @@
             localStorage.setItem("money", money);
             ownedAceholdStocks += 10;
             localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+            aceholdSpentAmt += aceholdCurrentStockPrice * 10;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -49,14 +57,17 @@
             localStorage.setItem("money", money);
             ownedAceholdStocks += 100;
             localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+            aceholdSpentAmt += aceholdCurrentStockPrice * 100;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -68,40 +79,50 @@
             localStorage.setItem("money", money);
             ownedAceholdStocks += aceholdBuyAmt;
             localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+            aceholdSpentAmt += aceholdCurrentStockPrice * aceholdBuyAmt;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
         return false;
     });
 
-    // Always sell amt at 10% lower
     $('#btnSellAceholdStocks').click(function () {
         if (ownedAceholdStocks > 0) {
-            money += aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10;
+            money += aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider;
             localStorage.setItem("money", money);
+            var average = aceholdSpentAmt / ownedAceholdStocks;
+            aceholdSpentAmt -= average;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedAceholdStocks--;
-            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+            localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);            
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellAceholdStocks10').click(function () {
         if (ownedAceholdStocks > 9) {
-            money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10) * 10;
+            money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider) * 10;
             localStorage.setItem("money", money);
+            var average = aceholdSpentAmt / ownedAceholdStocks;
+            aceholdSpentAmt -= average * 10;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedAceholdStocks -= 10;
             localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -109,16 +130,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellAceholdStocks100').click(function () {
         if (ownedAceholdStocks > 99) {
-            money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10) * 100;
+            money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider) * 100;
             localStorage.setItem("money", money);
+            var average = aceholdSpentAmt / ownedAceholdStocks;
+            aceholdSpentAmt -= average * 100;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedAceholdStocks -= 100;
             localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -126,17 +151,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
         return false;
     });
 
     $('#btnSellAceholdStocksAll').click(function () {
         if (ownedAceholdStocks > 0) {
-            money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / 10) * ownedAceholdStocks;
+            money += (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider) * ownedAceholdStocks;
             localStorage.setItem("money", money);
+            aceholdSpentAmt = 0;
+            localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
+            $('#aceholdMoneySpent').html('$' + aceholdSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -144,10 +172,10 @@
             localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
             $('#aceholdOwnedStocksDisplay').html(ownedAceholdStocks);
             if (ownedAceholdStocks > 0)
-                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#aceholdSellEstimate').html('$0');
+                $('#aceholdSellEstimate').html('$0.00');
         }
         return false;
     });
-})(jQuery);
+});

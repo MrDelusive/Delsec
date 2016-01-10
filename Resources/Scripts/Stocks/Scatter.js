@@ -1,9 +1,11 @@
 ﻿$(document).ready(function () {
 
-    $('#scatterStockDisplayCost').html('$' + scatterCurrentStockPrice.toFixed(2));
-    $('#scatterStockSellPrice').html('$' + (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider).toFixed(2));
+    $('#scatterStockDisplayCost').html('$' + scatterCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#scatterCurrentPrice').html('$' + scatterCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#scatterStockSellPrice').html('$' + (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
-    $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - (scatterCurrentStockPrice / sellDivider))).toFixed(2));
+    $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - (scatterCurrentStockPrice / sellDivider))).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
     $('#btnBuyScatterStocks').click(function () {
 
@@ -12,14 +14,17 @@
             localStorage.setItem("money", money);
             ownedScatterStocks++;
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
+            scatterSpentAmt += scatterCurrentStockPrice;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
 
         return false;
@@ -31,14 +36,17 @@
             localStorage.setItem("money", money);
             ownedScatterStocks += 10;
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
+            scatterSpentAmt += scatterCurrentStockPrice * 10;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -49,14 +57,17 @@
             localStorage.setItem("money", money);
             ownedScatterStocks += 100;
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
+            scatterSpentAmt += scatterCurrentStockPrice * 100;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -68,23 +79,29 @@
             localStorage.setItem("money", money);
             ownedScatterStocks += scatterBuyAmt;
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
+            scatterSpentAmt += scatterCurrentStockPrice * scatterBuyAmt;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
         return false;
     });
 
-    // Always sell amt at 10% lower
     $('#btnSellScatterStocks').click(function () {
         if (ownedScatterStocks > 0) {
-            money += scatterCurrentStockPrice - scatterCurrentStockPrice / 10;
+            money += scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider;
             localStorage.setItem("money", money);
+            var average = scatterSpentAmt / ownedScatterStocks;
+            scatterSpentAmt -= average;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedScatterStocks--;
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -92,16 +109,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellScatterStocks10').click(function () {
         if (ownedScatterStocks > 9) {
-            money += (scatterCurrentStockPrice - scatterCurrentStockPrice / 10) * 10;
+            money += (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider) * 10;
             localStorage.setItem("money", money);
+            var average = scatterSpentAmt / ownedScatterStocks;
+            scatterSpentAmt -= average * 10;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedScatterStocks -= 10;
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -109,16 +130,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellScatterStocks100').click(function () {
         if (ownedScatterStocks > 99) {
-            money += (scatterCurrentStockPrice - scatterCurrentStockPrice / 10) * 100;
+            money += (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider) * 100;
             localStorage.setItem("money", money);
+            var average = scatterSpentAmt / ownedScatterStocks;
+            scatterSpentAmt -= average * 100;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedScatterStocks -= 100;
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -126,17 +151,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
         return false;
     });
 
     $('#btnSellScatterStocksAll').click(function () {
         if (ownedScatterStocks > 0) {
-            money += (scatterCurrentStockPrice - scatterCurrentStockPrice / 10) * ownedScatterStocks;
+            money += (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider) * ownedScatterStocks;
             localStorage.setItem("money", money);
+            scatterSpentAmt = 0;
+            localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
+            $('#scatterMoneySpent').html('$' + scatterSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -144,10 +172,10 @@
             localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
             $('#scatterOwnedStocksDisplay').html(ownedScatterStocks);
             if (ownedScatterStocks > 0)
-                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#scatterSellEstimate').html('$0');
+                $('#scatterSellEstimate').html('$0.00');
         }
         return false;
     });
-})(jQuery);
+});

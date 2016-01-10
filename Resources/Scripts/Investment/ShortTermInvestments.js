@@ -7,7 +7,7 @@ $(document).ready(function () {
             var timer = 10;
             $('#wikiInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#wikiInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -114,7 +114,7 @@ $(document).ready(function () {
             var timer = 10;
             $('#twitchInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#twitchInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -209,7 +209,7 @@ $(document).ready(function () {
             var timer = 15;
             $('#punchInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#punchInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -306,7 +306,7 @@ $(document).ready(function () {
             var timer = 15;
             $('#websiteInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#websiteInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -405,7 +405,7 @@ $(document).ready(function () {
             var timer = 20;
             $('#pokerInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#pokerInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -501,7 +501,7 @@ $(document).ready(function () {
             var timer = 30;
             $('#rentalInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#rentalInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -598,7 +598,7 @@ $(document).ready(function () {
             var timer = 30;
             $('#raceInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#raceInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
@@ -694,7 +694,7 @@ $(document).ready(function () {
             var timer = 60;
             $('#miningInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
-                if (timer > 0) {
+                if (timer > 1) {
                     timer--;
                     $('#miningInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }

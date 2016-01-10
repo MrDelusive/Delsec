@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta name="keywords" content="Delsec, Clicker Game, Delsec Clicker, Mr Delusive, Incremental Game"> 
-    <meta name="description" content="Delsec Incremental Game">               
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Delsec, Clicker Game, Delsec Clicker, Mr Delusive, Incremental Game" /> 
+    <meta name="description" content="Delsec Incremental Game" />               
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>
         Delsec Account
     </title>
@@ -21,7 +21,6 @@
     <link href="Resources/Stylesheets/Rogue.css" rel="stylesheet" type="text/css" /> 
     <link href="Resources/Stylesheets/Warrior.css" rel="stylesheet" type="text/css" /> 
     <link href="Resources/Stylesheets/Wizard.css" rel="stylesheet" type="text/css" /> 
-
 </head>
 <body>    
     <form id="delsecForm">
@@ -394,757 +393,1532 @@
 
             <!-- STOCK MARKET -->
             <div id="stocks" class="hidden_Divs">
-                <div id="stockTimerDisplay"></div>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>COMPANY</td><td>BUY</td><td>SELL</td><td>PURCHASE</td><td>CHNG</td><td>OWNED</td><td>SELL VALUE</td>    
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DELSEC</td>
-                            <td><div id="delsecStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="delsecStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyDelsecStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyDelsecStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyDelsecStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyDelsecStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellDelsecStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellDelsecStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellDelsecStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellDelsecStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="delsecChange">0.00</div></td>
-                            <td><div id="delsecOwnedStocksDisplay"></div></td>
-                            <td><div id="delsecSellEstimate"></div></td>
-                        </tr>
+                <div id="stockTimerDisplay" class="lblItemDisplay"></div>
+                <div id="stockTabs">
+                    <div class="innerStockTabHeader">COMPANY</div><div class="innerStockTabHeaderThin">OWNED</div><div class="innerStockTabHeader">CHANGE</div> <div class="innerStockTabHeaderThick">$</div>
+                    <div class="innerStockTab"><button id="btnDelsecStocks" class="stockSideButton">DELSEC</button></div> <div id="delsecOwnedStocksDisplay" class="innerStockTabThin"></div> 
+                    <div id="delsecChange" class="innerStockTab">0.00</div> <div id="delsecCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>ENTAQ</td>
-                            <td><div id="entaqStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="entaqStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyEntaqStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyEntaqStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyEntaqStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyEntaqStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellEntaqStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellEntaqStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellEntaqStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellEntaqStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="entaqChange">0.00</div></td>
-                            <td><div id="entaqOwnedStocksDisplay"></div></td>
-                            <td><div id="entaqSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnEntaqStocks" class="stockSideButton">ENTAQ</button></div> <div id="entaqOwnedStocksDisplay" class="innerStockTabThin"></div>            
+                    <div id="entaqChange" class="innerStockTab">0.00</div> <div id="entaqCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>VENTEX</td>
-                            <td><div id="ventexStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="ventexStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyVentexStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyVentexStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyVentexStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyVentexStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellVentexStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellVentexStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellVentexStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellVentexStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="ventexChange">0.00</div></td>
-                            <td><div id="ventexOwnedStocksDisplay"></div></td>
-                            <td><div id="ventexSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnVentexStocks" class="stockSideButton">VENTEX</button></div> <div id="ventexOwnedStocksDisplay" class="innerStockTabThin"></div>              
+                    <div id="ventexChange" class="innerStockTab">0.00</div> <div id="ventexCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>ASTOR</td>
-                            <td><div id="astorStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="astorStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyAstorStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyAstorStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyAstorStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyAstorStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellAstorStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellAstorStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellAstorStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellAstorStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="astorChange">0.00</div></td>
-                            <td><div id="astorOwnedStocksDisplay"></div></td>
-                            <td><div id="astorSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnAstorStocks" class="stockSideButton">ASTOR</button></div> <div id="astorOwnedStocksDisplay" class="innerStockTabThin"></div> 
+                    <div id="astorChange" class="innerStockTab">0.00</div> <div id="astorCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>POPBOT</td>
-                            <td><div id="popbotStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="popbotStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyPopbotStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyPopbotStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyPopbotStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyPopbotStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellPopbotStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellPopbotStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellPopbotStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellPopbotStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="popbotChange">0.00</div></td>
-                            <td><div id="popbotOwnedStocksDisplay"></div></td>
-                            <td><div id="popbotSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnPopbotStocks" class="stockSideButton">POPBOT</button></div> <div id="popbotOwnedStocksDisplay" class="innerStockTabThin"></div>               
+                    <div id="popbotChange" class="innerStockTab">0.00</div> <div id="popbotCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>PANNAM</td>
-                            <td><div id="pannamStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="pannamStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyPannamStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyPannamStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyPannamStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyPannamStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellPannamStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellPannamStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellPannamStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellPannamStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="pannamChange">0.00</div></td>
-                            <td><div id="pannamOwnedStocksDisplay"></div></td>
-                            <td><div id="pannamSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnPannamStocks" class="stockSideButton">PANNAM</button></div> <div id="pannamOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="pannamChange" class="innerStockTab">0.00</div> <div id="pannamCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>TRIT</td>
-                            <td><div id="TRITStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="TRITStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyTRITStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyTRITStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyTRITStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyTRITStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellTRITStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellTRITStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellTRITStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellTRITStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="TRITChange">0.00</div></td>
-                            <td><div id="TRITOwnedStocksDisplay"></div></td>
-                            <td><div id="TRITSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnTRITStocks" class="stockSideButton">TRIT</button></div> <div id="TRITOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="TRITChange" class="innerStockTab">0.00</div> <div id="TRITCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>CANV</td>
-                            <td><div id="CANVStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="CANVStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyCANVStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyCANVStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyCANVStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyCANVStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellCANVStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellCANVStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellCANVStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellCANVStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="CANVChange">0.00</div></td>
-                            <td><div id="CANVOwnedStocksDisplay"></div></td>
-                            <td><div id="CANVSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnCANVStocks" class="stockSideButton">CANV</button></div> <div id="CANVOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="CANVChange" class="innerStockTab">0.00</div> <div id="CANVCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>OSM</td>
-                            <td><div id="OSMStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="OSMStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyOSMStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyOSMStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyOSMStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyOSMStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellOSMStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellOSMStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellOSMStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellOSMStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="OSMChange">0.00</div></td>
-                            <td><div id="OSMOwnedStocksDisplay"></div></td>
-                            <td><div id="OSMSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnOSMStocks" class="stockSideButton">OSM</button></div> <div id="OSMOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="OSMChange" class="innerStockTab">0.00</div> <div id="OSMCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>PALLAD</td>
-                            <td><div id="PALLADStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="PALLADStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyPALLADStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyPALLADStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyPALLADStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyPALLADStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellPALLADStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellPALLADStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellPALLADStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellPALLADStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="PALLADChange">0.00</div></td>
-                            <td><div id="PALLADOwnedStocksDisplay"></div></td>
-                            <td><div id="PALLADSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnPALLADStocks" class="stockSideButton">PALLAD</button></div> <div id="PALLADOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="PALLADChange" class="innerStockTab">0.00</div> <div id="PALLADCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>KELV</td>
-                            <td><div id="KELVStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="KELVStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyKELVStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyKELVStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyKELVStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyKELVStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellKELVStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellKELVStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellKELVStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellKELVStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="KELVChange">0.00</div></td>
-                            <td><div id="KELVOwnedStocksDisplay"></div></td>
-                            <td><div id="KELVSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnKELVStocks" class="stockSideButton">KELV</button></div> <div id="KELVOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="KELVChange" class="innerStockTab">0.00</div> <div id="KELVCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>STUCCOR</td>
-                            <td><div id="stuccorStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="stuccorStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyStuccorStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyStuccorStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyStuccorStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyStuccorStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellStuccorStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellStuccorStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellStuccorStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellStuccorStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="stuccorChange">0.00</div></td>
-                            <td><div id="stuccorOwnedStocksDisplay"></div></td>
-                            <td><div id="stuccorSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnStuccorStocks" class="stockSideButton">STUCCOR</button></div> <div id="stuccorOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="stuccorChange" class="innerStockTab">0.00</div> <div id="stuccorCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>DELCRED</td>
-                            <td><div id="delcredStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="delcredStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyDelcredStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyDelcredStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyDelcredStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyDelcredStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellDelcredStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellDelcredStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellDelcredStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellDelcredStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="delcredChange">0.00</div></td>
-                            <td><div id="delcredOwnedStocksDisplay"></div></td>
-                            <td><div id="delcredSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnDelcredStocks" class="stockSideButton">DELCRED</button></div> <div id="delcredOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="delcredChange" class="innerStockTab">0.00</div> <div id="delcredCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>RUSTEC</td>
-                            <td><div id="rustecStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="rustecStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyRustecStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyRustecStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyRustecStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyRustecStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellRustecStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellRustecStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellRustecStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellRustecStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="rustecChange">0.00</div></td>
-                            <td><div id="rustecOwnedStocksDisplay"></div></td>
-                            <td><div id="rustecSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnRustecStocks" class="stockSideButton">RUSTEC</button></div> <div id="rustecOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="rustecChange" class="innerStockTab">0.00</div> <div id="rustecCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>EXXOCRED</td>
-                            <td><div id="exxocredStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="exxocredStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyExxocredStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyExxocredStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyExxocredStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyExxocredStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellExxocredStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellExxocredStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellExxocredStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellExxocredStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="exxocredChange">0.00</div></td>
-                            <td><div id="exxocredOwnedStocksDisplay"></div></td>
-                            <td><div id="exxocredSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnExxocredStocks" class="stockSideButton">EXXOCRED</button></div> <div id="exxocredOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="exxocredChange" class="innerStockTab">0.00</div> <div id="exxocredCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>AU</td>
-                            <td><div id="AUStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="AUStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyAUStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyAUStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyAUStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyAUStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellAUStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellAUStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellAUStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellAUStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="AUChange">0.00</div></td>
-                            <td><div id="AUOwnedStocksDisplay"></div></td>
-                            <td><div id="AUSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnAUStocks" class="stockSideButton">AU</button></div> <div id="AUOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="AUChange" class="innerStockTab">0.00</div> <div id="AUCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>ACEHOLD</td>
-                            <td><div id="aceholdStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="aceholdStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyAceholdStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyAceholdStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyAceholdStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyAceholdStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellAceholdStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellAceholdStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellAceholdStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellAceholdStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="aceholdChange">0.00</div></td>
-                            <td><div id="aceholdOwnedStocksDisplay"></div></td>
-                            <td><div id="aceholdSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnAceholdStocks" class="stockSideButton">ACEHOLD</button></div> <div id="aceholdOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="aceholdChange" class="innerStockTab">0.00</div> <div id="aceholdCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>DELHOLD</td>
-                            <td><div id="delholdStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="delholdStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyDelholdStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyDelholdStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyDelholdStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyDelholdStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellDelholdStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellDelholdStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellDelholdStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellDelholdStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="delholdChange">0.00</div></td>
-                            <td><div id="delholdOwnedStocksDisplay"></div></td>
-                            <td><div id="delholdSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnDelholdStocks" class="stockSideButton">DELHOLD</button></div> <div id="delholdOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="delholdChange" class="innerStockTab">0.00</div> <div id="delholdCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>DIAM</td>
-                            <td><div id="DIAMStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="DIAMStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyDIAMStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyDIAMStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyDIAMStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyDIAMStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellDIAMStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellDIAMStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellDIAMStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellDIAMStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="DIAMChange">0.00</div></td>
-                            <td><div id="DIAMOwnedStocksDisplay"></div></td>
-                            <td><div id="DIAMSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnDIAMStocks" class="stockSideButton">DIAM</button></div> <div id="DIAMOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="DIAMChange" class="innerStockTab">0.00</div> <div id="DIAMCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>PENTACC</td>
-                            <td><div id="pentaccStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="pentaccStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyPentaccStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyPentaccStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyPentaccStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyPentaccStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellPentaccStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellPentaccStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellPentaccStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellPentaccStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="pentaccChange">0.00</div></td>
-                            <td><div id="pentaccOwnedStocksDisplay"></div></td>
-                            <td><div id="pentaccSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnPentaccStocks" class="stockSideButton">PENTACC</button></div> <div id="pentaccOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="pentaccChange" class="innerStockTab">0.00</div> <div id="pentaccCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>NOODLE</td>
-                            <td><div id="noodleStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="noodleStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyNoodleStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyNoodleStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyNoodleStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyNoodleStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellNoodleStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellNoodleStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellNoodleStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellNoodleStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="noodleChange">0.00</div></td>
-                            <td><div id="noodleOwnedStocksDisplay"></div></td>
-                            <td><div id="noodleSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnNoodleStocks" class="stockSideButton">NOODLE</button></div> <div id="noodleOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="noodleChange" class="innerStockTab">0.00</div> <div id="noodleCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>MEGAHARD</td>
-                            <td><div id="megahardStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="megahardStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyMegahardStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyMegahardStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyMegahardStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyMegahardStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellMegahardStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellMegahardStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellMegahardStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellMegahardStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="megahardChange">0.00</div></td>
-                            <td><div id="megahardOwnedStocksDisplay"></div></td>
-                            <td><div id="megahardSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnMegahardStocks" class="stockSideButton">MEGAHARD</button></div> <div id="megahardOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="megahardChange" class="innerStockTab">0.00</div> <div id="megahardCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>CHIMERASEC</td>
-                            <td><div id="chimerasecStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="chimerasecStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyChimerasecStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyChimerasecStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyChimerasecStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyChimerasecStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellChimerasecStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellChimerasecStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellChimerasecStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellChimerasecStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="chimerasecChange">0.00</div></td>
-                            <td><div id="chimerasecOwnedStocksDisplay"></div></td>
-                            <td><div id="chimerasecSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnChimerasecStocks" class="stockSideButton">CMRASEC</button></div> <div id="chimerasecOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="chimerasecChange" class="innerStockTab">0.00</div> <div id="chimerasecCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>CHIMERAHOLD</td>
-                            <td><div id="chimeraholdStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="chimeraholdStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyChimeraholdStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyChimeraholdStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyChimeraholdStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyChimeraholdStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellChimeraholdStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellChimeraholdStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellChimeraholdStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellChimeraholdStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="chimeraholdChange">0.00</div></td>
-                            <td><div id="chimeraholdOwnedStocksDisplay"></div></td>
-                            <td><div id="chimeraholdSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnChimeraholdStocks" class="stockSideButton">CMRAHOLD</button></div> <div id="chimeraholdOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="chimeraholdChange" class="innerStockTab">0.00</div> <div id="chimeraholdCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>GRIFFONBANK</td>
-                            <td><div id="griffonbankStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="griffonbankStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyGriffonbankStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyGriffonbankStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyGriffonbankStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyGriffonbankStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellGriffonbankStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellGriffonbankStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellGriffonbankStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellGriffonbankStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="griffonbankChange">0.00</div></td>
-                            <td><div id="griffonbankOwnedStocksDisplay"></div></td>
-                            <td><div id="griffonbankSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnGriffonbankStocks" class="stockSideButton">GRFNBANK</button></div> <div id="griffonbankOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="griffonbankChange" class="innerStockTab">0.00</div> <div id="griffonbankCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>TURBORUS</td>
-                            <td><div id="turborusStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="turborusStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyTurborusStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyTurborusStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyTurborusStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyTurborusStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellTurborusStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellTurborusStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellTurborusStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellTurborusStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="turborusChange">0.00</div></td>
-                            <td><div id="turborusOwnedStocksDisplay"></div></td>
-                            <td><div id="turborusSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnTurborusStocks" class="stockSideButton">TURBORUS</button></div> <div id="turborusOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="turborusChange" class="innerStockTab">0.00</div> <div id="turborusCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>EXODMPT</td>
-                            <td><div id="exodmptStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="exodmptStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyExodmptStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyExodmptStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyExodmptStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyExodmptStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellExodmptStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellExodmptStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellExodmptStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellExodmptStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="exodmptChange">0.00</div></td>
-                            <td><div id="exodmptOwnedStocksDisplay"></div></td>
-                            <td><div id="exodmptSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnExodmptStocks" class="stockSideButton">EXODMPT</button></div> <div id="exodmptOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="exodmptChange" class="innerStockTab">0.00</div> <div id="exodmptCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>RAMNET</td>
-                            <td><div id="ramnetStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="ramnetStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyRamnetStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyRamnetStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyRamnetStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyRamnetStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellRamnetStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellRamnetStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellRamnetStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellRamnetStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="ramnetChange">0.00</div></td>
-                            <td><div id="ramnetOwnedStocksDisplay"></div></td>
-                            <td><div id="ramnetSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnRamnetStocks" class="stockSideButton">RAMNET</button></div> <div id="ramnetOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="ramnetChange" class="innerStockTab">0.00</div> <div id="ramnetCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>ALPHACEN</td>
-                            <td><div id="alphacenStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="alphacenStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyAlphacenStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyAlphacenStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyAlphacenStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyAlphacenStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellAlphacenStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellAlphacenStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellAlphacenStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellAlphacenStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="alphacenChange">0.00</div></td>
-                            <td><div id="alphacenOwnedStocksDisplay"></div></td>
-                            <td><div id="alphacenSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnAlphacenStocks" class="stockSideButton">ALPHACEN</button></div> <div id="alphacenOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="alphacenChange" class="innerStockTab">0.00</div> <div id="alphacenCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>SCATTER</td>
-                            <td><div id="scatterStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="scatterStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyScatterStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyScatterStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyScatterStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyScatterStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellScatterStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellScatterStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellScatterStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellScatterStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="scatterChange">0.00</div></td>
-                            <td><div id="scatterOwnedStocksDisplay"></div></td>
-                            <td><div id="scatterSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnScatterStocks" class="stockSideButton">SCATTER</button></div> <div id="scatterOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="scatterChange" class="innerStockTab">0.00</div> <div id="scatterCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>KALZEX</td>
-                            <td><div id="kalzexStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="kalzexStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyKalzexStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyKalzexStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyKalzexStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyKalzexStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellKalzexStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellKalzexStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellKalzexStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellKalzexStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="kalzexChange">0.00</div></td>
-                            <td><div id="kalzexOwnedStocksDisplay"></div></td>
-                            <td><div id="kalzexSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnKalzexStocks" class="stockSideButton">KALZEX</button></div> <div id="kalzexOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="kalzexChange" class="innerStockTab">0.00</div> <div id="kalzexCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>SONICOS</td>
-                            <td><div id="sonicosStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="sonicosStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuySonicosStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuySonicosStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuySonicosStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuySonicosStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellSonicosStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellSonicosStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellSonicosStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellSonicosStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="sonicosChange">0.00</div></td>
-                            <td><div id="sonicosOwnedStocksDisplay"></div></td>
-                            <td><div id="sonicosSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnSonicosStocks" class="stockSideButton">SONICOS</button></div> <div id="sonicosOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="sonicosChange" class="innerStockTab">0.00</div> <div id="sonicosCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>TRANCEXT</td>
-                            <td><div id="trancextStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="trancextStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyTrancextStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyTrancextStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyTrancextStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyTrancextStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellTrancextStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellTrancextStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellTrancextStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellTrancextStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="trancextChange">0.00</div></td>
-                            <td><div id="trancextOwnedStocksDisplay"></div></td>
-                            <td><div id="trancextSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnTrancextStocks" class="stockSideButton">TRANCEXT</button></div> <div id="trancextOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="trancextChange" class="innerStockTab">0.00</div> <div id="trancextCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>STKLR</td>
-                            <td><div id="stklrStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="stklrStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyStklrStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyStklrStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyStklrStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyStklrStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellStklrStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellStklrStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellStklrStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellStklrStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="stklrChange">0.00</div></td>
-                            <td><div id="stklrOwnedStocksDisplay"></div></td>
-                            <td><div id="stklrSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnStklrStocks" class="stockSideButton">STKLR</button></div> <div id="stklrOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="stklrChange" class="innerStockTab">0.00</div> <div id="stklrCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>VIPERSEC</td>
-                            <td><div id="vipersecStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="vipersecStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyVipersecStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyVipersecStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyVipersecStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyVipersecStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellVipersecStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellVipersecStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellVipersecStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellVipersecStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="vipersecChange">0.00</div></td>
-                            <td><div id="vipersecOwnedStocksDisplay"></div></td>
-                            <td><div id="vipersecSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnVipersecStocks" class="stockSideButton">VIPERSEC</button></div> <div id="vipersecOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="vipersecChange" class="innerStockTab">0.00</div> <div id="vipersecCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>PLAT</td>
-                            <td><div id="PLATStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="PLATStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyPLATStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyPLATStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyPLATStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyPLATStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellPLATStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellPLATStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellPLATStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellPLATStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="PLATChange">0.00</div></td>
-                            <td><div id="PLATOwnedStocksDisplay"></div></td>
-                            <td><div id="PLATSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnPLATStocks" class="stockSideButton">PLAT</button></div> <div id="PLATOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="PLATChange" class="innerStockTab">0.00</div> <div id="PLATCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>INFONE</td>
-                            <td><div id="infoneStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="infoneStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyInfoneStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyInfoneStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyInfoneStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyInfoneStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellInfoneStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellInfoneStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellInfoneStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellInfoneStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="infoneChange">0.00</div></td>
-                            <td><div id="infoneOwnedStocksDisplay"></div></td>
-                            <td><div id="infoneSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnInfoneStocks" class="stockSideButton">INFONE</button></div> <div id="infoneOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="infoneChange" class="innerStockTab">0.00</div> <div id="infoneCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>EXTANK</td>
-                            <td><div id="extankStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="extankStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyExtankStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyExtankStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyExtankStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyExtankStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellExtankStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellExtankStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellExtankStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellExtankStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="extankChange">0.00</div></td>
-                            <td><div id="extankOwnedStocksDisplay"></div></td>
-                            <td><div id="extankSellEstimate"></div></td>
-                        </tr>
+                    <div class="innerStockTab"><button id="btnExtankStocks" class="stockSideButton">EXTANK</button></div> <div id="extankOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="extankChange" class="innerStockTab">0.00</div> <div id="extankCurrentPrice" class="innerStockTabThick">0.00</div>
 
-                        <tr>
-                            <td>REINACC</td>
-                            <td><div id="reinaccStockDisplayCost" class="stockTypeDisplay"></div></td>
-                            <td><div id="reinaccStockSellPrice" class="stockTypeDisplay"></div></td>
-                            <td>
-                                <button id="btnBuyReinaccStocks" class="stockButton">Buy 1</button> 
-                                <button id="btnBuyReinaccStocks10" class="stockButton">Buy 10</button>
-                                <button id="btnBuyReinaccStocks100" class="stockButton">Buy 100</button>
-                                <button id="btnBuyReinaccStocksAll" class="stockButton">Buy All</button><br />
-                                <button id="btnSellReinaccStocks" class="stockButton">Sell 1</button>
-                                <button id="btnSellReinaccStocks10" class="stockButton">Sell 10</button>
-                                <button id="btnSellReinaccStocks100" class="stockButton">Sell 100</button>
-                                <button id="btnSellReinaccStocksAll" class="stockButton">Sell All</button> 
-                            </td>
-                            <td><div id="reinaccChange">0.00</div></td>
-                            <td><div id="reinaccOwnedStocksDisplay"></div></td>
-                            <td><div id="reinaccSellEstimate"></div></td>
-                        </tr>
-                    </tbody>
-                </table>        
-                 
+                    <div class="innerStockTab"><button id="btnReinaccStocks" class="stockSideButton">REINACC</button></div> <div id="reinaccOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="reinaccChange" class="innerStockTab">0.00</div> <div id="reinaccCurrentPrice" class="innerStockTabThick">0.00</div>
+                </div>
+
+                <div id="delsecStockDisplay" class="stockDisplay">
+                    <h1>DELSEC</h1>
+                    <div id="delsecHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="delsecBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="delsecStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="delsecStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyDelsecStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyDelsecStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyDelsecStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyDelsecStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellDelsecStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellDelsecStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellDelsecStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellDelsecStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="delsecMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="delsecMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="delsecSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="delsecSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="delsecOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="entaqStockDisplay" class="stockDisplay">
+                    <h1>ENTAQ</h1>
+                    <div id="entaqHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="entaqBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="entaqStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="entaqStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyEntaqStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyEntaqStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyEntaqStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyEntaqStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellEntaqStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellEntaqStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellEntaqStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellEntaqStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="entaqMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="entaqMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="entaqSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="entaqSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="entaqOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="ventexStockDisplay" class="stockDisplay">
+                    <h1>VENTEX</h1>
+                    <div id="ventexHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="ventexBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="ventexStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="ventexStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyVentexStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyVentexStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyVentexStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyVentexStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellVentexStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellVentexStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellVentexStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellVentexStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="ventexMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="ventexMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="ventexSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="ventexSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="ventexOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="astorStockDisplay" class="stockDisplay">
+                    <h1>ASTOR</h1>
+                    <div id="astorHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="astorBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="astorStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="astorStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyAstorStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyAstorStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyAstorStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyAstorStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellAstorStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellAstorStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellAstorStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellAstorStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="astorMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="astorMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="astorSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="astorSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="astorOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="popbotStockDisplay" class="stockDisplay">
+                    <h1>POPBOT</h1>
+                    <div id="popbotHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="popbotBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="popbotStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="popbotStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyPopbotStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyPopbotStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyPopbotStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyPopbotStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellPopbotStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellPopbotStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellPopbotStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellPopbotStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="popbotMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="popbotMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="popbotSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="popbotSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="popbotOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="pannamStockDisplay" class="stockDisplay">
+                    <h1>PANNAM</h1>
+                    <div id="pannamHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="pannamBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="pannamStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="pannamStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyPannamStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyPannamStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyPannamStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyPannamStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellPannamStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellPannamStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellPannamStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellPannamStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="pannamMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="pannamMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="pannamSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="pannamSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="pannamOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="TRITStockDisplay" class="stockDisplay">
+                    <h1>TRIT</h1>
+                    <div id="TRITHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="TRITBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="TRITStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="TRITStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyTRITStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyTRITStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyTRITStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyTRITStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellTRITStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellTRITStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellTRITStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellTRITStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="TRITMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="TRITMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="TRITSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="TRITSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="TRITOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>  
+                <div id="CANVStockDisplay" class="stockDisplay">
+                    <h1>CANV</h1>
+                    <div id="CANVHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="CANVBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="CANVStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="CANVStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyCANVStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyCANVStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyCANVStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyCANVStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellCANVStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellCANVStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellCANVStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellCANVStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="CANVMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="CANVMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="CANVSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="CANVSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="CANVOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="OSMStockDisplay" class="stockDisplay">
+                    <h1>OSM</h1>
+                    <div id="OSMHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="OSMBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="OSMStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="OSMStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyOSMStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyOSMStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyOSMStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyOSMStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellOSMStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellOSMStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellOSMStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellOSMStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="OSMMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="OSMMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="OSMSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="OSMSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="OSMOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="PALLADStockDisplay" class="stockDisplay">
+                    <h1>PALLAD</h1>
+                    <div id="PALLADHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="PALLADBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="PALLADStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="PALLADStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyPALLADStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyPALLADStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyPALLADStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyPALLADStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellPALLADStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellPALLADStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellPALLADStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellPALLADStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="PALLADMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="PALLADMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="PALLADSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="PALLADSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="PALLADOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="KELVStockDisplay" class="stockDisplay">
+                    <h1>KELV</h1>
+                    <div id="KELVHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="KELVBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="KELVStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="KELVStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyKELVStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyKELVStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyKELVStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyKELVStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellKELVStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellKELVStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellKELVStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellKELVStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="KELVMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="KELVMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="KELVSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="KELVSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="KELVOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="stuccorStockDisplay" class="stockDisplay">
+                    <h1>STUCCOR</h1>
+                    <div id="stuccorHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="stuccorBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="stuccorStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="stuccorStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyStuccorStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyStuccorStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyStuccorStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyStuccorStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellStuccorStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellStuccorStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellStuccorStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellStuccorStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="stuccorMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="stuccorMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="stuccorSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="stuccorSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="stuccorOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div> 
+                <div id="delcredStockDisplay" class="stockDisplay">
+                    <h1>DELCRED</h1>
+                    <div id="delcredHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="delcredBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="delcredStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="delcredStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyDelcredStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyDelcredStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyDelcredStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyDelcredStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellDelcredStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellDelcredStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellDelcredStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellDelcredStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="delcredMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="delcredMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="delcredSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="delcredSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="delcredOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="rustecStockDisplay" class="stockDisplay">
+                    <h1>RUSTEC</h1>
+                    <div id="rustecHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="rustecBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="rustecStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="rustecStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyRustecStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyRustecStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyRustecStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyRustecStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellRustecStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellRustecStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellRustecStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellRustecStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="rustecMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="rustecMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="rustecSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="rustecSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="rustecOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="exxocredStockDisplay" class="stockDisplay">
+                    <h1>EXXOCRED</h1>
+                    <div id="exxocredHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="exxocredBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="exxocredStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="exxocredStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyExxocredStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyExxocredStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyExxocredStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyExxocredStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellExxocredStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellExxocredStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellExxocredStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellExxocredStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="exxocredMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="exxocredMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="exxocredSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="exxocredSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="exxocredOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="AUStockDisplay" class="stockDisplay">
+                    <h1>AU</h1>
+                    <div id="AUHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="AUBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="AUStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="AUStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyAUStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyAUStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyAUStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyAUStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellAUStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellAUStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellAUStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellAUStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="AUMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="AUMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="AUSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="AUSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="AUOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="aceholdStockDisplay" class="stockDisplay">
+                    <h1>ACEHOLD</h1>
+                    <div id="aceholdHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="aceholdBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="aceholdStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="aceholdStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyAceholdStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyAceholdStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyAceholdStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyAceholdStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellAceholdStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellAceholdStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellAceholdStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellAceholdStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="aceholdMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="aceholdMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="aceholdSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="aceholdSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="aceholdOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="delholdStockDisplay" class="stockDisplay">
+                    <h1>DELHOLD</h1>
+                    <div id="delholdHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="delholdBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="delholdStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="delholdStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyDelholdStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyDelholdStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyDelholdStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyDelholdStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellDelholdStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellDelholdStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellDelholdStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellDelholdStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="delholdMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="delholdMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="delholdSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="delholdSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="delholdOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="DIAMStockDisplay" class="stockDisplay">
+                    <h1>DIAM</h1>
+                    <div id="DIAMHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="DIAMBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="DIAMStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="DIAMStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyDIAMStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyDIAMStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyDIAMStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyDIAMStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellDIAMStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellDIAMStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellDIAMStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellDIAMStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="DIAMMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="DIAMMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="DIAMSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="DIAMSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="DIAMOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="pentaccStockDisplay" class="stockDisplay">
+                    <h1>PENTACC</h1>
+                    <div id="pentaccHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="pentaccBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="pentaccStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="pentaccStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyPentaccStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyPentaccStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyPentaccStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyPentaccStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellPentaccStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellPentaccStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellPentaccStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellPentaccStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="pentaccMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="pentaccMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="pentaccSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="pentaccSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="pentaccOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="noodleStockDisplay" class="stockDisplay">
+                    <h1>NOODLE</h1>
+                    <div id="noodleHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="noodleBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="noodleStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="noodleStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyNoodleStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyNoodleStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyNoodleStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyNoodleStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellNoodleStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellNoodleStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellNoodleStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellNoodleStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="noodleMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="noodleMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="noodleSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="noodleSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="noodleOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="megahardStockDisplay" class="stockDisplay">
+                    <h1>MEGAHARD</h1>
+                    <div id="megahardHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="megahardBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="megahardStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="megahardStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyMegahardStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyMegahardStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyMegahardStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyMegahardStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellMegahardStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellMegahardStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellMegahardStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellMegahardStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="megahardMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="megahardMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="megahardSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="megahardSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="megahardOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="chimerasecStockDisplay" class="stockDisplay">
+                    <h1>CHIMERASEC</h1>
+                    <div id="chimerasecHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="chimerasecBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="chimerasecStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="chimerasecStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyChimerasecStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyChimerasecStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyChimerasecStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyChimerasecStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellChimerasecStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellChimerasecStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellChimerasecStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellChimerasecStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="chimerasecMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="chimerasecMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="chimerasecSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="chimerasecSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="chimerasecOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="chimeraholdStockDisplay" class="stockDisplay">
+                    <h1>CHIMERAHOLD</h1>
+                    <div id="chimeraholdHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="chimeraholdBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="chimeraholdStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="chimeraholdStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyChimeraholdStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyChimeraholdStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyChimeraholdStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyChimeraholdStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellChimeraholdStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellChimeraholdStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellChimeraholdStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellChimeraholdStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="chimeraholdMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="chimeraholdMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="chimeraholdSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="chimeraholdSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="chimeraholdOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="griffonbankStockDisplay" class="stockDisplay">
+                    <h1>GRIFFONBANK</h1>
+                    <div id="griffonbankHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="griffonbankBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="griffonbankStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="griffonbankStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyGriffonbankStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyGriffonbankStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyGriffonbankStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyGriffonbankStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellGriffonbankStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellGriffonbankStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellGriffonbankStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellGriffonbankStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="griffonbankMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="griffonbankMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="griffonbankSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="griffonbankSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="griffonbankOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="turborusStockDisplay" class="stockDisplay">
+                    <h1>TURBORUS</h1>
+                    <div id="turborusHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="turborusBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="turborusStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="turborusStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyTurborusStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyTurborusStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyTurborusStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyTurborusStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellTurborusStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellTurborusStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellTurborusStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellTurborusStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="turborusMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="turborusMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="turborusSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="turborusSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="turborusOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="exodmptStockDisplay" class="stockDisplay">
+                    <h1>EXODMPT</h1>
+                    <div id="exodmptHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="exodmptBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="exodmptStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="exodmptStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyExodmptStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyExodmptStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyExodmptStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyExodmptStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellExodmptStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellExodmptStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellExodmptStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellExodmptStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="exodmptMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="exodmptMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="exodmptSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="exodmptSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="exodmptOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="ramnetStockDisplay" class="stockDisplay">
+                    <h1>RAMNET</h1>
+                    <div id="ramnetHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="ramnetBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="ramnetStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="ramnetStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyRamnetStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyRamnetStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyRamnetStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyRamnetStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellRamnetStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellRamnetStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellRamnetStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellRamnetStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="ramnetMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="ramnetMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="ramnetSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="ramnetSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="ramnetOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="alphacenStockDisplay" class="stockDisplay">
+                    <h1>ALPHACEN</h1>
+                    <div id="alphacenHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="alphacenBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="alphacenStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="alphacenStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyAlphacenStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyAlphacenStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyAlphacenStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyAlphacenStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellAlphacenStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellAlphacenStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellAlphacenStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellAlphacenStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="alphacenMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="alphacenMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="alphacenSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="alphacenSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="alphacenOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="scatterStockDisplay" class="stockDisplay">
+                    <h1>SCATTER</h1>
+                    <div id="scatterHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="scatterBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="scatterStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="scatterStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyScatterStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyScatterStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyScatterStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyScatterStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellScatterStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellScatterStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellScatterStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellScatterStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="scatterMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="scatterMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="scatterSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="scatterSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="scatterOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="kalzexStockDisplay" class="stockDisplay">
+                    <h1>KALZEX</h1>
+                    <div id="kalzexHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="kalzexBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="kalzexStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="kalzexStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyKalzexStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyKalzexStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyKalzexStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyKalzexStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellKalzexStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellKalzexStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellKalzexStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellKalzexStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="kalzexMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="kalzexMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="kalzexSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="kalzexSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="kalzexOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="sonicosStockDisplay" class="stockDisplay">
+                    <h1>SONICOS</h1>
+                    <div id="sonicosHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="sonicosBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="sonicosStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="sonicosStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuySonicosStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuySonicosStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuySonicosStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuySonicosStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellSonicosStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellSonicosStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellSonicosStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellSonicosStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="sonicosMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="sonicosMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="sonicosSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="sonicosSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="sonicosOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="trancextStockDisplay" class="stockDisplay">
+                    <h1>TRANCEXT</h1>
+                    <div id="trancextHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="trancextBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="trancextStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="trancextStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyTrancextStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyTrancextStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyTrancextStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyTrancextStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellTrancextStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellTrancextStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellTrancextStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellTrancextStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="trancextMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="trancextMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="trancextSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="trancextSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="trancextOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="stklrStockDisplay" class="stockDisplay">
+                    <h1>STKLR</h1>
+                    <div id="stklrHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="stklrBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="stklrStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="stklrStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyStklrStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyStklrStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyStklrStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyStklrStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellStklrStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellStklrStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellStklrStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellStklrStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="stklrMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="stklrMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="stklrSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="stklrSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="stklrOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="vipersecStockDisplay" class="stockDisplay">
+                    <h1>VIPERSEC</h1>
+                    <div id="vipersecHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="vipersecBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="vipersecStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="vipersecStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyVipersecStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyVipersecStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyVipersecStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyVipersecStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellVipersecStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellVipersecStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellVipersecStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellVipersecStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="vipersecMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="vipersecMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="vipersecSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="vipersecSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="vipersecOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="PLATStockDisplay" class="stockDisplay">
+                    <h1>PLAT</h1>
+                    <div id="PLATHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="PLATBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="PLATStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="PLATStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyPLATStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyPLATStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyPLATStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyPLATStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellPLATStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellPLATStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellPLATStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellPLATStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="PLATMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="PLATMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="PLATSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="PLATSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="PLATOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="infoneStockDisplay" class="stockDisplay">
+                    <h1>INFONE</h1>
+                    <div id="infoneHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="infoneBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="infoneStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="infoneStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyInfoneStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyInfoneStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyInfoneStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyInfoneStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellInfoneStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellInfoneStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellInfoneStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellInfoneStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="infoneMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="infoneMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="infoneSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="infoneSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="infoneOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="extankStockDisplay" class="stockDisplay">
+                    <h1>EXTANK</h1>
+                    <div id="extankHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="extankBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="extankStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="extankStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyExtankStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyExtankStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyExtankStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyExtankStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellExtankStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellExtankStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellExtankStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellExtankStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="extankMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="extankMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="extankSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="extankSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="extankOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+                <div id="reinaccStockDisplay" class="stockDisplay">
+                    <h1>REINACC</h1>
+                    <div id="reinaccHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="reinaccBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="reinaccStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="reinaccStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyReinaccStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyReinaccStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyReinaccStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyReinaccStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellReinaccStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellReinaccStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellReinaccStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellReinaccStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                   
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="reinaccMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="reinaccMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="reinaccSellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="reinaccSellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="reinaccOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div>          
+                </div>
+
             </div>
 
             <div id="abilities" class="hidden_Divs">
@@ -2180,6 +2954,7 @@
     <script src="Resources/Scripts/Emails/emails.js"></script>
     <script src="Resources/Scripts/Generate/generators.js"></script>
     <script src="Resources/Scripts/buttonclicks.js"></script>
+    <script src="Resources/Scripts/Stocks/StockTabButtons.js"></script>
 
     <script src="Resources/Scripts/Shop/DelsecCrawlers.js"></script>
     <script src="Resources/Scripts/Shop/RussianCrawlers.js"></script>
@@ -2189,7 +2964,7 @@
     <script src="Resources/Scripts/Tickers/StockTicker.js"></script>  
     <script src="Resources/Scripts/Tickers/EmailTicker.js"></script>  
 
-    <script src="Resources/Scripts/Stocks/StockMarket.js"></script>
+    <script src="Resources/Scripts/Stocks/StockMarket.js"></script>    
     <script src="Resources/Scripts/Stocks/Delsec.js"></script>
     <script src="Resources/Scripts/Stocks/Entaq.js"></script>
     <script src="Resources/Scripts/Stocks/Astor.js"></script>

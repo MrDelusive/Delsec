@@ -278,17 +278,21 @@
     var $window = $(window);
 
     var visible = false;
+    var stockVisible = false;
     $(window).scroll( function(){
 	
         //when title is no longer visible. Bool introduced to stop the animation triggering for every scroll event.
-        if ($(this).scrollTop() > 100 && visible == false ) {
+        if ($(this).scrollTop() > 70 && visible == false ) {
             $('#lblMoneyDisplayScroll').animate({ 'opacity': '1' }, 100);
             visible = true;
         }
-        else if ($(this).scrollTop() < 100 && visible == true ) {
+        else if ($(this).scrollTop() < 70 && visible == true ) {
             $('#lblMoneyDisplayScroll').animate({ 'opacity': '0' }, 100);
             visible = false;
         }
     });
+    
+
 });
+
 

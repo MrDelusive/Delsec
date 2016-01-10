@@ -1,9 +1,11 @@
 ﻿$(document).ready(function () {
 
-    $('#megahardStockDisplayCost').html('$' + megahardCurrentStockPrice.toFixed(2));
-    $('#megahardStockSellPrice').html('$' + (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider).toFixed(2));
+    $('#megahardStockDisplayCost').html('$' + megahardCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#megahardCurrentPrice').html('$' + megahardCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#megahardStockSellPrice').html('$' + (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
-    $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - (megahardCurrentStockPrice / sellDivider))).toFixed(2));
+    $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - (megahardCurrentStockPrice / sellDivider))).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
     $('#btnBuyMegahardStocks').click(function () {
 
@@ -12,14 +14,17 @@
             localStorage.setItem("money", money);
             ownedMegahardStocks++;
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
+            megahardSpentAmt += megahardCurrentStockPrice;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
 
         return false;
@@ -31,14 +36,17 @@
             localStorage.setItem("money", money);
             ownedMegahardStocks += 10;
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
+            megahardSpentAmt += megahardCurrentStockPrice * 10;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -49,14 +57,17 @@
             localStorage.setItem("money", money);
             ownedMegahardStocks += 100;
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
+            megahardSpentAmt += megahardCurrentStockPrice * 100;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -68,23 +79,29 @@
             localStorage.setItem("money", money);
             ownedMegahardStocks += megahardBuyAmt;
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
+            megahardSpentAmt += megahardCurrentStockPrice * megahardBuyAmt;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
         return false;
     });
 
-    // Always sell amt at 10% lower
     $('#btnSellMegahardStocks').click(function () {
         if (ownedMegahardStocks > 0) {
-            money += megahardCurrentStockPrice - megahardCurrentStockPrice / 10;
+            money += megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider;
             localStorage.setItem("money", money);
+            var average = megahardSpentAmt / ownedMegahardStocks;
+            megahardSpentAmt -= average;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedMegahardStocks--;
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -92,16 +109,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellMegahardStocks10').click(function () {
         if (ownedMegahardStocks > 9) {
-            money += (megahardCurrentStockPrice - megahardCurrentStockPrice / 10) * 10;
+            money += (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider) * 10;
             localStorage.setItem("money", money);
+            var average = megahardSpentAmt / ownedMegahardStocks;
+            megahardSpentAmt -= average * 10;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedMegahardStocks -= 10;
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -109,16 +130,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellMegahardStocks100').click(function () {
         if (ownedMegahardStocks > 99) {
-            money += (megahardCurrentStockPrice - megahardCurrentStockPrice / 10) * 100;
+            money += (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider) * 100;
             localStorage.setItem("money", money);
+            var average = megahardSpentAmt / ownedMegahardStocks;
+            megahardSpentAmt -= average * 100;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedMegahardStocks -= 100;
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -126,17 +151,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
         return false;
     });
 
     $('#btnSellMegahardStocksAll').click(function () {
         if (ownedMegahardStocks > 0) {
-            money += (megahardCurrentStockPrice - megahardCurrentStockPrice / 10) * ownedMegahardStocks;
+            money += (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider) * ownedMegahardStocks;
             localStorage.setItem("money", money);
+            megahardSpentAmt = 0;
+            localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
+            $('#megahardMoneySpent').html('$' + megahardSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -144,10 +172,10 @@
             localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
             $('#megahardOwnedStocksDisplay').html(ownedMegahardStocks);
             if (ownedMegahardStocks > 0)
-                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#megahardSellEstimate').html('$0');
+                $('#megahardSellEstimate').html('$0.00');
         }
         return false;
     });
-})(jQuery);
+});

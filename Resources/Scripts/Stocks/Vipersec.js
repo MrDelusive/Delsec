@@ -1,9 +1,11 @@
 ﻿$(document).ready(function () {
 
-    $('#vipersecStockDisplayCost').html('$' + vipersecCurrentStockPrice.toFixed(2));
-    $('#vipersecStockSellPrice').html('$' + (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider).toFixed(2));
+    $('#vipersecStockDisplayCost').html('$' + vipersecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#vipersecCurrentPrice').html('$' + vipersecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#vipersecStockSellPrice').html('$' + (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
-    $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - (vipersecCurrentStockPrice / sellDivider))).toFixed(2));
+    $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+    $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - (vipersecCurrentStockPrice / sellDivider))).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
     $('#btnBuyVipersecStocks').click(function () {
 
@@ -12,14 +14,17 @@
             localStorage.setItem("money", money);
             ownedVipersecStocks++;
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
+            vipersecSpentAmt += vipersecCurrentStockPrice;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
 
         return false;
@@ -31,14 +36,17 @@
             localStorage.setItem("money", money);
             ownedVipersecStocks += 10;
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
+            vipersecSpentAmt += vipersecCurrentStockPrice * 10;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -49,14 +57,17 @@
             localStorage.setItem("money", money);
             ownedVipersecStocks += 100;
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
+            vipersecSpentAmt += vipersecCurrentStockPrice * 100;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
         return false;
     });
@@ -68,23 +79,29 @@
             localStorage.setItem("money", money);
             ownedVipersecStocks += vipersecBuyAmt;
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
+            vipersecSpentAmt += vipersecCurrentStockPrice * vipersecBuyAmt;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
         return false;
     });
 
-    // Always sell amt at 10% lower
     $('#btnSellVipersecStocks').click(function () {
         if (ownedVipersecStocks > 0) {
-            money += vipersecCurrentStockPrice - vipersecCurrentStockPrice / 10;
+            money += vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider;
             localStorage.setItem("money", money);
+            var average = vipersecSpentAmt / ownedVipersecStocks;
+            vipersecSpentAmt -= average;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedVipersecStocks--;
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -92,16 +109,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellVipersecStocks10').click(function () {
         if (ownedVipersecStocks > 9) {
-            money += (vipersecCurrentStockPrice - vipersecCurrentStockPrice / 10) * 10;
+            money += (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider) * 10;
             localStorage.setItem("money", money);
+            var average = vipersecSpentAmt / ownedVipersecStocks;
+            vipersecSpentAmt -= average * 10;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedVipersecStocks -= 10;
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -109,16 +130,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
         return false;
     });
     $('#btnSellVipersecStocks100').click(function () {
         if (ownedVipersecStocks > 99) {
-            money += (vipersecCurrentStockPrice - vipersecCurrentStockPrice / 10) * 100;
+            money += (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider) * 100;
             localStorage.setItem("money", money);
+            var average = vipersecSpentAmt / ownedVipersecStocks;
+            vipersecSpentAmt -= average * 100;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             ownedVipersecStocks -= 100;
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -126,17 +151,20 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
         return false;
     });
 
     $('#btnSellVipersecStocksAll').click(function () {
         if (ownedVipersecStocks > 0) {
-            money += (vipersecCurrentStockPrice - vipersecCurrentStockPrice / 10) * ownedVipersecStocks;
+            money += (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider) * ownedVipersecStocks;
             localStorage.setItem("money", money);
+            vipersecSpentAmt = 0;
+            localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
+            $('#vipersecMoneySpent').html('$' + vipersecSpentAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -144,10 +172,10 @@
             localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
             $('#vipersecOwnedStocksDisplay').html(ownedVipersecStocks);
             if (ownedVipersecStocks > 0)
-                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2));
+                $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
-                $('#vipersecSellEstimate').html('$0');
+                $('#vipersecSellEstimate').html('$0.00');
         }
         return false;
     });
-})(jQuery);
+});
