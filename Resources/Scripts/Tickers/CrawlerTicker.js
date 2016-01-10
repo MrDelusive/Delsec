@@ -149,4 +149,4 @@ $(document).ready(function () {
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     }, 4000);
 
-})(jQuery);
+});

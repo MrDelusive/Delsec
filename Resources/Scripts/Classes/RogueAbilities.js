@@ -84,4 +84,4 @@
     $('#btnRogueLevel9-3').click(function () {
         return false;
     });
-})(jQuery);
+});

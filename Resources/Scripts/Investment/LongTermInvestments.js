@@ -190,4 +190,4 @@
         return false;
     });
 
-})(jQuery);
+});

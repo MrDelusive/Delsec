@@ -47,4 +47,4 @@
             $('#btnBuy64ByteCrawler').prop('disabled', false);
     }, 1000);
 
-})(jQuery);
+});

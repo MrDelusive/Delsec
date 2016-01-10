@@ -251,4 +251,4 @@
         return false;
     });
 
-})(jQuery);
+});

@@ -251,7 +251,6 @@ $(document).ready(function () {
         localStorage.setItem("reinaccSpentAmt", 0);
 
         localStorage.setItem("warriorClicks", 0);
-        return true;
     });
 
     $('#btnResetClass').click(function () {
@@ -416,4 +415,4 @@ $(document).ready(function () {
         return false;
     });
 
-})(jQuery);
+});

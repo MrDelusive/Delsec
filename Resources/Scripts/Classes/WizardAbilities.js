@@ -85,4 +85,4 @@
         return false;
     });
 
-})(jQuery);
+});

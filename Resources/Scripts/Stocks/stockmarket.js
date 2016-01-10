@@ -395,4 +395,4 @@ $(document).ready(function () {
     if (userClass == "Rogue")
         sellDivider = 20;
 
-})(jQuery);
+});
