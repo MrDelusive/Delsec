@@ -1,7 +1,24 @@
 ﻿$(document).ready(function () {
     var goFast = 0;
     var timer = 30;
-
+    var options = {
+        series: {
+            lines: { show: true, color: "#1a1aff" },
+            points: { show: true }
+        },
+        xaxis: {
+            min: 0,
+            max: 6,
+            show: false
+        },
+        yaxis: {
+            color: "#ffffff"
+        },
+        grid: {
+            backgroundColor: "#00001a",
+            tickColor: "#000099"
+        }
+    }
     setInterval(function () {
         if (timer > 0) {
             timer--;
@@ -11,6 +28,12 @@
 
     setInterval(function () {
         // DELSEC //
+        delsec5thPreviousStockPrice = delsec4thPreviousStockPrice;
+        delsec4thPreviousStockPrice = delsec3rdPreviousStockPrice;
+        delsec3rdPreviousStockPrice = delsec2ndPreviousStockPrice;
+        delsec2ndPreviousStockPrice = delsecPreviousStockPrice;
+        delsecPreviousStockPrice = delsecCurrentStockPrice;
+
         delsecIncrement = totalPackets / (250 * delsecCurrentStockPrice) + Math.round(100 * Math.random() / 10) / 100;
         if (delsecIncrement > 0) {
             $("#delsecChange").css("color","#24b41e");
@@ -27,6 +50,10 @@
         $('#delsecStockSellPrice').html('$' + (delsecCurrentStockPrice - delsecCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - (delsecCurrentStockPrice / sellDivider))).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("delsecCurrentStockPrice", delsecCurrentStockPrice);
+
+        var d1 = [[1, delsec5thPreviousStockPrice], [2, delsec4thPreviousStockPrice], [3, delsec3rdPreviousStockPrice], [4, delsec2ndPreviousStockPrice], [5, delsecPreviousStockPrice], [6, delsecCurrentStockPrice]];
+
+        $.plot($("#delsecHistoryDisplay"), [d1], options);
         // DELSEC END //
 
         // ENTAQ //

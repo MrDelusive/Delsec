@@ -1,4 +1,4 @@
-var delsecCurrentStockPrice = 2.20;
+var delsecCurrentStockPrice, delsecPreviousStockPrice, delsec2ndPreviousStockPrice, delsec3rdPreviousStockPrice, delsec4thPreviousStockPrice, delsec5thPreviousStockPrice = 2.20;
 var entaqCurrentStockPrice = 0.57;
 var ventexCurrentStockPrice = 1.54;
 var astorCurrentStockPrice = 0.95;

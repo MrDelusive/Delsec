@@ -30,9 +30,9 @@
     color: white;
     margin-left: 10px;
     border-radius: 10px;
-    border: 1px solid #cf9406;
+    border: 1px solid #0b1b68;
     padding-left: 5px;
-    background: rgba(44, 25, 0, 0.8);
+    background: rgba(0, 22, 77, 0.8);
 }
 .innerStockTab {
     width: 75px;
@@ -140,8 +140,8 @@
     display: none;
     float: left;
     color: white;
-    background: rgba(44, 25, 0, 0.8);
-    border: 1px solid #cf9406;
+    background: rgba(0, 22, 77, 0.8);
+    border: 1px solid #0b1b68;
     border-radius: 10px;
     width: 650px;
     text-align: center;
@@ -149,9 +149,9 @@
 }
 
 .historyDisplay {
-    /*width: 650px;
-    height: 400px;*/
-    background: #404774;
+    width: 600px;
+    height: 300px;
+    background: black;
     margin-left:25px;
     margin-right:25px; 
     margin-bottom: 10px;

@@ -744,7 +744,7 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
 
 .stockButton
 {
-    background: #603001;
+    background: #002a93;
     border: 1px solid black;
 	display:inline-block;
     cursor: pointer;
@@ -760,13 +760,18 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
 	text-align:center;
 }
 
+.stockButton:disabled {
+    background: black;
+    color: #4a4e54;
+}
+
 .stockButton:hover {
-	background: rgba(164, 95, 0, 0.8);
+	background: #003ba4;
 }
 
 .stockSideButton
 {
-    background: rgba(164, 95, 0, 0.2);
+    background: rgba(0, 22, 164, 0.2);
     border: none;
 	display:inline-block;
     cursor: pointer;
@@ -781,12 +786,7 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
 }
 
 .stockSideButton:hover {
-	background: rgba(164, 95, 0, 0.4);
-}
-
-.stockButton:disabled {
-    background: black;
-    color: #4a4e54;
+	background: rgba(0, 22, 164, 0.4);
 }
 
 .investButton {
