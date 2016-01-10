@@ -23,6 +23,7 @@
 
         delsecCurrentStockPrice += delsecIncrement;
         $('#delsecStockDisplayCost').html('$' + delsecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#delsecCurrentPrice').html('$' + delsecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#delsecStockSellPrice').html('$' + (delsecCurrentStockPrice - delsecCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#delsecSellEstimate').html('$' + (ownedDelsecStocks * (delsecCurrentStockPrice - (delsecCurrentStockPrice / sellDivider))).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("delsecCurrentStockPrice", delsecCurrentStockPrice);
@@ -48,6 +49,7 @@
         }
         
         $('#entaqStockDisplayCost').html('$' + entaqCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#entaqCurrentPrice').html('$' + entaqCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#entaqStockSellPrice').html('$' + (entaqCurrentStockPrice - entaqCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#entaqSellEstimate').html('$' + (ownedEntaqStocks * (entaqCurrentStockPrice - entaqCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("entaqCurrentStockPrice", entaqCurrentStockPrice);
@@ -68,6 +70,7 @@
         if (ventexCurrentStockPrice <= 0.1)
             ventexCurrentStockPrice = 0.1;
         $('#ventexStockDisplayCost').html('$' + ventexCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#ventexCurrentPrice').html('$' + ventexCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#ventexStockSellPrice').html('$' + (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#ventexSellEstimate').html('$' + (ownedVentexStocks * (ventexCurrentStockPrice - ventexCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("ventexCurrentStockPrice", ventexCurrentStockPrice);
@@ -88,6 +91,7 @@
         if (astorCurrentStockPrice <= 0.1)
             astorCurrentStockPrice = 0.1;
         $('#astorStockDisplayCost').html('$' + astorCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#astorCurrentPrice').html('$' + astorCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#astorStockSellPrice').html('$' + (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#astorSellEstimate').html('$' + (ownedAstorStocks * (astorCurrentStockPrice - astorCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("astorCurrentStockPrice", astorCurrentStockPrice);
@@ -102,6 +106,7 @@
             $("#popbotChange").html("+" + popbotIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }      
         $('#popbotStockDisplayCost').html('$' + popbotCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#popbotCurrentPrice').html('$' + popbotCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#popbotStockSellPrice').html('$' + (popbotCurrentStockPrice - popbotCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#popbotSellEstimate').html('$' + (ownedPopbotStocks * (popbotCurrentStockPrice - popbotCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("popbotCurrentStockPrice", popbotCurrentStockPrice);
@@ -121,6 +126,7 @@
         if (pannamCurrentStockPrice <= 0.1)
             pannamCurrentStockPrice = 0.1;
         $('#pannamStockDisplayCost').html('$' + pannamCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#pannamCurrentPrice').html('$' + pannamCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#pannamStockSellPrice').html('$' + (pannamCurrentStockPrice - pannamCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#pannamSellEstimate').html('$' + (ownedPannamStocks * (pannamCurrentStockPrice - pannamCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("pannamCurrentStockPrice", pannamCurrentStockPrice);
@@ -140,6 +146,7 @@
         if (TRITCurrentStockPrice <= 0.2)
             TRITCurrentStockPrice = 0.2;
         $('#TRITStockDisplayCost').html('$' + TRITCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#TRITCurrentPrice').html('$' + TRITCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#TRITStockSellPrice').html('$' + (TRITCurrentStockPrice - TRITCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#TRITSellEstimate').html('$' + (ownedTRITStocks * (TRITCurrentStockPrice - TRITCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("TRITCurrentStockPrice", TRITCurrentStockPrice);
@@ -159,6 +166,7 @@
         if (CANVCurrentStockPrice <= 0)
             CANVCurrentStockPrice = 0.01;
         $('#CANVStockDisplayCost').html('$' + CANVCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#CANVCurrentPrice').html('$' + CANVCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#CANVStockSellPrice').html('$' + (CANVCurrentStockPrice - CANVCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#CANVSellEstimate').html('$' + (ownedCANVStocks * (CANVCurrentStockPrice - CANVCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("CANVCurrentStockPrice", CANVCurrentStockPrice);
@@ -178,6 +186,7 @@
         if (OSMCurrentStockPrice <= 0)
             OSMCurrentStockPrice = 0.01;
         $('#OSMStockDisplayCost').html('$' + OSMCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#OSMCurrentPrice').html('$' + OSMCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#OSMStockSellPrice').html('$' + (OSMCurrentStockPrice - OSMCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#OSMSellEstimate').html('$' + (ownedOSMStocks * (OSMCurrentStockPrice - OSMCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("OSMCurrentStockPrice", OSMCurrentStockPrice);
@@ -204,6 +213,7 @@
         if (PALLADCurrentStockPrice <= 0)
             PALLADCurrentStockPrice = 0.01;
         $('#PALLADStockDisplayCost').html('$' + PALLADCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#PALLADCurrentPrice').html('$' + PALLADCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#PALLADStockSellPrice').html('$' + (PALLADCurrentStockPrice - PALLADCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#PALLADSellEstimate').html('$' + (ownedPALLADStocks * (PALLADCurrentStockPrice - PALLADCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("PALLADCurrentStockPrice", PALLADCurrentStockPrice);
@@ -223,6 +233,7 @@
         if (KELVCurrentStockPrice <= 0)
             KELVCurrentStockPrice = 0.01;
         $('#KELVStockDisplayCost').html('$' + KELVCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#KELVCurrentPrice').html('$' + KELVCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#KELVStockSellPrice').html('$' + (KELVCurrentStockPrice - KELVCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#KELVSellEstimate').html('$' + (ownedKELVStocks * (KELVCurrentStockPrice - KELVCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("KELVCurrentStockPrice", KELVCurrentStockPrice);
@@ -242,6 +253,7 @@
         if (stuccorCurrentStockPrice <= 0)
             stuccorCurrentStockPrice = 0.01;
         $('#stuccorStockDisplayCost').html('$' + stuccorCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#stuccorCurrentPrice').html('$' + stuccorCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#stuccorStockSellPrice').html('$' + (stuccorCurrentStockPrice - stuccorCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#stuccorSellEstimate').html('$' + (ownedStuccorStocks * (stuccorCurrentStockPrice - stuccorCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("stuccorCurrentStockPrice", stuccorCurrentStockPrice);
@@ -261,6 +273,7 @@
         if (delcredCurrentStockPrice <= 0)
             delcredCurrentStockPrice = 0.01;
         $('#delcredStockDisplayCost').html('$' + delcredCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#delcredCurrentPrice').html('$' + delcredCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#delcredStockSellPrice').html('$' + (delcredCurrentStockPrice - delcredCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#delcredSellEstimate').html('$' + (ownedDelcredStocks * (delcredCurrentStockPrice - delcredCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("delcredCurrentStockPrice", delcredCurrentStockPrice);
@@ -280,6 +293,7 @@
         if (rustecCurrentStockPrice <= 0)
             rustecCurrentStockPrice = 0.01;
         $('#rustecStockDisplayCost').html('$' + rustecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#rustecCurrentPrice').html('$' + rustecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#rustecStockSellPrice').html('$' + (rustecCurrentStockPrice - rustecCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#rustecSellEstimate').html('$' + (ownedRustecStocks * (rustecCurrentStockPrice - rustecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("rustecCurrentStockPrice", rustecCurrentStockPrice);
@@ -299,6 +313,7 @@
         if (exxocredCurrentStockPrice <= 0)
             exxocredCurrentStockPrice = 0.01;
         $('#exxocredStockDisplayCost').html('$' + exxocredCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#exxocredCurrentPrice').html('$' + exxocredCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#exxocredStockSellPrice').html('$' + (exxocredCurrentStockPrice - exxocredCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#exxocredSellEstimate').html('$' + (ownedExxocredStocks * (exxocredCurrentStockPrice - exxocredCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("exxocredCurrentStockPrice", exxocredCurrentStockPrice);
@@ -318,6 +333,7 @@
         if (AUCurrentStockPrice <= 0)
             AUCurrentStockPrice = 0.01;
         $('#AUStockDisplayCost').html('$' + AUCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#AUCurrentPrice').html('$' + AUCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#AUStockSellPrice').html('$' + (AUCurrentStockPrice - AUCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#AUSellEstimate').html('$' + (ownedAUStocks * (AUCurrentStockPrice - AUCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("AUCurrentStockPrice", AUCurrentStockPrice);
@@ -337,6 +353,7 @@
         if (aceholdCurrentStockPrice <= 0)
             aceholdCurrentStockPrice = 0.01;
         $('#aceholdStockDisplayCost').html('$' + aceholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#aceholdCurrentPrice').html('$' + aceholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#aceholdStockSellPrice').html('$' + (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#aceholdSellEstimate').html('$' + (ownedAceholdStocks * (aceholdCurrentStockPrice - aceholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("aceholdCurrentStockPrice", aceholdCurrentStockPrice);
@@ -356,6 +373,7 @@
         if (delholdCurrentStockPrice <= 0)
             delholdCurrentStockPrice = 0.01;
         $('#delholdStockDisplayCost').html('$' + delholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#delholdCurrentPrice').html('$' + delholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#delholdStockSellPrice').html('$' + (delholdCurrentStockPrice - delholdCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#delholdSellEstimate').html('$' + (ownedDelholdStocks * (delholdCurrentStockPrice - delholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("delholdCurrentStockPrice", delholdCurrentStockPrice);
@@ -375,6 +393,7 @@
         if (DIAMCurrentStockPrice <= 0)
             DIAMCurrentStockPrice = 0.01;
         $('#DIAMStockDisplayCost').html('$' + DIAMCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#DIAMCurrentPrice').html('$' + DIAMCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#DIAMStockSellPrice').html('$' + (DIAMCurrentStockPrice - DIAMCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#DIAMSellEstimate').html('$' + (ownedDIAMStocks * (DIAMCurrentStockPrice - DIAMCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("DIAMCurrentStockPrice", DIAMCurrentStockPrice);
@@ -394,6 +413,7 @@
         if (pentaccCurrentStockPrice <= 0)
             pentaccCurrentStockPrice = 0.01;
         $('#pentaccStockDisplayCost').html('$' + pentaccCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#pentaccCurrentPrice').html('$' + pentaccCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#pentaccStockSellPrice').html('$' + (pentaccCurrentStockPrice - pentaccCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#pentaccSellEstimate').html('$' + (ownedPentaccStocks * (pentaccCurrentStockPrice - pentaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("pentaccCurrentStockPrice", pentaccCurrentStockPrice);
@@ -413,6 +433,7 @@
         if (noodleCurrentStockPrice <= 0)
             noodleCurrentStockPrice = 0.01;
         $('#noodleStockDisplayCost').html('$' + noodleCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#noodleCurrentPrice').html('$' + noodleCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#noodleStockSellPrice').html('$' + (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("noodleCurrentStockPrice", noodleCurrentStockPrice);
@@ -432,6 +453,7 @@
         if (megahardCurrentStockPrice <= 0)
             megahardCurrentStockPrice = 0.01;
         $('#megahardStockDisplayCost').html('$' + megahardCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#megahardCurrentPrice').html('$' + megahardCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#megahardStockSellPrice').html('$' + (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#megahardSellEstimate').html('$' + (ownedMegahardStocks * (megahardCurrentStockPrice - megahardCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("megahardCurrentStockPrice", megahardCurrentStockPrice);
@@ -451,6 +473,7 @@
         if (chimerasecCurrentStockPrice <= 0)
             chimerasecCurrentStockPrice = 0.01;
         $('#chimerasecStockDisplayCost').html('$' + chimerasecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#chimerasecCurrentPrice').html('$' + chimerasecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#chimerasecStockSellPrice').html('$' + (chimerasecCurrentStockPrice - chimerasecCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#chimerasecSellEstimate').html('$' + (ownedChimerasecStocks * (chimerasecCurrentStockPrice - chimerasecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("chimerasecCurrentStockPrice", chimerasecCurrentStockPrice);
@@ -470,6 +493,7 @@
         if (chimeraholdCurrentStockPrice <= 0)
             chimeraholdCurrentStockPrice = 0.01;
         $('#chimeraholdStockDisplayCost').html('$' + chimeraholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#chimeraholdCurrentPrice').html('$' + chimeraholdCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#chimeraholdStockSellPrice').html('$' + (chimeraholdCurrentStockPrice - chimeraholdCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#chimeraholdSellEstimate').html('$' + (ownedChimeraholdStocks * (chimeraholdCurrentStockPrice - chimeraholdCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("chimeraholdCurrentStockPrice", chimeraholdCurrentStockPrice);
@@ -489,6 +513,7 @@
         if (griffonbankCurrentStockPrice <= 0)
             griffonbankCurrentStockPrice = 0.01;
         $('#griffonbankStockDisplayCost').html('$' + griffonbankCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#griffonbankCurrentPrice').html('$' + griffonbankCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#griffonbankStockSellPrice').html('$' + (griffonbankCurrentStockPrice - griffonbankCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#griffonbankSellEstimate').html('$' + (ownedGriffonbankStocks * (griffonbankCurrentStockPrice - griffonbankCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("griffonbankCurrentStockPrice", griffonbankCurrentStockPrice);
@@ -508,6 +533,7 @@
         if (turborusCurrentStockPrice <= 0)
             turborusCurrentStockPrice = 0.01;
         $('#turborusStockDisplayCost').html('$' + turborusCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#turborusCurrentPrice').html('$' + turborusCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#turborusStockSellPrice').html('$' + (turborusCurrentStockPrice - turborusCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#turborusSellEstimate').html('$' + (ownedTurborusStocks * (turborusCurrentStockPrice - turborusCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("turborusCurrentStockPrice", turborusCurrentStockPrice);
@@ -527,6 +553,7 @@
         if (exodmptCurrentStockPrice <= 0)
             exodmptCurrentStockPrice = 0.01;
         $('#exodmptStockDisplayCost').html('$' + exodmptCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#exodmptCurrentPrice').html('$' + exodmptCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#exodmptStockSellPrice').html('$' + (exodmptCurrentStockPrice - exodmptCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#exodmptSellEstimate').html('$' + (ownedExodmptStocks * (exodmptCurrentStockPrice - exodmptCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("exodmptCurrentStockPrice", exodmptCurrentStockPrice);
@@ -546,6 +573,7 @@
         if (ramnetCurrentStockPrice <= 0)
             ramnetCurrentStockPrice = 0.01;
         $('#ramnetStockDisplayCost').html('$' + ramnetCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#ramnetCurrentPrice').html('$' + ramnetCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#ramnetStockSellPrice').html('$' + (ramnetCurrentStockPrice - ramnetCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#ramnetSellEstimate').html('$' + (ownedRamnetStocks * (ramnetCurrentStockPrice - ramnetCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("ramnetCurrentStockPrice", ramnetCurrentStockPrice);
@@ -565,6 +593,7 @@
         if (alphacenCurrentStockPrice <= 0)
             alphacenCurrentStockPrice = 0.01;
         $('#alphacenStockDisplayCost').html('$' + alphacenCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#alphacenCurrentPrice').html('$' + alphacenCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#alphacenStockSellPrice').html('$' + (alphacenCurrentStockPrice - alphacenCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#alphacenSellEstimate').html('$' + (ownedAlphacenStocks * (alphacenCurrentStockPrice - alphacenCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("alphacenCurrentStockPrice", alphacenCurrentStockPrice);
@@ -580,6 +609,7 @@
         if (scatterCurrentStockPrice <= 0)
             scatterCurrentStockPrice = 0.01;
         $('#scatterStockDisplayCost').html('$' + scatterCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#scatterCurrentPrice').html('$' + scatterCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#scatterStockSellPrice').html('$' + (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#scatterSellEstimate').html('$' + (ownedScatterStocks * (scatterCurrentStockPrice - scatterCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("scatterCurrentStockPrice", scatterCurrentStockPrice);
@@ -599,6 +629,7 @@
         if (kalzexCurrentStockPrice <= 0)
             kalzexCurrentStockPrice = 0.01;
         $('#kalzexStockDisplayCost').html('$' + kalzexCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#kalzexCurrentPrice').html('$' + kalzexCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#kalzexStockSellPrice').html('$' + (kalzexCurrentStockPrice - kalzexCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#kalzexSellEstimate').html('$' + (ownedKalzexStocks * (kalzexCurrentStockPrice - kalzexCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("kalzexCurrentStockPrice", kalzexCurrentStockPrice);
@@ -618,6 +649,7 @@
         if (sonicosCurrentStockPrice <= 0)
             sonicosCurrentStockPrice = 0.01;
         $('#sonicosStockDisplayCost').html('$' + sonicosCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#sonicosCurrentPrice').html('$' + sonicosCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#sonicosStockSellPrice').html('$' + (sonicosCurrentStockPrice - sonicosCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#sonicosSellEstimate').html('$' + (ownedSonicosStocks * (sonicosCurrentStockPrice - sonicosCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("sonicosCurrentStockPrice", sonicosCurrentStockPrice);
@@ -638,6 +670,7 @@
         if (trancextCurrentStockPrice <= 0)
             trancextCurrentStockPrice = 0.01;
         $('#trancextStockDisplayCost').html('$' + trancextCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#trancextCurrentPrice').html('$' + trancextCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#trancextStockSellPrice').html('$' + (trancextCurrentStockPrice - trancextCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#trancextSellEstimate').html('$' + (ownedTrancextStocks * (trancextCurrentStockPrice - trancextCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("trancextCurrentStockPrice", trancextCurrentStockPrice);
@@ -657,6 +690,7 @@
         if (stklrCurrentStockPrice <= 0)
             stklrCurrentStockPrice = 0.01;
         $('#stklrStockDisplayCost').html('$' + stklrCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#stklrCurrentPrice').html('$' + stklrCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#stklrStockSellPrice').html('$' + (stklrCurrentStockPrice - stklrCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#stklrSellEstimate').html('$' + (ownedStklrStocks * (stklrCurrentStockPrice - stklrCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("stklrCurrentStockPrice", stklrCurrentStockPrice);
@@ -676,6 +710,7 @@
         if (vipersecCurrentStockPrice <= 0)
             vipersecCurrentStockPrice = 0.01;
         $('#vipersecStockDisplayCost').html('$' + vipersecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#vipersecCurrentPrice').html('$' + vipersecCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#vipersecStockSellPrice').html('$' + (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#vipersecSellEstimate').html('$' + (ownedVipersecStocks * (vipersecCurrentStockPrice - vipersecCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("vipersecCurrentStockPrice", vipersecCurrentStockPrice);
@@ -695,6 +730,7 @@
         if (PLATCurrentStockPrice <= 0)
             PLATCurrentStockPrice = 0.01;
         $('#PLATStockDisplayCost').html('$' + PLATCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#PLATCurrentPrice').html('$' + PLATCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#PLATStockSellPrice').html('$' + (PLATCurrentStockPrice - PLATCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#PLATSellEstimate').html('$' + (ownedPLATStocks * (PLATCurrentStockPrice - PLATCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("PLATCurrentStockPrice", PLATCurrentStockPrice);
@@ -718,6 +754,7 @@
         if (infoneCurrentStockPrice <= 0)
             infoneCurrentStockPrice = 0.01;
         $('#infoneStockDisplayCost').html('$' + infoneCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#infoneCurrentPrice').html('$' + infoneCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#infoneStockSellPrice').html('$' + (infoneCurrentStockPrice - infoneCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#infoneSellEstimate').html('$' + (ownedInfoneStocks * (infoneCurrentStockPrice - infoneCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("infoneCurrentStockPrice", infoneCurrentStockPrice);
@@ -737,6 +774,7 @@
         if (extankCurrentStockPrice <= 0)
             extankCurrentStockPrice = 0.01;
         $('#extankStockDisplayCost').html('$' + extankCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#extankCurrentPrice').html('$' + extankCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#extankStockSellPrice').html('$' + (extankCurrentStockPrice - extankCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#extankSellEstimate').html('$' + (ownedExtankStocks * (extankCurrentStockPrice - extankCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("extankCurrentStockPrice", extankCurrentStockPrice);
@@ -752,6 +790,7 @@
         if (reinaccCurrentStockPrice <= 0)
             reinaccCurrentStockPrice = 0.01;
         $('#reinaccStockDisplayCost').html('$' + reinaccCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#reinaccCurrentPrice').html('$' + reinaccCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#reinaccStockSellPrice').html('$' + (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("reinaccCurrentStockPrice", reinaccCurrentStockPrice);

@@ -21,6 +21,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
@@ -43,6 +44,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
@@ -64,6 +66,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
@@ -86,6 +89,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
@@ -108,6 +112,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
@@ -129,6 +134,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
@@ -150,6 +156,7 @@
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
@@ -171,6 +178,7 @@
             ownedNoodleStocks = 0;
             localStorage.setItem("ownedNoodleStocks", ownedNoodleStocks);
             $('#noodleOwnedStocksDisplay').html(ownedNoodleStocks);
+            $('#noodleOwnedStocks').html(ownedNoodleStocks);
             if (ownedNoodleStocks > 0)
                 $('#noodleSellEstimate').html('$' + (ownedNoodleStocks * (noodleCurrentStockPrice - noodleCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             else
