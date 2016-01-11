@@ -78,6 +78,7 @@
     background: rgba(0,0,0,0.3);
     font-size: 14px;
     margin: 0 auto;
+    float: left;
     color: white;
     text-align: left;
     width: 640px;
@@ -151,8 +152,8 @@
 .historyDisplay {
     width: 600px;
     height: 300px;
+    float: left;
     background: black;
     margin-left:25px;
     margin-right:25px; 
-    margin-bottom: 10px;
 }

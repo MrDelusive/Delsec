@@ -7,7 +7,7 @@
             points: { show: true }
         },
         xaxis: {
-            min: 0,
+            min: 1,
             max: 6,
             show: false
         },
