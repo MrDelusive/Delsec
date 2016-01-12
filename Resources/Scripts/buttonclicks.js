@@ -313,6 +313,11 @@ $(document).ready(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+
+            $('#btnRussianCrawlerShop').prop('disabled', false);
+            $('#btnVipersecCrawlerShop').prop('disabled', false);
+            $('#btnChimerasecCrawlerShop').prop('disabled', false);
+            $('#btnGriffonbankCrawlerShop').prop('disabled', false);
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");
@@ -383,6 +388,8 @@ $(document).ready(function () {
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+
+            $('#btnLongTermInvestments').prop('disabled', false);
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");

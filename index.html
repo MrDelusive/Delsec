@@ -14,6 +14,7 @@
     <link href="Resources/Stylesheets/Master.css" rel="stylesheet" type="text/css" />
     <link href="Resources/Stylesheets/Stocks.css" rel="stylesheet" type="text/css" />
     <link href="Resources/Stylesheets/Buttons.css" rel="stylesheet" type="text/css" />   
+    <link href="Resources/Stylesheets/CrawlerButtons.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/Investment.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/Console.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/Abilities.css" rel="stylesheet" type="text/css" />  
@@ -39,7 +40,7 @@
                 $0.00
             </div> 
             <div id="lblMoneyDisplayScroll"></div>            
-            <br /> <br />
+            
             <div id="manualIncrementDisplay">
                 <div id="manualIncrementAmtDisplay" class="moneyDisplayAmt"></div>
                 <button id="btnIncrement" class="btn_Generate">GENERATE</button>                     
@@ -58,7 +59,7 @@
             </div>
             <div id="healerGenerate" style="display:none;">
                 <div id="healerGenerateAmt" class="moneyDisplayAmt"></div>
-                <button id="btnHealerIncrement" class="btn_GenerateHealer">ADD INTEREST</button>                     
+                <button id="btnHealerIncrement" class="btn_GenerateHealer">GENERATING INTEREST</button>                     
             </div>
 
             <div id="nav_Buttons">
@@ -333,6 +334,7 @@
 
             <!-- INVESTMENTS -->
             <div id="investments" class="hidden_Divs">
+                <div id="totalInvestmentSpent" class="lblItemDisplay">Total Investment: $0</div>    
                 <div id="investmentTabSelect">
                     <button id="btnShortTermInvestments" class="btn_TabSmallGreen2">Short Term Investments</button>
                     <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">Long Term Investments</button>
@@ -377,8 +379,35 @@
                     <div id="miningInvest" class="investDiv">
                         <button id="btnInvestMining" class="investButton">Invest $2,500.00 In a Mining Expedition - 1 min CD</button> 
                     </div>
-                    <div id="miningInvestResult" class="investResultDiv"></div>     
+                    <div id="miningInvestResult" class="investResultDiv"></div>   
+                    
+                    <div id="socialMediaInvest" class="investDiv">
+                        <button id="btnInvestSocialMedia" class="investButton">Invest $5,000.00 In a Social Media Strategy - 90 sec CD</button> 
+                    </div>
+                    <div id="socialMediaInvestResult" class="investResultDiv"></div>  
+
+                    <div id="blueChipInvest" class="investDiv">
+                        <button id="btnInvestBlueChip" class="investButton">Invest $10,000.00 In a Blue Chip Company - 2 min CD</button> 
+                    </div>
+                    <div id="blueChipInvestResult" class="investResultDiv"></div>
+
+                    <div id="selfImprovementInvest" class="investDiv">
+                        <button id="btnInvestSelfImprovement" class="investButton">Invest $25,000.00 In a Self Improvement Course - 3 min CD</button> 
+                    </div>
+                    <div id="selfImprovementInvestResult" class="investResultDiv"></div>
+
+                    <div id="selfImprovementInvest2" class="investDiv">
+                        <button id="btnInvestSelfImprovement2" class="investButton">Invest $50,000.00 In a Better Self Improvement Course<br />3 min CD</button> 
+                    </div>
+                    <div id="selfImprovement2InvestResult" class="investResultDiv"></div>
+
+                    <div id="energyInvest" class="investDiv">
+                        <button id="btnInvestEnergy" class="investButton">Invest $100,000.00 In Energy - 4 min CD</button> 
+                    </div>
+                    <div id="energyInvestResult" class="investResultDiv"></div>
+
                 </div>  
+
                 <div id="longTermInvestments" class="hidden_Divs"> 
                     <h1>LONG TERM INVESTMENTS</h1>
                     <div id="goldbotInvest" class="investDiv">  
@@ -390,6 +419,12 @@
                         <button id="btnInvestGame" class="investButton">Invest $25.00 In a Game Under Development - 3 min CD</button> 
                     </div>
                     <div id="gameInvestResult" class="investResultDiv"></div> 
+
+
+                    <div id="CDInvest" class="investDiv">
+                        <button id="btnInvestCD" class="investButton">Invest $25,000.00 In a CD Account - 10 min CD</button> 
+                    </div>
+                    <div id="CDInvestResult" class="investResultDiv"></div> 
                 
                 </div>     
             </div>
@@ -2716,7 +2751,7 @@
                     <div id="btnHealerHeader">
                         <button class="healerPassiveButton" ></button>
                         <div class="skillHeaderHoverPopup" id="healerInfo">
-                            INTEREST GENERATE: Adds 0.01% of the amount currently in your account. Up to a max of $500 Initially.
+                            INTEREST GENERATE: Adds 0.5% of the Money Spent on Investing every 60 seconds.
                         </div>
                     </div>                    
                 </div>
@@ -2974,28 +3009,51 @@
             
             <!-- OPTIONS -->
             <div id="options" class="hidden_Divs">
-                <b>Debug info, testing only:</b><br /> <br />
-			    Current Version: V0.65 <br /> <br />  
-                <button id="btnResetAll">Reset All</button>
-                <button id="btnResetClass">Reset Class</button>
-                <div id="patchNotes">
-                    Current Patch notes
+                <div id="optionsTop">
+			        Current Version: V0.66 <br /> <br />  
+                    <button id="btnResetAll">Reset All</button>
+                    <button id="btnResetClass">Reset Class</button>
+                </div>
+                
+                <div class="patchNotes">
+                    Patch notes<br /><br />
+                    V0.66
+                    <ul>
+                        <li>Investments now have Money Spent on Investments.</li>
+                        <li>Healer Generate button now is passive, no longer clickable. Instead it generates 0.5% of the total money the player has spent on Investments, which ticks every 1 minute.</li>
+                        <li>
+                            Stock market graph plot command moved from the 30sec ticker into each stocktab button click event. This is because the performance hit of drawing 39 graphs every 30 sec was too high.<br />
+                            The drawback of this is the graph will not update with the tick if the player is viewing the tab. They must click the tab again to get the updated graph. This is better for now than the big performance hit.
+                        </li>
+                        <li>Early game stocks which had a balanced formula now have been changed to have a 1 cent growth over time. This is to make stocks viable to just focus on.</li>
+                    </ul>
+                    <br />
+                    V0.65:
                     <ul>
                         <li>Restyled Stock Market tab, stock market now has left side list to select, brings up company stock info. Can fit more in now.</li>
                         <li>Stocks now display history of current price + 5 previous prices. This is not saved to localStorage because I didn't want to fill up 100 storage vars just for that.</li>
                         <li>Graphs will not display until the first stock tick.</li>
                         <li>Stocks again have been rebalanced slightly.</li>
                         <li>History shown in graph form using flot.</li>
-                        <li>Fixed bug with 5% stock sell difference still selling at 10% stock difference</li>
+                        <li>Fixed bug with 5% stock sell difference still selling at 10% stock difference.</li>
+                        <li>Changed BG image to fit the 80s theme a bit better.</li>
                     </ul>
-                    To do next:
+                 </div>
+                <div class="patchNotes">
+                    The plan:
                     <ul>
-                        <li>Add risk to crawlers and some investments.</li>
-                        <li>Add risk management</li>
-                        <li>Add more investment options</li>
-                        <li>Add more crawler options</li>
-                        <li>Add more emails</li>
+                        <li>Risk will be added to crawlers and some other items, this is to make the player explore other viable money making strategies, instead of just the lazy crawlers</li>
+                        <li>Risk management will be implemented to counter this, also risk abilities will be added to wizard.</li>
+                        <li>Long term Investments will only be accessable by Healers</li>
+                        <li>Other company crawlers will only be accessable by Wizards</li>
+                        <li>Warriors will have their special Items to buy.</li>
+                        <li>Rogues will have more stock options.</li>
+                        <li>The plan for each class is: Warriors and Rogues will be a more active playstyle, requiring clicks/Active participation from the player.<br />
+                            Wizards and Healers will have a more passive play style, player won't need to do as much monitoring.
+                        </li>
+                        <li>The games theme is 80s/Retro. The videos will try to keep to this style with 80s cheesy style, bad acting.</li>
                     </ul>
+
                 </div>
             </div>              
         </div>
@@ -3004,6 +3062,7 @@
     <script src="Resources/Scripts/Preload/global.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/game.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/stockpreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/StockMarket.js" type="text/javascript"></script>     
 
     <script src="Resources/Scripts/Emails/emails.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Generate/generators.js" type="text/javascript"></script>
@@ -3017,8 +3076,8 @@
     <script src="Resources/Scripts/Tickers/DisabledTicker.js" type="text/javascript"></script>      
     <script src="Resources/Scripts/Tickers/EmailTicker.js" type="text/javascript"></script>  
     <script src="Resources/Scripts/Tickers/StockTicker.js" type="text/javascript"></script>  
-
-    <script src="Resources/Scripts/Stocks/StockMarket.js" type="text/javascript"></script>       
+    <script src="Resources/Scripts/Tickers/InvestmentTicker.js" type="text/javascript"></script>  
+    
     <script src="Resources/Scripts/Stocks/Delsec.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/Entaq.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/Astor.js" type="text/javascript"></script>

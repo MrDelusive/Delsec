@@ -70,3 +70,4 @@ var email4ByteViewed = "false";
 var userClass = "None";
 var warriorClicks = 0;
 var wizardPassive = 0;
+var totalInvestment = 0;

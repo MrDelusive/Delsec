@@ -41,17 +41,9 @@ $(document).ready(function () {
         return false;
     });
 
-    // generates interest based on current money 0.01% of total
-    $('#btnHealerIncrement').click(function () {
-        increment = Math.round(100 * money / 10000) / 100;
-        if (increment > 500)
-            increment = 500;
-        money += increment;
-        localStorage.setItem("money", money);
-        $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-        $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-        $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-        $('#healerGenerateAmt').html("You have added 0.01% interest to your account for: $" + increment.toFixed(2));
+    // investment now ticks every 60 sec for 1% of the amount player has spent investing.
+    $('#btnHealerIncrement').prop('disabled', true);
+    $('#btnHealerIncrement').click(function () {       
         return false;
     });
 

@@ -14,6 +14,9 @@
             }, 1000);
             var investAmt = 3;
             money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -109,6 +112,9 @@
             }, 1000);
             var investAmt = 25;
             money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -187,6 +193,107 @@
         }
         else
             $('#gameInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+
+    //CD INVEST
+    $('#btnInvestCD').prop('disabled', false);
+    $('#btnInvestCD').click(function () {
+        if (money >= 25000) {
+            var timer = 600;
+            $('#CDInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    $('#CDInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
+            var investAmt = 25000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                if (userClass == "Healer")
+                    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account is standard. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account is standard. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account plays nicely. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account plays nicely. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account sends music to your ears. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account sends music to your ears. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account boosts the bass of your investment. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account grows rapidly. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account performs superbly. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account sets a new standard in CD Fidelity. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#CDInvestResult').html("The CD Account goes up to 11. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+            }, 600000);
+        }
+        else
+            $('#CDInvestResult').html("Not enough money to Invest.");
         return false;
     });
 

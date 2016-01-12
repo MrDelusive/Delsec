@@ -8,6 +8,14 @@
     color: #FFF;
 }
 
+#totalInvestmentSpent {
+    width: 970px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 10px;
+    line-height: 50px;  
+}
+
 #investments h1 {
     text-align: center;
     margin: 0px;

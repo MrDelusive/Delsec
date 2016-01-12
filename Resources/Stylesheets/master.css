@@ -52,8 +52,7 @@
     font-size: 20px;
     margin: 0 auto;
     margin: 10px;
-    line-height: 50px;
-    
+    line-height: 50px;   
 }
 
 #lblMoneyDisplayScroll {
@@ -204,6 +203,7 @@
     color:#24b41e;
     font-size:16px;
     padding-bottom: 5px;
+    font-weight: bold;
 }
 #nav_Buttons
 {
@@ -250,10 +250,16 @@
     font-family:Calibri;
     background: black;
     color: white;
-    height:800px;
+    height:1600px;
     width: 1000px;
 }
-
-#patchNotes {
+#optionsTop {
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+}
+.patchNotes {
     text-align: left;
+    width: 50%;
+    float: left;
 }

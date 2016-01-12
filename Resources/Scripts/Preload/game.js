@@ -54,8 +54,8 @@
     if (localStorage.getItem("warriorClicks") === null)
         localStorage.setItem("warriorClicks", warriorClicks);
 
-    if (localStorage.getItem("lastSaveState") === null)
-        localStorage.setItem("lastSaveState", "No Saves.");
+    if (localStorage.getItem("totalInvestment") === null)
+        localStorage.setItem("totalInvestment", totalInvestment);
 
     if (typeof (Storage) !== "undefined") {              
         money = parseFloat(localStorage.getItem("money"));
@@ -78,10 +78,18 @@
         thirtytwoByteBank = parseInt(localStorage.getItem("thirtytwoByteBank"));
         sixtyfourByteBank = parseInt(localStorage.getItem("sixtyfourByteBank"));
        
+        $('#btnRussianCrawlerShop').prop('disabled', true);
+        $('#btnVipersecCrawlerShop').prop('disabled', true);
+        $('#btnChimerasecCrawlerShop').prop('disabled', true);
+        $('#btnGriffonbankCrawlerShop').prop('disabled', true);
+
+        $('#btnLongTermInvestments').prop('disabled', true);
+
         totalPackets = parseInt(localStorage.getItem("totalPackets"));
         
         userClass = localStorage.getItem("userClass");
         warriorClicks = parseInt(localStorage.getItem("warriorClicks"));
+        totalInvestment = parseFloat(localStorage.getItem("totalInvestment"));
 
         // must do a string check because localStorage stores strings and not bools STUPID SHIT.
         email1Viewed = localStorage.getItem("email1Viewed");
@@ -243,7 +251,7 @@
     }
 
     $('#totalPacketDisplay').html("Total Packets/Sec: " + totalPackets);
-
+    $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
     $('#classDisplay').html("<br /><br />Class: " + userClass);
     if (userClass == "Warrior") {
@@ -259,6 +267,10 @@
         $("#manualIncrementDisplay").hide();
         $("#autoWizardGenerate").show();
         $("#autoWizardGenerate").disableSelection();
+        $('#btnRussianCrawlerShop').prop('disabled', false);
+        $('#btnVipersecCrawlerShop').prop('disabled', false);
+        $('#btnChimerasecCrawlerShop').prop('disabled', false);
+        $('#btnGriffonbankCrawlerShop').prop('disabled', false);
     }
     if (userClass == "Rogue") {
         $("#btnAbilities").hide();
@@ -272,6 +284,7 @@
         $("#btnHealerAbilities").fadeIn(500);
         $("#manualIncrementDisplay").hide();
         $("#healerGenerate").show();
+        $('#btnLongTermInvestments').prop('disabled', false);
     }
        
 

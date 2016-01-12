@@ -95,6 +95,8 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
     border: 1px solid #003ba4;
     font-family: Consolas,monaco,monospace;
     font-size:50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
     color: #ffffff;
     
 }
@@ -114,6 +116,8 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
     font-family: Consolas,monaco,monospace;
     font-size:50px;
     color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
     
 }
 .btn_GenerateWarrior:hover
@@ -134,7 +138,8 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
     color: #ffffff;
     -webkit-animation:menuFlashBlue 60s linear infinite; /* Chrome, Safari, Opera */
     animation:menuFlashBlue 60s linear infinite;
-    
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;  
 }
 
 .btn_GenerateRogue
@@ -148,7 +153,8 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
     font-family: Consolas,monaco,monospace;
     font-size:50px;
     color: #ffffff;
-    
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
 }
 .btn_GenerateRogue:hover
 {
@@ -165,14 +171,12 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
     border-radius:40px;
     border: 1px solid #35793f;
     font-family: Consolas,monaco,monospace;
-    font-size:50px;
-    color: #ffffff;
-    
-}
-.btn_GenerateHealer:hover
-{
     -webkit-animation:menuFlashGreen 60s linear infinite; /* Chrome, Safari, Opera */
     animation:menuFlashGreen 60s linear infinite;
+    font-size:30px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;    
 }
 
 .btn_Style {
@@ -444,106 +448,12 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
 	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
 	background-color:#5cb811;
-}.btn_TabGreen:active {
+}
+.btn_TabGreen:active {
 	position:relative;
 	top:1px;
 }
 
-.btn_TabSmall {
-
-    background: #0a3b78;
-    cursor: pointer;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-    border: 0px;
-	border-bottom-left-radius:0px;
-	display:inline-block;
-	color: white;
-	font-family: Consolas,monaco,monospace;
-	font-size:14px;
-    font-weight: bold;
-	height:30px;
-	line-height:30px;
-	text-decoration:none;
-	text-align:center;
-    margin-top: 20px;
-}
-.btn_TabSmall:hover {
-    background: #1b4c89;
-}
-
-.btn_TabSmallRed {
-
-    background: #860707;
-    cursor: pointer;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-    border: 0px;
-	border-bottom-left-radius:0px;
-	display:inline-block;
-	color: white;
-	font-family: Consolas,monaco,monospace;
-	font-size:14px;
-    font-weight: bold;
-	height:30px;
-	line-height:30px;
-	text-decoration:none;
-	text-align:center;
-    margin-top: 20px;
-}
-.btn_TabSmallRed:hover {
-    background: #971818;
-}
-
-.btn_TabSmallGreen {
-
-    background: #287120;
-    cursor: pointer;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-    border: 0px;
-	border-bottom-left-radius:0px;
-	display:inline-block;
-	color: white;
-	font-family: Consolas,monaco,monospace;
-	font-size:14px;
-    font-weight: bold;
-	height:30px;
-	line-height:30px;
-	text-decoration:none;
-	text-align:center;
-    margin-top: 20px;
-}
-.btn_TabSmallGreen:hover {
-    background: #398231;
-}
 
 .btn_TabSmallGreen2 {
 
@@ -575,69 +485,8 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
 .btn_TabSmallGreen2:hover {
     background: #419352;
 }
-
-.btn_TabSmallPurple {
-
-    background: #4a0b7c;
-    cursor: pointer;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-    border: 0px;
-	border-bottom-left-radius:0px;
-	display:inline-block;
-	color: white;
-	font-family: Consolas,monaco,monospace;
-	font-size:14px;
-    font-weight: bold;
-	height:30px;
-	line-height:30px;
-	text-decoration:none;
-	text-align:center;
-    margin-top: 20px;
-}
-.btn_TabSmallPurple:hover {
-    background: #5b1c8d;
-}
-
-.btn_TabSmallGray {
-
-    background: #535353;
-    cursor: pointer;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-    border: 0px;
-	border-bottom-left-radius:0px;
-	display:inline-block;
-	color: white;
-	font-family: Consolas,monaco,monospace;
-	font-size:14px;
-    font-weight: bold;
-	height:30px;
-	line-height:30px;
-	text-decoration:none;
-	text-align:center;
-    margin-top: 20px;
-}
-.btn_TabSmallGray:hover {
-    background: #646464;
+.btn_TabSmallGreen2:disabled {
+    background: #212121;
 }
 
 .btn_Email {

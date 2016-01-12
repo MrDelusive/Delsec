@@ -1,0 +1,177 @@
+﻿body {
+}
+
+.btn_TabSmall {
+
+    background: #0a3b78;
+    cursor: pointer;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+	border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+    border: 0px;
+	border-bottom-left-radius:0px;
+	display:inline-block;
+	color: white;
+	font-family: Consolas,monaco,monospace;
+	font-size:14px;
+    font-weight: bold;
+	height:30px;
+	line-height:30px;
+	text-decoration:none;
+	text-align:center;
+    margin-top: 20px;
+}
+.btn_TabSmall:hover {
+    background: #1b4c89;
+}
+.btn_TabSmall:disabled {
+    background: #535353;
+}
+
+.btn_TabSmallRed {
+
+    background: #860707;
+    cursor: pointer;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+	border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+    border: 0px;
+	border-bottom-left-radius:0px;
+	display:inline-block;
+	color: white;
+	font-family: Consolas,monaco,monospace;
+	font-size:14px;
+    font-weight: bold;
+	height:30px;
+	line-height:30px;
+	text-decoration:none;
+	text-align:center;
+    margin-top: 20px;
+}
+.btn_TabSmallRed:hover {
+    background: #971818;
+}
+.btn_TabSmallRed:disabled {
+    background: #212121;
+}
+
+.btn_TabSmallGreen {
+
+    background: #287120;
+    cursor: pointer;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+	border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+    border: 0px;
+	border-bottom-left-radius:0px;
+	display:inline-block;
+	color: white;
+	font-family: Consolas,monaco,monospace;
+	font-size:14px;
+    font-weight: bold;
+	height:30px;
+	line-height:30px;
+	text-decoration:none;
+	text-align:center;
+    margin-top: 20px;
+}
+.btn_TabSmallGreen:hover {
+    background: #398231;
+}
+.btn_TabSmallGreen:disabled {
+    background: #212121;
+}
+
+
+.btn_TabSmallPurple {
+
+    background: #4a0b7c;
+    cursor: pointer;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+	border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+    border: 0px;
+	border-bottom-left-radius:0px;
+	display:inline-block;
+	color: white;
+	font-family: Consolas,monaco,monospace;
+	font-size:14px;
+    font-weight: bold;
+	height:30px;
+	line-height:30px;
+	text-decoration:none;
+	text-align:center;
+    margin-top: 20px;
+}
+.btn_TabSmallPurple:hover {
+    background: #5b1c8d;
+}
+.btn_TabSmallPurple:disabled {
+    background: #212121;
+}
+.btn_TabSmallGray {
+
+    background: #535353;
+    cursor: pointer;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+	border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+    border: 0px;
+	border-bottom-left-radius:0px;
+	display:inline-block;
+	color: white;
+	font-family: Consolas,monaco,monospace;
+	font-size:14px;
+    font-weight: bold;
+	height:30px;
+	line-height:30px;
+	text-decoration:none;
+	text-align:center;
+    margin-top: 20px;
+}
+.btn_TabSmallGray:hover {
+    background: #646464;
+}
+.btn_TabSmallGray:disabled {
+    background: #212121;
+}
