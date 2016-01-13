@@ -21,6 +21,7 @@
     <link href="Resources/Stylesheets/Healer.css" rel="stylesheet" type="text/css" />  
     <link href="Resources/Stylesheets/Rogue.css" rel="stylesheet" type="text/css" /> 
     <link href="Resources/Stylesheets/Warrior.css" rel="stylesheet" type="text/css" /> 
+    <link href="Resources/Stylesheets/WarriorCoding.css" rel="stylesheet" type="text/css" /> 
     <link href="Resources/Stylesheets/Wizard.css" rel="stylesheet" type="text/css" /> 
 
     <script src="Resources/Scripts/Preload/jquery-1.10.2.js" type="text/javascript"></script>
@@ -65,7 +66,7 @@
             <div id="nav_Buttons">
                 <!-- hide buttons until event trigger -->
                 <button id="btnShop" class="btn_TabBlue" style="display:none;">Buy Crawlers</button>
-                <button id="btnPowerGenerators" class="btn_TabRed" style="display:none;">Buy Power</button>                
+                <button id="btnCoding" class="btn_TabRed" style="display:none;">Write Code</button>                
                 <button id="btnEmails" class="btn_Tab" style="display:none;">Emails (0) New</button>
                 <button id="btnInvestments" class="btn_TabGreen" style="display:none;">Investments</button>           
                 <button id="btnStockMarket" class="btn_TabYellow" style="display:none;">Stock Market</button>
@@ -231,9 +232,16 @@
 
 
             </div>
-            <!-- WARRIOR ABIL POWER GENERATORS -->
-            <div id ="powerGenerators" class="hidden_Divs"> 
+            <!-- WARRIOR CODING -->
+            <div id ="warriorCoding" class="hidden_Divs"> 
+                <div id="totalWarriorClicks" class="lblItemDisplay">Total Warrior Generate Clicks: 0</div>    
+                <button id="btnWriteEfficiencyCode" class="btn_StyleRed">WRITE GENERATE EFFICIENCY CODE</button> 
+                <div id="warriorCodeEfficiency1">
 
+                </div>
+                <div id="warriorCodeEfficiency1Result">
+                    Code compiled: 0 Times for $0.00 Boost in Efficiency.
+                </div>
             </div>  
             <!-- EMAILS -->
             <div id ="email" class="hidden_Divs">
@@ -3010,13 +3018,22 @@
             <!-- OPTIONS -->
             <div id="options" class="hidden_Divs">
                 <div id="optionsTop">
-			        Current Version: V0.66 <br /> <br />  
+			        Current Version: V0.67 <br /> <br />  
                     <button id="btnResetAll">Reset All</button>
                     <button id="btnResetClass">Reset Class</button>
                 </div>
                 
                 <div class="patchNotes">
                     Patch notes<br /><br />
+                    V0.67
+                    <ul>
+                        <li>Added more investments</li>
+                        <li>Other companies' crawler tabs are disabled unless you are a wizard.</li>
+                        <li>Long term investments are disabled unless you are a healer.</li>
+                        <li>Restyled the generate buttons again.</li>
+                        <li>Rebalanced investment results.</li>
+                    </ul>
+                    <br />
                     V0.66
                     <ul>
                         <li>Investments now have Money Spent on Investments.</li>
@@ -3044,10 +3061,8 @@
                     <ul>
                         <li>Risk will be added to crawlers and some other items, this is to make the player explore other viable money making strategies, instead of just the lazy crawlers</li>
                         <li>Risk management will be implemented to counter this, also risk abilities will be added to wizard.</li>
-                        <li>Long term Investments will only be accessable by Healers</li>
-                        <li>Other company crawlers will only be accessable by Wizards</li>
                         <li>Warriors will have their special Items to buy.</li>
-                        <li>Rogues will have more stock options.</li>
+                        <li>Rogues will have Shareholder options.</li>
                         <li>The plan for each class is: Warriors and Rogues will be a more active playstyle, requiring clicks/Active participation from the player.<br />
                             Wizards and Healers will have a more passive play style, player won't need to do as much monitoring.
                         </li>
@@ -3059,10 +3074,20 @@
         </div>
     </div>
     </form>
-    <script src="Resources/Scripts/Preload/global.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Preload/game.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Preload/stockpreload.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Preload/StockMarket.js" type="text/javascript"></script>     
+    <script src="Resources/Scripts/Global/GameGlobal.js" type="text/javascript"></script>   
+    <script src="Resources/Scripts/Global/CrawlerGlobal.js" type="text/javascript"></script>  
+    <script src="Resources/Scripts/Global/StockGlobal.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Global/EmailGlobal.js" type="text/javascript"></script>
+
+    <script src="Resources/Scripts/Preload/GamePreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/EmailPreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/StockPreload.js" type="text/javascript"></script>    
+    <script src="Resources/Scripts/Preload/CrawlerPreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/WarriorPreload.js" type="text/javascript"></script> 
+    <script src="Resources/Scripts/Preload/HealerPreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/RoguePreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/WizardPreload.js" type="text/javascript"></script>
+    
 
     <script src="Resources/Scripts/Emails/emails.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Generate/generators.js" type="text/javascript"></script>
@@ -3126,6 +3151,7 @@
     <script src="Resources/Scripts/Classes/HealerAbilities.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Classes/RogueAbilities.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Classes/WarriorAbilities.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Classes/WarriorCoding.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Classes/WizardAbilities.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/jquery.flot.js"></script>

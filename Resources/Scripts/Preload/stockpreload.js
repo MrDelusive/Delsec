@@ -1,198 +1,398 @@
-var delsecCurrentStockPrice, delsecPreviousStockPrice, delsec2ndPreviousStockPrice, delsec3rdPreviousStockPrice, delsec4thPreviousStockPrice, delsec5thPreviousStockPrice = 2.20;
-var entaqCurrentStockPrice, entaqPreviousStockPrice, entaq2ndPreviousStockPrice, entaq3rdPreviousStockPrice, entaq4thPreviousStockPrice, entaq5thPreviousStockPrice = 0.57;
-var ventexCurrentStockPrice, ventexPreviousStockPrice, ventex2ndPreviousStockPrice, ventex3rdPreviousStockPrice, ventex4thPreviousStockPrice, ventex5thPreviousStockPrice = 1.54;
-var astorCurrentStockPrice, astorPreviousStockPrice, astor2ndPreviousStockPrice, astor3rdPreviousStockPrice, astor4thPreviousStockPrice, astor5thPreviousStockPrice = 0.95;
-var popbotCurrentStockPrice, popbotPreviousStockPrice, popbot2ndPreviousStockPrice, popbot3rdPreviousStockPrice, popbot4thPreviousStockPrice, popbot5thPreviousStockPrice = 0.01;
-var pannamCurrentStockPrice, pannamPreviousStockPrice, pannam2ndPreviousStockPrice, pannam3rdPreviousStockPrice, pannam4thPreviousStockPrice, pannam5thPreviousStockPrice = 4.82;
-var TRITCurrentStockPrice, TRITPreviousStockPrice, TRIT2ndPreviousStockPrice, TRIT3rdPreviousStockPrice, TRIT4thPreviousStockPrice, TRIT5thPreviousStockPrice = 5.86;
-var CANVCurrentStockPrice, CANVPreviousStockPrice, CANV2ndPreviousStockPrice, CANV3rdPreviousStockPrice, CANV4thPreviousStockPrice, CANV5thPreviousStockPrice = 8.72;
-var OSMCurrentStockPrice, OSMPreviousStockPrice, OSM2ndPreviousStockPrice, OSM3rdPreviousStockPrice, OSM4thPreviousStockPrice, OSM5thPreviousStockPrice = 11.26;
-var PALLADCurrentStockPrice, PALLADPreviousStockPrice, PALLAD2ndPreviousStockPrice, PALLAD3rdPreviousStockPrice, PALLAD4thPreviousStockPrice, PALLAD5thPreviousStockPrice = 15.77;
-var KELVCurrentStockPrice, KELVPreviousStockPrice, KELV2ndPreviousStockPrice, KELV3rdPreviousStockPrice, KELV4thPreviousStockPrice, KELV5thPreviousStockPrice = 23.11;
-var stuccorCurrentStockPrice, stuccorPreviousStockPrice, stuccor2ndPreviousStockPrice, stuccor3rdPreviousStockPrice, stuccor4thPreviousStockPrice, stuccor5thPreviousStockPrice = 58.98;
-var delcredCurrentStockPrice, delcredPreviousStockPrice, delcred2ndPreviousStockPrice, delcred3rdPreviousStockPrice, delcred4thPreviousStockPrice, delcred5thPreviousStockPrice = 97.85;
-var rustecCurrentStockPrice, rustecPreviousStockPrice, rustec2ndPreviousStockPrice, rustec3rdPreviousStockPrice, rustec4thPreviousStockPrice, rustec5thPreviousStockPrice = 115.33;
-var exxocredCurrentStockPrice, exxocredPreviousStockPrice, exxocred2ndPreviousStockPrice, exxocred3rdPreviousStockPrice, exxocred4thPreviousStockPrice, exxocred5thPreviousStockPrice = 126.88;
-var AUCurrentStockPrice, AUPreviousStockPrice, AU2ndPreviousStockPrice, AU3rdPreviousStockPrice, AU4thPreviousStockPrice, AU5thPreviousStockPrice = 257.23;
-var aceholdCurrentStockPrice, aceholdPreviousStockPrice, acehold2ndPreviousStockPrice, acehold3rdPreviousStockPrice, acehold4thPreviousStockPrice, acehold5thPreviousStockPrice = 340.01;
-var delholdCurrentStockPrice, delholdPreviousStockPrice, delhold2ndPreviousStockPrice, delhold3rdPreviousStockPrice, delhold4thPreviousStockPrice, delhold5thPreviousStockPrice = 582.94;
-var DIAMCurrentStockPrice, DIAMPreviousStockPrice, DIAM2ndPreviousStockPrice, DIAM3rdPreviousStockPrice, DIAM4thPreviousStockPrice, DIAM5thPreviousStockPrice = 1196.77;
-var pentaccCurrentStockPrice, pentaccPreviousStockPrice, pentacc2ndPreviousStockPrice, pentacc3rdPreviousStockPrice, pentacc4thPreviousStockPrice, pentacc5thPreviousStockPrice = 1206.65;
-var noodleCurrentStockPrice, noodlePreviousStockPrice, noodle2ndPreviousStockPrice, noodle3rdPreviousStockPrice, noodle4thPreviousStockPrice, noodle5thPreviousStockPrice = 1572.63;
-var megahardCurrentStockPrice, megahardPreviousStockPrice, megahard2ndPreviousStockPrice, megahard3rdPreviousStockPrice, megahard4thPreviousStockPrice, megahard5thPreviousStockPrice = 2322.17;
-var chimerasecCurrentStockPrice, chimerasecPreviousStockPrice, chimerasec2ndPreviousStockPrice, chimerasec3rdPreviousStockPrice, chimerasec4thPreviousStockPrice, chimerasec5thPreviousStockPrice = 3703.29;
-var chimeraholdCurrentStockPrice, chimeraholdPreviousStockPrice, chimerahold2ndPreviousStockPrice, chimerahold3rdPreviousStockPrice, chimerahold4thPreviousStockPrice, chimerahold5thPreviousStockPrice = 3908.06;
-var griffonbankCurrentStockPrice, griffonbankPreviousStockPrice, griffonbank2ndPreviousStockPrice, griffonbank3rdPreviousStockPrice, griffonbank4thPreviousStockPrice, griffonbank5thPreviousStockPrice = 4817.25;
-var turborusCurrentStockPrice, turborusPreviousStockPrice, turborus2ndPreviousStockPrice, turborus3rdPreviousStockPrice, turborus4thPreviousStockPrice, turborus5thPreviousStockPrice = 5176.99;
-var exodmptCurrentStockPrice, exodmptPreviousStockPrice, exodmpt2ndPreviousStockPrice, exodmpt3rdPreviousStockPrice, exodmpt4thPreviousStockPrice, exodmpt5thPreviousStockPrice = 5911.76;
-var ramnetCurrentStockPrice, ramnetPreviousStockPrice, ramnet2ndPreviousStockPrice, ramnet3rdPreviousStockPrice, ramnet4thPreviousStockPrice, ramnet5thPreviousStockPrice = 6427.11;
-var alphacenCurrentStockPrice, alphacenPreviousStockPrice, alphacen2ndPreviousStockPrice, alphacen3rdPreviousStockPrice, alphacen4thPreviousStockPrice, alphacen5thPreviousStockPrice = 6662.88;
-var scatterCurrentStockPrice, scatterPreviousStockPrice, scatter2ndPreviousStockPrice, scatter3rdPreviousStockPrice, scatter4thPreviousStockPrice, scatter5thPreviousStockPrice = 6727.27;
-var kalzexCurrentStockPrice, kalzexPreviousStockPrice, kalzex2ndPreviousStockPrice, kalzex3rdPreviousStockPrice, kalzex4thPreviousStockPrice, kalzex5thPreviousStockPrice = 7111.11;
-var sonicosCurrentStockPrice, sonicosPreviousStockPrice, sonicos2ndPreviousStockPrice, sonicos3rdPreviousStockPrice, sonicos4thPreviousStockPrice, sonicos5thPreviousStockPrice = 7421.86;
-var trancextCurrentStockPrice, trancextPreviousStockPrice, trancext2ndPreviousStockPrice, trancext3rdPreviousStockPrice, trancext4thPreviousStockPrice, trancext5thPreviousStockPrice = 7512.81;
-var stklrCurrentStockPrice, stklrPreviousStockPrice, stklr2ndPreviousStockPrice, stklr3rdPreviousStockPrice, stklr4thPreviousStockPrice, stklr5thPreviousStockPrice = 7700.97;
-var vipersecCurrentStockPrice, vipersecPreviousStockPrice, vipersec2ndPreviousStockPrice, vipersec3rdPreviousStockPrice, vipersec4thPreviousStockPrice, vipersec5thPreviousStockPrice = 10801.91;
-var PLATCurrentStockPrice, PLATPreviousStockPrice, PLAT2ndPreviousStockPrice, PLAT3rdPreviousStockPrice, PLAT4thPreviousStockPrice, PLAT5thPreviousStockPrice = 11721.88;
-var infoneCurrentStockPrice, infonePreviousStockPrice, infone2ndPreviousStockPrice, infone3rdPreviousStockPrice, infone4thPreviousStockPrice, infone5thPreviousStockPrice = 12821.52;
-var extankCurrentStockPrice, extankPreviousStockPrice, extank2ndPreviousStockPrice, extank3rdPreviousStockPrice, extank4thPreviousStockPrice, extank5thPreviousStockPrice = 13532.15;
-var reinaccCurrentStockPrice, reinaccPreviousStockPrice, reinacc2ndPreviousStockPrice, reinacc3rdPreviousStockPrice, reinacc4thPreviousStockPrice, reinacc5thPreviousStockPrice = 15234.04;
+$(document).ready(function () {
+    if (localStorage.getItem("delsecCurrentStockPrice") === null)
+        localStorage.setItem("delsecCurrentStockPrice", delsecCurrentStockPrice);
+    if (localStorage.getItem("ownedDelsecStocks") === null)
+        localStorage.setItem("ownedDelsecStocks", ownedDelsecStocks);
+    if (localStorage.getItem("delsecSpentAmt") === null)
+        localStorage.setItem("delsecSpentAmt", delsecSpentAmt);
 
-var delsecIncrement = 0;
-var ownedDelsecStocks = 0;
-var delsecSpentAmt = 0;
+    if (localStorage.getItem("entaqCurrentStockPrice") === null)
+        localStorage.setItem("entaqCurrentStockPrice", entaqCurrentStockPrice);
+    if (localStorage.getItem("ownedEntaqStocks") === null)
+        localStorage.setItem("ownedEntaqStocks", ownedEntaqStocks);
+    if (localStorage.getItem("entaqSpentAmt") === null)
+        localStorage.setItem("entaqSpentAmt", entaqSpentAmt);
 
-var entaqIncrement = 0;
-var ownedEntaqStocks = 0;
-var entaqSpentAmt = 0;
+    if (localStorage.getItem("ventexCurrentStockPrice") === null)
+        localStorage.setItem("ventexCurrentStockPrice", ventexCurrentStockPrice);
+    if (localStorage.getItem("ownedVentexStocks") === null)
+        localStorage.setItem("ownedVentexStocks", ownedVentexStocks);
+    if (localStorage.getItem("ventexSpentAmt") === null)
+        localStorage.setItem("ventexSpentAmt", ventexSpentAmt);
 
-var popbotIncrement = 0;
-var ownedPopbotStocks = 0;
-var popbotSpentAmt = 0;
+    if (localStorage.getItem("astorCurrentStockPrice") === null)
+        localStorage.setItem("astorCurrentStockPrice", astorCurrentStockPrice);
+    if (localStorage.getItem("ownedAstorStocks") === null)
+        localStorage.setItem("ownedAstorStocks", ownedAstorStocks);
+    if (localStorage.getItem("astorSpentAmt") === null)
+        localStorage.setItem("astorSpentAmt", astorSpentAmt);
 
-var astorIncrement = 0;
-var ownedAstorStocks = 0;
-var astorSpentAmt = 0;
+    if (localStorage.getItem("popbotCurrentStockPrice") === null)
+        localStorage.setItem("popbotCurrentStockPrice", popbotCurrentStockPrice);
+    if (localStorage.getItem("ownedPopbotStocks") === null)
+        localStorage.setItem("ownedPopbotStocks", ownedPopbotStocks);
+    if (localStorage.getItem("popbotSpentAmt") === null)
+        localStorage.setItem("popbotSpentAmt", popbotSpentAmt);
 
-var ventexIncrement = 0;
-var ownedVentexStocks = 0;
-var ventexSpentAmt = 0;
+    if (localStorage.getItem("pannamCurrentStockPrice") === null)
+        localStorage.setItem("pannamCurrentStockPrice", pannamCurrentStockPrice);
+    if (localStorage.getItem("ownedPannamStocks") === null)
+        localStorage.setItem("ownedPannamStocks", ownedPannamStocks);
+    if (localStorage.getItem("pannamSpentAmt") === null)
+        localStorage.setItem("pannamSpentAmt", pannamSpentAmt);
 
-var pannamIncrement = 0;
-var ownedPannamStocks = 0;
-var pannamSpentAmt = 0;
+    if (localStorage.getItem("TRITCurrentStockPrice") === null)
+        localStorage.setItem("TRITCurrentStockPrice", TRITCurrentStockPrice);
+    if (localStorage.getItem("ownedTRITStocks") === null)
+        localStorage.setItem("ownedTRITStocks", ownedTRITStocks);
+    if (localStorage.getItem("TRITSpentAmt") === null)
+        localStorage.setItem("TRITSpentAmt", TRITSpentAmt);
 
-var TRITIncrement = 0;
-var ownedTRITStocks = 0;
-var TRITSpentAmt = 0;
+    if (localStorage.getItem("CANVCurrentStockPrice") === null)
+        localStorage.setItem("CANVCurrentStockPrice", CANVCurrentStockPrice);
+    if (localStorage.getItem("ownedCANVStocks") === null)
+        localStorage.setItem("ownedCANVStocks", ownedCANVStocks);
+    if (localStorage.getItem("CANVSpentAmt") === null)
+        localStorage.setItem("CANVSpentAmt", CANVSpentAmt);
 
-var CANVIncrement = 0;
-var ownedCANVStocks = 0;
-var CANVSpentAmt = 0;
+    if (localStorage.getItem("OSMCurrentStockPrice") === null)
+        localStorage.setItem("OSMCurrentStockPrice", OSMCurrentStockPrice);
+    if (localStorage.getItem("ownedOSMStocks") === null)
+        localStorage.setItem("ownedOSMStocks", ownedOSMStocks);
+    if (localStorage.getItem("OSMSpentAmt") === null)
+        localStorage.setItem("OSMSpentAmt", OSMSpentAmt);
 
-var OSMIncrement = 0;
-var ownedOSMStocks = 0;
-var OSMSpentAmt = 0;
+    if (localStorage.getItem("PALLADCurrentStockPrice") === null)
+        localStorage.setItem("PALLADCurrentStockPrice", PALLADCurrentStockPrice);
+    if (localStorage.getItem("ownedPALLADStocks") === null)
+        localStorage.setItem("ownedPALLADStocks", ownedPALLADStocks);
+    if (localStorage.getItem("PALLADSpentAmt") === null)
+        localStorage.setItem("PALLADSpentAmt", PALLADSpentAmt);
 
-var PALLADIncrement = 0;
-var ownedPALLADStocks = 0;
-var PALLADSpentAmt = 0;
+    if (localStorage.getItem("KELVCurrentStockPrice") === null)
+        localStorage.setItem("KELVCurrentStockPrice", KELVCurrentStockPrice);
+    if (localStorage.getItem("ownedKELVStocks") === null)
+        localStorage.setItem("ownedKELVStocks", ownedKELVStocks);
+    if (localStorage.getItem("KELVSpentAmt") === null)
+        localStorage.setItem("KELVSpentAmt", KELVSpentAmt);
 
-var KELVIncrement = 0;
-var ownedKELVStocks = 0;
-var KELVSpentAmt = 0;
+    if (localStorage.getItem("stuccorCurrentStockPrice") === null)
+        localStorage.setItem("stuccorCurrentStockPrice", stuccorCurrentStockPrice);
+    if (localStorage.getItem("ownedStuccorStocks") === null)
+        localStorage.setItem("ownedStuccorStocks", ownedStuccorStocks);
+    if (localStorage.getItem("stuccorSpentAmt") === null)
+        localStorage.setItem("stuccorSpentAmt", stuccorSpentAmt);
 
-var stuccorIncrement = 0;
-var ownedStuccorStocks = 0;
-var stuccorSpentAmt = 0;
+    if (localStorage.getItem("delcredCurrentStockPrice") === null)
+        localStorage.setItem("delcredCurrentStockPrice", delcredCurrentStockPrice);
+    if (localStorage.getItem("ownedDelcredStocks") === null)
+        localStorage.setItem("ownedDelcredStocks", ownedDelcredStocks);
+    if (localStorage.getItem("delcredSpentAmt") === null)
+        localStorage.setItem("delcredSpentAmt", delcredSpentAmt);
 
-var delcredIncrement = 0;
-var ownedDelcredStocks = 0;
-var delcredSpentAmt = 0;
+    if (localStorage.getItem("rustecCurrentStockPrice") === null)
+        localStorage.setItem("rustecCurrentStockPrice", rustecCurrentStockPrice);
+    if (localStorage.getItem("ownedRustecStocks") === null)
+        localStorage.setItem("ownedRustecStocks", ownedRustecStocks);
+    if (localStorage.getItem("rustecSpentAmt") === null)
+        localStorage.setItem("rustecSpentAmt", rustecSpentAmt);
 
-var rustecIncrement = 0;
-var ownedRustecStocks = 0;
-var rustecSpentAmt = 0;
+    if (localStorage.getItem("exxocredCurrentStockPrice") === null)
+        localStorage.setItem("exxocredCurrentStockPrice", exxocredCurrentStockPrice);
+    if (localStorage.getItem("ownedExxocredStocks") === null)
+        localStorage.setItem("ownedExxocredStocks", ownedExxocredStocks);
+    if (localStorage.getItem("exxocredSpentAmt") === null)
+        localStorage.setItem("exxocredSpentAmt", exxocredSpentAmt);
 
-var exxocredIncrement = 0;
-var ownedExxocredStocks = 0;
-var exxocredSpentAmt = 0;
+    if (localStorage.getItem("AUCurrentStockPrice") === null)
+        localStorage.setItem("AUCurrentStockPrice", AUCurrentStockPrice);
+    if (localStorage.getItem("ownedAUStocks") === null)
+        localStorage.setItem("ownedAUStocks", ownedAUStocks);
+    if (localStorage.getItem("AUSpentAmt") === null)
+        localStorage.setItem("AUSpentAmt", AUSpentAmt);
 
-var AUIncrement = 0;
-var ownedAUStocks = 0;
-var AUSpentAmt = 0;
+    if (localStorage.getItem("aceholdCurrentStockPrice") === null)
+        localStorage.setItem("aceholdCurrentStockPrice", aceholdCurrentStockPrice);
+    if (localStorage.getItem("ownedAceholdStocks") === null)
+        localStorage.setItem("ownedAceholdStocks", ownedAceholdStocks);
+    if (localStorage.getItem("aceholdSpentAmt") === null)
+        localStorage.setItem("aceholdSpentAmt", aceholdSpentAmt);
 
-var aceholdIncrement = 0;
-var ownedAceholdStocks = 0;
-var aceholdSpentAmt = 0;
+    if (localStorage.getItem("delholdCurrentStockPrice") === null)
+        localStorage.setItem("delholdCurrentStockPrice", delholdCurrentStockPrice);
+    if (localStorage.getItem("ownedDelholdStocks") === null)
+        localStorage.setItem("ownedDelholdStocks", ownedDelholdStocks);
+    if (localStorage.getItem("delholdSpentAmt") === null)
+        localStorage.setItem("delholdSpentAmt", delholdSpentAmt);
 
-var delholdIncrement = 0;
-var ownedDelholdStocks = 0;
-var delholdSpentAmt = 0;
+    if (localStorage.getItem("DIAMCurrentStockPrice") === null)
+        localStorage.setItem("DIAMCurrentStockPrice", DIAMCurrentStockPrice);
+    if (localStorage.getItem("ownedDIAMStocks") === null)
+        localStorage.setItem("ownedDIAMStocks", ownedDIAMStocks);
+    if (localStorage.getItem("DIAMSpentAmt") === null)
+        localStorage.setItem("DIAMSpentAmt", DIAMSpentAmt);
 
-var DIAMIncrement = 0;
-var ownedDIAMStocks = 0;
-var DIAMSpentAmt = 0;
+    if (localStorage.getItem("pentaccCurrentStockPrice") === null)
+        localStorage.setItem("pentaccCurrentStockPrice", pentaccCurrentStockPrice);
+    if (localStorage.getItem("ownedPentaccStocks") === null)
+        localStorage.setItem("ownedPentaccStocks", ownedPentaccStocks);
+    if (localStorage.getItem("pentaccSpentAmt") === null)
+        localStorage.setItem("pentaccSpentAmt", pentaccSpentAmt);
 
-var pentaccIncrement = 0;
-var ownedPentaccStocks = 0;
-var pentaccSpentAmt = 0;
+    if (localStorage.getItem("noodleCurrentStockPrice") === null)
+        localStorage.setItem("noodleCurrentStockPrice", noodleCurrentStockPrice);
+    if (localStorage.getItem("ownedNoodleStocks") === null)
+        localStorage.setItem("ownedNoodleStocks", ownedNoodleStocks);
+    if (localStorage.getItem("noodleSpentAmt") === null)
+        localStorage.setItem("noodleSpentAmt", noodleSpentAmt);
 
-var noodleIncrement = 0;
-var ownedNoodleStocks = 0;
-var noodleSpentAmt = 0;
+    if (localStorage.getItem("megahardCurrentStockPrice") === null)
+        localStorage.setItem("megahardCurrentStockPrice", megahardCurrentStockPrice);
+    if (localStorage.getItem("ownedMegahardStocks") === null)
+        localStorage.setItem("ownedMegahardStocks", ownedMegahardStocks);
+    if (localStorage.getItem("megahardSpentAmt") === null)
+        localStorage.setItem("megahardSpentAmt", megahardSpentAmt);
 
-var megahardIncrement = 0;
-var ownedMegahardStocks = 0;
-var megahardSpentAmt = 0;
+    if (localStorage.getItem("chimerasecCurrentStockPrice") === null)
+        localStorage.setItem("chimerasecCurrentStockPrice", chimerasecCurrentStockPrice);
+    if (localStorage.getItem("ownedChimerasecStocks") === null)
+        localStorage.setItem("ownedChimerasecStocks", ownedChimerasecStocks);
+    if (localStorage.getItem("chimerasecSpentAmt") === null)
+        localStorage.setItem("chimerasecSpentAmt", chimerasecSpentAmt);
 
-var chimerasecIncrement = 0;
-var ownedChimerasecStocks = 0;
-var chimerasecSpentAmt = 0;
+    if (localStorage.getItem("chimeraholdCurrentStockPrice") === null)
+        localStorage.setItem("chimeraholdCurrentStockPrice", chimeraholdCurrentStockPrice);
+    if (localStorage.getItem("ownedChimeraholdStocks") === null)
+        localStorage.setItem("ownedChimeraholdStocks", ownedChimeraholdStocks);
+    if (localStorage.getItem("chimeraholdSpentAmt") === null)
+        localStorage.setItem("chimeraholdSpentAmt", chimeraholdSpentAmt);
 
-var chimeraholdIncrement = 0;
-var ownedChimeraholdStocks = 0;
-var chimeraholdSpentAmt = 0;
+    if (localStorage.getItem("griffonbankCurrentStockPrice") === null)
+        localStorage.setItem("griffonbankCurrentStockPrice", griffonbankCurrentStockPrice);
+    if (localStorage.getItem("ownedGriffonbankStocks") === null)
+        localStorage.setItem("ownedGriffonbankStocks", ownedGriffonbankStocks);
+    if (localStorage.getItem("griffonbankSpentAmt") === null)
+        localStorage.setItem("griffonbankSpentAmt", griffonbankSpentAmt);
 
-var griffonbankIncrement = 0;
-var ownedGriffonbankStocks = 0;
-var griffonbankSpentAmt = 0;
+    if (localStorage.getItem("turborusCurrentStockPrice") === null)
+        localStorage.setItem("turborusCurrentStockPrice", turborusCurrentStockPrice);
+    if (localStorage.getItem("ownedTurborusStocks") === null)
+        localStorage.setItem("ownedTurborusStocks", ownedTurborusStocks);
+    if (localStorage.getItem("turborusSpentAmt") === null)
+        localStorage.setItem("turborusSpentAmt", turborusSpentAmt);
 
-var turborusIncrement = 0;
-var ownedTurborusStocks = 0;
-var turborusSpentAmt = 0;
+    if (localStorage.getItem("exodmptCurrentStockPrice") === null)
+        localStorage.setItem("exodmptCurrentStockPrice", exodmptCurrentStockPrice);
+    if (localStorage.getItem("ownedExodmptStocks") === null)
+        localStorage.setItem("ownedExodmptStocks", ownedExodmptStocks);
+    if (localStorage.getItem("exodmptSpentAmt") === null)
+        localStorage.setItem("exodmptSpentAmt", exodmptSpentAmt);
 
-var exodmptIncrement = 0;
-var ownedExodmptStocks = 0;
-var exodmptSpentAmt = 0;
+    if (localStorage.getItem("ramnetCurrentStockPrice") === null)
+        localStorage.setItem("ramnetCurrentStockPrice", ramnetCurrentStockPrice);
+    if (localStorage.getItem("ownedRamnetStocks") === null)
+        localStorage.setItem("ownedRamnetStocks", ownedRamnetStocks);
+    if (localStorage.getItem("ramnetSpentAmt") === null)
+        localStorage.setItem("ramnetSpentAmt", ramnetSpentAmt);
 
-var ramnetIncrement = 0;
-var ownedRamnetStocks = 0;
-var ramnetSpentAmt = 0;
+    if (localStorage.getItem("alphacenCurrentStockPrice") === null)
+        localStorage.setItem("alphacenCurrentStockPrice", alphacenCurrentStockPrice);
+    if (localStorage.getItem("ownedAlphacenStocks") === null)
+        localStorage.setItem("ownedAlphacenStocks", ownedAlphacenStocks);
+    if (localStorage.getItem("alphacenSpentAmt") === null)
+        localStorage.setItem("alphacenSpentAmt", alphacenSpentAmt);
 
-var alphacenIncrement = 0;
-var ownedAlphacenStocks = 0;
-var alphacenSpentAmt = 0;
+    if (localStorage.getItem("scatterCurrentStockPrice") === null)
+        localStorage.setItem("scatterCurrentStockPrice", scatterCurrentStockPrice);
+    if (localStorage.getItem("ownedScatterStocks") === null)
+        localStorage.setItem("ownedScatterStocks", ownedScatterStocks);
+    if (localStorage.getItem("scatterSpentAmt") === null)
+        localStorage.setItem("scatterSpentAmt", scatterSpentAmt);
 
-var scatterIncrement = 0;
-var ownedScatterStocks = 0;
-var scatterSpentAmt = 0;
+    if (localStorage.getItem("kalzexCurrentStockPrice") === null)
+        localStorage.setItem("kalzexCurrentStockPrice", kalzexCurrentStockPrice);
+    if (localStorage.getItem("ownedKalzexStocks") === null)
+        localStorage.setItem("ownedKalzexStocks", ownedKalzexStocks);
+    if (localStorage.getItem("kalzexSpentAmt") === null)
+        localStorage.setItem("kalzexSpentAmt", kalzexSpentAmt);
 
-var kalzexIncrement = 0;
-var ownedKalzexStocks = 0;
-var kalzexSpentAmt = 0;
+    if (localStorage.getItem("sonicosCurrentStockPrice") === null)
+        localStorage.setItem("sonicosCurrentStockPrice", sonicosCurrentStockPrice);
+    if (localStorage.getItem("ownedSonicosStocks") === null)
+        localStorage.setItem("ownedSonicosStocks", ownedSonicosStocks);
+    if (localStorage.getItem("sonicosSpentAmt") === null)
+        localStorage.setItem("sonicosSpentAmt", sonicosSpentAmt);
 
-var sonicosIncrement = 0;
-var ownedSonicosStocks = 0;
-var sonicosSpentAmt = 0;
+    if (localStorage.getItem("trancextCurrentStockPrice") === null)
+        localStorage.setItem("trancextCurrentStockPrice", trancextCurrentStockPrice);
+    if (localStorage.getItem("ownedTrancextStocks") === null)
+        localStorage.setItem("ownedTrancextStocks", ownedTrancextStocks);
+    if (localStorage.getItem("trancextSpentAmt") === null)
+        localStorage.setItem("trancextSpentAmt", trancextSpentAmt);
 
-var trancextIncrement = 0;
-var ownedTrancextStocks = 0;
-var trancextSpentAmt = 0;
+    if (localStorage.getItem("stklrCurrentStockPrice") === null)
+        localStorage.setItem("stklrCurrentStockPrice", stklrCurrentStockPrice);
+    if (localStorage.getItem("ownedStklrStocks") === null)
+        localStorage.setItem("ownedStklrStocks", ownedStklrStocks);
+    if (localStorage.getItem("stklrSpentAmt") === null)
+        localStorage.setItem("stklrSpentAmt", stklrSpentAmt);
 
-var stklrIncrement = 0;
-var ownedStklrStocks = 0;
-var stklrSpentAmt = 0;
+    if (localStorage.getItem("vipersecCurrentStockPrice") === null)
+        localStorage.setItem("vipersecCurrentStockPrice", vipersecCurrentStockPrice);
+    if (localStorage.getItem("ownedVipersecStocks") === null)
+        localStorage.setItem("ownedVipersecStocks", ownedVipersecStocks);
+    if (localStorage.getItem("vipersecSpentAmt") === null)
+        localStorage.setItem("vipersecSpentAmt", vipersecSpentAmt);
 
-var vipersecIncrement = 0;
-var ownedVipersecStocks = 0;
-var vipersecSpentAmt = 0;
+    if (localStorage.getItem("PLATCurrentStockPrice") === null)
+        localStorage.setItem("PLATCurrentStockPrice", PLATCurrentStockPrice);
+    if (localStorage.getItem("ownedPLATStocks") === null)
+        localStorage.setItem("ownedPLATStocks", ownedPLATStocks);
+    if (localStorage.getItem("PLATSpentAmt") === null)
+        localStorage.setItem("PLATSpentAmt", PLATSpentAmt);
 
-var PLATIncrement = 0;
-var ownedPLATStocks = 0;
-var PLATSpentAmt = 0;
+    if (localStorage.getItem("infoneCurrentStockPrice") === null)
+        localStorage.setItem("infoneCurrentStockPrice", infoneCurrentStockPrice);
+    if (localStorage.getItem("ownedInfoneStocks") === null)
+        localStorage.setItem("ownedInfoneStocks", ownedInfoneStocks);
+    if (localStorage.getItem("infoneSpentAmt") === null)
+        localStorage.setItem("infoneSpentAmt", infoneSpentAmt);
 
-var infoneIncrement = 0;
-var ownedInfoneStocks = 0;
-var infoneSpentAmt = 0;
+    if (localStorage.getItem("extankCurrentStockPrice") === null)
+        localStorage.setItem("extankCurrentStockPrice", extankCurrentStockPrice);
+    if (localStorage.getItem("ownedExtankStocks") === null)
+        localStorage.setItem("ownedExtankStocks", ownedExtankStocks);
+    if (localStorage.getItem("extankSpentAmt") === null)
+        localStorage.setItem("extankSpentAmt", extankSpentAmt);
 
-var extankIncrement = 0;
-var ownedExtankStocks = 0;
-var extankSpentAmt = 0;
+    if (localStorage.getItem("reinaccCurrentStockPrice") === null)
+        localStorage.setItem("reinaccCurrentStockPrice", reinaccCurrentStockPrice);
+    if (localStorage.getItem("ownedReinaccStocks") === null)
+        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
+    if (localStorage.getItem("reinaccSpentAmt") === null)
+        localStorage.setItem("reinaccSpentAmt", reinaccSpentAmt);
 
-var reinaccIncrement = 0;
-var ownedReinaccStocks = 0;
-var reinaccSpentAmt = 0;
+    delsecCurrentStockPrice = parseFloat(localStorage.getItem("delsecCurrentStockPrice"));
+    entaqCurrentStockPrice = parseFloat(localStorage.getItem("entaqCurrentStockPrice"));
+    ventexCurrentStockPrice = parseFloat(localStorage.getItem("ventexCurrentStockPrice"));
+    astorCurrentStockPrice = parseFloat(localStorage.getItem("astorCurrentStockPrice"));
+    popbotCurrentStockPrice = parseFloat(localStorage.getItem("popbotCurrentStockPrice"));
+    pannamCurrentStockPrice = parseFloat(localStorage.getItem("pannamCurrentStockPrice"));
+    TRITCurrentStockPrice = parseFloat(localStorage.getItem("TRITCurrentStockPrice"));
+    CANVCurrentStockPrice = parseFloat(localStorage.getItem("CANVCurrentStockPrice"));
+    OSMCurrentStockPrice = parseFloat(localStorage.getItem("OSMCurrentStockPrice"));
+    PALLADCurrentStockPrice = parseFloat(localStorage.getItem("PALLADCurrentStockPrice"));
+    KELVCurrentStockPrice = parseFloat(localStorage.getItem("KELVCurrentStockPrice"));
+    stuccorCurrentStockPrice = parseFloat(localStorage.getItem("stuccorCurrentStockPrice"));
+    delcredCurrentStockPrice = parseFloat(localStorage.getItem("delcredCurrentStockPrice"));
+    rustecCurrentStockPrice = parseFloat(localStorage.getItem("rustecCurrentStockPrice"));
+    exxocredCurrentStockPrice = parseFloat(localStorage.getItem("exxocredCurrentStockPrice"));
+    AUCurrentStockPrice = parseFloat(localStorage.getItem("AUCurrentStockPrice"));
+    aceholdCurrentStockPrice = parseFloat(localStorage.getItem("aceholdCurrentStockPrice"));
+    delholdCurrentStockPrice = parseFloat(localStorage.getItem("delholdCurrentStockPrice"));
+    DIAMCurrentStockPrice = parseFloat(localStorage.getItem("DIAMCurrentStockPrice"));
+    pentaccCurrentStockPrice = parseFloat(localStorage.getItem("pentaccCurrentStockPrice"));
+    noodleCurrentStockPrice = parseFloat(localStorage.getItem("noodleCurrentStockPrice"));
+    megahardCurrentStockPrice = parseFloat(localStorage.getItem("megahardCurrentStockPrice"));
+    chimerasecCurrentStockPrice = parseFloat(localStorage.getItem("chimerasecCurrentStockPrice"));
+    chimeraholdCurrentStockPrice = parseFloat(localStorage.getItem("chimeraholdCurrentStockPrice"));
+    griffonbankCurrentStockPrice = parseFloat(localStorage.getItem("griffonbankCurrentStockPrice"));
+    turborusCurrentStockPrice = parseFloat(localStorage.getItem("turborusCurrentStockPrice"));
+    exodmptCurrentStockPrice = parseFloat(localStorage.getItem("exodmptCurrentStockPrice"));
+    ramnetCurrentStockPrice = parseFloat(localStorage.getItem("ramnetCurrentStockPrice"));
+    alphacenCurrentStockPrice = parseFloat(localStorage.getItem("alphacenCurrentStockPrice"));
+    scatterCurrentStockPrice = parseFloat(localStorage.getItem("scatterCurrentStockPrice"));
+    kalzexCurrentStockPrice = parseFloat(localStorage.getItem("kalzexCurrentStockPrice"));
+    sonicosCurrentStockPrice = parseFloat(localStorage.getItem("sonicosCurrentStockPrice"));
+    trancextCurrentStockPrice = parseFloat(localStorage.getItem("trancextCurrentStockPrice"));
+    stklrCurrentStockPrice = parseFloat(localStorage.getItem("stklrCurrentStockPrice"));
+    vipersecCurrentStockPrice = parseFloat(localStorage.getItem("vipersecCurrentStockPrice"));
+    PLATCurrentStockPrice = parseFloat(localStorage.getItem("PLATCurrentStockPrice"));
+    infoneCurrentStockPrice = parseFloat(localStorage.getItem("infoneCurrentStockPrice"));
+    extankCurrentStockPrice = parseFloat(localStorage.getItem("extankCurrentStockPrice"));
+    reinaccCurrentStockPrice = parseFloat(localStorage.getItem("reinaccCurrentStockPrice"));
 
-var sellDivider = 10; // Normal sell price at 10% lower.
+    ownedDelsecStocks = parseInt(localStorage.getItem("ownedDelsecStocks"));
+    ownedEntaqStocks = parseInt(localStorage.getItem("ownedEntaqStocks"));
+    ownedVentexStocks = parseInt(localStorage.getItem("ownedVentexStocks"));
+    ownedAstorStocks = parseInt(localStorage.getItem("ownedAstorStocks"));
+    ownedPopbotStocks = parseInt(localStorage.getItem("ownedPopbotStocks"));
+    ownedPannamStocks = parseInt(localStorage.getItem("ownedPannamStocks"));
+    ownedTRITStocks = parseInt(localStorage.getItem("ownedTRITStocks"));
+    ownedCANVStocks = parseInt(localStorage.getItem("ownedCANVStocks"));
+    ownedOSMStocks = parseInt(localStorage.getItem("ownedOSMStocks"));
+    ownedPALLADStocks = parseInt(localStorage.getItem("ownedPALLADStocks"));
+    ownedKELVStocks = parseInt(localStorage.getItem("ownedKELVStocks"));
+    ownedStuccorStocks = parseInt(localStorage.getItem("ownedStuccorStocks"));
+    ownedDelcredStocks = parseInt(localStorage.getItem("ownedDelcredStocks"));
+    ownedRustecStocks = parseInt(localStorage.getItem("ownedRustecStocks"));
+    ownedExxocredStocks = parseInt(localStorage.getItem("ownedExxocredStocks"));
+    ownedAUStocks = parseInt(localStorage.getItem("ownedAUStocks"));
+    ownedAceholdStocks = parseInt(localStorage.getItem("ownedAceholdStocks"));
+    ownedDelholdStocks = parseInt(localStorage.getItem("ownedDelholdStocks"));
+    ownedDIAMStocks = parseInt(localStorage.getItem("ownedDIAMStocks"));
+    ownedPentaccStocks = parseInt(localStorage.getItem("ownedPentaccStocks"));
+    ownedNoodleStocks = parseInt(localStorage.getItem("ownedNoodleStocks"));
+    ownedMegahardStocks = parseInt(localStorage.getItem("ownedMegahardStocks"));
+    ownedChimerasecStocks = parseInt(localStorage.getItem("ownedChimerasecStocks"));
+    ownedChimeraholdStocks = parseInt(localStorage.getItem("ownedChimeraholdStocks"));
+    ownedGriffonbankStocks = parseInt(localStorage.getItem("ownedGriffonbankStocks"));
+    ownedTurborusStocks = parseInt(localStorage.getItem("ownedTurborusStocks"));
+    ownedExodmptStocks = parseInt(localStorage.getItem("ownedExodmptStocks"));
+    ownedRamnetStocks = parseInt(localStorage.getItem("ownedRamnetStocks"));
+    ownedAlphacenStocks = parseInt(localStorage.getItem("ownedAlphacenStocks"));
+    ownedScatterStocks = parseInt(localStorage.getItem("ownedScatterStocks"));
+    ownedKalzexStocks = parseInt(localStorage.getItem("ownedKalzexStocks"));
+    ownedSonicosStocks = parseInt(localStorage.getItem("ownedSonicosStocks"));
+    ownedTrancextStocks = parseInt(localStorage.getItem("ownedTrancextStocks"));
+    ownedStklrStocks = parseInt(localStorage.getItem("ownedStklrStocks"));
+    ownedVipersecStocks = parseInt(localStorage.getItem("ownedVipersecStocks"));
+    ownedPLATStocks = parseInt(localStorage.getItem("ownedPLATStocks"));
+    ownedInfoneStocks = parseInt(localStorage.getItem("ownedInfoneStocks"));
+    ownedExtankStocks = parseInt(localStorage.getItem("ownedExtankStocks"));
+    ownedReinaccStocks = parseInt(localStorage.getItem("ownedReinaccStocks"));
+ 
+    delsecSpentAmt = parseFloat(localStorage.getItem("delsecSpentAmt"));
+    entaqSpentAmt = parseFloat(localStorage.getItem("entaqSpentAmt"));
+    ventexSpentAmt = parseFloat(localStorage.getItem("ventexSpentAmt"));
+    astorSpentAmt = parseFloat(localStorage.getItem("astorSpentAmt"));
+    popbotSpentAmt = parseFloat(localStorage.getItem("popbotSpentAmt"));
+    pannamSpentAmt = parseFloat(localStorage.getItem("pannamSpentAmt"));
+    TRITSpentAmt = parseFloat(localStorage.getItem("TRITSpentAmt"));
+    CANVSpentAmt = parseFloat(localStorage.getItem("CANVSpentAmt"));
+    OSMSpentAmt = parseFloat(localStorage.getItem("OSMSpentAmt"));
+    PALLADSpentAmt = parseFloat(localStorage.getItem("PALLADSpentAmt"));
+    KELVSpentAmt = parseFloat(localStorage.getItem("KELVSpentAmt"));
+    stuccorSpentAmt = parseFloat(localStorage.getItem("stuccorSpentAmt"));
+    delcredSpentAmt = parseFloat(localStorage.getItem("delcredSpentAmt"));
+    rustecSpentAmt = parseFloat(localStorage.getItem("rustecSpentAmt"));
+    exxocredSpentAmt = parseFloat(localStorage.getItem("exxocredSpentAmt"));
+    AUSpentAmt = parseFloat(localStorage.getItem("AUSpentAmt"));
+    aceholdSpentAmt = parseFloat(localStorage.getItem("aceholdSpentAmt"));
+    delholdSpentAmt = parseFloat(localStorage.getItem("delholdSpentAmt"));
+    DIAMSpentAmt = parseFloat(localStorage.getItem("DIAMSpentAmt"));
+    pentaccSpentAmt = parseFloat(localStorage.getItem("pentaccSpentAmt"));
+    noodleSpentAmt = parseFloat(localStorage.getItem("noodleSpentAmt"));
+    megahardSpentAmt = parseFloat(localStorage.getItem("megahardSpentAmt"));
+    chimerasecSpentAmt = parseFloat(localStorage.getItem("chimerasecSpentAmt"));
+    chimeraholdSpentAmt = parseFloat(localStorage.getItem("chimeraholdSpentAmt"));
+    griffonbankSpentAmt = parseFloat(localStorage.getItem("griffonbankSpentAmt"));
+    turborusSpentAmt = parseFloat(localStorage.getItem("turborusSpentAmt"));
+    exodmptSpentAmt = parseFloat(localStorage.getItem("exodmptSpentAmt"));
+    ramnetSpentAmt = parseFloat(localStorage.getItem("ramnetSpentAmt"));
+    alphacenSpentAmt = parseFloat(localStorage.getItem("alphacenSpentAmt"));
+    scatterSpentAmt = parseFloat(localStorage.getItem("scatterSpentAmt"));
+    kalzexSpentAmt = parseFloat(localStorage.getItem("kalzexSpentAmt"));
+    sonicosSpentAmt = parseFloat(localStorage.getItem("sonicosSpentAmt"));
+    trancextSpentAmt = parseFloat(localStorage.getItem("trancextSpentAmt"));
+    stklrSpentAmt = parseFloat(localStorage.getItem("stklrSpentAmt"));
+    vipersecSpentAmt = parseFloat(localStorage.getItem("vipersecSpentAmt"));
+    PLATSpentAmt = parseFloat(localStorage.getItem("PLATSpentAmt"));
+    infoneSpentAmt = parseFloat(localStorage.getItem("infoneSpentAmt"));
+    extankSpentAmt = parseFloat(localStorage.getItem("extankSpentAmt"));
+    reinaccSpentAmt = parseFloat(localStorage.getItem("reinaccSpentAmt"));
 
+    if (userClass == "Rogue")
+        sellDivider = 20;
+
+});

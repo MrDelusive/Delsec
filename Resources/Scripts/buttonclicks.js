@@ -36,9 +36,9 @@ $(document).ready(function () {
         $("#griffonbankCrawlerShop").show();
         return false;
     });
-    $('#btnPowerGenerators').click(function () {
+    $('#btnCoding').click(function () {
         $(".hidden_Divs").hide();
-        $("#powerGenerators").show();
+        $("#warriorCoding").show();
 
         return false;
     });
@@ -271,12 +271,13 @@ $(document).ready(function () {
             $('#warriorAbilities').delay(500);
             $('#btnWarriorAbilities').delay(500);
             $("#warriorGenerate").delay(500);
-            $("#btnPowerGenerators").delay(500);
+            $("#btnCoding").delay(500);
 
             $('#warriorAbilities').fadeIn(500);
             $('#btnWarriorAbilities').fadeIn(500);
             $("#btnPowerGenerators").fadeIn(500);
             $("#warriorGenerate").fadeIn(500);
+            $("#btnCoding").fadeIn(500);
             money -= 10000;
             localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
