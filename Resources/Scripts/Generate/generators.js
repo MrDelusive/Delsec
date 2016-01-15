@@ -25,7 +25,11 @@ $(document).ready(function () {
         warriorClicks++;
         localStorage.setItem("warriorClicks", warriorClicks);
         $('#totalWarriorClicks').html('Total Warrior Generate Clicks: ' + warriorClicks);
-        increment = Math.round(100 * (Math.random() / 3.125 )) / 100 + efficiencyCode * 0.24;
+        increment = Math.round(100 * (Math.random() / 3.125)) / 100
+            + efficiencyCode * 0.24
+            + efficiency2Code * 0.48
+        ;
+
         money += increment;
         localStorage.setItem("money", money);
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

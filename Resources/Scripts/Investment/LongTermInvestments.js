@@ -196,6 +196,104 @@
         return false;
     });
 
+    //GOLD INVEST
+    $('#btnInvestGold').prop('disabled', false);
+    $('#btnInvestGold').click(function () {
+        if (money >= 1000) {
+            var timer = 300;
+            $('#goldInvestResult').html("Investing: " + timer + " seconds remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    $('#goldInvestResult').html("Investing: " + timer + " seconds remaining.");
+                }
+            }, 1000);
+            var investAmt = 25;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                if (userClass == "Healer")
+                    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#goldInvestResult').html("The gold isn't of really good quality. Doesn't earn much. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#goldInvestResult').html("The gold isn't of really good quality. Doesn't earn much. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#goldInvestResult').html("The gold was sold at a lower price than should have. Only makes a small profit. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#goldInvestResult').html("Gold hasn't seen much price growth in the past 5 minutes. Only makes a small profit. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#goldInvestResult').html("Gold prices have grown. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#goldInvestResult').html("Gold prices have grown. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#goldInvestResult').html("Gold prices have grown higher than expected. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#goldInvestResult').html("Gold prices have grown higher than expected. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#goldInvestResult').html("A massive gold heist gone bad sent tonnes of gold missing. Gold prices have gone up dramatically. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#goldInvestResult').html("Gold is the new Platinum. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#goldInvestResult').html("It was found that Gold had healing properties. Sends the prices way up. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2) + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+            }, 300000);
+        }
+        else
+            $('#goldInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
 
     //CD INVEST
     $('#btnInvestCD').prop('disabled', false);

@@ -45,6 +45,19 @@
             $('#btnBuy32ByteCrawler').prop('disabled', false);
         if (money >= current64BytePrice)
             $('#btnBuy64ByteCrawler').prop('disabled', false);
+
+
+        $('#btnWriteEfficiency2Code').prop('disabled', true);
+        if (efficiencyCode >= 5)
+            $('#btnWriteEfficiency2Code').prop('disabled', false);
+
+        $('#btnWriteScatterLogicCode').prop('disabled', true);
+        if (efficiency2Code >= 10)
+            $('#btnWriteScatterLogicCode').prop('disabled', false);
+
+        $('#btnScatterLogicBomb').prop('disabled', true);
+        if(scatterLogicCode > 0)
+            $('#btnScatterLogicBomb').prop('disabled', false);
     }, 1000);
 
 });

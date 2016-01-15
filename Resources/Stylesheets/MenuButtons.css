@@ -1,0 +1,94 @@
+﻿.btnTab {
+    background: #0b0b41;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-family: Consolas,monaco,monospace;
+    font-size: 15px;
+    -moz-text-shadow: 0 0 2px #fff;
+    -webkit-text-shadow: 0 0 2px #fff;
+    text-shadow: 0px 0px 2px #fff;
+}
+
+.btnTab:hover {
+    background: #1c1c52;
+}
+
+.btnTabRed {
+    background: #340612;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-family: Consolas,monaco,monospace;
+    font-size: 15px;
+    -moz-text-shadow: 0 0 2px #fff;
+    -webkit-text-shadow: 0 0 2px #fff;
+    text-shadow: 0 0 2px #fff;
+}
+
+.btnTabRed:hover {
+    background: #451723;
+}
+
+.btnTabGreen {
+    background: #185224;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-family: Consolas,monaco,monospace;
+    font-size: 15px;
+    -moz-text-shadow: 0 0 2px #fff;
+    -webkit-text-shadow: 0 0 2px #fff;
+    text-shadow: 0px 0px 2px #fff;
+}
+
+.btnTabGreen:hover {
+    background: #296335;
+}
+
+.btnTabYellow {
+    background: #7a5a00;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-family: Consolas,monaco,monospace;
+    font-size: 15px;
+    -moz-text-shadow: 0 0 2px #fff;
+    -webkit-text-shadow: 0 0 2px #fff;
+    text-shadow: 0px 0px 2px #fff;
+}
+
+.btnTabYellow:hover {
+    background: #8b6b11;
+}
+
+.btnTabGray {
+    background: #333;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    font-family: Consolas,monaco,monospace;
+    font-size: 15px;
+    -moz-text-shadow: 0 0 5px #fff;
+    -webkit-text-shadow: 0 0 5px #fff;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+.btnTabGray:hover {
+    background: #444;
+}

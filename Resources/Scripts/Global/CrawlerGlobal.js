@@ -42,3 +42,5 @@ var autoIncrement32Byte = 0;
 var autoIncrement64Byte = 0;
 
 var totalPackets = 0;
+var totalRisk = 0;
+var riskTick = 0;

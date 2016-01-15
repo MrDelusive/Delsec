@@ -37,7 +37,14 @@ $(document).keydown(function (e) {
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
 
-
+        else if (input == "dscoder") {
+            efficiencyCode = 5;
+            efficiency2Code = 10;
+            scatterLogicCode = 20;
+            localStorage.setItem("efficiencyCode", efficiencyCode);
+            localStorage.setItem("efficiency2Code", efficiency2Code);
+            localStorage.setItem("scatterLogicCode", scatterLogicCode);
+        }
 
 
         else

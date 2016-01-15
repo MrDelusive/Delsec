@@ -1,0 +1,30 @@
+﻿#totalRiskDisplay {
+    width: 970px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 10px;
+    line-height: 50px;  
+}
+
+#riskManagement {
+    background: rgba(0,0,0,0.7);
+    height: 2000px;
+    float: left;
+}
+
+#riskVisualDisplay {
+    height: 500px;
+    width: 1000px;
+    float: left;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-align: center;
+    color: white;
+}
+
+#riskDataContainer {
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+}
+

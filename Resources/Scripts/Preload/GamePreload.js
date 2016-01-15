@@ -23,6 +23,7 @@
     $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
     $("#btnShop").fadeIn(500);
+    $("#btnRiskManagement").fadeIn(500);
     $("#btnEmails").fadeIn(500);
     $("#btnInvestments").fadeIn(500);
     $("#btnStockMarket").fadeIn(500);

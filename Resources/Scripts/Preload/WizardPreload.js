@@ -5,7 +5,6 @@
         $('#btnVipersecCrawlerShop').prop('disabled', true);
         $('#btnChimerasecCrawlerShop').prop('disabled', true);
         $('#btnGriffonbankCrawlerShop').prop('disabled', true);
-        $('#btnLongTermInvestments').prop('disabled', true);
 
         if (userClass == "Wizard") {
             $("#btnAbilities").hide();

@@ -2,7 +2,7 @@
 {
     float:left;
     text-align:left;
-    background: url('../Img/stockBg2.jpg') 50% 0 repeat fixed;
+    background: rgba(0,33,0,0.7);
     height:1600px;
     width: 1000px;
     color: #FFF;
@@ -12,6 +12,7 @@
     width: 970px;
     font-size: 20px;
     margin: 0 auto;
+    border: 1px solid #042105;
     margin: 10px;
     line-height: 50px;  
 }

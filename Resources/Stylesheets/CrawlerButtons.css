@@ -1,8 +1,54 @@
 ﻿body {
 }
+/*Delsec styled Crawler Buttons*/
+.btn_Style {
+    background: url('../Img/stockBg1.jpg');
+    border: 1px solid black;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
+	height:40px;
+    width: 550px;
+    margin: 10px;
+    margin-top: 20px;
+	text-decoration:none;
+	text-align:center;
+}
+.btn_Style:hover {
+	background: url('../Img/stockBg2.jpg');
+}
+
+.btn_Style:disabled {
+    background: black;
+    color: #4a4e54;
+}
+/*RUSTEC*/
+.btn_StyleRed {
+	background: url('../Img/stockBgRed.png');
+    border: 1px solid black;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
+	height:40px;
+    width: 550px;
+    margin: 10px;
+    margin-top: 20px;
+	text-decoration:none;
+	text-align:center;
+}
+.btn_StyleRed:hover {
+	background: url('../Img/stockBgRed2.png');
+}
+.btn_StyleRed:disabled {
+    background: black;
+    color: #4a4e54;
+}
 
 .btn_TabSmall {
-
     background: #0a3b78;
     cursor: pointer;
 	-webkit-border-top-left-radius:10px;
@@ -11,13 +57,7 @@
 	-webkit-border-top-right-radius:10px;
 	-moz-border-radius-topright:10px;
 	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
     border: 0px;
-	border-bottom-left-radius:0px;
 	display:inline-block;
 	color: white;
 	font-family: Consolas,monaco,monospace;
@@ -46,13 +86,8 @@
 	-webkit-border-top-right-radius:10px;
 	-moz-border-radius-topright:10px;
 	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
     border: 0px;
-	border-bottom-left-radius:0px;
+    min-width: 150px;
 	display:inline-block;
 	color: white;
 	font-family: Consolas,monaco,monospace;
@@ -81,13 +116,7 @@
 	-webkit-border-top-right-radius:10px;
 	-moz-border-radius-topright:10px;
 	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
     border: 0px;
-	border-bottom-left-radius:0px;
 	display:inline-block;
 	color: white;
 	font-family: Consolas,monaco,monospace;
@@ -117,13 +146,7 @@
 	-webkit-border-top-right-radius:10px;
 	-moz-border-radius-topright:10px;
 	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
     border: 0px;
-	border-bottom-left-radius:0px;
 	display:inline-block;
 	color: white;
 	font-family: Consolas,monaco,monospace;
@@ -151,13 +174,7 @@
 	-webkit-border-top-right-radius:10px;
 	-moz-border-radius-topright:10px;
 	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:0px;
-	-moz-border-radius-bottomright:0px;
-	border-bottom-right-radius:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-moz-border-radius-bottomleft:0px;
     border: 0px;
-	border-bottom-left-radius:0px;
 	display:inline-block;
 	color: white;
 	font-family: Consolas,monaco,monospace;

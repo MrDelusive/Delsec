@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     if (typeof (Storage) !== "undefined") {
 
-        if (userClass == "Healer") {
+        if (userClass == "Healer") {           
             $("#btnAbilities").hide();
             $("#btnHealerAbilities").fadeIn(500);
             $("#manualIncrementDisplay").hide();

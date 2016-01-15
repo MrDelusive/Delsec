@@ -6,6 +6,13 @@ $(document).ready(function () {
         $("#delsecCrawlerShop").show();
         return false;
     });
+
+    $('#btnRiskManagement').click(function () {
+        $(".hidden_Divs").hide();
+        $("#riskManagement").show();
+        return false;
+    });
+
     $('#btnDelsecCrawlerShop').click(function () {
         $(".hidden_Divs").hide();
         $("#shop").show();
@@ -39,9 +46,25 @@ $(document).ready(function () {
     $('#btnCoding').click(function () {
         $(".hidden_Divs").hide();
         $("#warriorCoding").show();
-
+        $("#warriorCodeTab").show();
         return false;
     });
+
+    $('#btnWarriorCodeTab').click(function () {
+        $(".hidden_Divs").hide();
+        $("#warriorCoding").show();
+        $("#warriorCodeTab").show();
+        return false;
+    });
+
+    $('#btnWarriorItemsTab').click(function () {
+        $(".hidden_Divs").hide();
+        $("#warriorCoding").show();
+        $("#warriorItemsTab").show();
+        return false;
+    });
+
+
     $('#btnEmails').click(function () {
         $(".hidden_Divs").hide();
         $("#email").show();
@@ -113,6 +136,7 @@ $(document).ready(function () {
         localStorage.setItem("sixtyfourByteBank", 0);
 
         localStorage.setItem("totalPackets", 0);
+        localStorage.setItem("totalRisk", 0);
 
         localStorage.setItem("numUnreadEmails", 2);
         localStorage.setItem("email1Viewed", "false");
@@ -251,6 +275,11 @@ $(document).ready(function () {
         localStorage.setItem("reinaccSpentAmt", 0);
 
         localStorage.setItem("warriorClicks", 0);
+        localStorage.setItem("efficiencyCode", 0);
+        localStorage.setItem("efficiency2Code", 0);
+        localStorage.setItem("scatterLogicCode", 0);
+
+        localStorage.setItem("totalInvestment", 0);
     });
 
     $('#btnResetClass').click(function () {
