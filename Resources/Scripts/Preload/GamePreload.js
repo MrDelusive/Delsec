@@ -2,7 +2,7 @@
     // Check for null values ($NaN)
     if (localStorage.getItem("money") === null)
         localStorage.setItem("money", money);
-
+    
     if (localStorage.getItem("userClass") === null)
         localStorage.setItem("userClass", userClass);           
     if (localStorage.getItem("totalInvestment") === null)

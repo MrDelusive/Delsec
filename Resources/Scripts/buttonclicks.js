@@ -119,167 +119,7 @@ $(document).ready(function () {
     });
 
     $('#btnResetAll').click(function () {
-        localStorage.setItem("userClass", "None");
-        localStorage.setItem("money", 0);
-        localStorage.setItem("twoBitBank", 0);
-        localStorage.setItem("threeBitBank", 0);
-        localStorage.setItem("fourBitBank", 0);
-        localStorage.setItem("sixBitBank", 0);
-        localStorage.setItem("russianSixBitBank", 0);
-        localStorage.setItem("eightBitBank", 0);
-        localStorage.setItem("twelveBitBank", 0);
-        localStorage.setItem("sixteenBitBank", 0);
-        localStorage.setItem("fourByteBank", 0);
-        localStorage.setItem("eightByteBank", 0);
-        localStorage.setItem("sixteenByteBank", 0);
-        localStorage.setItem("thirtytwoByteBank", 0);
-        localStorage.setItem("sixtyfourByteBank", 0);
-
-        localStorage.setItem("totalPackets", 0);
-        localStorage.setItem("totalRisk", 0);
-
-        localStorage.setItem("numUnreadEmails", 2);
-        localStorage.setItem("email1Viewed", "false");
-        localStorage.setItem("email2Viewed", "false");
-        localStorage.setItem("email3Viewed", "false");
-        localStorage.setItem("email3Displayed", "false");
-        localStorage.setItem("email4Viewed", "false");
-        localStorage.setItem("email4Displayed", "false");
-        localStorage.setItem("emailQuickScopeViewed", "false");
-        localStorage.setItem("emailQuickScopeDisplayed", "false");
-        localStorage.setItem("emailDelsecStockViewed", "false");
-        localStorage.setItem("emailDelsecStockDisplayed", "false");
-        localStorage.setItem("email10KViewed", "false");
-        localStorage.setItem("email10KDisplayed", "false");
-        localStorage.setItem("email4ByteViewed", "false");
-        localStorage.setItem("email4ByteDisplayed", "false");
-
-        localStorage.setItem("ownedDelsecStocks", 0);
-        localStorage.setItem("ownedEntaqStocks", 0);
-        localStorage.setItem("ownedVentexStocks", 0);
-        localStorage.setItem("ownedAstorStocks", 0);
-        localStorage.setItem("ownedPopbotStocks", 0);
-        localStorage.setItem("ownedPannamStocks", 0);
-        localStorage.setItem("ownedTRITStocks", 0);
-        localStorage.setItem("ownedCANVStocks", 0);
-        localStorage.setItem("ownedOSMStocks", 0);
-        localStorage.setItem("ownedPALLADStocks", 0);
-        localStorage.setItem("ownedKELVStocks", 0);
-        localStorage.setItem("ownedStuccorStocks", 0);
-        localStorage.setItem("ownedDelcredStocks", 0);
-        localStorage.setItem("ownedRustecStocks", 0);
-        localStorage.setItem("ownedExxocredStocks", 0);
-        localStorage.setItem("ownedAUStocks", 0);
-        localStorage.setItem("ownedAceholdStocks", 0);
-        localStorage.setItem("ownedDelholdStocks", 0);
-        localStorage.setItem("ownedDIAMStocks", 0);
-        localStorage.setItem("ownedPentaccStocks", 0);
-        localStorage.setItem("ownedNoodleStocks", 0);
-        localStorage.setItem("ownedMegahardStocks", 0);
-        localStorage.setItem("ownedChimerasecStocks", 0);
-        localStorage.setItem("ownedChimeraholdStocks", 0);
-        localStorage.setItem("ownedGriffonbankStocks", 0);
-        localStorage.setItem("ownedTurborusStocks", 0);
-        localStorage.setItem("ownedExodmptStocks", 0);
-        localStorage.setItem("ownedRamnetStocks", 0);
-        localStorage.setItem("ownedAlphacenStocks", 0);
-        localStorage.setItem("ownedScatterStocks", 0);
-        localStorage.setItem("ownedKalzexStocks", 0);
-        localStorage.setItem("ownedSonicosStocks", 0);
-        localStorage.setItem("ownedTrancextStocks", 0);
-        localStorage.setItem("ownedStklrStocks", 0);
-        localStorage.setItem("ownedVipersecStocks", 0);
-        localStorage.setItem("ownedPLATStocks", 0);
-        localStorage.setItem("ownedInfoneStocks", 0);
-        localStorage.setItem("ownedExtankStocks", 0);
-        localStorage.setItem("ownedReinaccStocks", 0);
-
-        localStorage.setItem("delsecCurrentStockPrice", 2.20);
-        localStorage.setItem("entaqCurrentStockPrice", 0.57);
-        localStorage.setItem("ventexCurrentStockPrice", 1.54);
-        localStorage.setItem("astorCurrentStockPrice", 0.95);
-        localStorage.setItem("popbotCurrentStockPrice", 0.01);
-        localStorage.setItem("pannamCurrentStockPrice", 4.82);
-        localStorage.setItem("TRITCurrentStockPrice", 5.86);
-        localStorage.setItem("CANVCurrentStockPrice", 8.72);
-        localStorage.setItem("OSMCurrentStockPrice", 11.26);
-        localStorage.setItem("PALLADCurrentStockPrice", 15.77);
-        localStorage.setItem("KELVCurrentStockPrice", 23.11);
-        localStorage.setItem("stuccorCurrentStockPrice", 58.98);
-        localStorage.setItem("delcredCurrentStockPrice", 97.85);
-        localStorage.setItem("rustecCurrentStockPrice", 115.33);
-        localStorage.setItem("exxocredCurrentStockPrice", 126.88);
-        localStorage.setItem("AUCurrentStockPrice", 257.23);
-        localStorage.setItem("aceholdCurrentStockPrice", 340.01);
-        localStorage.setItem("delholdCurrentStockPrice", 582.94);
-        localStorage.setItem("DIAMCurrentStockPrice", 1196.77);
-        localStorage.setItem("pentaccCurrentStockPrice", 1206.65);
-        localStorage.setItem("noodleCurrentStockPrice", 1572.63);
-        localStorage.setItem("megahardCurrentStockPrice", 2322.17);
-        localStorage.setItem("chimerasecCurrentStockPrice", 3703.29);
-        localStorage.setItem("chimeraholdCurrentStockPrice", 3908.06);
-        localStorage.setItem("griffonbankCurrentStockPrice", 4817.25);
-        localStorage.setItem("turborusCurrentStockPrice", 5176.99);
-        localStorage.setItem("exodmptCurrentStockPrice", 5911.76);
-        localStorage.setItem("ramnetCurrentStockPrice", 6427.11);
-        localStorage.setItem("alphacenCurrentStockPrice", 6662.88);
-        localStorage.setItem("scatterCurrentStockPrice", 6727.27);
-        localStorage.setItem("kalzexCurrentStockPrice", 7111.11);
-        localStorage.setItem("sonicosCurrentStockPrice", 7421.86);
-        localStorage.setItem("trancextCurrentStockPrice", 7512.81);
-        localStorage.setItem("stklrCurrentStockPrice", 7700.97);
-        localStorage.setItem("vipersecCurrentStockPrice", 10801.91);
-        localStorage.setItem("PLATCurrentStockPrice", 11721.88);
-        localStorage.setItem("infoneCurrentStockPrice", 12821.88);
-        localStorage.setItem("extankCurrentStockPrice", 13532.15);
-        localStorage.setItem("reinaccCurrentStockPrice", 15234.04);
-
-        localStorage.setItem("delsecSpentAmt", 0);
-        localStorage.setItem("entaqSpentAmt", 0);
-        localStorage.setItem("ventexSpentAmt", 0);
-        localStorage.setItem("astorSpentAmt", 0);
-        localStorage.setItem("popbotSpentAmt", 0);
-        localStorage.setItem("pannamSpentAmt", 0);
-        localStorage.setItem("TRITSpentAmt", 0);
-        localStorage.setItem("CANVSpentAmt", 0);
-        localStorage.setItem("OSMSpentAmt", 0);
-        localStorage.setItem("PALLADSpentAmt", 0);
-        localStorage.setItem("KELVSpentAmt", 0);
-        localStorage.setItem("stuccorSpentAmt", 0);
-        localStorage.setItem("delcredSpentAmt", 0);
-        localStorage.setItem("rustecSpentAmt", 0);
-        localStorage.setItem("exxocredSpentAmt", 0);
-        localStorage.setItem("AUSpentAmt", 0);
-        localStorage.setItem("aceholdSpentAmt", 0);
-        localStorage.setItem("delholdSpentAmt", 0);
-        localStorage.setItem("DIAMSpentAmt", 0);
-        localStorage.setItem("pentaccSpentAmt", 0);
-        localStorage.setItem("noodleSpentAmt", 0);
-        localStorage.setItem("megahardSpentAmt", 0);
-        localStorage.setItem("chimerasecSpentAmt", 0);
-        localStorage.setItem("chimeraholdSpentAmt", 0);
-        localStorage.setItem("griffonbankSpentAmt", 0);
-        localStorage.setItem("turborusSpentAmt", 0);
-        localStorage.setItem("exodmptSpentAmt", 0);
-        localStorage.setItem("ramnetSpentAmt", 0);
-        localStorage.setItem("alphacenSpentAmt", 0);
-        localStorage.setItem("scatterSpentAmt", 0);
-        localStorage.setItem("kalzexSpentAmt", 0);
-        localStorage.setItem("sonicosSpentAmt", 0);
-        localStorage.setItem("trancextSpentAmt", 0);
-        localStorage.setItem("stklrSpentAmt", 0);
-        localStorage.setItem("vipersecSpentAmt", 0);
-        localStorage.setItem("PLATSpentAmt", 0);
-        localStorage.setItem("infoneSpentAmt", 0);
-        localStorage.setItem("extankSpentAmt", 0);
-        localStorage.setItem("reinaccSpentAmt", 0);
-
-        localStorage.setItem("warriorClicks", 0);
-        localStorage.setItem("efficiencyCode", 0);
-        localStorage.setItem("efficiency2Code", 0);
-        localStorage.setItem("scatterLogicCode", 0);
-
-        localStorage.setItem("totalInvestment", 0);
+        localStorage.clear();
     });
 
     $('#btnResetClass').click(function () {
@@ -296,7 +136,17 @@ $(document).ready(function () {
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
             $("#manualIncrementDisplay").fadeOut(500);
-            ;
+
+            $("#emailWarriorHeading").show(1);
+
+            // just if the user keeps resetting their class.
+            if (emailWarriorDisplayed == "false")
+                numUnreadEmails++;
+            emailWarriorDisplayed = "true";
+            
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("emailWarriorDisplayed", emailWarriorDisplayed);
+
             $('#warriorAbilities').delay(500);
             $('#btnWarriorAbilities').delay(500);
             $("#warriorGenerate").delay(500);
@@ -330,6 +180,13 @@ $(document).ready(function () {
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
             $("#manualIncrementDisplay").fadeOut(500);
+
+            $("#emailWizardHeading").show(1);
+            if (emailWizardDisplayed == "false")
+                numUnreadEmails++;
+            emailWizardDisplayed = "true";
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("emailWizardDisplayed", emailWizardDisplayed);
 
             $('#wizardAbilities').delay(500);
             $('#btnWizardAbilities').delay(500);
@@ -368,6 +225,13 @@ $(document).ready(function () {
             $('#btnAbilities').fadeOut(500);
             $("#manualIncrementDisplay").fadeOut(500);
 
+            $("#emailRogueHeading").show(1);
+            if (emailRogueDisplayed == "false")
+                numUnreadEmails++;
+            emailRogueDisplayed = "true";
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("emailRogueDisplayed", emailRogueDisplayed);
+
             $('#rogueAbilities').delay(500);
             $('#btnRogueAbilities').delay(500);
             $("#rogueGenerate").delay(500);
@@ -405,6 +269,13 @@ $(document).ready(function () {
             $('#abilities').fadeOut(500);
             $('#btnAbilities').fadeOut(500);
             $("#manualIncrementDisplay").fadeOut(500);
+
+            $("#emailHealerHeading").show(1);
+            if (emailHealerDisplayed == "false")
+                numUnreadEmails++;
+            emailHealerDisplayed = "true";
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            localStorage.setItem("emailHealerDisplayed", emailHealerDisplayed);
 
             $('#healerAbilities').delay(500);
             $('#btnHealerAbilities').delay(500);

@@ -262,12 +262,17 @@
        
         var x = 0;
         if (x < 30) { // 30 ticks (9 min) do this. this will start again each time page is loaded. :) 
-            PALLADIncrement = Math.round(200 * Math.random()) / 100 - 1.25;
+            PALLADIncrement = Math.round(200 * Math.random()) / 100 - 1.05;
             x++;
         }
         else if (x >= 30) // then do this for the rest 
             PALLADIncrement = Math.round(200 * Math.random()) / 100 - 0.75;
 
+        PALLADCurrentStockPrice += PALLADIncrement;
+        if (PALLADCurrentStockPrice <= 6) {
+            PALLADCurrentStockPrice = 6;
+            PALLADIncrement = 0;
+        }
         if (PALLADIncrement > 0) {
             $("#PALLADChange").css("color", "#24b41e");
             $("#PALLADChange").html("+" + PALLADIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -276,7 +281,12 @@
             $("#PALLADChange").css("color", "#ce0000");
             $("#PALLADChange").html(PALLADIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
-        PALLADCurrentStockPrice += PALLADIncrement;
+        else if (PALLADIncrement == 0) {
+            $("#PALLADChange").css("color", "#5ac7ff");
+            $("#PALLADChange").html(PALLADIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        
         if (PALLADCurrentStockPrice <= 0)
             PALLADCurrentStockPrice = 0.01;
         $('#PALLADStockDisplayCost').html('$' + PALLADCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

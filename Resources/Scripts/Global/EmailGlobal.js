@@ -4,15 +4,33 @@ var numUnreadEmails = 2;
 
 var email1Viewed = "false";
 var email2Viewed = "false";
+
 var email3Displayed = "false";
 var email3Viewed = "false";
+
 var email4Displayed = "false";
 var email4Viewed = "false";
+
 var emailQuickScopeDisplayed = "false";
 var emailQuickScopeViewed = "false";
+
 var emailDelsecStockDisplayed = "false";
 var emailDelsecStockViewed = "false";
+
 var email10KDisplayed = "false";
 var email10KViewed = "false";
+
 var email4ByteDisplayed = "false";
 var email4ByteViewed = "false";
+
+var emailWarriorDisplayed = "false";
+var emailWarriorViewed = "false";
+
+var emailWizardDisplayed = "false";
+var emailWizardViewed = "false";
+
+var emailHealerDisplayed = "false";
+var emailHealerViewed = "false";
+
+var emailRogueDisplayed = "false";
+var emailRogueViewed = "false";

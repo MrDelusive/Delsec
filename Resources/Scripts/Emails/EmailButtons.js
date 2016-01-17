@@ -107,4 +107,60 @@ $(document).ready(function () {
         }
         return false;
     });
+
+    $('#btnEmailWarriorView').click(function () {
+        $("#emailWarrior").toggle();
+        if (emailWarriorViewed == "false") {
+            numUnreadEmails--;
+            emailWarriorViewed = "true";
+            localStorage.setItem("emailWarriorViewed", emailWarriorViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailWarriorView').html("Mr. Delusive - Warrior (Viewed)");
+            $('#btnEmailWarriorView').css("background", "#CCC");
+        }
+        return false;
+    });
+
+    $('#btnEmailWizardView').click(function () {
+        $("#emailWizard").toggle();
+        if (emailWizardViewed == "false") {
+            numUnreadEmails--;
+            emailWizardViewed = "true";
+            localStorage.setItem("emailWizardViewed", emailWizardViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailWizardView').html("Mr. Delusive - Wizard (Viewed)");
+            $('#btnEmailWizardView').css("background", "#CCC");
+        }
+        return false;
+    });
+
+    $('#btnEmailHealerView').click(function () {
+        $("#emailHealer").toggle();
+        if (emailHealerViewed == "false") {
+            numUnreadEmails--;
+            emailHealerViewed = "true";
+            localStorage.setItem("emailHealerViewed", emailHealerViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailHealerView').html("Mr. Delusive - Healer (Viewed)");
+            $('#btnEmailHealerView').css("background", "#CCC");
+        }
+        return false;
+    });
+
+    $('#btnEmailRogueView').click(function () {
+        $("#emailRogue").toggle();
+        if (emailRogueViewed == "false") {
+            numUnreadEmails--;
+            emailRogueViewed = "true";
+            localStorage.setItem("emailRogueViewed", emailRogueViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailRogueView').html("Mr. Delusive - Rogue (Viewed)");
+            $('#btnEmailRogueView').css("background", "#CCC");
+        }
+        return false;
+    });
 });
