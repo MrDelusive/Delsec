@@ -239,8 +239,54 @@
             <!-- RISK MANAGEMENT -->
             <div id="riskManagement" class="hidden_Divs">
                 <div id="totalRiskDisplay" class="lblItemDisplay">Total Risk: 0</div>     
-                
-                <div id="riskVisualDisplay"> <div id="riskDataContainer">VISUAL DATA</div></div>          
+                <div id="riskTraced" class="riskRow">You are not being traced.</div>   
+                <div id="riskGameContainer">
+                    <div id="riskGameSplash">
+                        
+                    </div>
+                    <div id="riskGame">
+                        
+                        <div class='riskItem'>
+                            <button id='btnRiskDrive'></button>
+                            DRIVE                         
+                        </div> 
+                        <div class='riskItem'>
+                            <button id='btnRiskAccess'></button>
+                            FILES
+                        </div>
+                        <div class='riskItem'>
+
+                        </div>
+                        <div class="riskAccessDenied">ACCESS DENIED.</div>
+                        <div class="riskAccessPopup" id="riskAccessFile">
+                            <div class="riskPopupHeader"><button id="btnCloseRiskAccessFile" class="btnClosePopup">X</button></div>
+                            <div id="riskAccessFileRow">
+                                <div class="riskAccessContent">USERID:</div>
+                                <div class="riskAccessContent"><input id="riskAccessID" maxlength="7"/></div>    
+                                <div class="riskAccessContent"><button id="btnRiskAccessID" class="riskButton">SEARCH</button></div>
+                            </div>
+                        </div>
+                        <div id="riskPlayerProfile" class="riskAccessPopup">
+                            <div class="riskPopupHeader"><button id="btnCloseRiskPlayerProfile" class="btnClosePopup">X</button></div>
+                            <div id="riskPlayerProfileContent">
+                                <div id="riskPlayerLeftCol" class="riskPlayerCol">
+
+                                </div>
+                                <div id="riskPlayerRightCol" class="riskPlayerCol">
+                                    <div class="playerLabel"><b>NAME:</b></div>
+                                    <div class="playerLabel">[UNKNOWN]</div>
+                                    <div class="playerLabel"><b>AGE:</b></div>
+                                    <div class="playerLabel">[UNKNOWN]</div>
+                                    <div class="playerLabel"><b>ADDRESS:</b></div>
+                                    <div class="playerLabel" id="playerAddress">[UNKNOWN]</div>
+                                    <div class="playerLabel"><b>STATUS:</b></div>
+                                    <div class="playerLabel" id="playerStatus">CLEAN</div>
+                                    <div class="playerLabel"><button id="btnClearPlayerRisk" class="riskButton">CLEAR HISTORY</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
             </div>
 
             <!-- WARRIOR CODING -->
@@ -519,6 +565,16 @@
                         <button id="btnInvestSuperHero" class="investButton">Invest $2,000,000.00 In A Super Hero Builder<br />8 min CD</button> 
                     </div>
                     <div id="superHeroInvestResult" class="investResultDiv"></div>
+
+                    <div id="drillInvest" class="investDiv">
+                        <button id="btnInvestDrill" class="investButton">Invest $5,000,000.00 In A Planetary Drill Operation<br />10 min CD</button> 
+                    </div>
+                    <div id="drillInvestResult" class="investResultDiv"></div>
+
+                    <div id="movieInvest" class="investDiv">
+                        <button id="btnInvestMovie" class="investButton">Invest $10,000,000.00 In a Movie - 15 min CD</button> 
+                    </div>
+                    <div id="movieInvestResult" class="investResultDiv"></div>
 
                 </div>  
 
@@ -3130,13 +3186,27 @@
             <!-- OPTIONS -->
             <div id="options" class="hidden_Divs">
                 <div id="optionsTop">
-			        Current Version: V0.67 <br /> <br />  
+			        Current Version: V0.70 <br /> <br />  
                     <button id="btnResetAll">Reset All</button>
                     <button id="btnResetClass">Reset Class</button>
                 </div>
                 
                 <div class="patchNotes">
                     Patch notes<br /><br />
+                    V0.70
+                    <ul>
+                        <li>Scatter Logic Bombs added to warriors, which can be activated to disrupt the code for 1 sec and grant $888.</li>
+                        <li>Added more investments.</li>
+                        <li>LocalStorage bugs should be completely fixed for good, if there is still some, one last reset all will fix it, but it SHOULD be the last one, ever.</li>
+                        <li>Risk Added to crawlers - This is to prevent players from just leaving game for too long without any input.</li>
+                        <li>If risk gets to 11,000,000 Player is sent to jail where they lose all money, and all crawlers which have risk assigned.</li>
+                        <li>To counter this at the moment there is one option, Player must access risk management, find their profile and clear history. Later versions will allow WIZARDS only to have lower risk gen,
+                            and eventually no risk at all. So only WIZARDS will be able to maximize the crawlers. Other classes, the crawlers will get too hard to manage risk if they go all the way down the crawler path.
+                        </li>
+                        <li>Risk Management Added, with access to FDI desktop to search for player profile.</li>
+                        <li>Other Changes that I can't remember.</li>
+                    </ul>
+                    <br />
                     V0.67
                     <ul>
                         <li>Added more investments</li>
@@ -3173,9 +3243,9 @@
                 <div class="patchNotes">
                     The plan:
                     <ul>
-                        <li>Risk will be added to crawlers and some other items, this is to make the player explore other viable money making strategies, instead of just the lazy crawlers</li>
-                        <li>Risk management will be implemented to counter this, also risk abilities will be added to wizard.</li>
+                        <li>Thinking to rework Investments, want it more interesting than just click button and wait.</li>
                         <li>Rogues will have Shareholder options.</li>
+                        <li>Add all the crawlers</li>
                         <li>The plan for each class is: Warriors and Rogues will be a more active playstyle, requiring clicks/Active participation from the player.<br />
                             Wizards and Healers will have a more passive play style, player won't need to do as much monitoring.
                         </li>
@@ -3211,8 +3281,9 @@
     <script src="Resources/Scripts/RiskManagement.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/StockTabButtons.js" type="text/javascript"></script>
 
-    <script src="Resources/Scripts/Shop/DelsecCrawlers.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Shop/RussianCrawlers.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Automation/DelsecCrawlers.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Automation/RussianCrawlers.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Automation/RiskManagement.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/Tickers/CrawlerTicker.js" type="text/javascript"></script>     
     <script src="Resources/Scripts/Tickers/DisabledTicker.js" type="text/javascript"></script>      

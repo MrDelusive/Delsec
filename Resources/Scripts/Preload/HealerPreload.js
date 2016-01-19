@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     if (typeof (Storage) !== "undefined") {
-
+        $('#btnLongTermInvestments').prop('disabled', true);
         if (userClass == "Healer") {           
             $("#btnAbilities").hide();
             $("#btnHealerAbilities").fadeIn(500);

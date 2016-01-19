@@ -7,12 +7,6 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#btnRiskManagement').click(function () {
-        $(".hidden_Divs").hide();
-        $("#riskManagement").show();
-        return false;
-    });
-
     $('#btnDelsecCrawlerShop').click(function () {
         $(".hidden_Divs").hide();
         $("#shop").show();

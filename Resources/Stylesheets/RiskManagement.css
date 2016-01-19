@@ -1,4 +1,5 @@
-﻿#totalRiskDisplay {
+﻿
+#totalRiskDisplay {
     width: 970px;
     font-size: 20px;
     margin: 0 auto;
@@ -12,9 +13,23 @@
     float: left;
 }
 
-#riskVisualDisplay {
+
+
+
+.riskRow{
+    float:left;
+    color: white;
+    background: #040515;
+    width:1000px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#riskGameContainer {
+    display: none;
     height: 500px;
     width: 1000px;
+    background: black;
     float: left;
     margin: 0 auto;
     margin-top: 25px;
@@ -22,9 +37,169 @@
     color: white;
 }
 
-#riskDataContainer {
-    width: 200px;
-    height: 500px;
+#riskGameSplash {
     margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+    height: 480px;
+    width: 780px;
+    background: #060830;
 }
 
+#riskGame {
+    display:none;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+    height: 480px;
+    width: 780px;
+    background: url(../Img/riskPc.jpg)
+}
+
+.riskItem {
+    float: left;
+    margin: 10px;
+    width:90px;
+    height:105px;
+    color: white;
+    font-size:15px;
+    text-align: center;
+}
+
+#btnRiskDrive {
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon1.png);
+}
+
+#btnRiskAccess{
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon2.png);
+}
+
+.riskAccessDenied {
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 0 auto;
+    position: absolute;
+    background: red;
+    margin-left: 100px;
+    margin-top: 215px;
+    width: 580px;
+    height: 50px;
+    z-index: 100;
+}
+
+.riskAccessPopup {
+    display: none;
+    margin: 0 auto;
+    position: absolute;   
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 580px;
+    height: 380px;
+}
+
+#riskAccessFile {
+    background: url(../Img/riskAccess.jpg);
+}
+
+.riskPopupHeader {
+    width: 580px;
+    height: 30px;
+    background: #0a0a0a;
+}
+
+.btnClosePopup {
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+#riskAccessFileRow {
+    margin-top: 130px;
+    padding-left: 50px;
+    text-align: right;
+    width: 530px;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(0,0,0,0.5);
+    font-size: 24px;
+}
+
+#riskAccessID {
+    background:black;
+    color: white;
+    border: 1px solid #333;
+    margin-top: 5px;
+    height: 38px;
+    width: 100px;
+    line-height: 38px;
+    font-size: 20px;
+    float: left;
+}
+
+.riskButton {
+    height: 40px;
+    background: #333;
+    margin-top: 5px;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #444;
+    cursor: pointer;
+}
+
+.riskAccessContent {
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+    line-height: 50px;
+}
+
+#riskPlayerProfile {
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+#riskPlayerProfileContent {
+    background: #949494;
+    width: 580px;
+    height: 350px;
+}
+
+.riskPlayerCol {
+    float: left;
+    height: 350px;
+    width: 280px;
+    padding-right: 10px;
+}
+
+#riskPlayerLeftCol {
+    background: url(../Img/playerRiskPic.jpg);
+    height: 346px;
+    width: 276px;
+    border: 2px solid #838383;
+    border-radius: 20px;
+}
+
+#riskPlayerRightCol {
+    font-size: 18px;
+}
+
+.playerLabel {
+    padding-left: 10px;
+    padding-top: 5px;
+}

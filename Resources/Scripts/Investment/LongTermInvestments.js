@@ -4,14 +4,23 @@
     $('#btnInvestGoldbot').prop('disabled', false);
     $('#btnInvestGoldbot').click(function () {
         if (money >= 3) {
-            var timer = 120;
-            $('#goldbotInvestResult').html("Investing: " + timer + " seconds remaining.");
-            setInterval(function () {
-                if (timer > 1) {
-                    timer--;
-                    $('#goldbotInvestResult').html("Investing: " + timer + " seconds remaining.");
-                }
-            }, 1000);
+            var minutes = 2;
+            var seconds = 60;
+            $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0) {
+                        seconds--;
+                        $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
             var investAmt = 3;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -102,14 +111,23 @@
     $('#btnInvestGame').prop('disabled', false);
     $('#btnInvestGame').click(function () {
         if (money >= 25) {
-            var timer = 180;
-            $('#gameInvestResult').html("Investing: " + timer + " seconds remaining.");
-            setInterval(function () {
-                if (timer > 1) {
-                    timer--;
-                    $('#gameInvestResult').html("Investing: " + timer + " seconds remaining.");
-                }
-            }, 1000);
+            var minutes = 3;
+            var seconds = 60;
+            $('#gameInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0) {
+                        seconds--;
+                        $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
             var investAmt = 25;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -200,14 +218,23 @@
     $('#btnInvestGold').prop('disabled', false);
     $('#btnInvestGold').click(function () {
         if (money >= 1000) {
-            var timer = 300;
-            $('#goldInvestResult').html("Investing: " + timer + " seconds remaining.");
-            setInterval(function () {
-                if (timer > 1) {
-                    timer--;
-                    $('#goldInvestResult').html("Investing: " + timer + " seconds remaining.");
-                }
-            }, 1000);
+            var minutes = 5;
+            var seconds = 60;
+            $('#goldInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0) {
+                        seconds--;
+                        $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
             var investAmt = 25;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -299,14 +326,23 @@
     $('#btnInvestCD').prop('disabled', false);
     $('#btnInvestCD').click(function () {
         if (money >= 25000) {
-            var timer = 600;
-            $('#CDInvestResult').html("Investing: " + timer + " seconds remaining.");
-            setInterval(function () {
-                if (timer > 1) {
-                    timer--;
-                    $('#CDInvestResult').html("Investing: " + timer + " seconds remaining.");
-                }
-            }, 1000);
+            var minutes = 10;
+            var seconds = 60;
+            $('#CDInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0) {
+                        seconds--;
+                        $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
             var investAmt = 25000;
             money -= investAmt;
             totalInvestment += investAmt;

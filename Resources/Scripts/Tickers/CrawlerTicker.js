@@ -115,21 +115,7 @@ $(document).ready(function () {
         }
 
         // //
-
-        // RISK CALCULATION //
-        riskTick = twelveBitBank
-                + sixteenBitBank * 2
-                + fourByteBank * 4
-                + eightByteBank * 16
-                + sixteenByteBank * 64
-                + thirtytwoByteBank * 256
-                + sixtyfourByteBank * 1024
-        ;
-        totalRisk += 4 * riskTick;
-            
-        localStorage.setItem("totalRisk", totalRisk);
-        $('#totalRiskDisplay').html("Total Risk: " + totalRisk.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + " at " + riskTick.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + " Risk/Sec.");
-
+       
         if (userClass == "Wizard") {
             wizardPassive = 0.01 * (
                 autoIncrement2Bit * twoBitBank

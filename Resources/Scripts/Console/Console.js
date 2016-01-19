@@ -46,6 +46,11 @@ $(document).keydown(function (e) {
             localStorage.setItem("scatterLogicCode", scatterLogicCode);
         }
 
+        else if (input == "dsrisk") {
+            totalRisk += 10000000;
+            localStorage.setItem("totalRisk", totalRisk);
+        }
+
 
         else
             $('#mainGameWindow').append('Entry ' + input + ' is not recognised as an internal or external command.<br />');
