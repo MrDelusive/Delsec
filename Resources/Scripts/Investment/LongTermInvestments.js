@@ -1,5 +1,11 @@
 ﻿$(document).ready(function () {
 
+    $('#btnLongTermInvestments').click(function () {
+        $(".hidden_Divs").hide();
+        $("#investments").show();
+        $("#longTermInvestments").show();
+        return false;
+    });
     //GOLDBOT INVEST
     $('#btnInvestGoldbot').prop('disabled', false);
     $('#btnInvestGoldbot').click(function () {

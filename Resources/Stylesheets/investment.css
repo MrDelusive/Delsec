@@ -32,9 +32,33 @@
     text-align: center;
     margin-left: 3px;
     height: 50px;
-    background: rgba(0,0,0,0.7);
     background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
 }
+
+.summaryDiv {
+    width: 674px;
+	float: left;
+    text-align: left;
+    margin-left: 3px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    height: 25px;
+    background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
+}
+.investSummaryDisplay {
+    width: 297px;
+    margin-right: 3px;
+	float: left;
+    font-size: 14px;
+    line-height: 25px;
+    height: 25px;
+    background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
+}
+#totalSummary {
+    text-align: right;
+}
+
 .investResultDiv {
 	width: 395px;
 	margin-bottom:20px;
@@ -57,3 +81,87 @@
     height: 100%;
 }
 
+#permanentInvestments {
+    background: url('../Img/stockBg2.jpg') 50% 0 repeat fixed;
+    height: 2000px;
+}
+
+#summaryInvestments {
+    background: url('../Img/stockBgGreen2.png') 50% 0 repeat fixed;
+    height: 100%;
+}
+
+#delsecMap {
+    width: 800px;
+    height: 1600px;
+    background: url('../Img/delsecmap.jpg');
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.selectionButton {
+    background: url('../Img/btnRing.png');
+    width: 53px;
+    height: 52px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.investButtonContainer {
+    position: absolute;
+    width: 53px;
+    height: 52px;
+}
+
+.selectionButton:hover {
+    background: url('../Img/btnRingHover.png');
+}
+
+.selectionButton:active {
+    background: url('../Img/btnRingClick.png');
+}
+
+.selectionButton:disabled {
+    background: url('../Img/btnRingDisabled.png');
+}
+
+#investRental {   
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+#investRealEstate {
+    margin-left: 150px;
+    margin-top: 200px;
+}
+
+#investMansion {
+    margin-left: 500px;
+    margin-top: 1000px;
+}
+.investPopup {
+    display: none;
+    position: relative;
+    margin-left: 55px;
+    border-radius: 10px;
+    padding-top:10px;
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+    background: #0a6309;
+    line-height: 15px;
+    text-align: center;
+}
+
+#investRental:hover > #investRentalPopup {
+    display: block;   
+}
+
+#investRealEstate:hover > #investRealEstatePopup {
+    display: block;   
+}
+
+#investMansion:hover > #investMansionPopup {
+    display: block;   
+}

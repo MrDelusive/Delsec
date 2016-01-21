@@ -71,21 +71,6 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#btnShortTermInvestments').click(function () {
-        $(".hidden_Divs").hide();
-        $("#investments").show();
-        $("#shortTermInvestments").show();
-        return false;
-    });
-
-    $('#btnLongTermInvestments').click(function () {
-        $(".hidden_Divs").hide();
-        $("#investments").show();
-        $("#longTermInvestments").show();
-        return false;
-    });
-
-
     $('#btnStockMarket').click(function () {
         $(".hidden_Divs").hide();
         $("#stocks").show();
@@ -285,6 +270,8 @@ $(document).ready(function () {
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
             $('#btnLongTermInvestments').prop('disabled', false);
+            $('#btnPermanentInvestments').prop('disabled', false);
+            $('#btnSummaryInvestments').prop('disabled', false);
         }
         else {
             $('#abilityErrorHeading').html("Need at least $10,000");

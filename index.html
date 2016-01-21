@@ -483,9 +483,12 @@
                 <div id="investmentTabSelect">
                     <button id="btnShortTermInvestments" class="btn_TabSmallGreen2">Short Term Investments</button>
                     <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">Long Term Investments</button>
+                    <button id="btnPermanentInvestments" class="btn_TabSmallGreen2">Permanent Investments</button>
+                    <button id="btnSummaryInvestments" class="btn_TabSmallGreen2">Income Summary</button>
                 </div>
                 <div id="shortTermInvestments" class="hidden_Divs">    
                     <h1>SHORT TERM INVESTMENTS</h1>
+                    Short Term Investments are Quick Investment options that might return a profit.
                     <div id="wikiInvest" class="investDiv">
                         <button id="btnInvestWiki" class="investButton">Invest $2.00 In Zikipedia - 10 sec CD</button> 
                     </div>
@@ -510,12 +513,7 @@
                         <button id="btnInvestPoker" class="investButton">Invest $100.00 In your Friends Poker habits - 20 sec CD</button> 
                     </div>
                     <div id="pokerInvestResult" class="investResultDiv"></div>  
-                
-                    <div id="rentalInvest" class="investDiv">
-                        <button id="btnInvestRental" class="investButton">Invest $500.00 In a Rental Motorbike - 30 sec CD</button> 
-                    </div>
-                    <div id="rentalInvestResult" class="investResultDiv"></div>     
-
+               
                     <div id="raceInvest" class="investDiv">
                         <button id="btnInvestRace" class="investButton">Invest $1,000.00 In a Race Car - 30 sec CD</button> 
                     </div>
@@ -549,17 +547,7 @@
                     <div id="energyInvest" class="investDiv">
                         <button id="btnInvestEnergy" class="investButton">Invest $100,000.00 In Energy - 4 min CD</button> 
                     </div>
-                    <div id="energyInvestResult" class="investResultDiv"></div>
-
-                    <div id="realEstateInvest" class="investDiv">
-                        <button id="btnInvestRealEstate" class="investButton">Invest $250,000.00 In A Rental Property - 5 min CD</button> 
-                    </div>
-                    <div id="realEstateInvestResult" class="investResultDiv"></div>
-
-                    <div id="mansionInvest" class="investDiv">
-                        <button id="btnInvestMansion" class="investButton">Invest $750,000.00 In A Mansion - 7 min CD</button> 
-                    </div>
-                    <div id="mansionInvestResult" class="investResultDiv"></div>
+                    <div id="energyInvestResult" class="investResultDiv"></div>                                      
 
                     <div id="superHeroInvest" class="investDiv">
                         <button id="btnInvestSuperHero" class="investButton">Invest $2,000,000.00 In A Super Hero Builder<br />8 min CD</button> 
@@ -580,6 +568,7 @@
 
                 <div id="longTermInvestments" class="hidden_Divs"> 
                     <h1>LONG TERM INVESTMENTS</h1>
+                    Long Term Investments always return a profit, however they take longer than Short Term Investments.
                     <div id="goldbotInvest" class="investDiv">  
                         <button id="btnInvestGoldbot" class="investButton">Invest $3.00 In a Gold Farming Bot - 2 min CD</button> 
                     </div>  
@@ -599,9 +588,52 @@
                     <div id="CDInvest" class="investDiv">
                         <button id="btnInvestCD" class="investButton">Invest $25,000.00 In a CD Account - 10 min CD</button> 
                     </div>
-                    <div id="CDInvestResult" class="investResultDiv"></div> 
-                
+                    <div id="CDInvestResult" class="investResultDiv"></div>                 
                 </div>     
+
+                <div id="permanentInvestments" class="hidden_Divs"> 
+                    <h1>PERMANENT INVESTMENTS</h1>
+                    Permanent Investments are purchased once to permanently generate profit. Unlike Crawlers, Permanent Investments don't generate Risk.
+                    <!-- Background map created with google maps then edited in photoshop -->
+                    <div id="delsecMap">
+                        <!-- $500 -->
+                        <div id="investRental" class="investButtonContainer">
+                            <button id="btnInvestRental" class="selectionButton"></button> 
+                            <div id="investRentalPopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investRealEstate" class="investButtonContainer">
+                            <button id="btnInvestRealEstate" class="selectionButton"></button> 
+                            <div id="investRealEstatePopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investMansion" class="investButtonContainer">
+                            <button id="btnInvestMansion" class="selectionButton"></button> 
+                            <div id="investMansionPopup" class="investPopup"></div>
+                        </div>                
+                    </div>
+                </div>
+
+                <div id="summaryInvestments" class="hidden_Divs">
+                    <h1>LAST PAYMENT SUMMARY</h1>
+
+                    <div id="headerSummary" class="summaryDiv">Payments occur once every minute.</div>
+                    
+                    <div id="generatorSummary" class="summaryDiv"></div>
+                    <div id="generatorSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="rentalBikeSummary" class="summaryDiv"></div>
+                    <div id="rentalBikeSummaryDisplay"class="investSummaryDisplay"></div>
+
+                    <div id="smallPropertySummary" class="summaryDiv"></div>
+                    <div id="smallPropertySummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="mansionSummary" class="summaryDiv"></div>
+                    <div id="mansionSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="totalSummary" class="summaryDiv">Total:</div>
+                    <div id="totalSummaryDisplay" class="investSummaryDisplay"></div>
+                </div>
             </div>
 
             <!-- STOCK MARKET -->
@@ -3264,11 +3296,13 @@
     <script src="Resources/Scripts/Global/CrawlerGlobal.js" type="text/javascript"></script>  
     <script src="Resources/Scripts/Global/StockGlobal.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Global/EmailGlobal.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Global/InvestmentGlobal.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/Preload/GamePreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/EmailPreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/StockPreload.js" type="text/javascript"></script>    
     <script src="Resources/Scripts/Preload/CrawlerPreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/InvestmentPreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/WarriorPreload.js" type="text/javascript"></script> 
     <script src="Resources/Scripts/Preload/HealerPreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/RoguePreload.js" type="text/javascript"></script>
@@ -3333,6 +3367,8 @@
 
     <script src="Resources/Scripts/Investment/ShortTermInvestments.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Investment/LongTermInvestments.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Investment/PermanentInvestments.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Investment/SummaryInvestments.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/Console/Console.js" type="text/javascript"></script>
 

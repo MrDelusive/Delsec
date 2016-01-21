@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
 
     setInterval(function () {
+        //CRAWLERS
         $('#btnIncrement').prop('disabled', false);
         $('#btnWarriorIncrement').prop('disabled', false);
         $('#btnHealerIncrement').prop('disabled', false);
@@ -19,6 +20,7 @@
         $('#btnBuy16ByteCrawler').prop('disabled', true);
         $('#btnBuy32ByteCrawler').prop('disabled', true);
         $('#btnBuy64ByteCrawler').prop('disabled', true);
+
         if (money >= current2BitPrice)
             $('#btnBuy2BitCrawler').prop('disabled', false);
         if (money >= current3BitPrice)
@@ -46,7 +48,20 @@
         if (money >= current64BytePrice)
             $('#btnBuy64ByteCrawler').prop('disabled', false);
 
+        // INVESTMENTS //
+        $('#btnInvestRental').prop('disabled', true);
+        if (money >= 500)
+            $('#btnInvestRental').prop('disabled', false);
 
+        $('#btnInvestRealEstate').prop('disabled', true);
+        if (money >= 250000)
+            $('#btnInvestRealEstate').prop('disabled', false);
+
+        $('#btnInvestMansion').prop('disabled', true);
+        if (money >= 750000)
+            $('#btnInvestMansion').prop('disabled', false);
+
+        // WARRIOR CODE //
         $('#btnWriteEfficiency2Code').prop('disabled', true);
         if (efficiencyCode >= 5)
             $('#btnWriteEfficiency2Code').prop('disabled', false);

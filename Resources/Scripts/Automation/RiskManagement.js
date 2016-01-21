@@ -3,8 +3,9 @@
     $('#btnRiskManagement').click(function () {
         $(".hidden_Divs").hide();
         $("#riskManagement").show();
-         
-        
+        $('#riskGame').hide();
+        $('#riskGameSplash').show();
+        $('#riskGameSplash').html("");
         $('#riskGameContainer').show();
         if (splashStart == false) {
             splashStart = true;
