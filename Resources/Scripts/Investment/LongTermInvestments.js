@@ -16,7 +16,12 @@
             if (minutes > 0) {
                 minutes--;
                 setInterval(function () {
-                    if (seconds > 0) {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
                         seconds--;
                         $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
                     }
@@ -123,7 +128,12 @@
             if (minutes > 0) {
                 minutes--;
                 setInterval(function () {
-                    if (seconds > 0) {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
                         seconds--;
                         $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
                     }
@@ -230,7 +240,12 @@
             if (minutes > 0) {
                 minutes--;
                 setInterval(function () {
-                    if (seconds > 0) {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
                         seconds--;
                         $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
                     }
@@ -338,7 +353,12 @@
             if (minutes > 0) {
                 minutes--;
                 setInterval(function () {
-                    if (seconds > 0) {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
                         seconds--;
                         $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
                     }

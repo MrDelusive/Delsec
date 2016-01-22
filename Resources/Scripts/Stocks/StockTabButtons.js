@@ -115,6 +115,14 @@
         return false;
     });
 
+    $('#btnFEStocks').click(function () {
+        $(".stockDisplay").hide();
+        $("#FEStockDisplay").show();
+        var d1 = [[1, FE5thPreviousStockPrice], [2, FE4thPreviousStockPrice], [3, FE3rdPreviousStockPrice], [4, FE2ndPreviousStockPrice], [5, FEPreviousStockPrice], [6, FECurrentStockPrice]];
+        $.plot($("#FEHistoryDisplay"), [d1], options);
+        return false;
+    });
+
     $('#btnDelcredStocks').click(function () {
         $(".stockDisplay").hide();
         $("#delcredStockDisplay").show();

@@ -10,6 +10,7 @@ var OSMPreviousStockPrice, OSM2ndPreviousStockPrice, OSM3rdPreviousStockPrice, O
 var PALLADPreviousStockPrice, PALLAD2ndPreviousStockPrice, PALLAD3rdPreviousStockPrice, PALLAD4thPreviousStockPrice, PALLAD5thPreviousStockPrice;
 var KELVPreviousStockPrice, KELV2ndPreviousStockPrice, KELV3rdPreviousStockPrice, KELV4thPreviousStockPrice, KELV5thPreviousStockPrice;
 var stuccorPreviousStockPrice, stuccor2ndPreviousStockPrice, stuccor3rdPreviousStockPrice, stuccor4thPreviousStockPrice, stuccor5thPreviousStockPrice;
+var FEPreviousStockPrice, FE2ndPreviousStockPrice, FE3rdPreviousStockPrice, FE4thPreviousStockPrice, FE5thPreviousStockPrice;
 var delcredPreviousStockPrice, delcred2ndPreviousStockPrice, delcred3rdPreviousStockPrice, delcred4thPreviousStockPrice, delcred5thPreviousStockPrice;
 var rustecPreviousStockPrice, rustec2ndPreviousStockPrice, rustec3rdPreviousStockPrice, rustec4thPreviousStockPrice, rustec5thPreviousStockPrice;
 var exxocredPreviousStockPrice, exxocred2ndPreviousStockPrice, exxocred3rdPreviousStockPrice, exxocred4thPreviousStockPrice, exxocred5thPreviousStockPrice;
@@ -97,6 +98,11 @@ var stuccorCurrentStockPrice = 58.98;
 var stuccorIncrement = 0;
 var ownedStuccorStocks = 0;
 var stuccorSpentAmt = 0;
+
+var FECurrentStockPrice = 43.22;
+var FEIncrement = 0;
+var ownedFEStocks = 0;
+var FESpentAmt = 0;
 
 var delcredCurrentStockPrice = 97.85;
 var delcredIncrement = 0;

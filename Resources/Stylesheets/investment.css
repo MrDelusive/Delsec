@@ -8,6 +8,28 @@
     color: #FFF;
 }
 
+.investButton {
+    font-family:Consolas,monaco,monospace;
+	background: url('../Img/stockBgGreen.png');
+    cursor: pointer;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#ffffff;
+	font-size:14px;
+	text-decoration:none;
+	text-align:center;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-right: 10px;  
+    height: 30px; 
+    width: 597px;
+}
+
+.investButton:hover {
+	background: url('../Img/stockBgGreen2.png');
+}
+
+
 #totalInvestmentSpent {
     width: 970px;
     font-size: 20px;
@@ -26,12 +48,24 @@
 
 .investDiv {
     width: 597px;
-    margin-bottom:20px;
-	padding-top: 10px;
+    margin-bottom:5px;
+	padding-top: 15px;
 	float: left;
     text-align: center;
     margin-left: 3px;
-    height: 50px;
+    height: 45px;
+    background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
+}
+
+.investResultDiv {
+	width: 395px;
+	margin-bottom:5px;
+	padding-top: 5px;
+	float: right;
+    margin-right: 3px;
+    text-align: center;
+    height: 55px;
+    font-size: 12px;
     background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
 }
 
@@ -39,8 +73,10 @@
     width: 674px;
 	float: left;
     text-align: left;
-    margin-left: 3px;
-    padding-left: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 1px;
+    padding-left: 20px;  
     font-size: 14px;
     line-height: 25px;
     height: 25px;
@@ -48,7 +84,8 @@
 }
 .investSummaryDisplay {
     width: 297px;
-    margin-right: 3px;
+    margin-right: 2px;
+    margin-top: 1px;
 	float: left;
     font-size: 14px;
     line-height: 25px;
@@ -59,24 +96,17 @@
     text-align: right;
 }
 
-.investResultDiv {
-	width: 395px;
-	margin-bottom:20px;
-	padding-top: 10px;
-	float: right;
-    margin-right: 3px;
-    text-align: center;
-    height: 50px;
-    font-size: 12px;
-    background: url('../Img/stockBgGreen3.jpg') 50% 0 repeat fixed;
-}
-
 #shortTermInvestments {
     background: url('../Img/stockBgGreen2.png') 50% 0 repeat fixed;
     height: 100%;
 }
 
 #longTermInvestments {
+    background: url('../Img/stockBgGreen2.png') 50% 0 repeat fixed;
+    height: 100%;
+}
+
+#expeditionInvestments {
     background: url('../Img/stockBgGreen2.png') 50% 0 repeat fixed;
     height: 100%;
 }

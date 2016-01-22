@@ -363,25 +363,4 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
 	background: rgba(0, 22, 164, 0.4);
 }
 
-.investButton {
-    font-family:Consolas,monaco,monospace;
-	background: url('../Img/stockBgGreen.png');
-    cursor: pointer;
-	border:1px solid #000000;
-	display:inline-block;
-	color:#ffffff;
-	font-size:14px;
-	text-decoration:none;
-	text-align:center;
-    margin: 0 auto;
-    border-radius: 5px;
-    margin-right: 10px;  
-    height: 40px; 
-    width: 500px;
-}
-
-.investButton:hover {
-	background: url('../Img/stockBgGreen2.png');
-
-}
 

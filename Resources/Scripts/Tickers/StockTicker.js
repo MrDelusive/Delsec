@@ -348,6 +348,32 @@
         localStorage.setItem("stuccorCurrentStockPrice", stuccorCurrentStockPrice);
         // stuccor END //
 
+        // FE //
+        FE5thPreviousStockPrice = FE4thPreviousStockPrice;
+        FE4thPreviousStockPrice = FE3rdPreviousStockPrice;
+        FE3rdPreviousStockPrice = FE2ndPreviousStockPrice;
+        FE2ndPreviousStockPrice = FEPreviousStockPrice;
+        FEPreviousStockPrice = FECurrentStockPrice;
+
+        FEIncrement = Math.round(1000 * Math.random()) / 100 - 5;
+        if (FEIncrement > 0) {
+            $("#FEChange").css("color", "#24b41e");
+            $("#FEChange").html("+" + FEIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+        else if (FEIncrement < 0) {
+            $("#FEChange").css("color", "#ce0000");
+            $("#FEChange").html(FEIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+        FECurrentStockPrice += FEIncrement;
+        if (FECurrentStockPrice <= 4)
+            FECurrentStockPrice = 4;
+        $('#FEStockDisplayCost').html('$' + FECurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#FECurrentPrice').html('$' + FECurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#FEStockSellPrice').html('$' + (FECurrentStockPrice - FECurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#FESellEstimate').html('$' + (ownedFEStocks * (FECurrentStockPrice - FECurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        localStorage.setItem("FECurrentStockPrice", FECurrentStockPrice);
+        // stuccor END //
+
         // delcred //
         delcred5thPreviousStockPrice = delcred4thPreviousStockPrice;
         delcred4thPreviousStockPrice = delcred3rdPreviousStockPrice;
@@ -433,7 +459,7 @@
         AU2ndPreviousStockPrice = AUPreviousStockPrice;
         AUPreviousStockPrice = AUCurrentStockPrice;
 
-        AUIncrement = Math.round(2000 * Math.random()) / 100 - 9;
+        AUIncrement = Math.round(2000 * Math.random()) / 100 - 9.5;
         if (AUIncrement > 0) {
             $("#AUChange").css("color", "#24b41e");
             $("#AUChange").html("+" + AUIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -950,7 +976,7 @@
         PLAT2ndPreviousStockPrice = PLATPreviousStockPrice;
         PLATPreviousStockPrice = PLATCurrentStockPrice;
         
-        PLATIncrement = Math.round(100000 * Math.random()) / 100 - 400;
+        PLATIncrement = Math.round(100000 * Math.random()) / 100 - 485;
         if (PLATIncrement > 0) {
             $("#PLATChange").css("color", "#24b41e");
             $("#PLATChange").html("+" + PLATIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

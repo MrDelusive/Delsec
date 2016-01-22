@@ -83,6 +83,13 @@ $(document).ready(function () {
     if (localStorage.getItem("stuccorSpentAmt") === null)
         localStorage.setItem("stuccorSpentAmt", stuccorSpentAmt);
 
+    if (localStorage.getItem("FECurrentStockPrice") === null)
+        localStorage.setItem("FECurrentStockPrice", FECurrentStockPrice);
+    if (localStorage.getItem("ownedFEStocks") === null)
+        localStorage.setItem("ownedFEStocks", ownedFEStocks);
+    if (localStorage.getItem("FESpentAmt") === null)
+        localStorage.setItem("FESpentAmt", FESpentAmt);
+
     if (localStorage.getItem("delcredCurrentStockPrice") === null)
         localStorage.setItem("delcredCurrentStockPrice", delcredCurrentStockPrice);
     if (localStorage.getItem("ownedDelcredStocks") === null)
@@ -284,6 +291,7 @@ $(document).ready(function () {
     PALLADCurrentStockPrice = parseFloat(localStorage.getItem("PALLADCurrentStockPrice"));
     KELVCurrentStockPrice = parseFloat(localStorage.getItem("KELVCurrentStockPrice"));
     stuccorCurrentStockPrice = parseFloat(localStorage.getItem("stuccorCurrentStockPrice"));
+    FECurrentStockPrice = parseFloat(localStorage.getItem("FECurrentStockPrice"));
     delcredCurrentStockPrice = parseFloat(localStorage.getItem("delcredCurrentStockPrice"));
     rustecCurrentStockPrice = parseFloat(localStorage.getItem("rustecCurrentStockPrice"));
     exxocredCurrentStockPrice = parseFloat(localStorage.getItem("exxocredCurrentStockPrice"));
@@ -324,6 +332,7 @@ $(document).ready(function () {
     ownedPALLADStocks = parseInt(localStorage.getItem("ownedPALLADStocks"));
     ownedKELVStocks = parseInt(localStorage.getItem("ownedKELVStocks"));
     ownedStuccorStocks = parseInt(localStorage.getItem("ownedStuccorStocks"));
+    ownedFEStocks = parseInt(localStorage.getItem("ownedFEStocks"));
     ownedDelcredStocks = parseInt(localStorage.getItem("ownedDelcredStocks"));
     ownedRustecStocks = parseInt(localStorage.getItem("ownedRustecStocks"));
     ownedExxocredStocks = parseInt(localStorage.getItem("ownedExxocredStocks"));
@@ -364,6 +373,7 @@ $(document).ready(function () {
     PALLADSpentAmt = parseFloat(localStorage.getItem("PALLADSpentAmt"));
     KELVSpentAmt = parseFloat(localStorage.getItem("KELVSpentAmt"));
     stuccorSpentAmt = parseFloat(localStorage.getItem("stuccorSpentAmt"));
+    FESpentAmt = parseFloat(localStorage.getItem("FESpentAmt"));
     delcredSpentAmt = parseFloat(localStorage.getItem("delcredSpentAmt"));
     rustecSpentAmt = parseFloat(localStorage.getItem("rustecSpentAmt"));
     exxocredSpentAmt = parseFloat(localStorage.getItem("exxocredSpentAmt"));

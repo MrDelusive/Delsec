@@ -483,6 +483,7 @@
                 <div id="investmentTabSelect">
                     <button id="btnShortTermInvestments" class="btn_TabSmallGreen2">Short Term Investments</button>
                     <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">Long Term Investments</button>
+                    <button id="btnExpeditionInvestments" class="btn_TabSmallGreen2">Expeditions</button>
                     <button id="btnPermanentInvestments" class="btn_TabSmallGreen2">Permanent Investments</button>
                     <button id="btnSummaryInvestments" class="btn_TabSmallGreen2">Income Summary</button>
                 </div>
@@ -517,12 +518,7 @@
                     <div id="raceInvest" class="investDiv">
                         <button id="btnInvestRace" class="investButton">Invest $1,000.00 In a Race Car - 30 sec CD</button> 
                     </div>
-                    <div id="raceInvestResult" class="investResultDiv"></div>     
-
-                    <div id="miningInvest" class="investDiv">
-                        <button id="btnInvestMining" class="investButton">Invest $2,500.00 In a Mining Expedition - 1 min CD</button> 
-                    </div>
-                    <div id="miningInvestResult" class="investResultDiv"></div>   
+                    <div id="raceInvestResult" class="investResultDiv"></div>                      
                     
                     <div id="socialMediaInvest" class="investDiv">
                         <button id="btnInvestSocialMedia" class="investButton">Invest $5,000.00 In a Social Media Strategy - 90 sec CD</button> 
@@ -540,7 +536,7 @@
                     <div id="selfImprovementInvestResult" class="investResultDiv"></div>
 
                     <div id="selfImprovementInvest2" class="investDiv">
-                        <button id="btnInvestSelfImprovement2" class="investButton">Invest $50,000.00 In a Better Self Improvement Course<br />3 min CD</button> 
+                        <button id="btnInvestSelfImprovement2" class="investButton">Invest $50,000.00 In a Better Self Improvement Course - 3 min CD</button> 
                     </div>
                     <div id="selfImprovement2InvestResult" class="investResultDiv"></div>
 
@@ -550,14 +546,9 @@
                     <div id="energyInvestResult" class="investResultDiv"></div>                                      
 
                     <div id="superHeroInvest" class="investDiv">
-                        <button id="btnInvestSuperHero" class="investButton">Invest $2,000,000.00 In A Super Hero Builder<br />8 min CD</button> 
+                        <button id="btnInvestSuperHero" class="investButton">Invest $2,000,000.00 In A Super Hero Builder - 8 min CD</button> 
                     </div>
-                    <div id="superHeroInvestResult" class="investResultDiv"></div>
-
-                    <div id="drillInvest" class="investDiv">
-                        <button id="btnInvestDrill" class="investButton">Invest $5,000,000.00 In A Planetary Drill Operation<br />10 min CD</button> 
-                    </div>
-                    <div id="drillInvestResult" class="investResultDiv"></div>
+                    <div id="superHeroInvestResult" class="investResultDiv"></div>                    
 
                     <div id="movieInvest" class="investDiv">
                         <button id="btnInvestMovie" class="investButton">Invest $10,000,000.00 In a Movie - 15 min CD</button> 
@@ -591,6 +582,19 @@
                     <div id="CDInvestResult" class="investResultDiv"></div>                 
                 </div>     
 
+                <div id="expeditionInvestments" class="hidden_Divs"> 
+                    <h1>EXPEDITION INVESTMENTS</h1>
+                    <div id="miningInvest" class="investDiv">
+                        <button id="btnInvestMining" class="investButton">Invest $2,500.00 In a Mining Expedition - 1 min CD</button> 
+                    </div>
+                    <div id="miningInvestResult" class="investResultDiv"></div>   
+
+                    <div id="drillInvest" class="investDiv">
+                        <button id="btnInvestDrill" class="investButton">Invest $5,000,000.00 In A Planetary Drill Operation - 10 min CD</button> 
+                    </div>
+                    <div id="drillInvestResult" class="investResultDiv"></div>
+
+                </div>
                 <div id="permanentInvestments" class="hidden_Divs"> 
                     <h1>PERMANENT INVESTMENTS</h1>
                     Permanent Investments are purchased once to permanently generate profit. Unlike Crawlers, Permanent Investments don't generate Risk.
@@ -676,6 +680,9 @@
 
                     <div class="innerStockTab"><button id="btnStuccorStocks" class="stockSideButton">STUCCOR</button></div> <div id="stuccorOwnedStocksDisplay" class="innerStockTabThin"></div>                    
                     <div id="stuccorChange" class="innerStockTab">0.00</div> <div id="stuccorCurrentPrice" class="innerStockTabThick">0.00</div>
+
+                    <div class="innerStockTab"><button id="btnFEStocks" class="stockSideButton">FE</button></div> <div id="FEOwnedStocksDisplay" class="innerStockTabThin"></div>                    
+                    <div id="FEChange" class="innerStockTab">0.00</div> <div id="FECurrentPrice" class="innerStockTabThick">0.00</div>
 
                     <div class="innerStockTab"><button id="btnDelcredStocks" class="stockSideButton">DELCRED</button></div> <div id="delcredOwnedStocksDisplay" class="innerStockTabThin"></div>                    
                     <div id="delcredChange" class="innerStockTab">0.00</div> <div id="delcredCurrentPrice" class="innerStockTabThick">0.00</div>
@@ -1197,9 +1204,46 @@
                         <button id="btnSellStuccorStocks10" class="stockButton">Sell 10</button><br />
                         <button id="btnSellStuccorStocks100" class="stockButton">Sell 100</button><br />
                         <button id="btnSellStuccorStocksAll" class="stockButton">Sell All</button> 
-                    </div>                                   
-                             
+                    </div>                                                               
                 </div> 
+
+                <div id="FEStockDisplay" class="stockDisplay">
+                    <h1>FE</h1>
+                    <div class="stockButtonColumnLeftShort">  
+                        <div id="FEMoneySpentHeader" class="stockTypeDisplayHeader">Spent Amount: </div>              
+                        <div id="FEMoneySpent" class="stockTypeDisplay">$0.00</div>
+                    </div>
+                    <div class="stockButtonColumnRightShort">
+                        <div id="FESellEstimateHeader" class="stockTypeDisplayHeader">Sell Estimate: </div> 
+                        <div id="FESellEstimate" class="stockTypeDisplay"></div>
+                    </div> 
+                    <div class="stockButtonColumnLeftShort">      
+                        <div class="stockTypeDisplayHeader">Owned Stocks:</div>
+                        <div id="FEOwnedStocks" class="stockTypeDisplay">0</div>
+                    </div>   
+                    <div class="stockButtonColumnRightShort">
+                        
+                    </div> 
+                    <div id="FEHistoryDisplay"class="historyDisplay">
+                    </div>
+                    <div id="FEBuySell" class="buySell">
+                        <div class="stockTypeDisplayHeader">Current Buy:</div> <div id="FEStockDisplayCost" class="stockTypeDisplay"></div>
+                        <div class="stockTypeDisplayHeader">Current Sell:</div> <div id="FEStockSellPrice" class="stockTypeDisplay"></div>
+                    </div>                                  
+                    <div class="stockButtonColumnLeft">
+                        <button id="btnBuyFEStocks" class="stockButton">Buy 1</button><br />
+                        <button id="btnBuyFEStocks10" class="stockButton">Buy 10</button><br />
+                        <button id="btnBuyFEStocks100" class="stockButton">Buy 100</button><br />
+                        <button id="btnBuyFEStocksAll" class="stockButton">Buy All</button>
+                    </div>                 
+                    <div class="stockButtonColumnRight">
+                        <button id="btnSellFEStocks" class="stockButton">Sell 1</button><br />
+                        <button id="btnSellFEStocks10" class="stockButton">Sell 10</button><br />
+                        <button id="btnSellFEStocks100" class="stockButton">Sell 100</button><br />
+                        <button id="btnSellFEStocksAll" class="stockButton">Sell All</button> 
+                    </div>                                                               
+                </div> 
+
                 <div id="delcredStockDisplay" class="stockDisplay">
                     <h1>DELCRED</h1>
                     <div class="stockButtonColumnLeftShort">  
@@ -3337,6 +3381,7 @@
     <script src="Resources/Scripts/Stocks/PALLAD.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/KELV.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/Stuccor.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Stocks/FE.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/Delcred.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/Rustec.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/Exxocred.js" type="text/javascript"></script>
@@ -3367,6 +3412,7 @@
 
     <script src="Resources/Scripts/Investment/ShortTermInvestments.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Investment/LongTermInvestments.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Investment/ExpeditionInvestments.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Investment/PermanentInvestments.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Investment/SummaryInvestments.js" type="text/javascript"></script>
 
