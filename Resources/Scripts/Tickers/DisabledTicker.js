@@ -50,15 +50,23 @@
 
         // INVESTMENTS //
         $('#btnInvestRental').prop('disabled', true);
-        if (money >= 500)
+        if (money >= 500 && investRentalBike < 200)
             $('#btnInvestRental').prop('disabled', false);
 
         $('#btnInvestRealEstate').prop('disabled', true);
-        if (money >= 250000)
+        if (money >= 250000 && investSmallProperty < 50)
             $('#btnInvestRealEstate').prop('disabled', false);
 
+        $('#btnInvest3BR').prop('disabled', true);
+        if (money >= 450000 && investMediumProperty < 50)
+            $('#btnInvest3BR').prop('disabled', false);
+
+        $('#btnInvestBoat').prop('disabled', true);
+        if (money >= 1100000 && investBoat < 100)
+            $('#btnInvestBoat').prop('disabled', false);
+
         $('#btnInvestMansion').prop('disabled', true);
-        if (money >= 750000)
+        if (money >= 2250000 && investMansion < 10)
             $('#btnInvestMansion').prop('disabled', false);
 
         // WARRIOR CODE //

@@ -329,7 +329,7 @@
         stuccor2ndPreviousStockPrice = stuccorPreviousStockPrice;
         stuccorPreviousStockPrice = stuccorCurrentStockPrice;
 
-        stuccorIncrement = Math.round(1000 * Math.random()) / 100 - 5;
+        stuccorIncrement = Math.round(1000 * Math.random()) / 100 - 4.95;
         if (stuccorIncrement > 0) {
             $("#stuccorChange").css("color", "#24b41e");
             $("#stuccorChange").html("+" + stuccorIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -355,7 +355,7 @@
         FE2ndPreviousStockPrice = FEPreviousStockPrice;
         FEPreviousStockPrice = FECurrentStockPrice;
 
-        FEIncrement = Math.round(1000 * Math.random()) / 100 - 5;
+        FEIncrement = Math.round(1000 * Math.random()) / 100 - 4.9;
         if (FEIncrement > 0) {
             $("#FEChange").css("color", "#24b41e");
             $("#FEChange").html("+" + FEIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -372,7 +372,7 @@
         $('#FEStockSellPrice').html('$' + (FECurrentStockPrice - FECurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#FESellEstimate').html('$' + (ownedFEStocks * (FECurrentStockPrice - FECurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         localStorage.setItem("FECurrentStockPrice", FECurrentStockPrice);
-        // stuccor END //
+        // FE END //
 
         // delcred //
         delcred5thPreviousStockPrice = delcred4thPreviousStockPrice;

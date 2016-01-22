@@ -166,6 +166,16 @@
     margin-top: 200px;
 }
 
+#invest3BR {
+    margin-left: 220px;
+    margin-top: 350px;
+}
+
+#investBoat {
+    margin-left: 400px;
+    margin-top: 550px;
+}
+
 #investMansion {
     margin-left: 500px;
     margin-top: 1000px;
@@ -189,6 +199,14 @@
 }
 
 #investRealEstate:hover > #investRealEstatePopup {
+    display: block;   
+}
+
+#invest3BR:hover > #invest3BRPopup {
+    display: block;   
+}
+
+#investBoat:hover > #investBoatPopup {
     display: block;   
 }
 

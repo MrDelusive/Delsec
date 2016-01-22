@@ -270,6 +270,7 @@ $(document).ready(function () {
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
             $('#btnLongTermInvestments').prop('disabled', false);
+            $('#btnExpeditionInvestments').prop('disabled', false);
             $('#btnPermanentInvestments').prop('disabled', false);
             $('#btnSummaryInvestments').prop('disabled', false);
         }
