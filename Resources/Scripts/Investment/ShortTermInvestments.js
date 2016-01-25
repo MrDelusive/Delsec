@@ -10,6 +10,8 @@ $(document).ready(function () {
     //initially disabled for some reason.
     $('#btnInvestWiki').prop('disabled', false);
     $('#btnInvestWiki').click(function () {
+        wikiActive = "true";
+        localStorage.setItem("wikiActive", wikiActive);
         if (money >= 2) {
             var timer = 10;
             $('#wikiInvestResult').html("Investing: " + timer + " seconds remaining.");
@@ -25,6 +27,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -101,6 +104,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                wikiActive = "false";
+                localStorage.setItem("wikiActive", wikiActive);
             }, 10000);                     
         }
         else
@@ -110,7 +115,9 @@ $(document).ready(function () {
 
     //SWITCH INVEST
     $('#btnInvestTwitch').prop('disabled', false);
-    $('#btnInvestTwitch').click(function () {      
+    $('#btnInvestTwitch').click(function () {
+        twitchActive = "true";
+        localStorage.setItem("twitchActive", twitchActive);
         if (money >= 5) {                      
             $("#emailQuickScopeHeading").show(1);
             //jQuery being a pain in the ass not storing things as bools
@@ -134,6 +141,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -208,6 +216,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                twitchActive = "false";
+                localStorage.setItem("twitchActive", twitchActive);
             }, 10000);
         }
         else
@@ -218,6 +228,8 @@ $(document).ready(function () {
     //PUNCH INVEST
     $('#btnInvestPunch').prop('disabled', false);
     $('#btnInvestPunch').click(function () {
+        punchActive = "true";
+        localStorage.setItem("punchActive", punchActive);
         if (money >= 10) {                   
             var timer = 15;
             $('#punchInvestResult').html("Investing: " + timer + " seconds remaining.");
@@ -232,6 +244,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -308,6 +321,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                punchActive = "false";
+                localStorage.setItem("punchActive", punchActive);
             }, 15000);
         }
         else
@@ -319,6 +334,8 @@ $(document).ready(function () {
     $('#btnInvestWebsite').prop('disabled', false);
     $('#btnInvestWebsite').click(function () {
         if (money >= 25) {
+            websiteActive = "true";
+            localStorage.setItem("websiteActive", websiteActive);
             var timer = 15;
             $('#websiteInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
@@ -332,6 +349,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -408,6 +426,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                websiteActive = "false";
+                localStorage.setItem("websiteActive", websiteActive);
             }, 15000);
         }
         else
@@ -418,6 +438,8 @@ $(document).ready(function () {
     //POKER INVEST
     $('#btnInvestPoker').prop('disabled', false);
     $('#btnInvestPoker').click(function () {
+        pokerActive = "true";
+        localStorage.setItem("pokerActive", pokerActive);
         if (money >= 100) {
             var timer = 20;
             $('#pokerInvestResult').html("Investing: " + timer + " seconds remaining.");
@@ -432,6 +454,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -507,6 +530,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                pokerActive = "false";
+                localStorage.setItem("pokerActive", pokerActive);
             }, 20000);
         }
         else
@@ -517,6 +542,8 @@ $(document).ready(function () {
     //CAR RACE INVEST
     $('#btnInvestRace').prop('disabled', false);
     $('#btnInvestRace').click(function () {
+        raceActive = "true";
+        localStorage.setItem("raceActive", raceActive);
         if (money >= 1000) {
             var timer = 30;
             $('#raceInvestResult').html("Investing: " + timer + " seconds remaining.");
@@ -531,6 +558,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -606,18 +634,20 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                raceActive = "false";
+                localStorage.setItem("raceActive", raceActive);
             }, 30000);
         }
         else
             $('#raceInvestResult').html("Not enough money to Invest.");
         return false;
     });
-
-    //MINING EXPEDITION INVEST
     
     //SOCIAL MEDIA
     $('#btnInvestSocialMedia').prop('disabled', false);
     $('#btnInvestSocialMedia').click(function () {
+        socialMediaActive = "true";
+        localStorage.setItem("socialMediaActive", socialMediaActive);
         if (money >= 5000) {
             var timer = 90;
             $('#socialMediaInvestResult').html("Investing: " + timer + " seconds remaining.");
@@ -632,6 +662,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -707,6 +738,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                socialMediaActive = "false";
+                localStorage.setItem("socialMediaActive", socialMediaActive);
             }, 90000);
         }
         else
@@ -717,6 +750,8 @@ $(document).ready(function () {
     //BLUE CHIP COMPANY , from here cycle takes 1 extra second cause of chrome not displaying the result after 0min0sec tick, it does it before.
     $('#btnInvestBlueChip').prop('disabled', false);
     $('#btnInvestBlueChip').click(function () {
+        blueChipActive = "true";
+        localStorage.setItem("blueChipActive", blueChipActive);
         if (money >= 10000) {
             var minutes = 2;
             var seconds = 60;
@@ -745,6 +780,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -830,6 +866,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                blueChipActive = "false";
+                localStorage.setItem("blueChipActive", blueChipActive);
             }, 120000);
         }
         else
@@ -840,6 +878,8 @@ $(document).ready(function () {
     //SelfImprovement
     $('#btnInvestSelfImprovement').prop('disabled', false);
     $('#btnInvestSelfImprovement').click(function () {
+        selfImprovementActive = "true";
+        localStorage.setItem("selfImprovementActive", selfImprovementActive);
         if (money >= 25000) {          
             var minutes = 3;
             var seconds = 60;
@@ -868,6 +908,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -953,6 +994,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                selfImprovementActive = "false";
+                localStorage.setItem("selfImprovementActive", selfImprovementActive);
             }, 181000);
         }
         else
@@ -963,6 +1006,8 @@ $(document).ready(function () {
     //SelfImprovement2
     $('#btnInvestSelfImprovement2').prop('disabled', false);
     $('#btnInvestSelfImprovement2').click(function () {
+        selfImprovement2Active = "true";
+        localStorage.setItem("selfImprovement2Active", selfImprovement2Active);
         if (money >= 50000) {
             var minutes = 3;
             var seconds = 60;
@@ -991,6 +1036,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -1076,6 +1122,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                selfImprovement2Active = "false";
+                localStorage.setItem("selfImprovement2Active", selfImprovement2Active);
             }, 181000);
         }
         else
@@ -1086,6 +1134,8 @@ $(document).ready(function () {
     //Energy
     $('#btnInvestEnergy').prop('disabled', false);
     $('#btnInvestEnergy').click(function () {
+        energyActive = "true";
+        localStorage.setItem("energyActive", energyActive);
         if (money >= 100000) {
             var minutes = 4;
             var seconds = 60;
@@ -1114,6 +1164,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -1199,6 +1250,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                energyActive = "false";
+                localStorage.setItem("energyActive", energyActive);
             }, 241000);
         }
         else
@@ -1209,6 +1262,8 @@ $(document).ready(function () {
     //Super hero Builder
     $('#btnInvestSuperHero').prop('disabled', false);
     $('#btnInvestSuperHero').click(function () {
+        superHeroActive = "true";
+        localStorage.setItem("superHeroActive", superHeroActive);
         if (money >= 2000000) {
             var minutes = 8;
             var seconds = 60;
@@ -1237,6 +1292,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -1322,6 +1378,8 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                superHeroActive = "false";
+                localStorage.setItem("superHeroActive", superHeroActive);
             }, 481000);
         }
         else
@@ -1332,6 +1390,8 @@ $(document).ready(function () {
     // Movie
     $('#btnInvestMovie').prop('disabled', false);
     $('#btnInvestMovie').click(function () {
+        movieActive = "true";
+        localStorage.setItem("movieActive", movieActive);
         if (money >= 10000000) {
             var minutes = 15;
             var seconds = 60;
@@ -1360,6 +1420,7 @@ $(document).ready(function () {
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -1445,10 +1506,140 @@ $(document).ready(function () {
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                movieActive = "false";
+                localStorage.setItem("movieActive", movieActive);
             }, 901000);
         }
         else
             $('#movieInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    // Experimental Technology
+    $('#btnInvestExperimental').prop('disabled', false);
+    $('#btnInvestExperimental').click(function () {
+        experimentalActive = "true";
+        localStorage.setItem("experimentalActive", experimentalActive);
+        if (money >= 50000000) {
+            var minutes = 15;
+            var seconds = 60;
+            $('#experimentalInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#experimentalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#experimentalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#experimentalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 50000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                if (userClass == "Healer")
+                    roll += 1;
+                switch (roll) {
+                    case 1: //-75%   
+                        increment = investAmt * 0.25;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in a Brain-Washer. It cleans brains, it doesn't manipulate people. You lose 75% of your investment. <b>RESULT: -$"
+                            + (investAmt * 0.75).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //investment - 50%                        
+                        increment = investAmt * 0.5;
+                        money += increment; // extra steps for use in alert
+                        $('#experimentalInvestResult').html("You invest in a Mouse Enlarger. The mice still behave exactly the same. You lose half of your investment. <b>RESULT: -$"
+                            + (investAmt / 2).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //investment - 20%
+                        increment = investAmt * 0.8;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in a Sound Cancelation Device. It only works in a line the size of the device. You lose 20% of your investment. <b>RESULT: -$"
+                            + (investAmt / 5).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //investment + 5%
+                        increment = investAmt * 1.05;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in a Pneumatic Transport System. It is a good alternative <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //investment + 10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in an alternate for Global Communication. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //investment + 20%
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in a cheap House Builder. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //investment + 30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in a Force Field System. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //investment + 50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in Quantum Computing. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //investment + 60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in Anti-Matter fueled Transport. It earns quite a bit. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //investment + 75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in a Universal Constructor. It can build anything. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //investment + 100% Only possible from Healer
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#experimentalInvestResult').html("You invest in a Respawner. It can respawn anyone who dies. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                movieActive = "false";
+                localStorage.setItem("movieActive", movieActive);
+            }, 901000);
+        }
+        else
+            $('#experimentalInvestResult').html("Not enough money to Invest.");
         return false;
     });
 

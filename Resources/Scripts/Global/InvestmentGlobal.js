@@ -1,5 +1,26 @@
 ﻿var totalInvestment = 0;
 
+var wikiActive = "false";
+var twitchActive = "false";
+var punchActive = "false";
+var websiteActive = "false";
+var pokerActive = "false";
+var raceActive = "false";
+var socialMediaActive = "false"; 
+var blueChipActive = "false";
+var selfImprovementActive = "false";
+var selfImprovement2Active = "false";
+var energyActive = "false";
+var superHeroActive = "false";
+var movieActive = "false";
+var experimentalActive = "false";
+
+var goldbotActive = "false";
+var gameActive = "false";
+var goldActive = "false";
+var CDActive = "false";
+
+
 var investRentalBike = 0;
 var investRentalBikeMax = 200;
 

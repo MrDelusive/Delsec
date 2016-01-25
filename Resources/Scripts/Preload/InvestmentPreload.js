@@ -1,5 +1,44 @@
 ﻿$(document).ready(function () {
 
+    if (localStorage.getItem("wikiActive") === null)
+        localStorage.setItem("wikiActive", wikiActive);
+    if (localStorage.getItem("twitchActive") === null)
+        localStorage.setItem("twitchActive", twitchActive);
+    if (localStorage.getItem("punchActive") === null)
+        localStorage.setItem("punchActive", punchActive);
+    if (localStorage.getItem("websiteActive") === null)
+        localStorage.setItem("websiteActive", websiteActive);
+    if (localStorage.getItem("pokerActive") === null)
+        localStorage.setItem("pokerActive", pokerActive);
+    if (localStorage.getItem("raceActive") === null)
+        localStorage.setItem("raceActive", raceActive);
+    if (localStorage.getItem("socialMediaActive") === null)
+        localStorage.setItem("socialMediaActive", socialMediaActive);
+    if (localStorage.getItem("blueChipActive") === null)
+        localStorage.setItem("blueChipActive", blueChipActive);
+    if (localStorage.getItem("selfImprovementActive") === null)
+        localStorage.setItem("selfImprovementActive", selfImprovementActive);
+    if (localStorage.getItem("selfImprovement2Active") === null)
+        localStorage.setItem("selfImprovement2Active", selfImprovement2Active);
+    if (localStorage.getItem("energyActive") === null)
+        localStorage.setItem("energyActive", energyActive);
+    if (localStorage.getItem("superHeroActive") === null)
+        localStorage.setItem("superHeroActive", superHeroActive);
+    if (localStorage.getItem("movieActive") === null)
+        localStorage.setItem("movieActive", movieActive);
+    if (localStorage.getItem("experimentalActive") === null)
+        localStorage.setItem("experimentalActive", experimentalActive);
+
+    if (localStorage.getItem("goldbotActive") === null)
+        localStorage.setItem("goldbotActive", goldbotActive);
+    if (localStorage.getItem("gameActive") === null)
+        localStorage.setItem("gameActive", gameActive);
+    if (localStorage.getItem("goldActive") === null)
+        localStorage.setItem("goldActive", goldActive);
+    if (localStorage.getItem("CDActive") === null)
+        localStorage.setItem("CDActive", CDActive);
+
+
     if (localStorage.getItem("investRentalBike") === null)
         localStorage.setItem("investRentalBike", investRentalBike);
     if (localStorage.getItem("investFranchise") === null)
@@ -33,7 +72,210 @@
 
 
     if (typeof (Storage) !== "undefined") {
+
+        wikiActive = localStorage.getItem("wikiActive");
+        twitchActive = localStorage.getItem("twitchActive")
+        punchActive = localStorage.getItem("punchActive");
+        websiteActive = localStorage.getItem("websiteActive")
+        pokerActive = localStorage.getItem("pokerActive");
+        raceActive = localStorage.getItem("raceActive");
+        socialMediaActive = localStorage.getItem("socialMediaActive");
+        blueChipActive = localStorage.getItem("blueChipActive")
+        selfImprovementActive = localStorage.getItem("selfImprovementActive");
+        selfImprovement2Active = localStorage.getItem("selfImprovement2Active")
+        energyActive = localStorage.getItem("energyActive");
+        superHeroActive = localStorage.getItem("superHeroActive")
+        movieActive = localStorage.getItem("movieActive");
+        experimentalActive = localStorage.getItem("experimentalActive");
+        goldbotActive = localStorage.getItem("goldbotActive");
+        gameActive = localStorage.getItem("gameActive");
+        goldActive = localStorage.getItem("goldActive");
+        CDActive = localStorage.getItem("CDActive");
+
+        // If it was still active during reset, refund the player.
+        if (wikiActive == "true") {
+            wikiActive = "false";
+            localStorage.setItem("wikiActive", wikiActive);
+            money += 2;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (twitchActive == "true") {
+            twitchActive = "false";
+            localStorage.setItem("twitchActive", twitchActive);
+            money += 5;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (punchActive == "true") {
+            punchActive = "false";
+            localStorage.setItem("punchActive", punchActive);
+            money += 10;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (websiteActive == "true") {
+            websiteActive = "false";
+            localStorage.setItem("websiteActive", websiteActive);
+            money += 25;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (pokerActive == "true") {
+            pokerActive = "false";
+            localStorage.setItem("pokerActive", pokerActive);
+            money += 100;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (raceActive == "true") {
+            raceActive = "false";
+            localStorage.setItem("raceActive", raceActive);
+            money += 1000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (socialMediaActive == "true") {
+            socialMediaActive = "false";
+            localStorage.setItem("socialMediaActive", socialMediaActive);
+            money += 5000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (blueChipActive == "true") {
+            blueChipActive = "false";
+            localStorage.setItem("blueChipActive", blueChipActive);
+            money += 10000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (selfImprovementActive == "true") {
+            selfImprovementActive = "false";
+            localStorage.setItem("selfImprovementActive", selfImprovementActive);
+            money += 25000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (selfImprovement2Active == "true") {
+            selfImprovement2Active = "false";
+            localStorage.setItem("selfImprovement2Active", selfImprovement2Active);
+            money += 50000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (energyActive == "true") {
+            energyActive = "false";
+            localStorage.setItem("energyActive", energyActive);
+            money += 100000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (superHeroActive == "true") {
+            superHeroActive = "false";
+            localStorage.setItem("superHeroActive", superHeroActive);
+            money += 2000000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (movieActive == "true") {
+            movieActive = "false";
+            localStorage.setItem("movieActive", movieActive);
+            money += 10000000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (experimentalActive == "true") {
+            experimentalActive = "false";
+            localStorage.setItem("experimentalActive", experimentalActive);
+            money += 50000000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        //LONG TERM
+        if (goldbotActive == "true") {
+            goldbotActive = "false";
+            localStorage.setItem("goldbotActive", goldbotActive);
+            money += 3;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (gameActive == "true") {
+            gameActive = "false";
+            localStorage.setItem("gameActive", gameActive);
+            money += 25;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (goldActive == "true") {
+            goldActive = "false";
+            localStorage.setItem("goldActive", goldActive);
+            money += 1000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+        
+        if (CDActive == "true") {
+            CDActive = "false";
+            localStorage.setItem("CDActive", CDActive);
+            money += 25000;
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
         if (userClass == "Healer") {
+
             investRentalBike = localStorage.getItem("investRentalBike");
             investFranchise = localStorage.getItem("investFranchise");
             investSmallProperty = localStorage.getItem("investSmallProperty");
