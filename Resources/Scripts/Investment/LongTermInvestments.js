@@ -256,7 +256,7 @@
                     }
                 }, 1000);
             }
-            var investAmt = 25;
+            var investAmt = 1000;
             money -= investAmt;
             totalInvestment += investAmt;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

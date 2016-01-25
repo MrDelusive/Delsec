@@ -161,9 +161,15 @@
     margin-top: 50px;
 }
 
+#investFranchise {   
+    margin-left: 580px;
+    margin-top: 950px;
+}
+
+
 #investRealEstate {
     margin-left: 150px;
-    margin-top: 200px;
+    margin-top: 700px;
 }
 
 #invest3BR {
@@ -176,10 +182,56 @@
     margin-top: 550px;
 }
 
-#investMansion {
-    margin-left: 500px;
-    margin-top: 1000px;
+#investBeachside {
+    margin-left: 450px;
+    margin-top: 700px;
 }
+
+#investMansion {
+    margin-left: 670px;
+    margin-top: 1080px;
+}
+
+#investHighEnd {
+    margin-left: 100px;
+    margin-top: 390px;
+}
+
+#investSkyscraperLevel {
+    margin-left: 500px;
+    margin-top: 1320px;
+}
+
+#investCBDStore {
+    margin-left: 320px;
+    margin-top: 1300px;
+}
+
+#investCarDealer {
+    margin-left: 360px;
+    margin-top: 1400px;
+}
+
+#investSupermarket {
+    margin-left: 120px;
+    margin-top: 220px;
+}
+
+#investFactory {
+    margin-left: 160px;
+    margin-top: 1350px;
+}
+
+#investSkyscraper {
+    margin-left: 450px;
+    margin-top: 1240px;
+}
+
+#investSpacePort {
+    margin-left: 650px;
+    margin-top: 100px;
+}
+
 .investPopup {
     display: none;
     position: relative;
@@ -198,6 +250,10 @@
     display: block;   
 }
 
+#investFranchise:hover > #investFranchisePopup {
+    display: block;   
+}
+
 #investRealEstate:hover > #investRealEstatePopup {
     display: block;   
 }
@@ -210,6 +266,42 @@
     display: block;   
 }
 
+#investBeachside:hover > #investBeachsidePopup {
+    display: block;   
+}
+
 #investMansion:hover > #investMansionPopup {
+    display: block;   
+}
+
+#investHighEnd:hover > #investHighEndPopup {
+    display: block;   
+}
+
+#investSkyscraperLevel:hover > #investSkyscraperLevelPopup {
+    display: block;   
+}
+
+#investCBDStore:hover > #investCBDStorePopup {
+    display: block;   
+}
+
+#investCarDealer:hover > #investCarDealerPopup {
+    display: block;   
+}
+
+#investSupermarket:hover > #investSupermarketPopup {
+    display: block;   
+}
+
+#investFactory:hover > #investFactoryPopup {
+    display: block;   
+}
+
+#investSkyscraper:hover > #investSkyscraperPopup {
+    display: block;   
+}
+
+#investSpacePort:hover > #investSpacePortPopup {
     display: block;   
 }

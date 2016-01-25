@@ -606,6 +606,11 @@
                             <div id="investRentalPopup" class="investPopup"></div>
                         </div>
 
+                        <div id="investFranchise" class="investButtonContainer">
+                            <button id="btnInvestFranchise" class="selectionButton"></button> 
+                            <div id="investFranchisePopup" class="investPopup"></div>
+                        </div>
+
                         <div id="investRealEstate" class="investButtonContainer">
                             <button id="btnInvestRealEstate" class="selectionButton"></button> 
                             <div id="investRealEstatePopup" class="investPopup"></div>
@@ -621,10 +626,55 @@
                             <div id="investBoatPopup" class="investPopup"></div>
                         </div>
 
+                        <div id="investBeachside" class="investButtonContainer">
+                            <button id="btnInvestBeachside" class="selectionButton"></button> 
+                            <div id="investBeachsidePopup" class="investPopup"></div>
+                        </div>
+
                         <div id="investMansion" class="investButtonContainer">
                             <button id="btnInvestMansion" class="selectionButton"></button> 
                             <div id="investMansionPopup" class="investPopup"></div>
-                        </div>                
+                        </div> 
+                        
+                        <div id="investHighEnd" class="investButtonContainer">
+                            <button id="btnInvestHighEnd" class="selectionButton"></button> 
+                            <div id="investHighEndPopup" class="investPopup"></div>
+                        </div>      
+
+                        <div id="investSkyscraperLevel" class="investButtonContainer">
+                            <button id="btnInvestSkyscraperLevel" class="selectionButton"></button> 
+                            <div id="investSkyscraperLevelPopup" class="investPopup"></div>
+                        </div>        
+                        
+                        <div id="investCBDStore" class="investButtonContainer">
+                            <button id="btnInvestCBDStore" class="selectionButton"></button> 
+                            <div id="investCBDStorePopup" class="investPopup"></div>
+                        </div>      
+                        
+                        <div id="investCarDealer" class="investButtonContainer">
+                            <button id="btnInvestCarDealer" class="selectionButton"></button> 
+                            <div id="investCarDealerPopup" class="investPopup"></div>
+                        </div>  
+                        
+                        <div id="investSupermarket" class="investButtonContainer">
+                            <button id="btnInvestSupermarket" class="selectionButton"></button> 
+                            <div id="investSupermarketPopup" class="investPopup"></div>
+                        </div>   
+                        
+                        <div id="investFactory" class="investButtonContainer">
+                            <button id="btnInvestFactory" class="selectionButton"></button> 
+                            <div id="investFactoryPopup" class="investPopup"></div>
+                        </div>
+                        
+                        <div id="investSkyscraper" class="investButtonContainer">
+                            <button id="btnInvestSkyscraper" class="selectionButton"></button> 
+                            <div id="investSkyscraperPopup" class="investPopup"></div>
+                        </div> 
+                        
+                        <div id="investSpacePort" class="investButtonContainer">
+                            <button id="btnInvestSpacePort" class="selectionButton"></button> 
+                            <div id="investSpacePortPopup" class="investPopup"></div>
+                        </div>          
                     </div>
                 </div>
 
@@ -639,6 +689,9 @@
                     <div id="rentalBikeSummary" class="summaryDiv"></div>
                     <div id="rentalBikeSummaryDisplay"class="investSummaryDisplay"></div>
 
+                    <div id="franchiseSummary" class="summaryDiv"></div>
+                    <div id="franchiseSummaryDisplay"class="investSummaryDisplay"></div>
+
                     <div id="smallPropertySummary" class="summaryDiv"></div>
                     <div id="smallPropertySummaryDisplay" class="investSummaryDisplay"></div>
 
@@ -648,8 +701,35 @@
                     <div id="boatSummary" class="summaryDiv"></div>
                     <div id="boatSummaryDisplay" class="investSummaryDisplay"></div>
 
+                    <div id="beachsideSummary" class="summaryDiv"></div>
+                    <div id="beachsideSummaryDisplay" class="investSummaryDisplay"></div>
+
                     <div id="mansionSummary" class="summaryDiv"></div>
                     <div id="mansionSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="highEndSummary" class="summaryDiv"></div>
+                    <div id="highEndSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="skyscraperLevelSummary" class="summaryDiv"></div>
+                    <div id="skyscraperLevelSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="CBDStoreSummary" class="summaryDiv"></div>
+                    <div id="CBDStoreSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="carDealerSummary" class="summaryDiv"></div>
+                    <div id="carDealerSummaryDisplay" class="investSummaryDisplay"></div>
+                    
+                    <div id="supermarketSummary" class="summaryDiv"></div>
+                    <div id="supermarketSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="factorySummary" class="summaryDiv"></div>
+                    <div id="factorySummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="skyscraperSummary" class="summaryDiv"></div>
+                    <div id="skyscraperSummaryDisplay" class="investSummaryDisplay"></div>
+
+                    <div id="spacePortSummary" class="summaryDiv"></div>
+                    <div id="spacePortSummaryDisplay" class="investSummaryDisplay"></div>
 
                     <div id="totalSummary" class="summaryDiv">Total:</div>
                     <div id="totalSummaryDisplay" class="investSummaryDisplay"></div>
@@ -3278,13 +3358,28 @@
             <!-- OPTIONS -->
             <div id="options" class="hidden_Divs">
                 <div id="optionsTop">
-			        Current Version: V0.70 <br /> <br />  
+                    <br />
+			        Current Version: V0.71 <br /> <br />  
                     <button id="btnResetAll">Reset All</button>
                     <button id="btnResetClass">Reset Class</button>
                 </div>
                 
                 <div class="patchNotes">
                     Patch notes<br /><br />
+                    V0.71
+                    <ul>
+                        <li>PLEASE NOTE: It is not really viable at this stage to buy heaps of the best crawlers, not untill I start adding the WIZARDS abilities which will make it easier.
+                             If risk gen gets to high it's gonna be a pain in the ass to monitor for the player.</li>
+                        <li>Iron Stock added. (FE)</li>       
+                        <li>Rebalanced Material Stocks a bit.</li>             
+                        <li>Added Permanent Investments for Healers. These generate less than the crawlers but they don't create risk so they are viable for long term afk gameplay.</li>
+                        <li>Created a map graphic for the Permanent Investments.</li>
+                        <li>Added Summary for Healers</li>
+                        <li>Added Expeditions for Healers, which generate materials to be sold on the stock market instead of money.</li>
+                        <li>Investment Result Chrome Display Bug fixed.</li>
+                        <li>Added a max amount for Permanent Investments.</li>
+                    </ul>
+                    <br />
                     V0.70
                     <ul>
                         <li>Scatter Logic Bombs added to warriors, which can be activated to disrupt the code for 1 sec and grant $888.</li>
@@ -3333,11 +3428,13 @@
                     </ul>
                  </div>
                 <div class="patchNotes">
-                    The plan:
+                    What's Next:
                     <ul>
-                        <li>Thinking to rework Investments, want it more interesting than just click button and wait.</li>
-                        <li>Rogues will have Shareholder options.</li>
-                        <li>Add all the crawlers</li>
+                        <li>Complete Investment Options.</li>
+                        <li>Rogues Shareholder Options.</li>
+                        <li>Add all the crawlers.</li>
+                        <li>Finish Warrior Code Creation Section.</li>
+                        <li>Once all the content is done, then will work on abilities for each class.</li>
                         <li>The plan for each class is: Warriors and Rogues will be a more active playstyle, requiring clicks/Active participation from the player.<br />
                             Wizards and Healers will have a more passive play style, player won't need to do as much monitoring.
                         </li>

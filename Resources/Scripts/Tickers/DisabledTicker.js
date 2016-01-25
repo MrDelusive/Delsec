@@ -50,24 +50,65 @@
 
         // INVESTMENTS //
         $('#btnInvestRental').prop('disabled', true);
-        if (money >= 500 && investRentalBike < 200)
+        if (money >= 500 && investRentalBike < investRentalBikeMax)
             $('#btnInvestRental').prop('disabled', false);
 
+        $('#btnInvestFranchise').prop('disabled', true);
+        if (money >= 50000 && investFranchise < investFranchiseMax)
+            $('#btnInvestFranchise').prop('disabled', false);
+
         $('#btnInvestRealEstate').prop('disabled', true);
-        if (money >= 250000 && investSmallProperty < 50)
+        if (money >= 250000 && investSmallProperty < investSmallPropertyMax)
             $('#btnInvestRealEstate').prop('disabled', false);
 
         $('#btnInvest3BR').prop('disabled', true);
-        if (money >= 450000 && investMediumProperty < 50)
+        if (money >= 450000 && investMediumProperty < investMediumPropertyMax)
             $('#btnInvest3BR').prop('disabled', false);
 
         $('#btnInvestBoat').prop('disabled', true);
-        if (money >= 1100000 && investBoat < 100)
+        if (money >= 1100000 && investBoat < investBoatMax)
             $('#btnInvestBoat').prop('disabled', false);
 
+        $('#btnInvestBeachside').prop('disabled', true);
+        if (money >= 1450000 && investBeachside < investBeachsideMax)
+            $('#btnInvestBeachside').prop('disabled', false);
+
         $('#btnInvestMansion').prop('disabled', true);
-        if (money >= 2250000 && investMansion < 10)
+        if (money >= 2250000 && investMansion < investMansionMax)
             $('#btnInvestMansion').prop('disabled', false);
+
+        $('#btnInvestHighEnd').prop('disabled', true);
+        if (money >= 5100000 && investHighEnd < investHighEndMax)
+            $('#btnInvestHighEnd').prop('disabled', false);
+
+        $('#btnInvestSkyscraperLevel').prop('disabled', true);
+        if (money >= 9800000 && investSkyscraperLevel < investSkyscraperLevelMax)
+            $('#btnInvestSkyscraperLevel').prop('disabled', false);
+
+        $('#btnInvestCBDStore').prop('disabled', true);
+        if (money >= 22000000 && investCBDStore < investCBDStoreMax)
+            $('#btnInvestCBDStore').prop('disabled', false);
+
+        $('#btnInvestCarDealer').prop('disabled', true);
+        if (money >= 58000000 && investCarDealer < investCarDealerMax)
+            $('#btnInvestCarDealer').prop('disabled', false);
+
+        $('#btnInvestSupermarket').prop('disabled', true);
+        if (money >= 172000000 && investSupermarket < investSupermarketMax)
+            $('#btnInvestSupermarket').prop('disabled', false);
+
+        $('#btnInvestFactory').prop('disabled', true);
+        if (money >= 420000000 && investFactory < investFactoryMax)
+            $('#btnInvestFactory').prop('disabled', false);
+
+        $('#btnInvestSkyscraper').prop('disabled', true);
+        if (money >= 880000000 && investSkyscraper < investSkyscraperMax)
+            $('#btnInvestSkyscraper').prop('disabled', false);
+
+        $('#btnInvestSpacePort').prop('disabled', true);
+        if (money >= 1500000000 && investSpacePort < investSpacePortMax)
+            $('#btnInvestSpacePort').prop('disabled', false);
+
 
         // WARRIOR CODE //
         $('#btnWriteEfficiency2Code').prop('disabled', true);
