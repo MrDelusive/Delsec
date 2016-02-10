@@ -235,6 +235,11 @@
         OSMPreviousStockPrice = OSMCurrentStockPrice;
 
         OSMIncrement = Math.round(200 * Math.random()) / 100 - 1;
+        OSMCurrentStockPrice += OSMIncrement;
+        if (OSMCurrentStockPrice <= 4) {
+            OSMCurrentStockPrice = 4;
+            OSMIncrement = 0;
+        }
         if (OSMIncrement > 0) {
             $("#OSMChange").css("color", "#24b41e");
             $("#OSMChange").html("+" + OSMIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -243,9 +248,12 @@
             $("#OSMChange").css("color", "#ce0000");
             $("#OSMChange").html(OSMIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
-        OSMCurrentStockPrice += OSMIncrement;
-        if (OSMCurrentStockPrice <= 0)
-            OSMCurrentStockPrice = 0.01;
+        else if (OSMIncrement == 0) {
+            $("#OSMChange").css("color", "#5ac7ff");
+            $("#OSMChange").html(OSMIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+        
+        
         $('#OSMStockDisplayCost').html('$' + OSMCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#OSMCurrentPrice').html('$' + OSMCurrentStockPrice.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#OSMStockSellPrice').html('$' + (OSMCurrentStockPrice - OSMCurrentStockPrice / sellDivider).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

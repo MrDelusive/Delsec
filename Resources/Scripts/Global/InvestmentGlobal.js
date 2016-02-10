@@ -14,6 +14,8 @@ var energyActive = "false";
 var superHeroActive = "false";
 var movieActive = "false";
 var experimentalActive = "false";
+var timeTravelActive = "false";
+var mysteryActive = "false";
 
 var goldbotActive = "false";
 var gameActive = "false";
