@@ -357,7 +357,6 @@
         return false;
     });
 
-
     //CD INVEST
     $('#btnInvestCD').prop('disabled', false);
     $('#btnInvestCD').click(function () {

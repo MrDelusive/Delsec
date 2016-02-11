@@ -11,6 +11,10 @@
    background:#000; 
 }
 
+.hyperlink {
+    color: white;
+}
+
 #left_Main
 {
     float:left;

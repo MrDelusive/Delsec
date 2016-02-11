@@ -80,16 +80,16 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#btnEmail10KView').click(function () {
-        $("#email10K").toggle();
-        if (email10KViewed == "false") {
+    $('#btnEmail1KView').click(function () {
+        $("#email1K").toggle();
+        if (email1KViewed == "false") {
             numUnreadEmails--;
-            email10KViewed = "true";
-            localStorage.setItem("email10KViewed", email10KViewed);
+            email1KViewed = "true";
+            localStorage.setItem("email1KViewed", email1KViewed);
             localStorage.setItem("numUnreadEmails", numUnreadEmails);
             $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
-            $('#btnEmail10KView').html("Delsec Team - $10,000 (Viewed)");
-            $('#btnEmail10KView').css("background", "#CCC");
+            $('#btnEmail1KView').html("Delsec Team - $1,000 (Viewed)");
+            $('#btnEmail1KView').css("background", "#CCC");
         }
         return false;
     });

@@ -2,13 +2,13 @@
 
     setInterval(function () {  
         $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
-        if (money >= 10000) {            
-            if (email10KDisplayed == "false") {
-                $("#email10KHeading").show(1);
+        if (money >= 1000) {            
+            if (email1KDisplayed == "false") {
+                $("#email1KHeading").show(1);
                 numUnreadEmails++;
                 localStorage.setItem("numUnreadEmails", numUnreadEmails);
-                email10KDisplayed = "true";
-                localStorage.setItem("email10KDisplayed", email10KDisplayed);
+                email1KDisplayed = "true";
+                localStorage.setItem("email1KDisplayed", email1KDisplayed);
                 $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
             }
         }

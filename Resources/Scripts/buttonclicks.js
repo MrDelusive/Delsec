@@ -108,7 +108,7 @@ $(document).ready(function () {
 
     // The class selection buttons
     $('#btnWarriorAbility').click(function () {
-        if (money >= 10000 && userClass == "None") {
+        if (money >= 1000 && userClass == "None") {
             userClass = "Warrior";
             localStorage.setItem("userClass", userClass);
             
@@ -136,14 +136,14 @@ $(document).ready(function () {
             $("#btnPowerGenerators").fadeIn(500);
             $("#warriorGenerate").fadeIn(500);
             $("#btnCoding").fadeIn(500);
-            money -= 10000;
+            money -= 1000;
             localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
         else {
-            $('#abilityErrorHeading').html("Need at least $10,000");
+            $('#abilityErrorHeading').html("Need at least $1,000");
             $('#abilityErrorHeading').fadeIn(1);
             $('#abilityErrorHeading').delay(500);
             $('#abilityErrorHeading').fadeOut(500);
@@ -152,7 +152,7 @@ $(document).ready(function () {
     });
 
     $('#btnWizardAbility').click(function () {
-        if (money >= 10000 && userClass == "None") {
+        if (money >= 1000 && userClass == "None") {
             userClass = "Wizard";
             localStorage.setItem("userClass", userClass);
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
             $('#wizardAbilities').fadeIn(500);
             $('#btnWizardAbilities').fadeIn(500);
             $("#autoWizardGenerate").fadeIn(500);
-            money -= 10000;
+            money -= 1000;
             localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -186,7 +186,7 @@ $(document).ready(function () {
             $('#btnGriffonbankCrawlerShop').prop('disabled', false);
         }
         else {
-            $('#abilityErrorHeading').html("Need at least $10,000");
+            $('#abilityErrorHeading').html("Need at least $1,000");
             $('#abilityErrorHeading').fadeIn(1);
             $('#abilityErrorHeading').delay(500);
             $('#abilityErrorHeading').fadeOut(500);
@@ -195,7 +195,7 @@ $(document).ready(function () {
     });
 
     $('#btnRogueAbility').click(function () {
-        if (money >= 10000 && userClass == "None") {
+        if (money >= 1000 && userClass == "None") {
             userClass = "Rogue";
             localStorage.setItem("userClass", userClass);
             sellDivider = 20;
@@ -218,7 +218,7 @@ $(document).ready(function () {
             $('#rogueAbilities').fadeIn(500);
             $('#btnRogueAbilities').fadeIn(500);
             $("#rogueGenerate").fadeIn(500);
-            money -= 10000;
+            money -= 1000;
             localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -232,7 +232,7 @@ $(document).ready(function () {
 
         }
         else {
-            $('#abilityErrorHeading').html("Need at least $10,000");
+            $('#abilityErrorHeading').html("Need at least $1,000");
             $('#abilityErrorHeading').fadeIn(1);
             $('#abilityErrorHeading').delay(500);
             $('#abilityErrorHeading').fadeOut(500);
@@ -241,7 +241,7 @@ $(document).ready(function () {
     });
 
     $('#btnHealerAbility').click(function () {
-        if (money >= 10000 && userClass == "None") {
+        if (money >= 1000 && userClass == "None") {
             userClass = "Healer";
             localStorage.setItem("userClass", userClass);
             
@@ -263,7 +263,7 @@ $(document).ready(function () {
             $('#healerAbilities').fadeIn(500);
             $('#btnHealerAbilities').fadeIn(500);
             $("#healerGenerate").fadeIn(500);
-            money -= 10000;
+            money -= 1000;
             localStorage.setItem("money", money);
             $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -275,7 +275,7 @@ $(document).ready(function () {
             $('#btnSummaryInvestments').prop('disabled', false);
         }
         else {
-            $('#abilityErrorHeading').html("Need at least $10,000");
+            $('#abilityErrorHeading').html("Need at least $1,000");
             $('#abilityErrorHeading').fadeIn(1);
             $('#abilityErrorHeading').delay(500);
             $('#abilityErrorHeading').fadeOut(500);

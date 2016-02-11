@@ -29,10 +29,10 @@
     if (localStorage.getItem("emailDelsecStockViewed") === null)
         localStorage.setItem("emailDelsecStockViewed", emailDelsecStockViewed);
 
-    if (localStorage.getItem("email10KDisplayed") === null)
-        localStorage.setItem("email10KDisplayed", email10KDisplayed);
-    if (localStorage.getItem("email10KViewed") === null)
-        localStorage.setItem("email10KViewed", email10KViewed);
+    if (localStorage.getItem("email1KDisplayed") === null)
+        localStorage.setItem("email1KDisplayed", email1KDisplayed);
+    if (localStorage.getItem("email1KViewed") === null)
+        localStorage.setItem("email1KViewed", email1KViewed);
 
     if (localStorage.getItem("email4ByteViewed") === null)
         localStorage.setItem("email4ByteViewed", email4ByteViewed);
@@ -75,8 +75,8 @@
         emailDelsecStockViewed = localStorage.getItem("emailDelsecStockViewed");
         emailDelsecStockDisplayed = localStorage.getItem("emailDelsecStockDisplayed");
 
-        email10KViewed = localStorage.getItem("email10KViewed");
-        email10KDisplayed = localStorage.getItem("email10KDisplayed");
+        email1KViewed = localStorage.getItem("email1KViewed");
+        email1KDisplayed = localStorage.getItem("email1KDisplayed");
 
         email4ByteViewed = localStorage.getItem("email4ByteViewed");
 
@@ -133,11 +133,11 @@
         $('#btnEmailDelsecStockView').css("background", "#CCC");
     }
 
-    if (email10KDisplayed == "true")
-        $("#email10KHeading").show(1);
-    if (email10KViewed == "true") {
-        $('#btnEmail10KView').html("Delsec Team - $10,000 (Viewed)");
-        $('#btnEmail10KView').css("background", "#CCC");
+    if (email1KDisplayed == "true")
+        $("#email1KHeading").show(1);
+    if (email1KViewed == "true") {
+        $('#btnEmail1KView').html("Delsec Team - $1,000 (Viewed)");
+        $('#btnEmail1KView').css("background", "#CCC");
     }
 
     if (email4ByteViewed == "true") {

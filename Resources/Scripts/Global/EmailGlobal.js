@@ -17,8 +17,8 @@ var emailQuickScopeViewed = "false";
 var emailDelsecStockDisplayed = "false";
 var emailDelsecStockViewed = "false";
 
-var email10KDisplayed = "false";
-var email10KViewed = "false";
+var email1KDisplayed = "false";
+var email1KViewed = "false";
 
 var email4ByteDisplayed = "false";
 var email4ByteViewed = "false";
