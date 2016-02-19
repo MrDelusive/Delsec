@@ -9,10 +9,10 @@ $(document).ready(function () {
 
     //initially disabled for some reason.
     $('#btnInvestWiki').prop('disabled', false);
-    $('#btnInvestWiki').click(function () {
-        wikiActive = "true";
-        localStorage.setItem("wikiActive", wikiActive);
+    $('#btnInvestWiki').click(function () {      
         if (money >= 2) {
+            wikiActive = "true";
+            localStorage.setItem("wikiActive", wikiActive);
             var timer = 10;
             $('#wikiInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
@@ -39,8 +39,8 @@ $(document).ready(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
                 
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: // - 75%      
                         increment = investAmt * 0.25;
@@ -115,10 +115,10 @@ $(document).ready(function () {
 
     //SWITCH INVEST
     $('#btnInvestTwitch').prop('disabled', false);
-    $('#btnInvestTwitch').click(function () {
-        twitchActive = "true";
-        localStorage.setItem("twitchActive", twitchActive);
-        if (money >= 5) {                      
+    $('#btnInvestTwitch').click(function () {      
+        if (money >= 5) {
+            twitchActive = "true";
+            localStorage.setItem("twitchActive", twitchActive);
             $("#emailQuickScopeHeading").show(1);
             //jQuery being a pain in the ass not storing things as bools
             if (emailQuickScopeDisplayed == "false") {
@@ -151,8 +151,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);               
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: // - 75%         
                         increment = investAmt * 0.25;
@@ -227,10 +227,10 @@ $(document).ready(function () {
 
     //PUNCH INVEST
     $('#btnInvestPunch').prop('disabled', false);
-    $('#btnInvestPunch').click(function () {
-        punchActive = "true";
-        localStorage.setItem("punchActive", punchActive);
-        if (money >= 10) {                   
+    $('#btnInvestPunch').click(function () {   
+        if (money >= 10) {
+            punchActive = "true";
+            localStorage.setItem("punchActive", punchActive);
             var timer = 15;
             $('#punchInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
@@ -255,8 +255,8 @@ $(document).ready(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
                 
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: // - 75%   
                         increment = investAmt * 0.25;
@@ -360,8 +360,8 @@ $(document).ready(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
 
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: // - 75%   
                         increment = investAmt * 0.25;
@@ -437,10 +437,10 @@ $(document).ready(function () {
 
     //POKER INVEST
     $('#btnInvestPoker').prop('disabled', false);
-    $('#btnInvestPoker').click(function () {
-        pokerActive = "true";
-        localStorage.setItem("pokerActive", pokerActive);
+    $('#btnInvestPoker').click(function () {               
         if (money >= 100) {
+            pokerActive = "true";
+            localStorage.setItem("pokerActive", pokerActive);
             var timer = 20;
             $('#pokerInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
@@ -464,8 +464,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);               
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: // -75%   
                         increment = investAmt * 0.25;
@@ -542,9 +542,9 @@ $(document).ready(function () {
     //CAR RACE INVEST
     $('#btnInvestRace').prop('disabled', false);
     $('#btnInvestRace').click(function () {
-        raceActive = "true";
-        localStorage.setItem("raceActive", raceActive);
         if (money >= 1000) {
+            raceActive = "true";
+            localStorage.setItem("raceActive", raceActive);
             var timer = 30;
             $('#raceInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
@@ -568,8 +568,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -645,10 +645,10 @@ $(document).ready(function () {
     
     //SOCIAL MEDIA
     $('#btnInvestSocialMedia').prop('disabled', false);
-    $('#btnInvestSocialMedia').click(function () {
-        socialMediaActive = "true";
-        localStorage.setItem("socialMediaActive", socialMediaActive);
+    $('#btnInvestSocialMedia').click(function () {  
         if (money >= 5000) {
+            socialMediaActive = "true";
+            localStorage.setItem("socialMediaActive", socialMediaActive);
             var timer = 90;
             $('#socialMediaInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
@@ -672,8 +672,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -749,10 +749,10 @@ $(document).ready(function () {
 
     //BLUE CHIP COMPANY , from here cycle takes 1 extra second cause of chrome not displaying the result after 0min0sec tick, it does it before.
     $('#btnInvestBlueChip').prop('disabled', false);
-    $('#btnInvestBlueChip').click(function () {
-        blueChipActive = "true";
-        localStorage.setItem("blueChipActive", blueChipActive);
+    $('#btnInvestBlueChip').click(function () {     
         if (money >= 10000) {
+            blueChipActive = "true";
+            localStorage.setItem("blueChipActive", blueChipActive);
             var minutes = 2;
             var seconds = 60;
             $('#blueChipInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -790,8 +790,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -878,9 +878,9 @@ $(document).ready(function () {
     //SelfImprovement
     $('#btnInvestSelfImprovement').prop('disabled', false);
     $('#btnInvestSelfImprovement').click(function () {
-        selfImprovementActive = "true";
-        localStorage.setItem("selfImprovementActive", selfImprovementActive);
-        if (money >= 25000) {          
+        if (money >= 25000) {
+            selfImprovementActive = "true";
+            localStorage.setItem("selfImprovementActive", selfImprovementActive);
             var minutes = 3;
             var seconds = 60;
             $('#selfImprovementInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -918,8 +918,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1006,9 +1006,9 @@ $(document).ready(function () {
     //SelfImprovement2
     $('#btnInvestSelfImprovement2').prop('disabled', false);
     $('#btnInvestSelfImprovement2').click(function () {
-        selfImprovement2Active = "true";
-        localStorage.setItem("selfImprovement2Active", selfImprovement2Active);
         if (money >= 50000) {
+            selfImprovement2Active = "true";
+            localStorage.setItem("selfImprovement2Active", selfImprovement2Active);
             var minutes = 3;
             var seconds = 60;
             $('#selfImprovement2InvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1046,8 +1046,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1133,10 +1133,10 @@ $(document).ready(function () {
 
     //Energy
     $('#btnInvestEnergy').prop('disabled', false);
-    $('#btnInvestEnergy').click(function () {
-        energyActive = "true";
-        localStorage.setItem("energyActive", energyActive);
+    $('#btnInvestEnergy').click(function () {   
         if (money >= 100000) {
+            energyActive = "true";
+            localStorage.setItem("energyActive", energyActive);
             var minutes = 4;
             var seconds = 60;
             $('#energyInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1174,8 +1174,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1262,9 +1262,9 @@ $(document).ready(function () {
     //Super hero Builder
     $('#btnInvestSuperHero').prop('disabled', false);
     $('#btnInvestSuperHero').click(function () {
-        superHeroActive = "true";
-        localStorage.setItem("superHeroActive", superHeroActive);
         if (money >= 2000000) {
+            superHeroActive = "true";
+            localStorage.setItem("superHeroActive", superHeroActive);
             var minutes = 8;
             var seconds = 60;
             $('#superHeroInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1302,8 +1302,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1389,10 +1389,10 @@ $(document).ready(function () {
 
     // Movie
     $('#btnInvestMovie').prop('disabled', false);
-    $('#btnInvestMovie').click(function () {
-        movieActive = "true";
-        localStorage.setItem("movieActive", movieActive);
+    $('#btnInvestMovie').click(function () {   
         if (money >= 10000000) {
+            movieActive = "true";
+            localStorage.setItem("movieActive", movieActive);
             var minutes = 15;
             var seconds = 60;
             $('#movieInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1430,8 +1430,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1517,10 +1517,10 @@ $(document).ready(function () {
 
     // Experimental Technology
     $('#btnInvestExperimental').prop('disabled', false);
-    $('#btnInvestExperimental').click(function () {
-        experimentalActive = "true";
-        localStorage.setItem("experimentalActive", experimentalActive);
+    $('#btnInvestExperimental').click(function () {  
         if (money >= 50000000) {
+            experimentalActive = "true";
+            localStorage.setItem("experimentalActive", experimentalActive);
             var minutes = 15;
             var seconds = 60;
             $('#experimentalInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1558,8 +1558,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1646,9 +1646,9 @@ $(document).ready(function () {
     // Time Travel Trip
     $('#btnInvestTimeTravel').prop('disabled', false);
     $('#btnInvestTimeTravel').click(function () {
-        timeTravelActive = "true";
-        localStorage.setItem("timeTravelActive", timeTravelActive);
         if (money >= 250000000) {
+            timeTravelActive = "true";
+            localStorage.setItem("timeTravelActive", timeTravelActive);
             var minutes = 15;
             var seconds = 60;
             $('#timeTravelInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1686,8 +1686,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1773,10 +1773,10 @@ $(document).ready(function () {
 
     // Mystery Fund
     $('#btnInvestMystery').prop('disabled', false);
-    $('#btnInvestMystery').click(function () {
-        mysteryActive = "true";
-        localStorage.setItem("mysteryActive", mysteryActive);
+    $('#btnInvestMystery').click(function () { 
         if (money >= 1000000000) {
+            mysteryActive = "true";
+            localStorage.setItem("mysteryActive", mysteryActive);
             var minutes = 15;
             var seconds = 60;
             $('#mysteryInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1814,8 +1814,8 @@ $(document).ready(function () {
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         increment = investAmt * 0.25;
@@ -1898,5 +1898,264 @@ $(document).ready(function () {
             $('#mysteryInvestResult').html("Not enough money to Invest.");
         return false;
     });
+
+    //1.5billion is the crossover to space.
+
+    // Manned Moon Mission
+    $('#btnInvestMoon').prop('disabled', false);
+    $('#btnInvestMoon').click(function () {
+        if (money >= 2250000000) {
+            moonActive = "true";
+            localStorage.setItem("moonActive", moonActive);
+            var minutes = 15;
+            var seconds = 60;
+            $('#moonInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#moonInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#moonInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#moonInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 2250000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //-75%   
+                        increment = investAmt * 0.25;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission was a failure. You lose 75% of your investment. <b>RESULT: -$"
+                            + (investAmt * 0.75).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //investment - 50%                        
+                        increment = investAmt * 0.5;
+                        money += increment; // extra steps for use in alert
+                        $('#moonInvestResult').html("The mission went as expected, however the moon was made of cheese, completely unexpected. You lose half of your investment. <b>RESULT: -$"
+                            + (investAmt / 2).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //investment - 20%
+                        increment = investAmt * 0.8;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission cost more than it was worth. You lose 20% of your investment. <b>RESULT: -$"
+                            + (investAmt / 5).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //investment + 5%
+                        increment = investAmt * 1.05;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission allowed for a long range experiment to be run that couldn't have been done on Earth. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //investment + 10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission allowed some important surveillance data collection. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //investment + 20%
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission influenced human-kind to reach out to the stars. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //investment + 30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission allowed for a space elevator to begin construction. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //investment + 50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission setup a home-base, allowing civilisation to spread onto the moon. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //investment + 60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission setup a defence strategy, allowing the use of the moon to block asteroids. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //investment + 75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#moonInvestResult').html("The mission turned the moon into a space weapon. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //investment + 100% Only possible from Healer
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#moonInvestResult').html("The moon was converted into a giant orbital diamond. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                moonActive = "false";
+                localStorage.setItem("moonActive", moonActive);
+            }, 901000);
+        }
+        else
+            $('#moonInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    // Manned Mars Mission
+    $('#btnInvestMars').prop('disabled', false);
+    $('#btnInvestMars').click(function () {
+        if (money >= 5000000000) {
+            marsActive = "true";
+            localStorage.setItem("marsActive", marsActive);
+            var minutes = 15;
+            var seconds = 60;
+            $('#marsInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#marsInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#marsInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#marsInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 5000000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //-75%   
+                        increment = investAmt * 0.25;
+                        money += increment;
+                        $('#marsInvestResult').html("The manned shuttle was lost in space. You lose 75% of your investment. <b>RESULT: -$"
+                            + (investAmt * 0.75).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //investment - 50%                        
+                        increment = investAmt * 0.5;
+                        money += increment; // extra steps for use in alert
+                        $('#marsInvestResult').html("The shuttle made it to mars, but could not return. You lose half of your investment. <b>RESULT: -$"
+                            + (investAmt / 2).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //investment - 20%
+                        increment = investAmt * 0.8;
+                        money += increment;
+                        $('#marsInvestResult').html("The mission went well, except one member was left behind, you spent most of the money to get them back. You lose 20% of your investment. <b>RESULT: -$"
+                            + (investAmt / 5).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //investment + 5%
+                        increment = investAmt * 1.05;
+                        money += increment;
+                        $('#marsInvestResult').html("The mission made some important surveying discoveries. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //investment + 10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#marsInvestResult').html("The mission made some important surveying discoveries. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //investment + 20%
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#marsInvestResult').html("The mission made some important surveying discoveries. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //investment + 30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#marsInvestResult').html("The mission enabled the commercialisation of mars travel. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //investment + 50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#marsInvestResult').html("The mission enabled a Total Recall. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //investment + 60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#marsInvestResult').html("The mission allowed for trade negotiations to begin between humans and martians. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //investment + 75%
+                        increment = investAmt * 1.75; 
+                        money += increment;
+                        $('#marsInvestResult').html("The mission lassooed mars and dragged it into Earth's orbit. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //investment + 100% Only possible from Healer
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#marsInvestResult').html("Mars was terraformed allowing colonisation. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                marsActive = "false";
+                localStorage.setItem("marsActive", marsActive);
+            }, 901000);
+        }
+        else
+            $('#marsInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
 
 });

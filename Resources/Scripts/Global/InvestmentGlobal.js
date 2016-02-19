@@ -16,6 +16,8 @@ var movieActive = "false";
 var experimentalActive = "false";
 var timeTravelActive = "false";
 var mysteryActive = "false";
+var moonActive = "false";
+var marsActive = "false";
 
 var goldbotActive = "false";
 var gameActive = "false";

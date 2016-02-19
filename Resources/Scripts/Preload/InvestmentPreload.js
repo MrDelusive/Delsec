@@ -32,6 +32,10 @@
         localStorage.setItem("timeTravelActive", timeTravelActive);
     if (localStorage.getItem("mysteryActive") === null)
         localStorage.setItem("mysteryActive", mysteryActive);
+    if (localStorage.getItem("moonActive") === null)
+        localStorage.setItem("moonActive", moonActive);
+    if (localStorage.getItem("marsActive") === null)
+        localStorage.setItem("marsActive", marsActive);
 
     if (localStorage.getItem("goldbotActive") === null)
         localStorage.setItem("goldbotActive", goldbotActive);
@@ -93,6 +97,8 @@
         experimentalActive = localStorage.getItem("experimentalActive");
         timeTravelActive = localStorage.getItem("timeTravelActive");
         mysteryActive = localStorage.getItem("mysteryActive");
+        moonActive = localStorage.getItem("moonActive");
+        marsActive = localStorage.getItem("marsActive");
 
         goldbotActive = localStorage.getItem("goldbotActive");
         gameActive = localStorage.getItem("gameActive");
@@ -300,6 +306,32 @@
             localStorage.setItem("mysteryActive", mysteryActive);
             money += 1000000000;
             totalInvestment -= 1000000000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+        
+        if (moonActive == "true") {
+            moonActive = "false";
+            localStorage.setItem("moonActive", moonActive);
+            money += 2250000000;
+            totalInvestment -= 2250000000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (marsActive == "true") {
+            marsActive = "false";
+            localStorage.setItem("marsActive", marsActive);
+            money += 5000000000;
+            totalInvestment -= 5000000000;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
             localStorage.setItem("money", money);

@@ -323,7 +323,7 @@
             investSpacePort++;
             localStorage.setItem("investSpacePort", investSpacePort);
 
-            $('#investSpacePort').html("Buy Space Port: $1,500,000,000 <br />Owned: " + investSpacePort + "/" + investSpacePortMax);
+            $('#investSpacePortPopup').html("Buy Space Port: $1,500,000,000 <br />Owned: " + investSpacePort + "/" + investSpacePortMax);
         }
         return false;
     });

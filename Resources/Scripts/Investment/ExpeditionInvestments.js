@@ -33,8 +33,8 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         ownedTRITStocks += 100;
@@ -204,8 +204,8 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                if (userClass == "Healer")
-                    roll += 1;
+                //if (userClass == "Healer")
+                //    roll += 1;
                 switch (roll) {
                     case 1: //-75%   
                         ownedAUStocks += 4000;
