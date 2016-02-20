@@ -9,9 +9,9 @@
     //GOLDBOT INVEST
     $('#btnInvestGoldbot').prop('disabled', false);
     $('#btnInvestGoldbot').click(function () {
-        goldbotActive = "true";
-        localStorage.setItem("goldbotActive", goldbotActive);
         if (money >= 3) {
+            goldbotActive = "true";
+            localStorage.setItem("goldbotActive", goldbotActive);
             var minutes = 2;
             var seconds = 60;
             $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -126,9 +126,9 @@
     //GAME INVEST
     $('#btnInvestGame').prop('disabled', false);
     $('#btnInvestGame').click(function () {
-        gameActive = "true";
-        localStorage.setItem("gameActive", gameActive);
         if (money >= 25) {
+            gameActive = "true";
+            localStorage.setItem("gameActive", gameActive);
             var minutes = 3;
             var seconds = 60;
             $('#gameInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -243,9 +243,9 @@
     //GRANDCHILD INVEST
     $('#btnInvestGrandchild').prop('disabled', false);
     $('#btnInvestGrandchild').click(function () {
-        grandchildActive = "true";
-        localStorage.setItem("grandchildActive", grandchildActive);
         if (money >= 500) {
+            grandchildActive = "true";
+            localStorage.setItem("grandchildActive", grandchildActive);
             var minutes = 4;
             var seconds = 60;
             $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -360,9 +360,9 @@
     //GOLD INVEST
     $('#btnInvestGold').prop('disabled', false);
     $('#btnInvestGold').click(function () {
-        goldActive = "true";
-        localStorage.setItem("goldActive", goldActive);
         if (money >= 1000) {
+            goldActive = "true";
+            localStorage.setItem("goldActive", goldActive);
             var minutes = 5;
             var seconds = 60;
             $('#goldInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -477,9 +477,9 @@
     //LIFE INSURANCE INVEST
     $('#btnInvestLife').prop('disabled', false);
     $('#btnInvestLife').click(function () {
-        lifeActive = "true";
-        localStorage.setItem("lifeActive", lifeActive);
         if (money >= 2500) {
+            lifeActive = "true";
+            localStorage.setItem("lifeActive", lifeActive);
             var minutes = 6;
             var seconds = 60;
             $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -594,9 +594,10 @@
     //SWEDISH TRUST FUND
     $('#btnInvestSwedish').prop('disabled', false);
     $('#btnInvestSwedish').click(function () {
-        swedishActive = "true";
-        localStorage.setItem("swedishActive", swedishActive);
+
         if (money >= 10000) {
+            swedishActive = "true";
+            localStorage.setItem("swedishActive", swedishActive);
             var minutes = 8;
             var seconds = 60;
             $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -711,9 +712,10 @@
     //CD INVEST
     $('#btnInvestCD').prop('disabled', false);
     $('#btnInvestCD').click(function () {
-        CDActive = "true";
-        localStorage.setItem("CDActive", CDActive);
+
         if (money >= 25000) {
+            CDActive = "true";
+            localStorage.setItem("CDActive", CDActive);
             var minutes = 10;
             var seconds = 60;
             $('#CDInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -830,9 +832,10 @@
     //OFFSHORE VARIABLE
     $('#btnInvestOffshore').prop('disabled', false);
     $('#btnInvestOffshore').click(function () {
-        offshoreActive = "true";
-        localStorage.setItem("offshoreActive", offshoreActive);
+
         if (money >= 100000) {
+            offshoreActive = "true";
+            localStorage.setItem("offshoreActive", offshoreActive);
             var minutes = 15;
             var seconds = 60;
             $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -949,9 +952,10 @@
     //DEEP SEA MISSION
     $('#btnInvestDeepSea').prop('disabled', false);
     $('#btnInvestDeepSea').click(function () {
-        deepSeaActive = "true";
-        localStorage.setItem("deepSeaActive", deepSeaActive);
+
         if (money >= 500000) {
+            deepSeaActive = "true";
+            localStorage.setItem("deepSeaActive", deepSeaActive);
             var minutes = 20;
             var seconds = 60;
             $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1068,9 +1072,10 @@
     //SECURE RISKY GOODS TRANSFER
     $('#btnInvestSecure').prop('disabled', false);
     $('#btnInvestSecure').click(function () {
-        secureActive = "true";
-        localStorage.setItem("secureActive", secureActive);
+
         if (money >= 2500000) {
+            secureActive = "true";
+            localStorage.setItem("secureActive", secureActive);
             var minutes = 25;
             var seconds = 60;
             $('#secureInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1187,9 +1192,10 @@
     //BANK OVERFLOW
     $('#btnInvestOverflow').prop('disabled', false);
     $('#btnInvestOverflow').click(function () {
-        overflowActive = "true";
-        localStorage.setItem("overflowActive", overflowActive);
+
         if (money >= 10000000) {
+            overflowActive = "true";
+            localStorage.setItem("overflowActive", overflowActive);
             var minutes = 30;
             var seconds = 60;
             $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -1303,4 +1309,723 @@
         return false;
     });
 
+    //ARMS DEAL
+    $('#btnInvestArmsDeal').prop('disabled', false);
+    $('#btnInvestArmsDeal').click(function () {
+
+        if (money >= 60000000) {
+            armsDealActive = "true";
+            localStorage.setItem("armsDealActive", armsDealActive);
+            var minutes = 40;
+            var seconds = 60;
+            $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 60000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a small militia. Lets hope they are fighting for a good cause, or maybe fighting a commando, who knows. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a group of reb.. Freedom Fighters. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a group of Mercenaries. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a Small Government, too bad they use martial law on their country. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a Commando. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a group of Fighters who are fighting some invisible alien. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a rag-tag team of .. Dispensibles? <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a small team of 5 fighting off a horde of aliens. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a future guy in a trench-coat and some leather bound chick. Knee who? I heard they went by JC and Anna Na..something. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a guy in a green suit of armor. Said something about Demons.. or Aliens.. Can't remember. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#armsDealInvestResult').html("You supplied a bunch of guns that don't kill people, instead they heal people. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                armsDealActive = "false";
+                localStorage.setItem("armsDealActive", armsDealActive);
+            }, 2400000);
+        }
+        else
+            $('#armsDealInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //NUCLEAR MATERIAL TRANSPORT
+    $('#btnInvestNuclear').prop('disabled', false);
+    $('#btnInvestNuclear').click(function () {
+
+        if (money >= 350000000) {
+            nuclearActive = "true";
+            localStorage.setItem("nuclearActive", nuclearActive);
+            var minutes = 50;
+            var seconds = 60;
+            $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 350000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You transported a nuclear weapon far away from a war-torn country. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#nuclearInvestResult').html("While you were transporting a nuclear weapon, the truck got hijacked, luckily they sent it to the same place you were supposed to. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You assemble a small team of driving entusiasts to steal and transport a nuclear weapon from a criminal. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You assemble some Rapid and Angry individuals to steal and transport a nuclear weapon from a criminal. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You transport a bunch of Nu-Clear Pimple Removal Cream to a enthusiastic buyer. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You transport a dozen nuclear weapons in the complete opposite direction of North-Korea. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You transport precious nuclear materials to some supervillain fighting a Captain. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You transport Nuclear powered cores to a Super Man. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You transport a large bunch of nuclear weapons directly toward the sun. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You convert the nuclear weapons you are transporting into a small reactor. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#nuclearInvestResult').html("You transport a nuclear device that can reverse radiation poisoning. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                nuclearActive = "false";
+                localStorage.setItem("nuclearActive", nuclearActive);
+            }, 3000000);
+        }
+        else
+            $('#nuclearInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //CITY RELOCATION
+    $('#btnInvestRelocation').prop('disabled', false);
+    $('#btnInvestRelocation').click(function () {
+
+        if (money >= 1000000000) {
+            relocationActive = "true";
+            localStorage.setItem("relocationActive", relocationActive);
+            var minutes = 60;
+            var seconds = 60;
+            $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 1000000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city underground. It's pretty dark. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city underground. They rename it Ember. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city into the ocean. It floats, for now. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city away from an active volcano. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city away from a faulty line of tectonic plates. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city onto its own paradise island. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city under the ocean, appropriately renamed to Rapture. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city into the sky. Wasn't that what Ultron wanted to do? <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city into space. It defies gravity, for now. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city into a more affordable area. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#relocationInvestResult').html("You move a city into a vast open desert. Somehow that makes you rich. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                relocationActive = "false";
+                localStorage.setItem("relocationActive", relocationActive);
+            }, 3600000);
+        }
+        else
+            $('#relocationInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //ORBITAL DEFENCE NETWORK
+    $('#btnInvestOrbital').prop('disabled', false);
+    $('#btnInvestOrbital').click(function () {
+
+        if (money >= 7000000000) {
+            orbitalActive = "true";
+            localStorage.setItem("orbitalActive", orbitalActive);
+            var minutes = 75;
+            var seconds = 60;
+            $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 7000000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a crappy Defence Network which stops small meteors and missles. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a crappy Defence Network which stops small meteors and missles. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a net around the planet. It works. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a radio network transmitting some of the worst music ever. It works. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up us the bomb. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a vast network of warning signs around the planet. It deters many unwanted visitors. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a giant picture of OPs mother. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a giant sling shot around the planet, flinging back any thing that comes this way. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a Force field network around the planet. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a laser targetting array, it destroys anything that is a threat. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#orbitalInvestResult').html("You set up a tractor beam network, it collects anything that comes close to the planet. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                orbitalActive = "false";
+                localStorage.setItem("orbitalActive", orbitalActive);
+            }, 4500000);
+        }
+        else
+            $('#orbitalInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //DEEP SPACE VOYAGE
+    $('#btnInvestVoyage').prop('disabled', false);
+    $('#btnInvestVoyage').click(function () {
+
+        if (money >= 20000000000) {
+            voyageActive = "true";
+            localStorage.setItem("voyageActive", voyageActive);
+            var minutes = 90;
+            var seconds = 60;
+            $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 20000000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage gets Lost in Space for 10 years. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage intercepts many new planets and makes some discoveries. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage makes many new alien friends and some alien enemies. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage finds many Earth-like planets which enable humanity to spread. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage charts so much new space it creates a guide to the galaxy. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage intercept an advanced alien race called the ZORG and steal some of their technology. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage intercepts a black hole where it gets stuck in time, luckily Hercules is on board to save the crew in the future. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage sets up 9 Deep Space Bases to continouously monitor that sector of space. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage collects important data from our galaxy's centre. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage went extremely well due to an on board engineer inventing Warp 10. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#voyageInvestResult').html("The voyage sets up a network of warp gates connecting far sectors of space together. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                voyageActive = "false";
+                localStorage.setItem("voyageActive", voyageActive);
+            }, 5400000);
+        }
+        else
+            $('#voyageInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
+
+    //WORLD CONSTRUCTION
+    $('#btnInvestWorld').prop('disabled', false);
+    $('#btnInvestWorld').click(function () {
+
+        if (money >= 150000000000) {
+            worldActive = "true";
+            localStorage.setItem("worldActive", worldActive);
+            var minutes = 120;
+            var seconds = 60;
+            $('#worldInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
+            if (minutes > 0) {
+                minutes--;
+                setInterval(function () {
+                    if (seconds > 0 && minutes > 0) {
+                        seconds--;
+                        $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                        // Chrome Bug fix
+                    else if (seconds > 1) {
+                        seconds--;
+                        $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                    else if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                        $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                    }
+                }, 1000);
+            }
+            var investAmt = 150000000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+                //if (userClass == "Healer")
+                //    roll += 1;
+                switch (roll) {
+                    case 1: //10%
+                        increment = investAmt * 1.1;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a small moon. It is good enough to set up a monitoring base on. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 2: //20%                     
+                        increment = investAmt * 1.2;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a volatile planet, It can be used to study how Earth was in its early stages. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 3: //30%
+                        increment = investAmt * 1.3;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a small Earth-like planet 1/4 the size of Earth, great to spread the population out. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 4: //40%
+                        increment = investAmt * 1.4;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a Mars-like planet which costs a bit to terraform, but is able to support life. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 5: //50%
+                        increment = investAmt * 1.5;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a completely synthetic planet made entirely of solid metals, It is perfect to set up a robot colony on. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 6: //60%
+                        increment = investAmt * 1.6;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a large moon base which can be used as a weapon. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 7: //75%
+                        increment = investAmt * 1.75;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a large gas planet which can be used to supply Earth with natural resources. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 8: //100%
+                        increment = investAmt * 2;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a Large Super-Earth planet, granting the population plenty of land space. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 9: //125%
+                        increment = investAmt * 2.25;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a planet made entirely out of diamond. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 10: //150%
+                        increment = investAmt * 2.5;
+                        money += increment;
+                        $('#worldInvestResult').html("You build an inverted planet so massive it has a radius equal to the distance from Earth to the Sun. <b>RESULT: Investment +$"
+                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    case 11: //200%
+                        increment = investAmt * 3;
+                        money += increment;
+                        $('#worldInvestResult').html("You build a planet that makes everyone immortal while they are on it. <b>RESULT: Investment +$" + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                worldActive = "false";
+                localStorage.setItem("worldActive", worldActive);
+            }, 7200000);
+        }
+        else
+            $('#worldInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
 });

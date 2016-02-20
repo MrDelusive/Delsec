@@ -15,8 +15,8 @@
     // investments should take ~4 hours to pay themselves off. Because I want Investments to be the long term option, without worrying about risk
 
     setInterval(function () {      
-        var generatedAmt = totalInvestment / 200;
-        var rentalBikeProfit = investRentalBike * 15;
+        var generatedAmt = totalInvestment / 600; //600 min to pay off money spent / 10h
+        var rentalBikeProfit = investRentalBike * 15; //33.33 min
         var franchiseProfit = investFranchise * 196.08; //255
         var smallPropertyProfit = investSmallProperty * 1000; //250 min
         var mediumPropertyProfit = investMediumProperty * 1836.73; //245 min

@@ -11,6 +11,8 @@
     $('#btnInvestMining').prop('disabled', false);
     $('#btnInvestMining').click(function () {
         if (money >= 2500) {
+            miningActive = "true";
+            localStorage.setItem("miningActive", miningActive);
             var timer = 60;
             $('#miningInvestResult').html("Investing: " + timer + " seconds remaining.");
             setInterval(function () {
@@ -156,6 +158,8 @@
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                miningActive = "false";
+                localStorage.setItem("miningActive", miningActive);
             }, 60000);
         }
         else
@@ -167,6 +171,8 @@
     $('#btnInvestDrill').prop('disabled', false);
     $('#btnInvestDrill').click(function () {
         if (money >= 5000000) {
+            drillActive = "true";
+            localStorage.setItem("drillActive", drillActive);
             var minutes = 10;
             var seconds = 60;
             $('#drillInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
@@ -312,6 +318,8 @@
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 localStorage.setItem("money", money);
+                drillActive = "false";
+                localStorage.setItem("drillActive", drillActive);
             }, 601000);
         }
         else

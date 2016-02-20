@@ -21,9 +21,24 @@ var marsActive = "false";
 
 var goldbotActive = "false";
 var gameActive = "false";
+var grandchildActive = "false";
 var goldActive = "false";
+var lifeActive = "false";
+var swedishActive = "false";
 var CDActive = "false";
+var offshoreActive = "false";
+var deepSeaActive = "false";
+var secureActive = "false";
+var overflowActive = "false";
+var armsDealActive = "false";
+var nuclearActive = "false";
+var relocationActive = "false";
+var orbitalActive = "false";
+var voyageActive = "false";
+var worldActive = "false";
 
+var miningActive = "false";
+var drillActive = "false";
 
 var investRentalBike = 0;
 var investRentalBikeMax = 200;
