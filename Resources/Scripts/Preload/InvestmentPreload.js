@@ -108,6 +108,23 @@
     if (localStorage.getItem("investSpacePort") === null)
         localStorage.setItem("investSpacePort", investSpacePort);
 
+    if (localStorage.getItem("investSpaceStation") === null)
+        localStorage.setItem("investSpaceStation", investSpaceStation);
+    if (localStorage.getItem("investSatellite") === null)
+        localStorage.setItem("investSatellite", investSatellite);
+    if (localStorage.getItem("investMoonBase") === null)
+        localStorage.setItem("investMoonBase", investMoonBase);
+    if (localStorage.getItem("investOffworldBase") === null)
+        localStorage.setItem("investOffworldBase", investOffworldBase);
+    if (localStorage.getItem("investStorageYard") === null)
+        localStorage.setItem("investStorageYard", investStorageYard);
+    if (localStorage.getItem("investAsteroidColony") === null)
+        localStorage.setItem("investAsteroidColony", investAsteroidColony);
+    if (localStorage.getItem("investFreespaceStation") === null)
+        localStorage.setItem("investFreespaceStation", investFreespaceStation);
+    if (localStorage.getItem("investDysonSphere") === null)
+        localStorage.setItem("investDysonSphere", investDysonSphere);
+
     if (typeof (Storage) !== "undefined") {
 
         wikiActive = localStorage.getItem("wikiActive");
@@ -149,7 +166,8 @@
 
         miningActive = localStorage.getItem("miningActive");
         drillActive = localStorage.getItem("drillActive");
-
+                
+        $('#btnSpaceInvestments').prop('disabled', true);
         // If it was still active during reset, refund the player.
         if (wikiActive == "true") {
             wikiActive = "false";
@@ -652,6 +670,154 @@
             investFactory = localStorage.getItem("investFactory");
             investSkyscraper = localStorage.getItem("investSkyscraper");
             investSpacePort = localStorage.getItem("investSpacePort");
+            investSpaceStation = localStorage.getItem("investSpaceStation");
+            investSatellite = localStorage.getItem("investSatellite");
+            investMoonBase = localStorage.getItem("investMoonBase");
+            investOffworldBase = localStorage.getItem("investOffworldBase");
+            investStorageYard = localStorage.getItem("investStorageYard");
+            investAsteroidColony = localStorage.getItem("investAsteroidColony");
+            investFreespaceStation = localStorage.getItem("investFreespaceStation");
+            investDysonSphere = localStorage.getItem("investDysonSphere");
+
+            if (investRentalBike > 0) {
+                $('#rentalBikeSummary').show(1);
+                $('#rentalBikeSummary').html('x' + investRentalBike + ' Rental Bike(s)');
+                $('#rentalBikeSummaryDisplay').show(1);
+            }
+
+            if (investFranchise > 0) {
+                $('#franchiseSummary').show(1);
+                $('#franchiseSummary').html('x' + investFranchise + ' Fast-Food Franchise(s)');
+                $('#franchiseSummaryDisplay').show(1);
+            }
+
+            if (investSmallProperty > 0) {
+                $('#smallPropertySummary').show(1);
+                $('#smallPropertySummary').html('x' + investSmallProperty + ' Town House(s)');
+                $('#smallPropertySummaryDisplay').show(1);
+            }
+
+            if (investMediumProperty > 0) {
+                $('#threeBRPropertySummary').show(1);
+                $('#threeBRPropertySummary').html('x' + investMediumProperty + ' 3-Bedroom House(s)');
+                $('#threeBRPropertySummaryDisplay').show(1);
+            }
+
+            if (investBoat > 0) {
+                $('#boatSummary').show(1);
+                $('#boatSummary').html('x' + investBoat + ' Boat(s)');
+                $('#boatSummaryDisplay').show(1);
+            }
+
+            if (investBeachside > 0) {
+                $('#beachsideSummary').show(1);
+                $('#beachsideSummary').html('x' + investBeachside + ' Beachside House(s)');
+                $('#beachsideSummaryDisplay').show(1);
+            }
+
+            if (investMansion > 0) {
+                $('#mansionSummary').show(1);
+                $('#mansionSummary').html('x' + investMansion + ' Mansion(s)');
+                $('#mansionSummaryDisplay').show(1);
+            }
+
+            if (investHighEnd > 0) {
+                $('#highEndSummary').show(1);
+                $('#highEndSummary').html('x' + investHighEnd + ' High-End Apartment(s)');
+                $('#highEndSummaryDisplay').show(1);
+            }
+
+            if (investSkyscraperLevel > 0) {
+                $('#skyscraperLevelSummary').show(1);
+                $('#skyscraperLevelSummary').html('x' + investSkyscraperLevel + ' Skyscraper Level(s)');
+                $('#skyscraperLevelSummaryDisplay').show(1);
+            }
+
+            if (investCBDStore > 0) {
+                $('#CBDStoreSummary').show(1);
+                $('#CBDStoreSummary').html('x' + investCBDStore + ' CBD Store(s)');
+                $('#CBDStoreSummaryDisplay').show(1);
+            }
+
+            if (investCarDealer > 0) {
+                $('#carDealerSummary').show(1);
+                $('#carDealerSummary').html('x' + investCarDealer + ' Car Dealership(s)');
+                $('#carDealerSummaryDisplay').show(1);
+            }
+
+            if (investSupermarket > 0) {
+                $('#supermarketSummary').show(1);
+                $('#supermarketSummary').html('x' + investSupermarket + ' Supermarket(s)');
+                $('#supermarketSummaryDisplay').show(1);
+            }
+
+            if (investFactory > 0) {
+                $('#factorySummary').show(1);
+                $('#factorySummary').html('x' + investFactory + ' Factory(ies)');
+                $('#factorySummaryDisplay').show(1);
+            }
+
+            if (investSkyscraper > 0) {
+                $('#skyscraperSummary').show(1);
+                $('#skyscraperSummary').html('x' + investSkyscraper + ' Skyscraper(s)');
+                $('#skyscraperSummaryDisplay').show(1);
+            }
+
+            if (investSpacePort > 0) {
+                $('#spacePortSummary').show(1);
+                $('#spacePortSummary').html('x' + investSpacePort + ' Space Port');
+                $('#spacePortSummaryDisplay').show(1);
+                $('#btnSpaceInvestments').prop('disabled', false);
+            }
+
+            if (investSpaceStation > 0) {
+                $('#spaceStationSummary').show(1);
+                $('#spaceStationSummary').html('x' + investSpaceStation + ' Space Station(s)');
+                $('#spaceStationSummaryDisplay').show(1);
+            }
+
+            if (investSatellite > 0) {
+                $('#satelliteSummary').show(1);
+                $('#satelliteSummary').html('x' + investSatellite + ' Satellite(s)');
+                $('#satelliteSummaryDisplay').show(1);
+            }
+
+            if (investMoonBase > 0) {
+                $('#moonBaseSummary').show(1);
+                $('#moonBaseSummary').html('x' + investMoonBase + ' Moon Base(s)');
+                $('#moonBaseSummaryDisplay').show(1);
+            }
+
+            if (investOffworldBase > 0) {
+                $('#offworldBaseSummary').show(1);
+                $('#offworldBaseSummary').html('x' + investOffworldBase + ' Offworld Base(s)');
+                $('#offworldBaseSummaryDisplay').show(1);
+            }
+
+            if (investStorageYard > 0) {
+                $('#storageYardSummary').show(1);
+                $('#storageYardSummary').html('x' + investStorageYard + ' Storage Yard(s)');
+                $('#storageYardSummaryDisplay').show(1);
+            }
+
+            if (investAsteroidColony > 0) {
+                $('#asteroidColonySummary').show(1);
+                $('#asteroidColonySummary').html('x' + investAsteroidColony + ' Asteroid Colony(ies)');
+                $('#asteroidColonySummaryDisplay').show(1);
+            }
+
+            if (investFreespaceStation > 0) {
+                $('#freespaceStationSummary').show(1);
+                $('#freespaceStationSummary').html('x' + investFreespaceStation + ' Freespace Station(s)');
+                $('#freespaceStationSummaryDisplay').show(1);
+            }
+
+            if (investDysonSphere> 0) {
+                $('#dysonSphereSummary').show(1);
+                $('#dysonSphereSummary').html('x' + investDysonSphere + ' Dyson Sphere');
+                $('#dysonSphereSummaryDisplay').show(1);
+            }
+
         }
 
         $('#investRentalPopup').html("Buy Rental Bike: $500 <br />Owned: " + investRentalBike + "/" + investRentalBikeMax);
@@ -669,6 +835,14 @@
         $('#investFactoryPopup').html("Buy Factory: $420,000,000 <br />Owned: " + investFactory + "/" + investFactoryMax);
         $('#investSkyscraperPopup').html("Buy Skyscraper: $880,000,000 <br />Owned: " + investSkyscraper + "/" + investSkyscraperMax);
         $('#investSpacePortPopup').html("Buy Space Port: $1,500,000,000 <br />Owned: " + investSpacePort + "/" + investSpacePortMax);
+        $('#investSpaceStationPopup').html("Buy Space Station: $3,000,000,000 <br />Owned: " + investSpaceStation + "/" + investSpaceStationMax);
+        $('#investSatellitePopup').html("Buy Satellite: $4,500,000,000 <br />Owned: " + investSatellite + "/" + investSatelliteMax);
+        $('#investMoonBasePopup').html("Buy Moon Base: $7,000,000,000 <br />Owned: " + investMoonBase + "/" + investMoonBaseMax);
+        $('#investOffworldBasePopup').html("Buy Offworld Base: $15,000,000,000 <br />Owned: " + investOffworldBase + "/" + investOffworldBaseMax);
+        $('#investStorageYardPopup').html("Buy Storage Yard: $20,000,000,000 <br />Owned: " + investStorageYard + "/" + investStorageYardMax);
+        $('#investAsteroidColonyPopup').html("Buy Asteroid Colony: $32,000,000,000 <br />Owned: " + investAsteroidColony + "/" + investAsteroidColonyMax);
+        $('#investFreespaceStationPopup').html("Buy Freespace Station: $64,000,000,000 <br />Owned: " + investFreespaceStation + "/" + investFreespaceStationMax);
+        $('#investDysonSpherePopup').html("Buy Dyson Sphere: $1,000,000,000,000 <br />Owned: " + investDysonSphere + "/" + investDysonSphereMax);
     }
     else
         alert("no support on your browser");

@@ -84,3 +84,27 @@ var investSkyscraperMax = 100;
 
 var investSpacePort = 0;
 var investSpacePortMax = 1;
+
+var investSpaceStation = 0;
+var investSpaceStationMax = 50;
+
+var investSatellite = 0;
+var investSatelliteMax = 200;
+
+var investMoonBase = 0;
+var investMoonBaseMax = 100;
+
+var investOffworldBase = 0;
+var investOffworldBaseMax = 100;
+
+var investStorageYard = 0;
+var investStorageYardMax = 200;
+
+var investAsteroidColony = 0;
+var investAsteroidColonyMax = 500;
+
+var investFreespaceStation = 0;
+var investFreespaceStationMax = 5000;
+
+var investDysonSphere = 0;
+var investDysonSphereMax = 1;

@@ -23,6 +23,10 @@
 
             investRentalBike++;
             localStorage.setItem("investRentalBike", investRentalBike);
+
+            $('#rentalBikeSummary').show(1);
+            $('#rentalBikeSummary').html('x' + investRentalBike + ' Rental Bike(s)');
+            $('#rentalBikeSummaryDisplay').show(1);
             $('#investRentalPopup').html("Buy Rental Bike: $500 <br />Owned: " + investRentalBike + "/" + investRentalBikeMax);
             
         }
@@ -46,6 +50,9 @@
             investFranchise++;
             localStorage.setItem("investFranchise", investFranchise);
 
+            $('#franchiseSummary').show(1);
+            $('#franchiseSummary').html('x' + investFranchise + ' Fast-Food Franchise(s)');
+            $('#franchiseSummaryDisplay').show(1);
             $('#investFranchisePopup').html("Buy Fast-Food Franchise: $50,000 <br />Owned: " + investFranchise + "/" + investFranchiseMax);
         }
         return false;
@@ -68,6 +75,9 @@
             investSmallProperty++;
             localStorage.setItem("investSmallProperty", investSmallProperty);
 
+            $('#smallPropertySummary').show(1);
+            $('#smallPropertySummary').html('x' + investSmallProperty + ' Town House(s)');
+            $('#smallPropertySummaryDisplay').show(1);
             $('#investRealEstatePopup').html("Buy Rental Town House: $250,000 <br />Owned: " + investSmallProperty + "/" + investSmallPropertyMax);
         }
         return false;
@@ -90,6 +100,9 @@
             investMediumProperty++;
             localStorage.setItem("investMediumProperty", investMediumProperty);
 
+            $('#threeBRPropertySummary').show(1);
+            $('#threeBRPropertySummary').html('x' + investMediumProperty + ' 3-Bedroom House(s)');
+            $('#threeBRPropertySummaryDisplay').show(1);
             $('#invest3BRPopup').html("Buy 3 Bedroom Rental House: $450,000 <br />Owned: " + investMediumProperty + "/" + investMediumPropertyMax);
         }
         return false;
@@ -112,6 +125,9 @@
             investBoat++;
             localStorage.setItem("investBoat", investBoat);
 
+            $('#boatSummary').show(1);
+            $('#boatSummary').html('x' + investBoat + ' Boat(s)');
+            $('#boatSummaryDisplay').show(1);
             $('#investBoatPopup').html("Buy Rental Boat: $1,100,000 <br />Owned: " + investBoat + "/" + investBoatMax);
         }
         return false;
@@ -134,6 +150,9 @@
             investBeachside++;
             localStorage.setItem("investBeachside", investBeachside);
 
+            $('#beachsideSummary').show(1);
+            $('#beachsideSummary').html('x' + investBeachside + ' Beachside House(s)');
+            $('#beachsideSummaryDisplay').show(1);
             $('#investBeachsidePopup').html("Buy Beachside Property: $1,450,000 <br />Owned: " + investBeachside + "/" + investBeachsideMax);
         }
         return false;
@@ -155,6 +174,9 @@
             investMansion++;
             localStorage.setItem("investMansion", investMansion);
 
+            $('#mansionSummary').show(1);
+            $('#mansionSummary').html('x' + investMansion + ' Mansion(s)');
+            $('#mansionSummaryDisplay').show(1);
             $('#investMansionPopup').html("Buy Mansion: $2,250,000 <br />Owned: " + investMansion + "/" + investMansionMax);
         }
         return false;
@@ -176,6 +198,9 @@
             investHighEnd++;
             localStorage.setItem("investHighEnd", investHighEnd);
 
+            $('#highEndSummary').show(1);
+            $('#highEndSummary').html('x' + investHighEnd + ' High-End Apartment(s)');
+            $('#highEndSummaryDisplay').show(1);
             $('#investHighEndPopup').html("Buy High-End Apartment: $5,100,000 <br />Owned: " + investHighEnd + "/" + investHighEndMax);
         }
         return false;
@@ -197,6 +222,9 @@
             investSkyscraperLevel++;
             localStorage.setItem("investSkyscraperLevel", investSkyscraperLevel);
 
+            $('#skyscraperLevelSummary').show(1);
+            $('#skyscraperLevelSummary').html('x' + investSkyscraperLevel + ' Skyscraper Level(s)');
+            $('#skyscraperLevelSummaryDisplay').show(1);
             $('#investSkyscraperLevelPopup').html("Buy Skyscaper Level: $9,800,000 <br />Owned: " + investSkyscraperLevel + "/" + investSkyscraperLevelMax);
         }
         return false;
@@ -218,6 +246,9 @@
             investCBDStore++;
             localStorage.setItem("investCBDStore", investCBDStore);
 
+            $('#CBDStoreSummary').show(1);
+            $('#CBDStoreSummary').html('x' + investCBDStore + ' CBD Store(s)');
+            $('#CBDStoreSummaryDisplay').show(1);
             $('#investCBDStorePopup').html("Buy CBD Store: $22,000,000 <br />Owned: " + investCBDStore + "/" + investCBDStoreMax);
         }
         return false;
@@ -239,6 +270,9 @@
             investCarDealer++;
             localStorage.setItem("investCarDealer", investCarDealer);
 
+            $('#carDealerSummary').show(1);
+            $('#carDealerSummary').html('x' + investCarDealer + ' Car Dealership(s)');
+            $('#carDealerSummaryDisplay').show(1);
             $('#investCarDealerPopup').html("Buy Car Dealership: $58,000,000 <br />Owned: " + investCarDealer + "/" + investCarDealerMax);
         }
         return false;
@@ -260,6 +294,9 @@
             investSupermarket++;
             localStorage.setItem("investSupermarket", investSupermarket);
 
+            $('#supermarketSummary').show(1);
+            $('#supermarketSummary').html('x' + investSupermarket + ' Supermarket(s)');
+            $('#supermarketSummaryDisplay').show(1);
             $('#investSupermarketPopup').html("Buy Supermarket: $172,000,000 <br />Owned: " + investSupermarket + "/" + investSupermarketMax);
         }
         return false;
@@ -281,6 +318,9 @@
             investFactory++;
             localStorage.setItem("investFactory", investFactory);
 
+            $('#factorySummary').show(1);
+            $('#factorySummary').html('x' + investFactory + ' Factory(ies)');
+            $('#factorySummaryDisplay').show(1);
             $('#investFactoryPopup').html("Buy Factory: $420,000,000 <br />Owned: " + investFactory + "/" + investFactoryMax);
         }
         return false;
@@ -302,6 +342,9 @@
             investSkyscraper++;
             localStorage.setItem("investSkyscraper", investSkyscraper);
 
+            $('#skyscraperSummary').show(1);
+            $('#skyscraperSummary').html('x' + investSkyscraper + ' Skyscraper(s)');
+            $('#skyscraperSummaryDisplay').show(1);
             $('#investSkyscraperPopup').html("Buy Skyscraper: $880,000,000 <br />Owned: " + investSkyscraper + "/" + investSkyscraperMax);
         }
         return false;
@@ -323,6 +366,10 @@
             investSpacePort++;
             localStorage.setItem("investSpacePort", investSpacePort);
 
+            $('#btnSpaceInvestments').prop('disabled', false);
+            $('#spacePortSummary').show(1);
+            $('#spacePortSummary').html('x' + investSpacePort + ' Space Port');
+            $('#spacePortSummaryDisplay').show(1);
             $('#investSpacePortPopup').html("Buy Space Port: $1,500,000,000 <br />Owned: " + investSpacePort + "/" + investSpacePortMax);
         }
         return false;

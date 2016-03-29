@@ -31,9 +31,18 @@
         var factoryProfit = investFactory * 1909090.90; //220
         var skyscraperProfit = investSkyscraper * 4093023.26; //215
         var spacePortProfit = investSpacePort * 6976744.19; //215
+        var spaceStationProfit = investSpaceStation * 13953488.37; //215
+        var satelliteProfit = investSatellite * 21028037.38; //214
+        var moonBaseProfit = investMoonBase * 32863849.77; //213
+        var offworldBaseProfit = investOffworldBase * 71090047.39; //211
+        var storageYardProfit = investStorageYard * 9523809.52; //210
+        var asteroidColonyProfit = investAsteroidColony * 153846153.85 //208
+        var freespaceStationProfit = investFreespaceStation * 312195121.95 //205
+        var dysonSphereProfit = investDysonSphere * 5000000000; //200
 
         var totalProfit = generatedAmt + rentalBikeProfit + franchiseProfit + smallPropertyProfit + mediumPropertyProfit + boatProfit + beachsideProfit + mansionProfit + highEndProfit + skyscraperLevelProfit 
-            + CBDStoreProfit + carDealerProfit + supermarketProfit + factoryProfit + skyscraperProfit + spacePortProfit;
+            + CBDStoreProfit + carDealerProfit + supermarketProfit + factoryProfit + skyscraperProfit + spacePortProfit + spaceStationProfit + satelliteProfit + moonBaseProfit + offworldBaseProfit + storageYardProfit
+            + asteroidColonyProfit + freespaceStationProfit + dysonSphereProfit;
         money += totalProfit;
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -41,54 +50,31 @@
         localStorage.setItem("money", money);
 
         $('#healerGenerateAmt').html('Auto Interest Generated: $' + generatedAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#generatorSummary').html('Auto Interest Generated' );
+       
         $('#generatorSummaryDisplay').html('+ $' + generatedAmt.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#rentalBikeSummary').html('x' + investRentalBike + ' Rental Bike(s)');
         $('#rentalBikeSummaryDisplay').html('+ $' + rentalBikeProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#franchiseSummary').html('x' + investFranchise + ' Fast-Food Franchise(s)');
         $('#franchiseSummaryDisplay').html('+ $' + franchiseProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#smallPropertySummary').html('x' + investSmallProperty + ' Town House(s)');
         $('#smallPropertySummaryDisplay').html('+ $' + smallPropertyProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#threeBRPropertySummary').html('x' + investMediumProperty + ' 3-Bedroom House(s)');
         $('#threeBRPropertySummaryDisplay').html('+ $' + mediumPropertyProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#boatSummary').html('x' + investBoat + ' Boat(s)');
         $('#boatSummaryDisplay').html('+ $' + boatProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#beachsideSummary').html('x' + investBeachside + ' Beachside House(s)');
         $('#beachsideSummaryDisplay').html('+ $' + beachsideProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#mansionSummary').html('x' + investMansion + ' Mansion(s)');
         $('#mansionSummaryDisplay').html('+ $' + mansionProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#highEndSummary').html('x' + investHighEnd + ' High-End Apartment(s)');
         $('#highEndSummaryDisplay').html('+ $' + highEndProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#skyscraperLevelSummary').html('x' + investSkyscraperLevel + ' Skyscraper Level(s)');
         $('#skyscraperLevelSummaryDisplay').html('+ $' + skyscraperLevelProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#CBDStoreSummary').html('x' + investCBDStore + ' Skyscraper Level(s)');
         $('#CBDStoreSummaryDisplay').html('+ $' + CBDStoreProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#carDealerSummary').html('x' + investCarDealer + ' Car Dealership(s)');
         $('#carDealerSummaryDisplay').html('+ $' + carDealerProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#supermarketSummary').html('x' + investSupermarket + ' Supermarket(s)');
         $('#supermarketSummaryDisplay').html('+ $' + supermarketProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#factorySummary').html('x' + investFactory + ' Factory(ies)');
         $('#factorySummaryDisplay').html('+ $' + factoryProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#skyscraperSummary').html('x' + investSkyscraper + ' Skyscraper(s)');
         $('#skyscraperSummaryDisplay').html('+ $' + skyscraperProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-
-        $('#spacePortSummary').html('x' + investSpacePort + ' Space Port');
         $('#spacePortSummaryDisplay').html('+ $' + spacePortProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#spaceStationSummaryDisplay').html('+ $' + spaceStationProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#satelliteSummaryDisplay').html('+ $' + satelliteProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#moonBaseSummaryDisplay').html('+ $' + moonBaseProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#offworldBaseSummaryDisplay').html('+ $' + offworldBaseProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#storageYardSummaryDisplay').html('+ $' + storageYardProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#asteroidColonySummaryDisplay').html('+ $' + asteroidColonyProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#freespaceStationSummaryDisplay').html('+ $' + freespaceStationProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#dysonSphereSummaryDisplay').html('+ $' + dysonSphereProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
         $('#totalSummaryDisplay').html('+ $' + totalProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     }, 60000); 

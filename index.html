@@ -481,15 +481,15 @@
             <div id="investments" class="hidden_Divs">
                 <div id="totalInvestmentSpent" class="lblItemDisplay">Total Investment: $0</div>    
                 <div id="investmentTabSelect">
-                    <button id="btnShortTermInvestments" class="btn_TabSmallGreen2">Short Term Investments</button>
-                    <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">Long Term Investments</button>
+                    <button id="btnShortTermInvestments" class="btn_TabSmallGreen2">Short Term</button>
+                    <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">Long Term</button>
                     <button id="btnExpeditionInvestments" class="btn_TabSmallGreen2">Expeditions</button>
-                    <button id="btnPermanentInvestments" class="btn_TabSmallGreen2">Permanent Investments</button>
+                    <button id="btnPermanentInvestments" class="btn_TabSmallGreen2">Permanent</button>
+                    <button id="btnSpaceInvestments" class="btn_TabSmallGreen2">Space</button>
                     <button id="btnSummaryInvestments" class="btn_TabSmallGreen2">Income Summary</button>
                 </div>
                 <div id="shortTermInvestments" class="hidden_Divs">    
                     <h1>SHORT TERM INVESTMENTS</h1>
-                    Short Term Investments are Quick Investment options that might return a profit.
                     <div id="wikiInvest" class="investDiv">
                         <button id="btnInvestWiki" class="investButton">Invest $2 In Zikipedia - 10 sec CD</button> 
                     </div>
@@ -584,7 +584,6 @@
 
                 <div id="longTermInvestments" class="hidden_Divs"> 
                     <h1>LONG TERM INVESTMENTS</h1>
-                    Long Term Investments always return a profit, however they take longer than Short Term Investments.
                     <div id="goldbotInvest" class="investDiv">  
                         <button id="btnInvestGoldbot" class="investButton">Invest $3 In a Gold Farming Bot - 2 min CD</button> 
                     </div>  
@@ -596,7 +595,7 @@
                     <div id="gameInvestResult" class="investResultDiv"></div> 
 
                     <div id="grandchildInvest" class="investDiv">
-                        <button id="btnInvestGrandchild" class="investButton">Invest $100 In your Grandchild - 4 min CD</button> 
+                        <button id="btnInvestGrandchild" class="investButton">Invest $500 In your Grandchild - 4 min CD</button> 
                     </div>
                     <div id="grandchildInvestResult" class="investResultDiv"></div> 
 
@@ -687,7 +686,6 @@
                 </div>
                 <div id="permanentInvestments" class="hidden_Divs"> 
                     <h1>PERMANENT INVESTMENTS</h1>
-                    Permanent Investments are purchased once to permanently generate profit. Unlike Crawlers, Permanent Investments don't generate Risk.
                     <!-- Background map created with google maps then edited in photoshop -->
                     <div id="delsecMap">
 
@@ -768,61 +766,131 @@
                     </div>
                 </div>
 
+                <div id="permanentSpaceInvestments" class="hidden_Divs"> 
+                    <h1>PERMANENT INVESTMENTS - SPACE</h1>
+                    <div id="spaceMap">
+                        <div id="investSpaceStation" class="investButtonContainer">
+                            <button id="btnInvestSpaceStation" class="selectionButton"></button> 
+                            <div id="investSpaceStationPopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investSatellite" class="investButtonContainer">
+                            <button id="btnInvestSatellite" class="selectionButton"></button> 
+                            <div id="investSatellitePopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investMoonBase" class="investButtonContainer">
+                            <button id="btnInvestMoonBase" class="selectionButton"></button> 
+                            <div id="investMoonBasePopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investOffworldBase" class="investButtonContainer">
+                            <button id="btnInvestOffworldBase" class="selectionButton"></button> 
+                            <div id="investOffworldBasePopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investStorageYard" class="investButtonContainer">
+                            <button id="btnInvestStorageYard" class="selectionButton"></button> 
+                            <div id="investStorageYardPopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investAsteroidColony" class="investButtonContainer">
+                            <button id="btnInvestAsteroidColony" class="selectionButton"></button> 
+                            <div id="investAsteroidColonyPopup" class="investPopup"></div>
+                        </div>
+
+                        <div id="investFreespaceStation" class="investButtonContainer">
+                            <button id="btnInvestFreespaceStation" class="selectionButton"></button> 
+                            <div id="investFreespaceStationPopup" class="investPopupWide"></div>
+                        </div>
+
+                        <div id="investDysonSphere" class="investButtonContainer">
+                            <button id="btnInvestDysonSphere" class="selectionButton"></button> 
+                            <div id="investDysonSpherePopup" class="investPopup"></div>
+                        </div>
+
+                    </div>
+                </div>
+
                 <div id="summaryInvestments" class="hidden_Divs">
                     <h1>LAST PAYMENT SUMMARY</h1>
 
                     <div id="headerSummary" class="summaryDiv">Payments occur once every minute.</div>
                     
                     <div id="generatorSummary" class="summaryDiv"></div>
-                    <div id="generatorSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="generatorSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="rentalBikeSummary" class="summaryDiv"></div>
-                    <div id="rentalBikeSummaryDisplay"class="investSummaryDisplay"></div>
+                    <div id="rentalBikeSummaryDisplay"class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="franchiseSummary" class="summaryDiv"></div>
-                    <div id="franchiseSummaryDisplay"class="investSummaryDisplay"></div>
+                    <div id="franchiseSummaryDisplay"class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="smallPropertySummary" class="summaryDiv"></div>
-                    <div id="smallPropertySummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="smallPropertySummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="threeBRPropertySummary" class="summaryDiv"></div>
-                    <div id="threeBRPropertySummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="threeBRPropertySummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="boatSummary" class="summaryDiv"></div>
-                    <div id="boatSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="boatSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="beachsideSummary" class="summaryDiv"></div>
-                    <div id="beachsideSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="beachsideSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="mansionSummary" class="summaryDiv"></div>
-                    <div id="mansionSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="mansionSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="highEndSummary" class="summaryDiv"></div>
-                    <div id="highEndSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="highEndSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="skyscraperLevelSummary" class="summaryDiv"></div>
-                    <div id="skyscraperLevelSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="skyscraperLevelSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="CBDStoreSummary" class="summaryDiv"></div>
-                    <div id="CBDStoreSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="CBDStoreSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="carDealerSummary" class="summaryDiv"></div>
-                    <div id="carDealerSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="carDealerSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
                     
                     <div id="supermarketSummary" class="summaryDiv"></div>
-                    <div id="supermarketSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="supermarketSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="factorySummary" class="summaryDiv"></div>
-                    <div id="factorySummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="factorySummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="skyscraperSummary" class="summaryDiv"></div>
-                    <div id="skyscraperSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="skyscraperSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="spacePortSummary" class="summaryDiv"></div>
-                    <div id="spacePortSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="spacePortSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="spaceStationSummary" class="summaryDiv"></div>
+                    <div id="spaceStationSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="satelliteSummary" class="summaryDiv"></div>
+                    <div id="satelliteSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="moonBaseSummary" class="summaryDiv"></div>
+                    <div id="moonBaseSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="offworldBaseSummary" class="summaryDiv"></div>
+                    <div id="offworldBaseSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="storageYardSummary" class="summaryDiv"></div>
+                    <div id="storageYardSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="asteroidColonySummary" class="summaryDiv"></div>
+                    <div id="asteroidColonySummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="freespaceStationSummary" class="summaryDiv"></div>
+                    <div id="freespaceStationSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="dysonSphereSummary" class="summaryDiv"></div>
+                    <div id="dysonSphereSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="totalSummary" class="summaryDiv">Total:</div>
-                    <div id="totalSummaryDisplay" class="investSummaryDisplay"></div>
+                    <div id="totalSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
                 </div>
             </div>
 
@@ -3189,7 +3257,7 @@
                     <div id="btnHealerHeader">
                         <button class="healerPassiveButton" ></button>
                         <div class="skillHeaderHoverPopup" id="healerInfo">
-                            INTEREST GENERATE: Adds 0.5% of the Money Spent on Investing every 60 seconds.
+                            INTEREST GENERATE: Adds 1/600th of the Money Spent on Investing every 60 seconds.
                         </div>
                     </div>                    
                 </div>
@@ -3626,6 +3694,7 @@
     <script src="Resources/Scripts/Investment/LongTermInvestments.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Investment/ExpeditionInvestments.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Investment/PermanentInvestments.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Investment/SpaceInvestments.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Investment/SummaryInvestments.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/Console/Console.js" type="text/javascript"></script>

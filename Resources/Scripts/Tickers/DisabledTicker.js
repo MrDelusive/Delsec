@@ -109,6 +109,38 @@
         if (money >= 1500000000 && investSpacePort < investSpacePortMax)
             $('#btnInvestSpacePort').prop('disabled', false);
 
+        $('#btnInvestSpaceStation').prop('disabled', true);
+        if (money >= 3000000000 && investSpaceStation < investSpaceStationMax)
+            $('#btnInvestSpaceStation').prop('disabled', false);
+
+        $('#btnInvestSatellite').prop('disabled', true);
+        if (money >= 4500000000 && investSatellite < investSatelliteMax)
+            $('#btnInvestSatellite').prop('disabled', false);
+
+        $('#btnInvestMoonBase').prop('disabled', true);
+        if (money >= 7000000000 && investMoonBase < investMoonBaseMax)
+            $('#btnInvestMoonBase').prop('disabled', false);
+
+        $('#btnInvestOffworldBase').prop('disabled', true);
+        if (money >= 15000000000 && investOffworldBase < investOffworldBaseMax)
+            $('#btnInvestOffworldBase').prop('disabled', false);
+
+        $('#btnInvestStorageYard').prop('disabled', true);
+        if (money >= 20000000000 && investStorageYard < investStorageYardMax)
+            $('#btnInvestStorageYard').prop('disabled', false);
+
+        $('#btnInvestAsteroidColony').prop('disabled', true);
+        if (money >= 32000000000 && investAsteroidColony < investAsteroidColonyMax)
+            $('#btnInvestAsteroidColony').prop('disabled', false);
+
+        $('#btnInvestFreespaceStation').prop('disabled', true);
+        if (money >= 64000000000 && investFreespaceStation < investFreespaceStationMax)
+            $('#btnInvestFreespaceStation').prop('disabled', false);
+
+        $('#btnInvestDysonSphere').prop('disabled', true);
+        if (money >= 1000000000000 && investDysonSphere < investDysonSphereMax)
+            $('#btnInvestDysonSphere').prop('disabled', false);
+
 
         // WARRIOR CODE //
         $('#btnWriteEfficiency2Code').prop('disabled', true);
