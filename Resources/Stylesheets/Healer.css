@@ -27,24 +27,20 @@
     margin: 0 auto;
 }
 
-#btnHealerHeader:hover > #healerInfo {
+#healerInfo {
     display: block;
-    position: relative;
     height: 50px;
     width: 300px;
-    background: #18311c;
     border-radius: 5px;
     padding: 5px;
     font-size: 14px;
     margin: 0 auto;  
-    left:110px;
-    top:-100px;
 }
 
 .healerSkillHoverPopup {
     display: none;  
     position: relative;
-    height: 50px;
+    height: 70px;
     width: 300px;
     background: #18311c;
     border-radius: 5px;
@@ -52,21 +48,106 @@
     font-size: 14px;
     margin: 0 auto;
     left: -125px;  
-    top: -125px;
+    top: -145px;
 }
 
 .healerActiveButton {
     border-radius: 3px;
-    border: 1px solid black;
-    background: url('../Img/tempSkill.jpg');
+    border: 1px solid black;   
     width: 50px;
     height: 50px;
     cursor: pointer;
     margin: 0 auto;
 }
 
-#btnHealerHeader:hover > #healerInfo {
-    display: block;
+#btnHealerLevel1-1 {
+    background: url('../Img/healer/healShortTermPlus1.jpg');
+}
+#btnHealerLevel1-2 {
+    background: url('../Img/healer/healLongTermPlus1.jpg');
+}
+#btnHealerLevel1-3 {
+    background: url('../Img/healer/healExpeditionPlus1.jpg');
+}
+
+#btnHealerLevel2-1 {
+    background: url('../Img/healer/healShortTermPercent.jpg');
+}
+#btnHealerLevel2-2 {
+    background: url('../Img/healer/healLongTermPlus1.jpg');
+}
+#btnHealerLevel2-3 {
+    background: url('../Img/healer/healExpeditionPercent.jpg');
+}
+
+#btnHealerLevel3-1 {
+    background: url('../Img/healer/healShortTermPercent.jpg');
+}
+#btnHealerLevel3-2 {
+    background: url('../Img/healer/healLongTermPlus1.jpg');
+}
+#btnHealerLevel3-3 {
+    background: url('../Img/healer/healExpeditionPercent.jpg');
+}
+
+#btnHealerLevel4-1 {
+    background: url('../Img/healer/healShortTermPercent.jpg');
+}
+#btnHealerLevel4-2 {
+    background: url('../Img/healer/healLongTermPlus1.jpg');
+}
+#btnHealerLevel4-3 {
+    background: url('../Img/healer/healGenerator.jpg');
+}
+
+#btnHealerLevel5-1 {
+    background: url('../Img/healer/healShortTermPlus1.jpg');
+}
+#btnHealerLevel5-2 {
+    background: url('../Img/healer/healExpeditionPercent.jpg');
+}
+#btnHealerLevel5-3 {
+    background: url('../Img/healer/healGenerator.jpg');
+}
+
+#btnHealerLevel6-1 {
+    background: url('../Img/healer/healExpeditionPlus2.jpg');
+}
+#btnHealerLevel6-2 {
+    background: url('../Img/healer/healLongTermPlus1.jpg');
+}
+#btnHealerLevel6-3 {
+    background: url('../Img/healer/healPermanentPercent.jpg');
+}
+
+#btnHealerLevel7-1 {
+    background: url('../Img/healer/healLongTermPercent.jpg');
+}
+#btnHealerLevel7-2 {
+    background: url('../Img/healer/healGenerator.jpg');
+}
+#btnHealerLevel7-3 {
+    background: url('../Img/healer/healPermanentPercent.jpg');
+}
+
+#btnHealerLevel8-1 {
+    background: url('../Img/healer/healShortTermPercent.jpg');
+}
+#btnHealerLevel8-2 {
+    background: url('../Img/healer/healExpeditionPercent.jpg');
+}
+#btnHealerLevel8-3 {
+    background: url('../Img/healer/healPermanentPercent.jpg');
+}
+
+#btnHealerLevel9-1 {
+    background: url('../Img/healer/healShortTermUlt.jpg');
+}
+#btnHealerLevel9-2 {
+    background: url('../Img/healer/healLongTermUlt.jpg');
+}
+#btnHealerLevel9-3 {
+    background: url('../Img/healer/healPermanentUlt.jpg');
 }
 
 #healerSkill1-1:hover > #healerSkill1-1Popup {

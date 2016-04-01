@@ -38,7 +38,15 @@ var voyageActive = "false";
 var worldActive = "false";
 
 var miningActive = "false";
+var miningMediumActive = "false";
+var onlineDataMineActive = "false";
+var delsecStockExtractionActive = "false";
+var chimerasecStockExtractionActive = "false";
+var russianStockExtractionActive = "false";
+var miningLargeActive = "false";
 var drillActive = "false";
+var asteroidMiningActive = "false";
+var matterConversionActive = "false";
 
 var investRentalBike = 0;
 var investRentalBikeMax = 200;

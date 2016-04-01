@@ -1,4 +1,9 @@
 ﻿$(document).ready(function () {
+
+    $('#loading').hide();
+    // after window is loaded then show the scroll (I don't want user to be able to scroll while waiting for load)
+    $('body').css("overflow", "auto");
+
     // Check for null values ($NaN)
     if (localStorage.getItem("money") === null)
         localStorage.setItem("money", money);

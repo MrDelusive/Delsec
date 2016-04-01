@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    <!-- All code and images created by Luke Parisi unless otherwise stated. -->
     <meta name="keywords" content="Delsec, Clicker Game, Delsec Clicker, Mr Delusive, Incremental Game" /> 
     <meta name="description" content="Delsec Incremental Game" />               
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>
         Delsec Account
     </title>
-    <!-- button styles generated from http://www.cssbuttongenerator.com/  Except for the generate button, I did that myself
-        All images are my own.
-        -->
+    
+    <link href="Resources/Stylesheets/loader.css" rel="stylesheet" type="text/css" />
     <link href="Resources/Stylesheets/Master.css" rel="stylesheet" type="text/css" />
     <link href="Resources/Stylesheets/Stocks.css" rel="stylesheet" type="text/css" />
     <link href="Resources/Stylesheets/Buttons.css" rel="stylesheet" type="text/css" />   
@@ -29,7 +29,35 @@
     <script src="Resources/Scripts/Preload/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/jquery-ui-1.10.4.custom.js" type="text/javascript"></script>
 </head>
-<body>    
+<body>
+    <div id="loading">		
+		<!-- Loader animation from http://cssload.net/ -->
+		<div class="windows8">
+			<div class="wBall" id="wBall_1">
+				<div class="wInnerBall">
+				</div>
+			</div>
+			<div class="wBall" id="wBall_2">
+				<div class="wInnerBall">
+				</div>
+			</div>
+			<div class="wBall" id="wBall_3">
+				<div class="wInnerBall">
+				</div>
+			</div>
+			<div class="wBall" id="wBall_4">
+				<div class="wInnerBall">
+				</div>
+			</div>
+			<div class="wBall" id="wBall_5">
+				<div class="wInnerBall">
+				</div>
+			</div>
+		</div>
+		<h1>Loading Resources, Please wait.</h1>
+		<h2>Best viewed in 1080p. <br /><br /></h2>
+		Uses Local Storage to save data.<br />
+	</div>    
     <form>
     <div id="main">
         <div id="left_Main">
@@ -491,92 +519,92 @@
                 <div id="shortTermInvestments" class="hidden_Divs">    
                     <h1>SHORT TERM INVESTMENTS</h1>
                     <div id="wikiInvest" class="investDiv">
-                        <button id="btnInvestWiki" class="investButton">Invest $2 In Zikipedia - 10 sec CD</button> 
+                        <button id="btnInvestWiki" class="investButton">Invest $2 In Zikipedia - Default 10 sec CD</button> 
                     </div>
                     <div id="wikiInvestResult" class="investResultDiv" ></div>                
                 
                     <div id="switchInvest" class="investDiv">
-                        <button id="btnInvestTwitch" class="investButton">Invest $5 In your favourite Switch Streamer - 10 sec CD</button> 
+                        <button id="btnInvestTwitch" class="investButton">Invest $5 In your favourite Switch Streamer - Default 10 sec CD</button> 
                     </div>
                     <div id="twitchInvestResult" class="investResultDiv"></div>         
                 
                     <div id="punchInvest" class="investDiv">
-                        <button id="btnInvestPunch" class="investButton">Invest $10 In a PunchStarter Startup - 15 sec CD</button> 
+                        <button id="btnInvestPunch" class="investButton">Invest $10 In a PunchStarter Startup - Default 15 sec CD</button> 
                     </div>
                     <div id="punchInvestResult" class="investResultDiv"></div>  
                     
                     <div id="websiteInvest" class="investDiv">
-                        <button id="btnInvestWebsite" class="investButton">Invest $25 In a new Website - 15 sec CD</button> 
+                        <button id="btnInvestWebsite" class="investButton">Invest $25 In a new Website - Default 15 sec CD</button> 
                     </div>
                     <div id="websiteInvestResult" class="investResultDiv"></div>    
                                  
                     <div id="pokerInvest" class="investDiv">
-                        <button id="btnInvestPoker" class="investButton">Invest $100 In your Friends Poker habits - 20 sec CD</button> 
+                        <button id="btnInvestPoker" class="investButton">Invest $100 In your Friends Poker habits - Default 20 sec CD</button> 
                     </div>
                     <div id="pokerInvestResult" class="investResultDiv"></div>  
                
                     <div id="raceInvest" class="investDiv">
-                        <button id="btnInvestRace" class="investButton">Invest $1,000 In a Race Car - 30 sec CD</button> 
+                        <button id="btnInvestRace" class="investButton">Invest $1,000 In a Race Car - Default 30 sec CD</button> 
                     </div>
                     <div id="raceInvestResult" class="investResultDiv"></div>                      
                     
                     <div id="socialMediaInvest" class="investDiv">
-                        <button id="btnInvestSocialMedia" class="investButton">Invest $5,000 In a Social Media Strategy - 90 sec CD</button> 
+                        <button id="btnInvestSocialMedia" class="investButton">Invest $5,000 In a Social Media Strategy - Default 90 sec CD</button> 
                     </div>
                     <div id="socialMediaInvestResult" class="investResultDiv"></div>  
 
                     <div id="blueChipInvest" class="investDiv">
-                        <button id="btnInvestBlueChip" class="investButton">Invest $10,000 In a Blue Chip Company - 2 min CD</button> 
+                        <button id="btnInvestBlueChip" class="investButton">Invest $10,000 In a Blue Chip Company - Default 2 min CD</button> 
                     </div>
                     <div id="blueChipInvestResult" class="investResultDiv"></div>
 
                     <div id="selfImprovementInvest" class="investDiv">
-                        <button id="btnInvestSelfImprovement" class="investButton">Invest $25,000 In a Self Improvement Course - 3 min CD</button> 
+                        <button id="btnInvestSelfImprovement" class="investButton">Invest $25,000 In a Self Improvement Course - Default 3 min CD</button> 
                     </div>
                     <div id="selfImprovementInvestResult" class="investResultDiv"></div>
 
                     <div id="selfImprovementInvest2" class="investDiv">
-                        <button id="btnInvestSelfImprovement2" class="investButton">Invest $50,000 In a Better Self Improvement Course - 3 min CD</button> 
+                        <button id="btnInvestSelfImprovement2" class="investButton">Invest $50,000 In a Better Self Improvement Course - Default 3 min CD</button> 
                     </div>
                     <div id="selfImprovement2InvestResult" class="investResultDiv"></div>
 
                     <div id="energyInvest" class="investDiv">
-                        <button id="btnInvestEnergy" class="investButton">Invest $100,000 In Energy - 4 min CD</button> 
+                        <button id="btnInvestEnergy" class="investButton">Invest $100,000 In Energy - Default 4 min CD</button> 
                     </div>
                     <div id="energyInvestResult" class="investResultDiv"></div>                                      
 
                     <div id="superHeroInvest" class="investDiv">
-                        <button id="btnInvestSuperHero" class="investButton">Invest $2,000,000 In A Super Hero Builder - 8 min CD</button> 
+                        <button id="btnInvestSuperHero" class="investButton">Invest $2 Million In A Super Hero Builder - Default 8 min CD</button> 
                     </div>
                     <div id="superHeroInvestResult" class="investResultDiv"></div>                    
 
                     <div id="movieInvest" class="investDiv">
-                        <button id="btnInvestMovie" class="investButton">Invest $10,000,000 In a Movie - 15 min CD</button> 
+                        <button id="btnInvestMovie" class="investButton">Invest $10 Million In a Movie - Default 15 min CD</button> 
                     </div>
                     <div id="movieInvestResult" class="investResultDiv"></div>
 
                     <div id="experimentalInvest" class="investDiv">
-                        <button id="btnInvestExperimental" class="investButton">Invest $50,000,000 In an Experimental Technology - 15 min CD</button> 
+                        <button id="btnInvestExperimental" class="investButton">Invest $50 Million In an Experimental Technology - Default 15 min CD</button> 
                     </div>
                     <div id="experimentalInvestResult" class="investResultDiv"></div>
 
                     <div id="timeTravelInvest" class="investDiv">
-                        <button id="btnInvestTimeTravel" class="investButton">Invest $250,000,000 In a Time Travel Trip - 15 min CD</button> 
+                        <button id="btnInvestTimeTravel" class="investButton">Invest $250 Million In a Time Travel Trip - Default 15 min CD</button> 
                     </div>
                     <div id="timeTravelInvestResult" class="investResultDiv"></div>
 
                     <div id="mysteryInvest" class="investDiv">
-                        <button id="btnInvestMystery" class="investButton">Invest $1,000,000,000 In a Mystery Fund - 15 min CD</button> 
+                        <button id="btnInvestMystery" class="investButton">Invest $1 Billion In a Mystery Fund - Default 15 min CD</button> 
                     </div>
                     <div id="mysteryInvestResult" class="investResultDiv"></div>
 
                     <div id="moonInvest" class="investDiv">
-                        <button id="btnInvestMoon" class="investButton">Invest $2,250,000,000 In a Manned Moon Mission - 15 min CD</button> 
+                        <button id="btnInvestMoon" class="investButton">Invest $2.25 Billion In a Manned Moon Mission - Default 15 min CD</button> 
                     </div>
                     <div id="moonInvestResult" class="investResultDiv"></div>
 
                     <div id="marsInvest" class="investDiv">
-                        <button id="btnInvestMars" class="investButton">Invest $5,000,000,000 In a Manned Mars Mission - 15 min CD</button> 
+                        <button id="btnInvestMars" class="investButton">Invest $5 Billion In a Manned Mars Mission - Default 15 min CD</button> 
                     </div>
                     <div id="marsInvestResult" class="investResultDiv"></div>
 
@@ -585,87 +613,87 @@
                 <div id="longTermInvestments" class="hidden_Divs"> 
                     <h1>LONG TERM INVESTMENTS</h1>
                     <div id="goldbotInvest" class="investDiv">  
-                        <button id="btnInvestGoldbot" class="investButton">Invest $3 In a Gold Farming Bot - 2 min CD</button> 
+                        <button id="btnInvestGoldbot" class="investButton">Invest $3 In a Gold Farming Bot - Default 2 min CD</button> 
                     </div>  
                     <div id="goldbotInvestResult" class="investResultDiv"></div>   
 
                     <div id="gameInvest" class="investDiv">
-                        <button id="btnInvestGame" class="investButton">Invest $25 In a Game Under Development - 3 min CD</button> 
+                        <button id="btnInvestGame" class="investButton">Invest $25 In a Game Under Development - Default 3 min CD</button> 
                     </div>
                     <div id="gameInvestResult" class="investResultDiv"></div> 
 
                     <div id="grandchildInvest" class="investDiv">
-                        <button id="btnInvestGrandchild" class="investButton">Invest $500 In your Grandchild - 4 min CD</button> 
+                        <button id="btnInvestGrandchild" class="investButton">Invest $500 In your Grandchild - Default 4 min CD</button> 
                     </div>
                     <div id="grandchildInvestResult" class="investResultDiv"></div> 
 
                     <div id="goldInvest" class="investDiv">
-                        <button id="btnInvestGold" class="investButton">Invest $1,000 In Gold - 5 min CD</button> 
+                        <button id="btnInvestGold" class="investButton">Invest $1,000 In Gold - Default 5 min CD</button> 
                     </div>
                     <div id="goldInvestResult" class="investResultDiv"></div> 
 
                     <div id="lifeInvest" class="investDiv">
-                        <button id="btnInvestLife" class="investButton">Invest $2,500 In a Life Insurance Scheme - 6 min CD</button> 
+                        <button id="btnInvestLife" class="investButton">Invest $2,500 In a Life Insurance Scheme - Default 6 min CD</button> 
                     </div>
                     <div id="lifeInvestResult" class="investResultDiv"></div> 
 
                     <div id="swedishInvest" class="investDiv">
-                        <button id="btnInvestSwedish" class="investButton">Invest $10,000 In a Swedish Trust Fund - 8 min CD</button> 
+                        <button id="btnInvestSwedish" class="investButton">Invest $10,000 In a Swedish Trust Fund - Default 8 min CD</button> 
                     </div>
                     <div id="swedishInvestResult" class="investResultDiv"></div> 
 
                     <div id="CDInvest" class="investDiv">
-                        <button id="btnInvestCD" class="investButton">Invest $25,000 In a CD Account - 10 min CD</button> 
+                        <button id="btnInvestCD" class="investButton">Invest $25,000 In a CD Account - Default 10 min CD</button> 
                     </div>
                     <div id="CDInvestResult" class="investResultDiv"></div>       
 
                     <div id="offshoreInvest" class="investDiv">
-                        <button id="btnInvestOffshore" class="investButton">Invest $100,000 In an Offshore Variable Interest Scheme - 15 min CD</button> 
+                        <button id="btnInvestOffshore" class="investButton">Invest $100,000 In an Offshore Interest Scheme - Default 15 min CD</button> 
                     </div>
                     <div id="offshoreInvestResult" class="investResultDiv"></div>  
                     
                     <div id="deepSeaInvest" class="investDiv">
-                        <button id="btnInvestDeepSea" class="investButton">Invest $500,000 In a Deep Sea Mission - 20 min CD</button> 
+                        <button id="btnInvestDeepSea" class="investButton">Invest $500,000 In a Deep Sea Mission - Default 20 min CD</button> 
                     </div>
                     <div id="deepSeaInvestResult" class="investResultDiv"></div>    
                     
                     <div id="secureInvest" class="investDiv">
-                        <button id="btnInvestSecure" class="investButton">Invest $2,500,000 In a Secure Risky Goods Transfer - 25 min CD</button> 
+                        <button id="btnInvestSecure" class="investButton">Invest $2.5 Million In a Secure Risky Goods Transfer - Default 25 min CD</button> 
                     </div>
                     <div id="secureInvestResult" class="investResultDiv"></div>   
                     
                     <div id="overflowInvest" class="investDiv">
-                        <button id="btnInvestOverflow" class="investButton">Invest $10,000,000 In a Bank Overflow - 30 min CD</button> 
+                        <button id="btnInvestOverflow" class="investButton">Invest $10 Million In a Bank Overflow - Default 30 min CD</button> 
                     </div>
                     <div id="overflowInvestResult" class="investResultDiv"></div>   
                     
                     <div id="armsDealInvest" class="investDiv">
-                        <button id="btnInvestArmsDeal" class="investButton">Invest $60,000,000 In a Large Arms Deal Trade - 40 min CD</button> 
+                        <button id="btnInvestArmsDeal" class="investButton">Invest $60 Million In a Large Arms Deal Trade - Default 40 min CD</button> 
                     </div>
                     <div id="armsDealInvestResult" class="investResultDiv"></div>  
                     
                     <div id="nuclearInvest" class="investDiv">
-                        <button id="btnInvestNuclear" class="investButton">Invest $350,000,000 In Nuclear Material Transportation - 50 min CD</button> 
+                        <button id="btnInvestNuclear" class="investButton">Invest $350 Million In Nuclear Material Transport - Default 50 min CD</button> 
                     </div>
                     <div id="nuclearInvestResult" class="investResultDiv"></div>  
 
                     <div id="relocationInvest" class="investDiv">
-                        <button id="btnInvestRelocation" class="investButton">Invest $1,000,000,000 In a City Relocation - 60 min CD</button> 
+                        <button id="btnInvestRelocation" class="investButton">Invest $1 Billion In a City Relocation - Default 60 min CD</button> 
                     </div>
                     <div id="relocationInvestResult" class="investResultDiv"></div>  
 
                     <div id="orbitalInvest" class="investDiv">
-                        <button id="btnInvestOrbital" class="investButton">Invest $7,000,000,000 In an Orbital Defence Network - 75 min CD</button> 
+                        <button id="btnInvestOrbital" class="investButton">Invest $7 Billion In an Orbital Defence Network - Default 75 min CD</button> 
                     </div>
                     <div id="orbitalInvestResult" class="investResultDiv"></div> 
 
                     <div id="voyageInvest" class="investDiv">
-                        <button id="btnInvestVoyage" class="investButton">Invest $20,000,000,000 In a Deep Space Voyage - 90 min CD</button> 
+                        <button id="btnInvestVoyage" class="investButton">Invest $20 Billion In a Deep Space Voyage - Default 90 min CD</button> 
                     </div>
                     <div id="voyageInvestResult" class="investResultDiv"></div> 
 
                     <div id="worldInvest" class="investDiv">
-                        <button id="btnInvestWorld" class="investButton">Invest $150,000,000,000 In World Construction - 120 min CD</button> 
+                        <button id="btnInvestWorld" class="investButton">Invest $150 Billion In World Construction - Default 120 min CD</button> 
                     </div>
                     <div id="worldInvestResult" class="investResultDiv"></div> 
                               
@@ -674,14 +702,54 @@
                 <div id="expeditionInvestments" class="hidden_Divs"> 
                     <h1>EXPEDITIONS</h1>
                     <div id="miningInvest" class="investDiv">
-                        <button id="btnInvestMining" class="investButton">Invest $2,500 In a Small Mining Expedition - 1 min CD</button> 
+                        <button id="btnInvestMining" class="investButton">Invest $2,500 In a Small Mining Expedition - Default 1 min CD</button> 
                     </div>
-                    <div id="miningInvestResult" class="investResultDiv"></div>   
+                    <div id="miningInvestResult" class="investResultDiv"></div> 
+                    
+                    <div id="miningMediumInvest" class="investDiv">
+                        <button id="btnInvestMiningMedium" class="investButton">Invest $50,000 In a Medium Mining Expedition - Default 3 min CD</button> 
+                    </div>
+                    <div id="miningMediumInvestResult" class="investResultDiv"></div>     
+
+                    <div id="onlineDataMineInvest" class="investDiv">
+                        <button id="btnInvestOnlineDataMine" class="investButton">Invest $100,000 In an Online Data Mine Extraction - Default 5 min CD</button> 
+                    </div>
+                    <div id="onlineDataMineInvestResult" class="investResultDiv"></div>    
+
+                    <div id="delsecStockExtractionInvest" class="investDiv">
+                        <button id="btnInvestDelsecStockExtraction" class="investButton">Invest $250,000 In a Delsec Stock Extraction - Default 6 min CD</button> 
+                    </div>
+                    <div id="delsecStockExtractionInvestResult" class="investResultDiv"></div>  
+
+                    <div id="chimerasecStockExtractionInvest" class="investDiv">
+                        <button id="btnInvestChimerasecStockExtraction" class="investButton">Invest $250,000 In a Chimerasec Stock Extraction - Default 6 min CD</button> 
+                    </div>
+                    <div id="chimerasecStockExtractionInvestResult" class="investResultDiv"></div>  
+
+                    <div id="russianStockExtractionInvest" class="investDiv">
+                        <button id="btnInvestRussianStockExtraction" class="investButton">Invest $250,000 In a Russian Stock Extraction - Default 6 min CD</button> 
+                    </div>
+                    <div id="russianStockExtractionInvestResult" class="investResultDiv"></div>  
+
+                    <div id="miningLargeInvest" class="investDiv">
+                        <button id="btnInvestMiningLarge" class="investButton">Invest $1 Million In a Large Mining Expedition - Default 8 min CD</button> 
+                    </div>
+                    <div id="miningLargeInvestResult" class="investResultDiv"></div>  
 
                     <div id="drillInvest" class="investDiv">
-                        <button id="btnInvestDrill" class="investButton">Invest $5,000,000 In A Planetary Drill Operation - 10 min CD</button> 
+                        <button id="btnInvestDrill" class="investButton">Invest $5 Million In a Planetary Drill Operation - Default 10 min CD</button> 
                     </div>
                     <div id="drillInvestResult" class="investResultDiv"></div>
+
+                    <div id="asteroidMiningInvest" class="investDiv">
+                        <button id="btnInvestAsteroidMining" class="investButton">Invest $5 Billion In an Asteroid Mining Operation - Default 15 min CD</button> 
+                    </div>
+                    <div id="asteroidMiningInvestResult" class="investResultDiv"></div>
+
+                    <div id="matterConversionInvest" class="investDiv">
+                        <button id="btnInvestMatterConversion" class="investButton">Invest $500 Billion In a Matter Conversion Operation - Default 30 min CD</button> 
+                    </div>
+                    <div id="matterConversionInvestResult" class="investResultDiv"></div>
 
                 </div>
                 <div id="permanentInvestments" class="hidden_Divs"> 
@@ -888,6 +956,9 @@
 
                     <div id="dysonSphereSummary" class="summaryDiv"></div>
                     <div id="dysonSphereSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div id="abilitiesBoostSummary" class="summaryDiv"></div>
+                    <div id="abilitiesBoostSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="totalSummary" class="summaryDiv">Total:</div>
                     <div id="totalSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
@@ -3254,247 +3325,325 @@
             <div id="healerAbilities" class="hidden_Divs">
                 <div class="skilltreeHeaderWrapper">
                     <h1>YOU WALK THE PATH OF THE HEALER</h1>
-                    <div id="btnHealerHeader">
-                        <button class="healerPassiveButton" ></button>
-                        <div class="skillHeaderHoverPopup" id="healerInfo">
-                            INTEREST GENERATE: Adds 1/600th of the Money Spent on Investing every 60 seconds.
-                        </div>
-                    </div>                    
+                    <div class="skillHeader" id="healerInfo">
+                        INTEREST GENERATE: Adds 1/600th of the Money Spent on Investing every 60 seconds.
+                    </div>                
                 </div>
 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel1Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 1 ABILITIES $10,000
                     </div>
                     <div class="leftSkill" id="healerSkill1-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel1-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill1-1Popup">
-                            HealerSkill1-1
+                            SHORT TERM ENTHUSIAST:<br />Higher probability of getting a good short term result (+1 Roll Short Term)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill1-3">
                         <button class="healerActiveButton" id="btnHealerLevel1-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill1-3Popup">
-                            HealerSkill1-3
+                            EXPEDITION ENTHUSIAST:<br />Higher probability of getting a good expedition result (+1 Roll Expedition)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill1-2">
                         <button class="healerActiveButton" id="btnHealerLevel1-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill1-2Popup">
-                            HealerSkill1-2
+                            LONG TERM ENTHUSIAST:<br />Higher probability of getting a good long term result (+1 Roll Long Term)
                         </div>
                     </div>                                   
                 </div>
+                <div class="skilltreeRowHidden" id="shortTermEnthusiastAbility">
+                    <h1>SHORT TERM ENTHUSIAST</h1> +1 SHORT TERM ROLL
+                </div>
+                <div class="skilltreeRowHidden" id="longTermEnthusiastAbility">
+                    <h1>LONG TERM ENTHUSIAST</h1> +1 LONG TERM ROLL
+                </div>
+                <div class="skilltreeRowHidden" id="expeditionEnthusiastAbility">
+                    <h1>EXPEDITION ENTHUSIAST</h1> +1 EXPEDITION ROLL
+                </div>
 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel2Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 2 ABILITIES $100,000
                     </div>
                     <div class="leftSkill" id="healerSkill2-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel2-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill2-1Popup">
-                            HealerSkill2-1
+                            SHORT TERM UNDERSTANDING:<br />-10% Investment Time on all Short Term Investments. (Additive)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill2-3">
                         <button class="healerActiveButton" id="btnHealerLevel2-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill2-3Popup">
-                            HealerSkill2-3
+                            EXPEDITION GATHERER:<br />+10% Materials Gathered from Expeditions. (Multiplicitive)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill2-2">
                         <button class="healerActiveButton" id="btnHealerLevel2-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill2-2Popup">
-                            HealerSkill2-2
+                            LONG TERM PLANNING:<br />Higher probability of getting a good long term result (+1 Roll Long Term) 
                         </div>
                     </div>  
                 </div>
+                <div class="skilltreeRowHidden" id="shortTermUnderstandingAbility">
+                    <h1>SHORT TERM UNDERSTANDING</h1> -10% INVESTMENT TIME ON SHORT TERM INVESTMENTS
+                </div>
+                <div class="skilltreeRowHidden" id="longTermPlanningAbility">
+                    <h1>LONG TERM PLANNING</h1> +1 LONG TERM ROLL
+                </div>
+                <div class="skilltreeRowHidden" id="expeditionGathererAbility">
+                    <h1>EXPEDITION GATHERER</h1> +10% EXPEDITION MATERIALS GATHERED
+                </div>
 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel3Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 3 ABILITIES $1,000,000
                     </div>
                     <div class="leftSkill" id="healerSkill3-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel3-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill3-1Popup">
-                            HealerSkill3-1
+                            SHORT TERM EFFICIENCY:<br />-15% Investment Time on all Short Term Investments. (Additive)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill3-3">
                         <button class="healerActiveButton" id="btnHealerLevel3-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill3-3Popup">
-                            HealerSkill3-3
+                            EXPEDITION COLLECTOR:<br />+15% Materials Gathered from Expeditions. (Multiplicitive)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill3-2">
                         <button class="healerActiveButton" id="btnHealerLevel3-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill3-2Popup">
-                            HealerSkill3-2
+                            LONG TERM STRATEGY:<br />Higher probability of getting a good long term result (+1 Roll Long Term) 
                         </div>
                     </div>  
+                </div>
+                <div class="skilltreeRowHidden" id="shortTermEfficiencyAbility">
+                    <h1>SHORT TERM EFFICIENCY</h1> -15% INVESTMENT TIME ON SHORT TERM INVESTMENTS.
                 </div>         
-                
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowHidden" id="longTermStrategyAbility">
+                    <h1>LONG TERM STRATEGY</h1> +1 LONG TERM ROLL
+                </div>
+                <div class="skilltreeRowHidden" id="expeditionCollectorAbility">
+                    <h1>EXPEDITION COLLECTOR</h1> +15% EXPEDITION MATERIALS GATHERED
+                </div>
+
+                <div class="skilltreeRowWrapper" id="healerLevel4Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 4 ABILITIES $10,000,000
                     </div>
                     <div class="leftSkill" id="healerSkill4-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel4-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill4-1Popup">
-                            HealerSkill4-1
+                            SHORT TERM EFFICIENCY II:<br />-17.5% Investment Time on all Short Term Investments. (Additive)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill4-3">
                         <button class="healerActiveButton" id="btnHealerLevel4-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill4-3Popup">
-                            HealerSkill4-3
+                            GENERATOR INVESTOR:<br />+1/600th of Total Invested added to Auto-Gen. (Stacking)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill4-2">
                         <button class="healerActiveButton" id="btnHealerLevel4-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill4-2Popup">
-                            HealerSkill4-2
+                            LONG TERM EXPONENTIALS:<br />Higher probability of getting a good long term result (+1 Roll Long Term) 
                         </div>
                     </div>  
-                </div>         
+                </div>  
+                <div class="skilltreeRowHidden" id="shortTermEfficiency2Ability">
+                    <h1>SHORT TERM EFFICIENCY II </h1> -17.5% INVESTMENT TIME ON SHORT TERM INVESTMENTS.
+                </div>
+                <div class="skilltreeRowHidden" id="longTermExponentialsAbility">
+                    <h1>LONG TERM EXPONENTIALS</h1> +1 LONG TERM ROLL
+                </div>  
+                <div class="skilltreeRowHidden" id="generatorInvestorAbility">
+                    <h1>GENERATOR INVESTOR</h1> +1/600TH OF TOTAL INVESTED ADDED TO AUTO-GEN
+                </div>          
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel5Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 5 ABILITIES $100,000,000
                     </div>
                     <div class="leftSkill" id="healerSkill5-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel5-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill5-1Popup">
-                            HealerSkill5-1
+                            SHORT TERM PLANNING:<br />Higher probability of getting a good short term result (+1 Roll Short Term)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill5-3">
                         <button class="healerActiveButton" id="btnHealerLevel5-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill5-3Popup">
-                            HealerSkill5-3
+                            GENERATOR PROFESSIONAL:<br />+2/600th of Total Invested added to Auto-Gen. (Stacking)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill5-2">
                         <button class="healerActiveButton" id="btnHealerLevel5-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill5-2Popup">
-                            HealerSkill5-2
+                            EXPEDITION HOARDER:<br />+25% Materials Gathered from Expeditions. (Multiplicitive)
                         </div>
                     </div>  
-                </div>  
+                </div>
+                <div class="skilltreeRowHidden" id="shortTermPlanningAbility">
+                    <h1>SHORT TERM PLANNING </h1>+1 ROLL SHORT TERM
+                </div> 
+                <div class="skilltreeRowHidden" id="expeditionHoarderAbility">
+                    <h1>EXPEDITION HOARDER</h1>+25% EXPEDITION MATERIALS GATHERED
+                </div>
+                <div class="skilltreeRowHidden" id="generatorProfessionalAbility">
+                    <h1>GENERATOR PROFESSIONAL</h1>+2/600TH OF TOTAL INVESTED ADDED TO AUTO-GEN
+                </div>    
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel6Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 6 ABILITIES $1,000,000,000
                     </div>
                     <div class="leftSkill" id="healerSkill6-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel6-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill6-1Popup">
-                            HealerSkill6-1
+                            EXPEDITION MASTERY:<br />+2 to Expedition Rolls
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill6-3">
                         <button class="healerActiveButton" id="btnHealerLevel6-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill6-3Popup">
-                            HealerSkill6-3
+                            PERMANENT INTEREST:<br />+2% Permanent Profits.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill6-2">
                         <button class="healerActiveButton" id="btnHealerLevel6-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill6-2Popup">
-                            HealerSkill6-2
+                            LONG TERM CONTINUATION:<br />Higher probability of getting a good long term result (+1 Roll Long Term)
                         </div>
                     </div>  
                 </div> 
+                <div class="skilltreeRowHidden" id="expeditionMasteryAbility">
+                    <h1>EXPEDITION MASTERY</h1> +2 EXPEDITION ROLL
+                </div>
+                <div class="skilltreeRowHidden" id="longTermContinuationAbility">
+                    <h1>LONG TERM CONTINUATION</h1> +1 LONG TERM ROLL
+                </div>
+                <div class="skilltreeRowHidden" id="permanentInterestAbility">
+                    <h1>PERMANENT INTEREST</h1>+2% PERMANENT PROFITS
+                </div>   
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel7Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 7 ABILITIES $10,000,000,000
                     </div>
                     <div class="leftSkill" id="healerSkill7-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel7-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill7-1Popup">
-                            HealerSkill7-1
+                            LONG TERM EFFICIENCY:<br />Reduce Duration of Long Term Investments by 25%.
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill7-3">
                         <button class="healerActiveButton" id="btnHealerLevel7-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill7-3Popup">
-                            HealerSkill7-3
+                            PERMANENT PROFITEER:<br />+3% Permanent Profits.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill7-2">
                         <button class="healerActiveButton" id="btnHealerLevel7-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill7-2Popup">
-                            HealerSkill7-2
+                            GENERATOR INSANITY:<br />+3/600th of Total Invested added to Auto-Gen. (Stacking)
                         </div>
                     </div>  
-                </div>    
+                </div>
+                <div class="skilltreeRowHidden" id="longTermEfficiencyAbility">
+                    <h1>LONG TERM EFFICIENCY</h1> -25% INVESTMENT TIME LONG TERM
+                </div>
+                <div class="skilltreeRowHidden" id="generatorInsanityAbility">
+                    <h1>GENERATOR INSANITY</h1> +3/600TH OF TOTAL INVESTED ADDED TO AUTO-GEN
+                </div>
+                <div class="skilltreeRowHidden" id="permanentProfiteerAbility">
+                    <h1>PERMANENT PROFITEER</h1>+3% PERMANENT PROFITS
+                </div>         
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel8Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 8 ABILITIES $100,000,000,000
                     </div>
                     <div class="leftSkill" id="healerSkill8-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel8-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill8-1Popup">
-                            HealerSkill8-1
+                            SHORT TERM MIN-MAX:<br />-20% Investment Time on all Short Term Investments (Additive)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill8-3">
                         <button class="healerActiveButton" id="btnHealerLevel8-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill8-3Popup">
-                            HealerSkill8-3
+                            PERMANENT OVERPOWER:<br />+5% Permanent Profits.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill8-2">
                         <button class="healerActiveButton" id="btnHealerLevel8-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill8-2Popup">
-                            HealerSkill8-2
+                            EXPEDITION AMASSING:<br />+50% Materials Gathered from Expeditions. (Multiplicitive)
                         </div>
                     </div>  
-                </div>  
+                </div>
+                <div class="skilltreeRowHidden" id="shortTermMinMaxAbility">
+                    <h1>SHORT TERM MIN-MAX </h1> -20% INVESTMENT TIME ON SHORT TERM INVESTMENTS.
+                </div>
+                <div class="skilltreeRowHidden" id="expeditionAmassingAbility">
+                    <h1>EXPEDITION AMASSING</h1> +50% EXPEDITION MATERIALS GATHERED
+                </div>
+                <div class="skilltreeRowHidden" id="permanentOverpowerAbility">
+                    <h1>PERMANENT OVERPOWER</h1>+5% PERMANENT PROFITS
+                </div>     
 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="healerLevel9Abilities">
                     <div class="skillRowHeader">
                         HEALER LEVEL 9 ABILITIES $1,000,000,000,000
                     </div>
                     <div class="leftSkill" id="healerSkill9-1">                     
                         <button class="healerActiveButton" id="btnHealerLevel9-1"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill9-1Popup">
-                            HealerSkill9-1
+                            RAPID MOMENTUM:<br />-27.5% Investment Time on all Short Term Investments (Additive) and +1 to all Short Term Rolls
                         </div>
                     </div>
 
                     <div class="rightSkill" id="healerSkill9-3">
                         <button class="healerActiveButton" id="btnHealerLevel9-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill9-3Popup">
-                            HealerSkill9-3
+                            PRODUCTION LINE:<br />Auto-Gen and Permanent Payments tick every 30sec instead of every 60sec
                         </div>
                     </div>
 
                     <div class="middleSkill" id="healerSkill9-2">
                         <button class="healerActiveButton" id="btnHealerLevel9-2"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill9-2Popup">
-                            HealerSkill9-2
+                            CAPTAIN LONG TERM:<br />+5 to Long Term Roll and Reduce Duration of Long Term Investments by 25%.
                         </div>
                     </div>  
-                </div>             
+                </div>
+                <div class="skilltreeRowHidden" id="rapidMomentumAbility">
+                    <h1>RAPID MOMENTUM </h1> -27.5% INVESTMENT TIME ON SHORT TERM INVESTMENTS.<br /> +1 ROLL SHORT TERM
+                </div>
+                <div class="skilltreeRowHidden" id="captainLongTermAbility">
+                    <h1>CAPTAIN LONG TERM</h1> -25% INVESTMENT TIME LONG TERM<br />+5 ROLL LONG TERM
+                </div>   
+                <div class="skilltreeRowHidden" id="productionLineAbility">
+                    <h1>PRODUCTION LINE</h1> AUTO-GEN AND PERMANENT PAYMENTS TICK EVERY 30SEC
+                </div>            
             </div>
 
             <!-- CONSOLE -->
@@ -3517,7 +3666,7 @@
             <div id="options" class="hidden_Divs">
                 <div id="optionsTop">
                     <br />
-			        Current Version: V0.72 <br /> 
+			        Current Version: V0.75 <br /> 
                     VISIT <a class="hyperlink" target="_blank" href="http://www.reddit.com/r/delsec">reddit.com/r/delsec</a> if you have any questions or want to keep updated on the games progress.<br />  
                     <button id="btnResetAll">Reset All</button>
                     <button id="btnResetClass">Reset Class</button>
@@ -3525,6 +3674,20 @@
                 
                 <div class="patchNotes">
                     Patch notes<br /><br />
+                    V0.75 - The Healer Update
+                    <ul>
+                        <li>Healer is now completed, will probably still need minor adjustments and rebalancing</li>
+                        <li>Added Loading Screen</li>
+                        <li>Added Permanent Space Invesments and Space section</li>
+                        <li>Added More Expeditions</li>
+                        <li>Completed all healer skills</li>
+                        <li>Added images for skills that might change by the end version.</li>
+                        <li>Code Changes to healer and investment section to improve performance</li>
+                        <li>Income summary shows only what you have bought now</li>
+                        <li>Timer updates if appropriate cooldown reduction skills are selected, however the Button Display does not at this stage. So just put Default cooldown times on buttons for now.</li>
+                        <li>Some other stuff I did that I haven't mentioned</li>
+                    </ul>
+                    <br />
                     V0.72
                     <ul>
                         <li>Focus Entirely on Healer at the moment</li>
@@ -3604,10 +3767,8 @@
                 <div class="patchNotes">
                     What's Next:
                     <ul>
-                        <li>Next Patch will finish excavation options, finish permanent space investments and begin on Healer abilities.</li>
-                        <li>At this stage I am most likely going to be completing an entire class before moving on. Which means all abilities and options for a class will be done before moving on to the next.</li>
+                        <li>WIZARD SHIT</li>
                     </ul>
-
                 </div>
             </div>              
         </div>
@@ -3621,6 +3782,7 @@
     <script src="Resources/Scripts/Global/StockGlobal.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Global/EmailGlobal.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Global/InvestmentGlobal.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Global/AbilitiesGlobal.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/Preload/GamePreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/EmailPreload.js" type="text/javascript"></script>

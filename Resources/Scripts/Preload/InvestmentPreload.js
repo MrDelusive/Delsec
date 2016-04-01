@@ -74,8 +74,24 @@
 
     if (localStorage.getItem("miningActive") === null)
         localStorage.setItem("miningActive", miningActive);
+    if (localStorage.getItem("miningMediumActive") === null)
+        localStorage.setItem("miningMediumActive", miningMediumActive);
+    if (localStorage.getItem("onlineDataMineActive") === null)
+        localStorage.setItem("onlineDataMineActive", onlineDataMineActive);
+    if (localStorage.getItem("delsecStockExtractionActive") === null)
+        localStorage.setItem("delsecStockExtractionActive", delsecStockExtractionActive);
+    if (localStorage.getItem("chimerasecStockExtractionActive") === null)
+        localStorage.setItem("chimerasecStockExtractionActive", chimerasecStockExtractionActive);
+    if (localStorage.getItem("russianStockExtractionActive") === null)
+        localStorage.setItem("russianStockExtractionActive", russianStockExtractionActive);
+    if (localStorage.getItem("miningLargeActive") === null)
+        localStorage.setItem("miningLargeActive", miningLargeActive);
     if (localStorage.getItem("drillActive") === null)
         localStorage.setItem("drillActive", drillActive);
+    if (localStorage.getItem("asteroidMiningActive") === null)
+        localStorage.setItem("asteroidMiningActive", asteroidMiningActive);
+    if (localStorage.getItem("matterConversionActive") === null)
+        localStorage.setItem("matterConversionActive", matterConversionActive);
 
     if (localStorage.getItem("investRentalBike") === null)
         localStorage.setItem("investRentalBike", investRentalBike);
@@ -165,7 +181,15 @@
         worldActive = localStorage.getItem("worldActive");
 
         miningActive = localStorage.getItem("miningActive");
+        miningMediumActive = localStorage.getItem("miningMediumActive");
+        onlineDataMineActive = localStorage.getItem("onlineDataMineActive");
+        delsecStockExtractionActive = localStorage.getItem("delsecStockExtractionActive");
+        chimerasecStockExtractionActive = localStorage.getItem("chimerasecStockExtractionActive");
+        russianStockExtractionActive = localStorage.getItem("russianStockExtractionActive");
+        miningLargeActive = localStorage.getItem("miningLargeActive");
         drillActive = localStorage.getItem("drillActive");
+        asteroidMiningActive = localStorage.getItem("asteroidMiningActive");
+        matterConversionActive = localStorage.getItem("matterConversionActive");
                 
         $('#btnSpaceInvestments').prop('disabled', true);
         // If it was still active during reset, refund the player.
@@ -639,11 +663,115 @@
             $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         }
 
+        if (miningMediumActive == "true") {
+            miningMediumActive = "false";
+            localStorage.setItem("miningMediumActive", miningMediumActive);
+            money += 50000;
+            totalInvestment -= 50000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (onlineDataMineActive == "true") {
+            onlineDataMineActive = "false";
+            localStorage.setItem("onlineDataMineActive", onlineDataMineActive);
+            money += 100000;
+            totalInvestment -= 100000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (delsecStockExtractionActive == "true") {
+            delsecStockExtractionActive = "false";
+            localStorage.setItem("delsecStockExtractionActive", delsecStockExtractionActive);
+            money += 250000;
+            totalInvestment -= 250000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (chimerasecStockExtractionActive == "true") {
+            chimerasecStockExtractionActive = "false";
+            localStorage.setItem("chimerasecStockExtractionActive", chimerasecStockExtractionActive);
+            money += 250000;
+            totalInvestment -= 250000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (russianStockExtractionActive == "true") {
+            russianStockExtractionActive = "false";
+            localStorage.setItem("russianStockExtractionActive", russianStockExtractionActive);
+            money += 250000;
+            totalInvestment -= 250000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (miningLargeActive == "true") {
+            miningLargeActive = "false";
+            localStorage.setItem("miningLargeActive", miningLargeActive);
+            money += 1000000;
+            totalInvestment -= 1000000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
         if (drillActive == "true") {
             drillActive = "false";
             localStorage.setItem("drillActive", drillActive);
             money += 5000000;
             totalInvestment -= 5000000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (asteroidMiningActive == "true") {
+            asteroidMiningActive = "false";
+            localStorage.setItem("asteroidMiningActive", asteroidMiningActive);
+            money += 5000000000;
+            totalInvestment -= 5000000000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (matterConversionActive == "true") {
+            matterConversionActive = "false";
+            localStorage.setItem("matterConversionActive", matterConversionActive);
+            money += 500000000000;
+            totalInvestment -= 500000000000;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
             localStorage.setItem("money", money);

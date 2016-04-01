@@ -12,28 +12,23 @@
         if (money >= 3) {
             goldbotActive = "true";
             localStorage.setItem("goldbotActive", goldbotActive);
-            var minutes = 2;
-            var seconds = 60;
-            $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 120;
+            var timer = 120;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 3;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -49,8 +44,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -116,7 +125,7 @@
                 localStorage.setItem("money", money);
                 goldbotActive = "false";
                 localStorage.setItem("goldbotActive", goldbotActive);
-            }, 120000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#goldbotInvestResult').html("Not enough money to Invest.");
@@ -129,28 +138,23 @@
         if (money >= 25) {
             gameActive = "true";
             localStorage.setItem("gameActive", gameActive);
-            var minutes = 3;
-            var seconds = 60;
-            $('#gameInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 180;
+            var timer = 180;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 25;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -166,8 +170,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -233,7 +251,7 @@
                 localStorage.setItem("money", money);
                 gameActive = "false";
                 localStorage.setItem("gameActive", gameActive);
-            }, 180000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#gameInvestResult').html("Not enough money to Invest.");
@@ -246,28 +264,23 @@
         if (money >= 500) {
             grandchildActive = "true";
             localStorage.setItem("grandchildActive", grandchildActive);
-            var minutes = 4;
-            var seconds = 60;
-            $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 240;
+            var timer = 240;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 500;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -283,8 +296,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -350,7 +377,7 @@
                 localStorage.setItem("money", money);
                 grandchildActive = "false";
                 localStorage.setItem("grandchildActive", grandchildActive);
-            }, 240000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#grandchildInvestResult').html("Not enough money to Invest.");
@@ -363,28 +390,23 @@
         if (money >= 1000) {
             goldActive = "true";
             localStorage.setItem("goldActive", goldActive);
-            var minutes = 5;
-            var seconds = 60;
-            $('#goldInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 300;
+            var timer = 300;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 1000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -400,8 +422,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -467,7 +503,7 @@
                 localStorage.setItem("money", money);
                 goldActive = "false";
                 localStorage.setItem("goldActive", goldActive);
-            }, 300000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#goldInvestResult').html("Not enough money to Invest.");
@@ -480,28 +516,23 @@
         if (money >= 2500) {
             lifeActive = "true";
             localStorage.setItem("lifeActive", lifeActive);
-            var minutes = 6;
-            var seconds = 60;
-            $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 360;
+            var timer = 360;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 2500;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -517,8 +548,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -584,7 +629,7 @@
                 localStorage.setItem("money", money);
                 lifeActive = "false";
                 localStorage.setItem("lifeActive", lifeActive);
-            }, 360000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#lifeInvestResult').html("Not enough money to Invest.");
@@ -598,28 +643,23 @@
         if (money >= 10000) {
             swedishActive = "true";
             localStorage.setItem("swedishActive", swedishActive);
-            var minutes = 8;
-            var seconds = 60;
-            $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 480;
+            var timer = 480;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 10000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -635,8 +675,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -702,7 +756,7 @@
                 localStorage.setItem("money", money);
                 swedishActive = "false";
                 localStorage.setItem("swedishActive", swedishActive);
-            }, 480000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#swedishInvestResult').html("Not enough money to Invest.");
@@ -716,28 +770,23 @@
         if (money >= 25000) {
             CDActive = "true";
             localStorage.setItem("CDActive", CDActive);
-            var minutes = 10;
-            var seconds = 60;
-            $('#CDInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 600;
+            var timer = 600;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 25000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -753,8 +802,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -822,7 +885,7 @@
                 localStorage.setItem("money", money);
                 CDActive = "false";
                 localStorage.setItem("CDActive", CDActive);
-            }, 600000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#CDInvestResult').html("Not enough money to Invest.");
@@ -836,28 +899,23 @@
         if (money >= 100000) {
             offshoreActive = "true";
             localStorage.setItem("offshoreActive", offshoreActive);
-            var minutes = 15;
-            var seconds = 60;
-            $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 900;
+            var timer = 900;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 100000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -873,8 +931,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -942,7 +1014,7 @@
                 localStorage.setItem("money", money);
                 offsureActive = "false";
                 localStorage.setItem("offsureActive", offsureActive);
-            }, 900000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#offshoreInvestResult').html("Not enough money to Invest.");
@@ -956,28 +1028,23 @@
         if (money >= 500000) {
             deepSeaActive = "true";
             localStorage.setItem("deepSeaActive", deepSeaActive);
-            var minutes = 20;
-            var seconds = 60;
-            $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 1200;
+            var timer = 1200;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 500000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -993,8 +1060,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1062,7 +1143,7 @@
                 localStorage.setItem("money", money);
                 deepSeaActive = "false";
                 localStorage.setItem("deepSeaActive", deepSeaActive);
-            }, 1200000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#deepSeaInvestResult').html("Not enough money to Invest.");
@@ -1076,28 +1157,23 @@
         if (money >= 2500000) {
             secureActive = "true";
             localStorage.setItem("secureActive", secureActive);
-            var minutes = 25;
-            var seconds = 60;
-            $('#secureInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#secureInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#secureInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#secureInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 1500;
+            var timer = 1500;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#secureInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#secureInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 2500000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1113,8 +1189,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1182,7 +1272,7 @@
                 localStorage.setItem("money", money);
                 secureActive = "false";
                 localStorage.setItem("secureActive", secureActive);
-            }, 1500000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#secureInvestResult').html("Not enough money to Invest.");
@@ -1196,28 +1286,23 @@
         if (money >= 10000000) {
             overflowActive = "true";
             localStorage.setItem("overflowActive", overflowActive);
-            var minutes = 30;
-            var seconds = 60;
-            $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 1800;
+            var timer = 1800;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 10000000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1233,8 +1318,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1302,7 +1401,7 @@
                 localStorage.setItem("money", money);
                 overflowActive = "false";
                 localStorage.setItem("overflowActive", overflowActive);
-            }, 1800000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#overflowInvestResult').html("Not enough money to Invest.");
@@ -1316,28 +1415,23 @@
         if (money >= 60000000) {
             armsDealActive = "true";
             localStorage.setItem("armsDealActive", armsDealActive);
-            var minutes = 40;
-            var seconds = 60;
-            $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 2400;
+            var timer = 2400;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 60000000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1353,8 +1447,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1422,7 +1530,7 @@
                 localStorage.setItem("money", money);
                 armsDealActive = "false";
                 localStorage.setItem("armsDealActive", armsDealActive);
-            }, 2400000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#armsDealInvestResult').html("Not enough money to Invest.");
@@ -1436,28 +1544,23 @@
         if (money >= 350000000) {
             nuclearActive = "true";
             localStorage.setItem("nuclearActive", nuclearActive);
-            var minutes = 50;
-            var seconds = 60;
-            $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 3000;
+            var timer = 3000;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 350000000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1473,8 +1576,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1542,7 +1659,7 @@
                 localStorage.setItem("money", money);
                 nuclearActive = "false";
                 localStorage.setItem("nuclearActive", nuclearActive);
-            }, 3000000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#nuclearInvestResult').html("Not enough money to Invest.");
@@ -1556,28 +1673,23 @@
         if (money >= 1000000000) {
             relocationActive = "true";
             localStorage.setItem("relocationActive", relocationActive);
-            var minutes = 60;
-            var seconds = 60;
-            $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 3600;
+            var timer = 3600;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 1000000000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1593,8 +1705,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1662,7 +1788,7 @@
                 localStorage.setItem("money", money);
                 relocationActive = "false";
                 localStorage.setItem("relocationActive", relocationActive);
-            }, 3600000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#relocationInvestResult').html("Not enough money to Invest.");
@@ -1676,28 +1802,23 @@
         if (money >= 7000000000) {
             orbitalActive = "true";
             localStorage.setItem("orbitalActive", orbitalActive);
-            var minutes = 75;
-            var seconds = 60;
-            $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 4500;
+            var timer = 4500;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 7000000000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1713,8 +1834,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1782,7 +1917,7 @@
                 localStorage.setItem("money", money);
                 orbitalActive = "false";
                 localStorage.setItem("orbitalActive", orbitalActive);
-            }, 4500000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#orbitalInvestResult').html("Not enough money to Invest.");
@@ -1796,28 +1931,23 @@
         if (money >= 20000000000) {
             voyageActive = "true";
             localStorage.setItem("voyageActive", voyageActive);
-            var minutes = 90;
-            var seconds = 60;
-            $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 5400;
+            var timer = 5400;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 20000000000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1833,8 +1963,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -1902,7 +2046,7 @@
                 localStorage.setItem("money", money);
                 voyageActive = "false";
                 localStorage.setItem("voyageActive", voyageActive);
-            }, 5400000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#voyageInvestResult').html("Not enough money to Invest.");
@@ -1916,28 +2060,23 @@
         if (money >= 150000000000) {
             worldActive = "true";
             localStorage.setItem("worldActive", worldActive);
-            var minutes = 120;
-            var seconds = 60;
-            $('#worldInvestResult').html("Investing: " + minutes + " Minute(s) remaining.");
-            if (minutes > 0) {
-                minutes--;
-                setInterval(function () {
-                    if (seconds > 0 && minutes > 0) {
-                        seconds--;
-                        $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                        // Chrome Bug fix
-                    else if (seconds > 1) {
-                        seconds--;
-                        $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                    else if (minutes > 0) {
-                        minutes--;
-                        seconds = 59;
-                        $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-                    }
-                }, 1000);
-            }
+            var timerDefault = 7200;
+            var timer = 7200;
+            if (longTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.25;
+            if (captainLongTermActive == 'true')
+                timer -= timerDefault * 0.25;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+            $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            setInterval(function () {
+                if (timer > 1) {
+                    timer--;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
             var investAmt = 150000000000;
             money -= investAmt;
             totalInvestment += investAmt;
@@ -1953,8 +2092,22 @@
             window.setTimeout(function () {
                 btn.prop('disabled', false);
                 var roll = Math.floor((Math.random() * 10) + 1);
-                //if (userClass == "Healer")
-                //    roll += 1;
+
+                if (longTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (longTermPlanningActive == 'true')
+                    roll += 1;
+                if (longTermStrategyActive == 'true')
+                    roll += 1;
+                if (longTermExponentialsActive == 'true')
+                    roll += 1;
+                if (longTermContinuationActive == 'true')
+                    roll += 1;
+                if (captainLongTermActive == 'true')
+                    roll += 5;
+                if (roll > 11)
+                    roll = 11;
+
                 switch (roll) {
                     case 1: //10%
                         increment = investAmt * 1.1;
@@ -2022,7 +2175,7 @@
                 localStorage.setItem("money", money);
                 worldActive = "false";
                 localStorage.setItem("worldActive", worldActive);
-            }, 7200000);
+            }, timer * 1000 + 1000);
         }
         else
             $('#worldInvestResult').html("Not enough money to Invest.");

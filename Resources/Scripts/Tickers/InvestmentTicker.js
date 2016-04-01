@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
 
     var timer = 60;
+    if (productionLineActive == "true")
+        timer = 30;
     $('#btnHealerIncrement').html("GENERATING INTEREST:<br />" + timer + " sec");
     setInterval(function () {
         if (timer > 1) {
@@ -8,14 +10,25 @@
             $('#btnHealerIncrement').html("GENERATING INTEREST:<br />" + timer + " sec");
         }
         else {
+            timer--; // for display
             $('#btnHealerIncrement').html("GENERATING INTEREST:<br />" + timer + " sec");
             timer = 60;
+            if (productionLineActive == "true")
+                timer = 30;
         }
     }, 1000);
     // investments should take ~4 hours to pay themselves off. Because I want Investments to be the long term option, without worrying about risk
 
     setInterval(function () {      
         var generatedAmt = totalInvestment / 600; //600 min to pay off money spent / 10h
+        if (generatorInvestorActive == 'true')
+            generatedAmt += totalInvestment / 600;
+        if (generatorProfessionalActive == 'true')
+            generatedAmt += totalInvestment / 300;
+        if (generatorInsanityActive == 'true')
+            generatedAmt += totalInvestment / 200;
+
+
         var rentalBikeProfit = investRentalBike * 15; //33.33 min
         var franchiseProfit = investFranchise * 196.08; //255
         var smallPropertyProfit = investSmallProperty * 1000; //250 min
@@ -39,11 +52,31 @@
         var asteroidColonyProfit = investAsteroidColony * 153846153.85 //208
         var freespaceStationProfit = investFreespaceStation * 312195121.95 //205
         var dysonSphereProfit = investDysonSphere * 5000000000; //200
-
+        var abilitiesBoostProfit = 0;
         var totalProfit = generatedAmt + rentalBikeProfit + franchiseProfit + smallPropertyProfit + mediumPropertyProfit + boatProfit + beachsideProfit + mansionProfit + highEndProfit + skyscraperLevelProfit 
             + CBDStoreProfit + carDealerProfit + supermarketProfit + factoryProfit + skyscraperProfit + spacePortProfit + spaceStationProfit + satelliteProfit + moonBaseProfit + offworldBaseProfit + storageYardProfit
             + asteroidColonyProfit + freespaceStationProfit + dysonSphereProfit;
-        money += totalProfit;
+        if (permanentInterestActive == 'true') {
+            abilitiesBoostProfit += totalProfit * 0.02;
+            $('#abilitiesBoostSummary').show(1);
+            $('#abilitiesBoostSummaryDisplay').show(1);
+            $('#abilitiesBoostSummary').html("Bonus Profit from Abilities");
+        }
+        if (permanentProfiteerActive == 'true') {
+            abilitiesBoostProfit += totalProfit * 0.03;
+            $('#abilitiesBoostSummary').show(1);
+            $('#abilitiesBoostSummaryDisplay').show(1);
+            $('#abilitiesBoostSummary').html("Bonus Profit from Abilities");
+        }
+        if (permanentOverpowerActive == 'true') {
+            abilitiesBoostProfit += totalProfit * 0.05;
+            $('#abilitiesBoostSummary').show(1);
+            $('#abilitiesBoostSummaryDisplay').show(1);
+            $('#abilitiesBoostSummary').html("Bonus Profit from Abilities");
+        }
+        totalProfit += abilitiesBoostProfit;
+
+        money += totalProfit + abilitiesBoostProfit;
         $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -75,7 +108,8 @@
         $('#asteroidColonySummaryDisplay').html('+ $' + asteroidColonyProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#freespaceStationSummaryDisplay').html('+ $' + freespaceStationProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#dysonSphereSummaryDisplay').html('+ $' + dysonSphereProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        $('#abilitiesBoostSummaryDisplay').html('+ $' + abilitiesBoostProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
 
         $('#totalSummaryDisplay').html('+ $' + totalProfit.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-    }, 60000); 
+    }, timer * 1000); 
 });

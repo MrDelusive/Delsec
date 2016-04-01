@@ -262,5 +262,7 @@
 .patchNotes {
     text-align: left;
     width: 50%;
+    height: 1000px;
     float: left;
+    overflow: auto;
 }

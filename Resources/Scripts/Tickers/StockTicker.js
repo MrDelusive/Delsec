@@ -467,7 +467,7 @@
         AU2ndPreviousStockPrice = AUPreviousStockPrice;
         AUPreviousStockPrice = AUCurrentStockPrice;
 
-        AUIncrement = Math.round(2000 * Math.random()) / 100 - 9.5;
+        AUIncrement = Math.round(2000 * Math.random()) / 100 - 9.9;
         if (AUIncrement > 0) {
             $("#AUChange").css("color", "#24b41e");
             $("#AUChange").html("+" + AUIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -1040,7 +1040,7 @@
         extank2ndPreviousStockPrice = extankPreviousStockPrice;
         extankPreviousStockPrice = extankCurrentStockPrice;
      
-        extankIncrement = Math.round(110000 * Math.random()) / 100 - 400;
+        extankIncrement = Math.round(110000 * Math.random()) / 100 - 540;
         if (extankIncrement > 0) {
             $("#extankChange").css("color", "#24b41e");
             $("#extankChange").html("+" + extankIncrement.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

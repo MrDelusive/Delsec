@@ -31,6 +31,17 @@
     border-radius: 5px;
 }
 
+.skilltreeRowHidden {
+    padding-bottom:20px;   
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom:10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    display: none;
+}
+
 #abilityHeading
 {
     float: left;
