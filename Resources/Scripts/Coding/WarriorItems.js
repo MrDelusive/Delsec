@@ -17,7 +17,7 @@
                 $('#btnScatterLogicBomb').prop('disabled', false);
                 $('#main').css("background", "black");
                 $('#center_Main').css("opacity", "1");
-                money += 888;                
+                money += 400;                
                 $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
                 $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());

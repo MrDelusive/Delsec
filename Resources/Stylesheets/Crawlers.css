@@ -1,0 +1,302 @@
+﻿.crawlerShopHeader {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid black;
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    margin: 0 auto;
+    text-align: left;
+    color: white;
+}
+
+
+#delsecCrawlerShop {
+    background: #0a1437;
+    height: 100%;
+    padding-top: 10px;
+    width: 1000px;
+}
+
+#russianCrawlerShop {
+    padding-top: 10px;
+    background: #280303;
+    height: 100%;
+    width: 1000px;
+}
+
+#vipersecCrawlerShop {
+    padding-top: 10px;
+    background: #0a3006;
+    height: 100%;
+    width: 1000px;
+}
+
+#chimerasecCrawlerShop {
+    padding-top: 10px;
+    background: #130821;
+    height: 100%;
+    width: 1000px;
+}
+
+#griffonbankCrawlerShop {
+    padding-top: 10px;
+    background: #1a1a1a;
+    height: 100%;
+    width: 1000px;
+}
+
+#bonusesCrawlerShop {
+    background: #0a1437;
+    height: 100%;
+    padding-top: 10px;
+    width: 1000px;
+}
+
+.incremental
+{
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 200px;
+    height: 30px;
+    display: none;
+    color:#24b41e;
+    float:left;
+    font-size:14px;
+}
+
+.incrementalReinforced
+{
+    padding-top: 30px;
+    padding-left: 5px;
+    width: 200px;
+    height: 30px;
+    display: none;
+    color:#88bb84;
+    float:left;
+    font-size:14px;
+}
+
+.crawlerButtonWrapper {
+    width: 560px;
+    height: 60px;
+    float: left;
+    color: white;
+}
+
+.lblItemDisplay {
+    float: left;
+    width: 210px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    height: 50px;
+    color: white;
+    border: 1px solid #001b52;
+    background: black;
+    font-size: 13px;
+}
+
+.lblItemDisplayRed {
+    float: left;
+    width: 210px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    height: 50px;
+    color: white;
+    border: 1px solid #870a0a;
+    background: black;
+    font-size: 13px;
+}
+
+.lblItemDisplayGreen {
+    float: left;
+    width: 210px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    height: 50px;
+    color: white;
+    border: 1px solid #24b41e;
+    background: black;
+    font-size: 13px;
+}
+
+.lblItemDisplayPurple {
+    float: left;
+    width: 210px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    height: 50px;
+    color: white;
+    border: 1px solid #630c98;
+    background: black;
+    font-size: 13px;
+}
+
+.lblItemDisplayGray {
+    float: left;
+    width: 210px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    height: 50px;
+    color: white;
+    border: 1px solid #464646;
+    background: black;
+    font-size: 13px;
+}
+
+#totalPacketDisplay {
+    width: 920px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 20px;
+    line-height: 50px;   
+    float: left;
+}
+
+#totalPacketDisplayRussian {
+    width: 920px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 20px;
+    line-height: 50px;   
+    float: left;
+    border: 1px solid #870a0a;
+}
+
+#totalPacketDisplayVipersec {
+    width: 920px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 20px;
+    line-height: 50px;   
+    float: left;
+    border: 1px solid #24b41e;
+}
+
+#totalPacketDisplayChimerasec {
+    width: 920px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 20px;
+    line-height: 50px;   
+    float: left;
+    border: 1px solid #630c98;
+}
+
+#totalPacketDisplayGriffonBank {
+    width: 920px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 20px;
+    line-height: 50px;   
+    float: left;
+    border: 1px solid #464646;
+}
+
+.bonusRow {
+    padding-left: 10px;
+    padding-top:10px;
+    text-align: center;
+    width: 240px;
+    height: 150px;
+    float: left;
+    color: white;
+    display: none;
+}
+
+.bonusLogo {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.bonusIncrement {
+    margin-top: 10px;
+    color: green;
+}
+
+#delsecZapperLogo {
+    background: url('../Img/wizard/delsecAbil1.jpg');
+}
+
+#delsecChargerLogo {
+    background: url('../Img/wizard/delsecAbil2.jpg');
+}
+
+#russianZapperLogo {
+    background: url('../Img/wizard/russianAbil1.jpg');
+}
+
+#griffonZapperLogo {
+    background: url('../Img/wizard/griffonAbil1.jpg');
+}
+
+#russianPowerAmplificationLogo {
+    background: url('../Img/wizard/russianAbil2.jpg');
+}
+
+#vipersecReflectionFieldLogo {
+    background: url('../Img/wizard/viperAbilr1.jpg');
+}
+
+#griffonBloodLustLogo {
+    background: url('../Img/wizard/griffonAbil25.jpg');
+}
+
+#delsecManipulationLogo {
+    background: url('../Img/wizard/delsecAbil3.jpg');
+}
+
+#vipersecFaderLogo {
+    background: url('../Img/wizard/viperAbilr2.jpg');
+}
+
+#packetSummonerLogo {
+    background: url('../Img/wizard/packetSummonerAbil.jpg');
+}
+
+#vipersecStealthFieldLogo {
+    background: url('../Img/wizard/viperAbilr3.jpg');
+}
+
+#vipersecInvisibilityLogo {
+    background: url('../Img/wizard/viperAbilr4.jpg');
+}
+
+#ironCurtainLogo {
+    background: url('../Img/wizard/russianAbil300.jpg');
+}
+
+#delsecSuperstormIncomeLogo {
+    background: url('../Img/wizard/delsecAbil4.jpg');
+}
+#delsecSuperstormPacketLogo {
+    background: url('../Img/wizard/delsecAbil4p.jpg');
+}
+
+#chaosWizardLogo {
+    background: url('../Img/wizard/chaosWizard.jpg');
+}
+
+#vipersecTimeReversalLogo {
+    background: url('../Img/wizard/viperAbilr5.jpg');
+}
+
+#redArmyConscriptionLogo {
+    background: url('../Img/wizard/russianAbil200.jpg');
+}

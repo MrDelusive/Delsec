@@ -14,10 +14,15 @@
             miningActive = "true";
             localStorage.setItem("miningActive", miningActive);
             var timer = 60;
+
+            var lastUpdate = new Date().getTime();
             $('#miningInvestResult').html("Investing: " + timer + " seconds remaining.");
-            setInterval(function () {
+            var miningInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#miningInvestResult').html("Investing: " + timer + " seconds remaining.");
                 }
             }, 1000);
@@ -289,6 +294,7 @@
                 localStorage.setItem("money", money);
                 miningActive = "false";
                 localStorage.setItem("miningActive", miningActive);
+                clearInterval(miningInterval);
             }, timer * 1000);
         }
         else
@@ -305,10 +311,15 @@
             var timer = 180;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#miningMediumInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var miningMediumInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#miningMediumInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -567,6 +578,7 @@
                 localStorage.setItem("money", money);
                 miningMediumActive = "false";
                 localStorage.setItem("miningMediumActive", miningMediumActive);
+                clearInterval(miningMediumInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -583,10 +595,15 @@
             var timer = 300;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#onlineDataMineInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var onlineDataMineInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#onlineDataMineInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -817,6 +834,7 @@
                 localStorage.setItem("money", money);
                 onlineDataMineActive = "false";
                 localStorage.setItem("onlineDataMineActive", onlineDataMineActive);
+                clearInterval(onlineDataMineInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -833,10 +851,15 @@
             var timer = 360;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#delsecStockExtractionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var delsecStockInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#delsecStockExtractionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1066,6 +1089,7 @@
                 localStorage.setItem("money", money);
                 delsecStockExtractionActive = "false";
                 localStorage.setItem("delsecStockExtractionActive", delsecStockExtractionActive);
+                clearInterval(delsecStockInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1082,10 +1106,15 @@
             var timer = 360;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#chimerasecStockExtractionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var chimerasecStockInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#chimerasecStockExtractionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1328,6 +1357,7 @@
                 localStorage.setItem("money", money);
                 chimerasecStockExtractionActive = "false";
                 localStorage.setItem("chimerasecStockExtractionActive", chimerasecStockExtractionActive);
+                clearInterval(chimerasecStockInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1344,10 +1374,15 @@
             var timer = 360;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#russianStockExtractionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var russianStockInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#russianStockExtractionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1576,6 +1611,7 @@
                 localStorage.setItem("money", money);
                 russianStockExtractionActive = "false";
                 localStorage.setItem("russianStockExtractionActive", russianStockExtractionActive);
+                clearInterval(russianStockInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1592,10 +1628,15 @@
             var timer = 480;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#miningLargeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var miningLargeInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#miningLargeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1854,6 +1895,7 @@
                 localStorage.setItem("money", money);
                 miningLargeActive = "false";
                 localStorage.setItem("miningLargeActive", miningLargeActive);
+                clearInterval(miningLargeInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1870,10 +1912,15 @@
             var timer = 600;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#drillInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var drillInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#drillInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2132,6 +2179,7 @@
                 localStorage.setItem("money", money);
                 drillActive = "false";
                 localStorage.setItem("drillActive", drillActive);
+                clearInterval(drillInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -2148,10 +2196,15 @@
             var timer = 900;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#asteroidMiningInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var asteroidMiningInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#asteroidMiningInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2368,6 +2421,7 @@
                 localStorage.setItem("money", money);
                 asteroidMiningActive = "false";
                 localStorage.setItem("asteroidMiningActive", asteroidMiningActive);
+                clearInterval(asteroidMiningInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -2384,10 +2438,15 @@
             var timer = 1800;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#matterConversionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var matterConversionInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#matterConversionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2419,191 +2478,158 @@
                 var REINACCAMT = 0;
                 switch (roll) {
                     case 1: //-75%  
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 1000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter exploded early on and could only create a small amount of Universal Energy. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 2: //investment - 50%                        
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 2000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter exploded early on and could only create a small amount of Universal Energy. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 3: //investment - 20%
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 4000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter didn't operate as it was supposed to. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 4: //investment + 5%
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 8000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter started operating properly, just before it had to be shut down. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 5: //investment + 10%
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 10000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter started operating properly, just before it had to be shut down. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 6: //investment + 20%
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 12000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter started operating properly, just before it had to be shut down. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 7: //investment + 30%
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 32000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter generated an expected amount of Universal Energy. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 8: //investment + 50%
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 48000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter generated a decent amount of Universal Energy. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 9: //investment + 60%
-                        REINACCAMT = 10;
+                        universalEnergyGeneratedTick = 64000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter could only convert 10 units of the most Ultimate material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter operated beyond its capacity. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 10: //investment + 75%
-                        REINACCAMT = 1000;
+                        universalEnergyGeneratedTick = 128000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter spooled up 100% and built some of the most valueable material possible. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter generated a lot more than was expected. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     case 11: //investment + 100% Only possible from Healer
-                        REINACCAMT = 10000;
+                        universalEnergyGeneratedTick = 256000;
                         if (expeditionGathererActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.1);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.1);
                         if (expeditionCollectorActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.15);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.15);
                         if (expeditionHoarderActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.25);
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.25);
                         if (expeditionAmassingActive == 'true')
-                            REINACCAMT += Math.round(REINACCAMT * 0.5);
-                        ownedReinaccStocks += REINACCAMT;
-                        localStorage.setItem("ownedReinaccStocks", ownedReinaccStocks);
-                        $('#reinaccOwnedStocksDisplay').html(ownedReinaccStocks);
-                        $('#reinaccOwnedStocks').html(ownedReinaccStocks);
-                        $('#reinaccSellEstimate').html('$' + (ownedReinaccStocks * (reinaccCurrentStockPrice - reinaccCurrentStockPrice / sellDivider)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-                        $('#matterConversionInvestResult').html("The matter converter went into overdrive and built a heap of the most valueable material. +" + REINACCAMT + " Reinacc</b>");
+                            universalEnergyGeneratedTick += Math.round(universalEnergyGeneratedTick * 0.5);
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#matterConversionInvestResult').html("The matter converter accessed the Quantum Realm to generate extreme amounts of Universal Energy. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                         break;
                     default:
                         break;
@@ -2614,6 +2640,7 @@
                 localStorage.setItem("money", money);
                 matterConversionActive = "false";
                 localStorage.setItem("matterConversionActive", matterConversionActive);
+                clearInterval(matterConversionInterval);
             }, timer * 1000 + 1000);
         }
         else

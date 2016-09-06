@@ -26,10 +26,14 @@ $(document).ready(function () {
             if (rapidMomentumActive == 'true')
                 timer -= timerDefault * 0.275;
 
+            var lastUpdate = new Date().getTime();
             $('#wikiInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
-            setInterval(function () {
+            var wikiInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#wikiInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
                 }
             }, 1000);
@@ -125,6 +129,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 wikiActive = "false";
                 localStorage.setItem("wikiActive", wikiActive);
+                clearInterval(wikiInterval);
             }, timer * 1000);
         }
         else
@@ -159,10 +164,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.2;
             if (rapidMomentumActive == 'true')
                 timer -= timerDefault * 0.275;
+
+            var lastUpdate = new Date().getTime();
             $('#twitchInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
-            setInterval(function () {
+            var twitchInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#twitchInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
                 }
             }, 1000);
@@ -256,6 +266,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 twitchActive = "false";
                 localStorage.setItem("twitchActive", twitchActive);
+                clearInterval(twitchInterval);
             }, timer * 1000);
         }
         else
@@ -281,10 +292,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.2;
             if (rapidMomentumActive == 'true')
                 timer -= timerDefault * 0.275;
+
+            var lastUpdate = new Date().getTime();
             $('#punchInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
-            setInterval(function () {
+            var punchInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#punchInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
                 }
             }, 1000);
@@ -379,6 +395,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 punchActive = "false";
                 localStorage.setItem("punchActive", punchActive);
+                clearInterval(punchInterval);
             }, timer * 1000);
         }
         else
@@ -404,10 +421,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.2;
             if (rapidMomentumActive == 'true')
                 timer -= timerDefault * 0.275;
+
+            var lastUpdate = new Date().getTime();
             $('#websiteInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
-            setInterval(function () {
+            var websiteInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#websiteInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
                 }
             }, 1000);
@@ -502,6 +524,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 websiteActive = "false";
                 localStorage.setItem("websiteActive", websiteActive);
+                clearInterval(websiteInterval);
             }, timer * 1000);
         }
         else
@@ -527,10 +550,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.2;
             if (rapidMomentumActive == 'true')
                 timer -= timerDefault * 0.275;
+
+            var lastUpdate = new Date().getTime();
             $('#pokerInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
-            setInterval(function () {
+            var pokerInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#pokerInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
                 }
             }, 1000);
@@ -625,6 +653,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 pokerActive = "false";
                 localStorage.setItem("pokerActive", pokerActive);
+                clearInterval(pokerInterval);
             }, timer * 1000);
         }
         else
@@ -650,10 +679,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.2;
             if (rapidMomentumActive == 'true')
                 timer -= timerDefault * 0.275;
+
+            var lastUpdate = new Date().getTime();
             $('#raceInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
-            setInterval(function () {
+            var raceInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#raceInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
                 }
             }, 1000);
@@ -748,6 +782,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 raceActive = "false";
                 localStorage.setItem("raceActive", raceActive);
+                clearInterval(raceInterval);
             }, timer * 1000);
         }
         else
@@ -756,7 +791,6 @@ $(document).ready(function () {
     });
     
     //SOCIAL MEDIA
-    $('#btnInvestSocialMedia').prop('disabled', false);
     $('#btnInvestSocialMedia').click(function () {  
         if (money >= 5000) {
             socialMediaActive = "true";
@@ -773,10 +807,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.2;
             if (rapidMomentumActive == 'true')
                 timer -= timerDefault * 0.275;
+
+            var lastUpdate = new Date().getTime();
             $('#socialMediaInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
-            setInterval(function () {
+            var socialMediaInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     $('#socialMediaInvestResult').html("Investing: " + Math.floor(timer) + " seconds remaining.");
                 }
             }, 1000);
@@ -871,6 +910,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 socialMediaActive = "false";
                 localStorage.setItem("socialMediaActive", socialMediaActive);
+                clearInterval(socialMediaInterval);
             }, timer * 1000);
         }
         else
@@ -879,7 +919,6 @@ $(document).ready(function () {
     });
 
     //BLUE CHIP COMPANY , from here cycle takes 1 extra second cause of chrome not displaying the result after 0min0sec tick, it does it before.
-    $('#btnInvestBlueChip').prop('disabled', false);
     $('#btnInvestBlueChip').click(function () {     
         if (money >= 10000) {
             blueChipActive = "true";
@@ -898,10 +937,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#blueChipInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var blueChipInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#blueChipInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1009,6 +1053,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 blueChipActive = "false";
                 localStorage.setItem("blueChipActive", blueChipActive);
+                clearInterval(blueChipInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1017,7 +1062,7 @@ $(document).ready(function () {
     });
 
     //SelfImprovement
-    $('#btnInvestSelfImprovement').prop('disabled', false);
+
     $('#btnInvestSelfImprovement').click(function () {
         if (money >= 25000) {
             selfImprovementActive = "true";
@@ -1036,10 +1081,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#selfImprovementInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var selfImprovementInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#selfImprovementInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1146,6 +1196,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 selfImprovementActive = "false";
                 localStorage.setItem("selfImprovementActive", selfImprovementActive);
+                clearInterval(selfImprovementInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1154,7 +1205,7 @@ $(document).ready(function () {
     });
 
     //SelfImprovement2
-    $('#btnInvestSelfImprovement2').prop('disabled', false);
+
     $('#btnInvestSelfImprovement2').click(function () {
         if (money >= 50000) {
             selfImprovement2Active = "true";
@@ -1173,10 +1224,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#selfImprovement2InvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var selfImprovement2Interval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#selfImprovement2InvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1283,6 +1339,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 selfImprovement2Active = "false";
                 localStorage.setItem("selfImprovement2Active", selfImprovement2Active);
+                clearInterval(selfImprovement2Interval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1291,7 +1348,6 @@ $(document).ready(function () {
     });
 
     //Energy
-    $('#btnInvestEnergy').prop('disabled', false);
     $('#btnInvestEnergy').click(function () {   
         if (money >= 100000) {
             energyActive = "true";
@@ -1310,10 +1366,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#energyInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var energyInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#energyInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1406,11 +1467,10 @@ $(document).ready(function () {
                             + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
                         break;
                     case 11: //investment + 100% Only possible from Healer
-                        increment = investAmt * 2;
-                        money += increment;
-                        $('#energyInvestResult').html("You invest in Anti-Matter Power. Extremely powerful. <b>RESULT: Investment +$"
-                            + (increment - investAmt).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "</b>");
-                        break;
+                        universalEnergyGeneratedTick = 1;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#energyInvestResult').html("You discover a fragment of Universal Energy from your research into Energy. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
                     default:
                         break;
                 }
@@ -1420,6 +1480,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 energyActive = "false";
                 localStorage.setItem("energyActive", energyActive);
+                clearInterval(energyInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1428,7 +1489,6 @@ $(document).ready(function () {
     });
 
     //Super hero Builder
-    $('#btnInvestSuperHero').prop('disabled', false);
     $('#btnInvestSuperHero').click(function () {
         if (money >= 2000000) {
             superHeroActive = "true";
@@ -1447,10 +1507,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#superHeroInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var superHeroInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#superHeroInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1557,6 +1622,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 superHeroActive = "false";
                 localStorage.setItem("superHeroActive", superHeroActive);
+                clearInterval(superHeroInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1565,7 +1631,6 @@ $(document).ready(function () {
     });
 
     // Movie
-    $('#btnInvestMovie').prop('disabled', false);
     $('#btnInvestMovie').click(function () {   
         if (money >= 10000000) {
             movieActive = "true";
@@ -1584,10 +1649,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#movieInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var movieInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#movieInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1694,6 +1764,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 movieActive = "false";
                 localStorage.setItem("movieActive", movieActive);
+                clearInterval(movieInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1702,7 +1773,6 @@ $(document).ready(function () {
     });
 
     // Experimental Technology
-    $('#btnInvestExperimental').prop('disabled', false);
     $('#btnInvestExperimental').click(function () {  
         if (money >= 50000000) {
             experimentalActive = "true";
@@ -1721,10 +1791,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#experimentalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var experimentalInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#experimentalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1831,6 +1906,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 experimentalActive = "false";
                 localStorage.setItem("experimentalActive", experimentalActive);
+                clearInterval(experimentalInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1839,7 +1915,6 @@ $(document).ready(function () {
     });
 
     // Time Travel Trip
-    $('#btnInvestTimeTravel').prop('disabled', false);
     $('#btnInvestTimeTravel').click(function () {
         if (money >= 250000000) {
             timeTravelActive = "true";
@@ -1858,10 +1933,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#timeTravelInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var timeTravelInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#timeTravelInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1968,6 +2048,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 timeTravelActive  = "false";
                 localStorage.setItem("timeTravelActive", timeTravelActive);
+                clearInterval(timeTravelInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1975,8 +2056,7 @@ $(document).ready(function () {
         return false;
     });
 
-    // Mystery Fund
-    $('#btnInvestMystery').prop('disabled', false);
+    // Mystery Fund    
     $('#btnInvestMystery').click(function () { 
         if (money >= 1000000000) {
             mysteryActive = "true";
@@ -1995,10 +2075,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#mysteryInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var mysteryInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#mysteryInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2105,6 +2190,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 mysteryActive = "false";
                 localStorage.setItem("mysteryActive", mysteryActive);
+                clearInterval(mysteryInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -2115,7 +2201,7 @@ $(document).ready(function () {
     //1.5billion is the crossover to space.
 
     // Manned Moon Mission
-    $('#btnInvestMoon').prop('disabled', false);
+    
     $('#btnInvestMoon').click(function () {
         if (money >= 2250000000) {
             moonActive = "true";
@@ -2134,10 +2220,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#moonInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var moonInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#moonInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2244,6 +2335,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 moonActive = "false";
                 localStorage.setItem("moonActive", moonActive);
+                clearInterval(moonInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -2251,8 +2343,7 @@ $(document).ready(function () {
         return false;
     });
 
-    // Manned Mars Mission
-    $('#btnInvestMars').prop('disabled', false);
+    // Manned Mars Mission    
     $('#btnInvestMars').click(function () {
         if (money >= 5000000000) {
             marsActive = "true";
@@ -2271,10 +2362,15 @@ $(document).ready(function () {
                 timer -= timerDefault * 0.275;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#marsInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var marsInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#marsInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2381,6 +2477,7 @@ $(document).ready(function () {
                 localStorage.setItem("money", money);
                 marsActive = "false";
                 localStorage.setItem("marsActive", marsActive);
+                clearInterval(marsInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -2388,5 +2485,146 @@ $(document).ready(function () {
         return false;
     });
 
+    // Manned Mars Mission    
+    $('#btnInvestUniversalMission').click(function () {
+        if (money >= 25000000000) {
+            universalMissionActive = "true";
+            localStorage.setItem("universalMissionActive", universalMissionActive);
+            var timerDefault = 900;
+            var timer = 900;
+            if (shortTermUnderstandingActive == 'true')
+                timer -= timerDefault * 0.1;
+            if (shortTermEfficiencyActive == 'true')
+                timer -= timerDefault * 0.15;
+            if (shortTermEfficiency2Active == 'true')
+                timer -= timerDefault * 0.175;
+            if (shortTermMinMaxActive == 'true')
+                timer -= timerDefault * 0.2;
+            if (rapidMomentumActive == 'true')
+                timer -= timerDefault * 0.275;
+            var minutes = Math.floor(timer / 60);
+            var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
+            $('#universalMissionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+            var universalMissionInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
+                if (timer > 1) {
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
+                    minutes = Math.floor(timer / 60);
+                    seconds = Math.floor(timer % 60);
+                    $('#universalMissionInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
+                }
+            }, 1000);
+            var investAmt = 25000000000;
+            money -= investAmt;
+            totalInvestment += investAmt;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            var increment;
+            var btn = $(this);
+            btn.prop('disabled', true);
+            window.setTimeout(function () {
+                btn.prop('disabled', false);
+                var roll = Math.floor((Math.random() * 10) + 1);
+
+                if (shortTermEnthusiastActive == 'true')
+                    roll += 1;
+                if (shortTermPlanningActive == 'true')
+                    roll += 1;
+                if (rapidMomentumActive == 'true')
+                    roll += 1;
+                if (roll > 11)
+                    roll = 11;
+
+                switch (roll) {
+                    case 1: //-75%   
+                        universalEnergyGeneratedTick = 1;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The universal mission was a disaster. It barely finds any Energy. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 2: //investment - 50%                        
+                        universalEnergyGeneratedTick = 5;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The universal mission went very badly, only a small bubble of energy found near the end of the mission. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 3: //investment - 20%
+                        universalEnergyGeneratedTick = 10;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission was mostly useless, except for a lucky find near the edge of a black hole. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 4: //investment + 5%
+                        universalEnergyGeneratedTick = 25;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission found small pockets of energy here and there. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 5: //investment + 10%
+                        universalEnergyGeneratedTick = 100;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission returned a small find of Energy from a nearby star cluster. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 6: //investment + 20%
+                        universalEnergyGeneratedTick = 250;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission gathered a nice collection of Energy from a small black hole. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 7: //investment + 30%
+                        universalEnergyGeneratedTick = 1000;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission gathered a nice collection of Energy from a large black hole. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 8: //investment + 50%
+                        universalEnergyGeneratedTick = 2500;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission gathered a huge chunk of energy from a Supermassive black hole. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 9: //investment + 60%
+                        universalEnergyGeneratedTick = 5000;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission gathered a burst of energy from a Pulsar. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 10: //investment + 75%
+                        universalEnergyGeneratedTick = 7500;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission gathered High amounts of Energy from two black holes about to merge. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    case 11: //investment + 100% Only possible from Healer
+                        universalEnergyGeneratedTick = 10000;
+                        universalEnergyGenerated += universalEnergyGeneratedTick;
+                        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+                        $('#universalMissionInvestResult').html("The mission gathered all the Energy generated from a Supernova. +" + universalEnergyGeneratedTick + " Universal Energy</b>");
+                        break;
+                    default:
+                        break;
+                }
+                $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+                localStorage.setItem("money", money);
+                marsActive = "false";
+                localStorage.setItem("marsActive", marsActive);
+                clearInterval(universalMissionInterval);
+            }, timer * 1000 + 1000);
+        }
+        else
+            $('#universalMissionInvestResult').html("Not enough money to Invest.");
+        return false;
+    });
 
 });

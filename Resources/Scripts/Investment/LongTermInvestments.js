@@ -20,10 +20,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var goldbotInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#goldbotInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -125,6 +130,7 @@
                 localStorage.setItem("money", money);
                 goldbotActive = "false";
                 localStorage.setItem("goldbotActive", goldbotActive);
+                clearInterval(goldbotInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -146,10 +152,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var gameInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#gameInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -251,6 +262,7 @@
                 localStorage.setItem("money", money);
                 gameActive = "false";
                 localStorage.setItem("gameActive", gameActive);
+                clearInterval(gameInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -272,10 +284,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var grandchildInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#grandchildInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -377,6 +394,7 @@
                 localStorage.setItem("money", money);
                 grandchildActive = "false";
                 localStorage.setItem("grandchildActive", grandchildActive);
+                clearInterval(grandchildInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -398,10 +416,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var goldInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#goldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -503,6 +526,7 @@
                 localStorage.setItem("money", money);
                 goldActive = "false";
                 localStorage.setItem("goldActive", goldActive);
+                clearInterval(goldInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -524,10 +548,16 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var lifeInterval = setInterval(function () {
+
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#lifeInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -629,6 +659,7 @@
                 localStorage.setItem("money", money);
                 lifeActive = "false";
                 localStorage.setItem("lifeActive", lifeActive);
+                clearInterval(lifeInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -651,10 +682,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var swedishInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#swedishInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -756,6 +792,7 @@
                 localStorage.setItem("money", money);
                 swedishActive = "false";
                 localStorage.setItem("swedishActive", swedishActive);
+                clearInterval(swedishInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -778,10 +815,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var CDInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#CDInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -885,6 +927,7 @@
                 localStorage.setItem("money", money);
                 CDActive = "false";
                 localStorage.setItem("CDActive", CDActive);
+                clearInterval(CDInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -907,10 +950,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var offshoreInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#offshoreInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1014,6 +1062,7 @@
                 localStorage.setItem("money", money);
                 offsureActive = "false";
                 localStorage.setItem("offsureActive", offsureActive);
+                clearInterval(offshoreInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1036,10 +1085,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var deepSeaInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#deepSeaInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1143,6 +1197,7 @@
                 localStorage.setItem("money", money);
                 deepSeaActive = "false";
                 localStorage.setItem("deepSeaActive", deepSeaActive);
+                clearInterval(deepSeaInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1165,10 +1220,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#secureInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var secureInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#secureInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1272,6 +1332,7 @@
                 localStorage.setItem("money", money);
                 secureActive = "false";
                 localStorage.setItem("secureActive", secureActive);
+                clearInterval(secureInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1294,10 +1355,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var overflowInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#overflowInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1401,6 +1467,7 @@
                 localStorage.setItem("money", money);
                 overflowActive = "false";
                 localStorage.setItem("overflowActive", overflowActive);
+                clearInterval(overflowInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1423,10 +1490,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var armsDealInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#armsDealInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1530,6 +1602,7 @@
                 localStorage.setItem("money", money);
                 armsDealActive = "false";
                 localStorage.setItem("armsDealActive", armsDealActive);
+                clearInterval(armsDealInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1552,10 +1625,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var nuclearInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#nuclearInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1659,6 +1737,7 @@
                 localStorage.setItem("money", money);
                 nuclearActive = "false";
                 localStorage.setItem("nuclearActive", nuclearActive);
+                clearInterval(nuclearInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1681,10 +1760,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var relocationInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#relocationInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1788,6 +1872,7 @@
                 localStorage.setItem("money", money);
                 relocationActive = "false";
                 localStorage.setItem("relocationActive", relocationActive);
+                clearInterval(relocationInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1810,10 +1895,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var orbitalInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#orbitalInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -1917,6 +2007,7 @@
                 localStorage.setItem("money", money);
                 orbitalActive = "false";
                 localStorage.setItem("orbitalActive", orbitalActive);
+                clearInterval(orbitalInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -1939,10 +2030,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var voyageInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#voyageInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2046,6 +2142,7 @@
                 localStorage.setItem("money", money);
                 voyageActive = "false";
                 localStorage.setItem("voyageActive", voyageActive);
+                clearInterval(voyageInterval);
             }, timer * 1000 + 1000);
         }
         else
@@ -2068,10 +2165,15 @@
                 timer -= timerDefault * 0.25;
             var minutes = Math.floor(timer / 60);
             var seconds = Math.floor(timer % 60);
+
+            var lastUpdate = new Date().getTime();
             $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
-            setInterval(function () {
+            var worldInterval = setInterval(function () {
+                var thisUpdate = new Date().getTime();
+                var diff = thisUpdate - lastUpdate;
                 if (timer > 1) {
-                    timer--;
+                    timer -= Math.round(diff / 1000);
+                    lastUpdate = thisUpdate;
                     minutes = Math.floor(timer / 60);
                     seconds = Math.floor(timer % 60);
                     $('#worldInvestResult').html("Investing: " + minutes + " Minute(s), " + seconds + " Second(s) remaining.");
@@ -2175,6 +2277,7 @@
                 localStorage.setItem("money", money);
                 worldActive = "false";
                 localStorage.setItem("worldActive", worldActive);
+                clearInterval(worldInterval);
             }, timer * 1000 + 1000);
         }
         else

@@ -34,3 +34,15 @@ var emailHealerViewed = "false";
 
 var emailRogueDisplayed = "false";
 var emailRogueViewed = "false";
+
+var email4KBDisplayed = "false";
+var email4KBViewed = "false";
+
+var emailVipersecStartDisplayed = "false";
+var emailVipersecStartViewed = "false";
+
+var emailChimerasecStartDisplayed = "false";
+var emailChimerasecStartViewed = "false";
+
+var emailGriffonbankStartDisplayed = "false";
+var emailGriffonbankStartViewed = "false";

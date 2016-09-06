@@ -6,6 +6,9 @@ var userClass = "None";
 var warriorClicks = 0;
 var wizardPassive = 0;
 
-var efficiencyCode = 0;
-var efficiency2Code = 0;
-var scatterLogicCode = 0;
+var currentTheme = "80sDelsec";
+
+var healerQuadrantEarned = 'false';
+var wizardQuadrantEarned = 'false';
+var warriorQuadrantEarned = 'false';
+var rogueQuadrantEarned = 'false';

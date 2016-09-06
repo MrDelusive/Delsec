@@ -13,9 +13,6 @@
     float: left;
 }
 
-
-
-
 .riskRow{
     float:left;
     color: white;
@@ -56,6 +53,25 @@
     background: url(../Img/riskPc.jpg)
 }
 
+#riskGameNecroed {
+    display:none;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+    height: 480px;
+    width: 780px;
+    background: url(../Img/riskPcNecro.jpg)
+}
+
+#riskNecroTimer {
+    color: white;
+    font-size: 140px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .riskItem {
     float: left;
     margin: 10px;
@@ -80,6 +96,92 @@
     border: none;
     cursor: pointer;
     background: url(../Img/riskIcon2.png);
+}
+
+#btnRiskConRoute{
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon3.png);
+}
+
+#btnRiskWanted{
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon4.png);
+}
+
+#btnGlobalControl{
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon5.png);
+}
+
+#btnNecromancer{
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon6.png);
+}
+
+#btnIronCurtain{
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon7.png);
+}
+
+#btnDelsecTechGod{
+    width: 90px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    background: url(../Img/riskIcon8.png);
+}
+
+#necromancerItem {
+    display: none;
+}
+#necroTimerDisplay {
+    position: absolute;
+    color: red;
+    font-weight: bold;
+}
+
+#ironCurtainItem {
+    display: none;
+}
+#ironCurtainTimerDisplay {
+    position: absolute;
+    color: red;
+    font-weight: bold;
+}
+#ironCurtainRunningTimerDisplay {
+    display: none;
+    position: absolute;
+    line-height: 90px;
+    width: 90px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    color: green;
+    font-weight: bold;
+}
+
+#delsecTechGodItem {
+    display: none;
+}
+#delsecTechGodTimerDisplay {
+    position: absolute;
+    color: red;
+    font-weight: bold;
 }
 
 .riskAccessDenied {
@@ -113,9 +215,11 @@
 }
 
 .riskPopupHeader {
-    width: 580px;
+    width: 570px;
     height: 30px;
     background: #0a0a0a;
+    line-height: 30px;
+    padding-left:10px;
 }
 
 .btnClosePopup {
@@ -174,7 +278,12 @@
     margin-top: 80px;
 }
 
-#riskPlayerProfileContent {
+#riskOtherProfile {
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+.riskDefaultPopupContent {
     background: #949494;
     width: 580px;
     height: 350px;
@@ -195,11 +304,259 @@
     border-radius: 20px;
 }
 
+#riskOtherLeftCol {
+    background: url(../Img/playerRiskPic.jpg);
+    height: 346px;
+    width: 276px;
+    border: 2px solid #838383;
+    border-radius: 20px;
+}
+
 #riskPlayerRightCol {
+    font-size: 18px;
+}
+
+#riskOtherRightCol {
     font-size: 18px;
 }
 
 .playerLabel {
     padding-left: 10px;
     padding-top: 5px;
+}
+
+#riskConRouteDisplay {
+    background: #111;
+    width: 580px;
+    height: 350px;
+    text-align:center;
+}
+
+.locateIPRow {
+    background: black;
+    width: 100%;
+    height: 40px;
+    float: left;
+}
+
+.locateIPCol {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-left: 38px;
+    margin-right: 37px;
+    float: left;
+    padding-top: 10px;
+}
+
+.IPInput {
+    width: 40px;
+    height: 20px;
+    font-size: 16px;
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    text-align: center;
+}
+
+#riskIPSubmitDisplay {
+    text-align: center;
+    margin-top: 25px;
+    float: left;
+    width: 100%;   
+}
+
+#riskIPInvalid {
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 0 auto;
+    position: absolute;
+    background: red;
+    margin-left: 250px;
+    margin-top: 215px;
+    width: 290px;   
+    height: 50px;
+    z-index: 100;
+}
+
+#riskIPValid {
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 0 auto;
+    position: absolute;
+    background: green;
+    margin-left: 250px;
+    margin-top: 215px;
+    width: 290px;   
+    height: 50px;
+    z-index: 100;
+}
+
+#riskGridValid {
+    display: none;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 0 auto;
+    position: absolute;
+    background: green;
+    margin-left: 250px;
+    margin-top: 215px;
+    width: 290px;   
+    height: 50px;
+    z-index: 100;
+}
+
+#riskWantedTxtDisplay {
+    background: url(../Img/riskWantedBG.jpg);
+    /*padding-left:30px;*/
+    width: 576px;
+    height: 350px;
+    text-align:center;
+    border: 2px solid #222;
+    color: black;
+    font-family:'Courier New';
+    font-size: 18px;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#riskWantedRefreshTargets {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-top: 25px;
+    font-size:16px;
+}
+#riskGlobalControl {
+    margin-top:10px;
+}
+#riskGlobalControlContent {
+    background: url(../Img/riskGlobal.jpg);
+    /*padding-left:30px;*/
+    width: 576px;
+    height: 390px;
+    border: 2px solid #222;
+    color: white;
+    font-size: 14px;
+}
+
+.globalLogo {
+    width:50px;
+    height:50px;
+    float:left;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#delsecGlobalLogo {
+    background: url(../Img/wizard/delsec1.jpg);  
+}
+#russianGlobalLogo {
+    background: url(../Img/wizard/russian1.jpg);  
+}
+#vipersecGlobalLogo {
+    background: url(../Img/wizard/viper1.jpg);  
+}
+#chimerasecGlobalLogo {
+    background: url(../Img/wizard/chimera1.jpg);  
+}
+#griffonBankGlobalLogo {
+    background: url(../Img/wizard/griffon1.jpg);  
+}
+
+.globalControlRow {
+    width: 556px;
+    height: 54px;
+    float: left;
+    background: rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height:54px;
+    font-size:14px;
+    text-align: right;
+}
+.globalControlAmt {
+    padding-left: 20px;
+    width:360px;
+    font-size:13px;
+    float: left;
+}
+.globalControlPercentage {
+    padding-right: 20px;
+    float: right;
+    width: 100px;
+    text-align: right;  
+}
+
+#availableGlobalPackets {
+    float: left;
+    width: 100%;
+    height: 75px;
+}
+#globalPacketsDisplay {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+#riskClearGrid {
+    margin-left: 150px;
+    margin-top: 20px;
+}
+#riskClearGridContent {
+    background: black;
+}
+#gridHeading {
+    height:20px;
+    width: 580px; 
+    background: black;
+}
+#gridDisplay {
+    background: #333;
+    border: 2px solid #222;
+    margin-left: 60px;
+    width:296px;
+    height: 296px;
+    float:left;
+}
+#gridInputPrompt {
+    font-size:14px;
+    font-family: 'Courier New';
+}
+.gridCoord {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #111;
+    background: black;
+    float: left;
+}
+#grid11 {
+    background: #111;
+}
+#gridInput {
+    background: black;
+    width:210px;
+    height:300px;
+    float:left;
+    padding-left: 10px;
+}
+
+#btnGridInputSubmit {
+    display: none;
+}
+
+#btnGridInputSubmitPlayer {
+    display: none;
 }

@@ -2,14 +2,14 @@
 }
 /*Delsec styled Crawler Buttons*/
 .btn_Style {
-    background: url('../Img/stockBg1.jpg');
+    background: url('../Img/stockBg3.jpg');
     border: 1px solid black;
 	display:inline-block;
     cursor: pointer;
 	color: white;
     font-family: Consolas,monaco,monospace;
 	font-size:13px;
-	height:40px;
+	height:50px;
     width: 550px;
     margin: 10px;
     margin-top: 20px;
@@ -17,7 +17,7 @@
 	text-align:center;
 }
 .btn_Style:hover {
-	background: url('../Img/stockBg2.jpg');
+	background: url('../Img/stockBg4.jpg');
 }
 
 .btn_Style:disabled {
@@ -26,14 +26,14 @@
 }
 /*RUSTEC*/
 .btn_StyleRed {
-	background: url('../Img/stockBgRed.png');
+	background: url('../Img/stockBgRed2.png');
     border: 1px solid black;
 	display:inline-block;
     cursor: pointer;
 	color: white;
     font-family: Consolas,monaco,monospace;
 	font-size:13px;
-	height:40px;
+	height:50px;
     width: 550px;
     margin: 10px;
     margin-top: 20px;
@@ -41,11 +41,98 @@
 	text-align:center;
 }
 .btn_StyleRed:hover {
-	background: url('../Img/stockBgRed2.png');
+	background: url('../Img/stockBgRed.png');
 }
 .btn_StyleRed:disabled {
     background: black;
     color: #4a4e54;
+}
+/*VIPERSEC*/
+.btn_StyleGreen {
+	background: url('../Img/stockBgGreen2.png');
+    border: 1px solid black;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
+	height:50px;
+    width: 550px;
+    margin: 10px;
+    margin-top: 20px;
+	text-decoration:none;
+	text-align:center;
+}
+.btn_StyleGreen:hover {
+	background: url('../Img/stockBgGreen.png');
+}
+.btn_StyleGreen:disabled {
+    background: black;
+    color: #4a4e54;
+}
+/*CHIMERASEC*/
+.btn_StylePurple {
+	background: url('../Img/stockBgPurple1.jpg');
+    border: 1px solid black;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
+	height:50px;
+    width: 550px;
+    margin: 10px;
+    margin-top: 20px;
+	text-decoration:none;
+	text-align:center;
+}
+.btn_StylePurple:hover {
+	background: url('../Img/stockBgPurple2.jpg');
+}
+.btn_StylePurple:disabled {
+    background: black;
+    color: #4a4e54;
+}
+/*GRIFFON BANK*/
+.btn_StyleGray {
+	background: url('../Img/stockBgGray1.jpg');
+    border: 1px solid black;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
+	height:50px;
+    width: 550px;
+    margin: 10px;
+    margin-top: 20px;
+	text-decoration:none;
+	text-align:center;
+}
+.btn_StyleGray:hover {
+	background: url('../Img/stockBgGray2.jpg');
+}
+.btn_StyleGray:disabled {
+    background: black;
+    color: #4a4e54;
+}
+.btn_StyleGrayNoBg {
+	background: #212121;
+    border: 1px solid black;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
+	height:50px;
+    width: 550px;
+    margin: 10px;
+    margin-top: 20px;
+	text-decoration:none;
+	text-align:center;
+}
+.btn_StyleGrayNoBg:hover {
+	background: #4a4e54;
 }
 
 .btn_TabSmall {
@@ -73,7 +160,7 @@
     background: #1b4c89;
 }
 .btn_TabSmall:disabled {
-    background: #535353;
+    background: #212121;
 }
 
 .btn_TabSmallRed {

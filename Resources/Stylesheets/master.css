@@ -41,6 +41,21 @@
     margin: 0 auto; 
     background: url('../Img/bg.jpg') 50% 0 repeat fixed;
 }
+
+#delsecTechGodCenter
+{  
+	z-index: 100;
+    border-width: 5px;
+    border-style:solid;
+    border-color: #000;
+    border-radius:25px;    
+    width: 1000px;
+    height: 3000px;
+    text-align: left;
+    margin: 0 auto; 
+    background: black;
+    color: white;   
+}
 #lblMoneyDisplay
 {
     padding-top: 4px;
@@ -49,13 +64,6 @@
 	padding-left: 4px;
     color: #FFF;
     font-size: 60px;   
-}
-#totalPacketDisplay {
-    width: 970px;
-    font-size: 20px;
-    margin: 0 auto;
-    margin: 10px;
-    line-height: 50px;   
 }
 
 #lblMoneyDisplayScroll {
@@ -74,54 +82,6 @@
 	z-index: 98;
 }
 
-#lblSaveState {
-    color: white;
-}
-
-.lblItemDisplay {
-    float: left;
-    width: 210px;
-    padding: 5px;
-    margin: 0 auto;
-    text-align: center;
-    margin-left: 5px;
-    margin-top: 10px;
-    height: 50px;
-    color: white;
-    border: 1px solid #001b52;
-    background: black;
-    font-size: 13px;
-}
-
-.incremental
-{
-    padding-top: 30px;
-    padding-left: 5px;
-    width: 200px;
-    height: 30px;
-    display: none;
-    color:#24b41e;
-    float:left;
-    font-size:14px;
-}
-
-.incrementalReinforced
-{
-    padding-top: 30px;
-    padding-left: 5px;
-    width: 200px;
-    height: 30px;
-    display: none;
-    color:#88bb84;
-    float:left;
-    font-size:14px;
-}
-
-.crawlerButtonWrapper {
-    width: 560px;
-    height: 60px;
-    float: left;
-}
 
 #welcome
 {
@@ -140,49 +100,7 @@
     float:left;
     text-align:left;
     background: rgba(0, 0, 0, 0.7);
-    height:1600px;
-}
-
-.crawlerShopHeader {
-    background: rgba(0,0,0,0.3);
-    border: 1px solid black;
-    padding: 5px;
-    padding-left: 20px;
-    font-size: 14px;
-    margin: 0 auto;
-    text-align: left;
-    color: white;
-}
-
-
-#delsecCrawlerShop {
-    background: #0a1437;
-    height: 100%;
-    padding-top: 10px;
-}
-
-#russianCrawlerShop {
-    padding-top: 10px;
-    background: #280303;
-    height: 100%;
-}
-
-#vipersecCrawlerShop {
-    padding-top: 10px;
-    background: #0a3006;
-    height: 100%;
-}
-
-#chimerasecCrawlerShop {
-    padding-top: 10px;
-    background: #130821;
-    height: 100%;
-}
-
-#griffonbankCrawlerShop {
-    padding-top: 10px;
-    background: #1a1a1a;
-    height: 100%;
+    height:2400px;
 }
 
 #email
@@ -191,7 +109,9 @@
     text-align: left;
     font-family:Calibri;
     background: rgba(0, 0, 0, 0.7);
-    height:1600px;
+    height:2600px;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 #manualIncrementDisplay
@@ -207,6 +127,7 @@
     padding-bottom: 5px;
     font-weight: bold;
 }
+
 #nav_Buttons
 {
     float: left;
@@ -259,10 +180,157 @@
     float: left;
     padding-bottom: 20px;
 }
-.patchNotes {
+
+#optionsTabs {
+    width: 100%;
+    float: left;
+    height: 40px;
     text-align: left;
-    width: 50%;
+}
+#patchNotes {
+    padding-top: 20px;
+    text-align: left;
+    background: #010031;
     height: 1000px;
     float: left;
     overflow: auto;
+}
+#resetGame {
+    height: 1000px;
+    float: left;
+    padding-top: 20px;
+}
+
+#backgroundThemes {
+    height: 1000px;
+    float: left;
+    padding-top: 20px;
+}
+#disclaimerContainer {
+    background: #0b0b0b;
+}
+#disclaimer {
+    background: #0b0b0b;
+    color: white;
+    text-align: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+#disclaimer a {
+    text-decoration: none;
+    color: #666;
+}
+
+#gameProgress {
+    width: 1000px;
+    height: 1000px;
+    padding-top: 20px;
+    float: left;
+}
+
+#completedContainer {
+    padding-left:300px;
+    width: 440px;
+    height: 440px;
+}
+
+.classCompleted {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#healerVictorySplash
+{  
+	z-index: 100;
+    border-width: 5px;
+    border-style:solid;
+    border-color: #000;
+    border-radius:25px;    
+    width: 1000px;
+    height: 3000px;
+    text-align: center;
+    margin: 0 auto; 
+    background: black;
+    color: green;
+}
+#healerVictoryLogo {
+    padding-top: 100px;
+}
+
+#wizardVictorySplash
+{  
+	z-index: 100;
+    border-width: 5px;
+    border-style:solid;
+    border-color: #000;
+    border-radius:25px;    
+    width: 1000px;
+    height: 3000px;
+    text-align: center;
+    margin: 0 auto; 
+    background: black;
+}
+#delsecVictorySplash {
+    color: #50a8fc;
+}
+#russianVictorySplash {
+    color: #c20000;
+}
+#vipersecVictorySplash {
+    color: #24b41e;
+}
+#chimerasecVictorySplash {
+    color: #9216cb;
+}
+#griffonbankVictorySplash {
+    color: #898989;
+}
+#noControlVictorySplash {
+    color: #fff;
+}
+#rareVictorySplash {
+    color: #fff;
+}
+
+
+#rogueVictorySplash
+{  
+	z-index: 100;
+    border-width: 5px;
+    border-style:solid;
+    border-color: #000;
+    border-radius:25px;    
+    width: 1000px;
+    height: 3000px;
+    text-align: center;
+    margin: 0 auto; 
+    background: black;
+}
+
+#warriorVictorySplash
+{  
+	z-index: 100;
+    border-width: 5px;
+    border-style:solid;
+    border-color: #000;
+    border-radius:25px;    
+    width: 1000px;
+    height: 3000px;
+    text-align: center;
+    margin: 0 auto; 
+    background: black;
+}
+
+#warriorCompletedDisplay {
+    background: url(../Img/warriorNotCompleted.png);  
+}
+#wizardCompletedDisplay {
+    background: url(../Img/wizardNotCompleted.png);  
+}
+#healerCompletedDisplay {
+    background: url(../Img/healerNotCompleted.png);  
+}
+#rogueCompletedDisplay {
+    background: url(../Img/rogueNotCompleted.png);  
 }

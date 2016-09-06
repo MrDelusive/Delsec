@@ -27,6 +27,16 @@
     margin: 0 auto;
 }
 
+#wizardInfo {
+    display: block;
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;  
+}
+
 #btnWizardHeader:hover > #wizardInfo {
     display: block;
     position: relative;
@@ -44,7 +54,7 @@
 .wizardSkillHoverPopup {
     display: none;  
     position: relative;
-    height: 50px;
+    height: 80px;
     width: 300px;
     background: #080a34;
     border-radius: 5px;
@@ -52,7 +62,21 @@
     font-size: 14px;
     margin: 0 auto;
     left: -125px;  
-    top: -125px;
+    top: -155px;
+}
+
+.wizardSkillHoverLongPopup {
+    display: none;  
+    position: relative;
+    height: 120px;
+    width: 300px;
+    background: #080a34;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+    left: -125px;  
+    top: -195px;
 }
 
 .wizardActiveButton {
@@ -65,8 +89,94 @@
     margin: 0 auto;
 }
 
-#btnWizardHeader:hover > #wizardInfo {
-    display: block;
+#btnWizardLevel1-1 {
+    background: url('../Img/wizard/delsec1.jpg');
+}
+#btnWizardLevel1-2 {
+    background: url('../Img/wizard/russian1.jpg');
+}
+#btnWizardLevel1-3 {
+    background: url('../Img/wizard/griffon1.jpg');
+}
+
+#btnWizardLevel2-1 {
+    background: url('../Img/wizard/ip.jpg');
+}
+#btnWizardLevel2-2 {
+    background: url('../Img/wizard/delsec1.jpg');
+}
+#btnWizardLevel2-3 {
+    background: url('../Img/wizard/chimera1.jpg');
+}
+
+#btnWizardLevel3-1 {
+    background: url('../Img/wizard/risk.jpg');
+}
+#btnWizardLevel3-2 {
+    background: url('../Img/wizard/russian1.jpg');
+}
+#btnWizardLevel3-3 {
+    background: url('../Img/wizard/viper1.jpg');
+}
+
+#btnWizardLevel4-1 {
+    background: url('../Img/wizard/necro.jpg');
+}
+#btnWizardLevel4-2 {
+    background: url('../Img/wizard/ip.jpg');
+}
+#btnWizardLevel4-3 {
+    background: url('../Img/wizard/griffon1.jpg');
+}
+
+#btnWizardLevel5-1 {
+    background: url('../Img/wizard/risk.jpg');
+}
+#btnWizardLevel5-2 {
+    background: url('../Img/wizard/delsec1.jpg');
+}
+#btnWizardLevel5-3 {
+    background: url('../Img/wizard/viper1.jpg');
+}
+
+#btnWizardLevel6-1 {
+    background: url('../Img/wizard/multiBase.jpg');
+}
+#btnWizardLevel6-2 {
+    background: url('../Img/wizard/ip.jpg');
+}
+#btnWizardLevel6-3 {
+    background: url('../Img/wizard/viper1.jpg');
+}
+
+#btnWizardLevel7-1 {
+    background: url('../Img/wizard/chimera1.jpg');
+}
+#btnWizardLevel7-2 {
+    background: url('../Img/wizard/ironc.jpg');
+}
+#btnWizardLevel7-3 {
+    background: url('../Img/wizard/viper1.jpg');
+}
+
+#btnWizardLevel8-1 {
+    background: url('../Img/wizard/delsec1.jpg');
+}
+#btnWizardLevel8-2 {
+    background: url('../Img/wizard/multiBase.jpg');
+}
+#btnWizardLevel8-3 {
+    background: url('../Img/wizard/viper1.jpg');
+}
+
+#btnWizardLevel9-1 {
+    background: url('../Img/wizard/delsect.jpg');
+}
+#btnWizardLevel9-2 {
+    background: url('../Img/wizard/multiBase.jpg');
+}
+#btnWizardLevel9-3 {
+    background: url('../Img/wizard/russian1.jpg');
 }
 
 #wizardSkill1-1:hover > #wizardSkill1-1Popup {

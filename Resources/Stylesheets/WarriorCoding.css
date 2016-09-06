@@ -16,6 +16,14 @@
     line-height: 50px;  
     border: 1px solid #520808;
 }
+#currentComputerPower {
+    width: 970px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 10px;
+    line-height: 50px;  
+    border: 1px solid #520808;
+}
 
 .warriorCode {
     width: 570px;
@@ -69,4 +77,13 @@
     margin-right: 30px;
     font-size: 16px;
     text-align: right;
+}
+
+.consoleCommandsRow{
+    padding-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    float:left;
+    background: black;
+    width:1000px;
 }

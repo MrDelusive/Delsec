@@ -15,6 +15,7 @@
     <link href="Resources/Stylesheets/Stocks.css" rel="stylesheet" type="text/css" />
     <link href="Resources/Stylesheets/Buttons.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/MenuButtons.css" rel="stylesheet" type="text/css" />  
+    <link href="Resources/Stylesheets/Crawlers.css" rel="stylesheet" type="text/css" />  
     <link href="Resources/Stylesheets/CrawlerButtons.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/RiskManagement.css" rel="stylesheet" type="text/css" />   
     <link href="Resources/Stylesheets/Investment.css" rel="stylesheet" type="text/css" />   
@@ -30,6 +31,7 @@
     <script src="Resources/Scripts/Preload/jquery-ui-1.10.4.custom.js" type="text/javascript"></script>
 </head>
 <body>
+    <?php include_once("analyticstracking.php") ?>
     <div id="loading">		
 		<!-- Loader animation from http://cssload.net/ -->
 		<div class="windows8">
@@ -106,7 +108,7 @@
                 <button id="btnWizardAbilities" class="btnTab" style="display:none;">Wizard</button>
                 <button id="btnRogueAbilities" class="btnTabYellow" style="display:none;">Rogue</button>
                 <button id="btnHealerAbilities" class="btnTabGreen" style="display:none;">Healer</button>
-                <button id="btnConsole" class="btnTab" style="display:none;">Console</button>
+                <button id="btnConsole" class="btnTabRed" style="display:none;">Console</button>
                 <button id="btnOptions" class="btnTab" style="display:none;">Options</button>
             </div>
             <!-- the welcome message you only see once -->
@@ -119,22 +121,22 @@
 
             <!-- CRAWLERS -->          
             <div id ="shop" class="hidden_Divs">                       
-                <div id="totalPacketDisplay" class="lblItemDisplay">Total Packets/Sec: 0</div>                                 
-                <div id="crawlerTabSelect">
+                                                  
+                <div id="crawlerTabSelect">                   
                     <button id="btnDelsecCrawlerShop" class="btn_TabSmall">Delsec Crawlers</button>
-                    <button id="btnRussianCrawlerShop" class="btn_TabSmallRed">RussianTech Crawlers</button>
-                    <button id="btnVipersecCrawlerShop" class="btn_TabSmallGreen">Vipersec Crawlers</button>
-                    <button id="btnChimerasecCrawlerShop" class="btn_TabSmallPurple">Chimerasec Crawlers</button>
-                    <button id="btnGriffonbankCrawlerShop" class="btn_TabSmallGray">GriffonBank Crawlers</button>
+                    <button id="btnRussianCrawlerShop" class="btn_TabSmallRed">WIZARD CLASS REQ.</button>
+                    <button id="btnVipersecCrawlerShop" class="btn_TabSmallGreen">WIZARD CLASS REQ.</button>
+                    <button id="btnChimerasecCrawlerShop" class="btn_TabSmallPurple">WIZARD CLASS REQ.</button>
+                    <button id="btnGriffonbankCrawlerShop" class="btn_TabSmallGray">WIZARD CLASS REQ.</button>
+                    <button id="btnBonusesCrawlerShop" class="btn_TabSmall">WIZARD CLASS REQ.</button>                   
                 </div>
                 <!-- DELSEC CRAWLERS -->
                 <div id="delsecCrawlerShop" class="hidden_Divs">
                     <div id="delsecCrawlerShopHeader" class="crawlerShopHeader">
+                        <div id="totalPacketDisplay" class="lblItemDisplay">Total Delsec Packets/Sec: 0</div> 
                         - Average Risk <br />
                         - Average Performance <br />
-                        - Higher Risk gain <br />
                         - Average Cost <br />
-                        - Highest Selection <br />
                         - 10% Cost Growth <br />
                     </div>
                     <div id="twoBitDisplay" >
@@ -202,23 +204,280 @@
                         <div id="sixtyfourByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
                         <div id="sixtyfourByteIncrementAmtDisplay" class="incremental"></div>
                     </div>
+
+                    <div id ="oneTwentyEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy128ByteCrawler" class="btn_Style"></button> </div>
+                        <div id="oneTwentyEightByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="oneTwentyEightByteIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="twoFiftySixByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy256ByteCrawler" class="btn_Style"></button> </div>
+                        <div id="twoFiftySixByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="twoFiftySixByteIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="fiveTwelveByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy512ByteCrawler" class="btn_Style"></button> </div>
+                        <div id="fiveTwelveByteItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="fiveTwelveByteIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="oneKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy1KBCrawler" class="btn_Style"></button> </div>
+                        <div id="oneKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="oneKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="twoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy2KBCrawler" class="btn_Style"></button> </div>
+                        <div id="twoKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="twoKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="fourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy4KBCrawler" class="btn_Style"></button> </div>
+                        <div id="fourKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="fourKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="eightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy8KBCrawler" class="btn_Style"></button> </div>
+                        <div id="eightKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="eightKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="sixteenKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy16KBCrawler" class="btn_Style"></button> </div>
+                        <div id="sixteenKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="sixteenKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="thirtyTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy32KBCrawler" class="btn_Style"></button> </div>
+                        <div id="thirtyTwoKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="thirtyTwoKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="sixtyFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy64KBCrawler" class="btn_Style"></button> </div>
+                        <div id="sixtyFourKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="sixtyFourKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="oneTwentyEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy128KBCrawler" class="btn_Style"></button> </div>
+                        <div id="oneTwentyEightKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="oneTwentyEightKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="twoFiftySixKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy256KBCrawler" class="btn_Style"></button> </div>
+                        <div id="twoFiftySixKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="twoFiftySixKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="fiveTwelveKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy512KBCrawler" class="btn_Style"></button> </div>
+                        <div id="fiveTwelveKBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="fiveTwelveKBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="oneMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy1MBCrawler" class="btn_Style"></button> </div>
+                        <div id="oneMBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="oneMBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="twoMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy2MBCrawler" class="btn_Style"></button> </div>
+                        <div id="twoMBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="twoMBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="fourMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy4MBCrawler" class="btn_Style"></button> </div>
+                        <div id="fourMBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="fourMBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="eightMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy8MBCrawler" class="btn_Style"></button> </div>
+                        <div id="eightMBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="eightMBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
+
+                    <div id ="sixteenMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuy16MBCrawler" class="btn_Style"></button> </div>
+                        <div id="sixteenMBItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div>             
+                        <div id="sixteenMBIncrementAmtDisplay" class="incremental"></div>
+                    </div>
                 </div>         
 
                 <!-- RUSSIAN CRAWLERS -->
                 <div id="russianCrawlerShop" class="hidden_Divs">
                     <div id="russianCrawlerShopHeader" class="crawlerShopHeader">
+                        <div id="totalPacketDisplayRussian" class="lblItemDisplay">Total Russian Packets/Sec: 0</div> 
                         <!-- Better Performance Crawlers -->
                         - High Risk <br />
                         - Above Average Performance <br />
-                        - Average Risk gain <br />
                         - Higher Cost <br />
-                        - Low Selection <br />
                         - 10% Cost Growth <br />
                     </div>
                     <div id ="russianSixBitDisplay">
                         <div class="crawlerButtonWrapper"><button id="btnBuyRussian6BitCrawler" class="btn_StyleRed"></button> </div>
-                        <div id="russianSixBitItemDisplay" class="lblItemDisplay">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianSixBitItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
                         <div id="russianSixBitIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianTwelveBitDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian12BitCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianTwelveBitItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianTwelveBitIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianSixteenBitDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian16BitCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianSixteenBitItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianSixteenBitIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian4ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianFourByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian8ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianEightByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianSixteenByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian16ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianSixteenByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianSixteenByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianThirtyTwoByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian32ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianThirtyTwoByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianThirtyTwoByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianSixtyFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian64ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianSixtyFourByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianSixtyFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianOneTwentyEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian128ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianOneTwentyEightByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianOneTwentyEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianTwoFiftySixByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian256ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianTwoFiftySixByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianTwoFiftySixByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianFiveTwelveByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian512ByteCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianFiveTwelveByteItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianFiveTwelveByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianOneKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian1KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianOneKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianOneKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian2KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianTwoKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian4KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianFourKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian8KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianEightKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianEightKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianSixteenKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian16KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianSixteenKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianSixteenKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianThirtyTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian32KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianThirtyTwoKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianThirtyTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianSixtyFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian64KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianSixtyFourKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianSixtyFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianOneTwentyEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian128KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianOneTwentyEightKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianOneTwentyEightKBincrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianTwoFiftySixKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian256KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianTwoFiftySixKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianTwoFiftySixKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianFiveTwelveKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian512KBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianFiveTwelveKBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianFiveTwelveKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianOneMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian1MBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianOneMBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianOneMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianTwoMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian2MBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianTwoMBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianTwoMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianFourMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian4MBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianFourMBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianFourMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianEightMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian8MBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianEightMBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianEightMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="russianSixteenMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyRussian16MBCrawler" class="btn_StyleRed"></button> </div>
+                        <div id="russianSixteenMBItemDisplay" class="lblItemDisplayRed">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="russianSixteenMBIncrementAmtDisplay" class="incrementalReinforced"></div>
                     </div>
                 </div>
 
@@ -226,25 +485,324 @@
                 <div id="vipersecCrawlerShop" class="hidden_Divs">
                     <div id="vipersecCrawlerShopHeader" class="crawlerShopHeader">
                         <!-- Low Risk Crawlers -->
+                        <div id="totalPacketDisplayVipersec" class="lblItemDisplay">Total Vipersec Packets/Sec: 0</div> 
                         - Low Risk <br />
-                        - Average Performance <br />
-                        - Low Risk gain <br />
+                        - Average Performance <br />                        
                         - Very High Cost <br />
-                        - Average Selection <br />
                         - 15% Cost Growth <br />
                     </div>
+
+                    <div id ="vipersecOneByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec1ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecOneByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecOneByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecTwoByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec2ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecTwoByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecTwoByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec4ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecFourByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec8ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecEightByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecSixteenByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec16ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecSixteenByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecSixteenByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecThirtyTwoByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec32ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecThirtyTwoByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecThirtyTwoByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecSixtyFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec64ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecSixtyFourByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecSixtyFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecOneTwentyEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec128ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecOneTwentyEightByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecOneTwentyEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecTwoFiftySixByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec256ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecTwoFiftySixByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecTwoFiftySixByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecFiveTwelveByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec512ByteCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecFiveTwelveByteItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecFiveTwelveByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecOneKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec1KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecOneKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecOneKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec2KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecTwoKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec4KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecFourKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec8KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecEightKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecEightKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecSixteenKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec16KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecSixteenKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecSixteenKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecThirtyTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec32KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecThirtyTwoKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecThirtyTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecSixtyFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec64KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecSixtyFourKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecSixtyFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecOneTwentyEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec128KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecOneTwentyEightKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecOneTwentyEightKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecTwoFiftySixKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec256KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecTwoFiftySixKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecTwoFiftySixKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecFiveTwelveKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec512KBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecFiveTwelveKBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecFiveTwelveKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecOneMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec1MBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecOneMBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecOneMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecTwoMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec2MBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecTwoMBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecTwoMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecFourMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec4MBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecFourMBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecFourMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecEightMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec8MBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecEightMBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecEightMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="vipersecSixteenMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyVipersec16MBCrawler" class="btn_StyleGreen"></button> </div>
+                        <div id="vipersecSixteenMBItemDisplay" class="lblItemDisplayGreen">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="vipersecSixteenMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
                 </div>
 
                 <!-- CHIMERASEC CRAWLERS -->
                 <div id="chimerasecCrawlerShop" class="hidden_Divs">
                     <div id="chimerasecCrawlerShopHeader" class="crawlerShopHeader">
                         <!-- Cheap Crappy Crawlers -->
+                        <div id="totalPacketDisplayChimerasec" class="lblItemDisplay">Total Chimerasec Packets/Sec: 0</div> 
                         - Average Risk <br />
                         - Very Low Performance <br />
-                        - Average Risk gain <br />
                         - Very Low Cost <br />
-                        - High Selection <br />
                         - 2% Cost Growth <br />
+                    </div>
+
+                    <div id ="chimerasecOneByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec1ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecOneByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecOneByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecTwoByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec2ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecTwoByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecTwoByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec4ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecFourByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec8ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecEightByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecSixteenByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec16ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecSixteenByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecSixteenByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecThirtyTwoByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec32ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecThirtyTwoByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecThirtyTwoByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecSixtyFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec64ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecSixtyFourByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecSixtyFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecOneTwentyEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec128ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecOneTwentyEightByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecOneTwentyEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecTwoFiftySixByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec256ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecTwoFiftySixByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecTwoFiftySixByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecFiveTwelveByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec512ByteCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecFiveTwelveByteItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecFiveTwelveByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecOneKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec1KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecOneKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecOneKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec2KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecTwoKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec4KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecFourKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec8KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecEightKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecEightKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecSixteenKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec16KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecSixteenKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecSixteenKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecThirtyTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec32KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecThirtyTwoKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecThirtyTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecSixtyFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec64KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecSixtyFourKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecSixtyFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecOneTwentyEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec128KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecOneTwentyEightKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecOneTwentyEightKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecTwoFiftySixKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec256KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecTwoFiftySixKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecTwoFiftySixKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecFiveTwelveKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec512KBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecFiveTwelveKBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecFiveTwelveKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecOneMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec1MBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecOneMBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecOneMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecTwoMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec2MBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecTwoMBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecTwoMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecFourMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec4MBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecFourMBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecFourMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecEightMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec8MBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecEightMBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecEightMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="chimerasecSixteenMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyChimerasec16MBCrawler" class="btn_StylePurple"></button> </div>
+                        <div id="chimerasecSixteenMBItemDisplay" class="lblItemDisplayPurple">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="chimerasecSixteenMBIncrementAmtDisplay" class="incrementalReinforced"></div>
                     </div>
                 </div>
 
@@ -252,15 +810,270 @@
                 <div id="griffonbankCrawlerShop" class="hidden_Divs">
                     <div id="griffonbankCrawlerShopHeader" class="crawlerShopHeader">
                         <!-- More expensive and risky than russian -->
+                        <div id="totalPacketDisplayGriffonBank" class="lblItemDisplay">Total Griffon Bank Packets/Sec: 0</div> 
                         - Highest Risk <br />
                         - High Performance <br />
-                        - High Risk gain <br />
                         - High Cost <br />
-                        - Average Selection <br />
                         - 15% Cost Growth <br />
+                    </div>
+
+                    <div id ="griffonBankOneByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank1ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankOneByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankOneByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankTwoByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank2ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankTwoByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankTwoByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank4ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankFourByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank8ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankEightByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankSixteenByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank16ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankSixteenByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankSixteenByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankThirtyTwoByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank32ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankThirtyTwoByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankThirtyTwoByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankSixtyFourByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank64ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankSixtyFourByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankSixtyFourByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankOneTwentyEightByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank128ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankOneTwentyEightByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankOneTwentyEightByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankTwoFiftySixByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank256ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankTwoFiftySixByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankTwoFiftySixByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankFiveTwelveByteDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank512ByteCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankFiveTwelveByteItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankFiveTwelveByteIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankOneKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank1KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankOneKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankOneKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank2KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankTwoKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank4KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankFourKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank8KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankEightKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankEightKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankSixteenKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank16KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankSixteenKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankSixteenKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankThirtyTwoKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank32KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankThirtyTwoKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankThirtyTwoKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankSixtyFourKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank64KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankSixtyFourKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankSixtyFourKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankOneTwentyEightKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank128KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankOneTwentyEightKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankOneTwentyEightKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankTwoFiftySixKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank256KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankTwoFiftySixKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankTwoFiftySixKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankFiveTwelveKBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank512KBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankFiveTwelveKBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankFiveTwelveKBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankOneMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank1MBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankOneMBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankOneMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankTwoMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank2MBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankTwoMBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankTwoMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankFourMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank4MBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankFourMBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankFourMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankEightMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank8MBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankEightMBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankEightMBIncrementAmtDisplay" class="incrementalReinforced"></div>
+                    </div>
+
+                    <div id ="griffonBankSixteenMBDisplay">
+                        <div class="crawlerButtonWrapper"><button id="btnBuyGriffonBank16MBCrawler" class="btn_StyleGray"></button> </div>
+                        <div id="griffonBankSixteenMBItemDisplay" class="lblItemDisplayGray">0 Processes Running Through 0 Packets/Sec</div> 
+                        <div id="griffonBankSixteenMBIncrementAmtDisplay" class="incrementalReinforced"></div>
                     </div>
                 </div>
 
+                <!-- Bonus -->
+                <div id="bonusesCrawlerShop" class="hidden_Divs">
+                    <div id="bonusesCrawlerShopHeader" class="crawlerShopHeader">
+                        Bonuses Generated are listed here.                      
+                    </div>
+                    <div id="delsecZapperDisplay" class="bonusRow">
+                        <div id="delsecZapperLogo" class="bonusLogo"></div>
+                        <div id="delsecZapperTxt">DELSEC ZAPPER</div>
+                        <div id="delsecZapperBonus" class="bonusIncrement"></div>
+                    </div>
+                    <div id="russianZapperDisplay"class="bonusRow">
+                        <div id="russianZapperLogo" class="bonusLogo"></div>
+                        <div id="russianZapperTxt">RUSSIAN ZAPPER</div>
+                        <div id="russianZapperBonus" class="bonusIncrement"></div>
+                    </div>
+                    <div id="griffonZapperDisplay" class="bonusRow">
+                        <div id="griffonZapperLogo" class="bonusLogo"></div>
+                        <div id="griffonZapperTxt">GRIFFON ZAPPER</div>
+                        <div id="griffonZapperBonus" class="bonusIncrement"></div>
+                    </div>
+                    <div id="delsecChargerDisplay" class="bonusRow">
+                        <div id="delsecChargerLogo" class="bonusLogo"></div>
+                        <div id="delsecChargerTxt">DELSEC CHARGER</div>
+                        <div id="delsecChargerBonus" class="bonusIncrement"></div>
+                    </div>
+                    <div id="russianPowerAmplificationDisplay" class="bonusRow">
+                        <div id="russianPowerAmplificationLogo" class="bonusLogo"></div>
+                        <div id="russianPowerAmplificationTxt">RUSSIAN POWER AMP</div>
+                        <div id="russianPowerAmplificationBonus" class="bonusIncrement"></div>
+                    </div>
+                    <div id="vipersecReflectionFieldDisplay" class="bonusRow">
+                        <div id="vipersecReflectionFieldLogo" class="bonusLogo"></div>
+                        <div id="vipersecReflectionFieldTxt">VIPERSEC REFLECTION</div>
+                        <div id="vipersecReflectionFieldBonus" class="bonusIncrement"></div>
+                    </div>
+
+                    <div id="griffonBloodLustDisplay" class="bonusRow">
+                        <div id="griffonBloodLustLogo" class="bonusLogo"></div>
+                        <div id="griffonBloodLustTxt">GB BLOODLUST</div>
+                        <div id="griffonBloodLustBonus" class="bonusIncrement"></div>
+                    </div>
+
+                    <div id="delsecManipulationDisplay" class="bonusRow">
+                        <div id="delsecManipulationLogo" class="bonusLogo"></div>
+                        <div id="delsecManipulationTxt">DELSEC MANIPULATION</div>
+                        <div id="delsecManipulationBonus" class="bonusIncrement"></div>
+                    </div>
+                    <div id="vipersecFaderDisplay" class="bonusRow">
+                        <div id="vipersecFaderLogo" class="bonusLogo"></div>
+                        <div id="vipersecFaderTxt">VIPERSEC FADER</div>
+                        <div id="vipersecFaderBonus" class="bonusIncrement"></div>
+                    </div>    
+
+                    <div id="packetSummonerDisplay" class="bonusRow">
+                        <div id="packetSummonerLogo" class="bonusLogo"></div>
+                        <div id="packetSummonerTxt">PACKET SUMMONER</div>
+                        <div id="packetSummonerBonus" class="bonusIncrement"></div>
+                    </div> 
+                    <div id="vipersecStealthFieldDisplay" class="bonusRow">
+                        <div id="vipersecStealthFieldLogo" class="bonusLogo"></div>
+                        <div id="vipersecStealthFieldTxt">VIPERSEC STEALTH FIELD</div>
+                        <div id="vipersecStealthFieldBonus" class="bonusIncrement"></div>
+                    </div>      
+
+                    <div id="vipersecInvisibilityDisplay" class="bonusRow">
+                        <div id="vipersecInvisibilityLogo" class="bonusLogo"></div>
+                        <div id="vipersecInvisibilityTxt">VIPERSEC INVISIBILITY</div>
+                        <div id="vipersecInvisibilityBonus" class="bonusIncrement"></div>
+                    </div>  
+
+                    <div id="ironCurtainDisplay" class="bonusRow">
+                        <div id="ironCurtainLogo" class="bonusLogo"></div>
+                        <div id="ironCurtainTxt">IRON CURTAIN BONUS</div>
+                        <div id="ironCurtainBonus" class="bonusIncrement"></div>
+                    </div> 
+                    
+                    <div id="delsecSuperstormIncomeDisplay" class="bonusRow">
+                        <div id="delsecSuperstormIncomeLogo" class="bonusLogo"></div>
+                        <div id="delsecSuperstormIncomeTxt">DELSEC SUPERSTORM ($)</div>
+                        <div id="delsecSuperstormIncomeBonus" class="bonusIncrement"></div>
+                    </div>  
+                    
+                    <div id="delsecSuperstormPacketDisplay" class="bonusRow">
+                        <div id="delsecSuperstormPacketLogo" class="bonusLogo"></div>
+                        <div id="delsecSuperstormPacketTxt">DELSEC SUPERSTORM (P)</div>
+                        <div id="delsecSuperstormPacketBonus" class="bonusIncrement"></div>
+                    </div>  
+
+                    <div id="chaosWizardDisplay" class="bonusRow">
+                        <div id="chaosWizardLogo" class="bonusLogo"></div>
+                        <div id="chaosWizardTxt">CHAOS WIZARD</div>
+                        <div id="chaosWizardBonus" class="bonusIncrement"></div>
+                    </div>  
+
+                    <div id="vipersecTimeReversalDisplay" class="bonusRow">
+                        <div id="vipersecTimeReversalLogo" class="bonusLogo"></div>
+                        <div id="vipersecTimeReversalTxt">VIPERSEC TIME REVERSAL</div>
+                        <div id="vipersecTimeReversalBonus" class="bonusIncrement"></div>
+                    </div>  
+
+                    <div id="redArmyConscriptionDisplay" class="bonusRow">
+                        <div id="redArmyConscriptionLogo" class="bonusLogo"></div>
+                        <div id="redArmyConscriptionTxt">RED ARMY CONSCRIPTION</div>
+                        <div id="redArmyConscriptionBonus" class="bonusIncrement"></div>
+                    </div> 
+                </div>
 
             </div>
 
@@ -283,11 +1096,37 @@
                             FILES
                         </div>
                         <div class='riskItem'>
+                            <button id='btnRiskConRoute'></button>
+                            CONROUTE
+                        </div>
+                        <div class='riskItem'>
+                            <button id='btnRiskWanted'></button>
+                            WANTED.TXT
+                        </div>
+                        <div class='riskItem'>
+                            <button id='btnGlobalControl'></button>
+                            GLOBAL
+                        </div>
+                        <div class='riskItem' id="necromancerItem">
+                            <div id="necroTimerDisplay">15:00</div>
+                            <button id='btnNecromancer'></button>
+                            NECRO.BAT
+                        </div>
+                        <div class='riskItem' id="ironCurtainItem">
+                            <div id="ironCurtainTimerDisplay">30:00</div>
+                            <div id="ironCurtainRunningTimerDisplay">10:00</div>
+                            <button id='btnIronCurtain'></button>
+                            IRONCURTAIN
+                        </div>
 
+                        <div class='riskItem' id="delsecTechGodItem">
+                            <div id="delsecTechGodTimerDisplay">30:00</div>
+                            <button id='btnDelsecTechGod'></button>
+                            DELNUKE
                         </div>
                         <div class="riskAccessDenied">ACCESS DENIED.</div>
                         <div class="riskAccessPopup" id="riskAccessFile">
-                            <div class="riskPopupHeader"><button id="btnCloseRiskAccessFile" class="btnClosePopup">X</button></div>
+                            <div class="riskPopupHeader">PROFILE SEARCH<button id="btnCloseRiskAccessFile" class="btnClosePopup">X</button></div>
                             <div id="riskAccessFileRow">
                                 <div class="riskAccessContent">USERID:</div>
                                 <div class="riskAccessContent"><input id="riskAccessID" maxlength="7"/></div>    
@@ -295,8 +1134,8 @@
                             </div>
                         </div>
                         <div id="riskPlayerProfile" class="riskAccessPopup">
-                            <div class="riskPopupHeader"><button id="btnCloseRiskPlayerProfile" class="btnClosePopup">X</button></div>
-                            <div id="riskPlayerProfileContent">
+                            <div class="riskPopupHeader">PROFILE DATA<button id="btnCloseRiskPlayerProfile" class="btnClosePopup">X</button></div>
+                            <div id="riskPlayerProfileContent" class="riskDefaultPopupContent">
                                 <div id="riskPlayerLeftCol" class="riskPlayerCol">
 
                                 </div>
@@ -313,22 +1152,240 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div id="riskOtherProfile" class="riskAccessPopup">
+                            <div class="riskPopupHeader">PROFILE DATA<button id="btnCloseRiskOtherProfile" class="btnClosePopup">X</button></div>
+                            <div id="riskOtherProfileContent" class="riskDefaultPopupContent">
+                                <div id="riskOtherLeftCol" class="riskPlayerCol">
+
+                                </div>
+                                <div id="riskOtherRightCol" class="riskPlayerCol">
+                                    <div class="playerLabel" ><b>NAME:</b></div>
+                                    <div class="playerLabel" id="otherName">[UNKNOWN]</div>
+                                    <div class="playerLabel"><b>AGE:</b></div>
+                                    <div class="playerLabel" id="otherAge">[UNKNOWN]</div>
+                                    <div class="playerLabel"><b>ADDRESS:</b></div>
+                                    <div class="playerLabel" id="otherAddress">[UNKNOWN]</div>
+                                    <div class="playerLabel"><b>STATUS:</b></div>
+                                    <div class="playerLabel" id="otherStatus">CLEAN</div>
+                                    <div class="playerLabel"><button id="btnClearOtherRisk" class="riskButton">CLEAR HISTORY</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="riskAccessPopup" id="riskConRoute">
+                            <div class="riskPopupHeader">CONNECTION ROUTE<button id="btnCloseRiskConRoute" class="btnClosePopup">X</button></div>
+                            <div id="riskConRouteDisplay">
+                                <br />
+                                <b>Current Route Enables FDI Detection at:</b><div id="currentRiskAmtDisplay"></div>
+                                Locate an IP to assign it to the route.
+                                <br /><br />
+                                <div class="locateIPRow">
+                                    <div class="locateIPCol"></div>
+                                    <div class="locateIPCol" id="firstIP1">222</div>
+                                    <div class="locateIPCol" id="firstIP2">111</div>
+                                    <div class="locateIPCol" id="firstIP3">333</div>
+                                    <div class="locateIPCol" id="firstIP4">444</div>
+                                </div>
+                                <div class="locateIPRow">
+                                    <div class="locateIPCol">+</div>
+                                    <div class="locateIPCol" id="secondIP1">222</div>
+                                    <div class="locateIPCol" id="secondIP2">111</div>
+                                    <div class="locateIPCol" id="secondIP3">333</div>
+                                    <div class="locateIPCol" id="secondIP4">444</div>
+                                </div>
+                                <div class="locateIPRow">
+                                    <div class="locateIPCol">=</div>
+                                    <div class="locateIPCol"><input id="txtIPInput1" class="IPInput" maxlength="3"/></div>
+                                    <div class="locateIPCol"><input id="txtIPInput2" class="IPInput" maxlength="3"/></div>
+                                    <div class="locateIPCol"><input id="txtIPInput3" class="IPInput" maxlength="3"/></div>
+                                    <div class="locateIPCol"><input id="txtIPInput4" class="IPInput" maxlength="3"/></div>
+                                </div>
+                                <div id="riskIPSubmitDisplay">
+                                    <button id="btnIPSubmit" class="riskButton">Validate IP</button>
+                                </div>                               
+                            </div>
+                        </div>
+                        <div id="riskIPInvalid">
+                            INVALID IP
+                        </div>
+                        <div id="riskIPValid">
+                            VALID IP
+                        </div>
+
+                        <div class="riskAccessPopup" id="riskWantedTxt">
+                            <div class="riskPopupHeader">WANTED TARGETS<button id="btnCloseRiskWantedTxt" class="btnClosePopup">X</button></div>
+                            <div id="riskWantedTxtDisplay">
+                                <div id="riskWantedContent">
+                                    <br />
+                                    <b>FDI Current Targets:</b>
+                                    <div id="riskCurrentTarget1" class="riskCurrentTargetRow">1</div>
+                                    <div id="riskCurrentTarget2" class="riskCurrentTargetRow">2</div>
+                                    <div id="riskCurrentTarget3" class="riskCurrentTargetRow">3</div>
+                                    <div id="riskCurrentTarget4" class="riskCurrentTargetRow">4</div>
+                                    <div id="riskCurrentTarget5" class="riskCurrentTargetRow">5</div>
+                                    <div id="riskCurrentTarget6" class="riskCurrentTargetRow">6</div>
+                                    <div id="riskCurrentTarget7" class="riskCurrentTargetRow">7</div>
+                                    <div id="riskCurrentTarget8" class="riskCurrentTargetRow">8</div>
+                                    <div id="riskCurrentTarget9" class="riskCurrentTargetRow">9</div>
+                                    <div id="riskCurrentTarget10" class="riskCurrentTargetRow">11</div>
+                                </div>
+                                <div id="riskWantedRefreshTargets"><button id="btnRiskWantedRefreshTargets" class="riskButton">REFRESH TARGETS</button></div>
+                            </div>
+                        </div>
+
+                        <div class="riskAccessPopup" id="riskGlobalControl">
+                            <div class="riskPopupHeader">GLOBAL CONTROL<button id="btnCloseRiskGlobalControl" class="btnClosePopup">X</button></div>
+                            <div id="riskGlobalControlContent">
+                                <div id="availableGlobalPackets">
+                                    <div id="globalPacketsDisplay"></div>
+                                </div>
+                                <div class="globalControlRow">
+                                    <div id="delsecGlobalLogo" class="globalLogo"></div>
+                                    <div id="delsecGlobalControl" class="globalControlAmt"></div>
+                                    <div id="delsecPercentage" class="globalControlPercentage"></div>
+                                </div>
+                                <div class="globalControlRow" >
+                                    <div id="russianGlobalLogo" class="globalLogo"></div>
+                                    <div id="russianGlobalControl" class="globalControlAmt"></div>
+                                    <div id="russianPercentage" class="globalControlPercentage"></div>
+                                </div>
+                                <div class="globalControlRow" >
+                                    <div id="vipersecGlobalLogo" class="globalLogo"></div>
+                                    <div id="vipersecGlobalControl" class="globalControlAmt"></div>
+                                    <div id="vipersecPercentage" class="globalControlPercentage"></div>
+                                </div>
+                                <div class="globalControlRow" >
+                                    <div id="chimerasecGlobalLogo" class="globalLogo"></div>
+                                    <div id="chimerasecGlobalControl" class="globalControlAmt"></div>
+                                    <div id="chimerasecPercentage" class="globalControlPercentage"></div>
+                                </div>
+                                <div class="globalControlRow" >
+                                    <div id="griffonBankGlobalLogo" class="globalLogo"></div>
+                                    <div id="griffonBankGlobalControl" class="globalControlAmt"></div>
+                                    <div id="griffonBankPercentage" class="globalControlPercentage"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="riskAccessPopup" id="riskClearGrid">
+                            <!--<button id="btnCloseRiskClearGrid" class="btnClosePopup">X</button>-->
+                            <div class="riskPopupHeader">ACCESS GRID</div>
+                            <div id="riskClearGridContent" class="riskDefaultPopupContent">
+                                <div id="gridHeading">
+                                    
+                                </div>
+                                <div id="gridDisplay">
+                                    <div id="grid18" class="gridCoord"></div>
+                                    <div id="grid28" class="gridCoord"></div>
+                                    <div id="grid38" class="gridCoord"></div>
+                                    <div id="grid48" class="gridCoord"></div>
+                                    <div id="grid58" class="gridCoord"></div>
+                                    <div id="grid68" class="gridCoord"></div>
+                                    <div id="grid78" class="gridCoord"></div>
+                                    <div id="grid88" class="gridCoord"></div>
+
+                                    <div id="grid17" class="gridCoord"></div>
+                                    <div id="grid27" class="gridCoord"></div>
+                                    <div id="grid37" class="gridCoord"></div>
+                                    <div id="grid47" class="gridCoord"></div>
+                                    <div id="grid57" class="gridCoord"></div>
+                                    <div id="grid67" class="gridCoord"></div>
+                                    <div id="grid77" class="gridCoord"></div>
+                                    <div id="grid87" class="gridCoord"></div>
+
+                                    <div id="grid16" class="gridCoord"></div>
+                                    <div id="grid26" class="gridCoord"></div>
+                                    <div id="grid36" class="gridCoord"></div>
+                                    <div id="grid46" class="gridCoord"></div>
+                                    <div id="grid56" class="gridCoord"></div>
+                                    <div id="grid66" class="gridCoord"></div>
+                                    <div id="grid76" class="gridCoord"></div>
+                                    <div id="grid86" class="gridCoord"></div>
+
+                                    <div id="grid15" class="gridCoord"></div>
+                                    <div id="grid25" class="gridCoord"></div>
+                                    <div id="grid35" class="gridCoord"></div>
+                                    <div id="grid45" class="gridCoord"></div>
+                                    <div id="grid55" class="gridCoord"></div>
+                                    <div id="grid65" class="gridCoord"></div>
+                                    <div id="grid75" class="gridCoord"></div>
+                                    <div id="grid85" class="gridCoord"></div>
+
+                                    <div id="grid14" class="gridCoord"></div>
+                                    <div id="grid24" class="gridCoord"></div>
+                                    <div id="grid34" class="gridCoord"></div>
+                                    <div id="grid44" class="gridCoord"></div>
+                                    <div id="grid54" class="gridCoord"></div>
+                                    <div id="grid64" class="gridCoord"></div>
+                                    <div id="grid74" class="gridCoord"></div>
+                                    <div id="grid84" class="gridCoord"></div>
+
+                                    <div id="grid13" class="gridCoord"></div>
+                                    <div id="grid23" class="gridCoord"></div>
+                                    <div id="grid33" class="gridCoord"></div>
+                                    <div id="grid43" class="gridCoord"></div>
+                                    <div id="grid53" class="gridCoord"></div>
+                                    <div id="grid63" class="gridCoord"></div>
+                                    <div id="grid73" class="gridCoord"></div>
+                                    <div id="grid83" class="gridCoord"></div>
+
+                                    <div id="grid12" class="gridCoord"></div>
+                                    <div id="grid22" class="gridCoord"></div>
+                                    <div id="grid32" class="gridCoord"></div>
+                                    <div id="grid42" class="gridCoord"></div>
+                                    <div id="grid52" class="gridCoord"></div>
+                                    <div id="grid62" class="gridCoord"></div>
+                                    <div id="grid72" class="gridCoord"></div>
+                                    <div id="grid82" class="gridCoord"></div>
+
+                                    <div id="grid11" class="gridCoord"></div>
+                                    <div id="grid21" class="gridCoord"></div>
+                                    <div id="grid31" class="gridCoord"></div>
+                                    <div id="grid41" class="gridCoord"></div>
+                                    <div id="grid51" class="gridCoord"></div>
+                                    <div id="grid61" class="gridCoord"></div>
+                                    <div id="grid71" class="gridCoord"></div>
+                                    <div id="grid81" class="gridCoord"></div>
+                                                                       
+                                </div>
+                                <div id="gridInput">
+                                    <div id="gridInputPrompt"></div>
+                                    <div class="riskAccessContent"><input id="gridInputInput" class="IPInput" maxlength="2"/></div>  
+                                    <button id="btnGridInputSubmit" class="riskButton">VERIFY</button>
+                                    <button id="btnGridInputSubmitPlayer" class="riskButton">VERIFY</button>
+                                </div>                               
+                            </div>                           
+                        </div>
+
+                        <div id="riskGridValid">
+                            VALID
+                        </div>
+                    </div>
+
+
+                    <div id="riskGameNecroed">
+                        <div id="riskNecroTimer"></div>                       
                     </div>
                 </div>   
             </div>
 
             <!-- WARRIOR CODING -->
             <div id ="warriorCoding" class="hidden_Divs"> 
-                <div id="totalWarriorClicks" class="lblItemDisplay">Total Warrior Generate Clicks: 0</div>  
+                <div id="totalWarriorClicks" class="lblItemDisplay">Total Warrior Generate Clicks: 0.00</div> 
+                <div id="currentComputerPower" class="lblItemDisplay">Current Computing Power Usage/Capacity: 0.00KB/1.00 KB</div> 
 
                 <div class="warriorRowHeader">
-                    <button id="btnWarriorCodeTab" class="btn_TabSmallRed">Code</button>
-                    <button id="btnWarriorItemsTab" class="btn_TabSmallRed">Items</button>
+                    <button id="btnWarriorCodeTab" class="btn_TabSmallRed">Build jQuery</button>     
+                    <button id="btnWarriorCodeHTMLTab" class="btn_TabSmallRed">Build HTML</button>                
+                    <button id="btnWarriorItemsTab" class="btn_TabSmallRed">Run Code</button>
+                    <button id="btnWarriorConsoleCommandsTab" class="btn_TabSmallRed">Console Commands</button>
+                    <button id="btnWarriorBlackMarketTab" class="btn_TabSmallRed">Black Market</button>
                 </div>
 
+                <!--JQUERY-->
                 <div class="hidden_Divs" id="warriorCodeTab">
-                    <div class="warriorRow">
-                        <button id="btnWriteEfficiencyCode" class="btn_StyleRed">WRITE GENERATE EFFICIENCY CODE</button>                 
+                    <div class="warriorRow" id="efficiencyDiv">
+                        <button id="btnWriteEfficiencyCode" class="btn_StyleRed">Code Efficiency_1.js</button>                 
                         <div id="warriorCodeEfficiency1" class="warriorCode"></div>
                         <div id="warriorCodeEfficiency1Result" class="warriorCodeResult">
                             Code compiled: 0 Times for $0.00 Boost in Efficiency.
@@ -336,7 +1393,7 @@
                     </div>
                 
                     <div class="warriorRow" id="efficiency2Div">
-                        <button id="btnWriteEfficiency2Code" class="btn_StyleRed">WRITE GENERATE EFFICIENCY 2 CODE</button> 
+                        <button id="btnWriteEfficiency2Code" class="btn_StyleRed">Requires 5.00 KB Computing Power Capacity</button> 
                         <div id="warriorCodeEfficiency2" class="warriorCode"></div>
                         <div id="warriorCodeEfficiency2Result" class="warriorCodeResult">
                             
@@ -344,19 +1401,57 @@
                     </div>
 
                     <div class="warriorRow" id="scatterLogicDiv">
-                        <button id="btnWriteScatterLogicCode" class="btn_StyleRed">WRITE SCATTER LOGIC CODE</button>                 
+                        <button id="btnWriteScatterLogicCode" class="btn_StyleRed">Requires 10.00 KB Computing Power Capacity</button>                 
                         <div id="warriorCodeScatterLogic" class="warriorCode"></div>
                         <div id="warriorCodeScatterLogicResult" class="warriorCodeResult">
                         </div>                        
-                    </div>                                   
+                    </div> 
+                    
+                    <div class="warriorRow" id="autoEfficiency1">
+                        <button id="btnWriteAutoEfficiency1Code" class="btn_StyleRed">Requires 75.00 KB Computing Power Capacity</button>                 
+                        <div id="warriorCodeAutoEfficiency1" class="warriorCode"></div>
+                        <div id="warriorCodeAutoEfficiency1Result" class="warriorCodeResult">
+                        </div>                        
+                    </div>                                  
+                </div>
+
+                <!--HTML-->
+                <div class="hidden_Divs" id="warriorCodeHTMLTab">
+                    <div class="warriorRow" id="expandHTMLDiv">
+                        <button id="btnWriteExpandHTMLCode" class="btn_StyleRed">Requires 150.00 KB Computing Power Capacity</button>                 
+                        <div id="warriorCodeExpandHTML" class="warriorCode"></div>
+                        <div id="warriorCodeExpandHTMLResult" class="warriorCodeResult">
+                            0.00 % of Data Added.
+                        </div>
+                    </div>                                 
                 </div>
 
                 <div class="hidden_Divs" id="warriorItemsTab">    
                     <div class="warriorRow">                       
-                        <div class="warriorItemContainer"><button id="btnScatterLogicBomb" class="btn_StyleRed">ACTIVATE SCATTER LOGIC BOMB</button></div>   
+                        <div class="warriorItemContainer"><button id="btnScatterLogicBomb" class="btn_StyleRed">Deploy Scatter Logic Bomb</button></div>   
                         <div id="scatterLogicBombAmt" class="itemAmtDisplay"></div>
                     </div>
                 </div>
+
+                <div class="hidden_Divs" id="warriorConsoleCommandsTab">    
+                    <div class="consoleCommandsRow">
+                        <div id="basicWarriorCommands">
+                            dir [DIRECTORY] - catalogue entered directory, if exists.<br /><br />
+                            cd [DIRECTORY] - navigate to directory, if exists.<br /><br />
+                            build [PROGRAM NAME] - auto-build the program. EG. build efficiency_1.js will auto-build the same code as the manually created one. Takes some time to build.<br /><br />
+                            run [PROGRAM NAME] - run the program. EG. run scatterlogic.js will run a scatter logic bomb if you have one. <br /><br />
+                        </div>                       
+                    </div>
+                </div>
+                <div class="hidden_Divs" id="warriorBlackMarketTab">    
+                    <div class="warriorRow">                     
+                        <h2>Computing Power</h2>
+                        <button id="btnBuy1KBComputingPower" class="btn_StyleRed">Download 1KB Computing Power - $25.00</button>
+                        <button id="btnBuy8KBComputingPower" class="btn_StyleRed">Download 8KB Computing Power - $231.53</button>
+                        <button id="btnBuy64KBComputingPower" class="btn_StyleRed">Download 64KB Computing Power - $2,144.15</button>
+                    </div>
+                </div>
+
 
             </div>  
 
@@ -375,10 +1470,16 @@
                     
                 </div>
                 <div id="email2" class="hidden_Emails">
-                    To whom it may concern <br /> <br />
-                    We at DelSec welcome and thank you for creating an account at our wonderful bank. <br />
+                    To whom it may concern, <br /> <br />
+                    We at Delsec welcome and thank you for creating an account at our wonderful bank. <br />
                     We wish you all the best in your endevours to get rich, because the more you make, the more we make! <br /> <br />
-                    I hope you can take the time to watch our introduction video at [YOUTUBELINK], with a very inspiring speech made by our CEO, Mr. Delusive. <br /> <br />
+                    As you start exploring, you will find a few ways to begin making money. Through the Generate button, through Crawlers, through Investments,
+                    and through the Stock Market. The choice is yours how you wish to start earning. Eventually, you will want to select a path. <br /><br />
+                    Currently there are 4 paths:<br /><b>Code Warrior</b> which requires a lot of clicking and manual work. <br /><b>Automation Wizard</b> which focuses on Crawlers and 
+                    Managing Risk.<br /><b>Investment Healer</b> which focuses on investing your money to slowly increase it.<br /><b>Stock Market Rogue</b> which requires quick manipulation
+                    of the Stock Market and of Company Shares.<br /> <br />
+                    The choice is yours, however if you are a true completionist, then more awaits for those who complete all 4 paths. Completing one path will earn you a segment,
+                    after you earn that segment, you can either continue playing or move on to the next path to earn its segment. <br /><br />
                     Kind Regards, <br />
                     The team at Delsec Banking.              
                 </div>
@@ -394,20 +1495,7 @@
                     We suggest you branch out to other realms of profiteering such as Investment and the Stock Market, if you haven't already done so.<br /> <br />
                     Kind Regards, <br />
                     The team at Delsec Banking.               
-                </div>
-
-                <div id="email3Heading" class="hidden_Buttons">
-                   <button id="btnEmail3View" class="btn_Email" > <b>Tsar of Russia</b> - Thank you</button> <br />                  
-                </div>
-                <div id="email3" class="hidden_Emails">
-					<b>Our bots have auto-translated the following email:</b><br />
-                    Russia Thank you for buy our item. <br />
-                    Our product are REINFORCED, means we always find money!! <br />				
-					Good enough for government work, <br />
-					Russia tech is best tech!<br /> <br />
-					Salute to mother russia,<br />
-					Sincerly, Bear.<br />					                              
-                </div>    
+                </div>                 
                    
                 <div id="emailQuickScopeHeading" class="hidden_Buttons">
                    <button id="btnEmailQuickScopeView" class="btn_Email" > <b>XxX420N0-SK0PZXxX</b> - Fanks</button> <br />                  
@@ -448,8 +1536,10 @@
                 <div id="emailWarrior" class="hidden_Emails">
                     Dear user5184828, <br /> <br />
                     I see you have decided to become a Code Warrior. <br /><br />
-                    Warriors have the ability to recode the mechanics of their accounts. <br />
-                    Warriors are a more active class, and require constant input to become truly effective. <br />
+                    As a Warrior, your goal is to build stronger and stronger code, which eventually influences how Delsec runs. Once you've learnt how to code the Warrior
+                    segment, then you will have completed the Warrior path.<br /><br />
+                    You can either code to help develop Delsec, or code to break Delsec. <br /><br />
+                    Warriors can either build code manually in the Jquery, CSS, and HTML tabs under Write Code, or can run the equivalent program under the console. <br /><br />
                     I hope you use that in line with the interests of Delsec, and not become a free agent! <br /> <br />  
                     Regards, Mr. Delusive.                                                              
                 </div>
@@ -460,9 +1550,18 @@
                 <div id="emailHealer" class="hidden_Emails">
                     Dear user5184828, <br /> <br />
                     I see you have decided to become an Investment Healer. <br /><br />
-                    Healers get access to Long-Term Investments, and can become true masters of the long term. <br />
-                    Healers are a more passive class, and require plenty of time with little input to be effective.<br />
-                    Pretty good to keep running in the background, if you ask me. <br /> <br />  
+                    As a healer, your goal is to gain enough Universal Energy (2.5 million). Once you have amassed enough, you will have completed the
+                    healer class and earned its segment. <br /><br />
+                    Healers get access to more Short-Term Investments, Long-Term Investments, Excavations, and Permanent Invesments. <br /><br />
+                    If you haven't figured by now, Short-Term Investments are risky but quick, where Long-Term Investments will always return 
+                    a profit but take longer to complete. Excavations gather resources which can be sold on the Stock Market, and Permanent Investments
+                    slowly generate income over time. <br />
+
+                    Your generator button is changed as well. It will now generate income every 1 minute (or 30 seconds) based on the Total amount you 
+                    have invested. <br /> <br />
+                    Healer is a more passive class compared to say, Warrior or Rogue, and pretty good to keep running in the background. Also, don't
+                    forget to check out your Skill tree, with abilities important to the path you decide to take. <br /><br />
+
                     Regards, Mr. Delusive.                                                              
                 </div>
 
@@ -472,9 +1571,14 @@
                 <div id="emailWizard" class="hidden_Emails">
                     Dear user5184828, <br /> <br />
                     I see you have decided to become an Automation Wizard. <br /><br />
-                    Wizards get access to the other companies crawlers. I don't see why you'd need my competitors crawlers, seeing that DELSEC has the best crawlers of course. <br />
-                    Wizards are a more passive class, and require slight input for Risk Management.<br />
-                    Master Wizards can eventually automate Risk Management to become a real Automated Class. <br /> <br />  
+                    As a wizard, you will join the fight for global packet domination of the 5 major companies. Delsec, Russian Tech, Vipersec, Chimerasec, and Griffon Bank. The company
+                    that controls the majority of packets when all Free Packets have been assigned, will gain control of the planet. I really hope you will join on Delsec's fight. <br /> <br />
+                    Wizards get access to the higher Delsec Crawlers, as well as the other companies crawlers. I don't see why you'd need the other competitors crawlers though, 
+                    seeing that Delsec has the best crawlers in the world. <br /><br />
+                    I have also granted you access to the FDI Hacked Computer, which will help you reduce the risk your crawlers start to generate, and ensure your profits don't get
+                    frozen by the FDI. You have a few ways to control this. You can find your own account and clear your name, add IPs to the trace the FDI are using to find you,
+                    or clear other peoples accounts to keep the FDI occupied. <br /><br />
+                    You will also gain access to useful abilities in your skill tree which you might find useful depending on the path you choose to take.<br /><br />                   
                     Regards, Mr. Delusive.                                                              
                 </div>
 
@@ -502,6 +1606,86 @@
                     Thank you for your understanding.<br /><br />
                     Delsec Team                                             
                 </div>
+
+                <div id="email3Heading" class="hidden_Buttons">
+                   <button id="btnEmail3View" class="btn_Email" > <b>Tsar of Russia</b> - Thank you</button> <br />                  
+                </div>
+                <div id="email3" class="hidden_Emails">
+					<b>Our bots have auto-translated the following email:</b><br />
+                    Russia Thank you for buy our item. <br />
+                    Our product are BETTER, means we find more money!! <br />				
+					Good enough for government work, <br />
+					Russia tech is best tech!<br /> <br />
+					Salute to mother russia,<br />
+					Sincerly, Bear.<br />					                              
+                </div>  
+
+                <div id="emailVipersecStartHeading" class="hidden_Buttons">
+                   <button id="btnEmailVipersecStartView" class="btn_Email" > <b>Vipersec</b> - 86542345</button> <br />                  
+                </div>             
+                <div id="emailVipersecStart" class="hidden_Emails">
+                    43980643080438903295237572884327042780547823078547826405475820657265072786572 <br />
+                    ---DATA RETRIEVED--- <br />
+                    VIPERSEC - <br />
+                    This Email Has Been 6543654363 With Vipersec Encryption. <br />
+                    We have 71832889 a basic decryption 50014538 to this email, so that 1591281 can read the contents. <br /><br />
+                    PRIMARY MESSAGE <br />
+                    53721659 Thanks you for purchasing our 10214021223. Vipersec holds strong to encryption and privacy. <br />
+                    21949895989682-538253928958329853 68854 532938 of 53897319. <br />
+                    Vipersec technology is less 8358732185 to be detected by FDI. <br /><br />
+                    END <br />
+                    43980643080438903295237572884327042780547823078547826405475820657265072786572                                    
+                </div>
+
+                <div id="emailChimerasecStartHeading" class="hidden_Buttons">
+                   <button id="btnEmailChimerasecStartView" class="btn_Email" > <b>Chimerasec</b> - Yo</button> <br />                  
+                </div>             
+                <div id="emailChimerasecStart" class="hidden_Emails">
+                    Hey, <br /><br />
+                    Thanks for buyin our crawlers. We are a small group of people who have built chimerasec from the ground up. Our tech can't really compete with 
+                    some of the other companies at this stage but it is cheap. <br /><br />
+                    We don't charge much because we believe in the people, and honesty where it counts. We don't ask for much but if you want to help us we'd love to
+                    have you on board. <br /> <br />
+                    Take care.                                   
+                </div>
+
+                <div id="emailGriffonbankStartHeading" class="hidden_Buttons">
+                   <button id="btnEmailGriffonbankStartView" class="btn_Email" > <b>Griffon Bank</b> - Welcome to Griffon Bank</button> <br />                  
+                </div>             
+                <div id="emailGriffonbankStart" class="hidden_Emails">
+                    To whom it may concern, <br /><br />
+                    Griffon Bank is proud to welcome you to its database of Agents. <br /> <br />
+                    Griffon Bank was founded in 2024 by a group of individuals who felt financing wasn't going where it should be. With the growing trends in technological
+                    advancement, and no companies prioritizing, streamlining and adapting to the higher needs of the advancing needs and requirements of the people of today, we at Griffon
+                    Bank felt it was our priority to prioritize the needs and requirements of the individuals who decide to go with us at Griffon Bank. <br /> <br />
+                    Griffon Bank's founder Griffon Black, holds corporate policy in high regard. Griffon Black owned 25 companies prior to the formation of the Griffon
+                    Bank Group and Team. With Employees ranging from the Top Dog to the Shark King, we feel we Synergize well together. The Core Compentency of Griffon Bank
+                    is in its ability to Empower its people with Higher Fund Emphasis and Development. We take a Proactive approach to our impact on the global packet market.
+                    Griffon Bank is approaching an Organic Growth phase where more and more individuals are opting in with Griffon Bank. With more opting in to us here at Griffon
+                    Bank, the more effect we can have on Globalization and Globalisation. <br /><br />
+                    There has been a paradigm shift in management and analysis at Griffon Bank, where more Empowerment is assigned to the Every-Day-User. We are definitely Powering Forward
+                    on the road, as we keep the lead dog and let the lead dog hit the pavement first, In A Manner Of Speaking. With this Holistic approach, it is only Clear that all our
+                    investors can Bring a lot to the Table.<br /><br />
+                    At the end of the day, we at Griffon Bank welcome and encourace further growth, development, adaptation, and innovation from all our clients. And welcome any Strategic
+                    Communication from any and all of our clients and individuals, who have so invested in us at Griffon Bank. <br /><br />
+                    With Kind Regards <br />
+                    Griffon Bank Incorporated - as Part of Griffon Black Holdings (TM)                                  
+                </div>
+
+                <div id="email4KBHeading" class="hidden_Buttons">
+                   <button id="btnEmail4KBView" class="btn_Email" > <b>Delsec Team</b> - Continued Loyalty</button> <br />                  
+                </div>             
+                <div id="email4KB" class="hidden_Emails">
+                    Dear user5184828, <br /> <br />
+                    Delsec thanks you for your continued loyalty.<br /> <br />
+                    As we get closer to our goals of Global Control, we wish to point out some of our core values, and what we plan to do once we have control of the Global Packet Network:<br /><br />
+                    - Ensure Technological Advancement is not hindered. <br />
+                    - Ensure Humanities survival by spreading to the stars. <br />
+                    - Setup a Global Communication and Monitoring Network to ensure a smooth lifestyle for all. <br />
+                    - Invest heavily in A.I Advancement. <br />
+                    - Advanced Education <br /><br />                    
+                    Thank you, Delsec Team                                             
+                </div>
                                   
             </div>
 
@@ -510,11 +1694,11 @@
                 <div id="totalInvestmentSpent" class="lblItemDisplay">Total Investment: $0</div>    
                 <div id="investmentTabSelect">
                     <button id="btnShortTermInvestments" class="btn_TabSmallGreen2">Short Term</button>
-                    <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">Long Term</button>
-                    <button id="btnExpeditionInvestments" class="btn_TabSmallGreen2">Expeditions</button>
-                    <button id="btnPermanentInvestments" class="btn_TabSmallGreen2">Permanent</button>
-                    <button id="btnSpaceInvestments" class="btn_TabSmallGreen2">Space</button>
-                    <button id="btnSummaryInvestments" class="btn_TabSmallGreen2">Income Summary</button>
+                    <button id="btnLongTermInvestments" class="btn_TabSmallGreen2">HEALER CLASS REQ.</button>
+                    <button id="btnExpeditionInvestments" class="btn_TabSmallGreen2">HEALER CLASS REQ.</button>
+                    <button id="btnPermanentInvestments" class="btn_TabSmallGreen2">HEALER CLASS REQ.</button>
+                    <button id="btnSpaceInvestments" class="btn_TabSmallGreen2">SPACE PORT REQ.</button>
+                    <button id="btnSummaryInvestments" class="btn_TabSmallGreen2">HEALER CLASS REQ.</button>
                 </div>
                 <div id="shortTermInvestments" class="hidden_Divs">    
                     <h1>SHORT TERM INVESTMENTS</h1>
@@ -549,64 +1733,69 @@
                     <div id="raceInvestResult" class="investResultDiv"></div>                      
                     
                     <div id="socialMediaInvest" class="investDiv">
-                        <button id="btnInvestSocialMedia" class="investButton">Invest $5,000 In a Social Media Strategy - Default 90 sec CD</button> 
+                        <button id="btnInvestSocialMedia" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="socialMediaInvestResult" class="investResultDiv"></div>  
 
                     <div id="blueChipInvest" class="investDiv">
-                        <button id="btnInvestBlueChip" class="investButton">Invest $10,000 In a Blue Chip Company - Default 2 min CD</button> 
+                        <button id="btnInvestBlueChip" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="blueChipInvestResult" class="investResultDiv"></div>
 
                     <div id="selfImprovementInvest" class="investDiv">
-                        <button id="btnInvestSelfImprovement" class="investButton">Invest $25,000 In a Self Improvement Course - Default 3 min CD</button> 
+                        <button id="btnInvestSelfImprovement" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="selfImprovementInvestResult" class="investResultDiv"></div>
 
                     <div id="selfImprovementInvest2" class="investDiv">
-                        <button id="btnInvestSelfImprovement2" class="investButton">Invest $50,000 In a Better Self Improvement Course - Default 3 min CD</button> 
+                        <button id="btnInvestSelfImprovement2" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="selfImprovement2InvestResult" class="investResultDiv"></div>
 
                     <div id="energyInvest" class="investDiv">
-                        <button id="btnInvestEnergy" class="investButton">Invest $100,000 In Energy - Default 4 min CD</button> 
+                        <button id="btnInvestEnergy" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="energyInvestResult" class="investResultDiv"></div>                                      
 
                     <div id="superHeroInvest" class="investDiv">
-                        <button id="btnInvestSuperHero" class="investButton">Invest $2 Million In A Super Hero Builder - Default 8 min CD</button> 
+                        <button id="btnInvestSuperHero" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="superHeroInvestResult" class="investResultDiv"></div>                    
 
                     <div id="movieInvest" class="investDiv">
-                        <button id="btnInvestMovie" class="investButton">Invest $10 Million In a Movie - Default 15 min CD</button> 
+                        <button id="btnInvestMovie" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="movieInvestResult" class="investResultDiv"></div>
 
                     <div id="experimentalInvest" class="investDiv">
-                        <button id="btnInvestExperimental" class="investButton">Invest $50 Million In an Experimental Technology - Default 15 min CD</button> 
+                        <button id="btnInvestExperimental" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="experimentalInvestResult" class="investResultDiv"></div>
 
                     <div id="timeTravelInvest" class="investDiv">
-                        <button id="btnInvestTimeTravel" class="investButton">Invest $250 Million In a Time Travel Trip - Default 15 min CD</button> 
+                        <button id="btnInvestTimeTravel" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="timeTravelInvestResult" class="investResultDiv"></div>
 
                     <div id="mysteryInvest" class="investDiv">
-                        <button id="btnInvestMystery" class="investButton">Invest $1 Billion In a Mystery Fund - Default 15 min CD</button> 
+                        <button id="btnInvestMystery" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="mysteryInvestResult" class="investResultDiv"></div>
 
                     <div id="moonInvest" class="investDiv">
-                        <button id="btnInvestMoon" class="investButton">Invest $2.25 Billion In a Manned Moon Mission - Default 15 min CD</button> 
+                        <button id="btnInvestMoon" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="moonInvestResult" class="investResultDiv"></div>
 
                     <div id="marsInvest" class="investDiv">
-                        <button id="btnInvestMars" class="investButton">Invest $5 Billion In a Manned Mars Mission - Default 15 min CD</button> 
+                        <button id="btnInvestMars" class="investButton">HEALER CLASS REQUIRED</button> 
                     </div>
                     <div id="marsInvestResult" class="investResultDiv"></div>
+
+                    <div id="universalMissionInvest" class="investDiv">
+                        <button id="btnInvestUniversalMission" class="investButton">HEALER CLASS REQUIRED</button> 
+                    </div>
+                    <div id="universalMissionInvestResult" class="investResultDiv"></div>
 
                 </div>  
 
@@ -836,7 +2025,7 @@
 
                 <div id="permanentSpaceInvestments" class="hidden_Divs"> 
                     <h1>PERMANENT INVESTMENTS - SPACE</h1>
-                    <div id="spaceMap">
+                    <div id="spaceMap">                       
                         <div id="investSpaceStation" class="investButtonContainer">
                             <button id="btnInvestSpaceStation" class="selectionButton"></button> 
                             <div id="investSpaceStationPopup" class="investPopup"></div>
@@ -955,13 +2144,18 @@
                     <div id="freespaceStationSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="dysonSphereSummary" class="summaryDiv"></div>
-                    <div id="dysonSphereSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+                    <div id="dysonSphereSummaryDisplay" class="investSummaryDisplay">+ 0.00 Energy</div>
 
                     <div id="abilitiesBoostSummary" class="summaryDiv"></div>
                     <div id="abilitiesBoostSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
 
                     <div id="totalSummary" class="summaryDiv">Total:</div>
                     <div id="totalSummaryDisplay" class="investSummaryDisplay">+ $0.00</div>
+
+                    <div class="energyDisplay">
+                        <div id="energyDisplayHeading">Universal Energy Collected:</div>
+                        <div id="energyDisplayAmt">0.00% Completed</div>
+                    </div>
                 </div>
             </div>
 
@@ -2826,252 +4020,342 @@
                             WarriorSkill9-2
                         </div>
                     </div>  
-                </div>                       
+                </div> 
+                
+                
+                
+                <div class="skilltreeRowWrapper" id="resetWarriorClass">
+                    <br /><button id="btnResetWarriorSkillPoints" class="btnTabRed">RESET SKILL TREE</button>  
+                    <br /><br />*You will not get the money you have spent on the tree back.                                            
+                </div>                      
             </div>
 
             <!-- WIZARD SKILL TREE -->
             <div id="wizardAbilities" class="hidden_Divs">
                 <div class="skilltreeHeaderWrapper">
                     <h1>YOU WALK THE PATH OF THE WIZARD</h1>
-                    <div id="btnWizardHeader">
-                        <button class="wizardPassiveButton"></button>
-                        <div class="skillHeaderHoverPopup" id="wizardInfo">
-                            (PASSIVE) AUTO GENERATE: Generates a bonus 1% of packets per second automatically.
-                        </div>
-                    </div>              
+                    <div class="skillHeader" id="wizardInfo">
+                        (PASSIVE) AUTO GENERATE: Generates a bonus 1% of packets per second automatically.
+                    </div>                           
                 </div>
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel1Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 1 ABILITIES $10,000
                     </div>
                     <div class="leftSkill" id="wizardSkill1-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel1-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill1-1Popup">
-                            WizardSkill1-1
+                            DELSEC ZAPPER:<br />+5% More Income from Delsec Crawlers
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill1-3">
                         <button class="wizardActiveButton" id="btnWizardLevel1-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill1-3Popup">
-                            WizardSkill1-3
+                            GRIFFONBANK ZAPPER:<br />+5% More Income from GriffonBank Crawlers
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill1-2">
                         <button class="wizardActiveButton" id="btnWizardLevel1-2"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill1-2Popup">
-                            WizardSkill1-2
+                            RUSSIAN ZAPPER:<br />+5% More Income from RussianTech Crawlers
                         </div>
                     </div>                                   
                 </div>
+                <div class="skilltreeRowHidden" id="delsecZapperAbility">
+                    <h1>DELSEC ZAPPER</h1> +5% DELSEC CRAWLER INCOME
+                </div>
+                <div class="skilltreeRowHidden" id="russianZapperAbility">
+                    <h1>RUSSIAN ZAPPER</h1> +5% RUSSIANTECH CRAWLER INCOME
+                </div>
+                <div class="skilltreeRowHidden" id="griffonZapperAbility">
+                    <h1>GRIFFONBANK ZAPPER</h1> +5% GRIFFONBANK CRAWLER INCOME
+                </div>
 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel2Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 2 ABILITIES $100,000
                     </div>
                     <div class="leftSkill" id="wizardSkill2-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel2-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill2-1Popup">
-                            WizardSkill2-1
+                            CHAIN CONNECTION:<br />Each new IP added to the route in CONROUTE grants a further +100,000 to Total Risk Max.
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill2-3">
                         <button class="wizardActiveButton" id="btnWizardLevel2-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill2-3Popup">
-                            WizardSkill2-3
+                            CHIMERASEC GROWTH BENDER:<br />ChimeraSec Crawlers no longer increase in price after buying, also resets price to starting price.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill2-2">
                         <button class="wizardActiveButton" id="btnWizardLevel2-2"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill2-2Popup">
-                            WizardSkill2-2
+                            DELSEC CHARGER:<br />+10% More Income from Delsec Crawlers
                         </div>
                     </div>  
                 </div>
+                <div class="skilltreeRowHidden" id="chainConnectionAbility">
+                    <h1>CHAIN CONNECTION</h1> +100,000 TO TOTAL RISK FOR EVERY NEW IP ADDED TO ROUTE
+                </div>
+                <div class="skilltreeRowHidden" id="delsecChargerAbility">
+                    <h1>DELSEC CHARGER</h1> +10% DELSEC CRAWLER INCOME
+                </div>
+                <div class="skilltreeRowHidden" id="chimerasecGrowthBenderAbility">
+                    <h1>CHIMERASEC GROWTH BENDER</h1> CHIMERASEC COST GROWTH REMOVED, RESETS PRICE TO STARTING PRICE.
+                </div>
 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel3Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 3 ABILITIES $1,000,000
                     </div>
                     <div class="leftSkill" id="wizardSkill3-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel3-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill3-1Popup">
-                            WizardSkill3-1
+                            THE PEOPLES WIZARD:<br />Clearing an Account Grants a Further 100 Risk/Sec Reduction.
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill3-3">
                         <button class="wizardActiveButton" id="btnWizardLevel3-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill3-3Popup">
-                            WizardSkill3-3
+                            VIPERSEC REFLECTION FIELD:<br />Vipersec Crawlers generate 10% less risk. (Reduction not displayed on Crawlers)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill3-2">
                         <button class="wizardActiveButton" id="btnWizardLevel3-2"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill3-2Popup">
-                            WizardSkill3-2
+                            RUSSIAN POWER AMPLIFICATION:<br />Russian Crawlers Generate 10% more Income.
                         </div>
-                    </div>  
-                </div>         
+                    </div>                   
+                </div>   
+                <div class="skilltreeRowHidden" id="thePeoplesWizardAbility">
+                    <h1>THE PEOPLES WIZARD</h1> +100 RISK/SEC REDUCTION FOR EACH ACCOUNT CLEARED
+                </div>
+                <div class="skilltreeRowHidden" id="russianPowerAmplificationAbility">
+                    <h1>RUSSIAN POWER AMPLIFICATION</h1> +10% RUSSIAN TECH CRAWLER INCOME
+                </div>
+                <div class="skilltreeRowHidden" id="vipersecReflectionFieldAbility">
+                    <h1>VIPERSEC REFLECTION FIELD</h1> -10% RISK FOR VIPERSEC CRAWLERS (REDUCTION NOT DISPLAYED ON CRAWLERS)
+                </div>     
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel4Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 4 ABILITIES $10,000,000
                     </div>
                     <div class="leftSkill" id="wizardSkill4-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel4-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill4-1Popup">
-                            WizardSkill4-1
+                            NECROMANCER:<br />Worm Software is added to the FDI Computer which clears risk and freezes risk generation for 15 min. (15 Min. Cooldown after cycle)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill4-3">
                         <button class="wizardActiveButton" id="btnWizardLevel4-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill4-3Popup">
-                            WizardSkill4-3
+                            GRIFFON BANK BLOOD LUST:<br />Griffon Bank Crawlers generate +25% Income.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill4-2">
                         <button class="wizardActiveButton" id="btnWizardLevel4-2"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill4-2Popup">
-                            WizardSkill4-2
+                            IP OVERCHARGE:<br />Each IP added to the route now add a further +250,000 to Risk Max.
                         </div>
                     </div>  
-                </div>         
+                </div>        
+                <div class="skilltreeRowHidden" id="necromancerAbility">
+                    <h1>NECROMANCER</h1> WORM SOFTWARE ADDED TO FDI COMPUTER
+                </div>
+                <div class="skilltreeRowHidden" id="ipOverchargeAbility">
+                    <h1>IP OVERCHARGE</h1> +250,000 TO TOTAL RISK FOR EVERY NEW IP ADDED TO ROUTE
+                </div>
+                <div class="skilltreeRowHidden" id="griffonBloodLustAbility">
+                    <h1>GRIFFON BANK BLOOD LUST</h1> +25% GRIFFON BANK CRAWLER INCOME
+                </div>     
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel5Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 5 ABILITIES $100,000,000
                     </div>
                     <div class="leftSkill" id="wizardSkill5-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel5-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill5-1Popup">
-                            WizardSkill5-1
+                            PARTY BUFF WIZARD:<br />Clearing an Account Grants a Further 250 Risk/Sec Reduction.
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill5-3">
                         <button class="wizardActiveButton" id="btnWizardLevel5-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill5-3Popup">
-                            WizardSkill5-3
+                            VIPERSEC FADER:<br />Vipersec Crawlers generate 25% less risk. (Reduction not displayed on Crawlers)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill5-2">
                         <button class="wizardActiveButton" id="btnWizardLevel5-2"></button>
-                        <div class="wizardSkillHoverPopup" id="wizardSkill5-2Popup">
-                            WizardSkill5-2
+                        <div class="wizardSkillHoverLongPopup" id="wizardSkill5-2Popup">
+                            DELSEC MANIPULATION:<br />Delsec Crawlers gain control of 25% more packets each tick. Also adds +1 Risk Max for every 10 Delsec Packets/Sec. (Includes Bonus Packet Gen.)
                         </div>
                     </div>  
                 </div>  
-                
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowHidden" id="partyBuffWizardAbility">
+                    <h1>PARTY BUFF WIZARD</h1> +250 RISK/SEC REDUCTION FOR EACH ACCOUNT CLEARED
+                </div>
+                <div class="skilltreeRowHidden" id="delsecManipulationAbility">
+                    <h1>DELSEC MANIPULATION</h1> +25% PACKETS/TICK TO DELSEC PACKET GENERATION<br />+1 RISK MAX FOR EVERY 10 DELSEC PACKETS/SEC (INCLUDES BONUS PACKET GEN)
+                </div>
+                <div class="skilltreeRowHidden" id="vipersecFaderAbility">
+                    <h1>VIPERSEC FADER</h1> -25% RISK FOR VIPERSEC CRAWLERS (REDUCTION NOT DISPLAYED ON CRAWLERS)
+                </div>
+
+
+                <div class="skilltreeRowWrapper" id="wizardLevel6Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 6 ABILITIES $1,000,000,000
                     </div>
                     <div class="leftSkill" id="wizardSkill6-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel6-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill6-1Popup">
-                            WizardSkill6-1
+                            PACKET SUMMONER:<br />Generate a risk free $1/Tick for every 1,000 Packets/Sec over all Companies.
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill6-3">
                         <button class="wizardActiveButton" id="btnWizardLevel6-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill6-3Popup">
-                            WizardSkill6-3
+                            VIPERSEC STEALTH FIELD:<br />Vipersec Crawlers generate 30% less risk. (Reduction not displayed on Crawlers)
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill6-2">
                         <button class="wizardActiveButton" id="btnWizardLevel6-2"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill6-2Popup">
-                            WizardSkill6-2
+                            IP FIRESTORM:<br />Each IP added to the route now add a further +1,000,000 to Risk Max.
                         </div>
                     </div>  
                 </div> 
+                <div class="skilltreeRowHidden" id="packetSummonerAbility">
+                    <h1>PACKET SUMMONER</h1> +$1 FOR EVERY 1,000 PACKETS
+                </div>
+                <div class="skilltreeRowHidden" id="IPFirestormAbility">
+                    <h1>IP FIRESTORM</h1> +1,000,000 TO TOTAL RISK FOR EVERY NEW IP ADDED TO ROUTE
+                </div>
+                <div class="skilltreeRowHidden" id="vipersecStealthFieldAbility">
+                    <h1>VIPERSEC STEALTH FIELD</h1> -30% RISK FOR VIPERSEC CRAWLERS (REDUCTION NOT DISPLAYED ON CRAWLERS)
+                </div>
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel7Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 7 ABILITIES $10,000,000,000
                     </div>
                     <div class="leftSkill" id="wizardSkill7-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel7-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill7-1Popup">
-                            WizardSkill7-1
+                            CHIMERASEC MASS PRODUCTION:<br />Chimerasec Crawlers prices are halved.
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill7-3">
                         <button class="wizardActiveButton" id="btnWizardLevel7-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill7-3Popup">
-                            WizardSkill7-3
+                            VIPERSEC INVISIBILITY:<br />Vipersec Crawlers generate 35% less risk. If all Vipersec abilities are selected prior, then Vipersec Crawlers will have no risk.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill7-2">
                         <button class="wizardActiveButton" id="btnWizardLevel7-2"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill7-2Popup">
-                            WizardSkill7-2
+                            IRON CURTAIN:<br />Adds Software to FDI Computer. When active it freezes Russian Crawler Risk Gen, and increases their income by 300%.
                         </div>
                     </div>  
                 </div>    
+                <div class="skilltreeRowHidden" id="chimerasecMassProductionAbility">
+                    <h1>CHIMERASEC MASS PRODUCTION</h1> -50% COST OF CHIMERASEC CRAWLERS
+                </div>
+                <div class="skilltreeRowHidden" id="ironCurtainAbility">
+                    <h1>IRON CURTAIN</h1> IRON CURTAIN SOFTWARE ADDED TO FDI COMPUTER
+                </div>
+                <div class="skilltreeRowHidden" id="vipersecInvisibilityAbility">
+                    <h1>VIPERSEC INVISIBILITY</h1> -35% RISK FOR VIPERSEC CRAWLERS. NO RISK ON VIPERSEC CRAWLERS IF ALL PRIOR ABILITIES ARE SELECTED (REDUCTION NOT DISPLAYED ON CRAWLERS)
+                </div>
                 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel8Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 8 ABILITIES $100,000,000,000
                     </div>
                     <div class="leftSkill" id="wizardSkill8-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel8-1"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill8-1Popup">
-                            WizardSkill8-1
+                            DELSEC SUPERSTORM:<br />Delsec Crawler Income is Increased by 100%, Delsec Crawler Packet Gen is Increased by 100%.
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill8-3">
                         <button class="wizardActiveButton" id="btnWizardLevel8-3"></button>
-                        <div class="wizardSkillHoverPopup" id="wizardSkill8-3Popup">
-                            WizardSkill8-3
+                        <div class="wizardSkillHoverLongPopup" id="wizardSkill8-3Popup">
+                            VIPERSEC TIME REVERSAL:<br />Vipersec Crawlers generate 50% less risk. If all Vipersec abilities are selected prior, then Vipersec Crawlers will start reducing total risk.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill8-2">
                         <button class="wizardActiveButton" id="btnWizardLevel8-2"></button>
-                        <div class="wizardSkillHoverPopup" id="wizardSkill8-2Popup">
-                            WizardSkill8-2
+                        <div class="wizardSkillHoverLongPopup" id="wizardSkill8-2Popup">
+                            CHAOS WIZARD:<br />All Crawlers Generate +25% more Income, +50,000 Risk/Sec Reduction for each account cleared, and +5,000,000 to Total Risk for each new IP added to route.
                         </div>
                     </div>  
-                </div>  
+                </div> 
+                <div class="skilltreeRowHidden" id="delsecSuperstormAbility">
+                    <h1>DELSEC SUPERSTORM</h1> +100% DELSEC CRAWLER INCOME<br /> +100% DELSEC PACKET GENERATION
+                </div>
+                <div class="skilltreeRowHidden" id="chaosWizardAbility">
+                    <h1>CHAOS WIZARD</h1> 25% CRAWLER INCOME FROM ALL CRAWLERS, +50,000 RISK/SEC REDUCTION FOR EACH ACCOUNT CLEARED, +5,000,000 TO TOTAL RISK FOR EVERY NEW IP ADDED TO ROUTE
+                </div>
+                <div class="skilltreeRowHidden" id="vipersecTimeReversalAbility">
+                    <h1>VIPERSEC TIME REVERSAL</h1> -50% RISK FOR VIPERSEC CRAWLERS. IF RISK GOES OVER 100% REDUCTION, IT WILL START REMOVING RISK (REDUCTION NOT DISPLAYED ON CRAWLERS)
+                </div> 
 
-                <div class="skilltreeRowWrapper">
+                <div class="skilltreeRowWrapper" id="wizardLevel9Abilities">
                     <div class="skillRowHeader">
                         WIZARD LEVEL 9 ABILITIES $1,000,000,000,000
                     </div>
                     <div class="leftSkill" id="wizardSkill9-1">                     
                         <button class="wizardActiveButton" id="btnWizardLevel9-1"></button>
-                        <div class="wizardSkillHoverPopup" id="wizardSkill9-1Popup">
-                            WizardSkill9-1
+                        <div class="wizardSkillHoverLongPopup" id="wizardSkill9-1Popup">
+                            DELSEC TECH GOD:<br />Adds a Nuke Software to the FDI Computer which for 10 seconds, increases Delsec Profits and Packet Control by 12,000%. Also disrupts user computer.(30 min CD)
                         </div>
                     </div>
 
                     <div class="rightSkill" id="wizardSkill9-3">
                         <button class="wizardActiveButton" id="btnWizardLevel9-3"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill9-3Popup">
-                            WizardSkill9-3
+                            RED ARMY CONSCRIPTION:<br /> Russian Tech Crawlers cost 90% less, and Generate 200% more profits.
                         </div>
                     </div>
 
                     <div class="middleSkill" id="wizardSkill9-2">
                         <button class="wizardActiveButton" id="btnWizardLevel9-2"></button>
                         <div class="wizardSkillHoverPopup" id="wizardSkill9-2Popup">
-                            WizardSkill9-2
+                            RISK FREE WORLD:<br />Risk Generation is removed from all Crawlers.
                         </div>
                     </div>  
+                </div>
+                <div class="skilltreeRowHidden" id="delsecTechGodAbility">
+                    <h1>DELSEC TECH GOD</h1> DELSEC TECH NUKE ADDED TO FDI COMPUTER
+                </div>
+                <div class="skilltreeRowHidden" id="riskFreeWorldAbility">
+                    <h1>RISK FREE WORLD</h1> RISK GENERATION REMOVED.
+                </div>
+                <div class="skilltreeRowHidden" id="redArmyConscriptionAbility">
+                    <h1>RED ARMY CONSCRIPTION</h1> 90% COST REDUCTION ON RUSSIAN TECH CRAWLERS<br /> +200% PROFITS ON RUSSIAN TECH CRAWLERS
+                </div>
+                <div class="skilltreeRowWrapper" id="resetWizardClass">
+                    <br /><button id="btnResetWizardSkillPoints" class="btnTab">RESET SKILL TREE</button>  
+                    <br /><br />*You will not get the money you have spent on the tree back.                                            
                 </div>
             </div>
 
@@ -3318,7 +4602,14 @@
                             RogueSkill9-2
                         </div>
                     </div>  
-                </div>    
+                </div>
+                
+                
+                
+                <div class="skilltreeRowWrapper" id="resetRogueClass">
+                    <br /><button id="btnResetRogueSkillPoints" class="btnTabYellow">RESET SKILL TREE</button>  
+                    <br /><br />*You will not get the money you have spent on the tree back.                                            
+                </div>   
             </div>
 
             <!-- HEALER SKILL TREE -->
@@ -3624,7 +4915,7 @@
                     <div class="rightSkill" id="healerSkill9-3">
                         <button class="healerActiveButton" id="btnHealerLevel9-3"></button>
                         <div class="healerSkillHoverPopup" id="healerSkill9-3Popup">
-                            PRODUCTION LINE:<br />Auto-Gen and Permanent Payments tick every 30sec instead of every 60sec
+                            PRODUCTION LINE:<br />Auto-Gen and Permanent Payments tick every 30sec instead of every 60sec (Refreshes Game to update timer)
                         </div>
                     </div>
 
@@ -3643,37 +4934,130 @@
                 </div>   
                 <div class="skilltreeRowHidden" id="productionLineAbility">
                     <h1>PRODUCTION LINE</h1> AUTO-GEN AND PERMANENT PAYMENTS TICK EVERY 30SEC
-                </div>            
+                </div>
+                <div class="skilltreeRowWrapper" id="resetHealerClass">
+                    <br /><button id="btnResetHealerSkillPoints" class="btnTabGreen">RESET SKILL TREE</button>  
+                    <br /><br />*You will not get the money you have spent on the tree back.                                            
+                </div>
+                          
             </div>
 
             <!-- CONSOLE -->
             <div id ="console" class="hidden_Divs">    
                 <div id="mainGameWindow">
 		            Delsec Systems [Version 0.5.100] <br />
-		            Copyright (c) 2015 Delusive Securities Corporation. All rights reserved. <br /> <br /> 
+		            
                     Running: <br />
                     System.bat <br />
                     DelsecOpenSSLSocketOverride.dll<br />
-                    <br /><br /><br /><br />
 	            </div>	
 	            <div id="mainGameInput">                    
-		            V:/clientData/5184828><input type="text" size="30" id="txtSubmit" />
-	            </div>	
-                
+		            <div id="currentDir" class="consoleInputRow">V:/Clientdata/5184828></div><div id="currentDirInput" class="consoleInputRow"><input type="text" onpaste="return false;" onCopy="return false" onCut="return false" size="60" id="txtSubmit" /></div>
+	            </div>	                
             </div>  
             
             <!-- OPTIONS -->
             <div id="options" class="hidden_Divs">
                 <div id="optionsTop">
                     <br />
-			        Current Version: V0.75 <br /> 
-                    VISIT <a class="hyperlink" target="_blank" href="http://www.reddit.com/r/delsec">reddit.com/r/delsec</a> if you have any questions or want to keep updated on the games progress.<br />  
-                    <button id="btnResetAll">Reset All</button>
-                    <button id="btnResetClass">Reset Class</button>
+			        <h3>Current Version: V0.81</h3>
+                    VISIT <a class="hyperlink" target="_blank" href="http://www.reddit.com/r/delsec">reddit.com/r/delsec</a> if you have any questions or want to keep updated on the games progress.<br />                                                      
+                </div>
+                <div id ="optionsTabs">
+                    <button id="btnThemes" class="btnTab">Background Themes</button>  
+                    <button id="btnPatchNotes" class="btnTab">Patch Notes</button>      
+                    <button id="btnProgress" class="btnTab">Progress</button>                 
+                    <button id="btnResetTab" class="btnTab">Reset</button> 
                 </div>
                 
-                <div class="patchNotes">
+                <div id="patchNotes" class="hidden_Divs">
                     Patch notes<br /><br />
+                    V0.81 - Bug Fixes and Starting the Warrior Class
+                    <ul>
+                        <li>Code tab Changed to JQuery (WARRIOR)</li>
+                        <li>Added HTML tab - Item in there doesn't do anything atm. When you run that, it will unlock display on more divs in HTML, and those will unlock display on divs in JQuery. ETC.</li>
+                        <li>Code Strings changed to Actual JQuery. Doing this so people can see how actual code may look, and later on they can learn JQuery to run in the actual Browser console which can help
+                            bypass some 'features' other websites might have, such as disabling website if it detects Adblocker. With a simple line of JQuery/Javascript you can bypass that crap. 
+                        </li>
+                        <li>Scatter Logic bomb weakened</li>
+                        <li>dir, cd control added to console for warriors</li>
+                        <li>build, run control added to console for warriors</li>
+                        <li>font of console changed</li>
+                        <li>silly commands added</li>
+                        <li>Cut and paste disabled on console</li>
+                        <li>Computing Power added Max and Usage. Max is the total amt of CP you have, need to get it higher to run higher level code. Usage is current usage by scripts such as the AutoCoders.
+                            This adds some management to the Warrior class.
+                        </li>
+                        <li>Bugfix: Stopped Abilities tab from reappearing on enter press when it defaults to the btnIncrement button, its deprecated code was removed.</li>
+                        <li>Added Enter Functionality to Enter UserID and Grid sections, so now user can press enter to verify instead of having to click, like the other areas.</li>
+                        <li>Bugfix: WIZARD Balanced ending is now obtainable as it should be.</li>
+                        <li>Bugfix: HEALER Active investments do not refund when Agent has completed the healer class. So now they definitely will start with $0.00.</li>
+                        <li>Referring to Previous bugfix and stocks not clearing on game completion refresh, changed functionality of the "choose new class" button when beating the game, it now clears localstorage
+                            and then checks if each quadrant was earned. and sets localStorage to that. Instead of having to manually clear all vars again.
+                        </li>
+                    </ul>
+                    V0.80 - The Wizard Update
+                    <ul>
+                        <li>Added all Wizard skills</li>
+                        <li>Set Intervals are now cleared to prevent lag when running the same interval multiple times</li>
+                        <li>Grid added to Clear user account and Clear other accounts. This is so that it isn't simply a button click to clear risk or reduce risk. Player has to match co-ordinate.</li>
+                        <li>Line through targets on wanted.txt that have been cleared.</li>
+                        <li>Crawler Risk Amounts adjusted</li>
+                        <li>Necromancer Item added (Wizard Skill) - Freezes risk gen when active. Kills FDI Computer. Has an initial CD of 15 mins so if user resets browser, CD will reset to prevent abuse.</li>
+                        <li>Iron Curtain Item added (Wizard Skill) - Boosts Russian Crawler Gen and Freezes Russian Risk. Initial CD to prevent refresh abuse</li>
+                        <li>Delsec Nuke Item added (Wizard Skill) - Boosts Delsec Profits and Generation for 10 seconds (2-3 ticks) by an insane amount. Initial CD to prevent refresh abuse.</li>
+                        <li>More bonuses displayed in the bonuses section to show earnings and packet boosts that dont display on the crawlers.</li>
+                        <li>Global Free Packets changed to 187 Quadrillion - Estimated that thats a good duration for now</li>
+                        <li>Options split into tabs</li>
+                        <li>Background themes added in options section</li>
+                        <li>Disclaimer added</li>
+                        <li>Reset class removed</li>
+                        <li>All trees now have reset skill points option</li>
+                        <li>Progress section added, which displays the 4 segments grayed out, until you complete that path. Only healer and wizard obtainable at this stage.</li>
+                        <li>Fixed bug with Production Line Ability - Wasn't giving money on the 30sec tick.</li>
+                        <li>Healer end game changed to require you to gather 2.5mil Universal Energy</li>
+                        <li>Matter Conversion Expedition changed to give Universal Energy</li>
+                        <li>Dyson Spheres Generate Universal Energy, and max is now 10</li>
+                        <li>Disabled Higher end short-term investments if class isn't healer</li>
+                        <li>Universal Mission added to Short-Term investments which gathers universal energy</li>
+                        <li>Updated Emails and Added more under wizard</li>
+                        <li>Healer ending added</li>
+                        <li>7 Wizard endings added</li>
+                        <li>Other various performance tweaks</li>
+                        <li>Other minor display changes</li>
+                    </ul>
+                    <br />
+                    V0.78
+                    <ul>
+                        <li>All Companies Crawlers completed up to 16MB</li>
+                        <li>Global Domination Added: Currently set to 3.5Quintillion max (barely reachable at this time)</li>
+                        <li>Storyline for Wizard is companies are fighting for global control and player can choose a side. Depending which company they support when free packets reach 0, they will see one of 6+ endings,
+                            one for each company, one for averaging out packets over all 5 companies, and maybe other endings.
+                        </li>
+                        <li>Risk Re-evaluated, now at a more stable growth. Although end game crawler risk amounts are not viable until I add the abilities.</li>
+                        <li>Total Packets/sec broken into companies for the Global domination section, and now actually have a use.</li>
+                        <li>Crawlers price for the next step are at a very straight line upward, Might be a bit boring, can change if no one likes it.</li>
+                        <li>The first level abilities have been added, with a bonuses section in Crawlers to show the increment amount generated from each bonus ability.</li>
+                        <li>Wizard Ability tree is going to change, Delsec will specialize in packet generation, russian tech specializes in Money Gen with the help of abilities like Iron Curtain,
+                            Vipersec Specializes in Low Risk, and Risk Free from abilities, Chimerasec specialises in low cost and low cost growth crawlers, and finally GriffonBank focuses on high profits overall.
+                        </li>
+                        <li>Can't remember if I added more.</li>
+                        
+                    </ul>
+                    <br />
+                    V0.77
+                    <ul>
+                        <li>Added a whole bunch of new Delsec Crawlers (Are not viable to use at this stage until abilities are introduced for wizard)</li>
+                        <li>Healer and Wizard tabs display the class is required if they are disabled</li>
+                        <li>Risk Management - ConRoute added. A section which is basic addition, when the addition for all 4 segments is correct, it increases the max risk allowed</li>
+                        <li>When players risk gets to high, instead of removing their income and the crawlers, it now freezes the profits from crawlers until the player fixes their risk</li>
+                        <li>Risk Management - Wanted.Txt added. Generates 10 random account numbers that can be used in the files section.</li>
+                        <li>For each of the 10 current accounts in wanted txt, generates a file with a random name, address and age. The player can clear that users account to reduce their own Risk/Sec.
+                            Once player can also generate a new list when completed or if they don't like the accounts, to populate 10 new accounts to clear.
+                        </li>
+                        <li>Some other stuff I did that I haven't mentioned</li>
+                    </ul>
+                    <br />
                     V0.75 - The Healer Update
                     <ul>
                         <li>Healer is now completed, will probably still need minor adjustments and rebalancing</li>
@@ -3763,15 +5147,182 @@
                         <li>Fixed bug with 5% stock sell difference still selling at 10% stock difference.</li>
                         <li>Changed BG image to fit the 80s theme a bit better.</li>
                     </ul>
-                 </div>
-                <div class="patchNotes">
-                    What's Next:
-                    <ul>
-                        <li>WIZARD SHIT</li>
-                    </ul>
                 </div>
+                <div id="backgroundThemes" class="hidden_Divs">     
+                    <button id="btn80sDelsec" class="btnThemes">80s Delsec (Default)</button> 
+                    <button id="btnDelsecCoder" class="btnThemes">Delsec Coder</button>       
+                    <button id="btnSpaceTheme" class="btnThemes">Earth and Sun</button> 
+                    <button id="btnOmegaTheme" class="btnThemes">Omega Space</button>     
+                    <button id="btnFlowerTheme" class="btnThemes">Flower Heart</button>      
+                    <button id="btnFireworksTheme" class="btnThemes">Purple Star</button>  
+                    <button id="btnFireworks2Theme" class="btnThemes">Red Star</button>   
+                    <button id="btnMilkyTheme" class="btnThemes">Milky Way</button>    
+                    <button id="btnBlackStripesTheme" class="btnThemes">Black Stripes</button>  
+                </div>
+
+                <div id="gameProgress" class="hidden_Divs">
+                    <div id="completedContainer">
+                        <div id="warriorCompletedDisplay" class="classCompleted">
+                            
+                        </div>
+                        <div id="wizardCompletedDisplay" class="classCompleted">
+                            
+                        </div>
+                        <div id="healerCompletedDisplay" class="classCompleted">
+                            
+                        </div>
+                        <div id="rogueCompletedDisplay" class="classCompleted">
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="resetGame" class="hidden_Divs">
+                    <h1>WARNING</h1>
+                    Resetting the game will remove all progress, and will clear all localStorage to starting values. Be warned. This includes the segments that have already been earned. <br />
+                    <button id="btnResetAll" class="btn_StyleGrayNoBg">Reset All</button>  
+                </div>
+                
             </div>              
         </div>
+
+        <div id="healerVictorySplash" class="hidden_Divs">
+            <img id="healerVictoryLogo" src="Resources/Img/healerCompleted.png" alt="healerCompleted"/>
+            <h1>Healer Completion - Universal Energy</h1>
+            As you slowly gained more and more control of the Planet and Solar System, you were able to start harnessing the power of Universal Energy. Once you had gathered enough Universal
+            Energy, you were able to create the Healer Segment of the Delusian Artifact. One of Four segments to complete the puzzle of the artifact.<br /><br />
+            You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Healer! <br /><br />
+            If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+            have earned. <br /><br />
+            <button id="btnNewClassHealer" class="btnNewClassWizard">Choose New Class</button>
+        </div>
+        <div id="wizardVictorySplash" class="hidden_Divs">
+            <div id="delsecVictorySplash" class="hidden_Divs">
+                <img class="wizardVictoryLogo" src="Resources/Img/wizardCompleted.png" alt="wizardCompleted"/>
+                <h1>Wizard Completion - Delsec Control</h1> <img src="Resources/Img/wizard/delsec1.jpg" alt="delsec"/><br />
+                As Delsec gained control of the Global Packet Network, they slowly forced the other companies out of the picture. With strong interests in technological advancements, Delsec begun operations
+                to overhaul the planet with a global network of assistance and monitoring tools for all citizens. Whenever an individual would have medical issues, or need assistance, an implanted chip
+                would go off, alerting the appropriate facilities. <br /> <br />
+                Over time, the world became much like an Utopian dream. Clean streets, Non-existant crime, Prompt medical assistance, the standards of human life on the high. The downside was Delsec knew
+                everything about each citizen. Where they went, what they ate and drank, who they contacted, everything. <br /><br />
+                You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Wizard!<br /><br />
+                If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+                have earned. <br /><br />
+                <button class="btnNewClassWizard">Choose New Class</button>
+            </div>
+            <div id="russianVictorySplash" class="hidden_Divs">
+                <img class="wizardVictoryLogo" src="Resources/Img/wizardCompleted.png" alt="wizardCompleted"/>
+                <h1>Wizard Completion - Russian Tech Control</h1> <img src="Resources/Img/wizard/russian1.jpg" alt="russian"/><br />
+                As Russian Tech gained more power and control over the Global Packet Network, they took it upon themselves to shun Delsec completely from the face of the earth. They believed for one
+                reason or the other, that Delsec was responsible for the Global War that struck the planet prior to the 5 companies taking control of most countries. They believed it was Mr. Delusive's plan
+                for Global Control. With Delsec out of the picture, the Russian Tech took charge in control over the whole planet. Little resistance was found from Vipersec, Chimerasec and Griffon Bank. <br /><br />
+                Now with full control of the planet, Russian Tech enforced stricter policies on its citizens, ensuring everyone played their part in the future of the planet. Every individual was assigned
+                work, and given purpose. To better Humanity under the rule of Russian Tech. <br /><br />
+                Unemployment was non-existant, Production was through the roof, and promptly led to humanity reaching out to space. The downside was we all lost a bit of individuality, being told what to do
+                every day. <br /><br />
+                You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Wizard!<br /><br />
+                If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+                have earned. <br /><br />
+                <button class="btnNewClassWizard">Choose New Class</button>
+            </div>
+            <div id="vipersecVictorySplash" class="hidden_Divs">
+                <img class="wizardVictoryLogo" src="Resources/Img/wizardCompleted.png" alt="wizardCompleted"/>
+                <h1>Wizard Completion - Vipersec Control</h1> <img src="Resources/Img/wizard/viper1.jpg" alt="vipersec"/><br />
+                Vipersec did well to remain low key, while the other 4 Companies battled it out for Control over the Global Packet Network. Slowly amassing their own control, Vipersec eventually controled
+                the majority of the Global Packet Network. Once in power, they strengthened all communications with Vipersec Encryption, ensuring all citizens were protected digitally. <br /> <br />
+                Over time the world segmented into their own Countries again, and then further segmented into States. This was because Vipersec did not take control of the planet when they gained majority.
+                Instead they remained hidden. This allowed for the planet to take its natural course and segment. It seems it was human nature to form into smaller clusters instead of a Global Village. 
+                Although the world was so segmented, none would be at war. They each stayed seperate and only communicated on important matters. It seemed this was the closest to the way the world was before
+                the Global War. <br /><br />
+                You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Wizard!<br /><br />
+                If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+                have earned. <br /><br />
+                <button class="btnNewClassWizard">Choose New Class</button>
+            </div>
+            <div id="chimerasecVictorySplash" class="hidden_Divs">
+                <img class="wizardVictoryLogo" src="Resources/Img/wizardCompleted.png" alt="wizardCompleted"/>
+                <h1>Wizard Completion - Chimerasec Control</h1> <img src="Resources/Img/wizard/chimera1.jpg" alt="chimera"/><br />
+                Chimerasec gained control of the Global Packet Network through the power of the people. With the everyday citizen opting for Chimerasec, they grew from a small company to a global giant.
+                Chimerasec's control allowed for everyone to have access to clean water, food, and basic technology. This was through creating cheap and easy to use technology which could be spread around
+                the world. <br /><br />
+                With Chimerasec in control the world saw a better overall treatment and quality of life for all people. With everyone having access to the basics of survival, allowed for more to pursue their
+                goals and dreams. The world saw a Golden Age of Growth through Creativity. Happiness levels increased overall, and the world slowly came together to help eachother. <br /><br />
+                You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Wizard!<br /><br />
+                If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+                have earned. <br /><br />
+                <button class="btnNewClassWizard">Choose New Class</button>
+            </div>
+            <div id="griffonbankVictorySplash" class="hidden_Divs">
+                <img class="wizardVictoryLogo" src="Resources/Img/wizardCompleted.png" alt="wizardCompleted"/>
+                <h1>Wizard Completion - Griffon Bank Control</h1> <img src="Resources/Img/wizard/griffon1.jpg" alt="griffon"/><br />
+                Griffon Bank, with its elitist and money driven owners, gained control of the majority of the Global Packet Network through manipulation of corporate policy, and through its sheer amount of
+                profit. The select few that Griffon Bank held under its arms lived lives of luxury, with the world at their feet. They could do whatever they wanted, go anywhere they wanted, and be anything
+                they wanted. <br /><br />
+                With Griffon Bank in control, the world split into 2. A very small elite class of individuals, and the rest of the world who were not as fortunate. Forced to live in slums and fight for survival,
+                their lives easily comparable to rats. Those lucky enough of the lower class became slaves for the elite, building the vast wonders of the elite world, doing all their bidding. Eventually the low
+                class tried to rebel against the elite. But even with their sheer numbers, the class gap was so large, they could barely make an impact. <br /><br />
+                Over time, the elite ordered the eradication of those they could not enslave. After this massacre in human history was buried, the elite saw to the prosperity of the planet, spreading to the stars
+                through slave labour. <br /><br />
+                You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Wizard!<br /><br />
+                If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+                have earned. <br /><br />
+                <button class="btnNewClassWizard">Choose New Class</button>
+            </div>
+            <div id="noControlVictorySplash" class="hidden_Divs">
+                <img class="wizardVictoryLogo" src="Resources/Img/wizardCompleted.png" alt="wizardCompleted"/>
+                <h1>Wizard Completion - No Company Control</h1> <img src="Resources/Img/wizard/multiBase.jpg" alt="griffon"/><br />
+                When the time came, and there were no more Free Packets to be Controled in the Global Packet Network, no company gained enough influence over the others to take complete control. The battle for
+                Global Control spread into the streets. Forcing almost all people to choose a side. <br /><br />
+                The war continued for decades, taking with it 99.99% of the population. The remainder, those who refused to choose a side, stayed hidden. These hidden minority built their own cities deep under
+                ground, where they remained, even after the war had passed. <br /><br />
+                These individuals built a prosperous future for what was left of humanity in these underground cities. The future of humanity lied with them now. Whether they chose to remain underground, or
+                eventually decided to come back to the surface is unknown.<br /><br />
+                You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Wizard!<br /><br />
+                If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+                have earned. <br /><br />
+                <button class="btnNewClassWizard">Choose New Class</button>
+            </div>
+            <div id="rareVictorySplash" class="hidden_Divs">
+                <img class="wizardVictoryLogo" src="Resources/Img/wizardCompleted.png" alt="wizardCompleted"/>
+                <h1>Wizard Completion - Rare</h1> <img src="Resources/Img/wizard/multiBase.jpg" alt="griffon"/><br />
+                Through your careful manipulation of Company Packet Control, you have managed to make 2 or more companies arrive at equal shares. I really couldn't be bothered coding in every single condition
+                for that so, for that you get to enjoy this rare Victory Condition. To have arrived here, you needed to have 2 or more companies have an equal percentage of control over 30%. <br /><br />
+                Due to these select few companies gaining equal control of the majority, it forced a collaboration from these companies, and eventually the other remaining companies. Each company was granted
+                A small portion of their end goal for the planet.<br />Delsec - Ensuring technological growth<br />Russian Tech - Ensuring everyone contributed something<br />Vipersec - Ensuring Privacy for all<br />
+                Chimerasec - Ensuring the basics to all people<br />Griffon Bank - Ensuring Prosperity and riches (The other companies ensuring this got distributed to all)<br /><br />
+                As time went on, humanity saw great growth, and spread to the stars. <br /><br />
+
+                You can now move on to one of the other classes, or rest easy knowing you have completed the game as a Wizard!<br /><br />
+                If you wish to continue the game and try for the next segment, click the 'Choose New Class' button below. This will bring you back to the beginning, while keeping the segments you
+                have earned. <br /><br />
+                <button class="btnNewClassWizard">Choose New Class</button>
+            </div>
+        </div>
+        <div id="rogueVictorySplash" class="hidden_Divs">
+
+        </div>
+        <div id="warriorVictorySplash" class="hidden_Divs">
+
+        </div>
+
+        <div id="delsecTechGodCenter" class="hidden_Divs">
+            Invalid system disk<br />
+            Replace the disk, and then press any key<br /><br />
+            Reboot and Select proper Boot device<br />
+            or Insert Boot Media in selected Boot device and press a key<br /><br />
+            <div id="delsecTechGodCountdown">. . . 10</div>
+        </div>
+    </div>
+    <div id ="disclaimerContainer">
+        <div id="disclaimer">
+            Coding: Luke Parisi <br />
+            Images: &copy; 2015-2016 Luke Parisi <br /> <br /> 
+            Loading Screen: <a href="http://cssload.net/">http://cssload.net/</a> <br />
+            Graphs: <a href="http://www.flotcharts.org/">JQuery Flot</a>
+            <br /><br />
+            Names, characters, businesses, places, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.
+        </div>        
     </div>
     </form>
 
@@ -3783,26 +5334,31 @@
     <script src="Resources/Scripts/Global/EmailGlobal.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Global/InvestmentGlobal.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Global/AbilitiesGlobal.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Global/RiskGlobal.js" type="text/javascript"></script>  
+    <script src="Resources/Scripts/Global/CodingGlobal.js" type="text/javascript"></script> 
 
     <script src="Resources/Scripts/Preload/GamePreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/EmailPreload.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Preload/StockPreload.js" type="text/javascript"></script>    
+    <script src="Resources/Scripts/Preload/StockPreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/WizardPreload.js" type="text/javascript"></script>    
     <script src="Resources/Scripts/Preload/CrawlerPreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/InvestmentPreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/WarriorPreload.js" type="text/javascript"></script> 
     <script src="Resources/Scripts/Preload/HealerPreload.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/RoguePreload.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Preload/WizardPreload.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Preload/RiskPreload.js" type="text/javascript"></script>
     
-
     <script src="Resources/Scripts/Emails/EmailButtons.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Generate/generators.js" type="text/javascript"></script>
     <script src="Resources/Scripts/buttonclicks.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/RiskManagement.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/StockTabButtons.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/Automation/DelsecCrawlers.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Automation/RussianCrawlers.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Automation/VipersecCrawlers.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Automation/ChimerasecCrawlers.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Automation/GriffonBankCrawlers.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Automation/BonusesCrawlers.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Automation/RiskManagement.js" type="text/javascript"></script>
 
     <script src="Resources/Scripts/Tickers/CrawlerTicker.js" type="text/javascript"></script>     
@@ -3810,6 +5366,7 @@
     <script src="Resources/Scripts/Tickers/EmailTicker.js" type="text/javascript"></script>  
     <script src="Resources/Scripts/Tickers/StockTicker.js" type="text/javascript"></script>  
     <script src="Resources/Scripts/Tickers/InvestmentTicker.js" type="text/javascript"></script>  
+    <script src="Resources/Scripts/Tickers/RiskTicker.js" type="text/javascript"></script>  
     
     <script src="Resources/Scripts/Stocks/Delsec.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Stocks/Entaq.js" type="text/javascript"></script>
@@ -3861,13 +5418,27 @@
 
     <script src="Resources/Scripts/Console/Console.js" type="text/javascript"></script>
 
+    <script src="Resources/Scripts/Coding/WarriorCoding.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Coding/WarriorItems.js" type="text/javascript"></script>
+    <script src="Resources/Scripts/Coding/ComputingPower.js" type="text/javascript"></script>
+
     <script src="Resources/Scripts/Classes/HealerAbilities.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Classes/RogueAbilities.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Classes/WarriorAbilities.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Classes/WarriorCoding.js" type="text/javascript"></script>
-    <script src="Resources/Scripts/Classes/WarriorItems.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Classes/WizardAbilities.js" type="text/javascript"></script>
 
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-83616585-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     
 </body>
 </html>

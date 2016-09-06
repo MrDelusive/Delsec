@@ -281,7 +281,7 @@
     //Supermarket
     $('#btnInvestSupermarket').prop('disabled', false);
     $('#btnInvestSupermarket').click(function () {
-        if (money >= 172000000 && investCarDealer < investCarDealerMax) {
+        if (money >= 172000000 && investSupermarket < investSupermarketMax) {
             money -= 172000000;
             totalInvestment += 172000000;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
@@ -367,8 +367,9 @@
             localStorage.setItem("investSpacePort", investSpacePort);
 
             $('#btnSpaceInvestments').prop('disabled', false);
+            $('#btnSpaceInvestments').html("Space");
             $('#spacePortSummary').show(1);
-            $('#spacePortSummary').html('x' + investSpacePort + ' Space Port');
+            $('#spacePortSummary').html('x' + investSpacePort + ' Space Port(s)');
             $('#spacePortSummaryDisplay').show(1);
             $('#investSpacePortPopup').html("Buy Space Port: $1,500,000,000 <br />Owned: " + investSpacePort + "/" + investSpacePortMax);
         }

@@ -57,6 +57,26 @@
     if (localStorage.getItem("emailRogueDisplayed") === null)
         localStorage.setItem("emailRogueDisplayed", emailRogueDisplayed);
 
+    if (localStorage.getItem("email4KBViewed") === null)
+        localStorage.setItem("email4KBViewed", email4KBViewed);
+    if (localStorage.getItem("email4KBDisplayed") === null)
+        localStorage.setItem("email4KBDisplayed", email4KBDisplayed);
+
+    if (localStorage.getItem("emailVipersecStartViewed") === null)
+        localStorage.setItem("emailVipersecStartViewed", emailVipersecStartViewed);
+    if (localStorage.getItem("emailVipersecStartDisplayed") === null)
+        localStorage.setItem("emailVipersecStartDisplayed", emailVipersecStartDisplayed);
+
+    if (localStorage.getItem("emailChimerasecStartViewed") === null)
+        localStorage.setItem("emailChimerasecStartViewed", emailChimerasecStartViewed);
+    if (localStorage.getItem("emailChimerasecStartDisplayed") === null)
+        localStorage.setItem("emailChimerasecStartDisplayed", emailChimerasecStartDisplayed);
+
+    if (localStorage.getItem("emailGriffonbankStartViewed") === null)
+        localStorage.setItem("emailGriffonbankStartViewed", emailGriffonbankStartViewed);
+    if (localStorage.getItem("emailGriffonbankStartDisplayed") === null)
+        localStorage.setItem("emailGriffonbankStartDisplayed", emailGriffonbankStartDisplayed);
+
     if (typeof (Storage) !== "undefined") {
         // must do a string check because localStorage stores strings and not bools STUPID SHIT.
         email1Viewed = localStorage.getItem("email1Viewed");
@@ -91,6 +111,21 @@
 
         emailRogueViewed = localStorage.getItem("emailRogueViewed");
         emailRogueDisplayed = localStorage.getItem("emailRogueDisplayed");
+
+        email4KBViewed = localStorage.getItem("email4KBViewed");
+        email4KBDisplayed = localStorage.getItem("email4KBDisplayed");
+
+        email4KBViewed = localStorage.getItem("email4KBViewed");
+        email4KBDisplayed = localStorage.getItem("email4KBDisplayed");
+
+        emailVipersecStartViewed = localStorage.getItem("emailVipersecStartViewed");
+        emailVipersecStartDisplayed = localStorage.getItem("emailVipersecStartDisplayed");
+
+        emailChimerasecStartViewed = localStorage.getItem("emailChimerasecStartViewed");
+        emailChimerasecStartDisplayed = localStorage.getItem("emailChimerasecStartDisplayed");
+
+        emailGriffonbankStartViewed = localStorage.getItem("emailGriffonbankStartViewed");
+        emailGriffonbankStartDisplayed = localStorage.getItem("emailGriffonbankStartDisplayed");
 
         numUnreadEmails = parseInt(localStorage.getItem("numUnreadEmails"));
         $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
@@ -143,6 +178,34 @@
     if (email4ByteViewed == "true") {
         $('#btnEmail4ByteView').html("Delsec Team - The Byte Crawlers (Viewed)");
         $('#btnEmail4ByteView').css("background", "#CCC");
+    }
+
+    if (email4KBDisplayed == "true")
+        $("#email4KBHeading").show();
+    if (email4KBViewed == "true") {
+        $('#btnEmail4KBView').html("Delsec Team - Continued Loyalty (Viewed)");
+        $('#btnEmail4KBView').css("background", "#CCC");
+    }
+
+    if (emailVipersecStartDisplayed == "true")
+        $("#emailVipersecStartHeading").show();
+    if (emailVipersecStartViewed == "true") {
+        $('#btnEmailVipersecStartView').html("Vipersec - 86542345 (Viewed)");
+        $('#btnEmailVipersecStartView').css("background", "#CCC");
+    }
+
+    if (emailChimerasecStartDisplayed == "true")
+        $("#emailChimerasecStartHeading").show();
+    if (emailChimerasecStartViewed == "true") {
+        $('#btnEmailChimerasecStartView').html("Chimerasec - Yo (Viewed)");
+        $('#btnEmailChimerasecStartView').css("background", "#CCC");
+    }
+
+    if (emailGriffonbankStartDisplayed == "true")
+        $("#emailGriffonbankStartHeading").show();
+    if (emailGriffonbankStartViewed == "true") {
+        $('#btnEmailGriffonbankStartView').html("Griffon Bank - Welcome to Griffon Bank (Viewed)");
+        $('#btnEmailGriffonbankStartView').css("background", "#CCC");
     }
 
     // For older version

@@ -363,4 +363,25 @@ to      {   background: url('../Img/generateGreen.png'); background-position: 0p
 	background: rgba(0, 22, 164, 0.4);
 }
 
+.btnNewClassWizard {
+    background: #3c3c3c;
+    border: 1px solid black;
+	display:inline-block;
+    cursor: pointer;
+	color: white;
+    font-family: Consolas,monaco,monospace;
+	font-size:13px;
+	height:50px;
+    width: 550px;
+    margin: 10px;
+    margin-top: 20px;
+	text-decoration:none;
+	text-align:center;
+}
+.btnNewClassWizard:hover {
+	background: #4d4d4d;
+}
+
+
+
 

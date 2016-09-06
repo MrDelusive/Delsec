@@ -1,5 +1,33 @@
 $(document).ready(function () {
     // the default one
+
+    $('#btnIncrement').keydown(function (e) {
+        if (e.which == 13) {
+            $('#btnIncrement').prop('disabled', true);
+            $('#btnWarriorIncrement').prop('disabled', true);
+            $('#btnRogueIncrement').prop('disabled', true);
+            return false;
+        }
+    });
+
+    $('#btnWarriorIncrement').keydown(function (e) {
+        if (e.which == 13) {
+            $('#btnIncrement').prop('disabled', true);
+            $('#btnWarriorIncrement').prop('disabled', true);
+            $('#btnRogueIncrement').prop('disabled', true);
+            return false;
+        }
+    });
+
+    $('#btnRogueIncrement').keydown(function (e) {
+        if (e.which == 13) {
+            $('#btnIncrement').prop('disabled', true);
+            $('#btnWarriorIncrement').prop('disabled', true);
+            $('#btnRogueIncrement').prop('disabled', true);
+            return false;
+        }
+    });
+
     $('#btnIncrement').click(function () {        
         increment = Math.round(100 * Math.random() / 12.5) / 100;
         money += increment;
@@ -9,14 +37,6 @@ $(document).ready(function () {
         $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         $('#manualIncrementAmtDisplay').html('Last Packet of Data retrieved: + $' + increment.toFixed(2));
 
-        // the initial fade in of the shop
-        if (money >= 1) {
-            $("#btnShop").fadeIn(500);
-            $("#btnEmails").fadeIn(500);
-            $("#btnInvestments").fadeIn(500);
-            $("#btnStockMarket").fadeIn(500);
-            $("#btnAbilities").fadeIn(500);
-        }
         return false;
     });
 
@@ -24,7 +44,7 @@ $(document).ready(function () {
     $('#btnWarriorIncrement').click(function () {
         warriorClicks++;
         localStorage.setItem("warriorClicks", warriorClicks);
-        $('#totalWarriorClicks').html('Total Warrior Generate Clicks: ' + warriorClicks);
+        $('#totalWarriorClicks').html('Total Warrior Generate Clicks: ' + warriorClicks.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
         increment = Math.round(100 * (Math.random() / 3.125)) / 100
             + efficiencyCode * 0.24
             + efficiency2Code * 0.48

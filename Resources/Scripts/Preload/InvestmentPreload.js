@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     if (localStorage.getItem("wikiActive") === null)
         localStorage.setItem("wikiActive", wikiActive);
     if (localStorage.getItem("twitchActive") === null)
@@ -141,6 +140,9 @@
     if (localStorage.getItem("investDysonSphere") === null)
         localStorage.setItem("investDysonSphere", investDysonSphere);
 
+    if (localStorage.getItem("universalEnergyGenerated") === null)
+        localStorage.setItem("universalEnergyGenerated", universalEnergyGenerated);
+
     if (typeof (Storage) !== "undefined") {
 
         wikiActive = localStorage.getItem("wikiActive");
@@ -161,6 +163,7 @@
         mysteryActive = localStorage.getItem("mysteryActive");
         moonActive = localStorage.getItem("moonActive");
         marsActive = localStorage.getItem("marsActive");
+        universalMissionActive = localStorage.getItem("universalMissionActive");
 
         goldbotActive = localStorage.getItem("goldbotActive");
         gameActive = localStorage.getItem("gameActive");
@@ -419,6 +422,19 @@
             localStorage.setItem("marsActive", marsActive);
             money += 5000000000;
             totalInvestment -= 5000000000;
+            $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            localStorage.setItem("totalInvestment", totalInvestment);
+            localStorage.setItem("money", money);
+            $('#lblMoneyDisplay').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $('#lblMoneyDisplayScroll').html('$' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+            $(document).prop('title', 'Delsec Account: $' + money.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+        }
+
+        if (universalMissionActive == "true") {
+            universalMissionActive = "false";
+            localStorage.setItem("universalMissionActive", universalMissionActive);
+            money += 25000000000;
+            totalInvestment -= 25000000000;
             $('#totalInvestmentSpent').html('Money Spent on Investments: $' + totalInvestment.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
             localStorage.setItem("totalInvestment", totalInvestment);
             localStorage.setItem("money", money);
@@ -806,6 +822,7 @@
             investAsteroidColony = localStorage.getItem("investAsteroidColony");
             investFreespaceStation = localStorage.getItem("investFreespaceStation");
             investDysonSphere = localStorage.getItem("investDysonSphere");
+            universalEnergyGenerated = parseFloat(localStorage.getItem("universalEnergyGenerated"));
 
             if (investRentalBike > 0) {
                 $('#rentalBikeSummary').show(1);
@@ -896,6 +913,7 @@
                 $('#spacePortSummary').html('x' + investSpacePort + ' Space Port');
                 $('#spacePortSummaryDisplay').show(1);
                 $('#btnSpaceInvestments').prop('disabled', false);
+                $('#btnSpaceInvestments').html("Space");
             }
 
             if (investSpaceStation > 0) {
@@ -942,7 +960,7 @@
 
             if (investDysonSphere> 0) {
                 $('#dysonSphereSummary').show(1);
-                $('#dysonSphereSummary').html('x' + investDysonSphere + ' Dyson Sphere');
+                $('#dysonSphereSummary').html('x' + investDysonSphere + ' Dyson Sphere(s)');
                 $('#dysonSphereSummaryDisplay').show(1);
             }
 
@@ -971,6 +989,8 @@
         $('#investAsteroidColonyPopup').html("Buy Asteroid Colony: $32,000,000,000 <br />Owned: " + investAsteroidColony + "/" + investAsteroidColonyMax);
         $('#investFreespaceStationPopup').html("Buy Freespace Station: $64,000,000,000 <br />Owned: " + investFreespaceStation + "/" + investFreespaceStationMax);
         $('#investDysonSpherePopup').html("Buy Dyson Sphere: $1,000,000,000,000 <br />Owned: " + investDysonSphere + "/" + investDysonSphereMax);
+
+        $('#energyDisplayAmt').html((universalEnergyGenerated / ENERGYMAX * 100).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + "% Completed");
     }
     else
         alert("no support on your browser");

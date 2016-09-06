@@ -28,7 +28,9 @@
 .investButton:hover {
 	background: url('../Img/stockBgGreen2.png');
 }
-
+.investButton:disabled {
+	background: #343434;
+}
 
 #totalInvestmentSpent {
     width: 970px;
@@ -294,7 +296,7 @@
     border-radius: 10px;
     padding-top:10px;
     width: 150px;
-    height: 50px;
+    height: 60px;
     font-size: 13px;
     background: #0a6309;
     line-height: 15px;
@@ -313,6 +315,29 @@
     background: #0a6309;
     line-height: 15px;
     text-align: center;
+}
+
+.energyDisplay {
+    width: 600px;
+    height: 54px;
+    float: left;
+    background: rgba(0,0,0,0.5);
+    margin-left: 100px;
+    margin-top: 10px;
+    line-height:54px;
+    font-size:18px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+#energyDisplayHeading {
+    width:350px;
+    float: left;
+}
+#energyDisplayAmt {
+    width:250px;
+    font-size:14px;
+    float: left;
 }
 
 #investRental:hover > #investRentalPopup {

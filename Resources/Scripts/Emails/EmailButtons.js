@@ -163,4 +163,60 @@ $(document).ready(function () {
         }
         return false;
     });
+
+    $('#btnEmail4KBView').click(function () {
+        $("#email4KB").toggle();
+        if (email4KBViewed == "false") {
+            numUnreadEmails--;
+            email4KBViewed = "true";
+            localStorage.setItem("email4KBViewed", email4KBViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmail4KBView').html("Delsec Team - Continued Loyalty (Viewed)");
+            $('#btnEmail4KBView').css("background", "#CCC");
+        }
+        return false;
+    });
+
+    $('#btnEmailVipersecStartView').click(function () {
+        $("#emailVipersecStart").toggle();
+        if (emailVipersecStartViewed == "false") {
+            numUnreadEmails--;
+            emailVipersecStartViewed = "true";
+            localStorage.setItem("emailVipersecStartViewed", emailVipersecStartViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailVipersecStartView').html("Vipersec - 86542345 (Viewed)");
+            $('#btnEmailVipersecStartView').css("background", "#CCC");
+        }
+        return false;
+    });
+
+    $('#btnEmailChimerasecStartView').click(function () {
+        $("#emailChimerasecStart").toggle();
+        if (emailChimerasecStartViewed == "false") {
+            numUnreadEmails--;
+            emailChimerasecStartViewed = "true";
+            localStorage.setItem("emailChimerasecStartViewed", emailChimerasecStartViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailChimerasecStartView').html("Chimerasec - Yo (Viewed)");
+            $('#btnEmailChimerasecStartView').css("background", "#CCC");
+        }
+        return false;
+    });
+
+    $('#btnEmailGriffonbankStartView').click(function () {
+        $("#emailGriffonbankStart").toggle();
+        if (emailGriffonbankStartViewed == "false") {
+            numUnreadEmails--;
+            emailGriffonbankStartViewed = "true";
+            localStorage.setItem("emailGriffonbankStartViewed", emailGriffonbankStartViewed);
+            localStorage.setItem("numUnreadEmails", numUnreadEmails);
+            $("#btnEmails").html("Emails (" + numUnreadEmails + ") New");
+            $('#btnEmailGriffonbankStartView').html("Griffon Bank - Welcome to Griffon Bank (Viewed)");
+            $('#btnEmailGriffonbankStartView').css("background", "#CCC");
+        }
+        return false;
+    });
 });

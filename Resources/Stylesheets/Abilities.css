@@ -13,7 +13,7 @@
 }
 
 .skilltreeHeaderWrapper {
-    padding-bottom:20px;   
+    padding-bottom:10px;   
     width: 800px;
     margin: 0 auto;
     margin-bottom:10px;
@@ -22,7 +22,7 @@
 }
 
 .skilltreeRowWrapper {
-    padding-bottom:20px;   
+    padding-bottom:10px;   
     width: 800px;
     height: 100px;
     margin: 0 auto;
@@ -32,7 +32,7 @@
 }
 
 .skilltreeRowHidden {
-    padding-bottom:20px;   
+    padding-bottom:10px;   
     width: 800px;
     height: 100px;
     margin: 0 auto;
