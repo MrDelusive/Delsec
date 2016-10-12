@@ -127,14 +127,7 @@ $("#console").keydown(function (e) {
                     " KB / " + currentComputingPower.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + " KB");
                     autoEfficiency1CompleteCycles = Math.floor(autoEfficiency1Code / efficiencyCodeArray.length);
                     autoEfficiency1Remainder = autoEfficiency1Code % efficiencyCodeArray.length;
-                    if (autoEfficiency1Remainder > 0) {
-                        clearInterval(autoEfficiency1Interval); // clear previous interval
-                        autoEfficiency1Interval = setInterval(function () {
-                            for (var x = 0; x < autoEfficiency1Remainder; x++) {
-                                $('#btnWriteEfficiencyCode').click();
-                            }
-                        }, 1000);
-                    }
+
                     if (autoEfficiency1CompleteCycles > 0) {
                         clearInterval(autoEfficiency1CompleteInterval); // clear previous interval
                         autoEfficiency1CompleteInterval = setInterval(function () {
@@ -144,9 +137,57 @@ $("#console").keydown(function (e) {
 
                         }, 1000);
                     }
+                    if (autoEfficiency1Remainder > 0) {
+                        clearInterval(autoEfficiency1Interval); // clear previous interval
+                        autoEfficiency1Interval = setInterval(function () {
+                            for (var x = 0; x < autoEfficiency1Remainder; x++) {
+                                $('#btnWriteEfficiencyCode').click();
+                            }
+                        }, 1000);
+                    }
                     $('#currentDir').show();
                     $('#currentDirInput').show();
-                    $('#mainGameWindow').append("Autogenerate_Efficiency1.js has been built and added.<br />");
+                    $('#mainGameWindow').append("Autogenerate_Efficiency_1.js has been built and added.<br />");
+                }, buildTimer * 1000);
+            }
+
+            else if ((inputArray[1].toLowerCase() == "autogenerate_efficiency_2.js" || inputArray[1].toLowerCase() == "autogenerate_efficiency_2") && currentComputingPower >= 250 && (currentComputingPowerUsage + 25) <= currentComputingPower) {
+                $('#mainGameWindow').append("Building Autogenerate_Efficiency_2.js Please Wait...<br />");
+                $('#currentDir').hide();
+                $('#currentDirInput').hide();
+                window.setTimeout(function () {
+                    autoEfficiency2Code += 1;
+                    $('#warriorCodeAutoEfficiency2Result').html("Efficiency_2.js Auto Coders Running: " + autoEfficiency2Code + "<br />Using a total of " + (autoEfficiency2Code * 25) + "KB Computing Power.");
+                    currentComputingPowerUsage += 25;
+                    localStorage.setItem("currentComputingPowerUsage", currentComputingPowerUsage);
+                    localStorage.setItem("autoEfficiency2Code", autoEfficiency2Code);
+                    $('#currentComputerPower').html('Current Computing Power Usage/Capacity: ' + currentComputingPowerUsage.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() +
+                            " KB / " + currentComputingPower.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + " KB");
+
+                    autoEfficiency2CompleteCycles = Math.floor(autoEfficiency2Code / efficiency2CodeArray.length);
+                    autoEfficiency2Remainder = autoEfficiency2Code % efficiency2CodeArray.length;
+                    
+                    if (autoEfficiency2Remainder > 0) {
+                        clearInterval(autoEfficiency2Interval); // clear previous interval
+                        autoEfficiency2Interval = setInterval(function () {
+                            for (var x = 0; x < autoEfficiency2Remainder; x++) {
+                                $('#btnWriteEfficiency2Code').click();
+                            }
+                        }, 1000);
+                    }
+                    if (autoEfficiency2CompleteCycles > 0) {
+                        clearInterval(autoEfficiency2CompleteInterval); // clear previous interval
+                        autoEfficiency2CompleteInterval = setInterval(function () {
+                            efficiency2Code += autoEfficiency2CompleteCycles;
+                            $('#warriorCodeEfficiency2Result').html("Code compiled: " + efficiency2Code + " Times for $" + (efficiency2Code * 0.48).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString() + " Boost to Generate Clicks. ");
+                            localStorage.setItem("efficiency2Code", efficiency2Code);
+
+                        }, 1000);
+                    }
+
+                    $('#currentDir').show();
+                    $('#currentDirInput').show();
+                    $('#mainGameWindow').append("Autogenerate_Efficiency_2.js has been built and added.<br />");
                 }, buildTimer * 1000);
             }
 
@@ -233,6 +274,11 @@ $("#console").keydown(function (e) {
             localStorage.setItem("efficiencyCode", efficiencyCode);
             localStorage.setItem("efficiency2Code", efficiency2Code);
             localStorage.setItem("scatterLogicCode", scatterLogicCode);
+        }
+
+        else if (input == "dsnoclass") {
+            userClass = "None";
+            localStorage.setItem("userClass", userClass);
         }
 
             //else if (input == "dsmotherlode") {

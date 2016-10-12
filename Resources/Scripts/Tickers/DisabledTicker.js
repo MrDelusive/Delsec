@@ -528,7 +528,13 @@
         $('#btnWriteAutoEfficiency1Code').prop('disabled', true);
         if (currentComputingPower >= 75 && (currentComputingPowerUsage + 10) <= currentComputingPower) {
             $('#btnWriteAutoEfficiency1Code').prop('disabled', false);
-            $('#btnWriteAutoEfficiency1Code').html('Code Autogenerate_Efficiency_1.js<br />(10KB CP Usage per Process)');
+            $('#btnWriteAutoEfficiency1Code').html('Code Autogenerate_Efficiency_1.js<br />(10 KB CP Usage per Process)');
+        }
+
+        $('#btnWriteAutoEfficiency2Code').prop('disabled', true);
+        if (currentComputingPower >= 250 && (currentComputingPowerUsage + 25) <= currentComputingPower) {
+            $('#btnWriteAutoEfficiency2Code').prop('disabled', false);
+            $('#btnWriteAutoEfficiency2Code').html('Code Autogenerate_Efficiency_2.js<br />(25 KB CP Usage per Process)');
         }
 
         $('#btnWriteExpandHTMLCode').prop('disabled', true);
@@ -537,6 +543,29 @@
             $('#btnWriteExpandHTMLCode').html('Code Expand_BuildHtml.html');
         }
 
+        $('#btnWriteExpandJQueryCode').prop('disabled', true);
+        if (currentComputingPower >= 300) {
+            $('#btnWriteExpandJQueryCode').prop('disabled', false);
+            $('#btnWriteExpandJQueryCode').html('Code Expand_BuildJQuery.html');
+        }
+
+        $('#btnWriteBuildCSSCode').prop('disabled', true);
+        if (currentComputingPower >= 300) {
+            $('#btnWriteBuildCSSCode').prop('disabled', false);
+            $('#btnWriteBuildCSSCode').html('Code Build_CSSSegment.html');
+        }
+
+        $('#btnWriteExpandBlackMarketCode').prop('disabled', true);
+        if (currentComputingPower >= 300) {
+            $('#btnWriteExpandBlackMarketCode').prop('disabled', false);
+            $('#btnWriteExpandBlackMarketCode').html('Code Expand_BlackMarket.html');
+        }
+
+        $('#btnWriteExpandJQuery2Code').prop('disabled', true);
+        if (currentComputingPower >= 1024) {
+            $('#btnWriteExpandJQuery2Code').prop('disabled', false);
+            $('#btnWriteExpandJQuery2Code').html('Code Expand_BuildJQuery2.html');
+        }
 
 
         $('#btnBuy1KBComputingPower').prop('disabled', true);

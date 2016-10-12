@@ -29,6 +29,7 @@
 
     <script src="Resources/Scripts/Preload/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="Resources/Scripts/Preload/jquery-ui-1.10.4.custom.js" type="text/javascript"></script>
+    
 </head>
 <body>
     <?php include_once("analyticstracking.php") ?>
@@ -1408,11 +1409,29 @@
                     </div> 
                     
                     <div class="warriorRow" id="autoEfficiency1">
-                        <button id="btnWriteAutoEfficiency1Code" class="btn_StyleRed">Requires 75.00 KB Computing Power Capacity</button>                 
+                        <button id="btnWriteAutoEfficiency1Code" class="btn_StyleRed">Requires 75.00 KB Computing Power Capacity<br />Requires 10.00 KB Free Computing Power Usage</button>                 
                         <div id="warriorCodeAutoEfficiency1" class="warriorCode"></div>
                         <div id="warriorCodeAutoEfficiency1Result" class="warriorCodeResult">
                         </div>                        
-                    </div>                                  
+                    </div>     
+
+                    <div class="warriorRow" id="autoEfficiency2">
+                        <button id="btnWriteAutoEfficiency2Code" class="btn_StyleRed">Requires 250.00 KB Computing Power Capacity<br />Requires 25.00 KB Free Computing Power Usage</button>                 
+                        <div id="warriorCodeAutoEfficiency2" class="warriorCode"></div>
+                        <div id="warriorCodeAutoEfficiency2Result" class="warriorCodeResult">
+                        </div>                        
+                    </div>
+                    
+                    <div id="hiddenExpandJQuery">
+                            
+                          
+
+                    </div>   
+                    
+
+                    <div id="hiddenExpandJQuery2">
+                        
+                    </div>                            
                 </div>
 
                 <!--HTML-->
@@ -1421,9 +1440,42 @@
                         <button id="btnWriteExpandHTMLCode" class="btn_StyleRed">Requires 150.00 KB Computing Power Capacity</button>                 
                         <div id="warriorCodeExpandHTML" class="warriorCode"></div>
                         <div id="warriorCodeExpandHTMLResult" class="warriorCodeResult">
-                            0.00 % of Data Added.
+                            
                         </div>
-                    </div>                                 
+                    </div>  
+                    <div id="hiddenExpandHTML">
+                        <div class="warriorRow" id="expandJQueryDiv">
+                            <button id="btnWriteExpandJQueryCode" class="btn_StyleRed">Requires 300.00 KB Computing Power Capacity</button>                 
+                            <div id="warriorCodeExpandJQuery" class="warriorCode"></div>
+                            <div id="warriorCodeExpandJQueryResult" class="warriorCodeResult">
+                            
+                            </div>
+                        </div>
+
+                        <div class="warriorRow" id="buildCSSDiv">
+                            <button id="btnWriteBuildCSSCode" class="btn_StyleRed">Requires 300.00 KB Computing Power Capacity</button>                 
+                            <div id="warriorCodeBuildCSS" class="warriorCode"></div>
+                            <div id="warriorCodeBuildCSSResult" class="warriorCodeResult">
+                            
+                            </div>
+                        </div>
+
+                        <div class="warriorRow" id="expandBlackMarketDiv">
+                            <button id="btnWriteExpandBlackMarketCode" class="btn_StyleRed">Requires 300.00 KB Computing Power Capacity</button>                 
+                            <div id="warriorCodeExpandBlackMarket" class="warriorCode"></div>
+                            <div id="warriorCodeExpandBlackMarketResult" class="warriorCodeResult">
+                            
+                            </div>
+                        </div>
+
+                        <div class="warriorRow" id="expandJQuery2Div">
+                            <button id="btnWriteExpandJQuery2Code" class="btn_StyleRed">Requires 1.00 MB Computing Power Capacity</button>                 
+                            <div id="warriorCodeExpandJQuery2" class="warriorCode"></div>
+                            <div id="warriorCodeExpandJQuery2Result" class="warriorCodeResult">
+                            
+                            </div>
+                        </div>
+                    </div>                               
                 </div>
 
                 <div class="hidden_Divs" id="warriorItemsTab">    
@@ -5317,10 +5369,11 @@
     <div id ="disclaimerContainer">
         <div id="disclaimer">
             Coding: Luke Parisi <br />
-            Images: &copy; 2015-2016 Luke Parisi <br /> <br /> 
+            Images: &copy; 2015-2016 Luke Parisi All Rights Reserved<br /> <br />
             Loading Screen: <a href="http://cssload.net/">http://cssload.net/</a> <br />
             Graphs: <a href="http://www.flotcharts.org/">JQuery Flot</a>
-            <br /><br />
+            <br /><br />           
+            Documented Current Upload as of 13th October 2016, all relevant content created individually by Luke Parisi. No other companies or persons attributed to the works within.<br /><br /> 
             Names, characters, businesses, places, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.
         </div>        
     </div>

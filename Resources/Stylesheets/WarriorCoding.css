@@ -87,3 +87,7 @@
     background: black;
     width:1000px;
 }
+
+#hiddenExpandHTML {
+    display: none;
+}

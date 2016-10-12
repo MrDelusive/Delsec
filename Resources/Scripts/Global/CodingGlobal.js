@@ -21,5 +21,16 @@ var autoEfficiency1CompleteInterval = 0;
 var autoEfficiency1CodeArray = "setInterval(function () {\n~~~~$('#btnWriteEfficiencyCode').click();\n}, 1000);".split("");
 var autoEfficiency1CodeArrayPosition = 0;
 var autoEfficiency1CompleteCycles = 0; 
-var autoEfficiency1Remainder = 0; 
+var autoEfficiency1Remainder = 0;
 
+var autoEfficiency2Code = 0;
+var autoEfficiency2Interval = 0;
+var autoEfficiency2CompleteInterval = 0;
+var autoEfficiency2CodeArray = "setInterval(function () {\n~~~~$('#btnWriteEfficiency2Code').click();\n}, 1000);".split("");
+var autoEfficiency2CodeArrayPosition = 0;
+var autoEfficiency2CompleteCycles = 0;
+var autoEfficiency2Remainder = 0;
+
+var expandHTMLCodeBuilt = 0;
+var expandHTMLCodeArray = "<div class='warriorRow' id='expandJQueryDiv'>\n~~~~<button id='btnWriteExpandJQueryCode' class='btn_StyleRed'>\n~~~~~~~~Requires 300.00 KB Computing Power Capacity\n~~~~</button>\n</div>".split("");
+var expandHTMLCodeArrayPosition = 0;
